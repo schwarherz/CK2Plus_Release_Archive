@@ -129,7 +129,7 @@
 106520 = {
 	name="Dirk" #Dirk V
 	dynasty=432
-	dna="sayawdsrgbp"
+	dna="sayawdsrgcp"
 	properties="0e0d0d0000"
 	martial=6
 	diplomacy=8
@@ -291,7 +291,7 @@
 	name="Diederik"
 	# AKA: Theodoricus
 	dynasty=427
-	dna="jzwupesugki"
+	dna="jzwupesugci"
 	properties="cl0e0k0000"
 	martial=4
 	diplomacy=6
@@ -455,7 +455,7 @@
 106570 = {
 	name="Emmo" #1044-1078
 	dynasty=424
-	dna="daoikmxkgad"
+	dna="daoikmxkgcd"
 	properties="0e0cik0000"
 	martial=5
 	diplomacy=7
@@ -677,7 +677,7 @@
 106600 = {
 	name="Hendrik"
 	dynasty=7198
-	dna="phbbuseegar"
+	dna="phbbuseegcr"
 	properties="cl0eck0000"
 	martial=5
 	diplomacy=4
@@ -2650,14 +2650,10 @@
 
 30363 = {
 	name="Sitat"
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=462171
-	
 	1325.1.1={
 		birth="1325.1.1"
 	}
@@ -2668,14 +2664,10 @@
 
 30364 = {
 	name="Sitat" #Count of Ostfriesland
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30365 #Enno
-	
 	1259.1.1={
 		birth="1259.1.1"
 	}
@@ -2686,14 +2678,10 @@
 
 30365 = {
 	name="Enno" #Count of Ostfriesland
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30366 #Sitat
-	
 	1223.1.1={
 		birth="1223.1.1"
 	}
@@ -2704,13 +2692,9 @@
 
 30366 = {
 	name="Sitat" #Count of Ostfriesland
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
-	
 	1199.1.1={
 		birth="1199.1.1"
 	}
@@ -2721,14 +2705,10 @@
 
 30367 = {
 	name="Merten"
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30366 #Sitat
-	
 	1230.1.1={
 		birth="1230.1.1"
 	}
@@ -2739,14 +2719,10 @@
 
 30368 = {
 	name="Omptat"
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30367 #Merten
-	
 	1263.1.1={
 		birth="1263.1.1"
 	}
@@ -2757,14 +2733,10 @@
 
 30369 = {
 	name="Merten"
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30368 #Omptat
-	
 	1296.1.1={
 		birth="1296.1.1"
 	}
@@ -2775,14 +2747,10 @@
 
 30370 = {
 	name="Omptat"
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30369 #Merten
-	
 	1320.1.1={
 		birth="1320.1.1"
 	}
@@ -2793,14 +2761,10 @@
 
 30371 = {
 	name="Olrik"
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30369 #Merten
-	
 	1322.1.1={
 		birth="1322.1.1"
 	}
@@ -2811,14 +2775,10 @@
 
 30372 = {
 	name="Bojo"
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30369 #Merten
-	
 	1326.1.1={
 		birth="1326.1.1"
 	}
@@ -2831,12 +2791,9 @@
 	name="Tiadeke"
 	female=yes
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30369 #Merten
-	
 	1332.1.1={
 		birth="1332.1.1"
 	}
@@ -2847,21 +2804,16 @@
 
 30374 = {
 	name="Idzerd"
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30365 #Enno
-	
 	1265.1.1={
 		birth="1265.1.1"
 	}
 	1290.1.1={
 		add_spouse=30379 #Etta van Visquard
 	}
-	
 	1312.1.1={
 		death="1312.1.1"
 	}
@@ -2869,22 +2821,17 @@
 
 30375 = {
 	name="Enno"
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30374 #Idzerd Cirksena
 	mother=30379 #Etta van Visquard
-	
 	1292.1.1={
 		birth="1292.1.1"
 	}
 	1320.1.1={
 		add_spouse=30380 #Adda van Groothusen
 	}
-	
 	1350.1.1={
 		death="1350.1.1"
 	}
@@ -2892,15 +2839,11 @@
 
 30376 = {
 	name="Sibrand"
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30374 #Idzerd Cirksena
 	mother=30379 #Etta van Visquard
-	
 	1297.1.1={
 		birth="1297.1.1"
 	}
@@ -2927,16 +2870,11 @@
 
 30378 = {
 	name="Idzerd"
-	
-	
 	dynasty=7128 #Cirksena
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=30375 #Enno Cirksena
 	mother=30380 #Adda van Groothusen
-	
 	1323.1.1={
 		birth="1323.1.1"
 	}
@@ -3826,13 +3764,11 @@
 	
 	religion="catholic"
 	culture="dutch"
-	
 	father=106520
 	mother=31091
 	1088.1.1={
 		birth="1088.1.1"
 	}
-	
 	1130.1.1={
 		death="1130.1.1"
 	}
@@ -3846,11 +3782,9 @@
 	culture="dutch"
 	add_trait="bastard"
 	father=94023
-	
 	1291.1.1={
 		birth="1291.1.1"
 	}
-	
 	1344.1.11={
 		death="1344.1.11"
 	}
@@ -3859,16 +3793,13 @@
 31104 = {
 	name="Jan" 
 	dynasty=5060
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=94008
 	mother=31118
 	1271.1.1={
 		birth="1271.1.1"
 	}
-	
 	1302.7.11={
 		death="1302.7.11"
 	}
@@ -3877,7 +3808,6 @@
 31106 = {
 	name="Simon" 
 	dynasty=5060
-	
 	religion="catholic"
 	culture="dutch"
 	father=94008
@@ -3885,7 +3815,6 @@
 	1276.1.1={
 		birth="1276.1.1"
 	}
-	
 	1304.1.1={
 		death="1304.1.1"
 	}
@@ -3895,16 +3824,13 @@
 	name="Margareta" 
 	female=yes
 	dynasty=5060
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=94008
 	mother=31118
 	1281.1.1={
 		birth="1281.1.1"
 	}
-	
 	1342.10.18={
 		death="1342.10.18"
 	}
@@ -3914,16 +3840,13 @@
 	name="Mathilda" 
 	female=yes
 	dynasty=5060
-	
 	religion="catholic"
 	culture="dutch"
-	
 	father=94008
 	mother=31118
 	1284.1.1={
 		birth="1284.1.1"
 	}
-	
 	1350.1.1={
 		death="1350.1.1"
 	}
@@ -3935,13 +3858,10 @@
 	add_trait="bastard"
 	religion="catholic"
 	culture="dutch"
-	
 	father=462742
-	
 	1320.1.1={
 		birth="1320.1.1"
 	}
-	
 	1392.1.1={
 		death="1392.1.1"
 	}
@@ -3953,13 +3873,10 @@
 	add_trait="bastard"
 	religion="catholic"
 	culture="dutch"
-	
 	father=462742
-	
 	1312.1.1={
 		birth="1312.1.1"
 	}
-	
 	1339.1.1={
 		death="1339.1.1"
 	}
@@ -3971,13 +3888,10 @@
 	add_trait="bastard"
 	religion="catholic"
 	culture="dutch"
-	
 	father=462742
-	
 	1322.1.1={
 		birth="1322.1.1"
 	}
-	
 	1347.1.1={
 		death="1347.1.1"
 	}
@@ -3987,14 +3901,11 @@
 	name="Griete"
 	female=yes 
 	dynasty=7200 
-	
 	religion="catholic"
 	culture="dutch"
-	
 	1140.1.1={
 		birth="1140.1.1"
 	}
-	
 	1190.1.1={
 		death="1190.1.1"
 	}
@@ -4050,9 +3961,8 @@
 	dynasty=724
 	religion="catholic"
 	culture="dutch"
-	add_trait="bastard"
+	add_trait="legit_bastard"
 	father=31127
-	
 	1090.1.1={
 		birth="1090.1.1"
 	}
@@ -4580,7 +4490,7 @@
 364 = {
 	name="Boudewijn" #Boudewijn V
 	dynasty=724
-	dna="wcfklgeegwv"
+	dna="wcfklgeegcv"
 	properties="0d0edd0000"
 	martial=7
 	diplomacy=4
@@ -5127,7 +5037,6 @@
 	culture="dutch"
 	add_trait="thrifty_clerk"
 	father=462171
-	
 	1330.1.1={
 		birth="1330.1.1"
 	}
@@ -5586,7 +5495,7 @@
 		birth="1253.1.1"
 	}
 	1227.8.1={
-	capital=c_sticht
+		capital=c_sticht
 	}
 	1317.5.23={
 		death="1317.5.23"

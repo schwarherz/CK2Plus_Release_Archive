@@ -5,7 +5,7 @@ character_event = {
 	picture = GFX_evt_throne_room
 	
 	trigger = {
-		year = 1150
+		year = 1100
 		culture = norman
 		any_demesne_province = {
 			kingdom = {
@@ -21,34 +21,110 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1200
+		months = 500
 		modifier = {
-			factor = 0.75
-			learning = 7
+			factor = 0.5
+			year = 1150
 		}
 		modifier = {
-			factor = 0.75
-			learning = 9
+			factor = 0.5
+			year = 1200
+		}		
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 1 }
+		}		
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 2 }
 		}
 		modifier = {
-			factor = 0.75
-			learning = 11
-		}
-		modifier = {
-			factor = 0.75
-			learning = 13
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { learning = 5 }
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.05
 			NOT = { learning = 3 }
 		}
 		modifier = {
-			factor = 2.0
-			NOT = { learning = 1 }
+			factor = 1.05
+			NOT = { learning = 4 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 6 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 7 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 8 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 9 }
+		}
+		modifier = {
+			factor = 0.95
+			learning = 11
+		}		
+		modifier = {
+			factor = 0.95
+			learning = 12
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 13
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 14
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 15
+		}
+		modifier = {
+			factor = 0.95
+			learning = 16
+		}
+		modifier = {
+			factor = 0.95
+			learning = 17
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 18
+		}
+		modifier = {
+			factor = 0.95
+			learning = 19
+		}
+		modifier = {
+			factor = 0.95
+			learning = 20
+		}
+		modifier = {
+			factor = 0.95
+			learning = 21
+		}
+		modifier = {
+			factor = 0.95
+			learning = 22
+		}
+		modifier = {
+			factor = 0.95
+			learning = 23
+		}
+		modifier = {
+			factor = 0.95
+			learning = 24
+		}
+		modifier = {
+			factor = 0.95
+			learning = 25
 		}
 	}
 
@@ -95,7 +171,15 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 720
+		months = 500
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}
 	}
 
 	option = {
@@ -143,6 +227,14 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 120
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}
 	}
 
 	option = {
@@ -189,9 +281,16 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 720
+		months = 500
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}
 	}
-
 	option = {
 		name = "EVTOPTA100009003"
 		random_vassal = {
@@ -230,7 +329,7 @@ character_event = {
 	picture = GFX_evt_throne_room
 	
 	trigger = {
-		year = 1150
+		year = 1100
 		culture = greek
 		any_demesne_province = {
 			kingdom = {
@@ -246,34 +345,110 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1200
+		months = 500
 		modifier = {
-			factor = 0.75
-			learning = 7
+			factor = 0.5
+			year = 1150
 		}
 		modifier = {
-			factor = 0.75
-			learning = 9
+			factor = 0.5
+			year = 1200
+		}		
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 1 }
+		}		
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 2 }
 		}
 		modifier = {
-			factor = 0.75
-			learning = 11
-		}
-		modifier = {
-			factor = 0.75
-			learning = 13
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { learning = 5 }
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.05
 			NOT = { learning = 3 }
 		}
 		modifier = {
-			factor = 2.0
-			NOT = { learning = 1 }
+			factor = 1.05
+			NOT = { learning = 4 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 6 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 7 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 8 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 9 }
+		}
+		modifier = {
+			factor = 0.95
+			learning = 11
+		}		
+		modifier = {
+			factor = 0.95
+			learning = 12
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 13
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 14
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 15
+		}
+		modifier = {
+			factor = 0.95
+			learning = 16
+		}
+		modifier = {
+			factor = 0.95
+			learning = 17
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 18
+		}
+		modifier = {
+			factor = 0.95
+			learning = 19
+		}
+		modifier = {
+			factor = 0.95
+			learning = 20
+		}
+		modifier = {
+			factor = 0.95
+			learning = 21
+		}
+		modifier = {
+			factor = 0.95
+			learning = 22
+		}
+		modifier = {
+			factor = 0.95
+			learning = 23
+		}
+		modifier = {
+			factor = 0.95
+			learning = 24
+		}
+		modifier = {
+			factor = 0.95
+			learning = 25
 		}
 	}
 
@@ -320,7 +495,15 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 720
+		months = 500
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}
 	}
 
 	option = {
@@ -368,6 +551,14 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 120
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}
 	}
 
 	option = {
@@ -414,7 +605,15 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 720
+		months = 500
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}
 	}
 
 	option = {
@@ -456,7 +655,7 @@ character_event = {
 	picture = GFX_evt_throne_room
 	
 	trigger = {
-		year = 1150
+		year = 1100
 		culture = maghreb_arabic
 		any_demesne_province = {
 			kingdom = {
@@ -472,34 +671,110 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1200
+		months = 500
 		modifier = {
-			factor = 0.75
-			learning = 7
+			factor = 0.5
+			year = 1150
 		}
 		modifier = {
-			factor = 0.75
-			learning = 9
+			factor = 0.5
+			year = 1200
+		}		
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 1 }
+		}		
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 2 }
 		}
 		modifier = {
-			factor = 0.75
-			learning = 11
-		}
-		modifier = {
-			factor = 0.75
-			learning = 13
-		}
-		modifier = {
-			factor = 1.5
-			NOT = { learning = 5 }
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.05
 			NOT = { learning = 3 }
 		}
 		modifier = {
-			factor = 2.0
-			NOT = { learning = 1 }
+			factor = 1.05
+			NOT = { learning = 4 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 6 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 7 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 8 }
+		}
+		modifier = {
+			factor = 1.05
+			NOT = { learning = 9 }
+		}
+		modifier = {
+			factor = 0.95
+			learning = 11
+		}		
+		modifier = {
+			factor = 0.95
+			learning = 12
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 13
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 14
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 15
+		}
+		modifier = {
+			factor = 0.95
+			learning = 16
+		}
+		modifier = {
+			factor = 0.95
+			learning = 17
+		}	
+		modifier = {
+			factor = 0.95
+			learning = 18
+		}
+		modifier = {
+			factor = 0.95
+			learning = 19
+		}
+		modifier = {
+			factor = 0.95
+			learning = 20
+		}
+		modifier = {
+			factor = 0.95
+			learning = 21
+		}
+		modifier = {
+			factor = 0.95
+			learning = 22
+		}
+		modifier = {
+			factor = 0.95
+			learning = 23
+		}
+		modifier = {
+			factor = 0.95
+			learning = 24
+		}
+		modifier = {
+			factor = 0.95
+			learning = 25
 		}
 	}
 
@@ -546,7 +821,15 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 720
+		months = 500
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}
 	}
 
 	option = {
@@ -594,6 +877,14 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 120
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}
 	}
 
 	option = {
@@ -640,7 +931,15 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 720
+		months = 500
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}
 	}
 
 	option = {

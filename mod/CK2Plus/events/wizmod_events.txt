@@ -17,7 +17,7 @@ character_event = {
 			religion = catholic
 			religion = orthodox
 		}
-		rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = 25 } } }
+		religion_head = { NOT = { opinion = { who = ROOT value = 25 } } }
 	}
 		
 	desc = "EVTDESC190004"
@@ -26,23 +26,23 @@ character_event = {
 		days = 1
 		modifier = {
 			factor = 1.25
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = 0 } } }
+			religion_head = { NOT = { opinion = { who = ROOT value = 0 } } }
 		}
 		modifier = {
 			factor = 1.25
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -25 } } }
+			religion_head = { NOT = { opinion = { who = ROOT value = -25 } } }
 		}
 		modifier = {
 			factor = 1.25
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -50 } } }
+			religion_head = { NOT = { opinion = { who = ROOT value = -50 } } }
 		}
 		modifier = {
 			factor = 1.25
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -75 } } }
+			religion_head = { NOT = { opinion = { who = ROOT value = -75 } } }
 		}
 		modifier = {
 			factor = 1.25
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -100 } } }
+			religion_head = { NOT = { opinion = { who = ROOT value = -100 } } }
 		}		
 		modifier = {
 			factor = 0.75
@@ -118,15 +118,9 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		OR = {
-			has_landed_title = c_roma
-			AND = {
-				has_landed_title = b_roma
-				rightful_religious_head_scope = { has_landed_title = c_roma }
-			}	
-		}
+		has_landed_title = c_roma
 		religion = catholic
-		rightful_religious_head_scope = { has_landed_title = e_papal_state NOT = { opinion = { who = ROOT value = 50 } } }
+		religion_head = { has_landed_title = e_papal_state NOT = { opinion = { who = ROOT value = 50 } } }
 		NOT = { trait = excommunicated }
 		NOT = { has_global_flag = excommunicated_rome }
 	}
@@ -136,28 +130,28 @@ character_event = {
 	mean_time_to_happen = {
 		days = 1
 		modifier = {
-			factor = 1.1
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = 25 } } }
+			factor = 1.25
+			religion_head = { NOT = { opinion = { who = ROOT value = 25 } } }
 		}		
 		modifier = {
-			factor = 1.1
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = 0 } } }
+			factor = 1.25
+			religion_head = { NOT = { opinion = { who = ROOT value = 0 } } }
 		}
 		modifier = {
-			factor = 1.1
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -25 } } }
+			factor = 1.25
+			religion_head = { NOT = { opinion = { who = ROOT value = -25 } } }
 		}
 		modifier = {
-			factor = 1.1
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -50 } } }
+			factor = 1.25
+			religion_head = { NOT = { opinion = { who = ROOT value = -50 } } }
 		}
 		modifier = {
-			factor = 1.1
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -75 } } }
+			factor = 1.25
+			religion_head = { NOT = { opinion = { who = ROOT value = -75 } } }
 		}
 		modifier = {
-			factor = 1.1
-			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -100 } } }
+			factor = 1.25
+			religion_head = { NOT = { opinion = { who = ROOT value = -100 } } }
 		}		
 		modifier = {
 			factor = 0.75
@@ -181,7 +175,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 100.0
-			rightful_religious_head_scope = { NOT = { demesne_size = 1 } }
+			religion_head = { NOT = { demesne_size = 1 } }
 		}		
 	}
 	
@@ -197,7 +191,7 @@ character_event = {
 					any_realm_lord = { has_landed_title = c_roma }
 				}
 			}
-			rightful_religious_head_scope = {
+			religion_head = {
 				c_roma = {
 					gain_title = PREV
 				}			
@@ -210,8 +204,99 @@ character_event = {
 					any_realm_lord = { has_landed_title = b_roma }
 				}
 			}
-			rightful_religious_head_scope = {
+			religion_head = {
 				b_roma = {
+					gain_title = PREV
+				}			
+			}			
+		}
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = b_viterbo
+					any_realm_lord = { has_landed_title = b_viterbo }
+				}
+			}
+			religion_head = {
+				b_viterbo = {
+					gain_title = PREV
+				}			
+			}			
+		}
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = b_tusculum
+					any_realm_lord = { has_landed_title = b_tusculum }
+				}
+			}
+			religion_head = {
+				b_tusculum = {
+					gain_title = PREV
+				}			
+			}			
+		}
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = b_tivoli
+					any_realm_lord = { has_landed_title = b_tivoli }
+				}
+			}
+			religion_head = {
+				b_tivoli = {
+					gain_title = PREV
+				}			
+			}			
+		}		
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = b_ostia
+					any_realm_lord = { has_landed_title = b_ostia }
+				}
+			}
+			religion_head = {
+				b_ostia = {
+					gain_title = PREV
+				}			
+			}			
+		}
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = b_sutri
+					any_realm_lord = { has_landed_title = b_sutri }
+				}
+			}
+			religion_head = {
+				b_sutri = {
+					gain_title = PREV
+				}			
+			}			
+		}
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = b_aragni
+					any_realm_lord = { has_landed_title = b_aragni }
+				}
+			}
+			religion_head = {
+				b_aragni = {
+					gain_title = PREV
+				}			
+			}			
+		}
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = b_terracina
+					any_realm_lord = { has_landed_title = b_terracina }
+				}
+			}
+			religion_head = {
+				b_terracina = {
 					gain_title = PREV
 				}			
 			}			
@@ -262,7 +347,7 @@ character_event = {
 		piety = -50
 		add_trait = excommunicated
 		set_global_flag = excommunicated_rome
-		rightful_religious_head_scope = {
+		religion_head = {
 			opinion = {
 				modifier = opinion_hate
 				who = ROOT
@@ -1843,15 +1928,138 @@ character_event = {
 character_event = {
 	id = 190043
 	picture = GFX_evt_lovers
-	
 	is_triggered_only = yes
+	
+	trigger = {
+		ai = yes 
+		age = 18
+		NOT = { age = 60 }
+		NOT = { trait = celibate }
+		NOT = { trait = infirm }
+		NOT = { trait = incapable }
+		is_married = no
+		is_betrothed = no
+		can_marry = yes
+		OR = {
+			is_ruler = yes
+			has_job_title = job_spymaster
+			has_job_title = job_marshal
+			has_job_title = job_treasurer
+			has_job_title = job_spiritual
+			has_job_title = job_chancellor
+		}
+		NOT = {
+			AND = {
+				is_ruler = yes
+				primary_title = {
+					OR = {
+						mercenary = yes
+						title = d_livonian_order
+						title = d_teutonic_order
+						title = d_order_of_santiago
+						title = d_knights_templar
+						title = d_knights_hospitaler
+						title = d_ghazi_sunni
+						title = d_ghazi_shiite
+						title = d_hashshashin
+						title = d_ulfheonar
+						title = d_devotees_of_the_true_prophet
+						title = d_great_host
+						title = d_guardians_of_the_sacred_flame
+						title = d_disciples_of_the_old_gods
+						title = e_rebels
+						title = e_pirates
+					}
+				}
+				
+			}
+		}			
+		OR = {
+			primary_title = { tier = BARON }
+			is_feudal = no
+			is_ruler = no
+		}
+		treasury = 5
+	}
+	
+	mean_time_to_happen = {
+		days = 1	
+	}
 		
 	desc = "EVTDESC190043"
 	
 	option = {
-		name = "EVTOPTA190043"		
-		liege = {
-			#go for younger women first since presumably you're trying to fill up the court with kids
+		name = "EVTOPTA190043"
+		treasury = -5
+		if = {
+			limit = { is_ruler = no }
+			liege = {
+				#go for younger women first (want to have kids)
+				random_courtier = {
+					limit = {
+						age = 16
+						NOT = { age = 20 } 
+						NOT = { trait = celibate }
+						NOT = { trait = infirm }
+						NOT = { trait = incapable }
+						NOT = { has_minor_title = title_concubine }
+						is_married = no
+						is_betrothed = no
+						can_marry = yes
+						is_female = yes
+						is_ruler = no
+						is_primary_heir = no
+						NOT = { has_global_flag = spouse_found }
+						liege = { NOT = { is_close_relative = PREV } }
+						NOT = { is_close_relative = ROOT }
+					}
+					add_spouse = ROOT
+					set_global_flag = spouse_found
+				}
+				random_courtier = {
+					limit = {
+						age = 16
+						NOT = { age = 30 }
+						NOT = { trait = celibate }
+						NOT = { trait = infirm }
+						NOT = { trait = incapable }
+						NOT = { has_minor_title = title_concubine }
+						is_married = no
+						is_betrothed = no
+						can_marry = yes
+						is_female = yes
+						is_ruler = no
+						is_primary_heir = no
+						NOT = { has_global_flag = spouse_found }
+						liege = { NOT = { is_close_relative = PREV } }
+						NOT = { is_close_relative = ROOT }								
+					}
+					add_spouse = ROOT
+					set_global_flag = spouse_found
+				}
+				if = {
+					limit = {
+						NOT = { has_global_flag = spouse_found }
+						is_ruler = no
+					}
+					liege = {
+						create_character = {
+							random_traits = yes
+							dynasty = random
+							female = yes
+							age = 16
+						}
+						new_character = {
+							add_spouse = ROOT
+						}							
+					}
+					set_global_flag = spouse_found
+				}	
+			}
+		}
+		if = {
+			limit = { is_ruler = yes }
+			#go for younger women first (want to have kids)
 			random_courtier = {
 				limit = {
 					age = 16
@@ -1867,10 +2075,9 @@ character_event = {
 					is_ruler = no
 					is_primary_heir = no
 					NOT = { has_global_flag = spouse_found }
-					LIEGE = { NOT = { is_close_relative = PREV } }
 					NOT = { is_close_relative = ROOT }
 				}
-				add_spouse = PREVPREV
+				add_spouse = ROOT
 				set_global_flag = spouse_found
 			}
 			random_courtier = {
@@ -1888,39 +2095,16 @@ character_event = {
 					is_ruler = no
 					is_primary_heir = no
 					NOT = { has_global_flag = spouse_found }
-					LIEGE = { NOT = { is_close_relative = PREV } }
 					NOT = { is_close_relative = ROOT }								
 				}
-				add_spouse = PREVPREV
+				add_spouse = ROOT
 				set_global_flag = spouse_found
 			}
-			random_courtier = {
+			if = {
 				limit = {
-					age = 16
-					NOT = { age = 40 }
-					NOT = { trait = celibate }
-					NOT = { trait = infirm }
-					NOT = { trait = incapable }
-					NOT = { has_minor_title = title_concubine }
-					is_married = no
-					is_betrothed = no
-					can_marry = yes
-					is_female = yes
-					is_ruler = no
-					is_primary_heir = no
 					NOT = { has_global_flag = spouse_found }
-					LIEGE = { NOT = { is_close_relative = PREV } }
-					NOT = { is_close_relative = ROOT }								
+					is_ruler = no
 				}
-				add_spouse = PREVPREV
-				set_global_flag = spouse_found
-			}						
-		}
-		if = {
-			limit = {
-				NOT = { has_global_flag = spouse_found }
-			}
-			ROOT = {
 				create_character = {
 					random_traits = yes
 					dynasty = random
@@ -1928,12 +2112,11 @@ character_event = {
 					age = 16
 				}
 				new_character = {
-					character_event = { id = 300001 }
-					add_spouse = PREVPREV
+					add_spouse = ROOT
 				}							
-			}
-			set_global_flag = spouse_found
-		}
+				set_global_flag = spouse_found
+			}	
+		}		
 		clr_global_flag = spouse_found		
 	}
 }
@@ -1975,7 +2158,7 @@ character_event = {
 	mean_time_to_happen = {
 		days = 1
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			spouse = { NOT = { age = 20 } }
 		}
 		modifier = {
@@ -1983,15 +2166,15 @@ character_event = {
 			spouse = { age = 30 }
 		}
 		modifier = {
-			factor = 3.0
+			factor = 5.0
 			has_objective = obj_find_lover
 		}
 		modifier = {
-			factor = 2.0
+			factor = 3.0
 			trait = chaste
 		}
 		modifier = {
-			factor = 2.0
+			factor = 3.0
 			spouse = { trait = chaste }
 		}		
 		modifier = {
@@ -2003,13 +2186,21 @@ character_event = {
 			spouse = { trait = hedonist }
 		}		
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			trait = lustful
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			spouse = { trait = lustful }
 		}
+		modifier = {
+			factor = 0.5
+			spouse = { NOT = { opinion = { who = ROOT value = 0 } } }
+		}	
+		modifier = {
+			factor = 0.5
+			spouse = { NOT = { reverse_opinion = { who = ROOT value = 0 } } }
+		}			
 		modifier = {
 			factor = 0.75
 			spouse = { NOT = { opinion = { who = ROOT value = 25 } } }
@@ -2294,11 +2485,7 @@ letter_event = {
 	option = {
 		name = "EVTOPTA8000"
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 3
-				NOT = { age = 16 }
-			}			
+			factor = 10		
 			modifier = {
 				factor = 1.25
 				trait = weak
@@ -2626,44 +2813,6 @@ character_event = {
 }
 
 character_event = {
-	id = 190058
-	desc = "EVTDESC190058"	
-	picture = GFX_evt_death
-	is_triggered_only = yes
-	
-	trigger = {
-		is_ruler = yes
-		any_courtier = {
-			has_minor_title = title_concubine
-		}
-	}
-	
-	immediate = {
-		any_courtier = {
-			limit = { has_minor_title = title_concubine }
-			remove_title = title_concubine
-			set_character_flag = title_concubine
-		}	
-	}
-	
-	option = {
-		name = "EVTOPTA190058"
-		tooltip = {
-			any_courtier = {
-				limit = { has_character_flag = title_concubine }
-				remove_title = title_concubine
-			}
-		}
-		hidden_tooltip = {
-			any_courtier = {
-				limit = { has_character_flag = title_concubine }
-				clr_character_flag = title_concubine
-			}		
-		}
-	}
-}
-
-character_event = {
 	id = 190059
 	desc = "EVTDESC190058"	
 	picture = GFX_evt_pope
@@ -2672,7 +2821,6 @@ character_event = {
 	trigger = {
 		has_landed_title = e_papal_state
 		has_landed_title = c_roma
-		has_landed_title = b_roma
 		has_global_flag = excommunicated_rome
 	}
 	
@@ -2690,11 +2838,15 @@ character_event = {
 	id = 190060
 	picture = "GFX_evt_council"
 	trigger = {
-		trait = regency
+		OR = {
+			trait = regency
+			trait = regency_ai
+		}
 		OR = {
 			is_ruler = no
 			NOT = { regent = { is_alive = yes } }
 		}
+		age = 16
 	}
 		
 	desc = "EVTDESC190060"
@@ -2705,7 +2857,14 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA190060"
-		remove_trait = regency
+		if = {
+			limit = { trait = regency }
+			remove_trait = regency
+		}
+		if = {
+			limit = { trait = regency_ai }
+			remove_trait = regency_ai
+		}				
 	}
 }
 
@@ -2957,7 +3116,7 @@ character_event = {
 			location = { clr_province_flag = previous_holding }
 		}		
 	}		
-	# A pious relative
+	# A distant relative
 	option = {
 		name = "EVTOPTC190061"
 		ai_chance = {
@@ -2966,13 +3125,21 @@ character_event = {
 		piety = 100
 		custom_tooltip = CUSTOMTOOLTIP4
 		hidden_tooltip = {
-			create_random_priest = {
+			create_character = {
 				random_traits = yes
 				dynasty = ROOT
+				religion = ROOT
+				culture = ROOT
 				female = no
-			}
+				age = 25
+				attributes = {
+					learning = 10
+					martial = 10
+					diplomacy = 10
+				}
+			}		
 			new_character = {
-				character_event = { id = 300001 }
+				fertility = 0.5
 				if = {
 					limit = {
 						religion = catholic
@@ -2990,10 +3157,7 @@ character_event = {
 						religion = sunni
 					}
 					add_trait = mujahid
-				}
-				change_learning = 10
-				change_diplomacy = 5
-				change_stewardship = 5			
+				}		
 				ROOT = {
 					random_demesne_title = {
 						limit = {
@@ -3064,148 +3228,17 @@ character_event = {
 			modifier = {
 				factor = 0
 				NOT = {
-					OR = {
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_france }
+					any_demesne_title = {
+						location = { has_province_flag = previous_holding }
+						empire = { 
+							ROOT = {
+								any_demesne_title = {
+									location = { NOT = { has_province_flag = previous_holding } }
+									empire = { title = PREVPREVPREV }
+								}
 							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_france }
-							}							
 						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_hre }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_hre }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_italy }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_italy }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_danubia }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_danubia }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_byzantium }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_byzantium }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_poland_lithuania }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_poland_lithuania }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_russia }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_russia }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_persia }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_persia }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_spain }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_spain }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_arabia }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_arabia }
-							}							
-						}						
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_scandinavia }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_scandinavia }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_ethiopia }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_ethiopia }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_britannia }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_britannia }
-							}							
-						}
-						AND = {
-							any_demesne_title = {
-								location = { has_province_flag = previous_holding }
-								empire = { title = e_maghreb }
-							}
-							any_demesne_title = {
-								NOT = { location = { has_province_flag = previous_holding } }
-								empire = { title = e_maghreb }
-							}							
-						}						
-					}
+					}							
 				}
 			}
 		}
@@ -3215,7 +3248,7 @@ character_event = {
 	}	
 }
 
-# Generate a random claim on neighbour - liege
+# Generate a random claim on neighbour - independent
 character_event = {
 	id = 190062
 	picture = GFX_evt_emissary
@@ -3282,7 +3315,11 @@ character_event = {
 	desc = "EVTDESC190062"
 	
 	mean_time_to_happen = {
-		days = 1		
+		days = 1	
+		modifier = {
+			factor = 2.5
+			ai = yes
+		}		
 		modifier = {
 			factor = 1.1
 			realm_diplomacy = 20
@@ -3298,14 +3335,6 @@ character_event = {
 		modifier = {
 			factor = 1.1
 			realm_diplomacy = 50
-		}
-		modifier = {
-			factor = 1.25
-			primary_title = { higher_tier_than = COUNT }
-		}
-		modifier = {
-			factor = 1.25
-			primary_title = { higher_tier_than = DUKE }
 		}		
 	}
 	
@@ -3410,7 +3439,11 @@ character_event = {
 	desc = "EVTDESC190062"
 	
 	mean_time_to_happen = {
-		days = 1		
+		days = 1	
+		modifier = {
+			factor = 1.5
+			ai = yes
+		}		
 		modifier = {
 			factor = 1.1
 			realm_diplomacy = 20
@@ -3426,14 +3459,6 @@ character_event = {
 		modifier = {
 			factor = 1.1
 			realm_diplomacy = 50
-		}
-		modifier = {
-			factor = 1.25
-			primary_title = { higher_tier_than = COUNT }
-		}
-		modifier = {
-			factor = 1.25
-			primary_title = { higher_tier_than = DUKE }
 		}		
 	}
 	
@@ -3517,6 +3542,7 @@ character_event = {
 	trigger = {
 		ai = yes
 		prisoner = yes
+		NOT = { has_character_modifier = house_arrest }
 		OR = {
 			trait = ill
 			trait = pneumonic
@@ -3562,8 +3588,7 @@ character_event = {
 		days = 1		
 	}
 	
-	option = {
-		name = "EVTOPTA190066"	
+	immediate = {
 		set_character_flag = attribute_adjustment
 		hidden_tooltip = {		
 			if = {
@@ -3656,8 +3681,23 @@ character_event = {
 				}
 				change_learning = 1
 			}		
+		}	
+	}
+	
+	option = {
+		name = "EVTOPTA190066"
+		if = {
+			limit = { ai = no }
+			prestige = 5
 		}		
 	}
+	option = {
+		name = "EVTOPTB190066"
+		if = {
+			limit = { ai = no }
+			piety = 5
+		}		
+	}	
 }
 
 character_event = {
@@ -3667,6 +3707,7 @@ character_event = {
 		is_ruler = yes
 		regent = { is_alive = yes }
 		NOT = { trait = regency }
+		NOT = { trait = regency_ai }
 	}
 		
 	desc = "EVTDESC190067"
@@ -3677,7 +3718,14 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA190067"
-		add_trait = regency
+		if = {
+			limit = { ai = no }
+			add_trait = regency
+		}
+		if = {
+			limit = { ai = yes }
+			add_trait = regency_ai
+		}
 	}
 }
 
@@ -3846,29 +3894,96 @@ character_event = {
 	}
 }
 
+#Religious authority strengthened
 character_event = {
-	id = 190069
-	picture = "GFX_evt_council"
+	id = 190070
+	picture = "GFX_evt_pope"
+	is_triggered_only = yes
 	trigger = {
-		trait = placeholder
+		controls_religion = yes
+		OR = {
+			learning = 10
+			piety = 500
+		}
 	}
 		
-	desc = "EVTDESC190069"
+	desc = "EVTDESC190070"
 	
 	mean_time_to_happen = {
-		months = 1		
+		days = 1
+		modifier = {
+			factor = 1.5
+			learning = 15
+		}
+		modifier = {
+			factor = 1.5
+			learning = 20
+		}
+		modifier = {
+			factor = 1.5
+			learning = 25
+		}	
+		modifier = {
+			factor = 1.5
+			learning = 30
+		}	
+		modifier = {
+			factor = 1.1
+			piety = 250
+		}	
+		modifier = {
+			factor = 1.1
+			piety = 500
+		}	
+		modifier = {
+			factor = 1.1
+			piety = 750
+		}		
+		modifier = {
+			factor = 1.1
+			piety = 1000
+		}
 	}
 
 	option = {
-		name = "EVTOPTA190069"
-		if = {
-			limit = {
-				ai = no
-			}
-			prestige = 25
-		}
-		hidden_tooltip = {
-			remove_trait = placeholder
-		}
+		name = "OK"
+		religion_authority = 0.05
 	}
 }
+
+#Religious authority weakened
+character_event = {
+	id = 190071
+	picture = "GFX_evt_pope"
+	is_triggered_only = yes
+	trigger = {
+		controls_religion = yes
+		NOT = { learning = 10 }
+		NOT = { piety = 500 }
+	}
+		
+	desc = "EVTDESC190071"
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { piety = 100 }
+		}			
+		modifier = {
+			factor = 0.5
+			piety = 250
+		}		
+	}
+
+	option = {
+		name = "OK"
+		religion_authority = -0.05
+	}
+}
+
+

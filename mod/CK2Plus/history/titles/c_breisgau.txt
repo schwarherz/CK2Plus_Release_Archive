@@ -3,7 +3,7 @@ liege="d_swabia"
 }
 1066.1.1=
 {
-	holder=20245
+	holder=1388
 }
 1078.11.5={
 	holder = 20245

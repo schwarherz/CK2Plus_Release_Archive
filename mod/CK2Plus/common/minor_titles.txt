@@ -188,13 +188,17 @@ title_grant_independence = {
 	
 	gain_effect = {
 		FROM = { prestige = -50 }	
-		set_defacto_liege = ROOT
+		set_defacto_liege = ROOT			
+		character_event = { id = 220000 days = 1 }
+		remove_opinion = {
+			modifier = opinion_independent
+			who = FROM		
+		}
 		opinion = {
 			modifier = opinion_independent
 			who = FROM
 			years = 100
-		}			
-		character_event = { id = 220000 days = 1 }
+		}		
 	}
 	lose_effect = { }
 	
@@ -235,12 +239,7 @@ title_revoke_minor_title = {
 		remove_title = title_caesar
 		remove_title = title_anthypatos
 		remove_title = title_keeper_of_swans
-		remove_title = title_concubine
-		opinion = {
-			modifier = opinion_fired_from_office
-			who = FROM
-			years = 10
-		}		
+		remove_title = title_concubine		
 		character_event = { id = 220001 days = 1 }
 	}
 	lose_effect = { }
@@ -307,6 +306,7 @@ title_concubine = {
 	}
 	
 	gain_effect = {
+		FROM = { set_character_flag = employed_concubine }
 	}
 	lose_effect = {
 	}

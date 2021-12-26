@@ -1,3 +1,11 @@
+################################################
+#
+# Events for Tournament
+#
+# ID 70000 - 70999 is reserved
+#
+#################################################
+#
 # Written by Chris King
 #
 # Rewritten by Niklas Strid
@@ -36,10 +44,12 @@ character_event = {
 		trigger = {
 			war = no
 		}
-		set_character_flag = tournament_begins
-		set_character_flag = attending_tournament
 		hidden_tooltip = {
-			character_event = { id = 70002 days = 60 }
+			set_character_flag = tournament_begins
+			set_character_flag = attending_tournament
+			location = {
+				set_province_flag = tournament_60_days
+			}
 		}
 	}
 	option = {
@@ -58,7 +68,6 @@ character_event = {
 			}
 		}
 		clr_character_flag = epic_tournament
-		clr_character_flag = holding_epic_tournament
 	}
 }
 
@@ -78,72 +87,6 @@ character_event = {
 	}
 }
 
-# Inform about winner
-character_event = {
-	id = 70034
-	title = "TOURNAMENTTITLE"
-	desc = "EVTDESC70034"
-	picture = "GFX_evt_joust"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA70034"
-		FROM = {
-			opinion = {
-				modifier = opinion_tournament_winner
-				who = ROOT
-				years = 20
-			}
-			clr_character_flag = tournament_winner
-		}
-	}
-}
-
-# Inform about second place
-character_event = {
-	id = 70035
-	title = "TOURNAMENTTITLE"
-	desc = "EVTDESC70035"
-	picture = "GFX_evt_joust"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA70035"
-		FROM = {
-			opinion = {
-				modifier = opinion_tournament_second_place
-				who = ROOT
-				years = 15
-			}
-			clr_character_flag = tournament_second_place
-		}
-	}
-}
-
-# Inform about third place
-character_event = {
-	id = 70036
-	title = "TOURNAMENTTITLE"
-	desc = "EVTDESC70036"
-	picture = "GFX_evt_joust"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA70036"
-		FROM = {
-			opinion = {
-				modifier = opinion_tournament_third_place
-				who = ROOT
-				years = 10
-			}
-			clr_character_flag = tournament_third_place
-		}
-	}
-}
-
 # Message about death
 character_event = {
 	id = 70038
@@ -155,6 +98,7 @@ character_event = {
 	
 	trigger = {
 		NOT = { has_character_flag = no_msg_death }
+		NOT = { has_character_flag = tournament_has_ended }
 	}
 	
 	option = {
@@ -177,6 +121,7 @@ character_event = {
 
 	trigger = {
 		NOT = { has_character_flag = no_msg_maimed }
+		NOT = { has_character_flag = tournament_has_ended }
 	}
 	
 	option = {
@@ -197,6 +142,7 @@ character_event = {
 
 	trigger = {
 		NOT = { has_character_flag = no_msg_wounded }
+		NOT = { has_character_flag = tournament_has_ended }
 	}
 	
 	is_triggered_only = yes
@@ -211,63 +157,115 @@ character_event = {
 }
 
 # Tournament is over
-character_event = {
+province_event = {
 	id = 70002
 	title = "TOURNAMENTTITLE"
 	desc = "EVTDESC70002"
 	picture = "GFX_evt_joust"
 
-	is_triggered_only = yes
-
-	immediate = {
-		clr_character_flag = tournament_begins
-		clr_character_flag = winner
-		clr_character_flag = second_place
-		clr_character_flag = third_place
-		clr_character_flag = holding_epic_tournament
+	trigger = {
+		had_province_flag = {
+			flag = tournament_60_days
+			days = 60
+		}
+		owner = {
+			has_character_flag = winner
+			has_character_flag = second_place
+			has_character_flag = third_place
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
 	}
 	
 	option = {
 		name = "EVTOPTA70002"
-		prestige = 50
-		any_realm_character = {
-			limit = {
-				has_character_flag = attending_tournament
-			}
-			opinion = {
-				modifier = opinion_tournament_participant
-				who = ROOT
-				years = 2
-			}
-			hidden_tooltip = {
-				clr_character_flag = attending_tournament
-				clr_character_flag = attending_tournament_event
-				random_list = {
-					10 = {
-						character_event = { id = 70003 }
-					}
-					10 = {
-						character_event = { id = 70004 }
-					}
-					10 = {
-						character_event = { id = 70005 }
-					}
-					10 = {
-						character_event = { id = 70006 }
-					}
-					10 = {
-						character_event = { id = 70007 }
-					}
-					10 = {
-						character_event = { id = 70008 }
+		clr_province_flag = tournament_60_days
+		owner = {
+			clr_character_flag = tournament_begins
+			clr_character_flag = winner
+			clr_character_flag = second_place
+			clr_character_flag = third_place
+			clr_character_flag = attending_tournament
+			clr_character_flag = attending_tournament_event
+			clr_character_flag = tournament_third_place
+			clr_character_flag = tournament_second_place
+			clr_character_flag = tournament_winner
+			set_character_flag = tournament_has_ended
+			any_realm_character = {
+				limit = {
+					has_character_flag = attending_tournament
+					OR = {
+						has_character_flag = tournament_third_place
+						has_character_flag = tournament_second_place
+						has_character_flag = tournament_winner
 					}
 				}
+				set_character_flag = tournament_has_ended
+				clr_character_flag = tournament_third_place
+				clr_character_flag = tournament_second_place
+				clr_character_flag = tournament_winner
+				reverse_opinion = {
+					modifier = opinion_tournament_participant
+					who = PREV
+					years = 2
+				}
+				clr_character_flag = attending_tournament
+				clr_character_flag = attending_tournament_event
+			}
+			any_realm_character = {
+				limit = {
+					has_character_flag = attending_tournament
+					NOT = {
+						character = PREV
+					}
+					NOT = {
+						has_character_flag = tournament_third_place
+					}
+					NOT = {
+						has_character_flag = tournament_second_place
+					}
+					NOT = {
+						has_character_flag = tournament_winner
+					}
+				}
+				hidden_tooltip = {
+					random_list = {
+						10 = {
+							character_event = { id = 70003 }
+						}
+						10 = {
+							character_event = { id = 70004 }
+						}
+						10 = {
+							character_event = { id = 70005 }
+						}
+						10 = {
+							character_event = { id = 70006 }
+						}
+						10 = {
+							character_event = { id = 70007 }
+						}
+						10 = {
+							character_event = { id = 70008 }
+						}
+					}
+				}
+				set_character_flag = tournament_has_ended
+				reverse_opinion = {
+					modifier = opinion_tournament_participant
+					who = PREV
+					years = 2
+				}
+				clr_character_flag = attending_tournament
+				clr_character_flag = attending_tournament_event
 			}
 		}
 	}
 }
 
-# End of tournament events
+# End of tournament event
 character_event = {
 	id = 70003
 	title = "TOURNAMENTTITLE"
@@ -282,6 +280,7 @@ character_event = {
 	}
 }
 
+# End of tournament event
 character_event = {
 	id = 70004
 	title = "TOURNAMENTTITLE"
@@ -296,6 +295,7 @@ character_event = {
 	}
 }
 
+# End of tournament event
 character_event = {
 	id = 70005
 	title = "TOURNAMENTTITLE"
@@ -310,6 +310,7 @@ character_event = {
 	}
 }
 
+# End of tournament event
 character_event = {
 	id = 70006
 	title = "TOURNAMENTTITLE"
@@ -324,6 +325,7 @@ character_event = {
 	}
 }
 
+# End of tournament event
 character_event = {
 	id = 70007
 	title = "TOURNAMENTTITLE"
@@ -338,6 +340,7 @@ character_event = {
 	}
 }
 
+# End of tournament event
 character_event = {
 	id = 70008
 	title = "TOURNAMENTTITLE"
@@ -366,8 +369,14 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -425,9 +434,20 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA70009"
-		death = { death_reason = death_accident }
+		death = {
+			death_reason = death_battle
+		}
 		hidden_tooltip = {
-			top_liege = { character_event = { id = 70038 } }
+			if = {
+				limit = {
+					top_liege = {
+						NOT = {
+							character = ROOT
+						}
+					}
+				}
+				top_liege = { character_event = { id = 70038 } }
+			}
 		}
 	}
 }
@@ -449,8 +469,14 @@ character_event = {
 		NOT = {
 			trait = maimed
 		}
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -510,10 +536,19 @@ character_event = {
 		name = "EVTOPTA70010"
 		add_trait = maimed
 		hidden_tooltip = {
-			top_liege = { character_event = { id = 70039 } }
+			if = {
+				limit = {
+					top_liege = {
+						NOT = {
+							character = ROOT
+						}
+					}
+				}
+				top_liege = { character_event = { id = 70039 } }
+			}
 		}
 	}
-}	
+}
 
 # Character is wounded
 character_event = {
@@ -531,6 +566,9 @@ character_event = {
 		has_character_flag = attending_tournament
 		NOT = { has_character_flag = attending_tournament_event }
 		NOT = {
+			has_character_flag = tournament_has_ended
+		}
+		NOT = {
 			trait = wounded
 		}
 		NOT = {
@@ -538,6 +576,9 @@ character_event = {
 		}
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -593,7 +634,16 @@ character_event = {
 		name = "EVTOPTA70011"
 		add_trait = wounded
 		hidden_tooltip = {
-			top_liege = { character_event = { id = 70040 } }
+			if = {
+				limit = {
+					top_liege = {
+						NOT = {
+							character = ROOT
+						}
+					}
+				}
+				top_liege = { character_event = { id = 70040 } }
+			}
 		}
 	}
 }	
@@ -614,10 +664,16 @@ character_event = {
 		has_character_flag = attending_tournament
 		NOT = { has_character_flag = attending_tournament_event }
 		NOT = {
+			has_character_flag = tournament_has_ended
+		}
+		NOT = {
 			trait = craven
 		}
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -683,10 +739,16 @@ character_event = {
 		has_character_flag = attending_tournament
 		NOT = { has_character_flag = attending_tournament_event }
 		NOT = {
+			has_character_flag = tournament_has_ended
+		}
+		NOT = {
 			trait = brave
 		}
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -751,9 +813,15 @@ character_event = {
 	trigger = {
 		has_character_flag = attending_tournament
 		NOT = { has_character_flag = attending_tournament_event }
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		trait = misguided_warrior
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 	
@@ -819,9 +887,15 @@ character_event = {
 	trigger = {
 		has_character_flag = attending_tournament
 		NOT = { has_character_flag = attending_tournament_event }
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		trait = tough_soldier 
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -887,9 +961,15 @@ character_event = {
 	trigger = {
 		has_character_flag = attending_tournament
 		NOT = { has_character_flag = attending_tournament_event }
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		trait = skilled_tactician 
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -955,9 +1035,15 @@ character_event = {
 	trigger = {
 		has_character_flag = attending_tournament
 		NOT = { has_character_flag = attending_tournament_event }
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		trait = brilliant_strategist 
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -1023,9 +1109,15 @@ character_event = {
 	trigger = {
 		has_character_flag = attending_tournament
 		NOT = { has_character_flag = attending_tournament_event }
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		trait = skilled_tactician 
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -1091,9 +1183,15 @@ character_event = {
 	trigger = {
 		has_character_flag = attending_tournament
 		NOT = { has_character_flag = attending_tournament_event }
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		trait = tough_soldier
 		top_liege = {
 			has_character_flag = tournament_begins
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -1158,10 +1256,16 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		top_liege = {
 			had_character_flag = { flag = tournament_begins days = 50 }
 			NOT = {
 				has_character_flag = winner
+			}
+			NOT = {
+				has_character_flag = tournament_has_ended
 			}
 		}
 	}
@@ -1215,7 +1319,37 @@ character_event = {
 		wealth = 100
 		prestige = 300
 		hidden_tooltip = {
-			top_liege = { character_event = { id = 70034 } }
+			if = {
+				limit = {
+					top_liege = {
+						NOT = {
+							character = ROOT
+						}
+					}
+				}
+				top_liege = { character_event = { id = 70034 } }
+			}
+		}
+	}
+}
+
+# Inform about winner
+character_event = {
+	id = 70034
+	title = "TOURNAMENTTITLE"
+	desc = "EVTDESC70034"
+	picture = "GFX_evt_joust"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA70034"
+		FROM = {
+			opinion = {
+				modifier = opinion_tournament_winner
+				who = ROOT
+				years = 20
+			}
 		}
 	}
 }
@@ -1234,10 +1368,16 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		top_liege = {
 			had_character_flag = { flag = tournament_begins days = 50 }
 			had_character_flag = { flag = winner days = 1 }
 			NOT = { has_character_flag = second_place }
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -1290,7 +1430,37 @@ character_event = {
 		wealth = 75
 		prestige = 250
 		hidden_tooltip = {
-			top_liege = { character_event = { id = 70035 } }
+			if = {
+				limit = {
+					top_liege = {
+						NOT = {
+							character = ROOT
+						}
+					}
+				}
+				top_liege = { character_event = { id = 70035 } }
+			}
+		}
+	}
+}
+
+# Inform about second place
+character_event = {
+	id = 70035
+	title = "TOURNAMENTTITLE"
+	desc = "EVTDESC70035"
+	picture = "GFX_evt_joust"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA70035"
+		FROM = {
+			opinion = {
+				modifier = opinion_tournament_second_place
+				who = ROOT
+				years = 15
+			}
 		}
 	}
 }
@@ -1309,10 +1479,16 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		top_liege = {
 			had_character_flag = { flag = tournament_begins days = 50 }
 			had_character_flag = { flag = second_place days = 1 }
 			NOT = { has_character_flag = third_place }
+			NOT = {
+				has_character_flag = tournament_has_ended
+			}
 		}
 	}
 
@@ -1365,7 +1541,37 @@ character_event = {
 		wealth = 50
 		prestige = 200
 		hidden_tooltip = {
-			top_liege = { character_event = { id = 70036 } }
+			if = {
+				limit = {
+					top_liege = {
+						NOT = {
+							character = ROOT
+						}
+					}
+				}
+				top_liege = { character_event = { id = 70036 } }
+			}
+		}
+	}
+}
+
+# Inform about third place
+character_event = {
+	id = 70036
+	title = "TOURNAMENTTITLE"
+	desc = "EVTDESC70036"
+	picture = "GFX_evt_joust"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA70036"
+		FROM = {
+			opinion = {
+				modifier = opinion_tournament_third_place
+				who = ROOT
+				years = 10
+			}
 		}
 	}
 }
@@ -1384,6 +1590,9 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		NOT = { has_character_flag = attending_tournament_event }
 		NOT = {
 			trait = homosexual
@@ -1391,7 +1600,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 1600
+		months = 800
 		modifier = {
 			factor = 0.9
 			trait = drunkard
@@ -1458,6 +1667,9 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		NOT = { has_character_flag = attending_tournament_event }
 		NOT = {
 			trait = syphilitic
@@ -1466,7 +1678,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 1600
+		months = 800
 		modifier = {
 			factor = 1.5
 			trait = ugly
@@ -1488,7 +1700,7 @@ character_event = {
 			trait = lustful
 		}
 		modifier = {
-			factor = 0.9
+			factor = 2
 			trait = chaste
 		}
 		modifier = {
@@ -1521,6 +1733,9 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		NOT = { has_character_flag = attending_tournament_event }
 		NOT = {
 			trait = drunkard
@@ -1583,6 +1798,9 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		NOT = { has_character_flag = attending_tournament_event }
 		NOT = {
 			lifestyle_traits = 1
@@ -1649,6 +1867,9 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		NOT = { has_character_flag = attending_tournament_event }
 	}
 	
@@ -1725,6 +1946,9 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		NOT = { has_character_flag = attending_tournament_event }
 	}
 	
@@ -1801,6 +2025,9 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		NOT = { has_character_flag = attending_tournament_event }
 	}
 	
@@ -1877,6 +2104,9 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		NOT = { has_character_flag = attending_tournament_event }
 	}
 	
@@ -1953,6 +2183,9 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		NOT = { has_character_flag = attending_tournament_event }
 	}
 	
@@ -2029,6 +2262,9 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = attending_tournament
+		NOT = {
+			has_character_flag = tournament_has_ended
+		}
 		NOT = { has_character_flag = attending_tournament_event }
 	}
 	

@@ -606,7 +606,7 @@
 	name="Ota"
 	dynasty=506
 	dna="sabjlcssgaq"
-	properties="0j0j0j0000"
+	properties="0j0jhj0000"
 	martial=4
 	diplomacy=5
 	intrigue=7
@@ -736,8 +736,8 @@
 	1132.1.1={
 		add_spouse=218512
 	}
-	1162.1.1={
-		death="1162.1.1"
+	1162.1.2={
+		death="1162.1.2"
 	}
 }
 
@@ -1166,7 +1166,7 @@
 	name="Vratislav"
 	dynasty=506
 	dna="amhfdhfcdcb"
-        properties="0j0e0d0000"
+        properties="0j0ehd0000"
 	martial=8
 	diplomacy=5
 	intrigue=4
@@ -1196,9 +1196,9 @@
 526 = {
 	name="Konrád"
 	# AKA: Konrad
-	dna="cakfdffzfob"
-	properties="ed0c0k0000"
 	dynasty=506
+	dna="cakfdffzfob"
+	properties="ed0chk0000"
 	martial=5
 	diplomacy=4
 	intrigue=4
@@ -1488,8 +1488,8 @@
 	1112.1.1={
 		birth="1112.1.1"
 	}
-	1156.1.1={
-		death="1156.1.1"
+	1156.1.2={
+		death="1156.1.2"
 	}
 }
 

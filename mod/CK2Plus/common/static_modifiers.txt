@@ -55,7 +55,6 @@ very_hard_ai = {
 ##########################################################################
 
 province_base_values = {
-	supply_limit = 10 # 10K troops
 }
 
 coastal = {
@@ -68,32 +67,29 @@ coastal_sea = {
 }
 
 sea_zone = {
-	max_attrition = 0.05			
+	max_attrition = 0.05		
 }
 
 land_province = {
 	max_attrition = 0.05			
 	garrison_growth = 0.1			#10% base growth
+	garrison_size = -0.33
 }
 
 mild_winter = {
-	supply_limit = -1
-	max_attrition = 0.01			
+	supply_limit = -1			
 }
 
 normal_winter = {
-	supply_limit = -3		
-	max_attrition = 0.03			
+	supply_limit = -3				
 }
 
 severe_winter = {
-	supply_limit = -5		
-	max_attrition = 0.05			
+	supply_limit = -5					
 }
 
 out_of_supply = 
-{
-	max_attrition = 0.1			
+{			
 }
 
 no_adjacent_controlled = {
@@ -672,20 +668,20 @@ d_lost_company_modifier = {
 
 d_ghilman_modifier = {
 	levy_size = 1
-	horse_archers = 200
-	light_cavalry = 400
-	archers = 100
-	heavy_infantry = 200
-	knights = 100
+	horse_archers = 400
+	light_cavalry = 800
+	archers = 200
+	heavy_infantry = 400
+	knights = 200
 }
 
 d_varangian_guard_modifier = {
 	levy_size = 1
-	archers = 125
-	heavy_infantry = 500
-	light_infantry = 250
-	pikemen = 75
-	light_cavalry = 50
+	archers = 75
+	heavy_infantry = 250
+	light_infantry = 100
+	pikemen = 50
+	light_cavalry = 25
 }
 
 d_legion_of_the_black_sea_modifier = {

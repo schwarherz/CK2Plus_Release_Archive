@@ -24,7 +24,18 @@ character_event = {
 	desc = "EVTDESC220001"
 	
 	immediate = {
-		remove_title = title_revoke_minor_title		
+		remove_title = title_revoke_minor_title	
+		hidden_tooltip = {
+			remove_opinion = {
+				modifier = opinion_independent
+				who = liege		
+			}		
+		}
+		opinion = {
+			modifier = opinion_fired_from_office
+			who = liege
+			years = 10
+		}				
 	}
 	
 	option = {
@@ -52,7 +63,6 @@ character_event = {
 character_event = {
 	id = 220003
 	picture = GFX_evt_emissary
-		
 	desc = "EVTDESC220003"
 	
 	trigger = {
@@ -60,10 +70,14 @@ character_event = {
 		OR = {
 			age = 45
 			NOT = { fertility = 0.1 }
+			liege = { NOT = { fertility = 0.1 } }
 			is_ruler = yes
 			is_married = yes
 			is_betrothed = yes
 			liege = { is_female = yes }
+			liege = { NOT = { age = 16 } }
+			liege = { NOT = { religion_group = muslim } }
+			liege = { NOT = { has_character_flag = employed_concubine } }
 		}
 	}
 	

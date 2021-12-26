@@ -2360,7 +2360,7 @@
 	religion="orthodox"
 	culture="russian"
 	add_trait="chaste"
-	add_trait="learned"
+	add_trait="scholar"
 	father=472794
 	mother=472795
 	1282.1.2={
@@ -9586,7 +9586,7 @@
 	name="Iziaslav"
 	# AKA: Izyaslav
 	dynasty=705
-	dna="nkdyrokiglu"
+	dna="nkdyrokigcu"
 	properties="cafdcd0000"
 	religion="orthodox"
 	culture="russian"
@@ -9623,7 +9623,7 @@
 	name="Sviatoslav"
 	# AKA: Svyatoslav
 	dynasty=705
-	dna="fkdyuomxglr"
+	dna="fkdyuomxgcr"
 	properties="ch0ead0000"
 	diplomacy=8
 	stewardship=7
@@ -9648,7 +9648,7 @@
 630 = {
 	name="Vsevolod"
 	dynasty=705
-	dna="nkdyubmxglu"
+	dna="nkdyubmxgcu"
 	properties="cj0ccd0000"
 	religion="orthodox"
 	culture="russian"
@@ -9766,8 +9766,8 @@
 650 = {
 	name="Vseslav"
 	dynasty=705
-	dna="kutihynogve"
-	properties="0e0ckd0000"
+	dna="kutihynogce"
+	properties="0e0cad0000"
 	religion="orthodox"
 	culture="russian"
 	add_trait="cynical"

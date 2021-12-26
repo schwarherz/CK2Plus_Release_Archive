@@ -1,7 +1,7 @@
 1066.1.5={
 	holder=122 # Harold Godwinson
 	law = agnatic_succession
-	law = succ_gavelkind
+	law = succ_primogeniture
 	law = centralization_1
 	law = investiture_law_1
 }
@@ -30,7 +30,6 @@
 1216.10.28={
 	holder = 454522 #Henry III
 	law = centralization_3
-	law = succ_primogeniture
 }
 1272.11.16={
 	holder = 454520 #Edward I Longshanks

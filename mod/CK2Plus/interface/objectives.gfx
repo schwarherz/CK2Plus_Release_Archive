@@ -1,5 +1,18 @@
 spriteTypes = {
-
+	spriteType = {
+		name = "GFX_plot_gain_vassal_title"
+		texturefile = "gfx/ambitions/plot_gain_vassal_title.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_plot_weaken_fellow_vassal"
+		texturefile = "gfx/ambitions/plot_gain_vassal_title.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
 	spriteType = {
 		name = "GFX_obj_become_chancellor"
 		texturefile = "gfx/ambitions/obj_become_chancellor.tga"
@@ -402,17 +415,19 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}	
 	spriteType = {
-		name = "GFX_plot_gain_vassal_title"
-		texturefile = "gfx/ambitions/plot_gain_vassal_title.tga"
+		name = "GFX_obj_befriend_liege"
+		texturefile = "gfx/CK2Plus/obj_love_liege.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}	
 	spriteType = {
-		name = "GFX_plot_weaken_fellow_vassal"
-		texturefile = "gfx/ambitions/plot_gain_vassal_title.tga"
+		name = "GFX_obj_befriend_relhead"
+		texturefile = "gfx/CK2Plus/obj_befriend_relhead.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}	
 }
+
+

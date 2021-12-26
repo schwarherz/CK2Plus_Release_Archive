@@ -38,12 +38,14 @@ naive_appeaser = { #5
 	
 	diplomacy = 1
 	martial = -1
+	ai_rationality = 5
 }
 underhanded_rogue = { #6
 	education = yes
 	
 	diplomacy = 3
 	martial = -1
+	ai_rationality = 10
 }
 charismatic_negotiator = { #7
 	education = yes
@@ -52,6 +54,7 @@ charismatic_negotiator = { #7
 	intrigue = 1
 	learning = 1
 	martial = -1
+	ai_rationality = 15
 	
 }
 grey_eminence = { #8
@@ -61,6 +64,7 @@ grey_eminence = { #8
 	intrigue = 2
 	learning = 2
 	martial = -1
+	ai_rationality = 20
 }
 
 # STEWARDSHIP OUTCOMES
@@ -99,12 +103,14 @@ misguided_warrior = { #13
 	
 	martial = 1
 	learning = -1
+	ai_rationality = -5
 }
 tough_soldier = { #14
 	education = yes
 	
 	martial = 3
 	learning = -1
+	ai_rationality = -10
 }
 skilled_tactician = { #15
 	education = yes
@@ -113,6 +119,7 @@ skilled_tactician = { #15
 	intrigue = 1
 	stewardship = 1
 	learning = -1
+	ai_rationality = -15
 }
 brilliant_strategist = { #16
 	education = yes
@@ -121,6 +128,7 @@ brilliant_strategist = { #16
 	intrigue = 2
 	stewardship = 2
 	learning = -1
+	ai_rationality = -20
 }
 
 # ECCLESIASTICAL OUTCOMES
@@ -136,7 +144,7 @@ martial_cleric = { #18
 	education = yes
 	
 	learning = 3
-	intrigue = -1
+	intrigue = -1´
 }
 scholarly_theologian = { #19
 	priest = yes
@@ -199,7 +207,7 @@ lunatic = { #23
 	vassal_opinion = -20
 	sex_appeal_opinion = -20
 	
-	ai_rationality = -50
+	ai_rationality = -100
 	customizer = no
 }
 possessed = { #24
@@ -212,7 +220,8 @@ possessed = { #24
 	fertility = -0.1
 	
 	vassal_opinion = -30
-	sex_appeal_opinion = -30	
+	sex_appeal_opinion = -30
+	ai_rationality = -50
 	
 	# Highly event driven
 	customizer = no
@@ -310,7 +319,7 @@ infirm = { #31
 	health = -1
 	fertility = -0.3
 	
-	ai_rationality = -10
+	ai_rationality = -20
 	customizer = no
 }
 incapable = { #32
@@ -339,7 +348,7 @@ drunkard = { #33
 	church_opinion = -10
 	sex_appeal_opinion = -10
 	
-	ai_rationality = -5
+	ai_rationality = -20
 }
 has_tuberculosis = { #34
 	is_epidemic = yes
@@ -648,6 +657,8 @@ strong = { #61
 	
 	sex_appeal_opinion = 5
 	vassal_opinion = 5
+	
+	ai_rationality = -10
 }
 weak = { #62
 	#congenital = yes
@@ -663,6 +674,8 @@ weak = { #62
 	
 	sex_appeal_opinion = -5
 	vassal_opinion = -5
+	
+	ai_rationality = 10
 }
 
 ################################################
@@ -811,6 +824,7 @@ gluttonous = { #75
 	
 	sex_appeal_opinion = -10
 	church_opinion = -10
+	ai_rationality = -10
 	
 	monthly_character_piety = -0.05
 	
@@ -848,6 +862,7 @@ greedy = { #77
 	ai_honor = -10
 	ai_ambition = 15
 	ai_greed = 20
+	ai_rationality = -10
 	
 	monthly_character_piety = -0.1
 }
@@ -907,6 +922,7 @@ diligent = { #80
 	
 	ai_zeal = 10
 	ai_ambition = 10
+	ai_rationality = -10
 	
 	monthly_character_piety = 0.05
 }
@@ -922,6 +938,7 @@ envious = { #81
 	liege_opinion = -15
 	
 	ai_honor = -10
+	ai_rationality = -20
 	
 	monthly_character_piety = -0.1
 }
@@ -952,7 +969,7 @@ wroth = { #83
 	intrigue = -1
 	martial = 3
 	
-	ai_rationality = -10
+	ai_rationality = -20
 	ai_honor = -5
 	
 	monthly_character_piety = -0.05
@@ -981,6 +998,7 @@ proud = { #85
 	
 	monthly_character_prestige = 0.25
 	monthly_character_piety = -0.1
+	ai_rationality = -10
 	
 	ai_ambition = 10
 }
@@ -1023,6 +1041,7 @@ honest = { #88
 	diplomacy = 3
 	
 	opposite_opinion = -10
+	ai_rationality = -10
 	
 	ai_honor = 25
 }
@@ -1033,6 +1052,7 @@ craven = { #89
 	}
 	
 	vassal_opinion = -5
+	ai_rationality = 30
 	
 	martial = -2
 	intrigue = 2
@@ -1045,6 +1065,7 @@ brave = { #90
 	
 	vassal_opinion = 10
 	opposite_opinion = -10
+	ai_rationality = -30
 	
 	martial = 2
 	intrigue = -2
@@ -1086,6 +1107,7 @@ ambitious = { #93
 	learning = 2
 	
 	ambition_opinion = -30 # Against those they want something from
+	ai_rationality = -20
 	
 	ai_ambition = 40
 	ai_zeal = 10
@@ -1104,6 +1126,7 @@ content = { #94
 	
 	monthly_character_piety = 0.25
 	
+	ai_rationality = 20
 	ai_ambition = -40
 	ai_zeal = -10
 }
@@ -1135,8 +1158,8 @@ just = { #96
 	
 	vassal_opinion = 10
 	opposite_opinion = -10
+	ai_rationality = 10
 	
-	ai_rationality = 20
 	ai_honor = 10
 	ai_zeal = -10
 }
@@ -1171,7 +1194,7 @@ zealous = { #98
 	
 	monthly_character_piety = 0.5
 	
-	ai_rationality = -10
+	ai_rationality = -20
 	ai_zeal = 100
 }
 paranoid = { #99
@@ -1183,7 +1206,7 @@ paranoid = { #99
 	intrigue = 3
 	diplomacy = -2
 	
-	ai_rationality = 10
+	ai_rationality = 20
 	ai_zeal = -100
 }
 trusting = { #100
@@ -1209,4 +1232,5 @@ cruel = { #101
 	
 	vassal_opinion = -10
 	ai_honor = -10	
+	ai_rationality = -10
 }

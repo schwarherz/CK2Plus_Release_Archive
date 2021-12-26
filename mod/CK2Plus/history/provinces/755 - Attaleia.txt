@@ -9,7 +9,7 @@ max_settlements = 3
 b_attaleia = castle
 
 b_side = city
-b_cibyra = temple
+#b_cibyra = temple
 
 #b_slege = castle
 #b_sagalassos = castle

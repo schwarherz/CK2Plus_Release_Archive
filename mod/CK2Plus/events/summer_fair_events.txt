@@ -1107,17 +1107,17 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 200
+		days = 250
 		modifier = {
-			factor = 1.5
+			factor = 2.0
 			capital_scope = { has_province_modifier = province_prosperity_1 }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			capital_scope = { has_province_modifier = province_poverty_1 }
 		}	
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			capital_scope = { has_province_modifier = province_poverty_2 }
 		}			
 	}

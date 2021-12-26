@@ -38,7 +38,7 @@ nick_the_exile = {}
 #################
 nick_the_lisp_and_lame = {
 	allow = {
-		age = 16
+		age = 18
 		trait = lisp
 		trait = clubfooted
 	}
@@ -1147,7 +1147,7 @@ nick_the_fool = {
 
 nick_the_hunchback = {
 	allow = {
-		age = 16
+		age = 18
 		trait = hunchback
 	}
 	chance = {
@@ -1167,7 +1167,7 @@ nick_the_poet = {
 
 nick_the_benign = {
 	allow = {
-		age = 16
+		age = 18
 		trait = kind
 		trait = patient
 	}
@@ -1178,7 +1178,7 @@ nick_the_benign = {
 
 nick_the_leper = {
 	allow = {
-		age = 16
+		age = 18
 		trait = leper
 	}
 	chance = {
@@ -1210,7 +1210,7 @@ nick_the_spider = {
 
 nick_the_eloquent = {
 	allow = {
-		age = 16
+		age = 18
 		diplomacy = 12
 		NOT = {
 			trait = lisp
@@ -1233,7 +1233,7 @@ nick_the_eloquent = {
 
 nick_the_meek = {
 	allow = {
-		age = 16
+		age = 18
 		trait = humble
 		NOT = {
 			trait = strong
@@ -1295,7 +1295,7 @@ nick_the_learned = {
 
 nick_the_impaler = {
 	allow = {
-		age = 16
+		age = 18
 		trait = impaler
 		NOT = {
 			trait = just
@@ -1314,7 +1314,7 @@ nick_the_impaler = {
 
 nick_the_cunning = {
 	allow = {
-		age = 16
+		age = 18
 		intrigue = 10
 		trait = deceitful
 		NOT = {
@@ -1431,7 +1431,7 @@ nick_the_theologian = {
 
 nick_the_decadent = {
 	allow = {
-		age = 16
+		age = 18
 		trait = hedonist
 		OR = {
 			trait = gluttonous
@@ -1774,7 +1774,7 @@ nick_the_ambitious = {
 
 nick_the_righteous = {
 	allow = {
-		age = 16
+		age = 18
 		trait = just
 		trait = zealous
 	}
@@ -1829,7 +1829,7 @@ nick_the_boar = {
 
 nick_the_infirm = {
 	allow = {
-		age = 16
+		age = 18
 		trait = infirm
 	}
 	chance = {
@@ -1839,7 +1839,7 @@ nick_the_infirm = {
 
 nick_the_reluctant = {
 	allow = {
-		age = 16
+		age = 18
 		trait = craven
 		trait = slothful
 	}
@@ -1869,7 +1869,7 @@ nick_the_peculiar = {
 
 nick_the_brilliant = {
 	allow = {
-		age = 16
+		age = 18
 		trait = genius
 		OR = {
 			trait = elusive_shadow
@@ -1886,7 +1886,7 @@ nick_the_brilliant = {
 
 nick_the_stammerer = {
 	allow = {
-		age = 16
+		age = 18
 		trait = stutter
 	}
 	chance = {
@@ -1916,33 +1916,9 @@ nick_the_rich = {
 	}
 }
 
-nick_the_apathetic = {
-	allow = {
-		age = 20
-		ruled_years = 10
-		OR = {
-			trait = depressed
-			trait = content
-			trait = slothful
-		}
-		NOT = {
-			trait = diligent
-			trait = ambitious
-			trait = zealous
-		}
-	}
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 2
-			trait = cynical
-		}
-	}
-}
-
 nick_the_upright = {
 	allow = {
-		age = 16
+		age = 18
 		trait = just
 		trait = honest
 		trait = charitable
@@ -2104,6 +2080,9 @@ nick_the_seemly = {
 		diplomacy = 10
 		NOT = { trait = deceitful }
 		NOT = { trait = imbecile }
+		NOT = { trait = lustful }
+		NOT = { trait = hedonist }
+		NOT = { trait = cruel }
 		NOT = { trait = slow }
 		NOT = { trait = incapable }
 		OR = {

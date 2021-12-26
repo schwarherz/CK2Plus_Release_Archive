@@ -527,14 +527,12 @@ plot_decisions = {
 			modifier = {
 				factor = 0
 				NOT = {
-					OR = {
-						trait = lunatic
-						trait = possessed
-						had_character_flag = {
-							flag = plot_check
-							days = 1095
-						}						
-					}					
+					trait = lunatic
+					trait = possessed
+					had_character_flag = {
+						flag = plot_check
+						days = 1095
+					}											
 				}
 			}
 		}
@@ -580,14 +578,12 @@ plot_decisions = {
 			modifier = {
 				factor = 0
 				NOT = {
-					OR = {
-						trait = lunatic
-						trait = possessed
-						had_character_flag = {
-							flag = plot_check
-							days = 730
-						}						
-					}					
+					trait = lunatic
+					trait = possessed
+					had_character_flag = {
+						flag = plot_check
+						days = 365
+					}											
 				}
 			}			
 		}
@@ -673,14 +669,12 @@ plot_decisions = {
 			modifier = {
 				factor = 0
 				NOT = {
-					OR = {
-						trait = lunatic
-						trait = possessed
-						had_character_flag = {
-							flag = plot_check
-							days = 1095
-						}						
-					}					
+					trait = lunatic
+					trait = possessed
+					had_character_flag = {
+						flag = plot_check
+						days = 1095
+					}											
 				}
 			}
 		}
@@ -727,14 +721,12 @@ plot_decisions = {
 			modifier = {
 				factor = 0
 				NOT = {
-					OR = {
-						trait = lunatic
-						trait = possessed
-						had_character_flag = {
-							flag = plot_check
-							days = 730
-						}						
-					}					
+					trait = lunatic
+					trait = possessed
+					had_character_flag = {
+						flag = plot_check
+						days = 365
+					}											
 				}
 			}
 		}
@@ -818,14 +810,12 @@ plot_decisions = {
 			modifier = {
 				factor = 0
 				NOT = {
-					OR = {
-						trait = lunatic
-						trait = possessed
-						had_character_flag = {
-							flag = plot_check
-							days = 1095
-						}						
-					}					
+					trait = lunatic
+					trait = possessed
+					had_character_flag = {
+						flag = plot_check
+						days = 1095
+					}											
 				}
 			}
 		}
@@ -869,14 +859,12 @@ plot_decisions = {
 			modifier = {
 				factor = 0
 				NOT = {
-					OR = {
-						trait = lunatic
-						trait = possessed
-						had_character_flag = {
-							flag = plot_check
-							days = 730
-						}						
-					}					
+					trait = lunatic
+					trait = possessed
+					had_character_flag = {
+						flag = plot_check
+						days = 365
+					}										
 				}
 			}
 		}

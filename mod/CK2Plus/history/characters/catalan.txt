@@ -2923,6 +2923,9 @@
 	1276.1.1={
 		birth="1276.1.1"
 	}
+	1311.5.29={
+		give_nickname = nick_the_peaceable
+	}
 	1324.9.4={
 		death="1324.9.4"
 	}
@@ -3287,6 +3290,9 @@
 	}
 	875.6.27={
 		add_spouse=70151
+	}
+	878.1.1={
+		give_nickname = nick_the_hairy
 	}
 	898.8.11={
 		death="898.8.11"
@@ -4371,7 +4377,6 @@
 	stewardship=6
 	religion="catholic"
 	culture="catalan"
-	add_trait="church_loyalist"
 	add_trait="deceitful"
 	add_trait="flamboyant_schemer"
 	1020.1.1={

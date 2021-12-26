@@ -1913,6 +1913,7 @@
 	culture="levantine_arabic"
 	add_trait="charitable"
 	add_trait="skilled_tactician"
+	#add_trait="ambitious"
 	father=3820
 	1029.1.2={
 		birth="1029.1.2"
@@ -1931,6 +1932,7 @@
 	stewardship=6
 	religion="sunni"
 	culture="levantine_arabic"
+	#add_trait="ambitious"
 	add_trait="thrifty_clerk"
 	add_trait="honest"
 	1313.1.1={

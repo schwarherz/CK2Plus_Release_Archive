@@ -3667,7 +3667,6 @@ character_event = {
 	desc = "EVTDESC30075"
 	picture = "GFX_evt_pregnancy"
 	
-	min_age = 16
 	max_age = 25
 	only_women = yes
 	capable_only = yes
@@ -4771,7 +4770,6 @@ character_event = {
 	desc = "EVTDESC30100"
 	picture = GFX_evt_lovers
 	
-	min_age = 16
 	only_women = yes
 	capable_only = yes
 	prisoner = no
@@ -4779,9 +4777,10 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		fertility = 0.5
 		spouse = {
-			age = 40
+			age = 60
 			war = no
 			in_command = no
 			is_abroad = no
@@ -4819,6 +4818,7 @@ character_event = {
 		add_character_modifier = {
 			name = spouse_active_timer
 			duration = 365
+			hidden = yes
 		}
 	}
 	

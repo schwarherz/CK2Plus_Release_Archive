@@ -76,7 +76,7 @@ province_event = {
 	}
 	
 	immediate = {
-		religion_authority = -0.002
+		religion_authority = -0.001
 		become_heretic = yes
 		set_province_flag = heresy_in_province
 		add_province_modifier = {
@@ -714,7 +714,7 @@ province_event = {
 	}
 	
 	immediate = {
-		religion_authority = -0.002
+		religion_authority = -0.001
 		random_neighbor_province = {
 			limit = {
 				is_heresy_of = ROOT
@@ -741,11 +741,11 @@ character_event = {
 	picture = GFX_evt_heretic
 	border = "GFX_event_normal_frame_religion"
 	
-	min_age = 16
 	only_capable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		location = {
 			is_heresy_of = ROOT
 		}
@@ -800,11 +800,11 @@ character_event = {
 	picture = GFX_evt_heretic
 	border = "GFX_event_normal_frame_religion"
 	
-	min_age = 16
 	only_capable = yes
 	prisoner = no
 	
-	trigger = {
+	trigger = {	
+		age = 16
 		is_heretic = yes
 		any_courtier = {
 			age = 16
@@ -1246,7 +1246,6 @@ narrative_event = {
 	is_ruler = yes
 	
 	trigger = {
-		always = no
 		year = 1175		# Papal recognition
 		NOT = { is_title_active = d_order_of_santiago }
 		religion = catholic
@@ -1299,7 +1298,6 @@ narrative_event = {
 	is_ruler = yes
 	
 	trigger = {
-		always = no
 		year = 1204		# Papal recognition
 		NOT = { is_title_active = d_livonian_order }
 		religion = catholic
@@ -1594,10 +1592,10 @@ character_event = {
 	picture = GFX_evt_into_the_dungeon
 	border = "GFX_event_normal_frame_religion"
 	
-	min_age = 16
 	only_playable = yes
 	
 	trigger = {
+		age = 16
 		prisoner = yes
 		is_theocracy = yes
 		religion = catholic
@@ -2881,12 +2879,11 @@ character_event = {
 	border = "GFX_event_normal_frame_religion"
 	picture = "GFX_evt_icon"
 
-	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 
 	trigger = {
+		age = 16
 		religion = orthodox
 		is_heretic = no
 		NOT = {
@@ -2933,11 +2930,11 @@ character_event = {
 	picture = "GFX_evt_icon"
 	border = "GFX_event_normal_frame_religion"
 
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 
 	trigger = {
+		age = 16
 		religion = orthodox
 		is_heretic = no
 		NOT = {
@@ -2985,11 +2982,11 @@ character_event = {
 	picture = "GFX_evt_icon"
 	border = "GFX_event_normal_frame_religion"
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 
 	trigger = {
+		age = 16
 		religion = orthodox
 		is_heretic = no
 		NOT = {
@@ -3037,12 +3034,11 @@ character_event = {
 	picture = "GFX_evt_icon"
 	border = "GFX_event_normal_frame_religion"
 
-	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 
 	trigger = {
+		age = 16
 		religion = orthodox
 		is_heretic = no
 		NOT = {
@@ -3090,11 +3086,11 @@ character_event = {
 	picture = "GFX_evt_icon"
 	border = "GFX_event_normal_frame_religion"
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 
 	trigger = {
+		age = 16
 		religion = orthodox
 		is_heretic = no
 		NOT = {
@@ -3142,10 +3138,9 @@ character_event = {
 	desc = "EVTDESC39310"
 	picture = GFX_evt_melee
 	border = "GFX_event_normal_frame_religion"
-	
-	min_age = 16
 
 	trigger = {
+		age = 16
 		religion_group = christian
 		is_heretic = no
 		is_female = no
@@ -3198,10 +3193,9 @@ character_event = {
 	desc = "EVTDESC39311"
 	picture = GFX_evt_knight_kneeling
 	border = "GFX_event_normal_frame_religion"
-	
-	min_age = 16
 
 	trigger = {
+		age = 16
 		has_character_modifier = true_christian_knight
 		is_female = no
 		OR = {

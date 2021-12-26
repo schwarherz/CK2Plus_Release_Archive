@@ -465,8 +465,7 @@ narrative_event = {
 			}
 		}
 		new_character = {
-			set_character_flag = marion_robin
-			character_event = { id = 300001 }			
+			set_character_flag = marion_robin			
 		}
 		create_character = {
 			name = Marion
@@ -485,8 +484,7 @@ narrative_event = {
 			}
 		}
 		new_character = {
-			set_character_flag = robin_marion
-			character_event = { id = 300001 }		
+			set_character_flag = robin_marion		
 		}
 		narrative_event = {
 			id = 10042
@@ -1166,8 +1164,7 @@ narrative_event = {
 			}
 		}
 		new_character = {
-			set_character_flag = marion_robin
-			character_event = { id = 300001 }			
+			set_character_flag = marion_robin			
 		}
 		create_character = {
 			name = Marion
@@ -1186,8 +1183,7 @@ narrative_event = {
 			}
 		}
 		new_character = {
-			set_character_flag = robin_marion
-			character_event = { id = 300001 }		
+			set_character_flag = robin_marion		
 		}
 		narrative_event = {
 			id = 10042
@@ -1290,8 +1286,7 @@ narrative_event = {
 			}
 		}
 		new_character = {
-			set_character_flag = marion_robin
-			character_event = { id = 300001 }			
+			set_character_flag = marion_robin			
 		}
 		create_character = {
 			name = Marion
@@ -1310,8 +1305,7 @@ narrative_event = {
 			}
 		}
 		new_character = {
-			set_character_flag = robin_marion
-			character_event = { id = 300001 }			
+			set_character_flag = robin_marion			
 		}
 		narrative_event = {
 			id = 10042

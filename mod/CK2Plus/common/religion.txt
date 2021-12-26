@@ -214,7 +214,7 @@ pagan_group = {
 	norse_pagan = {
 		graphical_culture = westerngfx
 
-		icon = 5
+		icon = 23
 		color = { 0.7 0.7 0.7 }
 		god_names = {
 			GOD_THOR GOD_THE_THUNDERER GOD_THE_ALLFATHER GOD_THE_ODIN
@@ -226,7 +226,7 @@ pagan_group = {
 	tengri_pagan = { #Mongols
 		graphical_culture = westerngfx
 
-		icon = 5
+		icon = 12
 		color = { 0.0 0.2 0.8 }
 		god_names = {
 			GOD_TENGRI GOD_ERLIK_KHAN GOD_TUNG-AK
@@ -238,7 +238,7 @@ pagan_group = {
 	baltic_pagan = {
 		graphical_culture = westerngfx
 
-		icon = 5
+		icon = 18
 		color = { 0.6 0.4 0.3 }
 		crusade_name = "HOLY_WAR"
 		scripture_name = THE_LEGENDS
@@ -250,7 +250,7 @@ pagan_group = {
 	finnish_pagan = {
 		graphical_culture = westerngfx
 
-		icon = 5
+		icon = 19
 		color = { 0.5 0.5 0.0 }
 		crusade_name = "HOLY_WAR"
 		scripture_name = THE_LEGENDS
@@ -268,7 +268,7 @@ zoroastrian_group = {
 
 	zoroastrian = {
 		graphical_culture = muslimgfx
-		icon = 5
+		icon = 14
 		color = { 0.5 0.7 0.2 }
 		crusade_name = "HOLY_WAR"
 		scripture_name = THE_GATHAS

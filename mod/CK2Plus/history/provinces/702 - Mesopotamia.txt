@@ -7,7 +7,7 @@ title = c_mesopotamia
 max_settlements = 4
 b_tzimisca = castle
 b_mayafaraqin = city
-b_martyropolis = temple
+#b_martyropolis = temple
 #b_jermuk = castle
 #b_arghana = castle
 #b_hani = castle
@@ -21,4 +21,4 @@ religion = orthodox
 # History
 1097.8.26 = { religion = sunni }
 1097.8.26 = { culture = turkish }
-1337.1.1 = { b_jermuk = castle }
+1337.1.1 = { b_martyropolis = temple }

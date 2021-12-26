@@ -1010,8 +1010,7 @@ character_event = {
 						dynasty = random
 						female = no
 					}
-					new_character = {
-						character_event = { id = 300001 }					
+					new_character = {					
 						ROOT = {
 							random_demesne_title = {
 								limit = {
@@ -1309,8 +1308,7 @@ character_event = {
 						dynasty = random
 						female = no
 					}
-					new_character = {
-						character_event = { id = 300001 }					
+					new_character = {					
 						ROOT = {
 							random_demesne_title = {
 								limit = {
@@ -1944,8 +1942,7 @@ character_event = {
 						dynasty = random
 						female = no
 					}
-					new_character = {
-						character_event = { id = 300001 }					
+					new_character = {					
 						ROOT = {
 							random_demesne_title = {
 								limit = {
@@ -1987,5 +1984,258 @@ character_event = {
 			clr_global_flag = duchy_granted	
 			character_event = { id = 110017 }
 		}
+	}
+}
+
+character_event = {
+	id = 110018	
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+		ai = yes
+		NOT = { has_character_flag = plot_check }
+		OR = {
+			is_ruler = yes
+			liege = { ai = no }
+		}			
+		OR = {
+			has_objective = plot_gain_vassal_title
+			has_objective = plot_gain_title
+			has_objective = plot_weaken_fellow_vassal
+			has_objective = plot_institute_hereditary_titles
+			has_objective = plot_kidnap_liege
+			has_objective = plot_succ_seniority
+			has_objective = plot_succ_primogeniture
+			has_objective = plot_succ_gavelkind
+			has_objective = plot_succ_feudal_elective
+			has_objective = plot_kill_character
+			has_objective = plot_kill_spouse
+			has_objective = plot_lower_crown_authority
+		}
+	}
+		
+	desc = "AI_EVENT"
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		set_character_flag = plot_check
+	}
+}
+
+character_event = {
+	id = 110019
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+		ai = yes
+		had_character_flag = {
+			flag = plot_check
+			days = 730
+		}
+		OR = {
+			NOT = { num_of_plot_backers = 1 }
+			had_character_flag = {
+				flag = plot_check
+				days = 1095
+			}				
+		}
+		OR = {
+			NOT = { num_of_plot_backers = 2 }
+			had_character_flag = {
+				flag = plot_check
+				days = 1460
+			}				
+		}
+	}
+		
+	desc = "AI_EVENT"
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		set_character_flag = abort_plot
+	}
+}
+
+character_event = {
+	id = 110020
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+		ai = yes
+		NOT = { has_character_flag = obj_check }
+		OR = {
+			is_ruler = yes
+			liege = { ai = no }
+		}
+		age = 16
+		OR = {
+			has_objective = obj_status_quo
+			has_objective = obj_befriend_liege
+			has_objective = obj_befriend_relhead
+			has_objective = obj_become_chancellor
+			has_objective = obj_become_marshal
+			has_objective = obj_become_treasurer
+			has_objective = obj_become_spymaster
+			has_objective = obj_become_spiritual
+			has_objective = obj_amass_wealth_1
+			has_objective = obj_amass_wealth_2
+			has_objective = obj_amass_wealth_3
+			has_objective = obj_amass_wealth_4
+			has_objective = obj_become_paragon_of_virtue
+			has_objective = obj_become_exalted_1
+			has_objective = obj_become_exalted_2
+			has_objective = obj_become_exalted_3
+			has_objective = obj_become_exalted_4
+			has_objective = obj_get_married
+			has_objective = obj_marry_ruler
+			has_objective = obj_have_a_daughter
+			has_objective = obj_have_a_son
+			has_objective = obj_become_heir
+			has_objective = obj_wants_landed_title
+			has_objective = obj_five_children
+			has_objective = obj_ten_children
+			has_objective = obj_fifteen_children
+			has_objective = obj_twenty_children
+			has_objective = obj_increase_demesne_1
+			has_objective = obj_increase_demesne_2
+			has_objective = obj_increase_demesne_3
+			has_objective = obj_increase_demesne_4
+			has_objective = obj_increase_demesne_5
+			has_objective = obj_increase_demesne_6
+			has_objective = obj_increase_demesne_7
+			has_objective = obj_increase_demesne_8				
+			has_objective = obj_increase_demesne_9
+			has_objective = obj_go_crusade
+			has_objective = obj_go_jihad
+			has_objective = obj_find_lover
+			has_objective = obj_become_independent
+			has_objective = obj_become_duke				
+			has_objective = obj_become_king
+			has_objective = obj_become_emperor
+			has_objective = obj_adopt_a_lifestyle
+			has_objective = obj_gain_honorary_title
+			has_objective = obj_convert_a_province
+			has_objective = obj_win_a_war
+			#has_objective = obj_break_out_of_prison #EXCEPTION	
+		}
+	}
+		
+	desc = "AI_EVENT"
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		set_character_flag = obj_check
+	}
+}
+
+character_event = {
+	id = 110021
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+		ai = yes
+		had_character_flag = {
+			flag = obj_check
+			days = 3650
+		}
+	}
+		
+	desc = "AI_EVENT"
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		set_character_flag = abort_obj
+	}
+}
+
+character_event = {
+	id = 110022
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+		ai = yes
+		NOT = { trait = not_dejure_liege }
+		is_ruler = yes
+		independent = no
+		primary_title = { is_titular = no }
+		NOT = {
+			liege = {
+				any_demesne_title = {
+					ROOT = {
+						primary_title = {
+							de_jure_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+		
+	desc = "AI_EVENT"
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_trait = not_dejure_liege
+	}
+}
+
+character_event = {
+	id = 110023
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+		ai = yes
+		trait = not_dejure_liege
+		OR = {
+			is_ruler = no
+			independent = yes
+			primary_title = { is_titular = yes }				
+			liege = {
+				any_demesne_title = {
+					ROOT = {
+						primary_title = {
+							de_jure_liege_or_above = PREVPREV
+						}
+					}
+				}
+			}	
+		}
+	}
+		
+	desc = "AI_EVENT"
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		remove_trait = not_dejure_liege
 	}
 }

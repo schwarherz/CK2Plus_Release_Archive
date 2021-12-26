@@ -7,7 +7,7 @@ title = c_lesbos
 max_settlements = 3
 
 b_mytilene = castle
-b_plomari = city
+#b_plomari = city
 b_mithymna = temple
 
 #b_agiasos = castle

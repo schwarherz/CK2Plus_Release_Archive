@@ -305,7 +305,7 @@
 }
 
 114 = {
-	name="Eadward"
+	name="Eadweard"
 	# AKA: Eadweard 'se Andettere'
 	dynasty=100072
 	martial=5
@@ -316,7 +316,6 @@
 	culture="saxon"
 	add_trait="charitable"
 	add_trait="chaste"
-	add_trait="saint"
 	add_trait="charismatic_negotiator"
 	father=106
 	mother=259
@@ -446,16 +445,15 @@
 		add_spouse=123 #Ealdgyth of Mercia
 	}
 	1066.9.14 = {
-		wealth = 250
 		raise_levies = {
-			location = 56
+			location = 62 # Leicester
 			force_mult = 2
 		}
 	}
 	1066.10.14={
 		raise_levies = {
 			dismiss = yes
-			location = 56
+			location = 62 # Leicester
 			force_mult = 2
 		}
 		death = {
@@ -634,7 +632,7 @@
 130 = {
 	name="Leofwine"
 	dynasty=756
-	dna="qfyxgwaqbpc"
+	dna="qfyxgwaqbcc"
 	properties="fb0ddk"
 	martial=6
 	diplomacy=5
@@ -957,7 +955,7 @@
 963 = {
 	name="Dolfin"
 	dynasty=370
-	dna="kdqzucfgfdt"
+	dna="kdqzucfgfct"
 	properties="0grcek0000"
 	martial=8
 	diplomacy=8
@@ -1328,7 +1326,7 @@
 	name="Eadulf"
 	# AKA: Eadulf 'Rus'
 	dynasty=744
-	dna="odfjqmzvbmq"
+	dna="odfjqmzvbcq"
 	properties="ch0dek0000"
 	martial=7
 	diplomacy=4
@@ -1723,5 +1721,37 @@
 	}
 	1124.5.24 = {
 		death="1124.5.24"
+	}
+}
+
+32703  = {
+	name="Edmund"
+	religion="catholic"
+	culture="saxon"
+	add_trait="martial_cleric"
+	1060.1.1 = {
+		birth="1060.1.1"
+	}
+	1100.1.1={
+		culture="english"
+	}
+	1125.1.1 = {
+		death="1125.1.1"
+	}
+}
+
+129059 = {
+	name="Theulf"
+	religion="catholic"
+	culture="saxon"
+	add_trait="greedy"
+	1056.1.1 = {
+		birth="1056.1.1"
+	}
+	1100.1.1={
+		culture="english"
+	}
+	1123.10.20 = {
+		death="1123.10.20"
 	}
 }

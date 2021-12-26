@@ -1,6 +1,8 @@
 20780 = {
 	name="Muawiyah"
 	dynasty=101015
+	dna="xaejnedvaai"
+	properties="mm0ddk0000"
 	martial=7
 	diplomacy=4
 	intrigue=4
@@ -60,6 +62,8 @@
 20852 = {
 	name="Abu-al-Malik"
 	dynasty=101607
+	dna="zggdtlvqaal"
+	properties="mmidcd0000"
 	martial=8
 	diplomacy=6
 	intrigue=8
@@ -99,6 +103,8 @@
 20869 = {
 	name="Ali"
 	dynasty=596
+	dna="raxaexenaay"
+	properties="je0cfd0000"
 	martial=5
 	diplomacy=5
 	intrigue=6
@@ -305,6 +311,8 @@
 3212 = {
 	name="Abbad"
 	dynasty=594
+	dna="ifeqlzboaav"
+	properties="ng0cad0000"
 	martial=8
 	diplomacy=6
 	intrigue=5
@@ -399,6 +407,8 @@
 3938 = {
 	name="Yusuf"
 	dynasty=599
+	dna="qabexrjeaab"
+	properties="nb0dfk0000"
 	martial=5
 	diplomacy=5
 	intrigue=2
@@ -587,6 +597,8 @@
 45006 = {
 	name="Yahya" #AKA: al-Mustasim
 	dynasty=101608
+	dna="vjqcwkilaaf"
+	properties="ommdfk0000"
 	martial=2
 	diplomacy=4
 	intrigue=6
@@ -624,6 +636,8 @@
 45026 = {
 	name="Abu-al-Malik"
 	dynasty=569
+	dna="egqrcjvnaao"
+	properties="na0eck0000"
 	martial=6
 	diplomacy=4
 	intrigue=5
@@ -738,7 +752,7 @@
 		birth="1020.1.2"
 	}
 	1053.1.2={
-		death="1053.1.2"
+		death="1058.1.2"
 	}
 }
 
@@ -1207,6 +1221,8 @@
 73192 = {
 	name="Muhammad"
 	dynasty = 599
+	dna="qagbmrqaaac"
+	properties="olbcfk0000"
 	religion="sunni"
 	culture="andalusian_arabic"
 	father=3933
@@ -1277,6 +1293,8 @@
 73197 = {
 	name="Yahaff"
 	dynasty = 12195
+	dna="mxswlayjaam"
+	properties="oe0dcd0000"
 	religion="sunni"
 	culture="andalusian_arabic"
 	1008.1.1={
@@ -2289,6 +2307,8 @@
 3934 = {
 	name="Ahmad" #AKA: al-Muqtadir
 	dynasty=599
+	dna="opebgfndtqe"
+	properties="mjedad0000"
 	martial=3
 	diplomacy=4
 	intrigue=4
@@ -2640,6 +2660,8 @@
 3924 = {
 	name="Yahya"
 	dynasty=570
+	dna="mxswlayjaam"
+	properties="oe0dcd0000"
 	martial=5
 	diplomacy=1
 	intrigue=7
@@ -2712,6 +2734,8 @@
 3910 = {
 	name="Abdul-Rahman"
 	dynasty=572
+	dna="gtkpfbxxaag"
+	properties="mm0ead0000"
 	martial=8
 	diplomacy=5
 	intrigue=8
@@ -2810,6 +2834,8 @@
 20883 = {
 	name="Abu-al-Malik"
 	dynasty=586
+	dna="ezvxviqkaad"
+	properties="nd0cdk0000"
 	martial=6
 	diplomacy=2
 	intrigue=6
@@ -2847,6 +2873,8 @@
 3900 = {
 	name="Abu-Bakr"
 	dynasty=573
+	dna="psbnkfhuaat"
+	properties="nc0cdd0000"
 	martial=4
 	diplomacy=2
 	intrigue=6
@@ -2870,6 +2898,8 @@
 3901 = {
 	name="Yahya"
 	dynasty=573
+	dna="galjrfhlaax"
+	properties="mc0cbk0000"
 	martial=5
 	diplomacy=5
 	intrigue=5
@@ -2890,6 +2920,8 @@
 3902 = {
 	name="Muhammad"
 	dynasty=573
+	dna="kldgmsktaaj"
+	properties="na0jaj0000"
 	martial=6
 	diplomacy=8
 	intrigue=8
@@ -3633,7 +3665,7 @@
 
 73665={
 	name="Ahmad"
-	dynasty = 12228
+	dynasty = 12268
 	religion="sunni"
 	culture="andalusian_arabic"
 	1100.1.1={

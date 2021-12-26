@@ -15,11 +15,11 @@ decisions = {
 			NOT = { trait = crowned_by_pope }
 			tier = emperor
 			has_landed_title = e_hre
+			age = 16
 		}
 		allow = {
 			war = no
 			prisoner = no
-			age = 16
 			prestige = 1000
 			wealth = 200
 			piety = 200

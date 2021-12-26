@@ -41,7 +41,7 @@ character_event = {
 		name = "EVTOPTA65000"
 		add_character_modifier = {
 			name = stressed_commander
-			duration = 730
+			duration = 365
 		}
 	}
 	option = {
@@ -523,7 +523,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = opinion_horrified
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -623,7 +623,10 @@ character_event = {
 			random = {
 				chance = 75
 				
-				death = { death_reason = death_murder killer = ROOT }
+				death = {
+					death_reason = death_execution
+					killer = ROOT
+				}
 			}
 		}
 	}
@@ -682,7 +685,7 @@ character_event = {
 			}
 			add_character_modifier = {
 				name = rats_in_cell
-				duration = 365
+				duration = 90
 			}
 		}
 	}
@@ -749,9 +752,8 @@ character_event = {
 			}
 			random_list = {
 				50 = {
-					death = { 
-						death_reason = death_murder
-						killer = ROOT					
+					death = {
+						death_reason = death_accident
 					}
 				}
 				50 = {
@@ -784,10 +786,6 @@ character_event = {
 	trigger = {
 		trait = cruel
 		in_command = no
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 		any_courtier = {
 			trait = craven
 			age = 20
@@ -860,7 +858,7 @@ character_event = {
 		in_command = no
 		trait = depressed
 		trait = zealous
-		religion_group = christian		
+		religion_group = christian
 	}
 	
 	mean_time_to_happen = {
@@ -873,18 +871,26 @@ character_event = {
 			50 = {
 				remove_trait = depressed
 			}
-			25 = {	
-				remove_trait = depressed
+			25 = {
 				add_trait = stressed
+				hidden_tooltip = {
+					character_event = {
+						id = 38282 #Notify stressed
+					}
+				}
 			}
 			25 = {
-				add_trait = cynical
 			}
 		}
 	}
 	option = {
 		name = "EVTOPTB65030" #Doubt self
 		piety = -5
+		random = {
+			chance = 25
+			
+			remove_trait = zealous
+		}
 	}
 }
 
@@ -914,7 +920,9 @@ character_event = {
 		name = "EVTOPTA65031" #Spend a forthnight fasting for my sins
 		random_list = {
 			10 = {
-				death = { death_reason = death_trait }
+				death = {
+					death_reason = death_trait
+				}
 			}
 			10 = {
 				add_trait = pneumonic
@@ -986,7 +994,9 @@ character_event = {
 		random = {
 			chance = 10
 			
-			death = { death_reason = death_trait }
+			death = {
+				death_reason = death_trait
+			}
 		}
 	}
 }
@@ -1054,7 +1064,7 @@ character_event = {
 		name = "EVTOPTA65034" #Prayer and fasting
 		add_character_modifier = {
 			name = one_year_fasting
-			duration = 730
+			duration = 365
 		}
 	}
 	option = {
@@ -1606,6 +1616,10 @@ character_event = {
 		opinion = {
 			modifier = forced_drunkard
 			who = from
+		}	
+		remove_opinion = {
+			modifier = opinion_lover
+			who = from
 		}
 	}
 }
@@ -1662,7 +1676,7 @@ character_event = {
 		name = "EVTOPTB65048"	# Talk to the soldiers
 		add_character_modifier = {
 			name = drunk_commander
-			duration = 365
+			duration = 90
 		}
 		
 	}
@@ -2240,7 +2254,7 @@ character_event = {
 	min_age = 6
 	max_age = 16
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -2314,7 +2328,7 @@ character_event = {
 	
 	prisoner = no
 	only_rulers = yes
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -2368,7 +2382,7 @@ character_event = {
 	max_age = 60
 	only_men = yes
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -2430,7 +2444,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_tossed_me
 				who = ROOT
-				years = 1
+				years = 5
 			}
 			character_event = {
 				id = 65066
@@ -2463,10 +2477,12 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA65066"
-		opinion = {
-			modifier = opinion_tossed_me
-			who = FROM
-			years = 4
+		tooltip = {
+			opinion = {
+				modifier = opinion_tossed_me
+				who = FROM
+				years = 5
+			}
 		}
 	}
 }
@@ -2478,7 +2494,7 @@ character_event = {
 	picture = GFX_evt_illness
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -2510,7 +2526,7 @@ character_event = {
 	min_age = 6
 	max_age = 16
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -2585,7 +2601,7 @@ character_event = {
 	min_age = 16
 	only_men = yes
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -2710,7 +2726,7 @@ character_event = {
 	min_age = 20
 	only_women = yes
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 
@@ -2795,7 +2811,7 @@ character_event = {
 	min_age = 6
 	max_age = 16
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -2869,7 +2885,7 @@ character_event = {
 	
 	only_rulers = yes
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -2982,7 +2998,7 @@ character_event = {
 	min_age = 6
 	max_age = 16
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -3057,7 +3073,7 @@ character_event = {
 	prisoner = no
 	only_men = yes
 	only_rulers = yes
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -3199,7 +3215,6 @@ character_event = {
 			}
 		}
 		new_character = {
-			character_event = { id = 300001 }		
 			set_character_flag = hope_everlasting
 			opinion = {
 				modifier = opinion_my_saviour
@@ -3248,12 +3263,6 @@ character_event = {
 				}
 			}
 			new_character = {
-				character_event = { id = 300001 }
-				opinion = {
-					who = ROOT
-					modifier = opinion_arrest_attempt
-					months = 240
-				}				
 				imprison = ROOT
 			}
 		}
@@ -3302,7 +3311,7 @@ character_event = {
 	
 	min_age = 16
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -3422,7 +3431,7 @@ character_event = {
 	min_age = 6
 	max_age = 16
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -3496,7 +3505,7 @@ character_event = {
 	
 	only_rulers = yes
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -3607,7 +3616,7 @@ character_event = {
 	picture = GFX_evt_courtiers_talking
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -3705,7 +3714,7 @@ character_event = {
 	min_age = 6
 	max_age = 16
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -3778,7 +3787,7 @@ character_event = {
 	picture = GFX_evt_courtiers_talking
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -3875,7 +3884,7 @@ character_event = {
 	
 	only_rulers = yes
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -3997,7 +4006,7 @@ character_event = {
 	min_age = 6
 	max_age = 16
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -4253,7 +4262,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_shocked
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -4591,11 +4600,11 @@ character_event = {
 			}
 			20 = {
 				remove_trait = gluttonous
-				#hidden_tooltip = {
-				#	character_event = {
-				#		id = 35151 #Notify Remove Gluttonous
-				#	}
-				#}
+				hidden_tooltip = {
+					character_event = {
+						id = 65151 #Notify Remove Gluttonous
+					}
+				}
 			}
 		}
 	}

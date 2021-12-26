@@ -23,7 +23,14 @@ de_jure_laws = {
 			always = no
 		}			
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { holder_scope = { trait = zealous } }
+					NOT = { holder_scope = { trait = charitable } }
+				}
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -55,7 +62,14 @@ de_jure_laws = {
 			always = no
 		}			
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { holder_scope = { trait = cynical } }
+					NOT = { holder_scope = { trait = greedy } }
+				}
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -87,7 +101,14 @@ de_jure_laws = {
 			always = no
 		}			
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { holder_scope = { trait = content } }
+					NOT = { holder_scope = { trait = humble } }
+				}
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -132,9 +153,9 @@ de_jure_laws = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { 
-					has_law = centralization_3 
-					has_law = centralization_4
+				OR = {
+					NOT = { holder_scope = { trait = proud } }
+					NOT = { holder_scope = { trait = ambitious } }
 				}
 			}
 		}
@@ -178,7 +199,7 @@ de_jure_laws = {
 			revoke_law = centralization_3
 			revoke_law = centralization_4
 			set_appoint_generals = no
-#			set_appoint_regents = no
+			set_appoint_regents = no
 			set_the_kings_peace = no
 			set_the_kings_full_peace = no
 			set_protected_inheritance = no
@@ -211,10 +232,6 @@ de_jure_laws = {
 			OR = {
 				has_law = centralization_2
 				holder_scope = { prestige = 500 }
-			}
-			OR = {
-				has_law = centralization_2
-				holder_scope = { demesne_size = 3 demesne_efficiency = 1.0 }
 			}
 			OR = {
 				has_law = centralization_2
@@ -285,7 +302,7 @@ de_jure_laws = {
 			revoke_law = centralization_3
 			revoke_law = centralization_4
 			set_appoint_generals = yes
-#			set_appoint_regents = no
+			set_appoint_regents = no
 			set_the_kings_peace = no
 			set_the_kings_full_peace = no
 			set_protected_inheritance = no
@@ -318,10 +335,6 @@ de_jure_laws = {
 			OR = {
 				has_law = centralization_3
 				holder_scope = { prestige = 1000 }
-			}
-			OR = {
-				has_law = centralization_3
-				holder_scope = { demesne_size = 4 demesne_efficiency = 1.0 }
 			}
 			OR = {
 				has_law = centralization_3
@@ -391,7 +404,7 @@ de_jure_laws = {
 			revoke_law = centralization_3
 			revoke_law = centralization_4
 			set_appoint_generals = yes
-#			set_appoint_regents = no
+			set_appoint_regents = yes
 			set_the_kings_peace = yes
 			set_the_kings_full_peace = no
 			set_protected_inheritance = no
@@ -424,10 +437,6 @@ de_jure_laws = {
 			OR = {
 				has_law = centralization_4
 				holder_scope = { prestige = 2500 }
-			}
-			OR = {
-				has_law = centralization_4
-				holder_scope = { demesne_size = 5 demesne_efficiency = 1.0 }
 			}			
 			OR = {
 				has_law = centralization_4
@@ -497,7 +506,7 @@ de_jure_laws = {
 			revoke_law = centralization_2
 			revoke_law = centralization_4
 			set_appoint_generals = yes
-#			set_appoint_regents = yes
+			set_appoint_regents = yes
 			set_the_kings_peace = yes
 			set_the_kings_full_peace = no
 			set_protected_inheritance = yes
@@ -524,8 +533,7 @@ de_jure_laws = {
 				NOT = { empire = { holder_scope = { OR = { character = ROOT is_liege_of = ROOT } } } }
 			}
 			has_law = centralization_3
-			holder_scope = { prestige = 5000 }
-			holder_scope = { demesne_size = 6 demesne_efficiency = 1.0 }			
+			holder_scope = { prestige = 5000 }			
 			OR = {
 				NOT = { title = e_hre }
 				holder_scope = { trait = crowned_by_pope }
@@ -593,7 +601,7 @@ de_jure_laws = {
 			revoke_law = centralization_2
 			revoke_law = centralization_3
 			set_appoint_generals = yes
-#			set_appoint_regents = yes
+			set_appoint_regents = yes
 			set_the_kings_peace = yes
 			set_the_kings_full_peace = yes
 			set_protected_inheritance = yes

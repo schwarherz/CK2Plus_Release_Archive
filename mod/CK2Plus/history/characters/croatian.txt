@@ -469,9 +469,9 @@
 8628 = {
 	name="Dmitar Zvonimir"
 	# AKA: Dmitar Zvonimir
+	dynasty=512
 	dna="ndjdbnuscpr"
 	properties="ca0cdk0000"
-	dynasty=512
 	martial=4
 	diplomacy=8
 	intrigue=5
@@ -948,6 +948,7 @@
 		death="1324.1.1"
 	}
 }
+
 32614 = {
 	name="Slavogost" 
 	dynasty=18005
@@ -1148,7 +1149,6 @@
 	}
 }
 
-
 32629 = {
 	name="Pribko"
 	dynasty=18005
@@ -1163,6 +1163,7 @@
 		death="1382.1.1"
 	}
 }
+
 32630 = {
 	name="Katarina"
 	female=yes

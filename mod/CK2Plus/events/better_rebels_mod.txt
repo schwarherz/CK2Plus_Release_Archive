@@ -74,7 +74,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 20
+		years = 10
 		modifier = {
 			factor = 0.5
 			NOT = {
@@ -127,20 +127,18 @@ province_event = {
 	option = {
 		name = "EVTOPTB1000025002"
 		trigger = { NOT = { owner = { has_character_flag = building_is_destroyed } } }
-		hidden_tooltip = {
-			random_province_lord = {
-				limit = {
-					any_demesne_title = {
-						location = {
-							province_id = ROOT
-						}
-						tier = baron
-						num_of_buildings = 1
+		random_province_lord = {
+			limit = {
+				any_demesne_title = {
+					location = {
+						province_id = ROOT
 					}
-					has_character_flag = building_is_destroyed
+					tier = baron
+					num_of_buildings = 1
 				}
-				character_event = { id = 1000025003 days = 1 }
+				has_character_flag = building_is_destroyed
 			}
+			character_event = { id = 1000025003 tooltip = EVTTOOLTIP1000025003 days = 1 }
 		}
 	}
 }
@@ -181,7 +179,6 @@ character_event = {
 	picture = "GFX_evt_peasants"
 
 	only_rulers = yes
-	min_age = 16
 	prisoner = no
 	
 	trigger = {
@@ -195,6 +192,10 @@ character_event = {
 	
 	mean_time_to_happen = {
 		years = 50
+		modifier = {
+			factor = 5.0
+			NOT = { age = 16 }
+		}		
 		modifier = {
 			factor = 0.5
 			NOT = {
@@ -277,7 +278,6 @@ character_event = {
 	picture = "GFX_evt_peasants"
 
 	only_rulers = yes
-	min_age = 16
 	prisoner = no
 	
 	trigger = {
@@ -291,6 +291,10 @@ character_event = {
 	
 	mean_time_to_happen = {
 		years = 40
+		modifier = {
+			factor = 5.0
+			NOT = { age = 16 }
+		}		
 		modifier = {
 			factor = 0.5
 			NOT = {
@@ -373,7 +377,6 @@ character_event = {
 	picture = "GFX_evt_peasants"
 
 	only_rulers = yes
-	min_age = 16
 	prisoner = no
 	
 	trigger = {
@@ -387,6 +390,10 @@ character_event = {
 	
 	mean_time_to_happen = {
 		years = 30
+		modifier = {
+			factor = 5.0
+			NOT = { age = 16 }
+		}		
 		modifier = {
 			factor = 0.5
 			NOT = {
@@ -597,7 +604,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 240 
+		months = 240
 
 		modifier = {
 			factor = 2.0
@@ -677,7 +684,7 @@ province_event = {
 						spawn_unit = {
 							province = prev
 							home = prev
-							scaled_by_biggest_garrison = 1.25
+							scaled_by_biggest_garrison = 2
 							troops = {
 								archers = { 10 10 }
 								light_infantry = { 20 20 }							
@@ -699,7 +706,7 @@ province_event = {
 						spawn_unit = {
 							province = prev
 							home = prev
-							scaled_by_biggest_garrison = 1.25
+							scaled_by_biggest_garrison = 2
 							troops = {
 								archers = { 10 10 }
 								light_cavalry = { 5 5 }
@@ -722,7 +729,7 @@ province_event = {
 						spawn_unit = {
 							province = prev
 							home = prev
-							scaled_by_biggest_garrison = 1.25
+							scaled_by_biggest_garrison = 2
 							troops = {
 								archers = { 15 15 }
 								light_cavalry = { 5 5 }

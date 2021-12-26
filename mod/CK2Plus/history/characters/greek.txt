@@ -1258,6 +1258,7 @@
 	add_trait="arbitrary"
 	add_trait="gluttonous"
 	add_trait="clubfooted"
+	add_trait="lustful"
 	add_trait="indulgent_wastrel"
 	father=1744
 	1006.1.1={
@@ -1266,7 +1267,18 @@
 	1050.1.1={
 		add_spouse=1733
 	}
+	1066.9.10 = {
+		raise_levies = {
+			location = 496
+			force_mult = 1
+		}	
+	}		
 	1067.5.22={
+		raise_levies = {
+			dismiss = yes
+			location = 496
+			force_mult = 1
+		}	
 		death="1067.5.22"
 	}
 }
@@ -1435,6 +1447,7 @@
 	mother=4511
 	1056.1.1={
 		birth="1056.1.1"
+		add_claim="e_byzantium"
 	}
 	1071.1.1={
 		add_trait="midas_touched"
@@ -1557,14 +1570,15 @@
 
 1752 = {
 	name="Ioannes"
-	dynasty=634
 	dna="qpfbkbhiaav"
 	properties="0i0dbd0000"
+	dynasty=634
 	religion="orthodox"
 	culture="greek"
 	father=1750
 	1015.1.1={
 		birth="1015.1.1"
+		add_claim="e_byzantium"
 	}
 	1042.1.1={
 		add_spouse=4511
@@ -1584,6 +1598,7 @@
 	mother=4511
 	1043.1.1={
 		birth="1043.1.1"
+		add_claim="e_byzantium"
 	}
 	1071.4.17={
 		death="1071.4.17"
@@ -1601,6 +1616,7 @@
 	mother=4511
 	1047.1.1={
 		birth="1047.1.1"
+		add_claim="e_byzantium"
 	}
 	1072.1.1={
 		add_spouse=9958
@@ -1619,6 +1635,7 @@
 	mother=4511
 	1058.1.1={
 		birth="1058.1.1"
+		add_claim="e_byzantium"
 	}
 	1081.11.1={
 		add_spouse=9809
@@ -1637,6 +1654,7 @@
 	mother=4511
 	1060.1.1={
 		birth="1060.1.1"
+		add_claim="e_byzantium"
 	}
 	1143.10.1={
 		death="1143.10.1"
@@ -6478,9 +6496,9 @@
 
 42003 = {
 	name="Konstantinos"
+	dynasty=639
 	dna="ypojxfeyfnr"
 	properties="0h0ead0000"
-	dynasty=639
 	martial=6
 	diplomacy=4
 	intrigue=4
@@ -6664,6 +6682,7 @@
 	mother=4511
 	1045.1.1={
 		birth="1045.1.1"
+		add_claim="e_byzantium"
 	}
 	1109.8.18={
 		death="1109.8.18"
@@ -6680,6 +6699,7 @@
 	mother=4511
 	1050.1.1={
 		birth="1050.1.1"
+		add_claim="e_byzantium"
 	}
 	1100.1.1={
 		death="1100.1.1"
@@ -6696,6 +6716,7 @@
 	mother=4511
 	1053.1.1={
 		birth="1053.1.1"
+		add_claim="e_byzantium"
 	}
 	1095.1.1={
 		death="1095.1.1"
@@ -8353,7 +8374,6 @@
 	add_trait="brave"
 	add_trait="proud"
 	add_trait="skilled_tactician"
-	
 	1010.1.1={
 		birth="1010.1.1"
 	}
@@ -8375,7 +8395,6 @@
 	add_trait="content"
 	add_trait="flamboyant_schemer"
 	father=20463
-	
 	1053.1.1={
 		birth="1053.1.1"
 	}
@@ -8536,7 +8555,6 @@
 	stewardship=6
 	religion="orthodox"
 	culture="greek"
-	add_trait="crown_loyalist"
 	add_trait="brave"
 	add_trait="skilled_tactician"
 	
@@ -8795,9 +8813,8 @@
 	culture="greek"
 	add_trait="charitable"
 	add_trait="fair"
-	add_trait="flmaboyant_schemer"
+	add_trait="flamboyant_schemer"
 	father=70497
-	
 	775.1.1={
 		birth="775.1.1"
 	}
@@ -8905,11 +8922,10 @@
 	stewardship=6
 	religion="iconoclast"
 	culture="greek"
-	add_trait="decietful"
+	add_trait="deceitful"
 	add_trait="wroth"
 	add_trait="indulgent_wastrel"
 	father=70501
-	
 	750.1.25={
 		birth="750.1.25"
 	}
@@ -9896,7 +9912,6 @@
 	religion="orthodox"
 	culture="greek"
 	add_trait="content"
-	add_trait="crown_loyalist"
 	add_trait="detached_priest"
 	861.1.1={
 		birth="861.1.1"
@@ -10110,7 +10125,6 @@
 	stewardship=5
 	religion="iconoclast"
 	culture="greek"
-	add_trait="church_loyalist"
 	add_trait="mystic"
 	add_trait="detached_priest"
 	
@@ -10131,7 +10145,6 @@
 	stewardship=4
 	religion="orthodox"
 	culture="greek"
-	add_trait="church_loyalist"
 	add_trait="deceitful"
 	add_trait="detached_priest"
 	
@@ -10194,7 +10207,6 @@
 	stewardship=5
 	religion="orthodox"
 	culture="greek"
-	add_trait="crown_loyalist"
 	add_trait="content"
 	add_trait="detached_priest"
 	
@@ -10655,7 +10667,6 @@
 	religion="orthodox"
 	culture="greek"
 	add_trait="scholar"
-	add_trait="church_loyalist"
 	add_trait="detached_priest"
 	
 	405.1.1={
@@ -10718,7 +10729,6 @@
 	stewardship=7
 	religion="orthodox"
 	culture="greek"
-	add_trait="church_loyalist"
 	add_trait="mystic"
 	add_trait="mastermind_theologian"
 	
@@ -10761,7 +10771,6 @@
 	stewardship=5
 	religion="orthodox"
 	culture="greek"
-	add_trait="crown_loyalist"
 	add_trait="ambitious"
 	add_trait="detached_priest"
 	
@@ -13582,6 +13591,7 @@
 	mother=4511
 	1057.1.1={
 		birth="1057.1.1"
+		add_claim="e_byzantium"
 	}
 	1147.1.1={
 		death="1147.1.1"

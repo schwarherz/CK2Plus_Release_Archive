@@ -183,54 +183,54 @@ TECH_GROUP_MILITARY = {
 	TECH_SIEGE_EQUIPMENT = {
 		1 = {
 			modifier = {
-				SIEGE_SPEED = 0.1
+				SIEGE_SPEED = 0.05
 			}
 		}
 		2 = {
 			modifier = {
-				SIEGE_SPEED = 0.2
+				SIEGE_SPEED = 0.1
 			}
 		}
 		3 = {
 			modifier = {
-				SIEGE_SPEED = 0.3
+				SIEGE_SPEED = 0.15
 			}
 		}
 		4 = {
 			modifier = {
-				SIEGE_SPEED = 0.4
+				SIEGE_SPEED = 0.2
 			}
 		}
 		5 = {
 			modifier = {
-				SIEGE_SPEED = 0.5
+				SIEGE_SPEED = 0.25
 			}
 		}
 	}
 	TECH_CASTLES = { #military fortifications
 		1 = {
 			modifier = {
-				SIEGE_DEFENCE = 0.1
+				supply_limit = 2
 			}
 		}
 		2 = {
 			modifier = {
-				SIEGE_DEFENCE = 0.2
+				supply_limit = 4
 			}
 		}
 		3 = {
 			modifier = {
-				SIEGE_DEFENCE = 0.3
+				supply_limit = 6
 			}
 		}
 		4 = {
 			modifier = {
-				SIEGE_DEFENCE = 0.4
+				supply_limit = 8
 			}
 		}
 		5 = {
 			modifier = {
-				SIEGE_DEFENCE = 0.5
+				supply_limit = 10
 			}
 		}
 	}

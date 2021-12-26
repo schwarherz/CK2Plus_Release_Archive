@@ -9,10 +9,10 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3000
+		months = 2500
 		modifier = {
-			factor = 1.25
-			owner = { war = no }
+			factor = 0.75
+			owner = { war = yes }
 		}
 		modifier = {
 			factor = 0.9
@@ -47,28 +47,16 @@ province_event = {
 			owner = { realm_learning = 40 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_province_modifier = province_prosperity_2
 		}		
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			has_province_modifier = province_prosperity_1
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			has_province_modifier = province_poverty_1
-		}
-		modifier = {
-			factor = 1.1
-			terrain = farmlands
-		}			
-		modifier = {
-			factor = 0.9
-			terrain = desert
-		}	
-		modifier = {
-			factor = 0.9
-			terrain = mountain
 		}			
 	}
 
@@ -118,10 +106,10 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3000
+		months = 2500
 		modifier = {
-			factor = 1.25
-			owner = { war = no }
+			factor = 0.75
+			owner = { war = yes }
 		}
 		modifier = {
 			factor = 0.9
@@ -156,28 +144,16 @@ province_event = {
 			owner = { realm_learning = 40 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_province_modifier = province_prosperity_2
 		}		
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			has_province_modifier = province_prosperity_1
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			has_province_modifier = province_poverty_1
-		}
-		modifier = {
-			factor = 1.1
-			terrain = farmlands
-		}			
-		modifier = {
-			factor = 0.9
-			terrain = desert
-		}	
-		modifier = {
-			factor = 0.9
-			terrain = mountain
 		}			
 	}
 
@@ -227,10 +203,10 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3000
+		months = 2500
 		modifier = {
-			factor = 1.25
-			owner = { war = no }
+			factor = 0.75
+			owner = { war = yes }
 		}
 		modifier = {
 			factor = 0.9
@@ -265,28 +241,16 @@ province_event = {
 			owner = { realm_learning = 40 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_province_modifier = province_prosperity_2
 		}		
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			has_province_modifier = province_prosperity_1
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			has_province_modifier = province_poverty_1
-		}
-		modifier = {
-			factor = 1.1
-			terrain = farmlands
-		}			
-		modifier = {
-			factor = 0.9
-			terrain = desert
-		}	
-		modifier = {
-			factor = 0.9
-			terrain = mountain
 		}			
 	}
 
@@ -338,10 +302,10 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3000
+		months = 2500
 		modifier = {
-			factor = 1.25
-			owner = { war = no }
+			factor = 0.75
+			owner = { war = yes }
 		}
 		modifier = {
 			factor = 0.9
@@ -376,28 +340,16 @@ province_event = {
 			owner = { realm_learning = 40 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_province_modifier = province_prosperity_2
 		}		
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			has_province_modifier = province_prosperity_1
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			has_province_modifier = province_poverty_1
-		}
-		modifier = {
-			factor = 1.1
-			terrain = farmlands
-		}			
-		modifier = {
-			factor = 0.9
-			terrain = desert
-		}	
-		modifier = {
-			factor = 0.9
-			terrain = mountain
 		}			
 	}
 
@@ -445,17 +397,19 @@ province_event = {
 	trigger = {
 		NOT = { has_province_modifier = province_poverty_2 }
 		OR = {
-			has_siege = yes
+			owner = {
+				ROOT = {
+					controller = {
+						NOT = { character = PREVPREV }
+					}
+				}
+			}
 			has_province_modifier = brm_revolt
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0.25
-			has_siege = yes
-		}		
+		months = 120		
 		modifier = {
 			factor = 0.9
 			owner = { NOT = { realm_learning = 10 } }
@@ -473,28 +427,16 @@ province_event = {
 			owner = { realm_learning = 40 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_province_modifier = province_prosperity_2
 		}		
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			has_province_modifier = province_prosperity_1
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			has_province_modifier = province_poverty_1
-		}
-		modifier = {
-			factor = 0.9
-			terrain = farmlands
-		}			
-		modifier = {
-			factor = 1.1
-			terrain = desert
-		}	
-		modifier = {
-			factor = 1.1
-			terrain = mountain
 		}			
 	}
 
@@ -544,7 +486,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3000
+		months = 2500
 		modifier = {
 			factor = 0.75
 			owner = { war = no }
@@ -582,29 +524,17 @@ province_event = {
 			owner = { realm_learning = 40 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_province_modifier = province_poverty_2
 		}		
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			has_province_modifier = province_poverty_1
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			has_province_modifier = province_prosperity_1
-		}				
-		modifier = {
-			factor = 0.75
-			terrain = marsh
-		}			
-		modifier = {
-			factor = 1.25
-			terrain = desert
-		}	
-		modifier = {
-			factor = 1.25
-			terrain = mountain
-		}			
+		}							
 	}
 
 	option = {
@@ -653,7 +583,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3000
+		months = 2500
 		modifier = {
 			factor = 0.75
 			owner = { war = no }
@@ -691,28 +621,16 @@ province_event = {
 			owner = { realm_learning = 40 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_province_modifier = province_poverty_2
 		}		
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			has_province_modifier = province_poverty_1
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			has_province_modifier = province_prosperity_1
-		}
-		modifier = {
-			factor = 0.9
-			terrain = farmlands
-		}			
-		modifier = {
-			factor = 1.1
-			terrain = desert
-		}	
-		modifier = {
-			factor = 1.1
-			terrain = mountain
 		}			
 	}
 
@@ -762,7 +680,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 3000
+		months = 2500
 		modifier = {
 			factor = 0.75
 			owner = { war = no }
@@ -800,28 +718,16 @@ province_event = {
 			owner = { realm_learning = 40 }
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			has_province_modifier = province_poverty_2
 		}		
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			has_province_modifier = province_poverty_1
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			has_province_modifier = province_prosperity_1
-		}
-		modifier = {
-			factor = 0.9
-			terrain = farmlands
-		}			
-		modifier = {
-			factor = 1.1
-			terrain = desert
-		}	
-		modifier = {
-			factor = 1.1
-			terrain = mountain
 		}			
 	}
 
@@ -861,77 +767,104 @@ province_event = {
 }
 
 # Building sacked during siege
-province_event = {
+character_event = {
 	id = 1059008
 	desc = "EVTDESC1059008"
-	picture = "GFX_evt_burning_house"
+	title = "EVTNAME1059008"
+	
+	is_triggered_only = yes
+	
+	picture = "GFX_evt_siege"
+	border = "GFX_event_normal_frame_war"
 
 	trigger = {
-		has_siege = yes
-		any_province_lord = {
-			any_demesne_title = {
-				location = {
-					province_id = ROOT
+		location = {
+			any_province_lord = {
+				any_demesne_title = {
+					location = {
+						province_id = PREVPREVPREV
+					}
+					tier = baron
+					num_of_buildings = 1
 				}
-				tier = baron
-				num_of_buildings = 1
 			}
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 60
+		months = 1
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = charitable
+		}
+		modifier = {
+			factor = 0.5
+			trait = just
+		}
+		modifier = {
+			factor = 1.5
+			trait = arbitrary
+		}		
+		modifier = {
+			factor = 1.5
+			trait = cruel
+		}
+		modifier = {
+			factor = 1.5
+			trait = wroth
+		}
 	}
 	
 	immediate = {
 		hidden_tooltip = {
-			random_province_lord = {
-				limit = {
-					any_demesne_title = {
-						location = {
-							province_id = ROOT
+			location = {
+				random_province_lord = {
+					limit = {
+						any_demesne_title = {
+							location = {
+								province_id = PREVPREVPREV
+							}
+							tier = baron
+							num_of_buildings = 1
 						}
-						tier = baron
-						num_of_buildings = 1
 					}
+					set_character_flag = building_is_destroyed
 				}
-				set_character_flag = building_is_destroyed
-			}		
+			}
 		}
 	}
 	
 	option = {
 		name = "EVTOPTA1059008"
-		trigger = { owner = { has_character_flag = building_is_destroyed } }
-		owner = {
-			random_demesne_title = {
-				limit = {
-					location = {
-						province_id = ROOT
-					}
-					tier = baron
-					num_of_buildings = 1
-				}
-				destroy_random_building = yes
+		trigger = { location = { owner = { has_character_flag = building_is_destroyed } } }
+		location = {
+			owner = {
+				character_event = { id = 1059009 tooltip = EVTTOOLTIP1059009 days = 1 }
+				clr_character_flag = building_is_destroyed
 			}
 		}
 	}
 	option = {
-		name = "EVTOPTB1059008"
-		trigger = { NOT = { owner = { has_character_flag = building_is_destroyed } } }
-		hidden_tooltip = {
+		name = "EVTOPTA1059008"
+		trigger = { location = { NOT = { owner = { has_character_flag = building_is_destroyed } } } }
+		location = {
 			random_province_lord = {
 				limit = {
 					any_demesne_title = {
 						location = {
-							province_id = ROOT
+							province_id = PREVPREVPREV
 						}
 						tier = baron
 						num_of_buildings = 1
 					}
 					has_character_flag = building_is_destroyed
 				}
-				character_event = { id = 1059009 days = 1 }
+				character_event = { id = 1059009 tooltip = EVTTOOLTIP1059009 days = 1 }
+				clr_character_flag = building_is_destroyed
 			}
 		}
 	}
@@ -939,17 +872,21 @@ province_event = {
 
 character_event = {
 	id = 1059009
-	desc = "EVTDESC1059008"
+	desc = "EVTDESC1059009"
 	picture = "GFX_evt_burning_house"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "1059008"
+		name = "EVTOPTA1059009"
 		random_demesne_title = {
 			limit = {
 				location = {
-					province_id = FROM
+					FROM = {
+						location = {
+							province_id = PREVPREV
+						}
+					}
 				}
 				tier = baron
 				num_of_buildings = 1

@@ -37,7 +37,7 @@
 
 holy_truce_timer = { icon = 16 }
 
-loan_timer = { icon = 24 }
+loan_timer = { icon = 24 monthly_character_piety = -0.25 }
 
 crusade_timer = { icon = 1 }
 
@@ -89,27 +89,28 @@ sanctioned_holy_war = {
 province_poverty_2 = {
 	local_tax_modifier = -0.2
 	levy_size = -0.2
-	local_revolt_risk = 0.02
 	icon = 45
 }
 
 province_poverty_1 = {
 	local_tax_modifier = -0.1
 	levy_size = -0.1
-	local_revolt_risk = 0.01
 	icon = 44	
 }
 
 province_prosperity_1 = {
 	local_tax_modifier = 0.1
 	levy_size = 0.1
-	local_revolt_risk = -0.01
 	icon = 43	
 }
 
 province_prosperity_2 = {
 	local_tax_modifier = 0.2
 	levy_size = 0.2
-	local_revolt_risk = -0.02
 	icon = 42	
+}
+
+peasant_obstructionism = {
+	local_revolt_risk = 0.02
+	icon = 32
 }

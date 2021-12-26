@@ -467,6 +467,7 @@ character_event = {
 	
 	trigger = {
 		has_job_action = action_fabricate_claims
+		liege = { ai = no } #ai really doesn't know how to use this, should rely on random events
 		NOT = { has_character_modifier = bribed_by_nobel_timer }
 		liege = {
 			prestige = 0
@@ -1077,6 +1078,7 @@ character_event = {
 	
 	trigger = {
 		has_job_action = action_fabricate_claims
+		liege = { ai = no } #ai really doesn't know how to use this, should rely on random events
 		NOT = { has_character_modifier = bribed_by_nobel_timer }
 		liege = { prestige = 0 }
 		location = {

@@ -109,7 +109,7 @@ plot_gain_vassal_title = {
 	}
 	
 	chance = {
-		factor = 20
+		factor = 10
 		
 		modifier = {
 			factor = 0.0
@@ -119,7 +119,7 @@ plot_gain_vassal_title = {
 			}
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			FROM = { trait = content }
 		}
 		modifier = {
@@ -202,6 +202,18 @@ plot_gain_vassal_title = {
 		modifier = {
 			factor = 1.5
 			FROM = { intrigue = 20 }
+		}
+		modifier = {
+			factor = 2
+			FROM = { demesne_efficiency = 2.0 }
+		}
+		modifier = {
+			factor = 2
+			FROM = { demesne_efficiency = 3.0 }
+		}
+		modifier = {
+			factor = 2
+			FROM = { demesne_efficiency = 4.0 }
 		}		
 	}
 	
@@ -422,7 +434,7 @@ plot_weaken_fellow_vassal = {
 			}
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			FROM = { trait = content }
 		}
 		modifier = {
@@ -835,7 +847,7 @@ plot_kidnap_liege = {
 	}
 	
 	chance = {
-		factor = 100
+		factor = 200
 	
 		modifier = {
 			factor = 0.0
@@ -1311,7 +1323,7 @@ plot_succ_seniority = {
 			}
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			FROM = { trait = content }
 		}
 		modifier = {
@@ -2503,7 +2515,6 @@ plot_kill_character = {
 	
 	# Target allow trigger for when players target a specific character in the GUI
 	player_allow = {
-		NOT = { is_child_of = FROM } # Not my own children
 		employer = {
 			any_courtier = {
 				NOT = { character = ROOT }
@@ -2517,6 +2528,9 @@ plot_kill_character = {
 	
 	# Target character scope
 	allow = {
+		NOT = { is_child_of = FROM } # Not my own children
+		NOT = { father = { is_child_of = FROM } } # Not my own grandchildren
+		NOT = { mother = { is_child_of = FROM } } # Not my own grandchildren	
 		FROM = {
 			NOT = { spouse = { character = ROOT } }
 			OR = {
@@ -2608,6 +2622,95 @@ plot_kill_character = {
 						}
 					}
 				}
+				
+				# Get rid of the current holder
+				any_pretender_title = {
+					holder_scope = { character = ROOT }
+					FROM = {
+						NOT = { any_child = { character = ROOT } }
+						OR = {
+							AND = {
+								OR = {
+									trait = deceitful
+									trait = ambitious
+									trait = cruel
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 50 } } }
+							}
+							AND = {
+								OR = {
+									trait = arbitrary
+									trait = cynical
+									trait = proud
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 25 } } }
+							}
+							FROM = { NOT = { opinion = { who = ROOT value = 0 } } }
+						}
+					}
+				}
+				
+				# Character gets rid of the current holder to a title their child is pretender to
+				AND = {
+					any_child = {
+						any_pretender_title = {
+							holder_scope = { character = ROOT }
+						}
+					}
+					NOT = { ROOT = { is_close_relative = FROM } }
+					FROM = {
+						OR = {
+							AND = {
+								OR = {
+									trait = deceitful
+									trait = ambitious
+									trait = cruel
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 50 } } }
+							}
+							AND = {
+								OR = {
+									trait = arbitrary
+									trait = cynical
+									trait = proud
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 25 } } }
+							}
+							FROM = { NOT = { opinion = { who = ROOT value = 0 } } }
+						}
+					}
+				}
+				
+				# Get rid of the current holder to a title the character's spouse is a pretender to
+				AND = {
+					spouse = {	
+						any_pretender_title = {
+							holder_scope = { character = ROOT }
+						}
+					}
+					NOT = { ROOT = { is_close_relative = FROM } }
+					FROM = {
+						OR = {
+							AND = {
+								OR = {
+									trait = deceitful
+									trait = ambitious
+									trait = cruel
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 50 } } }
+							}
+							AND = {
+								OR = {
+									trait = arbitrary
+									trait = cynical
+									trait = proud
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 25 } } }
+							}
+							FROM = { NOT = { opinion = { who = ROOT value = 0 } } }
+						}
+					}
+				}				
 
 				# A lover of spouse...
 				spouse = {
@@ -2656,10 +2759,10 @@ plot_kill_character = {
 	}
 	
 	chance = {
-		factor = 20
+		factor = 25
 		
 		modifier = {
-			factor = 0.01
+			factor = 0
 			FROM = {
 				OR = {
 					trait = content
@@ -2672,8 +2775,16 @@ plot_kill_character = {
 		}
 		modifier = {
 			factor = 0
-			FROM = { opinion = { who = ROOT value = 25 } }
+			FROM = { opinion = { who = ROOT value = 75 } }
+		}		
+		modifier = {
+			factor = 0.25
+			FROM = { opinion = { who = ROOT value = 50 } }
 		}
+		modifier = {
+			factor = 0.5
+			FROM = { opinion = { who = ROOT value = 25 } }
+		}		
 		modifier = {
 			factor = 1.5
 			FROM = { NOT = { opinion = { who = ROOT value = -25 } } }
@@ -2853,10 +2964,10 @@ plot_kill_spouse = {
 	}	
 	
 	chance = {
-		factor = 20
+		factor = 25
 		
 		modifier = {
-			factor = 0.01
+			factor = 0
 			FROM = {
 				OR = {
 					trait = content
@@ -2869,8 +2980,16 @@ plot_kill_spouse = {
 		}
 		modifier = {
 			factor = 0
-			FROM = { opinion = { who = ROOT value = 25 } }
+			FROM = { opinion = { who = ROOT value = 75 } }
+		}		
+		modifier = {
+			factor = 0.25
+			FROM = { opinion = { who = ROOT value = 50 } }
 		}
+		modifier = {
+			factor = 0.5
+			FROM = { opinion = { who = ROOT value = 25 } }
+		}		
 		modifier = {
 			factor = 1.5
 			FROM = { NOT = { opinion = { who = ROOT value = -25 } } }
@@ -4537,7 +4656,7 @@ obj_wants_landed_title = {
 		NOT = { has_character_flag = obj_landed_title }
 	}
 	chance = {
-		factor = 100
+		factor = 200
 
 		modifier = {
 			factor = 0.1
@@ -5129,7 +5248,7 @@ obj_increase_demesne_1 = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = content
 		}
 	}
@@ -5203,7 +5322,7 @@ obj_increase_demesne_2 = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = content
 		}
 	}
@@ -5277,7 +5396,7 @@ obj_increase_demesne_3 = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = content
 		}
 	}
@@ -5351,7 +5470,7 @@ obj_increase_demesne_4 = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = content
 		}
 	}
@@ -5425,7 +5544,7 @@ obj_increase_demesne_5 = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = content
 		}
 	}
@@ -5499,7 +5618,7 @@ obj_increase_demesne_6 = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = content
 		}
 	}
@@ -5573,7 +5692,7 @@ obj_increase_demesne_7 = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = content
 		}
 	}
@@ -5647,7 +5766,7 @@ obj_increase_demesne_8 = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = content
 		}
 	}
@@ -5721,7 +5840,7 @@ obj_increase_demesne_9 = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = content
 		}
 	}
@@ -5920,7 +6039,7 @@ obj_go_crusade = {
 			trait = zealous
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = cynical
 		}
 		modifier = {
@@ -5928,7 +6047,7 @@ obj_go_crusade = {
 			trait = brave
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = craven
 		}		
 	}
@@ -6005,7 +6124,7 @@ obj_go_jihad = {
 			trait = zealous
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = cynical
 		}
 		modifier = {
@@ -6013,7 +6132,7 @@ obj_go_jihad = {
 			trait = brave
 		}
 		modifier = {
-			factor = 0.01
+			factor = 0
 			trait = craven
 		}		
 	}
@@ -6052,40 +6171,7 @@ obj_break_out_of_prison = {
 	}
 	
 	chance = {
-		factor = 100
-
-		modifier = {
-			factor = 2.0
-			trait = deceitful
-		}
-		modifier = {
-			factor = 1.5
-			trait = ambitious
-		}
-		modifier = {
-			factor = 1.5
-			trait = diligent
-		}
-		modifier = {
-			factor = 1.5
-			intrigue = 10
-		}
-		modifier = {
-			factor = 1.5
-			intrigue = 15
-		}
-		modifier = {
-			factor = 1.5
-			intrigue = 20
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { intrigue = 5 }
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { intrigue = 3 }
-		}
+		factor = 10000
 	}
 	
 	success = {
@@ -6123,11 +6209,11 @@ obj_win_a_war = {
 		factor = 100
 
 		modifier = {
-			factor = 0.01
+			factor = 0
 			independent = no
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			is_female = yes
 		}
 		modifier = {
@@ -6405,6 +6491,216 @@ obj_gain_honorary_title = {
 			years = 100
 		}
 		set_character_flag = obj_gain_honorary_title
+	}
+}
+
+obj_befriend_liege = {
+	type = character
+	
+	allow = {
+		age = 16
+		ai = no
+		independent = no
+		NOT = { has_character_flag = obj_befriend_liege }
+		NOT = { trait = incapable }
+		liege = {
+			opinion = {
+				who = ROOT
+				value = -25
+			}
+			reverse_opinion = {
+				who = ROOT
+				value = -25
+			}
+			NOT = {
+				has_opinion_modifier = { who = ROOT modifier = opinion_friend }
+			}
+			NOT = {
+				reverse_has_opinion_modifier = { who = ROOT modifier = opinion_friend }
+			}
+			NOT = {
+				opinion = {
+					who = ROOT
+					value = 75
+				}			
+			}
+		}		
+	}
+	
+	chance = {
+		factor = 0	
+	}
+	
+	success = {
+		liege = {
+			opinion = {
+				who = ROOT
+				value = 75
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_character_flag = abort_obj
+			trait = incapable
+			independent = yes
+			liege = { has_opinion_modifier = { who = ROOT modifier = opinion_friend } }
+			liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_friend } }			
+			NOT = {
+				liege = {
+					opinion = {
+						who = ROOT
+						value = -50
+					}
+				}
+			}
+			NOT = {
+				liege = {
+					reverse_opinion = {
+						who = ROOT
+						value = -50
+					}
+				}
+			}			
+		}
+	}
+	abort_effect = {
+		clr_character_flag = abort_obj
+		clr_character_flag = obj_check
+	}
+	effect = { 
+		set_character_flag = obj_befriend_liege
+		liege = {	
+			hidden_tooltip = {
+				remove_opinion = {
+					who = ROOT
+					modifier = opinion_friend
+				}
+				reverse_remove_opinion = {
+					who = ROOT
+					modifier = opinion_friend
+				}			
+			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_friend
+				years = 100
+			}
+			reverse_opinion = {
+				who = ROOT
+				modifier = opinion_friend
+				years = 100
+			}	
+		}
+	}
+}
+
+obj_befriend_relhead = {
+	type = character
+	
+	allow = {
+		age = 16
+		ai = no
+		religion_head = { is_alive = yes }
+		NOT = { has_character_flag = obj_befriend_relhead }
+		NOT = { trait = incapable }
+		religion_head = {
+			NOT = {
+				is_liege_of = ROOT
+			}
+		}
+		religion_head = {
+			opinion = {
+				who = ROOT
+				value = -25
+			}
+			reverse_opinion = {
+				who = ROOT
+				value = -25
+			}
+			NOT = {
+				has_opinion_modifier = { who = ROOT modifier = opinion_friend }
+			}
+			NOT = {
+				reverse_has_opinion_modifier = { who = ROOT modifier = opinion_friend }
+			}
+			NOT = {
+				opinion = {
+					who = ROOT
+					value = 75
+				}			
+			}
+		}
+	}
+	
+	chance = {
+		factor = 0	
+	}
+	
+	success = {
+		religion_head = {
+			opinion = {
+				who = ROOT
+				value = 75
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_character_flag = abort_obj
+			trait = incapable
+			NOT = { religion_head = { is_alive = yes } }
+			religion_head = { has_opinion_modifier = { who = ROOT modifier = opinion_friend } }
+			religion_head = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_friend } }
+			religion_head = {
+				is_liege_of = ROOT
+			}			
+			NOT = {
+				religion_head = {
+					opinion = {
+						who = ROOT
+						value = -50
+					}
+				}
+			}
+			NOT = {
+				religion_head = {
+					reverse_opinion = {
+						who = ROOT
+						value = -50
+					}
+				}
+			}			
+		}
+	}
+	abort_effect = {
+		clr_character_flag = abort_obj
+		clr_character_flag = obj_check
+	}
+	effect = { 
+		set_character_flag = obj_befriend_relhead
+		religion_head = {
+			hidden_tooltip = {
+				remove_opinion = {
+					who = ROOT
+					modifier = opinion_friend
+				}
+				reverse_remove_opinion = {
+					who = ROOT
+					modifier = opinion_friend
+				}			
+			}		
+			opinion = {
+				who = ROOT
+				modifier = opinion_friend
+				years = 100
+			}
+			reverse_opinion = {
+				who = ROOT
+				modifier = opinion_friend
+				years = 100
+			}	
+		}
 	}
 }
 

@@ -14,10 +14,10 @@ character_event = {
 	desc = "EVTDESC6000"
 	picture = "GFX_evt_illness"
 	
-	min_age = 16
 	capable_only = yes
 	
 	trigger = {
+		age = 16
 		NOT = {
 			trait = syphilitic
 		}
@@ -332,9 +332,9 @@ character_event = {
 	desc = "EVTDESC6040"
 	picture = "GFX_evt_lunatic"
 	
-	min_age = 16
 	
 	trigger = {
+		age = 16
 		OR = {
 			is_ruler = yes
 			is_councillor = yes
@@ -384,9 +384,9 @@ character_event = {
 	desc = "EVTDESC6041"
 	picture = "GFX_evt_recovery"
 	
-	min_age = 16
 	
 	trigger = {
+		age = 16
 		trait = stressed
 	}
 	
@@ -598,11 +598,11 @@ character_event = {
 			trait = stressed
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.2
 			has_character_modifier = the_oubliette
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.4
 			has_character_modifier = the_dungeon
 		}
 		modifier = {
@@ -648,7 +648,7 @@ character_event = {
 			trait = stressed
 		}
 		modifier = {
-			factor = 5.0
+			factor = 4.0
 			has_character_modifier = the_oubliette
 		}
 		modifier = {
@@ -758,11 +758,11 @@ character_event = {
 			trait = stressed
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.2
 			has_character_modifier = the_oubliette
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.4
 			has_character_modifier = the_dungeon
 		}		
 		modifier = {
@@ -812,7 +812,7 @@ character_event = {
 			NOT = { base_health = 4 }
 		}
 		modifier = {
-			factor = 5.0
+			factor = 4.0
 			has_character_modifier = the_oubliette
 		}
 		modifier = {
@@ -922,7 +922,7 @@ character_event = {
 			base_health = 5.1
 		}
 		modifier = {
-			factor = 5.0
+			factor = 4.0
 			has_character_modifier = the_oubliette
 		}
 		modifier = {
@@ -1598,9 +1598,9 @@ character_event = {
 	id = 6200
 	desc = "EVTDESC6200"
 	picture = "GFX_evt_whispers"
-	min_age = 10
 	
 	trigger = {
+		age = 16
 		trait = possessed
 		OR = {
 			religion = catholic
@@ -1690,9 +1690,7 @@ character_event = {
 	id = 6201
 	desc = "EVTDESC6201"
 	picture = "GFX_evt_carriage"
-	
-	min_age = 16
-	
+		
 	trigger = {
 		has_character_modifier = voice_of_jesus
 	}
@@ -1714,7 +1712,6 @@ character_event = {
 	id = 6202
 	desc = "EVTDESC6202"
 	picture = "GFX_evt_garden"
-	min_age = 16
 	
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1737,7 +1734,6 @@ character_event = {
 	id = 6203
 	desc = "EVTDESC6203"
 	picture = "GFX_evt_comet"
-	min_age = 16
 	
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1761,7 +1757,6 @@ character_event = {
 	id = 6204
 	desc = "EVTDESC6204"
 	picture = "GFX_evt_brothel_scene"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1784,7 +1779,6 @@ character_event = {
 	id = 6205
 	desc = "EVTDESC6205"
 	picture =  "GFX_evt_garden"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1810,7 +1804,6 @@ character_event = {
 	id = 6206
 	desc = "EVTDESC6206"
 	picture = "GFX_evt_banquet_hall_feast"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1833,7 +1826,6 @@ character_event = {
 	id = 6207
 	desc = "EVTDESC6207"
 	picture =  "GFX_evt_garden"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1859,7 +1851,6 @@ character_event = {
 	id = 6208
 	desc = "EVTDESC6208"
 	picture = "GFX_evt_drunk"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1881,7 +1872,6 @@ character_event = {
 	id = 6209
 	desc = "EVTDESC6209"
 	picture =  "GFX_evt_garden"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1907,7 +1897,6 @@ character_event = {
 	id = 6210
 	desc = "EVTDESC6210"
 	picture = "GFX_evt_illness"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1928,7 +1917,6 @@ character_event = {
 	id = 6211
 	desc = "EVTDESC6211"
 	picture =  "GFX_evt_garden"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1953,7 +1941,6 @@ character_event = {
 	id = 6212
 	desc = "EVTDESC6212"
 	picture = "GFX_evt_illness"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1974,7 +1961,6 @@ character_event = {
 	id = 6213
 	desc = "EVTDESC6213"
 	picture =  "GFX_evt_garden"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -1999,7 +1985,6 @@ character_event = {
 	id = 6214
 	desc = "EVTDESC6214"
 	picture = "GFX_evt_illness"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -2021,7 +2006,6 @@ character_event = {
 	id = 6215
 	desc = "EVTDESC6215"
 	picture = "GFX_evt_illness"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -2046,7 +2030,6 @@ character_event = {
 	id = 6216
 	desc = "EVTDESC6216"
 	picture = "GFX_evt_illness"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -2068,7 +2051,6 @@ character_event = {
 	id = 6217
 	desc = "EVTDESC6217"
 	picture = "GFX_evt_illness"
-	min_age = 16
 
 	trigger = {
 		has_character_modifier = voice_of_jesus
@@ -2093,7 +2075,6 @@ character_event = {
 	id = 6218
 	desc = "EVTDESC6218"
 	picture = "GFX_evt_heretic"
-	min_age = 16
 	
 	trigger = {
 		has_character_modifier =  holy_comet
@@ -2114,7 +2095,6 @@ character_event = {
 	id = 6219
 	desc = "EVTDESC6219"
 	picture = "GFX_evt_battle"
-	min_age = 16
 	
 	trigger = {
 		has_character_modifier =  holy_comet
@@ -2141,7 +2121,6 @@ character_event = {
 	id = 6220
 	desc = "EVTDESC6220"
 	picture = "GFX_evt_battle"
-	min_age = 16
 	
 	trigger = {
 		has_character_modifier = military_jesus
@@ -2162,7 +2141,6 @@ character_event = {
 	id = 6221
 	desc = "EVTDESC6221"
 	picture = "GFX_evt_battle"
-	min_age = 16
 	
 	trigger = {
 		has_character_modifier =  holy_comet
@@ -2189,7 +2167,6 @@ character_event = {
 	id = 6222
 	desc = "EVTDESC6222"
 	picture = "GFX_evt_battle"
-	min_age = 16
 	
 	trigger = {
 		has_character_modifier = speaking_in_tounges
@@ -2285,7 +2262,6 @@ character_event = {
 	desc = "EVTDESC6224"
 	picture = "GFX_evt_torture"
 	
-	min_age = 16
 	only_rulers = yes
 	prisoner = no
 	capable_only = yes
@@ -2673,11 +2649,11 @@ character_event = {
 			trait = pneumonic
 		}		
 		modifier = {
-			factor = 0.1
+			factor = 0.2
 			has_character_modifier = the_oubliette
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.4
 			has_character_modifier = the_dungeon
 		}
 		modifier = {

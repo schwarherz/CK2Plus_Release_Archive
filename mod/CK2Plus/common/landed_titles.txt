@@ -35,10 +35,6 @@ e_papal_state = {
 	short_name = yes
 	location_ruler_title = yes
 	
-	allow = {
-		always = no
-	}
-	
 	# Always exists
 	landless = yes
 	
@@ -70,10 +66,6 @@ k_orthodox = {
 	# Always exists
 	landless = yes
 	
-	allow = {
-		always = no
-	}	
-	
 	# Controls a religion
 	controls_religion = orthodox
 	
@@ -95,11 +87,6 @@ e_sunni = {
 	
 	capital = 719 # Mecca
 	
-	allow = {
-		piety = 500
-	}
-	gain_effect = { piety = -500 }
-	
 	title = "CALIPH"
 	foa = "CALIPH_FOA"
 	short_name = yes
@@ -118,11 +105,6 @@ e_shiite = {
 	color2={ 220 240 0 }
 	
 	capital = 719 # Mecca
-	
-	allow = {
-		piety = 500
-	}
-	gain_effect = { piety = -500 }
 	
 	title = "CALIPH"
 	foa = "CALIPH_FOA"
@@ -3441,7 +3423,7 @@ e_france = {
 				is_alive = yes
 			} 
 		}
-		religion_group = christian		
+		NOT = { religion_group = muslim }		
 	}	
 
 k_burgundy = {
@@ -3456,7 +3438,7 @@ k_burgundy = {
 	
 	allow = {
 		NOT = { e_france = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 	
 	d_dauphine = {
@@ -3794,7 +3776,7 @@ k_france = {
 	
 	allow = {
 		NOT = { e_france = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 	
 	d_bourbon = {
@@ -5063,7 +5045,7 @@ k_brittany = {
 		
 	allow = {
 		NOT = { e_france = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}		
 
 	d_brittany = {
@@ -5236,7 +5218,7 @@ e_hre = {
 		
 		allow = {
 			NOT = { e_hre = { holder_scope = { character = ROOT } } }
-			religion_group = christian
+			NOT = { religion_group = muslim }
 		}		
 
 		d_alsace = { 
@@ -5812,7 +5794,7 @@ e_hre = {
 		
 		allow = {
 			NOT = { e_hre = { holder_scope = { character = ROOT } } }
-			religion_group = christian
+			NOT = { religion_group = muslim }
 		}		
 		
 		d_holstein = {
@@ -7061,7 +7043,7 @@ e_hre = {
         
 	allow = {
 		NOT = { e_hre = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}        
         
         d_bohemia = {
@@ -7265,7 +7247,7 @@ e_italy = {
 				is_alive = yes
 			} 
 		}
-		religion_group = christian		
+		NOT = { religion_group = muslim }		
 	}
 	
 
@@ -7709,7 +7691,7 @@ k_italy = {
 	
 	allow = {
 		NOT = { e_italy = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 
 	d_carinthia = {
@@ -8631,7 +8613,7 @@ k_georgia = {
 	
 	allow = {
 		NOT = { e_byzantium = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 
 	d_kartli = {
@@ -8808,7 +8790,7 @@ k_georgia = {
 		
 		allow = {
 			NOT = { e_byzantium = { holder_scope = { character = ROOT } } }
-			religion_group = christian
+			NOT = { religion_group = muslim }
 		}		
 
 		d_aegean_islands = {
@@ -9474,7 +9456,7 @@ k_georgia = {
 		
 		allow = {
 			NOT = { e_byzantium = { holder_scope = { character = ROOT } } }
-			religion_group = christian
+			NOT = { religion_group = muslim }
 		}		
 		
 		d_charsianon = {
@@ -10144,7 +10126,7 @@ k_georgia = {
 		
 		allow = {
 			NOT = { e_byzantium = { holder_scope = { character = ROOT } } }
-			religion_group = christian
+			NOT = { religion_group = muslim }
 		}		
 	
 		d_armenia = {
@@ -11565,7 +11547,7 @@ e_russia = {
 				is_alive = yes
 			} 
 		}
-		religion_group = christian		
+		NOT = { religion_group = muslim }		
 	}
 
 k_rus = {
@@ -11578,7 +11560,7 @@ k_rus = {
 	
 	allow = {
 		NOT = { e_russia = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}
 	
 	d_bjarmia = {
@@ -13003,7 +12985,6 @@ k_qazan = {
 	
 	allow = {
 		NOT = { e_russia = { holder_scope = { character = ROOT } } }
-		religion_group = christian
 	}	
 	
 	capital = 615 #	Bashkirs
@@ -13528,7 +13509,6 @@ k_crimea = {
 	
 	allow = {
 		NOT = { e_russia = { holder_scope = { character = ROOT } } }
-		religion_group = christian
 	}	
 	
 	d_crimea = { 
@@ -13984,7 +13964,6 @@ k_khazaria = {
 	
 	allow = {
 		NOT = { e_russia = { holder_scope = { character = ROOT } } }
-		religion_group = christian
 	}		
 
 	d_saray = {
@@ -16182,7 +16161,7 @@ e_danubia = {
 				is_alive = yes
 			} 
 		}
-		religion_group = christian		
+		NOT = { religion_group = muslim }		
 	}
 
 	k_serbia = {
@@ -16197,7 +16176,7 @@ e_danubia = {
 		
 		allow = {
 			NOT = { e_danubia = { holder_scope = { character = ROOT } } }		
-			religion_group = christian
+			NOT = { religion_group = muslim }
 		}		
 		
 		d_rashka = {
@@ -16333,7 +16312,7 @@ e_danubia = {
 		
 		allow = {
 			NOT = { e_danubia = { holder_scope = { character = ROOT } } }	
-			religion_group = christian
+			NOT = { religion_group = muslim }
 		}		
 	
 		d_slavonia = {
@@ -16586,7 +16565,7 @@ e_danubia = {
 		
 		allow = {
 			NOT = { e_danubia = { holder_scope = { character = ROOT } } }	
-			religion_group = christian
+			NOT = { religion_group = muslim }
 		}		
 		
 		d_vidin = {
@@ -17019,7 +16998,7 @@ e_danubia = {
 		
 		allow = {
 			NOT = { e_danubia = { holder_scope = { character = ROOT } } }	
-			religion_group = christian
+			NOT = { religion_group = muslim }
 		}		
 
 		d_pecs = {
@@ -17570,7 +17549,7 @@ e_spain = { #Spain
 				is_alive = yes
 			} 
 		}
-		religion_group = christian		
+		NOT = { religion_group = muslim }		
 	}
 	
 	k_navarra = {
@@ -17584,7 +17563,7 @@ e_spain = { #Spain
 		
 		allow = {
 			NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-			religion_group = christian
+			NOT = { religion_group = muslim }
 		}
 	
 		d_navarra = {
@@ -17673,7 +17652,7 @@ k_castille = { #Spain
 	
 	allow = {
 		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 	
 	d_castilla = {
@@ -17854,7 +17833,7 @@ k_andalusia = {
 
 	allow = {
 		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 	
 	d_cordoba = {
@@ -18172,7 +18151,7 @@ k_spanish_galicia = {
 	# Creation/usurpation trigger
 	allow = {
 		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}
 	
 	d_galicia = {
@@ -18329,7 +18308,7 @@ k_leon = {
 	
 	allow = {
 		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 	
 	d_asturias = {
@@ -18557,7 +18536,7 @@ k_portugal = {
 	
 	allow = {
 		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}
 	
 	d_beja = {
@@ -18717,7 +18696,7 @@ k_aragon = {
 	
 	allow = {
 		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 
 	d_aragon = {
@@ -22136,8 +22115,7 @@ e_ethiopia = {
 			holder_scope = {
 				is_alive = yes
 			} 
-		}
-		religion_group = christian		
+		}		
 	}
 
 	k_adal = {
@@ -22266,7 +22244,6 @@ e_ethiopia = {
 		
 		allow = {
 			NOT = { e_ethiopia = { holder_scope = { character = ROOT } } }
-			religion_group = christian
 		}		
 
 		culture = ethiopian
@@ -22638,7 +22615,7 @@ e_britannia = {
 				is_alive = yes
 			} 
 		}
-		religion_group = christian		
+		NOT = { religion_group = muslim }		
 	}
 	
 
@@ -22651,7 +22628,7 @@ k_england = {
 	
 	allow = {
 		NOT = { e_britannia = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 	
 	d_northumberland = {
@@ -23397,7 +23374,7 @@ k_wales = {
 	
 	allow = {
 		NOT = { e_britannia = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 	
 	d_gwynedd = {
@@ -23554,7 +23531,7 @@ k_scotland = {
 	
 	allow = {
 		NOT = { e_britannia = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 	
 	d_galloway = {
@@ -23964,7 +23941,7 @@ k_ireland = {
 	
 	allow = {
 		NOT = { e_britannia = { holder_scope = { character = ROOT } } }
-		religion_group = christian
+		NOT = { religion_group = muslim }
 	}	
 	
 	d_ulster = {
@@ -24294,10 +24271,7 @@ e_scandinavia = {
 				is_alive = yes
 			} 
 		}	
-		OR = {
-			religion_group = christian
-			religion_group = pagan_group
-		}
+		NOT = { religion_group = muslim }
 	}
 	
 k_finland = {
@@ -24312,10 +24286,7 @@ k_finland = {
 	
 	allow = {
 		NOT = { e_scandinavia = { holder_scope = { character = ROOT } } }
-		OR = {
-			religion_group = christian
-			religion_group = pagan_group
-		}		
+		NOT = { religion_group = muslim }		
 	}
 
 	d_esthonia = {
@@ -24676,10 +24647,7 @@ k_sweden = {
 	
 	allow = {
 		NOT = { e_scandinavia = { holder_scope = { character = ROOT } } }
-		OR = {
-			religion_group = christian
-			religion_group = pagan_group
-		}		
+		NOT = { religion_group = muslim }		
 	}	
 
 	d_jamtland = {
@@ -25199,10 +25167,7 @@ k_denmark = {
 	
 	allow = {
 		NOT = { e_scandinavia = { holder_scope = { character = ROOT } } }
-		OR = {
-			religion_group = christian
-			religion_group = pagan_group
-		}		
+		NOT = { religion_group = muslim }		
 	}	
 	
 	d_skane = {
@@ -25413,10 +25378,7 @@ k_norway = {
 	
 	allow = {
 		NOT = { e_scandinavia = { holder_scope = { character = ROOT } } }
-		OR = {
-			religion_group = christian
-			religion_group = pagan_group
-		}		
+		NOT = { religion_group = muslim }		
 	}	
 
 	d_iceland = {
@@ -26211,7 +26173,6 @@ e_mali = {
 		
 		allow = {
 			religion_group = muslim
-			culture_group = arabic
 		}
 	}
 	d_assassin = {
@@ -26224,7 +26185,6 @@ e_mali = {
 		color = { 151 125 62 }
 		capital = 505
 		allow = {
-			culture_group = south_slavic
 			religion_group = christian
 		}		
 	}
@@ -26279,7 +26239,6 @@ e_mali = {
 		capital = 704
 		
 		allow = {
-			culture_group = altaic
 			religion_group = muslim
 		}
 	}
@@ -26349,7 +26308,6 @@ e_mali = {
 		capital = 846
 		
 		allow = {
-			culture_group = altaic
 			religion = judaism
 		}
 	}
@@ -26397,7 +26355,6 @@ e_mali = {
 		capital = 718
 		
 		allow = {
-			culture_group = arabic
 			religion_group = muslim
 		}
 	}
@@ -26427,7 +26384,6 @@ e_mali = {
 		color = { 23 132 81 }
 		capital = 577
 		allow = {
-			culture_group = east_slavic
 			religion_group = christian
 		}
 	}
@@ -26435,14 +26391,7 @@ e_mali = {
 		color = { 159 195 75 }
 		
 		tribe = yes
-		
-		capital	= 370 # Marienburg
-		
-		allow = {
-			culture_group = baltic
-			religion_group = pagan_group
-		}
-		
+	
 		culture = prussian
 		title = "HIGH_CHIEF"
 		foa = "HIGH_CHIEF_FOA"
@@ -26464,7 +26413,6 @@ e_mali = {
 		capital = 192
 		
 		allow = {
-			culture_group = iberian
 			religion_group = christian
 		}
 	}
@@ -26494,7 +26442,6 @@ e_mali = {
 		capital = 637
 		
 		allow = {
-			culture_group = altaic
 			religion_group = muslim
 		}
 	}
@@ -26502,8 +26449,7 @@ e_mali = {
 		color = { 209 61 61 }
 		capital = 442
 		allow = {
-			culture_group = magyar
-			religion_group = muslim
+			religion_group = christian
 		}
 	}
 	d_tavasts = {
@@ -26564,7 +26510,6 @@ e_mali = {
 		capital = 202
 		
 		allow = {
-			culture_group = arabic
 			religion_group = muslim
 		}
 	}	
@@ -26630,7 +26575,6 @@ k_frisia = {
 	
 	allow = {
 		culture = dutch
-		religion_group = christian
 	}	
 }
 k_germiyan = {
@@ -26658,7 +26602,10 @@ k_naples = {
 	capital = 334 # Napoli
 	
 	allow = {
-		religion_group = christian
+		OR = {
+			culture = italian
+			culture = sicilian
+		}	
 	}	
 	
 	culture = italian
@@ -26752,7 +26699,7 @@ k_wend = {
 	
 	allow = {
 		culture = pommeranian
-		religion_group = pagan_group
+		NOT = { religion_group = muslim }
 	}
 }	
 k_al_garb = { #muslim portugal
@@ -26786,11 +26733,8 @@ k_of_mann_and_the_isles = {
 	capital = 54 # Isle of Man
 	culture = irish
 	allow = {
-		OR = {
-			culture_group = north_germanic
-			culture = irish
-			religion = norse_pagan
-		}	
+		culture_group = north_germanic
+		NOT = { religion_group = muslim }
 	}
 }
 
@@ -26800,7 +26744,17 @@ k_cornwall = {
 	culture = breton
 	allow = {
 		culture = cornish
-		NOT = { has_landed_title = k_england }
+		NOT = { religion_group = muslim }
+	}
+}
+
+k_epirus = {
+	color = { 86  100  100 }
+	capital = 473 # Arta
+	culture = greek	
+	allow = {
+		culture = greek
+		religion_group = christian
 	}
 }
 
@@ -26810,7 +26764,7 @@ k_mercia = {
 	culture = saxon
 	allow = {
 		culture = saxon
-		NOT = { has_landed_title = k_england }
+		NOT = { religion_group = muslim }
 	}
 }
 
@@ -26819,11 +26773,8 @@ k_dublin = {
 	capital = 11 # Dublin
 	culture = danish
 	allow = {
-		OR = {
-			culture_group = north_germanic
-			religion = norse_pagan
-			culture = irish
-		}
+		culture_group = north_germanic
+		NOT = { religion_group = muslim }
 	}
 }
 
@@ -26833,7 +26784,7 @@ k_sardinia = {
 	culture = italian
 	allow = {
 		culture_group = latin
-		religion = catholic
+		NOT = { religion_group = muslim }
 	}
 }	
 

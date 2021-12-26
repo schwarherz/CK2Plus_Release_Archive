@@ -9,7 +9,7 @@ b_monemvasia = castle
 
 b_arkadia = city
 #b_mistra = temple
-b_nikli = temple
+#b_nikli = temple
 #b_sparta = castle
 #b_lacedaemonia = castle
 #b_gythio = castle
@@ -36,7 +36,7 @@ terrain = hills
 
 # Mistra becomes the capital of the Despotate of the Morea
 
-1259.1.1 = { remove_settlement = b_nikli }
+#1259.1.1 = { remove_settlement = b_nikli }
 1259.1.1 = { b_mistra = castle }
 1259.1.1 = { b_monemvasia = temple }
 1259.1.1 = { capital = b_mistra }

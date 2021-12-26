@@ -765,7 +765,7 @@ character_event = {
 					limit = { has_minor_title = title_regent }
 					death = {
 						death_reason = death_accident
-						}
+					}
 				}
 			}
 			50 = { 
@@ -775,7 +775,7 @@ character_event = {
 					opinion = {
 						modifier = opinion_mad_as_hell
 						who = ROOT
-						years = 1
+						years = 10
 					}
 				}
 			}

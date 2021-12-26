@@ -6,7 +6,7 @@ title = c_kyzikos
 # Settlements
 max_settlements = 4
 b_kyzikos = castle
-b_artake = city
+#b_artake = city
 b_militopolis = temple
 
 #b_adrianutherai = castle

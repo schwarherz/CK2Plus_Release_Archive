@@ -677,7 +677,7 @@
 }
 
 102527 = {
-	name="Olof" # den helige
+	name="Olaf" # den helige
 	dynasty=499
 	martial=7
 	diplomacy=4
@@ -779,8 +779,8 @@
 	add_trait="just"
 	add_trait="zealous"
 	add_trait="envious"
-	add_trait="brave"
 	add_trait="tall"
+	add_trait="brave"
 	add_trait="skilled_tactician"
 	father=102500
 	mother=102501
@@ -794,12 +794,12 @@
 		add_spouse=633
 	}
 	1066.1.5={
-		#add_claim = k_england
+		add_claim = k_england
 		give_nickname = nick_haardraade
 	}
 	
 	1066.9.14 = {
-		wealth = 500
+		wealth = 750
 		raise_levies = {
 			location = 57 # York
 			force_mult = 3.3
@@ -863,7 +863,7 @@
 }
 
 102534 = {
-	name="Olav" # 'Kyrre'
+	name="Olaf" # 'Kyrre'
 	dynasty=499
 	dna="bdfgcvidgck"
 	properties="fb0bad0000"
@@ -986,7 +986,7 @@
 102539 = {
 	name="Erlend"
 	dynasty=461
-	dna="tjmkfyfngoz"
+	dna="tjmkfyfngcz"
 	properties="ej0eak0000"
 	martial=6
 	diplomacy=6
@@ -1070,7 +1070,7 @@
 }
 
 102543 = {
-	name="Olav"
+	name="Olaf"
 	dynasty=457
 	martial=5
 	diplomacy=4
@@ -1293,7 +1293,7 @@
 	name="Skofte"
 	dynasty=453
 	dna="bafkdeacgcp"
-	properties="0i0dak"
+	properties="0i0dak0000"
 	martial=4
 	diplomacy=5
 	intrigue=4
@@ -1777,9 +1777,9 @@
 
 102575 = {
 	name="Austmod"
-	dna="zjnozkwogow"
-	properties="0etczk0000"
 	dynasty=444
+	dna="zjnozkwogcw"
+	properties="0etczk0000"
 	martial=7
 	diplomacy=5
 	intrigue=6
@@ -1839,7 +1839,7 @@
 }
 
 1027 = {
-	name="Olav"
+	name="Olaf"
 	dynasty=100011
 	martial=6
 	diplomacy=6
@@ -1935,7 +1935,7 @@
 }
 
 144004 = {
-	name="Olof"
+	name="Olaf"
 	dynasty=499
 	religion="catholic"
 	culture="norwegian"	
@@ -2097,7 +2097,7 @@
 20016 = {
 	name="Lodin"
 	dynasty=100268
-	dna="oqrkazhkgkn"
+	dna="oqrkazhkgcn"
 	properties="0a0eak0000"
 	martial=6
 	diplomacy=4
@@ -2118,7 +2118,7 @@
 20017 = {
 	name="Jon"
 	dynasty=100270
-	dna="sywzwbhngud"
+	dna="sywzwbhngcd"
 	properties="0c0cck0000"
 	martial=6
 	diplomacy=7
@@ -2156,7 +2156,7 @@
 20019 = {
 	name="Finn"
 	dynasty=100284
-	dna="wwzaydohgxa"
+	dna="wwzaydohgca"
 	properties="cl0ed0000"
 	martial=5
 	diplomacy=4
@@ -3385,7 +3385,6 @@
 202514 = {
 	name="Øystein"
 	# AKA: Oystein Haraldsson
-	female = yes
 	dynasty=499
 	martial=6
 	diplomacy=6
@@ -3492,7 +3491,7 @@
 20579 = {
 	name="Isleifur"
 	dynasty=101891
-	dna="tgtgcksvgjw"
+	dna="tgtgcksvgcw"
 	properties="cl0eyd0000"
 	martial=5
 	diplomacy=5
@@ -3513,7 +3512,7 @@
 20580 = {
 	name="Sigfus"
 	dynasty=101892
-	dna="fzfyqjfxgak"
+	dna="fzfyqjfxgck"
 	properties="0aadvk0000"
 	martial=8
 	diplomacy=8
@@ -3541,8 +3540,8 @@
 	diplomacy=8
 	intrigue=7
 	stewardship=7
-	culture="icelandic"
 	religion="catholic"
+	culture="icelandic"
 	add_trait="martial_cleric"
 	father=20580
 	1056.1.1={
@@ -3659,7 +3658,7 @@
 }
 
 220023 = {
-	name="Olav"
+	name="Olaf"
 	# AKA: Olaf 'Raude' Gudrodsson
 	dynasty=556
 	martial=5
@@ -3846,7 +3845,7 @@
 }
 
 220046 = {
-	name="Olav"
+	name="Olaf"
 	# AKA: Olaf 'Svarte' Gudrodsson
 	dynasty=556
 	martial=6
@@ -3961,7 +3960,7 @@
 }
 
 222598 = {
-	name="Olav"
+	name="Olaf"
 	# AKA: Olaf Magnusson
 	dynasty=499
 	martial=4

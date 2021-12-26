@@ -9,7 +9,7 @@ b_talas = castle
 b_misti = city
 b_kaisereia = temple
 
-b_sariz = castle
+#b_sariz = castle
 #b_masaka = city
 #b_dobada = castle
 #b_venessa = castle

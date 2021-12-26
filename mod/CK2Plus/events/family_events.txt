@@ -16,7 +16,6 @@ character_event = {
 	desc = "EVTDESC37000"
 	picture = GFX_evt_emissary
 	
-	min_age = 16
 	only_men = yes
 	capable_only = yes
 	prisoner = no
@@ -24,6 +23,7 @@ character_event = {
 	trigger = {
 		has_objective = obj_wants_landed_title
 		liege = {
+			war = no
 			is_close_relative = ROOT
 			any_demesne_title = {
 				can_be_given_away = yes
@@ -246,7 +246,6 @@ character_event = {
 	desc = "EVTDESC37005"
 	picture = GFX_evt_emissary
 	
-	min_age = 16
 	only_men = yes
 	capable_only = yes
 	prisoner = no
@@ -255,6 +254,7 @@ character_event = {
 		has_objective = obj_wants_landed_title
 		had_character_flag = { flag = flag_promised_title days = 365 }
 		liege = {
+			war = no
 			any_demesne_title = {
 				can_be_given_away = yes
 				NOT = { tier = duke }
@@ -373,7 +373,6 @@ character_event = {
 	desc = "EVTDESC37050"
 	picture = GFX_evt_marriage
 	
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
@@ -482,7 +481,6 @@ character_event = {
 	desc = "EVTDESC37054"
 	picture = GFX_evt_marriage
 	
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
@@ -599,7 +597,6 @@ character_event = {
 	desc = "EVTDESC37056"
 	picture = GFX_evt_marriage
 	
-	min_age = 16
 	only_men = yes
 	capable_only = yes
 	prisoner = no

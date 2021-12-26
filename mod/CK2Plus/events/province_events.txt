@@ -418,7 +418,15 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 800
+		months = 500
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}		
 		modifier = {
 			factor = 1.05
 			NOT = { learning = 1 }
@@ -555,7 +563,15 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 500
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}		
 	}
 
 	option = {
@@ -603,6 +619,14 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 120
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}		
 	}
 
 	option = {
@@ -649,7 +673,15 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 500
+		modifier = {
+			factor = 0.5
+			year = 1150
+		}
+		modifier = {
+			factor = 0.5
+			year = 1200
+		}		
 	}
 
 	option = {

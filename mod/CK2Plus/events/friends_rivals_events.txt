@@ -152,7 +152,7 @@ character_event = {
 			}
 			opinion = {
 				modifier = opinion_rival
-				who = ROOT
+				who = FROM
 				years = 100
 			}
 			character_event = {
@@ -4963,6 +4963,7 @@ character_event = {
 	
 	trigger = {
 		is_councillor = no
+		independent = no
 		OR = {
 			has_objective = obj_become_chancellor
 			has_objective = obj_become_marshal
@@ -4976,126 +4977,19 @@ character_event = {
 		NOT = {
 			num_of_rivals = 5
 		}
-		any_courtier = {
-			is_female = no
-			is_abroad = no
-			prisoner = no
-			is_councillor = yes
-			at_location = ROOT
-			same_liege = ROOT
-			NOT = {
-				sibling = ROOT
-			}
-			age = 16
-			NOT = {
-				num_of_friends = 5
-			}
-			NOT = {
-				num_of_rivals = 5
-			}
-			OR = {
-				AND = {
-					has_job_title = job_chancellor
-					ROOT = {
-						has_objective = obj_become_chancellor
-					}
-				}
-				AND = {
-					has_job_title = job_marshal
-					ROOT = {
-						has_objective = obj_become_marshal
-					}
-				}
-				AND = {
-					has_job_title = job_treasurer
-					ROOT = {
-						has_objective = obj_become_treasurer
-					}
-				}
-				AND = {
-					has_job_title = job_spymaster
-					ROOT = {
-						has_objective = obj_become_spymaster
-					}
-				}
-				AND = {
-					has_job_title = job_spiritual
-					ROOT = {
-						has_objective = obj_become_spiritual
-					}
-				}
-			}
-			NOT = {
-				has_opinion_modifier = { who = ROOT modifier = opinion_friend }
-			}
-			NOT = {
-				reverse_has_opinion_modifier = { who = ROOT modifier = opinion_friend }
-			}
-			NOT = {
-				has_opinion_modifier = { who = ROOT modifier = opinion_rival }
-			}
-			NOT = {
-				reverse_has_opinion_modifier = { who = ROOT modifier = opinion_rival }
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 80
-		
-		modifier = {
-			factor = 0.5
-			trait = ambitious
-		}
-		modifier = {
-			factor = 0.5
-			trait = trusting
-		}
-		modifier = {
-			factor = 0.5
-			trait = quick
-		}
-		modifier = {
-			factor = 0.5
-			trait = genius
-		}
-		modifier = {
-			factor = 0.5
-			trait = diligent
-		}
-		
-		modifier = {
-			factor = 2
-			trait = slothful
-		}
-		modifier = {
-			factor = 2
-			trait = paranoid
-		}
-		modifier = {
-			factor = 2
-			trait = slow
-		}
-		modifier = {
-			factor = 5
-			trait = imbecile
-		}
-		modifier = {
-			factor = 2
-			trait = content
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA100110"
-		random_courtier = {
-			limit = {
+		liege = {
+			any_courtier = {
 				is_female = no
 				is_abroad = no
 				prisoner = no
 				is_councillor = yes
 				at_location = ROOT
 				same_liege = ROOT
+				NOT = {
+					ROOT = {
+						is_liege_of = PREV
+					}
+				}
 				NOT = {
 					sibling = ROOT
 				}
@@ -5151,11 +5045,132 @@ character_event = {
 					reverse_has_opinion_modifier = { who = ROOT modifier = opinion_rival }
 				}
 			}
-			character_event = {
-				id = 100111
-				days = 10
-				random = 5
-				tooltip = "EVTTOOLTIP100111"
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		modifier = {
+			factor = 0.5
+			trait = quick
+		}
+		modifier = {
+			factor = 0.5
+			trait = genius
+		}
+		modifier = {
+			factor = 0.5
+			trait = diligent
+		}
+		
+		modifier = {
+			factor = 2
+			trait = slothful
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			trait = slow
+		}
+		modifier = {
+			factor = 5
+			trait = imbecile
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA100110"
+		liege = {
+			random_courtier = {
+				limit = {
+					is_female = no
+					is_abroad = no
+					prisoner = no
+					is_councillor = yes
+					at_location = ROOT
+					same_liege = ROOT
+					NOT = {
+						ROOT = {
+							is_liege_of = PREV
+						}
+					}
+					NOT = {
+						sibling = ROOT
+					}
+					age = 16
+					NOT = {
+						num_of_friends = 5
+					}
+					NOT = {
+						num_of_rivals = 5
+					}
+					OR = {
+						AND = {
+							has_job_title = job_chancellor
+							ROOT = {
+								has_objective = obj_become_chancellor
+							}
+						}
+						AND = {
+							has_job_title = job_marshal
+							ROOT = {
+								has_objective = obj_become_marshal
+							}
+						}
+						AND = {
+							has_job_title = job_treasurer
+							ROOT = {
+								has_objective = obj_become_treasurer
+							}
+						}
+						AND = {
+							has_job_title = job_spymaster
+							ROOT = {
+								has_objective = obj_become_spymaster
+							}
+						}
+						AND = {
+							has_job_title = job_spiritual
+							ROOT = {
+								has_objective = obj_become_spiritual
+							}
+						}
+					}
+					NOT = {
+						has_opinion_modifier = { who = ROOT modifier = opinion_friend }
+					}
+					NOT = {
+						reverse_has_opinion_modifier = { who = ROOT modifier = opinion_friend }
+					}
+					NOT = {
+						has_opinion_modifier = { who = ROOT modifier = opinion_rival }
+					}
+					NOT = {
+						reverse_has_opinion_modifier = { who = ROOT modifier = opinion_rival }
+					}
+				}
+				character_event = {
+					id = 100111
+					days = 10
+					random = 5
+					tooltip = "EVTTOOLTIP100111"
+				}
 			}
 		}
 	}
@@ -5182,8 +5197,10 @@ character_event = {
 			random = {
 				chance = 15
 				add_trait = honest
-				character_event = {
-					id = 38262
+				hidden_tooltip = {
+					character_event = {
+						id = 38262 #Notify Honest
+					}
 				}
 			}
 		}
@@ -5200,8 +5217,10 @@ character_event = {
 			random = {
 				chance = 15
 				add_trait = diligent
-				character_event = {
-					id = 38256
+				hidden_tooltip = {
+					character_event = {
+						id = 38256 #Notify Diligent
+					}
 				}
 			}
 		}		
@@ -5229,8 +5248,10 @@ character_event = {
 			random = {
 				chance = 15
 				add_trait = honest
-				character_event = {
-					id = 38262
+				hidden_tooltip = {
+					character_event = {
+						id = 38262 #Notify Honest
+					}
 				}
 			}
 		}
@@ -5246,8 +5267,10 @@ character_event = {
 			random = {
 				chance = 15
 				add_trait = diligent
-				character_event = {
-					id = 38256
+				hidden_tooltip = {
+					character_event = {
+						id = 38256 #Notify Diligent
+					}
 				}
 			}
 		}		
@@ -5275,8 +5298,10 @@ character_event = {
 			random = {
 				chance = 15
 				add_trait = honest
-				character_event = {
-					id = 38262
+				hidden_tooltip = {
+					character_event = {
+						id = 38262 #Notify Honest
+					}
 				}
 			}
 		}
@@ -5292,8 +5317,10 @@ character_event = {
 			random = {
 				chance = 15
 				add_trait = diligent
-				character_event = {
-					id = 38256
+				hidden_tooltip = {
+					character_event = {
+						id = 38256 #Notify Diligent
+					}
 				}
 			}
 		}
@@ -5321,8 +5348,10 @@ character_event = {
 			random = {
 				chance = 15
 				add_trait = honest
-				character_event = {
-					id = 38262
+				hidden_tooltip = {
+					character_event = {
+						id = 38262 #Notify Honest
+					}
 				}
 			}
 		}
@@ -5339,8 +5368,10 @@ character_event = {
 			random = {
 				chance = 15
 				add_trait = diligent
-				character_event = {
-					id = 38256
+				hidden_tooltip = {
+					character_event = {
+						id = 38256 #Notify Diligent
+					}
 				}
 			}
 		}	
@@ -5368,8 +5399,10 @@ character_event = {
 			random = {
 				chance = 15
 				add_trait = honest
-				character_event = {
-					id = 38262
+				hidden_tooltip = {
+					character_event = {
+						id = 38262 #Notify Honest
+					}
 				}
 			}
 		}
@@ -5385,8 +5418,10 @@ character_event = {
 			random = {
 				chance = 15
 				add_trait = diligent
-				character_event = {
-					id = 38256
+				hidden_tooltip = {
+					character_event = {
+						id = 38256 #Notify Diligent
+					}
 				}
 			}
 		}		
@@ -9033,6 +9068,12 @@ character_event = {
 	option = {
 		name = "EVTOPTC100240"
 		prestige = 5
+		if = {
+			limit = {
+				trait = lustful
+			}
+			add_trait = hedonist
+		}
 	}
 }
 
@@ -9222,6 +9263,15 @@ character_event = {
 	option = {
 		name = "EVTOPTC100250"
 		prestige = 5
+		if = {
+			limit = {
+				trait = chaste
+				NOT = {
+					religion_group = muslim
+				}
+			}
+			add_trait = celibate
+		}
 	}
 }
 
@@ -9411,6 +9461,12 @@ character_event = {
 	option = {
 		name = "EVTOPTC100260"
 		prestige = 5
+		if = {
+			limit = {
+				learning = 15
+			}
+			add_trait = scholar
+		}
 	}
 }
 
@@ -12567,13 +12623,10 @@ character_event = {
 			is_ruler = yes
 			same_liege = ROOT
 			OR = {
-				has_objective = plot_gain_title
-				has_objective = plot_institute_hereditary_titles
 				has_objective = plot_succ_seniority
 				has_objective = plot_succ_primogeniture
 				has_objective = plot_succ_gavelkind
 				has_objective = plot_succ_feudal_elective
-				has_objective = plot_lower_crown_authority
 			}
 		}
 	}
@@ -12601,6 +12654,22 @@ character_event = {
 					NOT = {
 						num_of_traits = 5
 					}
+					NOT = {
+							trait = ambitious
+						}
+					}
+				add_trait = ambitious
+				hidden_tooltip = {
+					character_event = {
+						id = 38278 #Notify Ambitious
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						num_of_traits = 5
+					}
 					trait = ambitious
 					NOT = {
 						trait = diligent
@@ -12610,22 +12679,6 @@ character_event = {
 				hidden_tooltip = {
 					character_event = {
 						id = 38256 #Notify diligent
-					}
-				}
-			}			
-			if = {
-				limit = {
-					NOT = {
-						num_of_traits = 5
-					}
-					NOT = {
-							trait = ambitious
-						}
-					}
-				add_trait = ambitious
-				hidden_tooltip = {
-					character_event = {
-						id = 38278 #Notify Ambitious
 					}
 				}
 			}
@@ -12654,39 +12707,12 @@ character_event = {
 				same_liege = ROOT
 				prisoner = no
 				OR = {
-					has_objective = plot_gain_title
-					has_objective = plot_institute_hereditary_titles
 					has_objective = plot_succ_seniority
 					has_objective = plot_succ_primogeniture
 					has_objective = plot_succ_gavelkind
 					has_objective = plot_succ_feudal_elective
-					has_objective = plot_lower_crown_authority
 				}
 			}
-			if = {
-				limit = {
-					has_objective =  plot_gain_title
-				}
-				ROOT = {
-					back_plot = PREV
-				}
-			}			
-			if = {
-				limit = {
-					has_objective = plot_institute_hereditary_titles
-				}
-				ROOT = {
-					back_plot = PREV
-				}
-			}			
-			if = {
-				limit = {
-					has_objective = plot_lower_crown_authority
-				}
-				ROOT = {
-					back_plot = PREV
-				}
-			}						
 			if = {
 				limit = {
 					has_objective = plot_succ_seniority

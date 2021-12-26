@@ -8,7 +8,7 @@
 #
 # Written by Sara Wendel-Örtqvist & Henrik Fåhraeus
 
-#Escape from prison: Rope in flagon of wine
+#Escape from prison
 character_event = {
 	id = 50000
 	desc = "EVTDESC50000"
@@ -39,7 +39,32 @@ character_event = {
 		modifier = {
 			factor = 0.75
 			has_objective = obj_break_out_of_prison
-		}		
+		}
+		modifier = {
+			factor = 0.9
+			is_ruler = yes
+			primary_title = { tier = BARON }
+		}
+		modifier = {
+			factor = 0.75
+			is_ruler = yes
+			primary_title = { tier = COUNT }
+		}
+		modifier = {
+			factor = 0.5
+			is_ruler = yes
+			primary_title = { tier = DUKE }
+		}
+		modifier = {
+			factor = 0.33
+			is_ruler = yes
+			primary_title = { tier = KING }
+		}
+		modifier = {
+			factor = 0.25
+			is_ruler = yes
+			primary_title = { tier = EMPEROR }
+		}			
 		modifier = {
 			factor = 0.5
 			trait = deceitful
@@ -254,11 +279,16 @@ character_event = {
 		FROM = {
 			death = { death_reason = death_execution }
 		}
-		any_vassal = {
-			opinion = {
-				modifier = opinion_tyrant
-				who = ROOT
-				years = 10
+		if = {
+			limit = {
+				FROM = { religion = ROOT }
+			}
+			any_vassal = {
+				opinion = {
+					modifier = opinion_tyrant
+					who = ROOT
+					years = 10
+				}
 			}
 		}
 		change_variable = { which = "lifestyle_impaler" value = 0.5 }
@@ -591,7 +621,7 @@ character_event = {
 	option = {
 		name = "EVTOPTB50010" # Oil up the rack!
 		change_variable = { which = "lifestyle_impaler" value = 1 }
-		piety = -10
+		piety = -10		
 		random_courtier = {
 			limit = {
 				prisoner = yes
@@ -624,6 +654,11 @@ character_event = {
 					}
 				}
 			}
+			opinion = {
+				modifier = opinion_hate
+				who = ROOT
+				years = 100
+			}			
 		}
 	}
 }
@@ -691,7 +726,7 @@ character_event = {
 				}
 			}
 		}
-		death = { death_reason = death_trait }
+		death = { death_reason = death_dungeon killer = FROM }
 	}
 }
 
@@ -707,14 +742,14 @@ character_event = {
 		name = "EVTOPTB50015"
 		any_vassal = {
 			opinion = {
-				modifier = opinion_tyrant
+				modifier = opinion_prisoner_died
 				who = ROOT
 				years = 10
 			}
 		}
 		any_courtier = {
 			opinion = {
-				modifier = opinion_tyrant
+				modifier = opinion_prisoner_died
 				who = ROOT
 				years = 10
 			}
@@ -747,11 +782,11 @@ character_event = {
 	picture = GFX_evt_emissary
 	
 	only_rulers = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		is_abroad = no

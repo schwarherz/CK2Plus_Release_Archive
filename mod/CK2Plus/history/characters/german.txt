@@ -318,7 +318,6 @@
 	culture="german"
 	father=10097
 	mother=7816
-	mother=7816
 	925.1.2 = {
 		birth="925.1.2"
 	}
@@ -370,7 +369,7 @@
 106510 = {
 	name="Ekbert"
 	dynasty=435
-	dna="katdzwjtgba"
+	dna="katdzwjtgca"
 	properties="0c0d0k0000"
 	martial=5
 	diplomacy=6
@@ -670,7 +669,7 @@
 106650 = {
 	name="Konrad"
 	dynasty=420
-	dna="gryzixnzgye"
+	dna="gryzixnzgce"
 	properties="ch0d0d0000"
 	martial=5
 	diplomacy=6
@@ -1026,7 +1025,7 @@
 	name="Gottfried"
 	# AKA: Godefroi 'le Barbu'
 	dynasty=22007
-	dna="phbbusazgar"
+	dna="phbbusazgcr"
 	properties="cm0d0d0000"
 	martial=3
 	diplomacy=5
@@ -1500,7 +1499,7 @@
 112600 = {
 	name="Otto"
 	dynasty=766
-	dna="sebsacxvbaj"
+	dna="sebsacxvbcj"
 	properties="cd0dad0000"
 	martial=9
 	diplomacy=7
@@ -1575,7 +1574,7 @@
 	religion="catholic"
 	culture="german"
 	add_trait="tough_soldier"
-	add_trait="sloth"
+	add_trait="slothful"
 	father=112600
 	mother=112601
 	1055.1.1 = {
@@ -1823,6 +1822,7 @@
 	mother=7982
 	880.1.2 = {
 		birth="880.1.2"
+		give_nickname="nick_the_blind"
 	}
 	905.1.1 = {
 		add_spouse=1701
@@ -3683,7 +3683,7 @@
 	name="Ordulf"
 	# AKA: Otho Ordulf
 	dynasty=656
-	dna="hfttkomzgue"
+	dna="hfttkomzgce"
 	properties="ca0cad0000"
 	martial=4
 	diplomacy=2
@@ -4342,7 +4342,7 @@
 	religion="catholic"
 	culture="german"
 	father=144222
-	mother=30985
+	mother=30958
 	1261.1.1 = {
 		birth="1261.1.1"
 	}
@@ -4885,7 +4885,7 @@
 1610 = {
 	name="Berthold"
 	dynasty=261
-	dna="bluuizwjqro"
+	dna="bluuizwjqco"
 	properties="ec0d0d0000"
 	martial=5
 	diplomacy=7
@@ -4940,7 +4940,7 @@
 	name="Albrecht" #Albrecht I
 	# AKA: Albert
 	dynasty=12420
-	dna="hfhidhesbnj"
+	dna="hfhidhesbcj"
 	properties="cj0e0k0000"
 	martial=4
 	diplomacy=8
@@ -5092,7 +5092,7 @@
 1620 = {
 	name="Otakar" #VI count of Styria
 	dynasty=101605
-	dna="uaqslhfbilm"
+	dna="uaqslhfbicm"
 	properties="0g0crk0000"
 	martial=8
 	diplomacy=5
@@ -5418,7 +5418,7 @@
 20223 = {
 	name="Eglimar"
 	dynasty=224
-	dna="hacpttshnbb"
+	dna="hacpttshncb"
 	properties="ca0cak0000"
 	martial=5
 	diplomacy=6
@@ -5567,7 +5567,7 @@
 20233 = {
 	name="Ludwig"
 	dynasty=257
-	dna="jaayoeaibag"
+	dna="jaayoeaibcg"
 	properties="cdhcmk0000"
 	martial=8
 	diplomacy=7
@@ -5612,7 +5612,7 @@
 20235 = {
 	name="Aribo"
 	dynasty=216
-	dna="zagybqeweer"
+	dna="zagybqewecr"
 	properties="cj0d0k0000"
 	martial=8
 	diplomacy=4
@@ -5779,7 +5779,7 @@
 20249 = {
 	name="Folmar"
 	dynasty=100128
-	dna="damwtupcbed"
+	dna="damwtupcbcd"
 	properties="cm0d0k0000"
 	martial=5
 	diplomacy=6
@@ -6105,7 +6105,7 @@
 20266 = {
 	name="Adalbert"
 	dynasty=226
-	dna="aagtuoiqber"
+	dna="aagtuoiqbcr"
 	properties="cg0c0k0000"
 	martial=5
 	diplomacy=6
@@ -6336,7 +6336,7 @@
 20307 = {
 	name="Olderic"
 	dynasty=12445
-	dna="tnaqronnbej"
+	dna="tnaqronnbcj"
 	properties="0e0e0k0000"
 	martial=4
 	diplomacy=8
@@ -12020,7 +12020,7 @@
 		birth="982.1.2"
 	}
 	1051.1.1 = {
-		death="10451.1.1"
+		death="1051.1.1"
 	}
 }
 
@@ -13900,7 +13900,7 @@
 		birth="1041.1.1"
 	}
 	1118.3.19 = {
-		death="1118.3.39"
+		death="1118.3.19"
 	}
 }
 
@@ -14474,7 +14474,7 @@
 		add_spouse=30078 #Eilika von Oldenburg
 	}
 	1156.11.22 = {
-		death="11156.11.22"
+		death="1156.11.22"
 	}
 }
 
@@ -18521,7 +18521,7 @@
 40560 = {
 	name="Ulrich" #count of Neuchatel 1070
 	dynasty=87
-	dna="qnwpzpargat"
+	dna="qnwpzpargct"
 	properties="cd0c0k0000"
 	martial=9
 	diplomacy=6
@@ -20471,7 +20471,7 @@
 
 462001 = {
 	name="Kuno"
-	dynasty=100084
+	#dynasty=100084
 	martial=6
 	diplomacy=8
 	intrigue=8
@@ -24390,7 +24390,7 @@
 	add_trait="lustful"
 	add_trait="deceitful"
 	add_trait="tough_soldier"
-	father=500008
+	#father=500008
 	1337.2.25 = {
 		birth="1337.2.25"
 	}
@@ -28004,8 +28004,8 @@
 6642 = {
 	name="Gerhard"
 	dynasty=667
-	dynasty=667
-	dna="hnjfwjfkeed"
+	dna="hnjfwjfkecd"
+	properties="0c0dgk0000"
 	martial=8
 	diplomacy=7
 	intrigue=4
@@ -28230,7 +28230,7 @@
 7054 = {
 	name="Friedrich" #Friedrich I of Swabia 1079-1105
 	dynasty=529
-	dna="bflqapmpbaz"
+	dna="bflqapmpbcz"
 	properties="cj0cek0000"
 	martial=5
 	diplomacy=6
@@ -28257,7 +28257,7 @@
 7060 = {
 	name="Otto"
 	dynasty=216
-	dna="fckruaoegnq"
+	dna="fckruaoegcq"
 	properties="0e0c0d0000"
 	martial=5
 	diplomacy=6
@@ -28592,7 +28592,7 @@
 70622 = {
 	name="Markward"
 	dynasty=523
-	dna="rejnwkfcbkx"
+	dna="rejnwkfcbcx"
 	properties="0m0c0k0000"
 	martial=8
 	diplomacy=4
@@ -28838,7 +28838,7 @@
 	culture="german"
 	add_trait="envious"
 	add_trait="chaste"
-	add_trait="militant_cleric"
+	add_trait="martial_cleric"
 	1151.1.1 = {
 		birth="1151.1.1"
 	}
@@ -28872,7 +28872,7 @@
 7200 = {
 	name="Ernst"
 	dynasty=247
-	dna="mlqlfpwrbfw"
+	dna="mlqlfpwrbcw"
 	properties="cg0c0d0000"
 	martial=5
 	diplomacy=8
@@ -38055,7 +38055,7 @@
 31819 = {
 	name="Adelheid"
 	female=yes
-	dynasty=7234
+	#dynasty=7234
 	religion="catholic"
 	culture="german"
 	1078.1.1 = {
@@ -38072,7 +38072,7 @@
 	religion="catholic"
 	culture="german"
 	father=31817
-	mother=31818
+	mother=31819
 	1108.1.1 = {
 		birth="1108.1.1"
 	}
@@ -38109,7 +38109,7 @@
 	religion="catholic"
 	culture="german"
 	father=31817
-	mother=31818
+	mother=31819
 	1110.1.1 = {
 		birth="1110.1.1"
 	}
@@ -39903,7 +39903,7 @@
 	religion="catholic"
 	culture="german"
 	father=7633
-	mother=3105
+	#mother=3105
 	1239.1.1 = {
 		birth="1239.1.1"
 	}
@@ -39919,7 +39919,7 @@
 	religion="catholic"
 	culture="german"
 	father=7633
-	mother=3105
+	#mother=3105
 	1241.1.1 = {
 		birth="1241.1.1"
 	}
@@ -40027,7 +40027,7 @@
 	religion="catholic"
 	culture="german"
 	father=7633
-	mother=3105
+	#mother=3105
 	1241.1.1 = {
 		birth="1241.1.1"
 	}
@@ -41769,6 +41769,7 @@
 	female=yes
 	dynasty=12476
 	religion="catholic"
+	culture="german"
 	father=462356
 	1221.1.1 = {
 		birth="1221.1.1"
@@ -42667,7 +42668,6 @@
 	name="Mechthild"
 	female=yes
 	dynasty=12476
-	female=yes
 	religion="catholic"
 	culture="german"
 	father=33302

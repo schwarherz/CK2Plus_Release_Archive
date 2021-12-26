@@ -2385,7 +2385,6 @@ character_event = {
 	desc = "EVTDESC64085"
 	picture = GFX_evt_lovers
 	
-	min_age = 16
 	only_capable = yes
 	only_rulers = no
 	
@@ -3134,7 +3133,7 @@ character_event = {
 			is_abroad = no
 			prisoner = no
 			NOT = {
-				has_character_flag = adulterous_affair_public
+				age = 16erous_affair_public
 			}
 			NOT = {
 				opinion = { who = ROOT value = -20 }
@@ -3584,7 +3583,6 @@ character_event = {
 	desc = "EVTDESC64135"
 	picture = GFX_evt_market
 	
-	min_age = 16
 	only_capable = yes
 	only_rulers = yes
 	

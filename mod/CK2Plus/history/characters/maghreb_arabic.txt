@@ -2520,11 +2520,19 @@
 	1040.1.1 = {
 		birth="1040.1.1"
 	}
+	1060.1.1 = {
+		add_claim = k_mauretania
+		add_claim = d_tangiers
+		add_claim = d_fes
+		add_claim = d_tlemcen
+	}
 	1071.1.1 = {
 		add_spouse=3856
 		add_claim = d_sevilla
 		add_claim = d_granada
 		add_claim = d_murcia
+	}
+	1078.10.8 = {
 		add_claim = d_zaragoza
 		add_claim = d_valencia
 		add_claim = d_mallorca
@@ -2533,7 +2541,7 @@
 		add_claim = d_cordoba
 		add_claim = d_badajoz
 		add_claim = d_sevilla
-		add_claim = d_granada		
+		add_claim = d_granada
 	}
 	1106.1.1 = {
 		death="1106.1.1"
@@ -2786,7 +2794,7 @@
 		add_claim = d_fes
 		add_claim = d_kabylia
 		add_claim = k_africa
-		add_claim = d_tunisia
+		add_claim = d_tunis
 		add_claim = d_tripolitania
 		add_claim = d_zaragoza
 		add_claim = d_valencia
@@ -6298,7 +6306,7 @@
 	dynasty=1027015
 	religion="sunni"
 	culture="maghreb_arabic"
-	father=115235
+	father=155235
 	1160.1.1 = {
 		birth="1160.1.1"
 	}

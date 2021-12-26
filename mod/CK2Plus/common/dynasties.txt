@@ -18715,6 +18715,14 @@
 	name="Ebrauc"
 	culture = welsh
 }
+1030031 = {
+	name="Skakke"
+	culture = norwegian
+}
+1030030 = {
+	name="Østman"
+	culture = norwegian
+}
 2005000 = {
 	name="de Valletort"
 	culture = norman
@@ -18827,10 +18835,6 @@
 	name="Bozun"
 	culture = english
 }
-2005028 = {
-	name="Dyntagell"
-	culture = cornish
-}
 2109000 = {
 	name="Pytheid"
 	culture = greek
@@ -18842,6 +18846,10 @@
 2109002={
 	name = "Genghisid"
 	culture = mongol
+}
+2109003 = {
+	name="Dyntagell"
+	culture = cornish
 }
 1000001106 = {
 	name = "Perconti"

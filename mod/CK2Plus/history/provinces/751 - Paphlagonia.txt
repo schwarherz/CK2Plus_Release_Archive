@@ -8,7 +8,7 @@ max_settlements = 4
 
 b_kastamonu = castle
 b_anastasiopolis = city
-b_gangra = temple
+#b_gangra = temple
 
 #b_safranbolu = castle
 #b_leontopolis = castle
@@ -29,7 +29,7 @@ religion = orthodox
 1097.8.26 = { religion = sunni }
 
 
-1187.1.1 = { b_safranbolu = castle } 
+1187.1.1 = { b_gangra = temple } 
 
 
 

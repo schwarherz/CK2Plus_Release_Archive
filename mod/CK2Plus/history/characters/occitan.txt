@@ -2051,8 +2051,8 @@
 	name="Guilhèm" #Guillaume IV de Toulouse
 	# AKA: Guilhem
 	dynasty=727
-	dna="zekqhzqzfjl"
-	properties="cj0e0d0000"
+	dna="zekqhzqzfcl"
+	properties="cj0ehd0000"
 	religion="catholic"
 	culture="occitan"
 	add_trait="flamboyant_schemer"
@@ -2211,7 +2211,7 @@
 	# AKA: Azivelle
 	female=yes
 	dynasty=5100
-	dna="jzcwaipiyoj"
+	dna="jzcwaipiycj"
 	properties="cemhpe0000"
 	religion="catholic"
 	culture="occitan"
@@ -5850,7 +5850,7 @@
 		add_spouse=205534
 	}
 	1194.1.1 = {
-		death="1194.1.1="
+		death="1194.1.1"
 	}
 }
 
@@ -12580,11 +12580,9 @@
 	}
 }
 
-
 20290 = {
 	name="Artau" #Artaud IV de Forez
 	dynasty=100227
-
 	dna="imegspfyfco"
 	properties="cjeeak0000"
 	religion="catholic"

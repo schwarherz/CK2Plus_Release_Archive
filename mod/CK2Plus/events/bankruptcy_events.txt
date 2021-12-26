@@ -6,62 +6,77 @@
 #
 #############################################
 
-# Ruler is in the red. Go to the moneylenders.
+# Indebted character dies
 character_event = {
 	id = 38000
 	desc = "EVTDESC38000"
-	picture = GFX_evt_council
+	picture = GFX_evt_death
 	
-	only_playable = yes
+	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { wealth = -50 }
-		NOT = { has_character_flag = loan_taken }
-		OR = {
-			NOT = { has_character_flag = loan_refused }
-			had_character_flag = { flag = loan_refused days = 1825 }
-		}
+		has_character_flag = loan_taken
 	}
 	
-	mean_time_to_happen = {
-		months = 1
+	immediate = {
+		hidden_tooltip = {
+			if = {
+				limit = {
+					has_character_flag = loan_50
+				}
+				current_heir = { set_character_flag = loan_50 }
+			}
+			if = {
+				limit = {
+					has_character_flag = loan_100
+				}
+				current_heir = { set_character_flag = loan_100 }
+			}
+			if = {
+				limit = {
+					has_character_flag = loan_200
+				}
+				current_heir = { set_character_flag = loan_200 }
+			}
+			if = {
+				limit = {
+					has_character_flag = loan_400
+				}
+				current_heir = { set_character_flag = loan_400 }
+			}
+			if = {
+				limit = {
+					has_character_flag = loan_600
+				}
+				current_heir = { set_character_flag = loan_600 }
+			}
+			if = {
+				limit = {
+					has_character_flag = loan_800
+				}
+				current_heir = { set_character_flag = loan_800 }
+			}
+			if = {
+				limit = {
+					has_character_flag = loan_1000
+				}
+				current_heir = { set_character_flag = loan_1000 }
+			}
+			current_heir = {
+				set_character_flag = loan_taken
+				set_character_flag = loan_heir
+				character_event = { id = 38001 days = 7 }
+			}			
+		}	
 	}
 	
 	option = {
-		name = "EVTOPTA38000" # Go to the moneylenders - Favorable terms
-		trigger = {
-			stewardship = 10
-		}
-		wealth = 200
-		add_character_modifier = {
-			name = "loan_timer"
-			duration = 1825
-		}
-		character_event = { id = 38001 days = 1825 tooltip = EVTTOOLTIP38001 }
-		set_character_flag = loan_taken
-		clr_character_flag = loan_refused
-	}
-	option = {
-		name = "EVTOPTB38000" # Go to the moneylenders - Unfavorable terms
-		trigger = {
-			NOT = { stewardship = 10 }
-		}
-		wealth = 200
-		add_character_modifier = {
-			name = "loan_timer"
-			duration = 1825
-		}		
-		character_event = { id = 38002 days = 1825 tooltip = EVTTOOLTIP38002 }
-		set_character_flag = loan_taken
-		clr_character_flag = loan_refused
-	}
-	option = {
-		name = "EVTOPTC38000" # Do not go to the moneylenders
-		set_character_flag = loan_refused
-	}
+		name = "EVTOPTA38000"	
+		custom_tooltip = EVTTOOLTIP38001
+	}	
 }
 
-# Follow-up to favorable loan terms
+# Moneylenders visit the heir
 character_event = {
 	id = 38001
 	desc = "EVTDESC38001"
@@ -70,67 +85,666 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA38001" # Return the money
+		name = "EVTOPTA38002"
 		trigger = {
-			wealth = 250
+			OR = {
+				AND = {
+					has_character_flag = loan_50
+					wealth = 62
+				}			
+				AND = {
+					has_character_flag = loan_100
+					wealth = 125
+				}
+				AND = {
+					has_character_flag = loan_200
+					wealth = 250
+				}
+				AND = {
+					has_character_flag = loan_400
+					wealth = 500
+				}
+				AND = {
+					has_character_flag = loan_600
+					wealth = 750
+				}
+				AND = {
+					has_character_flag = loan_800
+					wealth = 1000
+				}						
+				AND = {
+					has_character_flag = loan_1000
+					wealth = 1250
+				}				
+			}		
 		}
-		wealth = -250
-		clr_character_flag = loan_taken
+		if = {
+			limit = {
+				has_character_flag = loan_50			
+			}
+			wealth = -62
+			clr_character_flag = loan_50
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_100			
+			}
+			wealth = -125
+			clr_character_flag = loan_100
+		}	
+		if = {
+			limit = {
+				has_character_flag = loan_200			
+			}
+			wealth = -250
+			clr_character_flag = loan_200
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_400			
+			}
+			wealth = -500
+			clr_character_flag = loan_400
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_600			
+			}
+			wealth = -750
+			clr_character_flag = loan_600
+		}		
+		if = {
+			limit = {
+				has_character_flag = loan_800			
+			}
+			wealth = -1000
+			clr_character_flag = loan_800
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_1000			
+			}
+			wealth = -1250
+			clr_character_flag = loan_1000
+		}		
+		clr_character_flag = loan_taken	
+		clr_character_flag = loan_heir
 	}
 	option = {
-		name = "EVTOPTB38001" # Cannot afford it
 		trigger = {
-			NOT = { wealth = 250 }
+			has_character_flag = loan_50
 		}
-		hidden_tooltip = { remove_character_modifier = loan_timer }
-		add_character_modifier = {
-			name = "loan_timer"
-			duration = 365
-		}		
-		character_event = { id = 38002 days = 365 tooltip = EVTTOOLTIP38002B }		
+		name = "EVTOPTA38001"	
+		hidden_tooltip = { 
+			remove_character_modifier = loan_timer 
+			add_character_modifier = {
+				name = "loan_timer"
+				duration = 1825
+			}		
+		}
+		clr_character_flag = loan_heir
+		custom_tooltip = EVTTOOLTIP38002C
 	}
-	
+	option = {
+		trigger = {
+			has_character_flag = loan_100
+		}
+		name = "EVTOPTB38001"	
+		hidden_tooltip = { 
+			remove_character_modifier = loan_timer 
+			add_character_modifier = {
+				name = "loan_timer"
+				duration = 1825
+			}		
+		}
+		clr_character_flag = loan_heir
+		custom_tooltip = EVTTOOLTIP38002C
+	}	
+	option = {
+		trigger = {
+			has_character_flag = loan_200
+		}
+		name = "EVTOPTC38001"	
+		hidden_tooltip = { 
+			remove_character_modifier = loan_timer 
+			add_character_modifier = {
+				name = "loan_timer"
+				duration = 1825
+			}		
+		}
+		clr_character_flag = loan_heir
+		custom_tooltip = EVTTOOLTIP38002C
+	}
+	option = {
+		trigger = {
+			has_character_flag = loan_400
+		}
+		name = "EVTOPTD38001"	
+		hidden_tooltip = { 
+			remove_character_modifier = loan_timer 
+			add_character_modifier = {
+				name = "loan_timer"
+				duration = 1825
+			}		
+		}
+		clr_character_flag = loan_heir
+		custom_tooltip = EVTTOOLTIP38002C
+	}
+	option = {
+		trigger = {
+			has_character_flag = loan_600
+		}
+		name = "EVTOPTE38001"	
+		hidden_tooltip = { 
+			remove_character_modifier = loan_timer 
+			add_character_modifier = {
+				name = "loan_timer"
+				duration = 1825
+			}		
+		}
+		clr_character_flag = loan_heir
+		custom_tooltip = EVTTOOLTIP38002C
+	}	
+	option = {
+		trigger = {
+			has_character_flag = loan_800
+		}
+		name = "EVTOPTF38001"	
+		hidden_tooltip = { 
+			remove_character_modifier = loan_timer 
+			add_character_modifier = {
+				name = "loan_timer"
+				duration = 1825
+			}		
+		}
+		clr_character_flag = loan_heir
+		custom_tooltip = EVTTOOLTIP38002C
+	}
+	option = {
+		trigger = {
+			has_character_flag = loan_1000
+		}
+		name = "EVTOPTG38001"	
+		hidden_tooltip = { 
+			remove_character_modifier = loan_timer 
+			add_character_modifier = {
+				name = "loan_timer"
+				duration = 1825
+			}		
+		}
+		clr_character_flag = loan_heir
+		custom_tooltip = EVTTOOLTIP38002C
+	}	
+	option = { 
+		name = "EVTOPTH38001"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					trait = wroth
+					trait = lunatic
+					trait = possessed		
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_50			
+			}
+			prestige = -62
+			clr_character_flag = loan_50
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_100			
+			}
+			prestige = -125
+			clr_character_flag = loan_100
+		}	
+		if = {
+			limit = {
+				has_character_flag = loan_200			
+			}
+			prestige = -250
+			clr_character_flag = loan_200
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_400			
+			}
+			prestige = -500
+			clr_character_flag = loan_400
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_600			
+			}
+			prestige = -750
+			clr_character_flag = loan_600
+		}		
+		if = {
+			limit = {
+				has_character_flag = loan_800			
+			}
+			prestige = -1000
+			clr_character_flag = loan_800
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_1000			
+			}
+			prestige = -1250
+			clr_character_flag = loan_1000
+		}
+		add_character_modifier = {
+			name = offended_moneylenders
+			duration = 1825
+		}
+		clr_character_flag = loan_taken
+		clr_character_flag = loan_heir
+	}	
 }
 
-# Follow-up to unfavorable loan terms
+# A loan is due
 character_event = {
 	id = 38002
 	desc = "EVTDESC38002"
 	picture = GFX_evt_council
 	
-	is_triggered_only = yes
+	trigger = {
+		has_character_flag = loan_taken
+		NOT = { has_character_flag = loan_heir }
+		NOT = { has_character_modifier = loan_timer }
+	}
+	
+	mean_time_to_happen = { days = 1 }
 	
 	option = {
 		name = "EVTOPTA38002" # Return the money
 		trigger = {
-			wealth = 300
+			OR = {
+				AND = {
+					has_character_flag = loan_50
+					wealth = 62
+				}			
+				AND = {
+					has_character_flag = loan_100
+					wealth = 125
+				}
+				AND = {
+					has_character_flag = loan_200
+					wealth = 250
+				}
+				AND = {
+					has_character_flag = loan_400
+					wealth = 500
+				}
+				AND = {
+					has_character_flag = loan_600
+					wealth = 750
+				}
+				AND = {
+					has_character_flag = loan_800
+					wealth = 1000
+				}						
+				AND = {
+					has_character_flag = loan_1000
+					wealth = 1250
+				}				
+			}
 		}
-		wealth = -300
+		if = {
+			limit = {
+				has_character_flag = loan_50			
+			}
+			wealth = -62
+			clr_character_flag = loan_50
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_100			
+			}
+			wealth = -125
+			clr_character_flag = loan_100
+		}	
+		if = {
+			limit = {
+				has_character_flag = loan_200			
+			}
+			wealth = -250
+			clr_character_flag = loan_200
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_400			
+			}
+			wealth = -500
+			clr_character_flag = loan_400
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_600			
+			}
+			wealth = -750
+			clr_character_flag = loan_600
+		}		
+		if = {
+			limit = {
+				has_character_flag = loan_800			
+			}
+			wealth = -1000
+			clr_character_flag = loan_800
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_1000			
+			}
+			wealth = -1250
+			clr_character_flag = loan_1000
+		}		
 		clr_character_flag = loan_taken
 	}
 	option = {
-		name = "EVTOPTB38002" # Cannot afford it
+		name = "EVTOPTB38002" # Pay the interest
 		trigger = {
-			NOT = { wealth = 300 }
-		}
-		prestige = -50
-		hidden_tooltip = { remove_character_modifier = loan_timer }
-		add_character_modifier = {
-			name = "loan_timer"
-			duration = 365
-		}
-		character_event = { id = 38002 days = 365 tooltip = EVTTOOLTIP38002B }
-	}
-	option = { 
-		name = "EVTOPTC38002" # Get rid of them!
-		trigger = {
+			NOT = {
+				OR = {
+					AND = {
+						has_character_flag = loan_50
+						wealth = 62
+					}			
+					AND = {
+						has_character_flag = loan_100
+						wealth = 125
+					}
+					AND = {
+						has_character_flag = loan_200
+						wealth = 250
+					}
+					AND = {
+						has_character_flag = loan_400
+						wealth = 500
+					}
+					AND = {
+						has_character_flag = loan_600
+						wealth = 750
+					}
+					AND = {
+						has_character_flag = loan_800
+						wealth = 1000
+					}						
+					AND = {
+						has_character_flag = loan_1000
+						wealth = 1250
+					}				
+				}			
+			}
 			OR = {
-				trait = wroth
-				trait = lunatic
-				trait = possessed
+				AND = {
+					has_character_flag = loan_50
+					wealth = 12
+				}			
+				AND = {
+					has_character_flag = loan_100
+					wealth = 25
+				}
+				AND = {
+					has_character_flag = loan_200
+					wealth = 50
+				}
+				AND = {
+					has_character_flag = loan_400
+					wealth = 100
+				}
+				AND = {
+					has_character_flag = loan_600
+					wealth = 150
+				}
+				AND = {
+					has_character_flag = loan_800
+					wealth = 200
+				}						
+				AND = {
+					has_character_flag = loan_1000
+					wealth = 250
+				}				
+			}						
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_50			
+			}
+			wealth = -12
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_100			
+			}
+			wealth = -25
+		}	
+		if = {
+			limit = {
+				has_character_flag = loan_200			
+			}
+			wealth = -50
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_400			
+			}
+			wealth = -100
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_600			
+			}
+			wealth = -150
+		}		
+		if = {
+			limit = {
+				has_character_flag = loan_800			
+			}
+			wealth = -200
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_1000			
+			}
+			wealth = -250
+		}		
+		custom_tooltip = EVTTOOLTIP38002B
+		hidden_tooltip = { 
+			remove_character_modifier = loan_timer 
+			add_character_modifier = {
+				name = "loan_timer"
+				duration = 1825
+			}		
+		}		
+	}	
+	option = {
+		name = "EVTOPTC38002" # Cannot afford it
+		trigger = {
+			NOT = {
+				OR = {
+					AND = {
+						has_character_flag = loan_50
+						wealth = 12
+					}			
+					AND = {
+						has_character_flag = loan_100
+						wealth = 25
+					}
+					AND = {
+						has_character_flag = loan_200
+						wealth = 50
+					}
+					AND = {
+						has_character_flag = loan_400
+						wealth = 100
+					}
+					AND = {
+						has_character_flag = loan_600
+						wealth = 150
+					}
+					AND = {
+						has_character_flag = loan_800
+						wealth = 200
+					}						
+					AND = {
+						has_character_flag = loan_1000
+						wealth = 250
+					}				
+				}			
 			}
 		}
-		prestige = -200
+		if = {
+			limit = {
+				has_character_flag = loan_50			
+			}
+			prestige = -12
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_100			
+			}
+			prestige = -25
+		}	
+		if = {
+			limit = {
+				has_character_flag = loan_200			
+			}
+			prestige = -50
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_400			
+			}
+			prestige = -100
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_600			
+			}
+			prestige = -150
+		}		
+		if = {
+			limit = {
+				has_character_flag = loan_800			
+			}
+			prestige = -200
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_1000			
+			}
+			prestige = -250
+		}
+		hidden_tooltip = { 
+			remove_character_modifier = loan_timer 
+			add_character_modifier = {
+				name = "loan_timer"
+				duration = 1825
+			}		
+		}
+		custom_tooltip = EVTTOOLTIP38002B
+	}
+	option = { 
+		name = "EVTOPTD38002" # Get rid of them!
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					trait = wroth
+					trait = lunatic
+					trait = possessed		
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				OR = {
+					AND = {
+						has_character_flag = loan_50
+						wealth = 12
+					}			
+					AND = {
+						has_character_flag = loan_100
+						wealth = 25
+					}
+					AND = {
+						has_character_flag = loan_200
+						wealth = 50
+					}
+					AND = {
+						has_character_flag = loan_400
+						wealth = 100
+					}
+					AND = {
+						has_character_flag = loan_600
+						wealth = 150
+					}
+					AND = {
+						has_character_flag = loan_800
+						wealth = 200
+					}						
+					AND = {
+						has_character_flag = loan_1000
+						wealth = 250
+					}				
+				}			
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_50			
+			}
+			prestige = -62
+			clr_character_flag = loan_50
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_100			
+			}
+			prestige = -125
+			clr_character_flag = loan_100
+		}	
+		if = {
+			limit = {
+				has_character_flag = loan_200			
+			}
+			prestige = -250
+			clr_character_flag = loan_200
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_400			
+			}
+			prestige = -500
+			clr_character_flag = loan_400
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_600			
+			}
+			prestige = -750
+			clr_character_flag = loan_600
+		}		
+		if = {
+			limit = {
+				has_character_flag = loan_800			
+			}
+			prestige = -1000
+			clr_character_flag = loan_800
+		}
+		if = {
+			limit = {
+				has_character_flag = loan_1000			
+			}
+			prestige = -1250
+			clr_character_flag = loan_1000
+		}
 		add_character_modifier = {
 			name = offended_moneylenders
 			duration = 1825

@@ -728,7 +728,6 @@ character_event = {
 	desc = "EVTDESC72008"
 	picture = GFX_evt_hunt
 	
-	min_age = 16
 	prisoner = no
 	capable_only = yes
 	
@@ -1833,7 +1832,6 @@ character_event = {
 	desc = "EVTDESC72030"
 	picture = GFX_evt_melee
 	
-	min_age = 16
 	only_men = yes
 	capable_only = yes
 	prisoner = no
@@ -2375,7 +2373,6 @@ character_event = {
 	desc = "EVTDESC72040"
 	picture = GFX_evt_feast
 	
-	min_age = 16
 	max_age = 60
 	prisoner = no
 	only_rulers = yes
@@ -2628,7 +2625,6 @@ character_event = {
 	desc = "EVTDESC72045"
 	picture = GFX_evt_feast
 	
-	min_age = 16
 	prisoner = no
 	capable_only = yes
 	
@@ -2761,7 +2757,6 @@ character_event = {
 	desc = "EVTDESC72046"
 	picture = GFX_evt_feast
 	
-	min_age = 16
 	prisoner = no
 	capable_only = yes
 	
@@ -2849,7 +2844,6 @@ character_event = {
 	desc = "EVTDESC72048"
 	picture = GFX_evt_feast
 	
-	min_age = 16
 	prisoner = no
 	capable_only = yes
 	
@@ -3071,7 +3065,6 @@ character_event = {
 	desc = "EVTDESC72055"
 	picture = GFX_evt_feast
 	
-	min_age = 16
 	prisoner = no
 	capable_only = yes
 	
@@ -4015,7 +4008,6 @@ character_event = {
 	picture = GFX_evt_feast
 	
 	only_men = yes
-	min_age = 16
 	max_age = 60
 	prisoner = no
 	only_rulers = yes

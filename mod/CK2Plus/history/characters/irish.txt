@@ -1,7 +1,7 @@
 1000 = {
 	name="Áed"
 	dynasty=101675
-	dna="gawinwnohha"
+	dna="gawinwnohca"
 	properties="ch0dbk0000"
 	martial=6
 	diplomacy=5
@@ -804,7 +804,7 @@
 131524 = {
 	name="Gofraid"
 	dynasty=20084
-	dna="wmudabduokc"
+	dna="wmudabduocc"
 	properties="cj0ebk0000"
 	martial=4
 	diplomacy=4
@@ -885,27 +885,6 @@
 	}
 	1089.1.1={
 		death="1089.1.1"
-	}
-}
-
-202995 = {
-	name="Edith-Matilda"
-	# AKA: Edith
-	female = yes
-	dynasty=1687
-	martial=8
-	diplomacy=5
-	intrigue=5
-	stewardship=7
-	religion="catholic"
-	culture="irish"
-	father=984
-	mother=113
-	1079.1.1={
-		birth="1079.1.1"
-	}
-	1118.1.2={
-		death="1118.1.2"
 	}
 }
 
@@ -7859,7 +7838,7 @@
 
 83129 = {
 	name="Murchad"
-	dynasty=19206
+	dynasty=9206
 	martial=3
 	diplomacy=3
 	intrigue=4
@@ -13909,7 +13888,7 @@
 
 83520 = {
 	name="Áed" 
-	dynasty=9221
+	dynasty=9222
 	martial=6
 	diplomacy=7
 	intrigue=5
@@ -14887,7 +14866,7 @@
 		birth="865.1.1"
 	}
 	921.7.1={
-		death="9211.7.1"
+		death="921.7.1"
 	}
 }
 

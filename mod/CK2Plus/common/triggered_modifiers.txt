@@ -568,7 +568,7 @@ negative_money = {
 	}
 	
 	trigger = {
-		wealth = -250
+		wealth = -200
 		NOT = { wealth = 0 }
 	}
 	
@@ -584,8 +584,8 @@ negative_money = {
 	}
 	
 	trigger = {
-		wealth = -500
-		NOT = { wealth = -250 }
+		wealth = -400
+		NOT = { wealth = -200 }
 	}
 	
 	icon = 24
@@ -600,8 +600,8 @@ negative_money = {
 	}
 	
 	trigger = {
-		wealth = -750
-		NOT = { wealth = -500 }
+		wealth = -600
+		NOT = { wealth = -400 }
 	}
 	
 	icon = 24
@@ -616,8 +616,8 @@ negative_money = {
 	}
 	
 	trigger = {
-		wealth = -1000
-		NOT = { wealth = -750 }
+		wealth = -800
+		NOT = { wealth = -600 }
 	}
 	
 	icon = 24
@@ -632,13 +632,29 @@ negative_money = {
 	}
 	
 	trigger = {
-		NOT = { wealth = -1000 }
+		wealth = -1000
+		NOT = { wealth = -800 }
 	}
 	
 	icon = 24
 	
 	land_morale = -2.5
 	general_opinion = -50
+}
+
+negative_money = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		NOT = { wealth = -1000 }
+	}
+	
+	icon = 24
+	
+	land_morale = -3
+	general_opinion = -60
 }
 
 

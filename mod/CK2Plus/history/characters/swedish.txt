@@ -909,7 +909,7 @@
 100546 = {
 	name="Erik" # Hedningen
 	# AKA: Erik Hedningen
-	dna="ccdggcmieol"
+	dna="ccdggcmiecl"
 	properties="0j00j0"
 	dynasty=502
 	martial=6
@@ -1428,7 +1428,7 @@
 20005 = {
 	name="Tjudmund"
 	dynasty=100287
-	dna="udrmqzgiray"
+	dna="udrmqzgircy"
 	properties="tjudck0000"
 	martial=7
 	diplomacy=6
@@ -1449,7 +1449,7 @@
 20006 = {
 	name="Olaf"
 	dynasty=100291
-	dna="idnzrbzmihs"
+	dna="idnzrbzmics"
 	properties="ti0edk0000"
 	martial=7
 	diplomacy=7
@@ -1588,7 +1588,7 @@
 	name="Kolbjörn"
 	# AKA: Kolbjorn
 	dynasty=100283
-	dna="uwbpzxtuglx"
+	dna="uwbpzxtugcx"
 	properties="gjsebk0000"
 	martial=7
 	diplomacy=4
@@ -2597,10 +2597,8 @@
 	name="Mariana"
 	female = yes
 	dynasty=381
-	
 	religion="catholic"
 	culture="swedish"
-	
 	father=200504 # Erik Knutsson, king of Sweden
 	mother=201506
 	1211.1.1={
@@ -4830,7 +4828,7 @@
 }
 
 450840 = {
-	name="Bo Jonsson"
+	name="Bo"
 	# AKA: Bo Jonsson
 	dynasty=121
 	martial=4

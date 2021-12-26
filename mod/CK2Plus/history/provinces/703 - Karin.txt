@@ -11,7 +11,7 @@ b_owshank = temple
 #b_mardin = castle 
 #b_pasen = castle
 #b_baghesh = castle
-b_tercan = city
+#b_tercan = city
 #b_kirklarkilisesi = temple
 
 # Misc
@@ -21,7 +21,7 @@ religion = orthodox
 # History
 1091.8.26 = { culture = turkish }
 1091.8.26 = { religion = sunni }
-1187.1.1 = { b_daroynk = castle }
+1187.1.1 = { b_tercan = city }
 1226.1.1 = { culture = armenian }
 1226.1.1 = { religion = orthodox }
 1262.1.1 = { culture = turkish }

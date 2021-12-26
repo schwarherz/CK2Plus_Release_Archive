@@ -604,7 +604,7 @@
 	name="Pierre"
 	# AKA: Pietro
 	dynasty=240
-	dna="kchepiocfej"
+	dna="kchepiocfcj"
 	properties="cjaddd0000"
 	martial=7
 	diplomacy=5
@@ -1276,10 +1276,6 @@
 	name="Charles"
 	# AKA: Charles 'Martel'
 	dynasty=25061
-	martial=15
-	diplomacy=7
-	intrigue=7
-	stewardship=7
 	religion="catholic"
 	culture="frankish"
 	martial=10
@@ -2001,7 +1997,7 @@
 	}
 }
 
-144236= {
+144236 = {
 	name="Robert"
 	dynasty=339
 	religion="catholic"
@@ -2495,7 +2491,7 @@
 	name="Eustache"
 	# AKA: Eustatius 'Gernobadatus'
 	dynasty=308
-	dna="xhopxycefai"
+	dna="xhopxycefci"
 	properties="0g0cgk0000"
 	martial=7
 	diplomacy=2
@@ -2716,27 +2712,6 @@
 	}
 	1186.1.1 = {
 		death="1186.1.1"
-	}
-}
-
-203046 = {
-	name="John"
-	dynasty=101899
-	martial=7
-	diplomacy=5
-	intrigue=7
-	stewardship=7
-	religion="catholic"
-	culture="frankish"
-	add_trait="slothful"
-	add_trait="tough_soldier"
-	father=203044
-	mother=204023
-	1191.1.1 = {
-		birth="1191.1.1"
-	}
-	1232.1.1 = {
-		death="1232.1.1"
 	}
 }
 
@@ -5979,7 +5954,7 @@
 	culture="frankish"
 	father=206003 #Hugues II le Pacifique
 	mother=91129 #Mathilde de Mayenne
-	1122.1.1 = {
+	1121.1.1 = {
 		birth="1121.1.1"
 		give_nickname=nick_the_red
 	}
@@ -8122,7 +8097,7 @@
 	1153.1.1 = {
 		add_spouse=223720 #Constance de Hauteville
 	}
-	1176.1.1= {
+	1176.1.1 = {
 		add_spouse=223592 #Stephanie de Milly
 	}
 	1187.7.4 = {
@@ -8350,7 +8325,7 @@
 }
 
 223743 = {
-	name="Marie-Xena"
+	name="Marie"
 	# AKA: Marie
 	female=yes
 	dynasty=413
@@ -8369,8 +8344,11 @@
 		birth="1145.1.1"
 	}
 	#1161 married Manuel I Komnenos
+	1161.1.1 = {
+		name = "Marie-Xena"
+	}
 	1182.8.27 = {
-		death="1185.8.27"
+		death="1182.8.27"
 	}
 }
 
@@ -9298,7 +9276,7 @@
 	culture="frankish"
 	father=231013
 	mother=231014
-	1133.1. = {
+	1133.1.1 = {
 		birth="1133.1.1"
 	}
 	#1149 married Thoros II of Cilicia
@@ -11715,7 +11693,7 @@
 	name="Folques"
 	# AKA: Foulques 'le Rechin'
 	dynasty=723
-	dna="jdwpezrdguu"
+	dna="jdwpezrdgcu"
 	properties="cd0c0d0000"
 	martial=8
 	diplomacy=5
@@ -11731,7 +11709,7 @@
 	add_trait="skilled_tactician"
 	father=377
 	mother=375
-	1043.1.1= {
+	1043.1.1 = {
 		birth="1043.1.1"
 	}
 	1109.4.14 = {
@@ -12257,8 +12235,8 @@
 40106 = {
 	name="Foulques" #Taillefer d'angouleme
 	dynasty=541
-	dna="bauqgznravl"
-	properties="0h0c0k0000" 
+	dna="bauqgznravl" 
+	properties="0h0c0k0000"
 	religion="catholic"
 	culture="frankish"
 	father=40096 #Geoffroy I d'angouleme
@@ -13308,7 +13286,7 @@
 	1022.1.1 = {
 		birth="1022.1.1"
 	}
-	1079.12.1= {
+	1079.12.1 = {
 		death="1079.12.1"
 	}
 }
@@ -13638,7 +13616,7 @@
 	970.1.2 = {
 		birth="970.1.2"
 	}
-	972.1.1= {
+	972.1.1 = {
 		add_spouse=40431
 	}
 	1017.1.2 = {
@@ -14374,6 +14352,9 @@
 	father=6392
 	772.1.1 = {
 		birth="772.1.1"
+	}
+	790.1.1 = {
+		give_nickname=nick_the_young
 	}
 	811.12.4 = {
 		death="811.12.4"
@@ -15373,7 +15354,7 @@
 	add_trait="honest"
 	add_trait="temperate"
 	add_trait="martial_cleric"
-	father=455997
+	father=454997
 	1225.1.1 = {
 		birth="1225.1.1"
 	}
@@ -15417,7 +15398,7 @@
 	culture="frankish"
 	add_trait="slothful"
 	add_trait="scholarly_theologian"
-	father=455997
+	father=454997
 	1223.1.2 = {
 		birth="1223.1.2"
 	}
@@ -15437,7 +15418,7 @@
 	culture="frankish"
 	add_trait="chaste"
 	add_trait="skilled_tactician"
-	father=455997
+	father=454997
 	1224.1.2 = {
 		birth="1224.1.2"
 	}
@@ -16929,7 +16910,7 @@
 	religion="catholic"
 	culture="frankish"
 	father=455513
-	mother=457525
+	mother=455725
 	1337.1.2 = {
 		birth="1337.1.2"
 	}
@@ -19159,7 +19140,7 @@
 	religion="catholic"
 	culture="frankish"
 	father=455817
-	mother=457525
+	mother=455725
 	1336.1.2 = {
 		birth="1336.1.2"
 	}
@@ -19497,7 +19478,7 @@
 	add_trait="brave"
 	add_trait="flamboyant_schemer"
 	father=455516
-	1295.1.1= {
+	1295.1.1 = {
 		birth="1295.1.1"
 	}
 	1336.1.1 = {
@@ -20920,27 +20901,6 @@
 	}
 }
 
-462556 = {
-	name="Isabelle"
-	female=yes
-	dynasty=715
-	martial=8
-	diplomacy=6
-	intrigue=6
-	stewardship=6
-	religion="catholic"
-	culture="frankish"
-	add_trait="arbitrary"
-	add_trait="martial_cleric"
-	father=462555
-	1302.1.2 = {
-		birth="1302.1.2"
-	}
-	1335.1.2 = {
-		death="1335.1.2"
-	}
-}
-
 462630 = {
 	name="Henri"
 	# AKA: Henry 
@@ -21899,8 +21859,8 @@
 	stewardship=12
 	religion="catholic"
 	culture="frankish"
-	add_trait="diligent"
 	add_trait="tall"
+	add_trait="diligent"
 	add_trait="brilliant_strategist"
 	father=131722
 	742.1.2={
@@ -22196,27 +22156,20 @@
 	name="Robert" #Robert le Fort, marquis of Neustrie, count of Tour and Anjou.
 	# AKA: Robert 'Fortis'
 	dynasty=743 #Capet (Robertien)
-	
 	religion="catholic"
 	culture="frankish"
-	
 	add_trait="strong"
-	
 	father=91005 #Robert III de Hesbaye
 	mother=91122 #Waldrade d'Orléans
-	
 	820.1.1 = {
 		birth="820.1.1" #between 815 and 830
 	}
-	
 	835.1.1 = {
 		add_spouse=91123 #Emma, d. of Conrad I of Burgundy
 	}
-	
 	862.1.1 = {
-	give_nickname=nick_the_strong
+		give_nickname=nick_the_strong
 	}
-	
 	866.7.2 = {
 		death="866.7.2"
 	}
@@ -22245,25 +22198,19 @@
 6442 = {
 	name="Robert" #Robert Ier de France
 	dynasty=743 #Capet (Robertien)
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=6440 #Robert le Fort
 	mother=91123 #Emma de Bourgogne
-	
 	860.1.1 = {
 		birth="860.1.1"
 	}
-	
 	865.1.1 = {
 		add_spouse=91124 #Adèle du Maine
 	}
-	
 	907.1.1 = {
 		add_spouse=6401 #Béatrice de Vermandois, daughter of Herbert Ist of Vermandois
 	}
-	
 	923.6.15 = {
 		death="923.6.15"
 	}
@@ -22273,19 +22220,14 @@
 	name="Emma" #Emma de France
 	female=yes
 	dynasty=743 #Capet (Robertien)
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=6442 #Robert I of France
 	mother=6401 #Béatrice de Vermandois, daughter of Herbert Ist of Vermandois
-	
 	894.1.1 = {
 		birth="891.1.1"
 	}
-	
 	#921.1.1, marriage with Raoul of Burgundy (7995)
-	
 	932.1.2 = {
 		death="934.11.2"
 	}
@@ -22294,32 +22236,24 @@
 6444 = {
 	name="Hugues" #Hugues le Grand
 	dynasty=743 #Capet (Robertien)
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=6442 #Robert I of France
 	mother=6401 #Béatrice of Vermandois
-	
 	900.1.1 = {
 		birth="900.1.1"
-	give_nickname=nick_the_white
+		give_nickname=nick_the_white
 	}
-	
 	#marry with a daughter of Roger du Maine in 914 then with Édith of Wessex, d. of Édouard l'Ancien.
-	
 	936.7.25 = {
 	give_nickname=nick_the_great
 	}
-	
 	948.1.1 = {
-	add_trait="excommunicated"
+		add_trait="excommunicated"
 	}
-	
 	938.1.1 = {
 		add_spouse=1283 #Hedwige de Saxe
 	}
-	
 	956.6.16 = {
 		death="956.6.16"
 	}
@@ -22330,17 +22264,13 @@
 	# AKA: Adele
 	female=yes
 	dynasty=743 #Capet (Robertien)
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=6442 #Robert I de France
 	mother= 91124 #Adèle du Mans
-	
 	887.1.1 = {
 		birth="887.1.1"
 	}
-	
 	931.1.1 = {
 		death="931.1.1"
 	}
@@ -22350,17 +22280,13 @@
 	name="Regelinde"
 	female=yes
 	dynasty=743 #Capetian (Robertian)
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=6440 #Robert le Fort
 	mother=91123 #Emma de Bourgogne
-	
 	865.1.1 = {
 		birth="865.1.1"
 	}
-	
 	902.1.1 = {
 		death="902.1.1"
 	}
@@ -22369,21 +22295,16 @@
 6448 = {
 	name="Eudes" #Eudes I de France
 	dynasty=743 #Capet (Robertien)
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=6440 #Robert le Fort
 	mother=91123 #Emma de Bourgogne
-	
 	855.1.1 = {
 		birth="855.1.1"
 	}
-	
 	884.1.1 = {
 		add_spouse=91125 #Théodérade de Troyes
 	}
-	
 	898.1.3 = {
 		death="898.1.3"
 	}
@@ -22464,17 +22385,13 @@
 	# AKA: Helie
 	dynasty=741 #capetian house of Burgundy
 	female=yes
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=218 #Henri de Bourgogne
 	mother=110531 #Sibylle de Barcelone
-	
 	1061.1.1 = {
 		birth="1061.1.1"
 	}
-	
 	1085.1.1 = {
 		death="1085.1.1" #after 1081/84
 	}
@@ -22485,19 +22402,14 @@
 	# AKA: Beatrix
 	female=yes
 	dynasty=741 #capetian of burgundy
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=218 #Henri de Bourgogne
 	mother=110531 #sibylle de Barcelone
-	
 	1063.1.1 = {
 		birth="1063.1.1"
 	}
-	
 	#Guy III de Vignory
-	
 	1110.1.1 = {
 		death="1110.1.1"
 	}
@@ -23297,7 +23209,7 @@
 	add_trait="midas_touched"
 	add_trait="content"
 	father=213110
-	mother=123114
+	mother=213114
 	1180.1.1 = {
 		birth="1180.1.1"
 	}	
@@ -25111,6 +25023,7 @@
 	female=yes
 	dynasty=89
 	religion="catholic"
+	culture="frankish"
 	father=455505
 	mother=455533
 	1281.1.1 = {
@@ -25188,6 +25101,7 @@
 	name="Archambaud"
 	dynasty=92
 	religion="catholic"
+	culture="frankish"
 	father=7483
 	mother=206015
 	1212.1.1 = {
@@ -25267,6 +25181,7 @@
 	name="Archambaud" #Archambaud VIII de Bourbon
 	dynasty=92 #de Dampierre
 	religion="catholic"
+	culture="frankish"
 	father=7488
 	mother=205652
 	give_nickname=nick_the_great
@@ -25304,6 +25219,7 @@
 	female=yes
 	dynasty=92
 	religion="catholic"
+	culture="frankish"
 	father=7488
 	mother=205652
 	1198.1.1 = {
@@ -25318,6 +25234,7 @@
 	name="Guillaume"
 	dynasty=92
 	religion="catholic"
+	culture="frankish"
 	father=7488
 	mother=205652
 	1197.1.1 = {
@@ -25335,6 +25252,7 @@
 	name="Guy"
 	dynasty=92
 	religion="catholic"
+	culture="frankish"
 	1130.1.1 = {
 		birth="1130.1.1"
 	}
@@ -25909,7 +25827,7 @@
 	religion="catholic"
 	culture="frankish"
 	add_trait="bastard"
-	father=90101
+	father=144998
 	863.1.1 = {
 		birth="863.1.1"
 	}
@@ -26154,7 +26072,7 @@
 	religion="catholic"
 	culture="frankish"
 	add_trait="flamboyant_schemer"
-	father=90095
+	father=30228
 	859.1.1 = {
 		birth="859.1.1"
 	}
@@ -27128,6 +27046,9 @@
 	823.1.2 = {
 		birth="823.1.2"
 	}
+	838.1.1 = {
+		give_nickname=nick_the_young
+	}
 	864.1.2 = {
 		death="864.1.2"
 	}
@@ -27152,11 +27073,10 @@
 	}
 }
 
-
 90102 = {
-	name="Hugh"
+	name="Hugues"
 	# AKA: Hugh of Alsace
-	dynasty=25061
+	dynasty=428 #25061
 	martial=6
 	diplomacy=6
 	intrigue=5
@@ -27165,7 +27085,7 @@
 	culture="frankish"
 	add_trait="bastard"
 	add_trait="maimed"
-	father=90101
+	father=30227
 	855.1.2 = {
 		birth="855.1.2"
 	}
@@ -28473,20 +28393,15 @@
 	# AKA: Alix de Dreux
 	female=yes
 	dynasty=86 #Capetian house of Dreux
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=204987 #Robert II de Dreux
 	mother=204982 #Yolande de Coucy
-	
 	1189.1.1 = {
 		birth="1189.1.1"
 	}
-	
 	#Gauthier IV de Bourgogne (1200.1.1)
 	#Renaud III de Choiseul (1221.1.1)
-	
 	1258.1.1 = {
 		death="1258.1.1"
 	}
@@ -28497,19 +28412,14 @@
 	# AKA: Philippa de Dreux
 	female=yes
 	dynasty=86 #Capetian house of Dreux
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=204987 #Robert II de Dreux
 	mother=204982 #Yolande de Coucy
-	
 	1192.1.1 = {
 		birth="1192.1.1"
 	}
-	
 	#Henri II de Bar (1219.1.1)
-	
 	1242.1.1 = {
 		death="1242.1.1"
 	}
@@ -28519,19 +28429,14 @@
 	name="Henri" #Henri de Dreux
 	# AKA: Henri de Dreux, archbishop of Reims
 	dynasty=86 #Capetian house of Dreux
-	
 	religion="catholic"
 	culture="frankish"
-	
 	add_trait="scholarly_theologian"
-	
 	father=204987 #Robert II de Dreux
 	mother=204982 #Yolande de Coucy
-	
 	1193.1.1 = {
 		birth="1193.1.1"
 	}
-	
 	1240.1.1 = {
 		death="1240.1.1"
 	}
@@ -28542,19 +28447,14 @@
 	# AKA: Agnes de Dreux
 	female=yes
 	dynasty=86 #Capetian house of Dreux
-	
 	religion="catholic"
 	culture="frankish"
-	
 	father=204987 #Robert II de Dreux
 	mother=204982 #Yolande de Coucy
-	
 	1195.1.1 = {
 		birth="1195.1.1"
 	}
-	
 	#Étienne III de Bourgogne
-	
 	1258.1.1 = {
 		death="1258.1.1"
 	}
@@ -28612,7 +28512,6 @@
 	1199.1.1 = {
 		birth="1199.1.1"
 	}
-	
 	1272.1.1 = {
 		death="1272.1.1"
 	}
@@ -30232,7 +30131,7 @@
 	}
 }
 
-31360 = {
+31361 = {
 	name="Bela" #Lord of Thebes
 	dynasty=7194 #de Saint-Omer
 	religion="catholic"
@@ -30250,23 +30149,23 @@
 	}
 }
 
-31361 = {
-	name="Guillaume" 
-	dynasty=7194 #de Saint-Omer
-	religion="catholic"
-	culture="frankish"
-	father=31359
-	mother=219515
-	1210.1.1 = {
-		birth="1210.1.1"
-	}
-	1256.1.1 = {
-		add_spouse=31381
-	}
-	1265.10.19 = {
-		death="1265.10.19"
-	}
-}
+#31361 = {
+#	name="Guillaume" 
+#	dynasty=7194 #de Saint-Omer
+#	religion="catholic"
+#	culture="frankish"
+#	father=31359
+#	mother=219515
+#	1210.1.1 = {
+#		birth="1210.1.1"
+#	}
+#	1256.1.1 = {
+#		add_spouse=31381
+#	}
+#	1265.10.19 = {
+#		death="1265.10.19"
+#	}
+#}
 
 31362 = {
 	name="Nicolas" #Lord of Thebes
@@ -30484,7 +30383,6 @@
 	religion="catholic"
 	culture="frankish"
 	father=31094
-	
 	1150.1.1 = {
 		birth="1150.1.1"
 	}
@@ -31019,7 +30917,7 @@
 	1038.1.1 = {
 		add_spouse=325 #Almodis de la marche
 	}
-	1041.1.1= {
+	1041.1.1 = {
 		remove_spouse=325
 	}
 	1060.10.8 = {
@@ -33223,7 +33121,7 @@
 40900 = {
 	name="Baudouin"
 	dynasty=102
-	dna="rzhnojwkpxo"
+	dna="rzhnojwkpco"
 	properties="0g0dpk0000"
 	martial=7
 	diplomacy=4
@@ -36098,7 +35996,7 @@
 	991.1.1 = {
 		birth="991.1.1"
 	}
-	1020.1.1= {
+	1020.1.1 = {
 		add_spouse=441 #Pétronille d'Archiac
 	}
 	1048.12.1 = {
@@ -39913,7 +39811,7 @@
 	}
 }
 
-93000= {
+93000 = {
 	name="Romain"
 	dynasty=1023001
 	religion="catholic"
@@ -39926,7 +39824,7 @@
 	}
 }
 
-93001= {
+93001 = {
 	name="Raoul"
 	dynasty=1023001
 	religion="catholic"
@@ -39940,7 +39838,7 @@
 	}
 }
 
-93002= {
+93002 = {
 	name="Maurice" #real name unknown
 	dynasty=23105
 	religion="catholic"
@@ -39953,7 +39851,7 @@
 	}
 }
 
-93003= {
+93003 = {
 	name="Payen"
 	dynasty=23105
 	religion="catholic"
@@ -39967,7 +39865,7 @@
 	}
 }
 
-93004= {
+93004 = {
 	name="Philippe" #real name unknown
 	dynasty=23105
 	religion="catholic"
@@ -39981,7 +39879,7 @@
 	}
 }
 
-93005= {
+93005 = {
 	name="Maurice" 
 	dynasty=23105
 	religion="catholic"
@@ -39995,7 +39893,7 @@
 	}
 }
 
-93006= {
+93006 = {
 	name="Rainier" 
 	dynasty=23106
 	religion="catholic"
@@ -40010,7 +39908,7 @@
 	}
 }
 
-93007= {
+93007 = {
 	name="Honfroy" 
 	dynasty=166
 	religion="catholic"
@@ -40023,7 +39921,7 @@
 	}
 }
 
-93008= {
+93008 = {
 	name="Honfroy" 
 	dynasty=166
 	religion="catholic"
@@ -40040,7 +39938,7 @@
 	}
 }
 
-93009= {
+93009 = {
 	name="Miles" 
 	dynasty=7325
 	religion="catholic"
@@ -41058,5 +40956,119 @@
 	}
 	771.12.4={
 		death="771.12.4"
+	}
+}
+
+138397 = {
+	name="Guillaume" #Bishop Guillaume IV de Flavacourt
+	#Bishop of Viviers
+	religion="catholic"
+	culture="frankish"
+	1270.1.1 = {
+		birth="1270.1.1" #unknown
+	}
+	1322.1.1 = {
+		death="1322.1.1" #unknown
+	}
+}
+
+138398 = {
+	name="Pierre" #Pierre II de Mortemart, Pierre Gauvain
+	#bishop of Viviers and Auxerre
+	religion="catholic"
+	culture="frankish"
+	dynasty=5002
+	1280.1.1 = {
+		birth="1280.1.1" #unknown
+	}
+	1325.1.1 = {
+		death="1325.1.1" #unknown
+	}	
+}
+
+138399 = {
+	name="Pierre" #Pierre III de Moussy
+	#bishop of Viviers 
+	religion="catholic"
+	culture="frankish"
+	1280.1.1 = {
+		birth="1280.1.1" #unknown
+	}
+	1326.1.1 = {
+		death="1326.1.1" #unknown
+	}
+}
+
+138381 = {
+	name="Josserand" #Josserand de Montaigu
+	#Bishop of Viviers
+	religion="catholic"
+	culture="frankish"
+	dynasty=426 #de Montaigu
+	1100.1.1 = {
+		birth="1100.1.1" #unknown
+	}
+	1147.1.1 = {
+		death="1147.1.1" #unknown
+	}	
+}
+
+203046 = {
+	name="John"
+	dynasty=101899
+	martial=7
+	diplomacy=5
+	intrigue=7
+	stewardship=7
+	religion="catholic"
+	culture="frankish"
+	add_trait="slothful"
+	add_trait="tough_soldier"
+	#father=203044
+	mother=204023
+	1191.1.1 = {
+		birth="1191.1.1"
+	}
+	1232.1.1 = {
+		death="1232.1.1"
+	}
+}
+
+462556 = {
+	name="Isabelle"
+	female=yes
+	dynasty=715
+	martial=8
+	diplomacy=6
+	intrigue=6
+	stewardship=6
+	religion="catholic"
+	culture="frankish"
+	add_trait="arbitrary"
+	add_trait="martial_cleric"
+	#father=462555
+	1302.1.2 = {
+		birth="1302.1.2"
+	}
+	1335.1.2 = {
+		death="1335.1.2"
+	}
+}
+
+31360 = {
+	name="Bela" #Lord of Thebes
+	dynasty=7194 #de Saint-Omer
+	religion="catholic"
+	culture="frankish"
+	father=31359
+	mother=219515
+	1209.1.1 = {
+		birth="1209.1.1"
+	}
+	1225.1.1 = {
+		add_spouse=31214
+	}
+	1240.1.1 = {
+		death="1240.1.1"
 	}
 }

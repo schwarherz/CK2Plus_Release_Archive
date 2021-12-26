@@ -205,7 +205,7 @@
 	name="Máel Muire"
 	# AKA: Mael Muire
 	dynasty=100044
-	dna="iagnlisefak"
+	dna="iagnlisefck"
 	properties="0eacbk0000"
 	martial=8
 	diplomacy=7
@@ -516,7 +516,7 @@
 6008 = {  	
 	name="Máel-Snechtai"
 	dynasty=554
-	dna="wfdnpmidfag"
+	dna="wfdnpmidfcg"
 	properties="cjddbd0000"
 	martial=8
 	diplomacy=6
@@ -927,7 +927,7 @@
 131002 = {  	
 	name="Dub"
 	dynasty=3121
-	dna="rfensjgffid"
+	dna="rfensjgffcd"
 	properties="0apcbk0000"
 	martial=7
 	diplomacy=5
@@ -936,7 +936,6 @@
 	religion="catholic"
 	culture="scottish"
 	add_trait="skilled_tactician"
-	add_trait="intricate_webweaver"
 	father=131001
 	1028.1.2={
 		birth="1028.1.2"
@@ -1075,7 +1074,7 @@
 	name="Gilla Brigte"
 	# AKA: Gilla Brigte
 	dynasty=100045
-	dna="oxbcwyebtko"
+	dna="oxbcwyebtco"
 	properties="cipdck0000"
 	martial=6
 	diplomacy=4
@@ -1133,7 +1132,7 @@
 	name="Máel Coluim"
 	# AKA: Mael Coluim
 	dynasty=100047
-	dna="icuoexqtikf"
+	dna="icuoexqticf"
 	properties="cb0cak0000"
 	martial=4
 	diplomacy=1
@@ -5810,7 +5809,7 @@
 82011 = {  	
 	name="Muiredach"
 	dynasty=9101
-	dna="fxicepdmhem"
+	dna="fxicepdmhcm"
 	properties="cm0eak0000"
 	martial=7
 	diplomacy=6
@@ -6851,30 +6850,23 @@
 	}
 }
 
-
-144949 = {  	
-	name="Robert"
-	dynasty=3123
+202995 = {
+	name="Edith-Matilda"
+	# AKA: Edith
+	female = yes
+	dynasty=1687
+	martial=8
+	diplomacy=5
+	intrigue=5
+	stewardship=7
 	religion="catholic"
-	culture="norman"
-	father = 144950
-	1078.1.1={
-		birth="1078.1.1"
+	culture="scottish"
+	father=984
+	mother=113
+	1079.1.1={
+		birth="1079.1.1"
 	}
-	1141.1.1={
-		death="1141.1.1"
-	}
-}
-
-144950 = {  	
-	name="Robert"
-	dynasty=3123
-	religion="catholic"
-	culture="norman"
-	1040.1.1={
-		birth="1040.1.1"
-	}
-	1094.1.1={
-		death="1094.1.1"
+	1118.1.2={
+		death="1118.1.2"
 	}
 }

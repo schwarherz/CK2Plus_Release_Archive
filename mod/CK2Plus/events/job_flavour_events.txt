@@ -17,10 +17,10 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_rulers = yes
-	min_age = 16
 	capable_only = yes
 	
 	trigger = {
+		age = 16
 		job_chancellor = {
 			diplomacy = 12
 			OR = {
@@ -57,10 +57,10 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_rulers = yes
-	min_age = 16
 	capable_only = yes
 	
 	trigger = {
+		age = 16
 		job_marshal = {
 			martial = 12
 			OR = {
@@ -97,10 +97,10 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_rulers = yes
-	min_age = 16
 	capable_only = yes
 	
 	trigger = {
+		age = 16
 		job_treasurer = {
 			stewardship = 12
 			OR = {
@@ -137,10 +137,10 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_rulers = yes
-	min_age = 16
 	capable_only = yes
 	
 	trigger = {
+		age = 16
 		always = no
 		job_spymaster = {
 			intrigue = 12
@@ -178,10 +178,10 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_rulers = yes
-	min_age = 16
 	capable_only = yes
 	
 	trigger = {
+		age = 16
 		job_spiritual = {
 			learning = 12
 			OR = {
@@ -221,12 +221,12 @@ character_event = {
 	
 	only_rulers = yes
 	only_men = yes
-	min_age = 16
 	capable_only = yes
 	
 	is_triggered_only = yes
 
 	trigger = {
+		age = 16
 		is_married = yes
 		liege = {
 			war = no
@@ -234,7 +234,6 @@ character_event = {
 				character = ROOT
 			}
 			job_chancellor = {
-				age = 16
 				NOT = {
 					age = 60
 				}
@@ -402,7 +401,6 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_rulers = yes
-	min_age = 16
 	capable_only = yes
 	
 	is_triggered_only = yes
@@ -751,7 +749,6 @@ character_event = {
 	desc = "EVTDESC75030"
 	picture = GFX_evt_scandal
 	
-	min_age = 16
 	capable_only = yes
 	
 	is_triggered_only = yes

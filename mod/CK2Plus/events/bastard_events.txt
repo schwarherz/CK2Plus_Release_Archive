@@ -15,7 +15,6 @@ character_event = {
 	desc = "EVTDESC76000"
 	picture = GFX_evt_lovers
 	
-	min_age = 16
 	max_age = 25
 	only_men = yes
 	only_rulers = yes
@@ -24,6 +23,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		is_married = no
 		NOT = {
 			trait = chaste
@@ -548,11 +548,10 @@ character_event = {
 	desc = "EVTDESC76020"
 	picture = GFX_evt_emissary
 	
-	min_age = 16
-	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		trait = bastard
 		NOT = {
 			trait = lustful
@@ -699,12 +698,12 @@ character_event = {
 	id = 76025
 	desc = "EVTDESC76025"
 	picture = GFX_evt_birth
-	
-	min_age = 16
+
 	only_women = yes
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		NOT = {
 			has_character_flag = raising_bastard
 			trait = depressed
@@ -930,11 +929,11 @@ character_event = {
 	picture = GFX_evt_child_bully
 	
 	min_age = 6
-	max_age = 16
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		trait = bastard
 		father = {
 			is_ruler = yes

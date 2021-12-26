@@ -1531,7 +1531,7 @@
 	culture="bulgarian"
 	add_trait="diligent"
 	add_trait="brave"
-	add_trait="brilliant_strategist"
+	add_trait="brilliant_Strategist"
 	father=70384
 	825.1.1={
 		birth="825.1.1"

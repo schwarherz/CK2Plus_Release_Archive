@@ -1450,7 +1450,7 @@
 	diplomacy=4
 	intrigue=5
 	stewardship=4
-	religion="judaism"
+	religion="orthodox"
 	culture="turkish"
 	add_trait="chaste"
 	add_trait="arbitrary"
@@ -3087,16 +3087,23 @@
 		add_claim = c_chaldea
 		add_claim = c_melitene
 		add_claim = c_theodosiopolis
+		add_claim = c_kaisereia
+		add_claim = c_galatia
+		add_claim = c_tyana
+		add_claim = d_tabriz
+		add_claim = d_azerbaijan
+		add_claim = c_tabriz
+		add_claim = c_oromieh
 		raise_levies = {
 			location = 659
-			force_mult = 2.25
+			force_mult = 1.5
 		}	
 	}
 	1067.5.22 = {
 		raise_levies = {
 			dismiss = yes
 			location = 659
-			force_mult = 2.25
+			force_mult = 1.5
 		}	
 	}	
 	1072.11.1={
@@ -3732,10 +3739,10 @@
 		birth="1281.1.1"
 	}
 	1325.1.1={
-	add_spouse=71852
+		add_spouse=71852
 	}
 	1332.1.1={
-	capital=c_prusa
+		capital=c_prusa
 	}
 	1361.1.1={
 		death="1361.1.1"
@@ -4232,15 +4239,13 @@
 71840 = {
 	name="Ertugrul"
 	dynasty=7
-	
 	religion="sunni"
 	culture="turkish"
-	
 	1191.1.1={
 		birth="1191.1.1"
 	}
 	1256.1.1={
-	add_spouse=71843
+		add_spouse=71843
 	}
 	1281.1.1={
 		death="1281.1.1"
@@ -4250,13 +4255,10 @@
 71841 = {
 	name="Savdji"
 	dynasty=7
-	
 	religion="sunni"
 	culture="turkish"
-	
 	father=71840
 	mother=71843
-	
 	1265.1.1={
 		birth="1265.1.1"
 	}
@@ -4268,13 +4270,10 @@
 71842 = {
 	name="Gunduz"
 	dynasty=7
-	
 	religion="sunni"
 	culture="turkish"
-	
 	father=71840
 	mother=71843
-	
 	1270.1.1={
 		birth="1270.1.1"
 	}
@@ -4301,10 +4300,8 @@
 71844 = {
 	name="Malhun"
 	female=yes
-	
 	religion="sunni"
 	culture="turkish"
-	
 	1260.1.1={
 		birth="1260.1.1"
 	}
@@ -4327,7 +4324,6 @@
 	add_trait="grey_eminence"
 	father=476501
 	mother=71844
-	
 	1278.1.1={
 		birth="1278.1.1"
 	}

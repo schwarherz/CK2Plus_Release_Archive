@@ -13,11 +13,11 @@ character_event = {
 	picture = "GFX_evt_crusaders"
 	
 	only_men = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		has_called_crusade = yes
 		OR = {
 			any_war = {
@@ -71,11 +71,11 @@ character_event = {
 	picture = "GFX_evt_siege"
 
 	only_men = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		has_called_crusade = yes
 		OR = {
 			any_war = {
@@ -121,11 +121,11 @@ character_event = {
 	picture = GFX_evt_pope
 
 	only_men = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		controls_religion = yes
 		has_called_crusade = yes
 		religion = catholic
@@ -927,11 +927,11 @@ character_event = {
 	picture = GFX_evt_bishop
 
 	only_men = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		has_called_crusade = yes
 		had_global_flag = { flag = crusade_called days = 180 }
 		NOT = { has_character_flag = no_complains_about_not_crusading }
@@ -1141,11 +1141,11 @@ character_event = {
 	picture = GFX_evt_emissary
 
 	only_rulers = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		has_called_crusade = yes
 		had_global_flag = { flag = crusade_called days = 180 }
 		NOT = { has_character_flag = no_complains_about_not_crusading }

@@ -70,7 +70,7 @@ castle = {
 					year = 1066
 				}
 				AND = {
-					FROM = { culture_group = west_african }
+					FROM = { culture_group = west_african independent = yes }
 					year = 1066
 				}			
 				AND = {
@@ -353,7 +353,7 @@ castle = {
 		build_cost = 100
 		build_time = 547 #1.5y
 		levy_size = 0.05
-		garrison_size = 0.05
+		garrison_size = 0.025
 		ai_creation_factor = 102
 		
 		start = {
@@ -400,7 +400,7 @@ castle = {
 		build_cost = 200
 		build_time = 730 #2y
 		levy_size = 0.1
-		garrison_size = 0.1
+		garrison_size = 0.05
 		ai_creation_factor = 101
 
 		start = {
@@ -426,7 +426,7 @@ castle = {
 		build_cost = 300
 		build_time = 1095 #3y
 		levy_size = 0.15
-		garrison_size = 0.15
+		garrison_size = 0.075
 		ai_creation_factor = 100
 		
 		start = {
@@ -452,7 +452,7 @@ castle = {
 		build_cost = 400
 		build_time = 1460 #4y
 		levy_size = 0.2
-		garrison_size = 0.2
+		garrison_size = 0.1
 		ai_creation_factor = 99
 
 		start = {
@@ -478,7 +478,7 @@ castle = {
 		build_cost = 500
 		build_time = 2190 #6y
 		levy_size = 0.25
-		garrison_size = 0.25
+		garrison_size = 0.125
 		ai_creation_factor = 98
 
 		start = {
@@ -504,7 +504,7 @@ castle = {
 		build_cost = 600
 		build_time = 2160 #6y
 		levy_size = 0.3
-		garrison_size = 0.3
+		garrison_size = 0.15
 		ai_creation_factor = 97
 		
 		start = {
@@ -538,7 +538,11 @@ castle = {
 				AND = {
 					FROM = { culture_group = east_african }
 					year = 1066
-				}			
+				}
+				AND = {
+					FROM = { religion_group = muslim culture = turkish }
+					year = 1066
+				}				
 				AND = {
 					FROM = { religion_group = muslim }
 					year = 1076
@@ -552,7 +556,7 @@ castle = {
 					year = 1100
 				}
 				AND = {
-					FROM = { culture_group = west_african }
+					FROM = { culture_group = west_african independent = yes }
 					year = 1066
 				}				
 				AND = {
@@ -710,7 +714,7 @@ castle = {
 		ai_creation_factor = 105
 		
 		start = {
-			OR = {
+			OR = {			
 				AND = {
 					FROM = { religion_group = muslim }
 					year = 1100
@@ -724,12 +728,29 @@ castle = {
 					year = 1100
 				}
 				AND = {
-					FROM = { culture_group = west_african }
+					FROM = { culture_group = west_african independent = yes }
 					year = 1066
 				}				
 				AND = {
 					FROM = { top_liege = { religion_group = pagan_group } religion_group = pagan_group NOT = { culture = pecheneg culture = cuman } }
 					year = 1075
+				}
+				AND = {
+					FROM = {
+						top_liege = {
+							primary_title = {
+								OR = {
+									title = k_leon
+									title = k_castille
+									title = k_aragon
+									title = k_spanish_galicia
+									title = k_navarra
+									title = d_barcelona
+								}
+							}
+						}
+					}
+					year = 1066
 				}				
 			}
 		}
@@ -878,10 +899,14 @@ castle = {
 				AND = {
 					FROM = { culture_group = east_african }
 					year = 1066
+				}
+				AND = {
+					FROM = { religion_group = muslim culture = turkish }
+					year = 1066
 				}				
 				AND = {
 					FROM = { religion_group = muslim }
-					year = 1066
+					year = 1076
 				}
 				AND = {
 					FROM = { religion_group = christian }
@@ -896,7 +921,7 @@ castle = {
 					year = 1066
 				}
 				AND = {
-					FROM = { culture_group = west_african }
+					FROM = { culture_group = west_african independent = yes }
 					year = 1066
 				}			
 				AND = {
@@ -2619,7 +2644,7 @@ city = {
 		build_cost = 100
 		build_time = 547
 		levy_size = 0.05
-		garrison_size = 0.05
+		garrison_size = 0.025
 		ai_creation_factor = 98
 
 		start = {
@@ -2633,7 +2658,7 @@ city = {
 					year = 1095
 				}
 				AND = {
-					FROM = { culture_group = west_african }
+					FROM = { culture_group = west_african independent = yes }
 					year = 1066
 				}				
 				AND = {
@@ -2649,7 +2674,7 @@ city = {
 		build_cost = 200
 		build_time = 730
 		levy_size = 0.1
-		garrison_size = 0.1
+		garrison_size = 0.05
 		ai_creation_factor = 97
 
 		start = {
@@ -2674,7 +2699,7 @@ city = {
 		build_cost = 300
 		build_time = 1095
 		levy_size = 0.15
-		garrison_size = 0.15
+		garrison_size = 0.075
 		ai_creation_factor = 96
 
 		start = {
@@ -2700,7 +2725,7 @@ city = {
 		build_cost = 400
 		build_time = 1460
 		levy_size = 0.2
-		garrison_size = 0.2
+		garrison_size = 0.1
 		ai_creation_factor = 95
 
 		start = {
@@ -2726,7 +2751,7 @@ city = {
 		build_cost = 500
 		build_time = 2190
 		levy_size = 0.25
-		garrison_size = 0.25
+		garrison_size = 0.125
 		ai_creation_factor = 94
 
 		start = {
@@ -2752,7 +2777,7 @@ city = {
 		build_cost = 500
 		build_time = 2190
 		levy_size = 0.3
-		garrison_size = 0.3
+		garrison_size = 0.15
 		ai_creation_factor = 93
 
 		start = {
@@ -3347,9 +3372,10 @@ city = {
 
 	ct_university_1 = {
 		trigger = { TECH_CITY_CONSTRUCTION = 1 }
-		build_cost = 400
-		build_time = 1095
-		tech_growth_modifier = 0.2
+		prerequisites = { ct_wall_1 }
+		build_cost = 200
+		build_time = 730
+		tech_growth_modifier = 0.1
 		ai_creation_factor = 107
 
 		start = {
@@ -3370,11 +3396,12 @@ city = {
 		}
 	}
 	ct_university_2 = {
-		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+		trigger = { TECH_CITY_CONSTRUCTION = 2 }
+		prerequisites = { ct_wall_2 }
 		upgrades_from = ct_university_1
-		build_cost = 600
-		build_time = 2190
-		tech_growth_modifier = 0.3
+		build_cost = 400
+		build_time = 1095
+		tech_growth_modifier = 0.2
 		ai_creation_factor = 106
 
 		start = {
@@ -3390,31 +3417,6 @@ city = {
 				AND = {
 					FROM = { religion_group = pagan_group }
 					year = 1480
-				}
-			}
-		}
-	}
-	ct_university_3 = {
-		trigger = { TECH_CITY_CONSTRUCTION = 4 }
-		upgrades_from = ct_university_2
-		build_cost = 800
-		build_time = 2190
-		tech_growth_modifier = 0.3
-		ai_creation_factor = 105
-
-		start = {
-			OR = {
-				AND = {
-					FROM = { religion_group = muslim }
-					year = 1490
-				}
-				AND = {
-					FROM = { religion_group = christian }
-					year = 1485
-				}
-				AND = {
-					FROM = { religion_group = pagan_group }
-					year = 1530
 				}
 			}
 		}
@@ -3685,7 +3687,7 @@ temple = {
 		build_cost = 100
 		build_time = 547
 		levy_size = 0.05
-		garrison_size = 0.05
+		garrison_size = 0.025
 		ai_creation_factor = 96
 
 		start = {
@@ -3711,7 +3713,7 @@ temple = {
 		build_cost = 200
 		build_time = 730
 		levy_size = 0.1
-		garrison_size = 0.1
+		garrison_size = 0.05
 		ai_creation_factor = 95
 
 		start = {
@@ -3736,7 +3738,7 @@ temple = {
 		build_cost = 300
 		build_time = 1095
 		levy_size = 0.15
-		garrison_size = 0.15
+		garrison_size = 0.075
 		ai_creation_factor = 94
 
 		start = {
@@ -3761,8 +3763,8 @@ temple = {
 		upgrades_from = tp_monastery_3
 		build_cost = 400
 		build_time = 1460
-		levy_size = 0.25
-		garrison_size = 0.25
+		levy_size = 0.2
+		garrison_size = 0.1
 		ai_creation_factor = 93
 
 		start = {
@@ -3788,7 +3790,7 @@ temple = {
 		build_cost = 500
 		build_time = 2190
 		levy_size = 0.25
-		garrison_size = 0.25
+		garrison_size = 0.125
 		ai_creation_factor = 92
 
 		start = {
@@ -3814,7 +3816,7 @@ temple = {
 		build_cost = 600
 		build_time = 2190
 		levy_size = 0.3
-		garrison_size = 0.3
+		garrison_size = 0.15
 		ai_creation_factor = 91
 
 		start = {
@@ -4265,51 +4267,79 @@ temple = {
 
 	tp_school_1 = {
 		prerequisites = { tp_wall_1 }
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 1 }
 		build_cost = 200
-		build_time = 547
+		build_time = 730
 		tech_growth_modifier = 0.1
-		ai_creation_factor = 93
+		ai_creation_factor = 107
 
 		start = {
 			OR = {
 				AND = {
 					FROM = { religion_group = muslim }
-					year = 1090
+					year = 1190
 				}
 				AND = {
 					FROM = { religion_group = christian }
-					year = 1150
+					year = 1250
 				}
 				AND = {
 					FROM = { religion_group = pagan_group }
-					year = 1200
+					year = 1300
 				}
 			}
 		}
 	}
 	tp_school_2 = {
 		prerequisites = { tp_wall_2 }
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 2 }
 		upgrades_from = tp_school_1
 		build_cost = 400
-		build_time = 547
+		build_time = 1095
 		tech_growth_modifier = 0.2
-		ai_creation_factor = 92
+		ai_creation_factor = 106
 
 		start = {
 			OR = {
 				AND = {
 					FROM = { religion_group = muslim }
-					year = 1140
+					year = 1340
 				}
 				AND = {
 					FROM = { religion_group = christian }
-					year = 1180
+					year = 1380
 				}
 				AND = {
 					FROM = { religion_group = pagan_group }
-					year = 1250
+					year = 1450
 				}
 			}
 		}
 	}
+	tp_school_3 = {
+		prerequisites = { tp_wall_3 }
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 3 }
+		upgrades_from = tp_school_2
+		build_cost = 600
+		build_time = 1460
+		tech_growth_modifier = 0.3
+		ai_creation_factor = 105
+
+		start = {
+			OR = {
+				AND = {
+					FROM = { religion_group = muslim }
+					year = 1440
+				}
+				AND = {
+					FROM = { religion_group = christian }
+					year = 1480
+				}
+				AND = {
+					FROM = { religion_group = pagan_group }
+					year = 1550
+				}
+			}
+		}
+	}	
 }

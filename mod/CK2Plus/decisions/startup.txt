@@ -7,15 +7,39 @@ decisions = {
 		allow = { }
 		effect = {
 			set_global_flag = startup
-			any_independent_ruler = {				
-				character_event = { id = 190052 }
+			any_independent_ruler = {	
+				set_character_flag = genetics_check
+				if = {
+					limit = { age = 16 }
+					set_character_flag = adult
+				}				
+				character_event = { id = 1000046500 } #family relations
+				character_event = { id = 190052 } #remove undesirable claims
 				any_courtier = {
-					character_event = { id = 190052 }
+					set_character_flag = genetics_check
+					if = {
+						limit = { age = 16 }
+						set_character_flag = adult
+					}					
+					character_event = { id = 1000046500 } #family relations
+					character_event = { id = 190052 } #remove undesirable claims
 				}				
 				any_realm_lord = {
-					character_event = { id = 190052 }
+					set_character_flag = genetics_check
+					if = {
+						limit = { age = 16 }
+						set_character_flag = adult
+					}
+					character_event = { id = 1000046500 } #family relations
+					character_event = { id = 190052 } #remove undesirable claims
 					any_courtier = {
-						character_event = { id = 190052 }
+						set_character_flag = genetics_check
+						if = {
+							limit = { age = 16 }
+							set_character_flag = adult
+						}						
+						character_event = { id = 1000046500 } #family relations
+						character_event = { id = 190052 } #remove undesirable claims
 					}					
 				}
 			}

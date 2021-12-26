@@ -8,7 +8,7 @@ max_settlements = 4
 
 b_halikarnassos = castle
 b_telmissos = city
-b_myra = temple
+#b_myra = temple
 
 #b_kibyra = castle
 #b_patara = castle

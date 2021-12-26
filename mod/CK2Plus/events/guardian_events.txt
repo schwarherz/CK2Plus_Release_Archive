@@ -6175,7 +6175,7 @@ character_event = {
 					remove_trait = ill
 				}
 				5 = {
-					death = { death_reason = death_trait }
+					death = { death_reason = death_accident }
 				}
 				45 = {}
 			}
@@ -6187,7 +6187,7 @@ character_event = {
 			random = {
 				chance = 60
 			
-				death = { death_reason = death_trait }
+				death = { death_reason = death_accident }
 				if = {
 					limit = {
 						father = {

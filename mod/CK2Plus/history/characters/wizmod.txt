@@ -146,7 +146,7 @@
 
 89004 = {
 	name="Cadoc"
-	dynasty=2005028
+	dynasty=2109003
 	religion="catholic"
 	culture="cornish"
 	1036.1.1={

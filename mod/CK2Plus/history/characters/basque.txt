@@ -367,6 +367,9 @@
 	981.1.1={
 		add_spouse=106041
 	}
+	994.12.1={
+		give_nickname = nick_the_trembling
+	}
 	999.12.8={
 		death="999.12.8"
 	}
@@ -1607,6 +1610,9 @@
 	father=70292
 	830.1.1 = {
 		birth="830.1.1"
+	}
+	885.1.1 = {
+		give_nickname = nick_the_one_eyed
 	}
 	906.1.1 = {
 		death="906.1.1"

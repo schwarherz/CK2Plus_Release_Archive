@@ -23,7 +23,7 @@
 }
 
 10042 = {
-	name="Alain" 
+	name="Alain"
 	# AKA: Alan 'Caignart'
 	dynasty=311
 	martial=6
@@ -697,11 +697,13 @@
 	religion="catholic"
 	culture="breton"
 	add_trait="tough_soldier"
-	900.1.2={
-		birth="900.1.2"
+	father=50007 # Malhuedoc, count of Poher
+	mother=50006 # Hodierne
+	900.1.1={
+		birth="900.1.1"
 	}
-	952.1.2={
-		death="952.1.2"
+	952.1.1={
+		death="952.1.1"
 	}
 }
 
@@ -760,26 +762,8 @@
 	940.1.2={
 		birth="940.1.2"
 	}
-	988.1.2={
-		death="988.1.2"
-	}
-}
-
-50006 = {
-	name="Alain"
-	dynasty=20016
-	martial=4
-	diplomacy=6
-	intrigue=2
-	stewardship=6
-	religion="catholic"
-	culture="breton"
-	father=50005
-	981.1.2={
-		birth="981.1.2"
-	}
-	990.1.2={
-		death="990.1.2"
+	990.1.1={
+		death="990.1.1"
 	}
 }
 
@@ -936,7 +920,7 @@
 }
 
 205740 = {
-	name="Constance" #Constance, duchess of Brittany
+	name="Konstanza" #Constance, duchess of Brittany
 	female = yes
 	dynasty=317 #House of Penthièvre
 	religion="catholic"
@@ -945,11 +929,11 @@
 	add_trait="scholarly_theologian"
 	father=205741 #Conan IV le Petit
 	mother=203510 #Marguerite de Huntinton
-	1161.1.13={
-		birth="1161.1.13"
+	1161.6.12={
+		birth="1161.6.12"
 	}
-	1201.11.1={
-		death="1201.11.1"
+	1201.9.5={
+		death="1201.9.5"
 	}
 }
 
@@ -1175,6 +1159,7 @@
 	}
 	1298.1.2 = {
 		add_spouse=455510
+		give_nickname="nick_the_good"
 	}
 	1341.4.30 = {
 		death="1341.4.30"
@@ -1554,11 +1539,11 @@
 	culture="breton"
 	father=91247 #Berenger
 	#d. of Gurvand of Britanny
-	910.1.1={
-		birth="910.1.1"
+	903.1.1={
+		birth="903.1.1"
 	}
-	970.1.1={
-		death="970.1.1"
+	958.1.1={
+		death="958.1.1"
 	}
 }
 	
@@ -1647,8 +1632,8 @@
 	990.1.1={
 		birth="990.1.1"
 	}
-	1050.1.1={
-		death="1050.1.1"
+	1070.1.1={
+		death="1070.1.1"
 	}
 }
 
@@ -1692,8 +1677,8 @@
 	992.1.1={
 		birth="992.1.1"
 	}
-	1060.1.1={
-		death="1060.1.1"
+	1070.1.1={
+		death="1070.1.1"
 	}
 }
 
@@ -2822,7 +2807,10 @@
 		birth="948.1.1"
 	}
 	992.6.27 = {
-		death="992.6.27"
+		death = {
+			death_reason = death_battle
+			killer = 374 #Foulque III Nerra, Count of Anjou
+		}
 	}
 }
 
@@ -2834,14 +2822,14 @@
 	culture="breton"
 	father=340
 	mother=379
-	977.1.2 = {
-		birth="977.1.2"
+	977.1.1 = {
+		birth="977.1.1"
 	}
-	996.1.2 = {
+	996.1.1 = {
 		add_spouse=257
 	}
-	1020.1.2 = {
-		death="1020.1.2"
+	1020.1.1 = {
+		death="1020.1.1"
 	}
 }
 
@@ -2855,10 +2843,101 @@
 	culture="breton"
 	father=344
 	mother=393
-	1033.1.2 = {
-		birth="1033.1.2"
+	1033.1.1 = {
+		birth="1033.1.1"
 	}
 	1066.12.11 = {
 		death="1066.12.11"
+	}
+}
+
+50006 = {
+	name="Hodierne"
+	female=yes
+	dynasty=20137 #Vannes
+	religion="catholic"
+	culture="breton"
+	father= 50008 # Alain I, the Great
+	
+	879.1.1={
+		birth="879.1.1"
+	}
+	940.1.1={
+		death="940.1.1"
+	}
+}
+
+50007 = {
+	name="Malhuedoc"
+	dynasty=20016 #Nantes
+	religion="catholic"
+	culture="breton"
+	870.1.1={
+		birth="870.1.1"
+	}
+	895.1.1={
+		add_spouse=50006
+	}
+	931.1.1={
+		death="931.1.1"
+	}
+}
+
+50008 = {
+	name="Alain"
+	dynasty=20137 #Vannes
+	religion="catholic"
+	culture="breton"
+	father=50010
+	855.1.1={
+		birth="855.1.1"
+	}
+	877.1.1={
+		give_nickname=nick_the_great
+	}
+	907.1.1={
+		death="907.1.1"
+	}
+}
+
+50009 = {
+	name="Pasquitan"
+	dynasty=20137 #Vannes
+	religion="catholic"
+	culture="breton"
+	father=50010
+	850.1.1={
+		birth="850.1.1"
+	}
+	877.1.1={
+		death="877.1.1"
+	}
+}
+
+50010 = {
+	name="Ridoredh"
+	dynasty=20137 #Vannes
+	religion="catholic"
+	culture="breton"
+	
+	820.1.1={
+		birth="820.1.1"
+	}
+	874.1.1={
+		death="874.1.1"
+	}
+}
+
+50011 = {
+	name="Pasquitan"
+	dynasty=20137 #Vannes
+	religion="catholic"
+	culture="breton"
+	father=50008
+	881.1.1={
+		birth="881.1.1"
+	}
+	903.1.1={
+		death="903.1.1"
 	}
 }

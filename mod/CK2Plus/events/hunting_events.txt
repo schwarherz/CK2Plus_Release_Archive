@@ -993,11 +993,11 @@ character_event = {
 	desc = "EVTDESC36050"
 	picture = "GFX_evt_hunt"
 	
-	min_age = 16
 	only_capable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		trait = hunter
 		liege = { has_character_modifier = holding_grand_hunt }
 		in_command = no

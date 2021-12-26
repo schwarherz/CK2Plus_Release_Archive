@@ -1616,6 +1616,7 @@
 	}
 	966.1.1 = {
 		capital=k_leon
+		give_nickname = nick_the_kid
 	}
 	979.1.1 = {
 		add_spouse=70028
@@ -1737,6 +1738,7 @@
 		death="1063.5.8"
 	}
 }
+
 110511 = {
 	name="García"
 	dynasty=442
@@ -5337,6 +5339,9 @@
 	739.6.15 = {
 		capital=k_leon
 	}
+	740.1.1 = {
+		give_nickname = nick_the_catholic
+	}
 	757.1.1 = {
 		death="757.1.1"
 	}
@@ -5484,6 +5489,9 @@
 		birth="750.1.1"
 	}
 	788.1.1 = {
+		give_nickname=nick_the_deacon
+	}
+	788.1.1 = {
 		capital=k_leon
 	}
 	788.1.1 = {
@@ -5575,7 +5583,7 @@
 	culture="castillan"
 	add_trait="duelist"
 	add_trait="brave"
-	add_trait="misguided_warrior"
+	add_trait="misguided_Warrior"
 	father=70015
 	mother=70016
 	830.1.1 = {
@@ -7768,6 +7776,9 @@
 	1118.12.1={
 	capital = c_zaragoza
 	}
+	1119.1.1={
+	give_nickname = nick_the_battler
+	}
 	1134.9.7={
 		death="1134.9.7"
 	}
@@ -7817,7 +7828,6 @@
 	add_trait="mystic"
 	add_trait="honest"
 	add_trait="tough_soldier"
-	
 	910.1.1 = {
 		birth="910.1.1"
 	}
@@ -7866,7 +7876,6 @@
 	add_trait="flamboyant_schemer"
 	father=70242
 	mother=70243
-	
 	935.1.1 = {
 		birth="935.1.1"
 	}
@@ -7888,7 +7897,6 @@
 	add_trait="just"
 	add_trait="thrifty_clerk"
 	father=107641
-	
 	988.1.1 = {
 		birth="988.1.1"
 	}
@@ -11432,7 +11440,7 @@
 	religion="catholic"
 	culture="castillan"
 	father=457520
-	#mother=549511
+	mother=459511
 	1309.1.1 = {
 		birth="1309.1.1"
 	}
@@ -14936,6 +14944,9 @@
 	mother=71574
 	1282.1.1 = {
 		birth="1282.1.1"
+	}
+	1294.1.1 = {
+		give_nickname = nick_the_young
 	}
 	1310.1.1 = {
 	add_spouse=72038

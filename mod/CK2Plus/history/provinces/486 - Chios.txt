@@ -7,7 +7,7 @@ title = c_chios
 max_settlements = 3
 
 b_chios = castle
-b_tigani = city
+#b_tigani = city
 b_samos = temple
 
 #b_marathokampos = castle
@@ -24,10 +24,4 @@ terrain = mountain
 # History
 
 # 4th crusade
-
-
-
-
-1304.1.1 = { b_chios = castle } 
-1304.1.1 = { capital = b_chios } 
 1304.1.1 = { b_samos = city } 

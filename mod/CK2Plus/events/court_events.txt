@@ -15,11 +15,11 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		NOT = { trait = proud }
 		NOT = { trait = humble }
 	}
@@ -154,7 +154,6 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 	only_men = yes
@@ -233,11 +232,11 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		religion = catholic
 		in_command = no
 		any_vassal = {
@@ -285,11 +284,11 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		religion = catholic
 		in_command = no
 		tier = count
@@ -337,11 +336,11 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		in_command = no
 		father_even_if_dead = {
 			is_alive = no
@@ -386,11 +385,11 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		in_command = no
 		OR = {
 			trait = fair
@@ -526,7 +525,6 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 	
@@ -625,13 +623,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 	only_men = yes
 	
 	trigger = {
 		in_command = no
+		is_married = yes
 		religion = catholic
 		spouse = { 
 			is_abroad = no
@@ -711,11 +709,11 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		religion = catholic
 		capital_scope = { TECH_NOBLE_CUSTOMS = 4 }
 	}
@@ -737,9 +735,6 @@ character_event = {
 			random_traits = yes
 			dynasty = random
 			female = no
-		}
-		new_character = {
-			character_event = { id = 300001 }
 		}		
 		scaled_wealth = -0.1
 	}
@@ -758,11 +753,11 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = yes
 		any_current_enemy = {
 			culture = ROOT
@@ -863,14 +858,13 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA73009"  #Welcome him to your court
-		scaled_wealth = -0.2
+		treasury = -10
 		create_random_soldier = {
 			random_traits = yes
 			dynasty = random
 			female = no
 		}		
-		new_character = {
-			character_event = { id = 300001 }		
+		new_character = {		
 			ROOT = {
 				random_current_enemy = {
 					limit = {
@@ -1130,11 +1124,11 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_men = yes
-	min_age = 16
 	only_capable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		NOT = { liege = { spouse = { character = ROOT } } }
 		martial = 10
 		independent = no
@@ -1371,11 +1365,11 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_men = yes
-	min_age = 16
 	only_capable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		NOT = { liege = { spouse = { character = ROOT } } }
 		intrigue = 10
 		independent = no
@@ -1613,11 +1607,11 @@ character_event = {
 	picture = GFX_evt_spymaster
 
 	only_men = yes
-	min_age = 16
 	only_capable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		NOT = { liege = { spouse = { character = ROOT } } }
 		stewardship = 10
 		independent = no
@@ -1850,11 +1844,11 @@ character_event = {
 	picture = GFX_evt_spymaster
 
 	only_men = yes
-	min_age = 16
 	only_capable = yes
 	prisoner = no
 	
-	trigger = {
+	trigger = {	
+		age = 16
 		NOT = { liege = { spouse = { character = ROOT } } }
 		learning = 10
 		independent = no
@@ -2089,11 +2083,11 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_men = yes
-	min_age = 16
 	only_capable = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		NOT = { liege = { spouse = { character = ROOT } } }
 		diplomacy = 10
 		independent = no

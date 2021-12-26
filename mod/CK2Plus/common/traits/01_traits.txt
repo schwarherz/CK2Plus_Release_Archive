@@ -165,11 +165,17 @@ mujahid = { #125
 }
 
 regency = { #126
-	vassal_opinion = -25
+	vassal_opinion = -20
 	customizer = no
 }
 
-placeholder = {
+regency_ai = { #127
+	vassal_opinion = -10
+	customizer = no
+}
+
+placeholder = { #128
 	congenital = yes
 	birth = yes
+	customizer = no
 }

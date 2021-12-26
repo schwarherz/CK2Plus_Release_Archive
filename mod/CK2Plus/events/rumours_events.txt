@@ -17,14 +17,14 @@ character_event = {
 	id = 69000
 	desc = "EVTDESC69000"
 	picture = GFX_evt_whispers
-	
-	min_age = 16
+
 	capable_only = yes
 	is_prisoner = no
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		is_ruler = no
 		NOT = {
@@ -279,13 +279,13 @@ character_event = {
 	picture = GFX_evt_whispers
 	
 	only_rulers = yes
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		NOT = {
 			has_character_flag = rumour_spreader
@@ -441,11 +441,11 @@ character_event = {
 	picture = GFX_evt_brothel
 	
 	only_men = yes
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	trigger = {
+		age = 16
 		has_character_flag = suspected_sodomite
 		OR = {
 			NOT = {
@@ -491,11 +491,11 @@ character_event = {
 	picture = GFX_evt_whispers
 	
 	only_men = yes
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	trigger = {
+		age = 16
 		has_character_flag = suspected_sodomite
 		OR = {
 			NOT = {
@@ -534,11 +534,11 @@ character_event = {
 	picture = GFX_evt_whispers
 	
 	only_men = yes
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	trigger = {
+		age = 16
 		has_character_flag = suspected_sodomite
 		OR = {
 			NOT = {
@@ -576,13 +576,13 @@ character_event = {
 	desc = "EVTDESC69010"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		is_ruler = no
 		NOT = {
@@ -910,13 +910,13 @@ character_event = {
 	picture = GFX_evt_whispers
 	
 	only_rulers = yes
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		is_ruler = yes
 		NOT = {
@@ -1084,12 +1084,12 @@ character_event = {
 	picture = GFX_evt_whispers
 	
 	only_men = yes
-	min_age = 16
 	max_age = 40
 	capable_only = yes
 	is_prisoner = no
 	
 	trigger = {
+		age = 16
 		has_character_flag = suspected_of_incest
 		NOT = {
 			has_character_modifier = suspected_of_incest_timer
@@ -1126,12 +1126,12 @@ character_event = {
 	picture = GFX_evt_whispers
 	
 	only_men = yes
-	min_age = 16
 	max_age = 40
 	capable_only = yes
 	is_prisoner = no
 	
 	trigger = {
+		age = 16
 		has_character_flag = suspected_of_incest
 		any_sibling = {
 			has_character_flag = sister_suspected_of_incest
@@ -1238,13 +1238,13 @@ character_event = {
 	desc = "EVTDESC69020"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		is_ruler = no
 		NOT = {
@@ -1491,7 +1491,6 @@ character_event = {
 	desc = "EVTDESC69020"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	only_rulers = yes
 	capable_only = yes
 	is_prisoner = no
@@ -1499,6 +1498,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		NOT = {
 			has_character_flag = rumour_spreader
@@ -1651,13 +1651,13 @@ character_event = {
 	desc = "EVTDESC69030"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		is_ruler = no
 		NOT = {
@@ -2065,7 +2065,6 @@ character_event = {
 	desc = "EVTDESC69030"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	only_rulers = yes
 	capable_only = yes
 	is_prisoner = no
@@ -2073,6 +2072,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		NOT = {
 			has_character_flag = rumour_spreader
@@ -2294,13 +2294,13 @@ character_event = {
 	desc = "EVTDESC69040"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		is_ruler = no
 		NOT = {
@@ -2541,7 +2541,6 @@ character_event = {
 	desc = "EVTDESC69040"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	only_rulers = yes
 	capable_only = yes
 	is_prisoner = no
@@ -2549,6 +2548,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		NOT = {
 			has_character_flag = rumour_spreader
@@ -2910,7 +2910,6 @@ character_event = {
 	desc = "EVTDESC69050"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	only_rulers = yes
 	capable_only = yes
 	is_prisoner = no
@@ -2918,6 +2917,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		job_chancellor = {
 			prisoner = no
@@ -3028,7 +3028,6 @@ character_event = {
 	desc = "EVTDESC69052"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	only_rulers = yes
 	capable_only = yes
 	is_prisoner = no
@@ -3036,6 +3035,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		job_marshal = {
 			NOT = {
@@ -3146,7 +3146,6 @@ character_event = {
 	desc = "EVTDESC69054"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	only_rulers = yes
 	capable_only = yes
 	is_prisoner = no
@@ -3154,6 +3153,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		job_treasurer = {
 			is_female = no
@@ -3263,7 +3263,6 @@ character_event = {
 	desc = "EVTDESC69056"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	only_rulers = yes
 	capable_only = yes
 	is_prisoner = no
@@ -3271,6 +3270,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		job_spymaster = {
 			is_female = no
@@ -3385,7 +3385,6 @@ character_event = {
 	desc = "EVTDESC69058"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	only_rulers = yes
 	capable_only = yes
 	is_prisoner = no
@@ -3393,6 +3392,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		job_spiritual = {
 			is_female = no
@@ -3507,13 +3507,13 @@ character_event = {
 	desc = "EVTDESC69060"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		is_ruler = no
 		NOT = {
@@ -3754,7 +3754,6 @@ character_event = {
 	desc = "EVTDESC69060"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	only_rulers = yes
 	capable_only = yes
 	is_prisoner = no
@@ -3762,6 +3761,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		NOT = {
 			has_character_flag = rumour_spreader
@@ -4006,13 +4006,13 @@ character_event = {
 	desc = "EVTDESC69070"
 	picture = GFX_evt_whispers
 	
-	min_age = 16
 	capable_only = yes
 	is_prisoner = no
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		is_ruler = no
 		NOT = {
@@ -4278,8 +4278,7 @@ character_event = {
 	id = 69073
 	desc = "EVTDESC69070"
 	picture = GFX_evt_whispers
-	
-	min_age = 16
+
 	only_rulers = yes
 	capable_only = yes
 	is_prisoner = no
@@ -4287,6 +4286,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		intrigue = 10
 		NOT = {
 			has_character_flag = rumour_spreader

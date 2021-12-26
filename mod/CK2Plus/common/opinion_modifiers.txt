@@ -1719,6 +1719,10 @@ opinion_not_defending_me = {
 	opinion = -10
 }
 
+opinion_prisoner_died = {
+	opinion = -5
+}
+
 ####################
 # Family relations #
 ####################
@@ -1760,5 +1764,9 @@ opinion_nephew = {
 }
 
 opinion_niece = {
+	opinion = 5
+}
+
+opinion_cousin = {
 	opinion = 5
 }

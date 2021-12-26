@@ -240,7 +240,6 @@ character_event = {
 	picture = GFX_evt_guardian
 	
 	age = 6
-	max_age = 16
 	prisoner = no
 	only_capable = yes
 	

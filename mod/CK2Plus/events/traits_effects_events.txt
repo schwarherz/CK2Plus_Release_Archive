@@ -432,14 +432,6 @@ character_event = {
 
 	option = {
 		name = "EVTOPTC3020"
-		limit = {
-			any_courtier = {
-				OR = {
-					trait = lustful
-					trait = hedonist
-				}	
-			}
-		}
 		any_courtier = {
 			limit = {
 				OR = {
@@ -528,9 +520,6 @@ character_event = {
 			trait = zealous
 			trait = celibate
 		}
-		new_character = {
-			character_event = { id = 300001 }
-		}		
 	}
 	option = {
 		name = "EVTOPTB3021"
@@ -578,7 +567,7 @@ character_event = {
 		change_learning = 1
 		add_character_modifier = {
 			name = chaste_learning
-			duration = 730
+			duration = 365
 		}
 	}
 	option = {
@@ -595,7 +584,6 @@ character_event = {
 			opinion = {
 				modifier = opinion_chaste_advice_refused
 				who = ROOT
-				years = 5
 			}
 		}
 		remove_trait = chaste		
@@ -705,8 +693,6 @@ character_event = {
 		}
 		NOT = {
 			trait = homosexual
-			trait = stressed
-			trait = depressed
 		}
 		fertility = 0.4
 		any_courtier = {
@@ -779,10 +765,7 @@ character_event = {
 				NOT = { is_close_relative = ROOT }
 				has_opinion_modifier = { who = ROOT modifier = opinion_admire_chaste } 				
 			}
-			remove_opinion = {
-				modifier = opinion_admire_chaste
-				who = ROOT
-			}
+			remove_opinion = { who = ROOT modifier = opinion_admire_chaste }
 		}
 		prestige = -5
 		add_trait = wroth
@@ -1038,7 +1021,7 @@ character_event = {
 		}
 		add_character_modifier = {
 			name = defer_to_church_decision
-			duration = 730
+			duration = 365
 		}
 		religion_authority = 0.01
 	}
@@ -1179,7 +1162,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_enjoyed_feast
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -1558,7 +1541,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_money_stolen
 				who = ROOT
-				years = 10
+				years = 5
 			}			
 		}
 	}
@@ -1621,7 +1604,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_betrayed
 				who = ROOT
-				years = 10
+				years = 5
 			}	
 			scaled_wealth = 0.10
 		}		
@@ -1755,7 +1738,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = greedy_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3072
@@ -1780,7 +1763,7 @@ character_event = {
 			opinion = {
 				modifier = greedy_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -2105,7 +2088,7 @@ character_event = {
 			opinion = {
 				modifier = charitable_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}			
 		}
 
@@ -2272,7 +2255,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = charitable_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -2282,7 +2265,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = charitable_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 		random = {
@@ -2309,7 +2292,7 @@ character_event = {
 			opinion = {
 				modifier = charitable_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -2322,7 +2305,7 @@ character_event = {
 			opinion = {
 				modifier = charitable_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 		random = {
@@ -2376,13 +2359,7 @@ character_event = {
 		prestige = 10
 		any_courtier = {
 			limit = {
-				OR = {
-					has_job_title  = job_marshal
-					has_job_title  = job_chancellor
-					has_job_title  = job_spymaster
-					has_job_title  = job_treasurer
-					has_job_title  = job_spiritual
-				}
+				is_councillor = yes
 			}
 			opinion = {
 				modifier = slothful_neg
@@ -2496,10 +2473,6 @@ character_event = {
 		trait = slothful
 		war = no
 		in_command = no
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}
 		any_courtier = {
 			OR = {
 				has_job_title = job_treasurer
@@ -2746,7 +2719,7 @@ character_event = {
 			opinion = {
 				who = ROOT
 				modifier = diligent_pos
-				years = 2
+				years = 5
 			}
 		}
 		prestige = 10
@@ -2814,7 +2787,7 @@ character_event = {
 		opinion = {
 			who = ROOT
 			modifier = diligent_pos
-			years = 2
+			years = 5
 		}		
 		prestige = 10
 	}
@@ -3061,10 +3034,6 @@ character_event = {
 		trait = envious
 		war = no
 		in_command = no
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 		any_courtier = {
 			age = 16
 			NOT = { demesne_size = 1 }
@@ -3170,10 +3139,6 @@ character_event = {
 		trait = envious
 		war = no
 		in_command = no
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 		any_courtier = {
 			age = 16
 			NOT = { demesne_size = 1 }
@@ -3276,10 +3241,6 @@ character_event = {
 		trait = envious
 		war = no
 		in_command = no
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 		any_courtier = {
 			age = 16
 			NOT = { demesne_size = 1 }
@@ -3382,10 +3343,6 @@ character_event = {
 		trait = envious
 		war = no
 		in_command = no
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 		any_courtier = {
 			age = 16
 			NOT = { demesne_size = 1 }
@@ -3488,10 +3445,6 @@ character_event = {
 		trait = envious
 		war = no
 		in_command = no
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 		any_courtier = {
 			age = 16
 			NOT = { demesne_size = 1 }
@@ -3597,10 +3550,6 @@ character_event = {
 		war = no
 		in_command = no
 		is_married = no
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 		NOT = { num_of_children = 1 }
 		any_courtier = {
 			age = 16
@@ -3797,7 +3746,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = kind_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3162
@@ -3821,7 +3770,7 @@ character_event = {
 			opinion = {
 				modifier = kind_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -3994,7 +3943,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = kind_neg
 				who = ROOT
-				years = 1
+				years = 5
 			}
 			character_event = {
 				id = 3177
@@ -4016,13 +3965,13 @@ character_event = {
 		name = "EVTOPTA3177"
 		add_character_modifier = {
 			name = the_kind
-			duration = 730
+			duration = 365
 		}
 		FROM = {
 			opinion = {
 				modifier = kind_neg
 				who = ROOT
-				years = 1
+				years = 5
 			}
 		}
 	}
@@ -4158,7 +4107,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = wroth_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3187
@@ -4183,7 +4132,7 @@ character_event = {
 			opinion = {
 				modifier = wroth_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -4286,7 +4235,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = wroth_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3192
@@ -4301,7 +4250,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = wroth_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3193
@@ -4326,7 +4275,7 @@ character_event = {
 			opinion = {
 				modifier = wroth_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -4346,7 +4295,7 @@ character_event = {
 			opinion = {
 				modifier = wroth_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -5038,7 +4987,7 @@ character_event = {
 			opinion = {
 				modifier = proud_neg
 				who = ROOT
-				years = 1
+				years = 5
 			}
 		}
 	}
@@ -5137,7 +5086,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = proud_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3237
@@ -5161,7 +5110,7 @@ character_event = {
 			opinion = {
 				modifier = proud_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -5395,9 +5344,11 @@ character_event = {
 	option = {
 		name = "EVTOPTA3246"
 		job_spiritual = {
-			opinion = { who = ROOT modifier = talent_recognized }
-		}
-		job_spiritual = {
+			opinion = { 
+				who = ROOT 
+				modifier = talent_recognized
+				years = 5
+			}
 			letter_event = { id= 3244 tooltip = EVTTOOLTIP3244 } 
 		}
 	}
@@ -5828,10 +5779,6 @@ character_event = {
 	trigger = {
 		trait = honest
 		NOT = { trait = shy }
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 		war = no
 		in_command = no
 		any_courtier = {
@@ -6350,7 +6297,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = craven_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3307
@@ -6373,7 +6320,7 @@ character_event = {
 			opinion = {
 				modifier = craven_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -6662,7 +6609,7 @@ character_event = {
 			opinion = {
 				modifier = brave_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3322
@@ -6702,7 +6649,7 @@ character_event = {
 			opinion = {
 				modifier = brave_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -6813,6 +6760,8 @@ character_event = {
 		war = no
 		in_command = no
 		liege = {
+			war = no
+			in_command = no
 			age = 25
 			trait = brave
 			prisoner = no
@@ -6822,11 +6771,13 @@ character_event = {
 			NOT = {
 				trait = incapable
 			}
-			war = no
-			in_command = no
 		}
-		trait = craven
-		opinion = { who = liege value = 0 }
+		NOT = {
+			trait = brave
+		}
+		NOT = {
+			martial =10
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -6857,12 +6808,36 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA3335"
+		ai_chance = {
+			factor = 30
+			
+			modifier = {
+				factor = 2
+				trait = honest
+			}
+		}
 		liege = {
 			character_event = {
 				id = 3336
 				tooltip = "EVTTOOLTIP3336"
 			}
 		}
+	}
+	option = {
+		name = "EVTOPTB3335"
+		ai_chance = {
+			factor = 70
+			
+			modifier = {
+				factor = 2
+				trait = deceitful
+			}
+			modifier = {
+				factor = 0.5
+				trait = honest
+			}
+		}
+		prestige = 1
 	}
 }
 
@@ -6880,7 +6855,7 @@ character_event = {
 			opinion = {
 				modifier = brave_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -7025,7 +7000,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = shy_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3347
@@ -7049,7 +7024,7 @@ character_event = {
 			opinion = {
 				modifier = shy_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -7191,7 +7166,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = shy_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3357
@@ -7215,7 +7190,7 @@ character_event = {
 			opinion = {
 				modifier = shy_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -7367,7 +7342,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = ambitious_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3367
@@ -7391,7 +7366,7 @@ character_event = {
 			opinion = {
 				modifier = ambitious_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -7466,6 +7441,9 @@ character_event = {
 		trait = ambitious
 		war = no
 		in_command = no
+		NOT = {
+			has_character_modifier = the_merciful
+		}
 		any_courtier = {
 			NOT = {
 				trait = ambitious
@@ -7517,7 +7495,10 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTB3375"
-		piety = 10
+		add_character_modifier = {
+			name = the_merciful
+			duration = 90
+		}
 	}
 }
 
@@ -7535,7 +7516,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = ambitious_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3377
@@ -7550,7 +7531,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = ambitious_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3378
@@ -7579,7 +7560,7 @@ character_event = {
 			opinion = {
 				modifier = ambitious_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -7599,7 +7580,7 @@ character_event = {
 			opinion = {
 				modifier = ambitious_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 		random = {
@@ -7706,7 +7687,12 @@ character_event = {
 			reverse_opinion = {
 				modifier = content_pos
 				who = ROOT
-				years = 2
+				years = 5
+			}
+			hidden_tooltip = {
+				character_event = {
+					id = 3382
+				}
 			}
 		}
 	}
@@ -7720,7 +7706,12 @@ character_event = {
 			reverse_opinion = {
 				modifier = content_pos
 				who = ROOT
-				years = 2
+				years = 5
+			}
+			hidden_tooltip = {
+				character_event = {
+					id = 3382
+				}
 			}
 		}
 	}
@@ -7740,7 +7731,7 @@ character_event = {
 			opinion = {
 				modifier = content_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -7930,7 +7921,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = content_neg
 				who = ROOT
-				years = 1
+				years = 5
 			}
 			character_event = {
 				id = 3397
@@ -7955,7 +7946,7 @@ character_event = {
 			opinion = {
 				modifier = content_neg
 				who = ROOT
-				years = 1
+				years = 5
 			}
 		}
 	}
@@ -8100,7 +8091,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = arbitrary_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3407
@@ -8115,7 +8106,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = arbitrary_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3408
@@ -8140,7 +8131,7 @@ character_event = {
 			opinion = {
 				modifier = arbitrary_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -8160,7 +8151,7 @@ character_event = {
 			opinion = {
 				modifier = arbitrary_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -8308,7 +8299,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = arbitrary_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3417
@@ -8323,7 +8314,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = arbitrary_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3418
@@ -8348,7 +8339,7 @@ character_event = {
 			opinion = {
 				modifier = arbitrary_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -8368,7 +8359,7 @@ character_event = {
 			opinion = {
 				modifier = arbitrary_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -8476,7 +8467,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = just_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3422
@@ -8500,7 +8491,7 @@ character_event = {
 			opinion = {
 				modifier = just_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -8698,7 +8689,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = just_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			set_character_flag = approving_FROM
 			character_event = {
@@ -8718,7 +8709,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = just_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			set_character_flag = angry_FROM
 			character_event = {
@@ -8738,7 +8729,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = just_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			set_character_flag = glad_FROM
 			character_event = {
@@ -8788,7 +8779,7 @@ character_event = {
 			opinion = {
 				modifier = just_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -8802,7 +8793,7 @@ character_event = {
 			opinion = {
 				modifier = just_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -8951,7 +8942,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = cynical_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3442
@@ -8973,13 +8964,13 @@ character_event = {
 		name = "EVTOPTA3442"
 		add_character_modifier = {
 			name = the_cynical
-			duration = 730
+			duration = 365
 		}
 		FROM = {
 			opinion = {
 				modifier = cynical_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -9126,7 +9117,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = cynical_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3452
@@ -9150,7 +9141,7 @@ character_event = {
 			opinion = {
 				modifier = cynical_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 		random = {
@@ -9314,7 +9305,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = zealous_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3462
@@ -9338,7 +9329,7 @@ character_event = {
 			opinion = {
 				modifier = zealous_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -9513,7 +9504,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = zealous_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3472
@@ -9537,7 +9528,7 @@ character_event = {
 			opinion = {
 				modifier = zealous_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -9687,7 +9678,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = paranoid_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 			character_event = {
 				id = 3482
@@ -9712,7 +9703,7 @@ character_event = {
 			opinion = {
 				modifier = paranoid_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -9733,10 +9724,6 @@ character_event = {
 		trait = paranoid
 		war = no
 		in_command = no
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 	}
 	
 	mean_time_to_happen = {
@@ -9942,7 +9929,7 @@ character_event = {
 			opinion = {
 				modifier = paranoid_neg
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}
@@ -10148,7 +10135,7 @@ character_event = {
 		opinion = {
 			modifier = trusting_pos
 			who = FROM
-			years = 1
+			years = 5
 		}
 		FROM = {
 			character_event = {
@@ -10173,13 +10160,13 @@ character_event = {
 			opinion = {
 				modifier = trusting_pos
 				who = ROOT
-				years = 1
+				years = 5
 			}
 		}
 		opinion = {
 			modifier = trusting_pos
 			who = FROM
-			years = 2
+			years = 5
 		}
 	}
 }
@@ -10402,6 +10389,7 @@ character_event = {
 			is_abroad = no
 			prisoner = no
 			has_lover = no
+			is_pregnant = no
 			OR = {
 				trait = lustful
 				trait = hedonist
@@ -10441,7 +10429,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_spurned
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -10609,7 +10597,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_disappointed
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -10649,7 +10637,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_horrified
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -10683,7 +10671,7 @@ character_event = {
 		name = "EVTOPTB3526"
 		add_character_modifier = {
 			name = the_perturbed
-			duration = 730
+			duration = 90
 		}
 	}
 }
@@ -10704,12 +10692,15 @@ character_event = {
 				who = ROOT
 				years = 5
 			}
-			change_variable = { which = "lifestyle_celibate" value = 1 }
+			random = {
+				chance = 10
+				add_trait = celibate
+			}
 		}
 	}
 }
 
-#Celibate: Start
+### Celibate: Start ###
 character_event = {
 	id = 3530
 	desc = "EVTDESC3530"
@@ -10829,7 +10820,7 @@ character_event = {
 		name = "EVTOPTB3532"
 		add_character_modifier = {
 			name = the_idle
-			duration = 730
+			duration = 90
 		}
 	}
 	option = {
@@ -10890,7 +10881,7 @@ character_event = {
 		prestige = -10
 		add_character_modifier = {
 			name = the_flagellant
-			duration = 730
+			duration = 365
 		}
 		character_event = {
 			id = 3536
@@ -10960,9 +10951,9 @@ character_event = {
 			}
 			set_character_flag = flagellation_idol
 			character_event = {
-				id = 3537
+				id = 3538
 				days = 2
-				tooltip = "EVTTOOLTIP3537"
+				tooltip = "EVTTOOLTIPA3538"
 			}
 		}
 	}
@@ -10977,9 +10968,9 @@ character_event = {
 			}
 			set_character_flag = flagellation_idiot
 			character_event = {
-				id = 3537
+				id = 3538
 				days = 2
-				tooltip = "EVTTOOLTIP3537"
+				tooltip = "EVTTOOLTIPB3538"
 			}
 		}
 	}
@@ -11334,7 +11325,7 @@ character_event = {
 		name = "EVTOPTB3543"
 		add_character_modifier = {
 			name = the_idle
-			duration = 730
+			duration = 90
 		}
 	}
 }
@@ -11502,7 +11493,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_disappointed
 				who = ROOT
-				years = 1
+				years = 0.5
 			}
 		}
 	}
@@ -11947,7 +11938,7 @@ character_event = {
 		name = "EVTOPTA3553"
 		add_character_modifier = {
 			name = the_bibliophage
-			duration = 730
+			duration = 365
 		}
 		FROM = {
 			opinion = {
@@ -11961,7 +11952,7 @@ character_event = {
 		name = "EVTOPTB3553"
 		add_character_modifier = {
 			name = the_bookaddict
-			duration = 730
+			duration = 365
 		}
 		FROM = {
 			opinion = {
@@ -12115,7 +12106,7 @@ character_event = {
 		name = "EVTOPTC3555"
 		add_character_modifier = {
 			name = flower_power
-			duration = 730
+			duration = 30
 		}
 	}
 }
@@ -12248,7 +12239,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = opinion_angry
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -12258,7 +12249,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = opinion_forgive
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -12666,7 +12657,7 @@ character_event = {
 		name = "EVTOPTA3566"
 		add_character_modifier = {
 			name = the_naturalist
-			duration = 730
+			duration = 90
 		}
 		FROM = {
 			opinion = {
@@ -12681,7 +12672,7 @@ character_event = {
 		name = "EVTOPTB3566"
 		add_character_modifier = {
 			name = the_natural_addict
-			duration = 730
+			duration = 90
 		}
 		FROM = {
 			opinion = {
@@ -12705,7 +12696,7 @@ character_event = {
 		name = "EVTOPTA3567"
 		add_character_modifier = {
 			name = the_naturalist
-			duration = 730
+			duration = 90
 		}
 		FROM = {
 			opinion = {
@@ -12720,7 +12711,7 @@ character_event = {
 		name = "EVTOPTB3567"
 		add_character_modifier = {
 			name = the_natural_addict
-			duration = 730
+			duration = 90
 		}
 		FROM = {
 			opinion = {
@@ -12943,7 +12934,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_grateful
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}		
 	}
@@ -12981,7 +12972,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_grateful
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 	option = {
@@ -12993,12 +12984,12 @@ character_event = {
 		reverse_opinion = {
 			modifier = opinion_irritated
 			who = FROM
-			years = 10
+			years = 5
 		}
 		opinion = {
 			modifier = opinion_grateful
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 	option = {
@@ -13010,12 +13001,12 @@ character_event = {
 		reverse_opinion = {
 			modifier = opinion_irritated
 			who = FROM
-			years = 10
+			years = 5
 		}
 		opinion = {
 			modifier = opinion_grateful
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 }
@@ -13274,7 +13265,7 @@ character_event = {
 		}
 		add_character_modifier = {
 			name = intriguing_book
-			duration = 365
+			duration = 60
 		}
 	}
 	option = {
@@ -13292,7 +13283,7 @@ character_event = {
 		}
 		add_character_modifier = {
 			name = intriguing_book
-			duration = 730
+			duration = 90
 		}
 	}
 	option = {
@@ -13303,7 +13294,7 @@ character_event = {
 		clr_character_flag = generous_scholar
 		add_character_modifier = {
 			name = intriguing_book
-			duration = 365
+			duration = 60
 		}	
 	}
 }
@@ -13370,7 +13361,7 @@ character_event = {
 		name = "EVTOPTB3575"
 		add_character_modifier = {
 			name = the_pious
-			duration = 730
+			duration = 90
 		}
 	}
 }
@@ -13407,7 +13398,7 @@ character_event = {
 		name = "EVTOPTC3576" #Ignore
 		add_character_modifier = {
 			name = the_curious #Replace and use modifier somewhere else
-			duration = 730
+			duration = 90
 		}
 	}
 }
@@ -13533,7 +13524,7 @@ character_event = {
 	}
 }
 
-#Mystic: Alchemy - Start
+### Mystic: Alchemy - Start ###
 character_event = {
 	id = 3585
 	desc = "EVTDESC3585"
@@ -13548,10 +13539,6 @@ character_event = {
 		trait = mystic
 		war = no
 		in_command = no
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 		OR = {
 			trait = quick
 			trait = genius
@@ -13588,16 +13575,16 @@ character_event = {
 		name = "EVTOPTA3585"
 		set_character_flag = fiddle_alchemy
 		character_event = {
-			id = 3585
-			tooltip = "EVTTOOLTIPA3585"
+			id = 3586
+			tooltip = "EVTTOOLTIPA3586"
 		}
 	}
 	option = {
 		name = "EVTOPTB3585"
 		set_character_flag = research_alchemy
 		character_event = {
-			id = 3585
-			tooltip = "EVTTOOLTIPB3585"
+			id = 3586
+			tooltip = "EVTTOOLTIPB3586"
 		}
 	}
 	option = {
@@ -13732,7 +13719,7 @@ character_event = {
 	}
 }
 
-#Mystic: Cure for illness - Start
+### Mystic: Cure for illness - Start ###
 character_event = {
 	id = 3590
 	desc = "EVTDESC3590"
@@ -14029,7 +14016,9 @@ character_event = {
 				}
 			}
 			5 = {
-				death = { death_reason = death_trait }
+				death = {
+					death_reason = death_trait
+				}
 				FROM = {
 					character_event = {
 						id = 3597
@@ -14110,7 +14099,7 @@ character_event = {
 
 ### IMPALER ###
 
-#Impaler: New torture equipment - Start
+### Impaler: New torture equipment - Start ###
 character_event = {
 	id = 3600
 	desc = "EVTDESC3600"
@@ -14175,7 +14164,7 @@ character_event = {
 		name = "EVTOPTB3600"
 		prestige = -10
 		random = {
-			chance = 25
+			chance = 10
 			
 			add_trait = depressed
 			hidden_tooltip = {
@@ -14223,7 +14212,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA3601"		
+		name = "EVTOPTA3601"
 		trigger = {
 			FROM = {
 				spouse = {
@@ -14243,9 +14232,9 @@ character_event = {
 				years = 5
 			}
 			character_event = {
-				id = 3603
+				id = 3602
 				days = 2
-				tooltip = "EVTTOOLTIP3603"
+				tooltip = "EVTTOOLTIP3602"
 			}
 		}
 	}
@@ -14270,20 +14259,14 @@ character_event = {
 				years = 5
 			}
 			character_event = {
-				id = 3604
+				id = 3603
 				days = 2
-				tooltip = "EVTTOOLTIP3604"
+				tooltip = "EVTTOOLTIP3603"
 			}
 		}
 	}
 	option = {
 		name = "EVTOPTC3601"
-		trigger = {
-			NOT = {
-				trait = depressed
-				trait = stressed
-			}		
-		}
 		add_trait = stressed
 	}
 	option = {
@@ -14309,9 +14292,9 @@ character_event = {
 				years = 5
 			}
 			character_event = {
-				id = 3603
+				id = 3602
 				days = 2
-				tooltip = "EVTTOOLTIP3603"
+				tooltip = "EVTTOOLTIP3602"
 			}
 		}
 	}
@@ -14338,9 +14321,9 @@ character_event = {
 				years = 5
 			}
 			character_event = {
-				id = 3604
+				id = 3603
 				days = 2
-				tooltip = "EVTTOOLTIP3604"
+				tooltip = "EVTTOOLTIP3603"
 			}
 		}
 	}
@@ -14406,7 +14389,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_furious
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -14429,7 +14412,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_furious
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -14493,7 +14476,7 @@ character_event = {
 	}
 }
 
-#Impaler: Gain intrigue
+### Impaler: Gain intrigue ###
 character_event = {
 	id = 3605
 	desc = "EVTDESC3605"
@@ -14745,7 +14728,7 @@ character_event = {
 	}
 }
 
-#Impaler: Start
+### Impaler: Start ###
 character_event = {
 	id = 3610
 	desc = "EVTDESC3610"
@@ -14890,7 +14873,7 @@ character_event = {
 		}
 		add_character_modifier = {
 			name = house_arrest
-			duration = 730
+			duration = 90
 		}
 	}
 	option = {
@@ -15010,7 +14993,7 @@ character_event = {
 	}
 }
 
-#Impaler: Start
+### Impaler: Start ###
 character_event = {
 	id = 3615
 	desc = "EVTDESC3615"
@@ -15361,7 +15344,7 @@ character_event = {
 
 ### DUELIST ###
 
-#Duelist: Gain martial
+### Duelist: Gain martial ###
 character_event = {
 	id = 3620
 	desc = "EVTDESC3620"
@@ -15614,7 +15597,7 @@ character_event = {
 	}
 }
 
-#Duelist: Start
+### Duelist: Start ###
 character_event = {
 	id = 3625
 	desc = "EVTDESC3625"
@@ -15728,7 +15711,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_coward
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -15762,7 +15745,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_glad
 				who = ROOT
-				years = 10
+				years = 5
 			}
 			if = {
 				limit = {
@@ -15947,7 +15930,7 @@ character_event = {
 		name = "EVTOPTB3626" #Never!
 		add_character_modifier = {	
 			name = the_fainthearted
-			duration = 730
+			duration = 365
 		}
 		FROM = {
 			character_event = {
@@ -16021,7 +16004,7 @@ character_event = {
 	}
 }
 
-#Duelist: Start
+### Duelist: Start ###
 character_event = {
 	id = 3630
 	desc = "EVTDESC3630"
@@ -16129,7 +16112,7 @@ character_event = {
 				opinion = {
 					modifier = opinion_glad
 					who = ROOT
-					years = 10
+					years = 5
 				}
 			}
 		}
@@ -16205,7 +16188,7 @@ character_event = {
 		name = "EVTOPTA3633"
 		add_character_modifier = {
 			name = the_dour_duellist
-			duration = 730
+			duration = 365
 		}
 		FROM = {
 			opinion = {
@@ -16219,7 +16202,7 @@ character_event = {
 		name = "EVTOPTB3633"
 		add_character_modifier = {
 			name = averted_duel
-			duration = 730
+			duration = 365
 		}
 		FROM = {
 			opinion = {
@@ -16231,7 +16214,7 @@ character_event = {
 	}
 }
 
-#Duelist: The unusual duel - Start
+### Duelist: The unusual duel - Start ###
 character_event = {
 	id = 3635
 	desc = "EVTDESC3635"
@@ -16438,7 +16421,7 @@ character_event = {
 		name = "EVTOPTB3637" #Refuse
 		add_character_modifier = {
 			name = averted_duel
-			duration = 730
+			duration = 365
 		}
 	}		
 }
@@ -16460,7 +16443,7 @@ character_event = {
 			50 = {
 				add_character_modifier = {
 					name = master_duelist
-					duration = 730
+					duration = 365
 				}
 			}
 		}
@@ -16469,7 +16452,7 @@ character_event = {
 		name = "EVTOPTB3638" #Refuse
 		add_character_modifier = {
 			name = averted_duel
-			duration = 730
+			duration = 365
 		}
 	}		
 }
@@ -16496,21 +16479,21 @@ character_event = {
 		}
 		add_character_modifier = {
 			name = master_duelist
-			duration = 730
+			duration = 365
 		}
 	}
 	option = {
 		name = "EVTOPTB3639" #Refuse
 		add_character_modifier = {
 			name = averted_duel
-			duration = 730
+			duration = 365
 		}
 	}		
 }
 
 ### HUNTER ###
 
-#Hunter: Gain martial
+### Hunter: Gain martial ###
 character_event = {
 	id = 3640
 	desc = "EVTDESC3640"
@@ -16627,7 +16610,7 @@ character_event = {
 		random = {
 			chance = 20
 			
-			remove_trait = duelist
+			remove_trait = hunter
 			hidden_tooltip = {
 				character_event = {
 					id = 38293 #Notify
@@ -16752,7 +16735,7 @@ character_event = {
 	}
 }
 
-#Hunter: Invite for hunt - Start
+### Hunter: Invite for hunt - Start ###
 character_event = {
 	id = 3645
 	desc = "EVTDESC3645"
@@ -16926,7 +16909,7 @@ character_event = {
 			}
 			character_event = {
 				id = 3648
-				days = 1
+				days = 5
 				tooltip = "EVTTOOLTIP3648"
 			}
 		}
@@ -17028,7 +17011,7 @@ character_event = {
 	}
 }
 
-#Hunter
+### Hunter ###
 character_event = {
 	id = 3650
 	desc = "EVTDESC3650"
@@ -17281,7 +17264,7 @@ character_event = {
 		treasury = 10
 		add_character_modifier = {
 			name = the_idle
-			duration = 730
+			duration = 365
 		}
 	}
 }
@@ -17380,7 +17363,7 @@ character_event = {
 			trait = wroth
 		}
 		FROM = {
-			imprison = yes
+			prisoner = yes
 		}
 	}
 	option = {
@@ -17388,12 +17371,12 @@ character_event = {
 		treasury = 10
 		add_character_modifier = {
 			name = the_idle
-			duration = 730
+			duration = 365
 		}
 	}
 }
 
-#Hunter: The Deceit - Start
+### Hunter: The Deceit - Start ###
 character_event = {
 	id = 3655
 	desc = "EVTDESC3655"
@@ -17715,9 +17698,9 @@ character_event = {
 	}
 }
 
-### POET ###
+###### POET ######
 
-#Poet: Gain diplomacy
+### Poet: Gain diplomacy ###
 character_event = {
 	id = 3660
 	desc = "EVTDESC3660"
@@ -17781,7 +17764,6 @@ character_event = {
 			has_nickname = nick_the_troubadour
 		}
 		new_character = {
-			character_event = { id = 300001 }	
 			set_character_flag = pressured_poet
 			character_event = {
 				id = 3661
@@ -17802,7 +17784,6 @@ character_event = {
 			has_nickname = nick_the_troubadour
 		}
 		new_character = {
-			character_event = { id = 300001 }		
 			set_character_flag = asked_poet
 			character_event = {
 				id = 3661
@@ -17823,7 +17804,6 @@ character_event = {
 			has_nickname = nick_the_troubadour
 		}
 		new_character = {
-			character_event = { id = 300001 }	
 			set_character_flag = bribed_poet
 			character_event = {
 				id = 3661
@@ -17961,14 +17941,14 @@ character_event = {
 	}
 }
 
-#Poet: Entertain the court
+### Poet: Entertain the court ###
 character_event = {
 	id = 3665
 	desc = "EVTDESC3665"
 	picture = GFX_evt_emissary
 	
 	min_age = 20
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	
 	is_triggered_only = yes
@@ -18012,7 +17992,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_upset
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		if = {
@@ -18045,7 +18025,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_approves
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		if = {
@@ -18063,14 +18043,14 @@ character_event = {
 	}
 }
 
-#Poet: Courtier asks for a poem
+### Poet: Courtier asks for a poem ###
 character_event = {
 	id = 3675
 	desc = "EVTDESC3675"
 	picture = GFX_evt_courtiers_talking
 	
 	min_age = 20
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	
 	is_triggered_only = yes
@@ -18116,7 +18096,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_grateful
 				who = ROOT
-				years = 10
+				years = 5
 			}
 			hidden_tooltip = {
 				add_character_modifier = {
@@ -18185,7 +18165,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_mildly_disappointed
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -18204,7 +18184,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_disappointed
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -18279,7 +18259,7 @@ character_event = {
 		reverse_opinion = {
 			modifier = opinion_forgive
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 	option = {
@@ -18288,19 +18268,19 @@ character_event = {
 		reverse_opinion = {
 			modifier = opinion_glad
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 }
 
-#Poet: Courtier might claim liege's poem is his/hers!
+### Poet: Courtier might claim liege's poem is his/hers! ###
 character_event = {
 	id = 3680
 	desc = "EVTDESC3680"
 	picture = GFX_evt_scandal
 	
 	min_age = 20
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	only_men = yes
 	
@@ -18446,11 +18426,6 @@ character_event = {
 			}
 		}
 		FROM = {
-			opinion = {
-				who = ROOT
-				modifier = opinion_arrest_attempt
-				months = 240
-			}		
 			imprison = ROOT
 		}
 		hidden_tooltip = {
@@ -18472,11 +18447,6 @@ character_event = {
 			}
 		}
 		FROM = {
-			opinion = {
-				who = ROOT
-				modifier = opinion_arrest_attempt
-				months = 240
-			}		
 			imprison = ROOT
 		}
 		hidden_tooltip = {
@@ -18494,7 +18464,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_forgive
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 }
@@ -18535,7 +18505,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_dislike
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 	option = {
@@ -18548,19 +18518,19 @@ character_event = {
 		opinion = {
 			modifier = opinion_dislike
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 }
 
-#I have lost my inspiration
+### I have lost my inspiration ###
 character_event = {
 	id = 3685
 	desc = "EVTDESC3685"
 	picture = GFX_evt_recieve_letter
 	
 	min_age = 20
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -18778,7 +18748,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_disgusted
 			who = FROM
-			years = 10
+			years = 5
 		}
 		hidden_tooltip = {
 			FROM = {
@@ -18818,20 +18788,20 @@ character_event = {
 			opinion = {
 				modifier = opinion_disgusted
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		opinion = {
 			modifier = opinion_sad
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 }
 
-### FALCONER ###
+###### FALCONER ######
 
-#Falconer: Bring-your-kids-to-hunt-day
+#### Falconer: Bring-your-kids-to-hunt-day ###
 character_event = {
 	id = 3690
 	desc = "EVTDESC3690"
@@ -18839,7 +18809,7 @@ character_event = {
 	
 	min_age = 20
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -18890,7 +18860,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_disappointed
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		random_child = {
@@ -18914,7 +18884,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_angry
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		random_child = {
@@ -18971,7 +18941,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_glad
 			who = FROM
-			years = 10
+			years = 5
 		}
 		FROM = {
 			random_list = {
@@ -19009,7 +18979,7 @@ character_event = {
 		reverse_opinion = {
 			modifier = opinion_disappointed
 			who = FROM
-			years = 10
+			years = 5
 		}
 		FROM = {
 			character_event = {
@@ -19033,7 +19003,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_disappointed
 			who = FROM
-			years = 10
+			years = 5
 		}
 		FROM = {
 			random_list = {
@@ -19071,7 +19041,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_disappointed
 			who = FROM
-			years = 10
+			years = 5
 		}
 		FROM = {
 			character_event = {
@@ -19107,7 +19077,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_glad
 				who = ROOT
-				years = 10
+				years = 5
 			}
 			change_martial = 1
 		}
@@ -19138,7 +19108,7 @@ character_event = {
 			reverse_opinion = {
 				modifier = opinion_disappointed
 				who = ROOT
-				years = 10
+				years = 5
 			}
 			if = {
 				limit = {
@@ -19195,7 +19165,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_happy
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -19223,7 +19193,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_sad
 				who = ROOT
-				years = 10
+				years = 5
 			}
 			change_learning = 1
 		}
@@ -19258,12 +19228,12 @@ character_event = {
 		opinion = {
 			modifier = opinion_disappointed
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 }
 
-#Falconer: Courtier asks for help with bird
+### Falconer: Courtier asks for help with bird ###
 character_event = {
 	id = 3700
 	desc = "EVTDESC3700"
@@ -19271,7 +19241,7 @@ character_event = {
 	
 	min_age = 20
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	only_rulers = yes
 	
 	is_triggered_only = yes
@@ -19325,7 +19295,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_happy
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		random_list = {
@@ -19367,7 +19337,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_glad
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		random_list = {
@@ -19421,7 +19391,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_delighted
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		random_list = {
@@ -19462,7 +19432,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_friend
 				who = ROOT
-				years = 100
+				years = 5
 			}
 			set_character_flag = deceitful_falconer
 		}
@@ -19711,11 +19681,6 @@ character_event = {
 			limit = {
 				has_character_flag = deceitful_falconer
 			}
-			opinion = {
-				who = ROOT
-				modifier = opinion_arrest_attempt
-				months = 240
-			}			
 			imprison = ROOT
 			hidden_tooltip = {
 				character_event = {
@@ -19781,7 +19746,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_liar
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 	option = {
@@ -19793,7 +19758,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_irritated
 			who = FROM
-			years = 10
+			years = 5
 		}
 	}
 }
@@ -19818,7 +19783,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_sad
 			who = FROM
-			years = 8
+			years = 5
 		}
 	}
 	option = {
@@ -19833,7 +19798,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_angry
 			who = FROM
-			years = 8
+			years = 5
 		}
 	}
 	option = {
@@ -19845,7 +19810,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_sad
 			who = FROM
-			years = 8
+			years = 5
 		}
 	}
 	option = {
@@ -19858,7 +19823,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_disappointed
 			who = FROM
-			years = 8
+			years = 5
 		}
 	}
 }
@@ -19877,7 +19842,7 @@ character_event = {
 		reverse_opinion = {
 			modifier = opinion_angry
 			who = FROM
-			years = 8
+			years = 5
 		}
 	}
 }
@@ -19895,9 +19860,24 @@ character_event = {
 		opinion = {
 			modifier = opinion_grateful
 			who = FROM
-			years = 8
+			years = 5
 		}
-		change_variable = { which = "lifestyle_falconer" value = 1 }
+		hidden_tooltip = {
+			if = {
+				limit = {
+					in_command = no
+					war = no
+					martial = 8
+					NOT = {
+						lifestyle_traits = 1
+					}
+					NOT = {
+						has_character_flag = LE_ST
+					}
+				}
+				add_trait = falconer
+			}
+		}
 	}
 }
 
@@ -19911,7 +19891,7 @@ character_event = {
 	
 	prisoner = no
 	only_rulers = yes
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -19975,7 +19955,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_upset
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -20057,13 +20037,13 @@ character_event = {
 		opinion = {
 			modifier = opinion_glad
 			who = FROM
-			years = 8
+			years = 5
 		}
 		FROM = {
 			opinion = {
 				modifier = opinion_convinced
 				who = ROOT
-				years = 4
+				years = 5
 			}
 		}
 	}
@@ -20076,18 +20056,18 @@ character_event = {
 	picture = GFX_evt_guardian
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
 	trigger = {
 		trait = gregarious
 		war = no
-		in_command = no		
+		in_command = no
 		any_child = {
 			is_abroad = no
 			prisoner = no
-			trait = shy			
+			trait = shy
 		}
 	}
 	
@@ -20114,7 +20094,7 @@ character_event = {
 			limit = {
 				is_abroad = no
 				prisoner = no
-				trait = shy				
+				trait = shy
 			}
 			random_list = {
 				25 = {
@@ -20217,7 +20197,7 @@ character_event = {
 					opinion = {
 						modifier = opinion_unhappy
 						who = ROOT
-						years = 10
+						years = 5
 					}
 				}
 				20 = {
@@ -20269,7 +20249,7 @@ character_event = {
 	
 	prisoner = no
 	only_rulers = yes
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -20381,7 +20361,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_upset
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 	}
@@ -20400,7 +20380,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_grateful
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		if = {
@@ -20510,7 +20490,7 @@ character_event = {
 		reverse_opinion = {
 			modifier = opinion_insulted
 			who = FROM
-			years = 8
+			years = 5
 		}
 	}
 	option = {
@@ -20523,7 +20503,7 @@ character_event = {
 		opinion = {
 			modifier = opinion_grateful
 			who = FROM
-			years = 8
+			years = 5
 		}
 	}
 }
@@ -20536,7 +20516,7 @@ character_event = {
 	
 	only_rulers = yes
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -20544,10 +20524,6 @@ character_event = {
 		war = no
 		in_command = no
 		trait = gregarious
-		NOT = {
-			trait = depressed
-			trait = stressed
-		}		
 		OR = {
 			tier = duke
 			tier = king
@@ -20576,7 +20552,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_lost_respect
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		if = {
@@ -20608,7 +20584,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_gained_respect
 				who = ROOT
-				years = 10
+				years = 5
 			}
 		}
 		random = {

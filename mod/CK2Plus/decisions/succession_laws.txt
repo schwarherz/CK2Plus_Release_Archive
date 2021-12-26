@@ -16,14 +16,8 @@ succession_laws = {
 				}
 				holder_scope = { is_feudal = yes }
 			}
-			OR = {
-				is_primary_type_title = no
-				title = e_sunni
-				title = e_shiite
-				title = e_golden_horde
-				title = e_il-khanate
-				title = e_timurids				
-			}
+			holder_scope = { NOT = { religion_group = muslim } }
+			is_landless_type_title = no
 			NOT = { tier = baron }
 		}
 		allow = {
@@ -43,7 +37,13 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}		
 	}
 	
 	succ_seniority = {
@@ -59,14 +59,7 @@ succession_laws = {
 				}
 				holder_scope = { is_feudal = yes }
 			}
-			OR = {
-				is_primary_type_title = no
-				title = e_sunni
-				title = e_shiite
-				title = e_golden_horde
-				title = e_il-khanate
-				title = e_timurids
-			}
+			is_landless_type_title = no
 			NOT = { tier = baron }
 		}
 		allow = {
@@ -90,6 +83,20 @@ succession_laws = {
 						has_law = centralization_4
 					}
 				}
+			}
+			OR = {
+				holder_scope = { ai = no }
+				holder_scope = {
+					religion_group = christian
+					NOT = { current_heir = { father = { character = PREVPREV } } }
+					NOT = { current_heir = { mother = { character = PREVPREV } } }
+					NOT = { current_heir = { any_sibling = { character = PREVPREV } } }
+					age = 45
+					OR = {
+						trait = humble
+						trait = trusting
+					}					
+				}				
 			}			
 		}
 		
@@ -98,21 +105,20 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
+		ai_will_do = {
+			factor = 1			
+		}
+		ai_will_revoke = {
+			factor = 0
+		}		
 	}
 	
 	succ_primogeniture = {
 		oldest_child_opinion = 30
 		child_opinion = -20
 		potential = {		
-			OR = {
-				is_primary_type_title = no
-				title = e_sunni
-				title = e_shiite
-				title = e_golden_horde
-				title = e_il-khanate
-				title = e_timurids
-			}
+			is_landless_type_title = no
 			OR = {
 				AND = {
 					tier = baron
@@ -141,7 +147,21 @@ succession_laws = {
 						has_law = centralization_4
 					}
 				}
-			}			
+			}
+			OR = {
+				holder_scope = { ai = no }
+				holder_scope = {
+					any_child = {
+						is_female = no
+						age = 16
+					}				
+					age = 45
+					OR = {
+						trait = proud
+						trait = ambitious
+					}					
+				}				
+			}
 		}		
 		
 		effect = {
@@ -149,7 +169,13 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
+		ai_will_do = {
+			factor = 1			
+		}
+		ai_will_revoke = {
+			factor = 0
+		}		
 	}
 
 	succ_feudal_elective = {
@@ -158,23 +184,38 @@ succession_laws = {
 		dynasty_opinion = -10
 		potential = {
 			is_titular = no
-			OR = {
-				is_primary_type_title = no
-				title = e_sunni
-				title = e_shiite
-				title = e_golden_horde
-				title = e_il-khanate
-				title = e_timurids
-			}
+			is_landless_type_title = no
 			NOT = { tier = baron }
 			holder_scope = { is_feudal = yes }
+		}
+		allow = {
+			OR = {
+				holder_scope = { ai = no }
+				holder_scope = {
+					religion_group = christian
+					NOT = { current_heir = { father = { character = PREVPREV } } }
+					NOT = { current_heir = { mother = { character = PREVPREV } } }
+					NOT = { current_heir = { any_sibling = { character = PREVPREV } } }
+					age = 45
+					OR = {
+						trait = charitable
+						trait = just
+					}					
+				}				
+			}		
 		}
 		effect = {
 			succession = feudal_elective
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
+		ai_will_do = {
+			factor = 1						
+		}
+		ai_will_revoke = {
+			factor = 0
+		}		
 	}
 
 	succ_turkish_succession = {
@@ -186,14 +227,7 @@ succession_laws = {
 				is_feudal = yes 
 			}
 			holder_scope = { religion_group = muslim }			
-			OR = {
-				is_primary_type_title = no
-				title = e_sunni
-				title = e_shiite
-				title = e_golden_horde
-				title = e_il-khanate
-				title = e_timurids
-			}
+			is_landless_type_title = no
 			NOT = { tier = baron }			
 		}
 		allow = {
@@ -206,14 +240,20 @@ succession_laws = {
 						has_law = centralization_4
 					}
 				}
-			}		
+			}	
 		}
 		effect = {
 			succession = turkish_succession
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}		
 	}
 	succ_open_elective = {
 		potential = {
@@ -223,7 +263,6 @@ succession_laws = {
 			NOT = { title = e_il-khanate }
 			NOT = { title = e_timurids }		
 			OR = {
-				is_primary_type_title = yes
 				is_landless_type_title = yes
 				AND = {
 					tier = baron
@@ -284,22 +323,31 @@ gender_laws = {
 				holder_scope = { is_feudal = yes }
 			}
 			
-			OR = {
-				is_primary_type_title = no
-				title = e_sunni
-				title = e_shiite
-				title = e_golden_horde
-				title = e_il-khanate
-				title = e_timurids
-			}
+			is_landless_type_title = no
 			NOT = { holder_scope = { religion_group = muslim }  }
+		}
+		allow = {
+			OR = {
+				holder_scope = { ai = no }
+				holder_scope = {
+					age = 45
+					NOT = { any_child = { is_female = no } }
+					NOT = { any_sibling = { is_female = no } }
+				}
+			}
 		}
 		effect = {
 			gender_succ = cognatic
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
+		ai_will_do = {
+			factor = 1			
+		}
+		ai_will_revoke = {
+			factor = 0
+		}		
 	}
 	agnatic_succession = {
 		female_dynasty_opinion = -10
@@ -310,13 +358,27 @@ gender_laws = {
 		}
 		allow = {
 			has_law = cognatic_succession
+			OR = {
+				holder_scope = { ai = no }
+				holder_scope = {
+					age = 45
+					NOT = { any_child = { is_female = yes } }
+					NOT = { any_sibling = { is_female = yes } }
+				}
+			}
 		}
 		effect = {
 			gender_succ = agnatic
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}	
+		ai_will_do = {
+			factor = 1			
+		}
+		ai_will_revoke = {
+			factor = 0
+		}		
 	}
 	true_cognatic_succession = {
 		male_dynasty_opinion = -10
@@ -331,14 +393,7 @@ gender_laws = {
 				holder_scope = { is_feudal = yes }
 			}
 			
-			OR = {
-				is_primary_type_title = no
-				title = e_sunni
-				title = e_shiite
-				title = e_golden_horde
-				title = e_il-khanate
-				title = e_timurids
-			}
+			is_landless_type_title = no
 			NOT = { holder_scope = { religion_group = muslim }  }
 		}
 		allow = {
@@ -349,6 +404,12 @@ gender_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}		
 	}
 }

@@ -1032,7 +1032,6 @@
 	stewardship=5
 	religion="catholic"
 	culture="italian"
-	add_trait="crown_loyalist"
 	add_trait="honest"
 	add_trait="misguided_warrior"
 	father=71285
@@ -1069,12 +1068,12 @@
 		birth="1022.1.1"
 	}
 	1073.4.21 = {
-	name="Gregory"
-	# AKA: Hildebrand
+		name="Gregory"
+		# AKA: Hildebrand
 	}
 	1085.5.25 = {
+		give_nickname=nick_the_saint
 		death="1085.5.25"
-	give_nickname=nick_the_saint
 	}
 }
 
@@ -2590,7 +2589,7 @@
 220331 = {
 	name="Simone"
 	female=yes
-	dynasty=100997
+	#dynasty=100997
 	martial=8
 	diplomacy=8
 	intrigue=4
@@ -2960,7 +2959,7 @@
 	religion="catholic"
 	culture="italian"
 	father=212513
-	mother=103003
+	#mother=103003
 	1236.1.1 = {
 		birth="1236.1.1"
 	}
@@ -4107,7 +4106,7 @@
 	1319.1.1 = {
 		add_spouse=70814
 	}
-	13506.4.20 = {
+	1356.4.20 = {
 		death="1356.4.20"
 	}
 }
@@ -4389,7 +4388,7 @@
 420331 = {
 	name="Simone"
 	female=yes
-	dynasty=100997
+	#dynasty=100997
 	martial=8
 	diplomacy=8
 	intrigue=4
@@ -6330,12 +6329,11 @@
 	add_trait="wroth"
 	add_trait="misguided_warrior"
 	father=70633
-	
 	1010.1.1 = {
 		birth="1010.1.1"
 	}
 	1029.1.1 = {
-	employer=1118
+		employer=1118
 	}
 	1084.1.1 = {
 		death="1084.1.1"
@@ -6355,7 +6353,6 @@
 	add_trait="duelist"
 	add_trait="skilled_tactician"
 	father=70634
-	
 	1058.1.1 = {
 		birth="1058.1.1"
 	}
@@ -7271,7 +7268,6 @@
 	add_trait="diligent"
 	add_trait="falconer"
 	add_trait="thrifty_clerk"
-	
 	1265.1.1 = {
 		birth="1265.1.1"
 	}
@@ -9075,7 +9071,6 @@
 	stewardship=4
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="strong"
 	add_trait="tough_soldier"
 	father=70758
@@ -9103,7 +9098,6 @@
 	stewardship=4
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="content"
 	add_trait="flamboyant_schemer"
 	father=70753
@@ -9124,7 +9118,6 @@
 	stewardship=7
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="deceitful"
 	add_trait="scholarly_theologian"
 	father=70753
@@ -9146,7 +9139,6 @@
 	stewardship=4
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="gregarious"
 	add_trait="intricate_webweaver"
 	father=70753
@@ -9168,7 +9160,6 @@
 	stewardship=4
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="scholar"
 	add_trait="scholarly_theologian"
 	father=70757
@@ -9191,7 +9182,6 @@
 	stewardship=4
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="gregarious"
 	add_trait="indulgent_wastrel"
 	father=70753
@@ -9212,7 +9202,6 @@
 	stewardship=4
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="wroth"
 	add_trait="grey_eminence"
 	father=70764
@@ -9240,7 +9229,6 @@
 	stewardship=4
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="humble"
 	add_trait="amateurish_plotter"
 	father=70764
@@ -9268,7 +9256,6 @@
 	stewardship=5
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="gregarious"
 	add_trait="misguided_warrior"
 	father=70766
@@ -9290,7 +9277,6 @@
 	stewardship=6
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="quick"
 	add_trait="thrifty_clerk"
 	father=70752
@@ -9358,7 +9344,6 @@
 	add_trait="hunter"
 	add_trait="indulgent_wastrel"
 	father=70769
-	
 	1214.1.1 = {
 		birth="1214.1.1"
 	}
@@ -9382,8 +9367,7 @@
 	culture="italian"
 	add_trait="gregarious"
 	add_trait="imbecile"
-	add_trait="thrify_clerk"
-	
+	add_trait="thrifty_clerk"
 	1216.1.1 = {
 		birth="1216.1.1"
 	}
@@ -9527,10 +9511,9 @@
 	culture="italian"
 	add_trait="patient"
 	add_trait="lisp"
-	add_trait="martial-clericr"
+	add_trait="martial_cleric"
 	father=70776
 	mother=70777
-	
 	1252.1.1 = {
 		birth="1252.1.1"
 	}
@@ -9666,7 +9649,6 @@
 	add_trait="intricate_webweaver"
 	father=463145
 	mother=70782
-	
 	1282.1.1 = {
 		birth="1282.1.1"
 	}
@@ -9736,8 +9718,7 @@
 	culture="italian"
 	add_trait="diligent"
 	add_trait="cynical"
-	add_trait="charismatic_megotiator"
-	
+	add_trait="charismatic_negotiator"
 	1302.1.1 = {
 		birth="1302.1.1"
 	}
@@ -9757,7 +9738,7 @@
 	religion="catholic"
 	culture="italian"
 	add_trait="lustful"
-	add_trait="genious"
+	add_trait="genius"
 	add_trait="flamboyant_schemer"
 	father=463147
 	mother=70786
@@ -10103,9 +10084,8 @@
 	culture="italian"
 	add_trait="arbitrary"
 	add_trait="slothful"
-	add_trait="underhanded_rouge"
+	add_trait="underhanded_rogue"
 	father=70802
-	
 	1292.1.1 = {
 		birth="1292.1.1"
 	}
@@ -10113,7 +10093,7 @@
 		add_spouse=70792
 	}
 	1320.1.1 = {
-	remove_spouse=70792
+		remove_spouse=70792
 		add_spouse=70804
 	}
 	1325.1.1 = {
@@ -10423,9 +10403,8 @@
 	religion="catholic"
 	culture="italian"
 	add_trait="dwarf"
-	add_trait="evious"
+	add_trait="envious"
 	add_trait="flamboyant_schemer"
-	
 	1305.1.1 = {
 		birth="1305.1.1"
 	}
@@ -10586,10 +10565,9 @@
 	culture="italian"
 	add_trait="strong"
 	add_trait="slow"
-	add_trait="naive_appeaer"
+	add_trait="naive_appeaser"
 	father=413028
 	mother=70818
-	
 	1336.1.1 = {
 		birth="1336.1.1"
 	}
@@ -10692,9 +10670,7 @@
 	stewardship=4
 	religion="catholic"
 	culture="italian"
-	add_trait="church_loyalist"
 	add_trait="mystic"
-	add_trait="church_loyalist"
 	add_trait="scholarly_theologian"
 	father=70757
 	
@@ -10717,7 +10693,6 @@
 	culture="italian"
 	add_trait="falconer"
 	add_trait="cynical"
-	add_trait="church_loyalist"
 	add_trait="misguided_warrior"
 	
 	father=20330
@@ -10741,7 +10716,6 @@
 	culture="italian"
 	add_trait="ambitious"
 	add_trait="just"
-	add_trait="church_loyalist"
 	add_trait="charismatic_negotiator"
 	father=70839
 	
@@ -10767,7 +10741,6 @@
 	add_trait="humble"
 	add_trait="trusting"
 	add_trait="ambitious"
-	add_trait="church_loyalist"
 	add_trait="scholorly_theologian"
 	father=70840
 	
@@ -10794,7 +10767,6 @@
 	culture="italian"
 	add_trait="ambitious"
 	add_trait="wroth"
-	add_trait="church_loyalist"
 	add_trait="skilled_tactician"
 	father=70840
 	
@@ -10817,7 +10789,6 @@
 	culture="italian"
 	add_trait="stutter"
 	add_trait="slow"
-	add_trait="church_loyalist"
 	add_trait="misguided_warrior"
 	father=70842
 	
@@ -10865,7 +10836,6 @@
 	culture="italian"
 	add_trait="ambitious"
 	add_trait="quick"
-	add_trait="church_loyalist"
 	add_trait="naive_appeaser"
 	father=70843
 	mother=70844
@@ -10889,7 +10859,6 @@
 	culture="italian"
 	add_trait="ambitious"
 	add_trait="proud"
-	add_trait="church_loyalist"
 	add_trait="charismatic_negotiator"
 	father=70845
 	1178.1.1 = {
@@ -10986,7 +10955,6 @@
 	culture="italian"
 	add_trait="content"
 	add_trait="quick"
-	add_trait="church_loyalist"
 	add_trait="naive_appeaser"
 	father=70846
 	mother=70847
@@ -11018,7 +10986,6 @@
 	add_trait="quick"
 	add_trait="proud"
 	add_trait="temperate"
-	add_trait="church_loyalist"
 	add_trait="mastermind_theologian"
 	father=70846
 	mother=70847
@@ -11046,8 +11013,7 @@
 	culture="italian"
 	add_trait="envious"
 	add_trait="slow"
-	add_trait="church_loyalist"
-	add_trait="indulgent_wrastrel"
+	add_trait="indulgent_wastrel"
 	father=70846
 	mother=70847
 	1206.1.1 = {
@@ -11069,7 +11035,6 @@
 	culture="italian"
 	add_trait="strong"
 	add_trait="quick"
-	add_trait="church_loyalist"
 	add_trait="tough_soldier"
 	father=70846
 	mother=70847
@@ -11092,7 +11057,6 @@
 	culture="italian"
 	add_trait="ambitious"
 	add_trait="quick"
-	add_trait="church_loyalist"
 	add_trait="charismatic_negotiator"
 	father=70846
 	mother=70847
@@ -11116,7 +11080,6 @@
 	culture="italian"
 	add_trait="ambitious"
 	add_trait="cynical"
-	add_trait="church_loyalist"
 	add_trait="amateurish_plotter"
 	father=70854
 	
@@ -11139,7 +11102,6 @@
 	culture="italian"
 	add_trait="deceitful"
 	add_trait="lustful"
-	add_trait="church_loyalist"
 	add_trait="charismatic_negotiator"
 	father=70855
 	
@@ -11174,7 +11136,6 @@
 	culture="italian"
 	add_trait="content"
 	add_trait="quick"
-	add_trait="church_loyalist"
 	add_trait="amateurish_plotter"
 	father=70855
 	
@@ -11198,7 +11159,6 @@
 	culture="italian"
 	add_trait="greedy"
 	add_trait="envious"
-	add_trait="church_loyalist"
 	add_trait="flamboyant_schemer"
 	father=70855
 	
@@ -14539,7 +14499,7 @@
 	stewardship=6
 	religion="catholic"
 	culture="italian"
-	add_trait="genious"
+	add_trait="genius"
 	add_trait="honest"
 	add_trait="grey_eminence"
 	father=71107
@@ -14586,7 +14546,6 @@
 	culture="italian"
 	add_trait="strong"
 	add_trait="zealous"
-	add_trait="church_loyalist"
 	add_trait="scholarly_theologian"
 	father=71107
 	mother=71109
@@ -14681,7 +14640,7 @@
 	culture="italian"
 	add_trait="trusting"
 	add_trait="honest"
-	add_trait="militant_cleric"
+	add_trait="martial_cleric"
 	1305.1.1 = {
 		birth="1305.1.1"
 	}
@@ -15251,8 +15210,8 @@
 	add_trait="craven"
 	add_trait="cynical"
 	add_trait="flamboyant_schemer"
-	father = 144255
-	mother = 144254
+	#father = 144255
+	#mother = 144254 
 	1154.1.1 = {
 		birth="1154.1.1"
 	}
@@ -15459,7 +15418,7 @@
 	culture="italian"
 	add_trait="hunter"
 	add_trait="quick"
-	add_trait="fdetached_priest"
+	add_trait="detached_priest"
 	father=71154
 	1254.1.1 = {
 		birth="1254.1.1"
@@ -16401,7 +16360,7 @@
 	learning=3
 	religion="catholic"
 	culture="italian"
-	add_trait="scholary_theologian"
+	add_trait="scholarly_theologian"
 	add_trait="deceitful"
 	father=71185
 	mother=71038
@@ -16545,7 +16504,7 @@
 	learning=3
 	religion="catholic"
 	culture="italian"
-	add_trait="scholary_theologian"
+	add_trait="scholarly_theologian"
 	add_trait="patient"
 	father=71185
 	mother=71038
@@ -24803,6 +24762,7 @@
 		death="1275.8.15"
 	}
 }
+
 32128 = {
 	name="Iacopo"
 	dynasty=516
@@ -24815,6 +24775,7 @@
 		death="1280.3.6"
 	}
 }
+
 32129 = {
 	name="Giovanni"
 	dynasty=13027
@@ -24827,6 +24788,7 @@
 		death="1289.11.2"
 	}
 }
+
 32130 = {
 	name="Pietro"
 	dynasty=13007

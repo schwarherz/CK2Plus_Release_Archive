@@ -21,7 +21,6 @@ categories =  {
 
 	arctic = {
 		movement_cost = 1.0
-		max_attrition = 0.1
 		color = { 235 235 235 }
 		supply_limit = 5
 	}
@@ -30,38 +29,35 @@ categories =  {
 		movement_cost = 1.25
 		color = { 137 104 165  }
 		
-		supply_limit = 15
+		supply_limit = 10
 	}
 	
 	forest = {
 		movement_cost = 2.25
 		defence = 2
-		max_attrition = 0.025
 		color = { 91 123 45 }
 
-		supply_limit = 10
+		supply_limit = 5
 	}
 	
 	hills = {
 		movement_cost = 1.66
 		defence = 4
-		max_attrition = 0.025
 		color = { 135 70 0 }
 
-		supply_limit = 10
+		supply_limit = 5
 	}
 
 	woods = {
 		movement_cost = 1.1
 		defence = 1
 		color = { 165 205 108 }
-		supply_limit = 10
+		supply_limit = 7.5
 	}
 	
 	mountain = {
 		movement_cost = 3.0
 		defence = 5
-		max_attrition = 0.1
 		color = { 117 108 119 }
 		supply_limit = 5
 	}
@@ -75,36 +71,33 @@ categories =  {
 	steppe = {
 		movement_cost = 1.0
 		color = { 211 201 184 }
-		supply_limit = 10
+		supply_limit = 7.5
 	}
 	
 	plains = {
 		movement_cost = 1.1
 		color = { 241 221 184 }
-		supply_limit = 15
+		supply_limit = 7.5
 	}
 
 
 	jungle = {
 		movement_cost = 3.0
 		defence = 2
-		max_attrition = 0.05
 		color = { 40 180 149 }
-		supply_limit = 10
+		supply_limit = 5
 	}	
 	
 	marsh = {
 		movement_cost = 2.2
 		defence = 3
-		max_attrition = 0.05
 		color = { 76 112 105 }
 
-		supply_limit = 10
+		supply_limit = 5
 	}
 	
 	desert = {
 		movement_cost = 1.25
-		max_attrition = 0.1
 		color = { 220 210 0 }
 	
 		supply_limit = 5
@@ -112,10 +105,9 @@ categories =  {
 	
 	coastal_desert = {
 		movement_cost = 1.0
-		max_attrition = 0.05
 		color = { 200 128 0 }
 
-		supply_limit = 10
+		supply_limit = 5
 	}	
 }
 

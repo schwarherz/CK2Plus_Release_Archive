@@ -1,14 +1,14 @@
 CK2Plus for Crusader Kings 2
 Author: Martin "Wiz" Anward
 Contact: m(dot)anward(at)live(dot)se
-Credits: Viscardus (Cornish Characters), Cetan (Expanded Character Tooltips), Crackdtoothgrin (Crackdtoothgrin's Graphical Goodies), Spartan_One (Mod File Hosting), Peuri (Little Portait Mod), Trovador and thrashing mad (Enhanced Portraits Mod), EmperorTojo (Icelandic Culture Mod), Ijtzoi (All the Way to Timbuktu), Syren (Syren's Nicknames Mod), mate0815 (Better Looking Characters integration), Shaytana (Better Looking Characters), Werther (French Localisation), EOOQE (German Localisation), Keanon (Patrum Scuta), Zaldax (An Offer You Can't Refuse), Velho e Bom Joe (Culturally Different Cities), Icecream Jones (flags, new countries), Strudel Man (many tweaks and additions), NoNotTheMindProbe (russian kingdoms), pothkan (CK2 heraldy mod), Keanon (Patrum Scuta), The_Chancellor (Council Reshuffling mod), avee (Family Relations Mod, Better Rebels mod, Death Causes mod), Sniper4625 (misc graphics), Van Diemen (HRE Revised Mod), riso (Treaty of Nymphaeum scenario), Six Gun South (PMM)
+Credits: zeress (Flavorful Titular Titles), Viscardus (Cornish Characters), Cetan (Expanded Character Tooltips), Crackdtoothgrin (Crackdtoothgrin's Graphical Goodies), Spartan_One (Mod File Hosting), Peuri (Little Portait Mod), Trovador and thrashing mad (Enhanced Portraits Mod), EmperorTojo (Icelandic Culture Mod), Ijtzoi (All the Way to Timbuktu), Syren (Syren's Nicknames Mod), mate0815 (Better Looking Characters integration), Shaytana (Better Looking Characters), Werther (French Localisation), EOOQE (German Localisation), Keanon (Patrum Scuta), Zaldax (An Offer You Can't Refuse), Velho e Bom Joe (Culturally Different Cities), Icecream Jones (flags, new countries), Strudel Man (many tweaks and additions), NoNotTheMindProbe (russian kingdoms), pothkan (CK2 heraldy mod), Keanon (Patrum Scuta), The_Chancellor (Council Reshuffling mod), avee (Family Relations Mod, Better Rebels mod, Death Causes mod), Sniper4625 (misc graphics), Van Diemen (HRE Revised Mod), riso (Treaty of Nymphaeum scenario), Six Gun South (PMM)
 
 ****************
 * Installation *
 ****************
 1) If you have an older version of the mod installed, go into the Crusader Kings II mod folder and delete the 'CK2Plus' folder and .mod file.
 2) Unzip to your Crusader Kings II folder. IMPORTANT: The mod files should go into your GAME INSTALLATION folder, NOT your My Documents/Paradox Interactive folder.
-3) If you have Steam, you will need to unzip to your My Documents/Paradox Interactive/Crusader Kings II folder in ADDITION to unzipping to your game directory as outlined in step 2.
+3) If you have the Steam version of CK2, you may need to unzip to your My Documents/Paradox Interactive/Crusader Kings II folder in ADDITION to unzipping to your game directory as outlined in step 2.
 4) Unzip any Hotfixes to your Crusader Kings II folder (same place you installed the mod in step 2).
 5) Start the CK2 launcher and check 'CK2Plus (MAIN)' in the list of mods.
 6) Check any optional modules you want to use along with CK2Plus.
@@ -35,7 +35,7 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 - It is now more difficult but also more rewarding to raise your crown authority.
 - Tweaked succession laws to make it possible for non-Basques to use Absolute Cognatic. Authority requirements for other succession laws have also been eased.
 - Rebalanced levies and laws that reduce the military capabilities of large kingdoms with weak authority (like France or the HRE).
-- More ambitions and plots.
+- Many more ambitions and plots.
 - Women of your dynasty can hold some council positions under Cognatic or Agnatic-Cognatic laws.
 - Many minor and major balancing tweaks for a more challenging and enjoyable experience.
 - German and French localisation.
@@ -54,7 +54,6 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 ********************
 * Optional Modules *
 ********************
-- 'Dev Module' adds developer and debugging tools (for now, it just lets you see the IDs of characters by mouseovering them).
 - 'Mongol Faces' adds additional character portraits from Better Looking Characters that require the Mongol Faces DLC to work correctly.
 - 'No Time Limit' allows for play up to the year 100000.
 - 'No New Empires' disables creation of all of the new Empire-level titles. Note that they will still show up on empire mapmode but cannot possibly be held by a character with this mode on.
@@ -67,7 +66,53 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 *************
 * Changelog *
 *************
-1.11
+1.12:
+- Now compatible with official patch 1.05f.
+- Upgraded to latest version of Culturally Different Cities.
+- The Komnenos dynasty now starts with claims to Byzantium in 1066.
+- Kingdoms and Empires must now have at least Medium crown authority to fight a de jure war over a province whose Duchy they do not control.
+- Removed the attribute nerfs on birth since new education system makes them redundant (and I can always just tweak good education trait chances down if stat inflation becomes a problem again).
+- Added a new education system. Children will now get an education trait sometime between the age of 15 and 16 instead of getting it on their 16th birthday. The trait they get will always be the same archetype as their tutor (ie a tutor with an intrigue trait will generate an intrigue trait for their student) but which trait the child gets is now influenced by the child's own attributes, so a high martial child is likely to do well in a martial education for example. Randomization was also increased so the child doesn't just get the exact same trait as their tutor almost every time. Overall, the higher end education traits should now be significantly rarer.
+- Added a notification event that fires when one of your close relatives turns 16, letting you know that they are an adult and which education trait they got (to compensate for the lack of an education notification).
+- Reduced the power/cost of universities and increased the power/cost of monastic schools, to make Temples the foremost holding for research speed.
+- Decreased the chance of healthy women dying in childbirth.
+- Upgraded to latest version of family relations mod.
+- Sped up the spread of English and Sicilian cultures.
+- The learning and piety of a head of religion will now influence the moral authority of that religion through events.
+- Randomly generated characters (both at game start and after) should now properly get assigned genetic traits.
+- Removed the Arrange Courtier Marriages decision. Instead, courtiers with money and a position on your council will marry on their own.
+- Reduced the piety cost of early Crusades, to make Crusade-less games less likely.
+- When you win an independence war, the defeated ruler will now get claims on your titles.
+- Changed the way loans work. Instead of an event that fires when you go into the red, a loan can now be taken at any time through a decision. The loan amount scales to your income, and is always a five-year loan at 25% interest. If you do not have the money to pay it back on the due date, you can extend it for another five years by paying the interest. If your character dies with an unpaid loan, the debt will be transfered to your heir.
+- The AI will now make use of loans during wartime in order to buy mercenaries and fund its armies.
+- AI will now only change succession laws under fairly specific circumstances (so half the world won't switch to Primogeniture on day one of the game).
+- Reduced the penalty for characters dying in prison.
+- Reduced the chance of prisoners in the dungeon falling ill.
+- Imprisoned characters can no longer join a revolt.
+- Increased the chance of characters with titles escaping from prison. The higher ranked the character, the higher the chance of them making the attempt.
+- Reduced starting troop multiplier for Alp Arslan (due to the changes below).
+- Added more buildings to the Seljuk Turks and increased the strength of the Ghilmans.
+- Removed some holdings in Byzantium and reduced the strength of the Varangian Guard.
+- Further improved performance by removing some unnecessary AI checks and moving others to events.
+- Added two new ambitions: Befriend Liege and Befriend Head of Religion.
+- Building destruction on siege events should now work correctly.
+- Added two events associated with the 'Research Economy Tech' action. The positive event improves province prosperity, while the negative event results in temporary revolt risk.
+- Center leader martial skill is now a very important factor for reducing attrition to your troops.
+- Reduced the effects of Siege Equipment, to balance out for the removal of Military Fortifications.
+- Replaced the Military Fortifications tech with Logistics, which increases supply limits to better correspond to later game army sizes.
+- Attrition is once again a factor in war, although at greatly reduced maximum rates and heavily tweaked holding supply effects.
+- Reduced garrison sizes to make stalled wars less likely.
+- Increased effectiveness of defending garrison during assaults (to make up for lower numbers).
+- Tweaked province prosperity events so that the extreme ends of the spectrum (Rich/Struggling) are less common.
+- When pushing third-party claims, the tooltip will no longer say that the claimaint will become your landed vassal if that is not possible because the pushed title is equal or higher rank than your own.
+- When pushing third-party claims, the claimaint will now remain your vassal if the title you are pushing is in the same realm as your own (ie held by your liege or one of his/her vassals).
+- Pushing a third-party claim will no longer turn a character independent if the title you pushed for him or her was not already independent.
+- You can now plot to kill characters whose title you or your child is a pretender to.
+- Removed the demesne size requirements for raising crown authority, as they all too often locked the AI at autonomous vassals.
+- Most titles formable by Christians are now also formable by Pagans.
+- Kingdom of Wends can now be formed by Wends of any religion.
+
+1.11:
 - Fixed a CTD on startup caused by the lack of congenital/birth traits.
 
 1.10:

@@ -1,5 +1,9 @@
 spriteTypes = {
-	
+
+	spriteType = {
+		name = "GFX_take_loan"
+		texturefile = "gfx\\CK2Plus\\decision_icon_loan.dds"
+	}	
 	spriteType = {
 		name = "GFX_hold_a_epic_tournament"
 		texturefile = "gfx\\interface\\decision_icon_tournament.dds"

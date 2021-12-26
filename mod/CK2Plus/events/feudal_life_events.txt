@@ -23,11 +23,11 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_playable = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		OR = {
@@ -96,11 +96,11 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_playable = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		piety = 50
@@ -179,13 +179,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	only_men = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		tier = count
@@ -379,12 +379,12 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_playable = yes
-	min_age = 16
 	only_men = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		tier = count
@@ -471,11 +471,11 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_playable = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		tier = count
@@ -560,11 +560,11 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_playable = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		tier = count
@@ -692,12 +692,12 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	max_age = 60
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		OR = {
@@ -870,11 +870,11 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_playable = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		OR = {
@@ -987,11 +987,11 @@ character_event = {
 	
 	only_playable = yes
 	only_men = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		tier = count
@@ -1087,11 +1087,11 @@ character_event = {
 	
 	is_triggered_only = yes
 
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		is_ruler = yes
@@ -1424,12 +1424,12 @@ character_event = {
 	picture = GFX_evt_bandits
 	
 	is_triggered_only = yes
-	
-	min_age = 16
+
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		treasury = 100
@@ -1702,12 +1702,12 @@ character_event = {
 	picture = GFX_evt_quarrel
 	
 	only_playable = no
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	is_triggered_only = yes
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		is_ruler = no
@@ -1977,11 +1977,11 @@ character_event = {
 	
 	only_playable = yes
 	only_men = yes
-	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		OR = {
@@ -2086,13 +2086,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	only_men = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		any_vassal = {
@@ -2369,12 +2369,12 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		NOT = {
@@ -2511,12 +2511,12 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		is_female = no
@@ -2625,14 +2625,14 @@ character_event = {
 	picture = GFX_evt_joust
 	
 	is_triggered_only = yes
-	
-	min_age = 16
+
 	only_playable = yes
 	only_men = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		martial = 15
@@ -2727,13 +2727,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	only_men = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		num_of_rivals = 1
@@ -2829,13 +2829,13 @@ character_event = {
 	picture = GFX_evt_marriage
 	
 	is_triggered_only = yes
-	
-	min_age = 16
+
 	only_playable = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		NOT = {
@@ -2929,13 +2929,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	only_men = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		NOT = {
@@ -3145,13 +3145,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	only_men = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		father = {
@@ -3237,9 +3237,6 @@ character_event = {
 			age = 65
 			female = no
 			has_nickname = nick_the_clueless
-		}
-		new_character = {
-			character_event = { id = 300001 }
 		}		
 	}
 	
@@ -3266,12 +3263,12 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		NOT = {
@@ -3380,13 +3377,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	min_age = 16
 	only_playable = yes
 	only_men = yes
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
+		age = 16
 		war = no
 		in_command = no
 		OR = {

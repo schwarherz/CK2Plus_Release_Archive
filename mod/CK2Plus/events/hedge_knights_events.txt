@@ -297,10 +297,7 @@ character_event = {
 			attributes = {
 				martial = 10
 			}
-		}
-		new_character = {
-			character_event = { id = 300001 }
-		}		
+		}	
 		scaled_wealth = -0.1
 	}
 	option = {
@@ -445,8 +442,7 @@ character_event = {
 			new_character = {
 	 			impregnate = PREV
 	 			add_lover = PREV
-				add_trait = lustful
-				character_event = { id = 300001 }				
+				add_trait = lustful			
 	 		}	 		
 	 	}
 	 	piety = -10
@@ -488,8 +484,7 @@ character_event = {
 					modifier = opinion_arrest_attempt
 					months = 240
 				}				
-				imprison = root					
-				character_event = { id = 300001 }				
+				imprison = root				
 	 		}
 	 	}		
 	}

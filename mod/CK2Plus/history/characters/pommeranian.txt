@@ -54,7 +54,7 @@
 	father=20586
 	1035.1.1={
 		birth="1035.1.1"
-		add_claim="c_lubeck"
+		add_claim = c_lubeck
 	}
 	1076.1.1={
 	add_spouse=30480 #Slavia z Liubice
@@ -210,8 +210,6 @@
 	religion="baltic_pagan"
 	culture="pommeranian"
 	add_trait="tough_soldier"
-	
-	
 	1087.1.1={
 		birth="1087.1.1"
 	}
@@ -278,7 +276,7 @@
 		birth="1178.1.1"
 	}
 	1206.1.1={
-	add_spouse=30456 #Miroslawa Subislawic
+		add_spouse=30456 #Miroslawa Subislawic
 	}
 	1220.4.1={
 		death="1220.4.1"
@@ -310,10 +308,8 @@
 	name="Dobroslawa"
 	female = yes
 	dynasty=177
-	
 	religion="catholic"
 	culture="pommeranian"
-	
 	father=221710
 	mother=221711
 	1172.1.1={
@@ -384,7 +380,7 @@
 		birth="1160.1.1"
 	}
 	1180.1.2={
-	add_spouse=221569
+		add_spouse=221569
 	}
 	1183.1.14={
 		death="1183.1.14"
@@ -406,9 +402,8 @@
 		birth="1103.1.1"
 	}
 	1124.1.1={
-	religion="catholic"
+		religion="catholic"
 	}
-	
 	1156.5.7={
 		death="1156.1.7"
 	}
@@ -2191,7 +2186,7 @@
 8400 = {
 	name="Budivoj"
 	dynasty=101906
-	dna="yavaqobxonj"
+	dna="yavaqobxocj"
 	properties="0j0cck0000"
 	martial=4
 	diplomacy=8

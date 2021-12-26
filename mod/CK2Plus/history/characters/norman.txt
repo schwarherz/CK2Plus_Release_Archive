@@ -1,6 +1,6 @@
 10000 = {
 	name="Muriella"
-	female = yes
+	female=yes
 	martial=4
 	diplomacy=5
 	intrigue=7
@@ -18,7 +18,7 @@
 
 10003 = {
 	name="Alberada"
-	female = yes
+	female=yes
 	dynasty=102000
 	martial=5
 	diplomacy=5
@@ -38,7 +38,7 @@
 
 10008 = {
 	name="Fredesende"
-	female = yes
+	female=yes
 	martial=4
 	diplomacy=5
 	intrigue=7
@@ -56,7 +56,7 @@
 
 10015 = {
 	name="Adele"
-	female = yes
+	female=yes
 	dynasty=22002
 	martial=4
 	diplomacy=5
@@ -99,7 +99,7 @@
 
 10018 = {
 	name="Agnes"
-	female = yes
+	female=yes
 	dynasty=22001
 	martial=4
 	diplomacy=5
@@ -122,7 +122,7 @@
 
 10020 = {
 	name="Godechilde"
-	female = yes
+	female=yes
 	dynasty=22001
 	martial=4
 	diplomacy=5
@@ -232,7 +232,7 @@
 110639 = {
 	name="Adelis"
 	# AKA: Adelise
-	female = yes
+	female=yes
 	dynasty=385
 	martial=6
 	diplomacy=7
@@ -269,10 +269,10 @@
 		birth="980.1.1"
 	}
 	#1003.1.1 = {
-	#add_spouse = 127057
+	#add_spouse=127057
 	#}
 	1021.1.1 = {
-		add_spouse = 10008
+		add_spouse=10008
 	}
 	1041.1.1 = {
 		death="1041.1.1"
@@ -281,7 +281,7 @@
 
 1121 = {
 	name="Matilda"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=7
 	diplomacy=5
@@ -412,18 +412,18 @@
 	dynasty=678
 	dna="bhlfacmagci"
 	properties="cc0ehd0000"
-	martial=10
-	diplomacy=6
-	intrigue=8
-	stewardship=8
+	martial=9
+	diplomacy=4
+	intrigue=6
+	stewardship=6
 	health=10
-	piety=175
+	piety=250
 	religion="catholic"
 	culture="norman"
+	add_trait="tall"
 	add_trait="deceitful"
 	add_trait="envious"
 	add_trait="patient"
-	add_trait="tall"
 	add_trait="brilliant_strategist"
 	father=1120
 	mother=10008
@@ -431,13 +431,13 @@
 		birth="1015.1.1"
 	}
 	1051.1.1 = {
-		add_spouse = 10003
+		add_spouse=10003
 	}
 	1057.1.1 = {
-		remove_spouse = 10003
+		remove_spouse=10003
 	}
 	1058.1.1 = {
-		add_spouse = 1123
+		add_spouse=1123
 	}
 	1085.7.17 = {
 		death="1085.7.17"
@@ -498,7 +498,7 @@
 
 1133 = {
 	name="Mathilde"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=6
 	diplomacy=5
@@ -521,7 +521,7 @@
 	name="Abelard"
 	dynasty=678
 	dna="bceejcoqgct"
-	properties="ci0c0k0000"
+	properties="ci0chk0000"
 	martial=8
 	diplomacy=6
 	intrigue=5
@@ -664,7 +664,7 @@
 
 1139 = {
 	name="Adelise"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=5
 	diplomacy=6
@@ -691,10 +691,10 @@
 	stewardship=6
 	religion="catholic"
 	culture="norman"
+	add_trait="tall"
 	add_trait="brave"
 	add_trait="cynical"
 	add_trait="wroth"
-	add_trait="tall"
 	add_trait="tough_soldier"
 	father=1128
 	mother=10003
@@ -702,7 +702,7 @@
 		birth="1058.1.1"
 	}
 	1105.1.1 = {
-		add_spouse = 205511
+		add_spouse=205511
 	}
 	1111.3.3 = {
 		death="1111.3.3"
@@ -728,7 +728,7 @@
 		birth="1061.1.2"
 	}
 	1092.1.1 = {
-		add_spouse = 369
+		add_spouse=369
 	}
 	1111.2.11 = {
 		death="1111.2.11"
@@ -737,7 +737,7 @@
 
 1143 = {
 	name="Emma"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=7
 	diplomacy=8
@@ -826,7 +826,7 @@
 
 1153 = {
 	name="Fredesende"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=4
 	diplomacy=6
@@ -870,159 +870,158 @@
 
 
 127058 = {
-	name = "Eremburga"
+	name="Eremburga"
 	female=yes
-	dynasty = 678
-	female = yes
-	religion = "catholic"
-	culture = "norman"
-	father = 1124
-	mother = 1129
+	dynasty=678
+	religion="catholic"
+	culture="norman"
+	father=1124
+	mother=1129
 	1052.1.1 = {
-		birth = "1052.1.1"
+		birth="1052.1.1"
 	}
 	1100.1.1 = {
-		death = "1100.1.1"
+		death="1100.1.1"
 	}
 }
 
 127063 = {
-	name = "William"
+	name="William"
 	# AKA: Guillaume
-	dynasty = 678
-	religion = "catholic"
-	culture = "norman"
-	add_trait = "bastard"
-	father = 211507
-	mother = 211508
+	dynasty=678
+	religion="catholic"
+	culture="norman"
+	add_trait="bastard"
+	father=211507
+	mother=211508
 	1139.1.1 = {
-		birth = "1139.1.1"
+		birth="1139.1.1"
 	}
 	1168.1.1 = {
-		death = "1168.1.1"
+		death="1168.1.1"
 	}
 }
 
 127065 = {
-	name = "Mauger"
-	dynasty = 678
-	religion = "catholic"
-	culture = "norman"
-	father = 1132
-	mother = 160380
+	name="Mauger"
+	dynasty=678
+	religion="catholic"
+	culture="norman"
+	father=1132
+	mother=160380
 	1080.1.1 = {
-		birth = "1080.1.1"
+		birth="1080.1.1"
 	}
 	1125.1.1 = {
-		death = "1125.1.1"
+		death="1125.1.1"
 	}
 }
 
 127067 = {
-	name = "Judith"
+	name="Judith"
 	# AKA: Mathilde
-	dynasty = 678
-	female = yes
-	religion = "catholic"
-	culture = "norman"
-	father = 1132
-	mother = 160380
+	dynasty=678
+	female=yes
+	religion="catholic"
+	culture="norman"
+	father=1132
+	mother=160380
 	1083.1.1 = {
-		birth = "1083.1.1"
+		birth="1083.1.1"
 	}
 	1133.1.1 = {
-		death = "1133.1.1"
+		death="1133.1.1"
 	}
 }
 
 127070 = {
-	name = "Simon"
-	dynasty = 678
-	religion = "catholic"
-	culture = "norman"
-	father = 1132
-	mother = 70979
+	name="Simon"
+	dynasty=678
+	religion="catholic"
+	culture="norman"
+	father=1132
+	mother=70979
 	1093.1.1 = {
-		birth = "1093.1.1"
+		birth="1093.1.1"
 	}
 	1105.9.28 = {
-		death = "1105.9.28"
+		death="1105.9.28"
 	}
 }
 
 127071 = {
-	name = "Roger"
-	dynasty = 678
-	religion = "catholic"
-	culture = "norman"
-	father = 211501
-	mother = 206512
+	name="Roger"
+	dynasty=678
+	religion="catholic"
+	culture="norman"
+	father=211501
+	mother=206512
 	1152.1.1 = {
-		birth = "1152.1.1"
+		birth="1152.1.1"
 	}
 	1161.1.1 = {
-		death = "1161.1.1"
+		death="1161.1.1"
 	}
 }
 
 127083 = {
-	name = "William"
+	name="William"
 	# AKA: Guillaume
-	dynasty = 678
-	religion = "catholic"
-	culture = "norman"
-	father = 1142
-	mother = 369
+	dynasty=678
+	religion="catholic"
+	culture="norman"
+	father=1142
+	mother=369
 	1096.1.1 = {
-		birth = "1096.1.1"
+		birth="1096.1.1"
 	}
 	1127.7.25 = {
-		death = "1128.7.25"
+		death="1128.7.25"
 	}
 }
 
 127084 = {
-	name = "Tancred"
-	dynasty = 678
-	religion = "catholic"
-	culture = "norman"
-	father = 211502
-	mother = 207662
+	name="Tancred"
+	dynasty=678
+	religion="catholic"
+	culture="norman"
+	father=211502
+	mother=207662
 	1119.1.1 = {
-		birth = "1119.1.1"
+		birth="1119.1.1"
 	}
 	1143.1.1 = {
-		death = "1143.1.1"
+		death="1143.1.1"
 	}
 }
 
 127085 = {
-	name = "Alphonse"
-	dynasty = 678
-	religion = "catholic"
-	culture = "norman"
-	father = 211502
-	mother = 207662
+	name="Alphonse"
+	dynasty=678
+	religion="catholic"
+	culture="norman"
+	father=211502
+	mother=207662
 	1121.1.1 = {
-		birth = "1121.1.1"
+		birth="1121.1.1"
 	}
 	1144.10.10 = {
-		death = "1144.10.10"
+		death="1144.10.10"
 	}
 }
 
 127092 = {
-	name = "Bohemond"
-	dynasty = 678
-	religion = "catholic"
-	culture = "norman"
-	father = 211500
-	mother = 204513
+	name="Bohemond"
+	dynasty=678
+	religion="catholic"
+	culture="norman"
+	father=211500
+	mother=204513
 	1182.1.1 = {
-		birth = "1182.1.1"
+		birth="1182.1.1"
 	}
 	1187.1.1 = {
-		death = "1187.1.1"
+		death="1187.1.1"
 	}
 }
 
@@ -1030,8 +1029,8 @@
 	name="William"
 	# AKA: William 'the Conqueror'
 	dynasty=752
-	dna="epdbiohgukk"
-	properties="ae0000"
+	dna="epdbiohguck"
+	properties="ae0ehd0000"
 	martial=7
 	diplomacy=7
 	intrigue=10
@@ -1054,31 +1053,32 @@
 		birth="1027.1.15"
 	}
 	1035.7.3 = {
-		give_nickname = nick_the_bastard
+		give_nickname=nick_the_bastard
 	}
 	1053.1.1 = {
 		add_spouse=367 # Mathilda of Flanders
 	}
 	1066.1.5 = {
-	##	add_claim = k_england
+		add_claim=k_england
 	}
 	1066.9.14 = {
-		wealth = 500
-		prestige = 600
+		wealth=1000
 		raise_levies = {
-			location = 97 # Rouen
-			force_mult = 6.5
+			#location=25 # Sussex
+			location=97 # Rouen
+			force_mult=6.5
 		}
 	}
 	1066.10.14 = {
-		wealth = 100
-		prestige = 1000
 		raise_levies = {
-			dismiss = yes
-			location = 97 # Rouen
-			force_mult = 6.5
+			dismiss=yes
+			location=97 # Rouen
+			force_mult=6.5
 		}
-		give_nickname = nick_the_conqueror
+	}
+	1066.12.25  = {
+		remove_claim=k_england
+		give_nickname=nick_the_conqueror
 	}
 	1087.9.9 = {
 		death="1087.9.9"
@@ -1087,7 +1087,7 @@
 
 141 = {
 	name="Agathe"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=6
 	diplomacy=4
@@ -1110,13 +1110,15 @@
 	# AKA: Robert 'Curthose'
 	dynasty=752
 	martial=6
-	diplomacy=6
-	intrigue=6
-	stewardship=4
+	diplomacy=4
+	intrigue=4
+	stewardship=3
 	religion="catholic"
 	culture="norman"
+	add_trait="envious"
 	add_trait="wroth"
 	add_trait="lisp"
+	add_trait="slothful"
 	add_trait="martial_cleric"
 	father=140
 	mother=367
@@ -1136,7 +1138,7 @@
 
 143 = {
 	name="Constance"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=8
 	diplomacy=8
@@ -1202,7 +1204,7 @@
 
 147 = {
 	name="Cecilia"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=7
 	diplomacy=4
@@ -1225,7 +1227,7 @@
 148 = {
 	name="Odo"
 	dynasty=101754
-	dna="vhvraiwwgad"
+	dna="vhvraiwwgcd"
 	properties="cc0ehk0000"
 	martial=6
 	diplomacy=7
@@ -1253,7 +1255,7 @@
 149 = {
 	name="Maud" #de Montgommery
 	# AKA: Maude
-	female = yes
+	female=yes
 	dynasty=751
 	religion="catholic"
 	culture="norman"
@@ -1270,8 +1272,8 @@
 150 = {
 	name="Robert"
 	dynasty=101754
-	dna="acxongigybg"
-	properties="fg0d0k0000"
+	dna="acxongigycg"
+	properties="fg0dhk0000"
 	martial=8
 	diplomacy=8
 	intrigue=4
@@ -1299,19 +1301,18 @@
 152 = {
 	name="Roger" #Roger II de Montgomerie
 	dynasty=751
-	dna="wwgbkbzfbay"
+	dna="wwgbkbzfbcy"
 	properties="eh0chk0000"
 	religion="catholic"
 	culture="norman"
-	add_trait="nick_the_great"
 	1012.1.1 = {
 		birth="1012.1.1"
 	}
 	1048.1.1 = {
 		add_spouse=449 #Maud de Belesme/Talvas
 	}
-	1066.1.1 = {
-		employer=140
+	1074.1.1 = {
+		give_nickname="nick_the_great"
 	}
 	1094.1.1 = {
 		death="1094.1.1"
@@ -1341,7 +1342,7 @@
 
 156 = {
 	name="Emma"
-	female = yes
+	female=yes
 	dynasty=101754
 	martial=7
 	diplomacy=6
@@ -1446,7 +1447,7 @@
 
 160380 = {
 	name="Amburga"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=5
 	diplomacy=5
@@ -1487,7 +1488,7 @@
 
 160404 = {
 	name="Eleonore"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=4
 	diplomacy=6
@@ -1572,7 +1573,7 @@
 		birth="1071.1.2"
 	}
 	1115.1.1 = {
-		add_spouse = 551
+		add_spouse=551
 	}
 	1138.5.11 = {
 		death="1138.5.11"
@@ -1581,7 +1582,7 @@
 
 171153 = {
 	name="Emma"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=4
 	diplomacy=6
@@ -1625,7 +1626,7 @@
 	name="Geoffroy"
 	dynasty=200080
 	dna="feobylmbkcj"
-	properties="ccyc0k0000"
+	properties="ccychk0000"
 	religion="catholic"
 	culture="norman"
 	father=171154
@@ -1693,8 +1694,8 @@
 	1063.1.1 = {
 		birth="1063.1.1"
 	}
-	1136.1.1={
-		add_claim = c_bari
+	1136.1.1 = {
+		add_claim=c_bari
 	}
 	1142.1.1 = {
 		death="1142.1.1"
@@ -1703,7 +1704,7 @@
 
 171162 = {
 	name="Sybilla"
-	female = yes
+	female=yes
 	dynasty=200080
 	martial=5
 	diplomacy=7
@@ -1724,7 +1725,7 @@
 172 = {
 	name="William"
 	dynasty=748
-	dna="cavavakogad"
+	dna="cavavakogcd"
 	properties="0c0chk0000"
 	martial=5
 	diplomacy=5
@@ -1742,7 +1743,7 @@
 		employer=140
 	}
 	1070.1.1 = {
-		add_spouse = 173
+		add_spouse=173
 	}
 	1088.6.24 = {
 		death="1088.6.24"
@@ -1751,7 +1752,7 @@
 
 173 = {
 	name="Gundred"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=5
 	diplomacy=7
@@ -1794,7 +1795,7 @@
 	name="Eudokia"
 	# AKA: Eudocia
 	female = yes
-	dynasty=629
+	#dynasty=629 
 	martial=4
 	diplomacy=6
 	intrigue=7
@@ -1872,7 +1873,7 @@
 
 202990 = {
 	name="Constance"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=4
 	diplomacy=7
@@ -1893,7 +1894,7 @@
 202991 = {
 	name="Matilda"
 	# AKA: Maltilda
-	female = yes
+	female=yes
 	dynasty=752
 	martial=5
 	diplomacy=8
@@ -1913,7 +1914,7 @@
 		birth="1102.1.2"
 	}
 	1135.12.2 = {
-		#add_claim = k_england
+		add_claim=k_england
 	}
 	1167.9.10 = {
 		death="1167.9.10"
@@ -1941,10 +1942,10 @@
 		birth="1068.1.4"
 	}
 	1100.11.11 = {
-		add_spouse = 202995
+		add_spouse=202995
 	}
 	1122.1.29 = {
-		add_spouse = 206857 #Adelheid Reginar
+		add_spouse=206857 #Adelheid Reginar
 	}
 	1135.12.1 = {
 		death="1135.12.1"
@@ -1953,7 +1954,7 @@
 
 203515 = {
 	name="Ada"
-	female = yes
+	female=yes
 	dynasty=748
 	martial=6
 	diplomacy=7
@@ -2188,7 +2189,7 @@
 
 204577 = {
 	name="Mabel" #of Bellême
-	female = yes
+	female=yes
 	dynasty=102001
 	martial=5
 	diplomacy=8
@@ -2206,7 +2207,7 @@
 
 205898 = {
 	name="Adele"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=8
 	diplomacy=8
@@ -2237,7 +2238,7 @@
 	culture="norman"
 	add_trait="arbitrary"
 	add_trait="flamboyant_schemer"
-	father=205987
+	father=205986
 	mother=205982
 	1175.1.2 = {
 		birth="1175.1.2"
@@ -2268,7 +2269,7 @@
 	capital=c_palermo
 	}
 	1177.2.13 = {
-		add_spouse = 204513
+		add_spouse=204513
 	}
 	1189.11.11 = {
 		death="1189.11.11"
@@ -2320,16 +2321,16 @@
 		birth="1095.12.22"
 	}
 	1117.1.1 = {
-		add_spouse = 207662
+		add_spouse=207662
 	}
 	1130.12.25 = {
 		capital=c_palermo
 	}
 	1149.1.1 = {
-		add_spouse = 91087
+		add_spouse=91087
 	}
 	1151.1.1 = {
-		add_spouse = 211503
+		add_spouse=211503
 	}
 	1154.2.26 = {
 		death="1154.2.26"
@@ -2380,7 +2381,7 @@
 		birth="1138.1.1"
 	}
 	1175.1.1 = {
-		add_spouse = 211510
+		add_spouse=211510
 	}
 	1189.11.11 = {
 	capital=c_palermo
@@ -2437,7 +2438,7 @@
 
 211513 = {
 	name="Albinia"
-	female = yes
+	female=yes
 	dynasty=678
 	religion="catholic"
 	culture="norman"
@@ -2453,7 +2454,7 @@
 
 211514 = {
 	name="Medania"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=7
 	diplomacy=7
@@ -2474,7 +2475,7 @@
 
 211515 = {
 	name="Constance"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=5
 	diplomacy=5
@@ -2547,7 +2548,7 @@
 	1095.1.1 = {
 		birth="1095.1.1"
 	}
-	1119.1.1={
+	1119.1.1 = {
 		employer=73280
 	}
 	1127.7.1 = {
@@ -2566,7 +2567,7 @@
 		birth="1120.1.1"
 	}
 	1146.1.1 = {
-		add_spouse = 211524
+		add_spouse=211524
 	}
 	1187.1.1 = {
 		death="1187.1.1"
@@ -2608,7 +2609,7 @@
 
 211527 = {
 	name="Sibylla"
-	female = yes
+	female=yes
 	religion="catholic"
 	culture="norman"
 	1160.1.1 = {
@@ -2621,7 +2622,7 @@
 
 211530 = {
 	name="Marie"
-	female = yes
+	female=yes
 	dynasty=678
 	religion="catholic"
 	culture="norman"
@@ -2638,7 +2639,7 @@
 
 211533 = {
 	name="Emma"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=5
 	diplomacy=4
@@ -2648,7 +2649,7 @@
 	culture="norman"
 	add_trait="amateurish_plotter"
 	father=1132
-	mother = 10014
+	mother=10014
 	1063.1.2 = {
 		birth="1063.1.2"
 	}
@@ -2659,7 +2660,7 @@
 
 212508 = {
 	name="Constance" #Queen of Sicily
-	female = yes
+	female=yes
 	dynasty=678
 	martial=8
 	diplomacy=6
@@ -2767,7 +2768,7 @@
 
 237 = {
 	name="Agnes"
-	female = yes
+	female=yes
 	dynasty=413
 	martial=7
 	diplomacy=8
@@ -2789,7 +2790,7 @@
 
 243 = {
 	name="Adela"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=8
 	diplomacy=6
@@ -2828,7 +2829,7 @@
 		birth="914.1.2"
 	}
 	942.12.17 = {
-		death="9942.12.17"
+		death="942.12.17"
 	}
 }
 
@@ -2893,7 +2894,7 @@
 
 251 = {
 	name="Adelis"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=6
 	diplomacy=5
@@ -2930,7 +2931,7 @@
 		birth="1000.6.22"
 	}
 	1022.1.2 = {
-		add_spouse = 41001
+		add_spouse=41001
 	}
 	1035.7.3 = {
 		death="1035.7.3"
@@ -2939,7 +2940,7 @@
 
 253 = {
 	name="Alienora"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=6
 	diplomacy=5
@@ -2962,7 +2963,7 @@
 
 255 = {
 	name="Adelaide"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=4
 	diplomacy=7
@@ -2982,7 +2983,7 @@
 
 257 = {
 	name="Hedwige"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=5
 	diplomacy=4
@@ -3027,7 +3028,7 @@
 
 259 = {
 	name="Emma"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=4
 	diplomacy=6
@@ -3069,7 +3070,7 @@
 
 30207 = {
 	name="Constance"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=5
 	diplomacy=5
@@ -3132,8 +3133,8 @@
 	dynasty=676
 	religion="catholic"
 	culture="norman"
-	father = 1154
-	# mother = Gaitelgrima II di Salerno
+	father=1154
+	# mother=Gaitelgrima II di Salerno
 	1072.1.1 = {
 		birth="1072.1.1"
 	}
@@ -3147,8 +3148,8 @@
 	dynasty=676
 	religion="catholic"
 	culture="norman"
-	father = 98014
-	# mother = 
+	father=98014
+	# mother=
 	1100.1.1 = {
 		birth="1100.1.1"
 	}
@@ -3162,8 +3163,8 @@
 	dynasty=676
 	religion="catholic"
 	culture="norman"
-	father = 1154
-	# mother = Gaitelgrima II di Salerno
+	father=1154
+	# mother=Gaitelgrima II di Salerno
 	1075.1.1 = {
 		birth="1075.1.1"
 	}
@@ -3178,8 +3179,8 @@
 	dynasty=676
 	religion="catholic"
 	culture="norman"
-	father = 30833
-	# mother = Gaitelgrima di Sorrento
+	father=30833
+	# mother=Gaitelgrima di Sorrento
 	1090.1.1 = {
 		birth="1090.1.1"
 	}
@@ -3194,8 +3195,8 @@
 	dynasty=676
 	religion="catholic"
 	culture="norman"
-	father = 30833
-	# mother = Gaitelgrima di Sorrento
+	father=30833
+	# mother=Gaitelgrima di Sorrento
 	1096.1.1 = {
 		birth="1096.1.1"
 	}
@@ -3209,8 +3210,8 @@
 	dynasty=676
 	religion="catholic"
 	culture="norman"
-	father = 1154
-	# mother = Gaitelgrima II di Salerno
+	father=1154
+	# mother=Gaitelgrima II di Salerno
 	1077.1.1 = {
 		birth="1077.1.1"
 	}
@@ -3254,7 +3255,7 @@
 	dynasty=676
 	religion="catholic"
 	culture="norman"
-	father = 30834
+	father=30834
 	1125.1.1 = {
 		birth="1125.1.1"
 	}
@@ -3333,8 +3334,8 @@
 	1090.1.1 = {
 		birth="1090.1.1"
 	}
-	1142.1.1={
-		add_claim = c_bari
+	1142.1.1 = {
+		add_claim=c_bari
 	}
 	1153.5.1 = {
 		death="1153.1.1"
@@ -3740,7 +3741,7 @@
 
 30902 = {
 	name="Adelisa" 
-	female = yes
+	female=yes
 	dynasty=678
 	religion="catholic"
 	culture="norman"
@@ -3756,7 +3757,7 @@
 
 30918 = {
 	name="Godechilde"
-	female = yes
+	female=yes
 	dynasty=385 #de Tosny
 	religion="catholic"
 	culture="norman"
@@ -3827,7 +3828,7 @@
 
 327 = {
 	name="Matheode"
-	female = yes
+	female=yes
 	dynasty=730
 	martial=8
 	diplomacy=8
@@ -3861,7 +3862,7 @@
 		birth="1128.1.1"
 	}
 	1147.1.1 = {
-		add_spouse = 332018
+		add_spouse=332018
 	}
 	1201.1.1 = {
 		death="1201.1.1"
@@ -3889,7 +3890,7 @@
 
 40279 = {
 	name="Beatrix" #de Normandie
-	female = yes
+	female=yes
 	dynasty=752
 	religion="catholic"
 	culture="norman"
@@ -3938,7 +3939,7 @@
 		birth="1001.1.2"
 	}
 	1021.1.2 = {
-		add_spouse = 41001
+		add_spouse=41001
 	}
 	1066.1.2 = {
 		death="1066.1.2"
@@ -3947,7 +3948,7 @@
 
 41001 = {
 	name="Herleva"
-	female = yes
+	female=yes
 	dynasty=101755
 	martial=2
 	diplomacy=5
@@ -3970,9 +3971,9 @@
 	culture="norman"
 	father=152 #Roger II de Montgommery
 	mother=449 #Maud de Belesme/Talvas
-	add_trait="nick_the_devil"
 	1057.1.1 = {
 		birth="1057.1.1"
+		give_nickname="nick_the_devil"
 	}
 	1130.1.1 = {
 		death="1130.1.1"
@@ -3999,7 +4000,7 @@
 
 41007 = {
 	name="Emma" #de Montgommery
-	female = yes
+	female=yes
 	dynasty=751
 	religion="catholic"
 	culture="norman"
@@ -4015,7 +4016,7 @@
 
 41008 = {
 	name="Mabel"
-	female = yes
+	female=yes
 	dynasty=751
 	religion="catholic"
 	culture="norman"
@@ -4084,7 +4085,7 @@
 		birth="1030.1.1"
 	}
 	1058.1.1 = {
-		add_spouse = 41015 #Rohese Giffard
+		add_spouse=41015 #Rohese Giffard
 	}
 	1080.1.1 = {
 		death="1080.1.1"
@@ -4093,7 +4094,7 @@
 
 41015 = {
 	name="Rohese" #Giffard
-	female = yes
+	female=yes
 	dynasty=4011
 	religion="catholic"
 	culture="norman"
@@ -4146,7 +4147,7 @@
 
 41030 = {
 	name="Sibyl"
-	female = yes
+	female=yes
 	dynasty=751
 	religion="catholic"
 	culture="norman"
@@ -4162,7 +4163,7 @@
 
 41031 = {
 	name="Matilda"
-	female = yes
+	female=yes
 	dynasty=751
 	religion="catholic"
 	culture="norman"
@@ -4267,7 +4268,7 @@
 
 41235 = {
 	name="Helewisa"
-	female = yes
+	female=yes
 	dynasty=102
 	martial=5
 	diplomacy=6
@@ -4379,7 +4380,7 @@
 
 41242 = {
 	name="Bertha"
-	female = yes
+	female=yes
 	martial=5
 	diplomacy=6
 	intrigue=5
@@ -4468,7 +4469,7 @@
 
 41252 = {
 	name="Albereda"
-	female = yes
+	female=yes
 	dynasty=4047
 	martial=5
 	diplomacy=7
@@ -4491,7 +4492,7 @@
 
 41253 = {
 	name="Maud"
-	female = yes
+	female=yes
 	dynasty=4047
 	martial=6
 	diplomacy=5
@@ -4514,7 +4515,7 @@
 
 41254 = {
 	name="Judith"
-	female = yes
+	female=yes
 	dynasty=4047
 	martial=6
 	diplomacy=7
@@ -4557,7 +4558,7 @@
 41260 = {
 	name="Baldwin" #count of Devon 1066-1090
 	dynasty=101886
-	dna="cpiamhaebhq"
+	dna="cpiamhaebcq"
 	properties="egcehk0000"
 	martial=5
 	diplomacy=4
@@ -4642,7 +4643,7 @@
 
 41264 = {
 	name="Adelise"
-	female = yes
+	female=yes
 	dynasty=101886
 	martial=6
 	diplomacy=5
@@ -4727,7 +4728,7 @@
 
 41733 = {
 	name="Roscelin"
-	female = yes
+	female=yes
 	dynasty=20014
 	martial=9
 	diplomacy=7
@@ -4766,7 +4767,7 @@
 
 42005 = {
 	name="Beatrix"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=5
 	diplomacy=5
@@ -4799,7 +4800,7 @@
 		birth="1005.1.2"
 	}
 	1026.1.2 = {
-		add_spouse = 42005
+		add_spouse=42005
 	}
 	1055.1.2 = {
 		death="1055.1.2"
@@ -4831,7 +4832,7 @@
 
 42010 = {
 	name="Constantine"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=8
 	diplomacy=6
@@ -4912,7 +4913,7 @@
 
 449 = {
 	name="Mabel" #Talvas
-	female = yes
+	female=yes
 	dynasty=709 #de Belesme
 	religion="catholic"
 	culture="norman"
@@ -4944,7 +4945,7 @@
 		birth="1119.1.2"
 	}
 	1110.1.2 = {
-		add_spouse = 204646
+		add_spouse=204646
 	}
 	1148.1.1 = {
 		death="1148.1.1"
@@ -5067,7 +5068,7 @@
 
 6801 = {
 	name="Gunnor"
-	female = yes
+	female=yes
 	dynasty=534
 	martial=4
 	diplomacy=6
@@ -5109,7 +5110,7 @@
 
 6803 = {
 	name="Wevia"
-	female = yes
+	female=yes
 	dynasty=534
 	martial=7
 	diplomacy=5
@@ -5142,7 +5143,7 @@
 		birth="1000.1.2"
 	}
 	1023.1.2 = {
-		add_spouse = 6805
+		add_spouse=6805
 	}
 	1040.1.2 = {
 		death="1040.1.2"
@@ -5152,7 +5153,7 @@
 6806 = {
 	name="William"
 	dynasty=534
-	dna="jwdmmrraqie"
+	dna="jwdmmrraqce"
 	properties="ec0jhj0000"
 	martial=5
 	diplomacy=7
@@ -5168,7 +5169,7 @@
 		birth="1026.1.2"
 	}
 	1055.1.1 = {
-		add_spouse = 110639
+		add_spouse=110639
 	}
 	1071.2.22 = {
 		death="1071.2.22"
@@ -5222,7 +5223,7 @@
 
 6809 = {
 	name="Emma"
-	female = yes
+	female=yes
 	dynasty=534
 	martial=6
 	diplomacy=7
@@ -5245,7 +5246,7 @@
 
 6810 = {
 	name="Adelise"
-	female = yes
+	female=yes
 	dynasty=534
 	martial=6
 	diplomacy=5
@@ -5311,7 +5312,7 @@
 
 6817 = {
 	name="Lesceline"
-	female = yes
+	female=yes
 	dynasty=530
 	martial=7
 	diplomacy=4
@@ -5332,8 +5333,8 @@
 6818 = {
 	name="William"
 	dynasty=752
-	dna="xslpvralbsp"
-	properties="fc0i0k0000"
+	dna="xslpvralbcp"
+	properties="fc0ihk0000"
 	martial=4
 	diplomacy=6
 	intrigue=8
@@ -5353,7 +5354,7 @@
 
 6819 = {
 	name="Lithuaise"
-	female = yes
+	female=yes
 	dynasty=752
 	martial=5
 	diplomacy=4
@@ -5392,7 +5393,7 @@
 		birth="1025.1.1"
 	}
 	1042.1.1 = {
-		add_spouse = 6821
+		add_spouse=6821
 	}
 	1089.9.8 = {
 		death="1089.9.8"
@@ -5401,7 +5402,7 @@
 
 6821 = {
 	name="Beatrix"
-	female = yes
+	female=yes
 	dynasty=100096
 	martial=8
 	diplomacy=5
@@ -5489,7 +5490,7 @@
 
 7624 = {
 	name="Emma" 
-	female = yes
+	female=yes
 	dynasty=101754
 	martial=7
 	diplomacy=5
@@ -5629,7 +5630,7 @@
 
 82059 = {
 	name="Margaret" # mother of Ranulf le Meschin
-	female = yes
+	female=yes
 	dynasty=4047
 	martial=7
 	diplomacy=5
@@ -5734,7 +5735,7 @@
 
 82064 = {
 	name="Agnes"
-	female = yes
+	female=yes
 	dynasty=9111
 	martial=7
 	diplomacy=7
@@ -5768,9 +5769,9 @@
 		birth="1060.1.1"
 	}
 	1120.1.2 = {
-		add_spouse = 82075
+		add_spouse=82075
 	}
-	1120.1.2={
+	1120.1.2 = {
 		dynasty=9115 #Mowbrary-Aubigny
 	}
 	1129.7.1 = {
@@ -5797,7 +5798,7 @@
 
 82067 = {
 	name="Alicia"
-	female = yes
+	female=yes
 	dynasty=558
 	martial=7
 	diplomacy=6
@@ -5881,7 +5882,7 @@
 		birth="1030.1.1"
 	}
 	1057.1.2 = {
-		add_spouse = 82067
+		add_spouse=82067
 	}
 	1096.1.1 = {
 		death="1096.1.1"
@@ -5928,7 +5929,7 @@
 
 82075 = {
 	name="Gundreda"
-	female = yes
+	female=yes
 	dynasty=101691
 	martial=7
 	diplomacy=5
@@ -6004,7 +6005,7 @@
 85003 = {
 	name="Robert"
 	dynasty=678
-	dna="nzlnacmrgfi"
+	dna="nzlnacmrgci"
 	properties="0djehk0000"
 	martial=7
 	diplomacy=7
@@ -6064,7 +6065,7 @@
 
 85006 = {
 	name="Emma"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=7
 	diplomacy=6
@@ -6164,7 +6165,7 @@
 
 98008 = {
 	name="Felicia"
-	female = yes
+	female=yes
 	dynasty=678
 	martial=5
 	diplomacy=5
@@ -6184,7 +6185,7 @@
 
 98013 = {
 	name="Cristiana"
-	female = yes
+	female=yes
 	dynasty=676
 	martial=3
 	diplomacy=7
@@ -6193,8 +6194,8 @@
 	religion="catholic"
 	culture="norman"
 	add_trait="intricate_webweaver"
-	father = 98014
-	# mother = 
+	father=98014
+	# mother=
 	1101.1.1 = {
 		birth="1101.1.1"
 	}
@@ -6213,8 +6214,8 @@
 	religion="catholic"
 	culture="norman"
 	add_trait="fortune_builder"
-	father = 1154
-	mother = 30855
+	father=1154
+	mother=30855
 	1079.1.1 = {
 		birth="1079.1.1"
 	}
@@ -6242,7 +6243,7 @@
 
 32500 = {
 	name="Adeliza"
-	female = yes
+	female=yes
 	dynasty=349
 	religion="catholic"
 	culture="norman"
@@ -6299,7 +6300,7 @@
 
 32210= {
 	name="Helisende"
-	female = yes
+	female=yes
 	dynasty=4047
 	religion="catholic"
 	culture="norman"
@@ -6362,8 +6363,7 @@
 	name="Adelia" #de Talvas
 	# AKA: Ada
 	female=yes
-	dynasty=709 #not a montgommery changed dynasty
-	dynasty=751
+	dynasty=709
 	martial=5
 	diplomacy=6
 	intrigue=7
@@ -6490,7 +6490,7 @@
 
 32289 = {
 	name="Sibylle"
-	female = yes
+	female=yes
 	dynasty=678
 	religion="catholic"
 	culture="norman"
@@ -6546,7 +6546,7 @@
 
 32138 = {
 	name="Emma"
-	female = yes
+	female=yes
 	dynasty=4011
 	religion="catholic"
 	culture="norman"
@@ -6643,7 +6643,7 @@
 		add_spouse=72125
 	}
 	1154.1.1 = {
-		add_claim = c_tarragona
+		add_claim=c_tarragona
 	}
 	1159.1.1 = {
 		death="1159.1.1"
@@ -6667,10 +6667,10 @@
 	name="William"
 	religion="catholic"
 	culture="norman"
-	1028.1.1={
+	1028.1.1 = {
 		birth="1028.1.1"
 	}
-	1099.5.1={
+	1099.5.1 = {
 		death="1099.5.1"
 	}
 }
@@ -6684,10 +6684,10 @@
 	religion="catholic"
 	culture="norman"
 	add_trait="midas_touched"
-	1060.1.1={
+	1060.1.1 = {
 		birth="1060.1.1"
 	}
-	1128.9.5={
+	1128.9.5 = {
 		death="1128.9.5"
 	}
 }
@@ -6696,10 +6696,10 @@
 	name="William"
 	religion="catholic"
 	culture="norman"
-	1092.1.1={
+	1092.1.1 = {
 		birth="1092.1.1"
 	}
-	1159.1.1={
+	1159.1.1 = {
 		death="1159.1.1"
 	}
 }
@@ -6708,10 +6708,10 @@
 	name="William"
 	religion="catholic"
 	culture="norman"
-	1096.1.1={
+	1096.1.1 = {
 		birth="1096.1.1"
 	}
-	1152.11.13={
+	1152.11.13 = {
 		death="1152.11.13"
 	}
 }
@@ -6721,10 +6721,10 @@
 	dynasty=5061
 	religion="catholic"
 	culture="norman"
-	992.1.1={
+	992.1.1 = {
 		birth="992.1.1"
 	}
-	1050.1.1={
+	1050.1.1 = {
 		death="1050.1.1"
 	}
 }
@@ -6753,7 +6753,7 @@
 204596 = {
 	name="Robert" #Robert I de Meulan
 	dynasty=5061
-	dna="fcejfbdvbah"
+	dna="fcejfbdvbch"
 	properties="0d0ehk0000"
 	martial=7
 	diplomacy=5
@@ -6768,10 +6768,10 @@
 		birth="1050.1.2"
 	}
 	1096.1.1 = {
-		add_spouse = 551
+		add_spouse=551
 	}
 	1114.12.1 = {
-		remove_spouse = 551
+		remove_spouse=551
 	}
 	1118.6.5 = {
 		death="1118.6.5"
@@ -6796,65 +6796,11 @@
 	}
 }
 
-138381 = {
-	name="Josserand" #Josserand de Montaigu
-	#Bishop of Viviers
-	religion="catholic"
-	culture="frankish"
-	dynasty=426 #de Montaigu
-	1100.1.1 = {
-		birth="1100.1.1" #unknown
-	}
-	1147.1.1 = {
-		death="1147.1.1" #unknown
-	}	
-}
-
-138397 = {
-	name="Guillaume" #Bishop Guillaume IV de Flavacourt
-	#Bishop of Viviers
-	religion="catholic"
-	culture="frankish"
-	1270.1.1 = {
-		birth="1270.1.1" #unknown
-	}
-	1322.1.1 = {
-		death="1322.1.1" #unknown
-	}
-}
-
-138398 = {
-	name="Pierre" #Pierre II de Mortemart, Pierre Gauvain
-	#bishop of Viviers and Auxerre
-	religion="catholic"
-	culture="frankish"
-	dynasty=5002
-	1280.1.1 = {
-		birth="1280.1.1" #unknown
-	}
-	1325.1.1 = {
-		death="1325.1.1" #unknown
-	}	
-}
-
-138399 = {
-	name="Pierre" #Pierre III de Moussy
-	#bishop of Viviers 
-	religion="catholic"
-	culture="frankish"
-	1280.1.1 = {
-		birth="1280.1.1" #unknown
-	}
-	1326.1.1 = {
-		death="1326.1.1" #unknown
-	}
-}
-
 129083 = {
 	name="Ilbert" #Ilbert de Lacie
 	dynasty=4037
 	religion="catholic"
-	culture="english"
+	culture="norman"
 	1045.1.1 = {
 		birth="1045.1.1"
 	}
@@ -6869,10 +6815,10 @@
 	religion="catholic"
 	culture="norman"
 	father=71905
-	855.1.1={
+	855.1.1 = {
 		birth="855.1.1"
 	}
-	894.12.12={
+	894.12.12 = {
 		death="894.12.12"
 	}
 }
@@ -6883,10 +6829,10 @@
 	religion="catholic"
 	culture="norman"
 	father=71903
-	876.1.1={
+	876.1.1 = {
 		birth="876.1.1"
 	}
-	898.10.15={
+	898.10.15 = {
 		death="898.10.15"
 	}
 }
@@ -6898,10 +6844,10 @@
 	culture="norman"
 	father=71906
 	mother=71907
-	816.1.1={
+	816.1.1 = {
 		birth="816.1.1"
 	}
-	860.1.1={
+	860.1.1 = {
 		death="860.1.1"
 	}
 }
@@ -6911,13 +6857,13 @@
 	dynasty=7389
 	religion="catholic"
 	culture="norman"
-	780.1.1={
+	780.1.1 = {
 		birth="780.1.1"
 	}
-	814.1.1={
+	814.1.1 = {
 		add_spouse=71907
 	}
-	836.12.30={
+	836.12.30 = {
 		death="836.12.30"
 	}
 }
@@ -6928,10 +6874,10 @@
 	religion="catholic"
 	culture="norman"
 	father=71905
-	850.1.1={
+	850.1.1 = {
 		birth="850.1.1"
 	}
-	880.7.8={
+	880.7.8 = {
 		death="880.7.8"
 	}
 }
@@ -6942,10 +6888,10 @@
 	religion="catholic"
 	culture="norman"
 	father=71908
-	871.1.1={
+	871.1.1 = {
 		birth="871.1.1"
 	}
-	883.1.1={
+	883.1.1 = {
 		death="883.1.1"
 	}
 }
@@ -6957,10 +6903,10 @@
 	culture="norman"
 	father=71906
 	mother=71907
-	820.1.1={
+	820.1.1 = {
 		birth="820.1.1"
 	}
-	853.1.1={
+	853.1.1 = {
 		death="853.1.1"
 	}
 }
@@ -6971,10 +6917,10 @@
 	religion="catholic"
 	culture="norman"
 	father=71910
-	846.1.1={
+	846.1.1 = {
 		birth="846.1.1"
 	}
-	899.1.1={
+	899.1.1 = {
 		death="899.1.1"
 	}
 }
@@ -6993,19 +6939,19 @@
 
 73270 = {
 	name="Geoffroy"
-	dynasty = 100345
-	dna="mqcvyeznznh"
-	properties="ci0e0k0000"
+	dynasty=100345
+	dna="mqcvyeznzch"
+	properties="ci0ehk0000"
 	religion="catholic"
 	culture="norman"
 	father=73272
-	1030.1.1={
+	1030.1.1 = {
 		birth="1030.1.1"
 	}
-	1065.1.1={
+	1065.1.1 = {
 		add_spouse=73271
 	}
-	1082.12.1={
+	1082.12.1 = {
 		death="1082.12.1"
 	}
 }
@@ -7015,125 +6961,125 @@
 	female=yes
 	religion="catholic"
 	culture="norman"
-	1047.1.1={
+	1047.1.1 = {
 		birth="1047.1.1"
 	}
-	1090.1.1={
+	1090.1.1 = {
 		death="1090.1.1"
 	}
 }
 
 73272 = {
 	name="Acciard"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
-	1006.1.1={
+	1006.1.1 = {
 		birth="1006.1.1"
 	}
-	1058.1.1={
+	1058.1.1 = {
 		death="1058.1.1"
 	}
 }
 
 73273 = {
 	name="Arnald"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73272
-	1032.1.1={
+	1032.1.1 = {
 		birth="1032.1.1"
 	}
-	1083.1.1={
+	1083.1.1 = {
 		death="1083.1.1"
 	}
 }
 
 73274 = {
 	name="Rayner"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73272
-	1034.1.1={
+	1034.1.1 = {
 		birth="1034.1.1"
 	}
-	1086.1.1={
+	1086.1.1 = {
 		death="1086.1.1"
 	}
 }
 
 73275 = {
 	name="Roger"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73272
-	1036.1.1={
+	1036.1.1 = {
 		birth="1036.1.1"
 	}
-	1090.1.1={
+	1090.1.1 = {
 		death="1090.1.1"
 	}
 }
 
 73276 = {
 	name="Geoffroy"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73270
 	mother=73271
-	1066.1.1={
+	1066.1.1 = {
 		birth="1066.1.1"
 	}
-	1114.1.1={
+	1114.1.1 = {
 		death="1114.1.1"
 	}
 }
 
 73277 = {
 	name="Rayner"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73270
 	mother=73271
-	1070.1.1={
+	1070.1.1 = {
 		birth="1070.1.1"
 	}
-	1120.1.1={
+	1120.1.1 = {
 		death="1120.1.1"
 	}
 }
 
 73278 = {
 	name="Robert"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73270
 	mother=73271
-	1074.1.1={
+	1074.1.1 = {
 		birth="1074.1.1"
 	}
-	1122.1.1={
+	1122.1.1 = {
 		death="1122.1.1"
 	}
 }
 
 73279 = {
 	name="Serlo"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73270
 	mother=73271
-	1078.1.1={
+	1078.1.1 = {
 		birth="1078.1.1"
 	}
-	1121.1.1={
+	1121.1.1 = {
 		death="1121.1.1"
 	}
 }
@@ -7141,32 +7087,32 @@
 73280 = {
 	name="Alberada"
 	female=yes
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73270
 	mother=73271
-	1082.1.1={
+	1082.1.1 = {
 		birth="1082.1.1"
 	}
-	1130.1.1={
+	1130.1.1 = {
 		death="1130.1.1"
 	}
 }
 
 73281 = {
 	name="Acciard"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73276
-	1090.1.1={
+	1090.1.1 = {
 		birth="1090.1.1"
 	}
-	1106.1.1={
+	1106.1.1 = {
 		add_spouse=73282
 	}
-	1137.5.1={
+	1137.5.1 = {
 		death="1137.5.1"
 	}
 }
@@ -7176,55 +7122,55 @@
 	female=yes
 	religion="catholic"
 	culture="norman"
-	1090.1.1={
+	1090.1.1 = {
 		birth="1090.1.1"
 	}
-	1150.1.1={
+	1150.1.1 = {
 		death="1150.1.1"
 	}
 }
 
 73283 = {
 	name="Geoffroy"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73281
 	mother=73282
-	1107.1.1={
+	1107.1.1 = {
 		birth="1107.1.1"
 	}
-	1174.4.8={
+	1174.4.8 = {
 		death="1174.4.8"
 	}
 }
 
 73284 = {
 	name="Emma"
-	dynasty = 100345
+	dynasty=100345
 	female=yes
 	religion="catholic"
 	culture="norman"
 	father=73281
 	mother=73282
-	1113.1.1={
+	1113.1.1 = {
 		birth="1113.1.1"
 	}
-	1190.5.1={
+	1190.5.1 = {
 		death="1190.5.1"
 	}
 }
 
 73285 = {
 	name="Geoffroy"
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73276
-	1109.1.1={
+	1109.1.1 = {
 		birth="1109.1.1"
 	}
-	1133.5.1={
+	1133.5.1 = {
 		death="1133.5.1"
 	}
 }
@@ -7232,14 +7178,14 @@
 73286 = {
 	name="Agnes"
 	female=yes
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73276
-	1111.1.1={
+	1111.1.1 = {
 		birth="1111.1.1"
 	}
-	1137.3.1={
+	1137.3.1 = {
 		death="1137.3.1"
 	}
 }
@@ -7247,57 +7193,57 @@
 73287 = {
 	name="Gimarca"
 	female=yes
-	dynasty = 100345
+	dynasty=100345
 	religion="catholic"
 	culture="norman"
 	father=73276
-	1113.1.1={
+	1113.1.1 = {
 		birth="1113.1.1"
 	}
-	1142.7.1={
+	1142.7.1 = {
 		death="1142.7.1"
 	}
 }
 
 73356 = {
 	name="Robert"
-	dynasty = 678
+	dynasty=678
 	religion="catholic"
 	culture="norman"
 	father=211501
 	mother=206512
-	1153.1.1={
+	1153.1.1 = {
 		birth="1153.1.1"
 	}
-	1158.1.1={
+	1158.1.1 = {
 		death="1158.1.1"
 	}
 }
 
 73357 = {
 	name="Enrico"
-	dynasty = 678
+	dynasty=678
 	religion="catholic"
 	culture="norman"
 	father=211501
 	mother=206512
-	1158.1.1={
+	1158.1.1 = {
 		birth="1158.1.1"
 	}
-	1172.6.16={
+	1172.6.16 = {
 		death="1172.6.16"
 	}
 }
 
 73358 = {
 	name="Roger"
-	dynasty = 100348
+	dynasty=100348
 	religion="catholic"
 	culture="norman"
-	1141.1.1={
+	1141.1.1 = {
 		birth="1141.1.1"
 	}
-	1200.1.1={
+	1200.1.1 = {
 		death="1200.1.1"
 	}
 }
@@ -7309,10 +7255,10 @@
 	religion="catholic"
 	culture="norman"
 	father=32584
-	1211.1.1={
+	1211.1.1 = {
 		birth="1211.1.1"
 	}
-	1262.1.1={
+	1262.1.1 = {
 		death="1262.1.1"
 	}
 }
@@ -7323,10 +7269,10 @@
 	religion="catholic"
 	culture="norman"
 	father=30896
-	1170.1.1={
+	1170.1.1 = {
 		birth="1170.1.1"
 	}
-	1220.1.1={
+	1220.1.1 = {
 		death="1220.1.1"
 	}
 }
@@ -7417,10 +7363,10 @@
 	stewardship=6
 	religion="catholic"
 	culture="norman"
-	1081.1.1={
+	1081.1.1 = {
 		birth="1081.1.1"
 	}
-	1145.7.1={  
+	1145.7.1 = {  
 		death="1145.7.1"
 	}
 }
@@ -7435,10 +7381,10 @@
 	religion="catholic"	
 	culture="norman"
 	father=83303
-	1100.1.1={
+	1100.1.1 = {
 		birth="1100.1.1"
 	}
-	1156.7.1={  
+	1156.7.1 = {  
 		death="1156.7.1"
 	}
 }
@@ -7453,24 +7399,24 @@
 	religion="catholic"
 	culture="norman"
 	father=83303
-	1102.1.1={
+	1102.1.1 = {
 		birth="1102.1.1"
 	}
-	1152.7.1={  
+	1152.7.1 = {  
 		death="1152.7.1"
 	}
 }
 
 73483 = {
 	name="Roger"
-	dynasty = 101843
+	dynasty=101843
 	religion="catholic"
 	culture="norman"
 	add_trait=scholarly_theologian
-	1140.1.1={
+	1140.1.1 = {
 		birth="1140.1.1"
 	}
-	1225.1.1={
+	1225.1.1 = {
 		death="1225.1.1"
 	}
 }
@@ -7512,10 +7458,10 @@
 	dynasty=20066
 	religion="catholic"
 	culture="norman"
-	1020.1.1={
+	1020.1.1 = {
 		birth="1020.1.1"
 	}	
-	1060.1.1={
+	1060.1.1 = {
 		death="1060.1.1"
 	}
 }
@@ -7526,10 +7472,10 @@
 	religion="catholic"
 	culture="norman"
 	father=34605
-	1045.1.1={
+	1045.1.1 = {
 		birth="1045.1.1"
 	}	
-	1095.1.1={
+	1095.1.1 = {
 		death="1095.1.1"
 	}
 }
@@ -7539,10 +7485,10 @@
 	dynasty=7372
 	religion="catholic"
 	culture="norman"
-	1030.1.1={
+	1030.1.1 = {
 		birth="1030.1.1"
 	}
-	1074.1.1={
+	1074.1.1 = {
 		death="1074.1.1"
 	}
 }
@@ -7630,10 +7576,64 @@
 	religion="catholic"
 	culture="norman"
 	add_trait="skilled_tactician"
-	1032.1.1={
+	1032.1.1 = {
 		birth="1032.1.1"
 	}
-	1082.1.1={
+	1082.1.1 = {
 		death="1082.1.1"
+	}
+}
+
+144949 = {  	
+	name="Robert"
+	dynasty=3123
+	religion="catholic"
+	culture="norman"
+	father=144950
+	1078.1.1 = {
+		birth="1078.1.1"
+	}
+	1141.1.1 = {
+		death="1141.1.1"
+	}
+}
+
+144950 = {  	
+	name="Robert"
+	dynasty=3123
+	religion="catholic"
+	culture="norman"
+	1040.1.1 = {
+		birth="1040.1.1"
+	}
+	1094.1.1 = {
+		death="1094.1.1"
+	}
+}
+
+129048 = {
+	name="Geoffrey" #Geoffrey de Mandeville
+	dynasty=344
+	religion="catholic"
+	culture="norman"
+	1040.1.1 = {
+		birth="1040.1.1"
+	}
+	1100.1.1 = {
+		death="1100.1.1"
+	}
+}
+
+129049 = {
+	name="William" #William de Mandeville
+	dynasty=344
+	religion="catholic"
+	culture="norman"
+	father=129048
+	1065.1.1 = {
+		birth="1065.1.1"
+	}
+	1129.1.1 = {
+		death="1129.1.1"
 	}
 }

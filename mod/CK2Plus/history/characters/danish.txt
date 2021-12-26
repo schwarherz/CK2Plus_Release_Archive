@@ -323,16 +323,16 @@
 	stewardship=7
 	religion="catholic"
 	culture="danish"
+	add_trait="tall"
 	add_trait="lustful"
 	add_trait="wroth"
 	add_trait="zealous"
-	add_trait="tall"
 	add_trait="midas_touched"
 	father=101535 # Ulf Torgilsson
 	mother=101509 # Estrid
 	1019.1.1={
 		birth="1019.1.1"
-		#add_claim = k_england
+		add_claim = k_england
 	}
 	1046.1.1={
 		add_spouse=100513 # Gyda Anundsdottor
@@ -1174,7 +1174,7 @@
 		birth="1170.6.28"
 	}
 	1220.5.12 = {
-		give_nickname=nick_the_conquerer
+		give_nickname=nick_the_conqueror
 	}
 	1241.3.28={
 		death="1241.3.28"
@@ -3236,7 +3236,7 @@
 	dynasty=760 #Galen
 	religion="catholic"
 	culture="danish"
-	add_trait="marial_cleric"
+	add_trait="martial_cleric"
 	father=151008 # Erik Jensen
 	1280.1.1={
 		birth="1280.1.1"

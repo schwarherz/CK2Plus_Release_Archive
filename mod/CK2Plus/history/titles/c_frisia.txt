@@ -1,5 +1,5 @@
 1066.1.1={
-	liege="d_lower_lorraine"
+	liege="d_saxony"
 }
 1066.1.1={
 	holder=106510 #Ekbert I von Braunschweig
@@ -8,12 +8,15 @@
 	holder=106515 #Ekbert II von Braunschweig
 }
 1090.7.3={
+	liege="d_lower_lorraine"
 	holder=30670 #Konrad von Hildesheim
 }
 1099.4.13={
+	liege="d_saxony"
 	holder=112603 #Heinrich von Nordheim
 }
 1101.1.1={
+	liege="d_lower_lorraine"
 	holder=30671 #Burchard von Lechsgemund
 }
 1107.1.1={
