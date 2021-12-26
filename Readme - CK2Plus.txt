@@ -8,7 +8,7 @@ Credits: Viscardus (Cornish Characters), Cetan (Expanded Character Tooltips), Cr
 ****************
 1) If you have an older version of the mod installed, go into the Crusader Kings II mod folder and delete the 'CK2Plus' folder and .mod file.
 2) Unzip to your Crusader Kings II folder. IMPORTANT: The mod files should go into your GAME INSTALLATION folder, NOT your My Documents/Paradox Interactive folder.
-3) If you have Steam, you will also need to unzip to your My Documents/Paradox Interactive/Crusader Kings II folder, in ADDITION to unzipping to your game directory as outlined in step 2.
+3) If you have Steam, you will need to unzip to your My Documents/Paradox Interactive/Crusader Kings II folder in ADDITION to unzipping to your game directory as outlined in step 2.
 4) Unzip any Hotfixes to your Crusader Kings II folder (same place you installed the mod in step 2).
 5) Start the CK2 launcher and check 'CK2Plus (MAIN)' in the list of mods.
 6) Check any optional modules you want to use along with CK2Plus.
@@ -67,6 +67,9 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 *************
 * Changelog *
 *************
+1.11
+- Fixed a CTD on startup caused by the lack of congenital/birth traits.
+
 1.10:
 - Fixed a bug that was causing characters to get dynastic stain when they should not be.
 - Fixed a bug that was causing regency trait not to be applied properly.

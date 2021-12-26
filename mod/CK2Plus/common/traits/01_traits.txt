@@ -168,3 +168,8 @@ regency = { #126
 	vassal_opinion = -25
 	customizer = no
 }
+
+placeholder = {
+	congenital = yes
+	birth = yes
+}

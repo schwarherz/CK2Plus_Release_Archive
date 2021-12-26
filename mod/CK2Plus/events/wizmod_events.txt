@@ -3845,3 +3845,30 @@ character_event = {
 		clr_global_flag = minor_title_given
 	}
 }
+
+character_event = {
+	id = 190069
+	picture = "GFX_evt_council"
+	trigger = {
+		trait = placeholder
+	}
+		
+	desc = "EVTDESC190069"
+	
+	mean_time_to_happen = {
+		months = 1		
+	}
+
+	option = {
+		name = "EVTOPTA190069"
+		if = {
+			limit = {
+				ai = no
+			}
+			prestige = 25
+		}
+		hidden_tooltip = {
+			remove_trait = placeholder
+		}
+	}
+}

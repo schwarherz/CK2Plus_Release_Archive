@@ -918,5 +918,13 @@ spriteTypes = {
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
-	}	  
+	}	
+	
+	spriteType = {
+		name = "GFX_trait_placeholder"
+		texturefile = "gfx/CK2Plus/placeholder.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
 }

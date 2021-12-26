@@ -8,6 +8,7 @@ character_event = {
 		name = "EVTOPTA300001"
 		hidden_tooltip = {
 			#clean up weird traits
+			remove_trait = placeholder
 			remove_trait = crusader
 			remove_trait = mujahid
 			remove_trait = hunter
@@ -115,6 +116,7 @@ character_event = {
 			character_event = { id = 190000 }
 		
 			#clean up weird traits
+			remove_trait = placeholder
 			remove_trait = crusader
 			remove_trait = mujahid
 			remove_trait = hunter

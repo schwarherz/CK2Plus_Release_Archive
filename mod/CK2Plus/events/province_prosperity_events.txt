@@ -453,7 +453,7 @@ province_event = {
 	mean_time_to_happen = {
 		months = 120
 		modifier = {
-			factor = 0.4
+			factor = 0.25
 			has_siege = yes
 		}		
 		modifier = {

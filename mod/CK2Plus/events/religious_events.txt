@@ -76,7 +76,7 @@ province_event = {
 	}
 	
 	immediate = {
-		religion_authority = -0.001
+		religion_authority = -0.002
 		become_heretic = yes
 		set_province_flag = heresy_in_province
 		add_province_modifier = {
@@ -653,20 +653,44 @@ province_event = {
 	mean_time_to_happen = {
 		months = 1200
 		modifier = {
-			factor = 2.0
+			factor = 1.25
 			religion_authority = 0.6
+		}		
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.7
 		}
 		modifier = {
-			factor = 2.0
+			factor = 1.25
 			religion_authority = 0.8
+		}	
+		modifier = {
+			factor = 1.25
+			religion_authority = 0.9
 		}
+		modifier = {
+			factor = 1.25
+			religion_authority = 1.0
+		}		
 		modifier = {
 			factor = 0.75
-			NOT = { religion_authority = 0.2 }
+			NOT = { religion_authority = 0.5 }
 		}
 		modifier = {
 			factor = 0.75
 			NOT = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { religion_authority = 0.3 }
+		}	
+		modifier = {
+			factor = 0.75
+			NOT = { religion_authority = 0.2 }
+		}	
+		modifier = {
+			factor = 0.75
+			NOT = { religion_authority = 0.1 }
 		}
 		modifier = {
 			factor = 0.75
@@ -690,7 +714,7 @@ province_event = {
 	}
 	
 	immediate = {
-		religion_authority = -0.001
+		religion_authority = -0.002
 		random_neighbor_province = {
 			limit = {
 				is_heresy_of = ROOT
