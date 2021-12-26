@@ -1,0 +1,120 @@
+89000 = {
+	name="Nikon"
+	dynasty=2109000
+	religion="orthodox"
+	culture="greek"
+	add_trait="elusive_shadow"
+	add_trait="ambitious"
+	add_trait="wroth"
+	add_trait="genius"
+	add_trait="paranoid"
+	add_trait="deceitful"
+	employer = 20015
+	health=20.000
+	1036.1.1 = {
+		birth="1036.1.1" 
+		add_claim="d_krete"
+		add_claim="d_thrace"
+	}
+	1057.1.1=
+	{
+	employer=20516
+	}
+	1067.9.16={
+	employer=0
+	religion="judaism"
+	}
+	1067.10.16=
+	{
+	employer=20516
+	religion="orthodox"
+	}	
+	1093.1.1=
+	{
+	employer = 1781
+	}
+	1137.1.1=
+	{
+	employer = 93453
+	}
+	1145.1.1=
+	{
+	employer = 93454
+	}
+	1167.1.1=
+	{
+	employer = 215028
+	}
+	1205.1.1=
+	{
+	employer=31403 #Enrico de Candia
+	}
+	1211.1.1=
+	{
+	liege="k_venice"
+	}
+	1211.1.1=
+	{
+	employer=32120 #Pietro Ziani
+	}
+	1229.3.13=
+	{
+	employer=32124 #Iacopo Tiepolo
+	}
+	1249.7.19=
+	{
+	employer=32125 #Marino Morosini
+	}
+	1253.1.1=
+	{
+	employer=32126 #Reniero Zeno
+	}
+	1268.7.7=
+	{
+	employer=32127 #Lorenzo Tiepolo
+	}
+	1275.8.15=
+	{
+	employer=32128 #Iacopo Contarini
+	}
+	1280.3.6=
+	{
+	employer=32129 #Giovanni Dandalo
+	}
+	1289.11.2=
+	{
+	employer=32130 #Pietro Gradenigo
+	}
+	1311.8.13=
+	{
+	employer=32131 #Marino Zorzi
+	}
+	1312.7.3=
+	{
+	employer=32132 #Giovannia Soranza
+	}
+	1328.12.31=
+	{
+	employer=463600 #Francesco Dandalo
+	}
+	
+}
+
+89001 = {
+	name="Sniper"
+	dynasty=2109000
+	religion="judaism"
+	culture="greek"
+	add_trait="scholar"
+	add_trait="ambitious"
+	add_trait="craven"
+	add_trait="naive_appeaser"
+	add_trait="diligent"
+	add_trait="greedy"
+	1046.1.1 = {
+		birth="1046.1.1" 
+	}
+	1067.10.16={
+		death="1067.10.16" 
+	}	
+}

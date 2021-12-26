@@ -1,0 +1,41 @@
+# 764 - Antiocheia
+
+# County Title
+title = c_antiocheia
+
+# Settlements
+max_settlements = 5
+b_antiocheia = castle
+b_latakiah = city
+b_stsymeon = temple
+
+b_darbsak = castle
+#b_hazart = castle
+#b_saone = castle
+#b_baghras = castle
+#b_harenc = castle
+
+# Misc
+culture = greek
+religion = orthodox
+
+# History
+
+1099.1.1 = { b_harenc = castle }
+
+1110.1.1 = { b_saone = castle } 
+
+# Mongol invasion 
+
+1222.1.1 = { remove_settlement = b_saone }
+1222.1.1 = { remove_settlement = b_stsymeon }
+
+# Conquered by the Mamluks
+
+1268.1.1 = { culture = levantine_arabic }
+1268.1.1 = { religion = sunni } 
+
+
+
+
+

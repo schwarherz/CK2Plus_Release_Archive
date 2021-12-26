@@ -1,0 +1,7236 @@
+decisions = {
+	create_e_shiite = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			religion = shiite
+			OR = {
+				ai = no
+				primary_title = { higher_tier_than = DUKE }
+			}			
+			NOT = { e_shiite = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			primary_title = { 
+				OR = {
+					tier = KING
+					tier = EMPEROR
+				}
+			}
+			OR = {
+				num_of_king_titles = 3
+				primary_title = { tier = EMPEROR }
+			}
+			independent = yes
+			war = no
+			piety = 500
+			treasury = 800
+		}
+		effect = {
+			e_shiite = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}					
+				}
+				gain_title = FROM
+			}
+			treasury = -800
+			piety = -500
+			prestige = 2000
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}
+	create_e_sunni = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			religion = sunni
+			OR = {
+				ai = no
+				primary_title = { higher_tier_than = DUKE }
+			}			
+			NOT = { e_sunni = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			primary_title = { 
+				OR = {
+					tier = KING
+					tier = EMPEROR
+				}
+			}
+			OR = {
+				num_of_king_titles = 3
+				primary_title = { tier = EMPEROR }
+			}
+			independent = yes
+			war = no
+			piety = 500
+			treasury = 800
+		}
+		effect = {
+			e_sunni = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			treasury = -800
+			piety = -500
+			prestige = 2000
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+	}	
+	create_e_france = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_france } }
+				OR = { any_realm_lord = { has_landed_title = k_france } has_landed_title = k_france }
+				OR = { any_realm_lord = { has_landed_title = k_brittany } has_landed_title = k_brittany }	
+				OR = { any_realm_lord = { has_landed_title = k_burgundy } has_landed_title = k_burgundy }
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_france = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_france } has_landed_title = k_france }
+			OR = { any_realm_lord = { has_landed_title = k_brittany } has_landed_title = k_brittany }
+			OR = { any_realm_lord = { has_landed_title = k_burgundy } has_landed_title = k_burgundy }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_france = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}	
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+	create_e_hre = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_hre } }
+				OR = { any_realm_lord = { has_landed_title = k_germany } has_landed_title = k_germany }
+				OR = { any_realm_lord = { has_landed_title = k_netherlands } has_landed_title = k_netherlands }
+				OR = { any_realm_lord = { has_landed_title = k_bohemia } has_landed_title = k_bohemia }	
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_hre = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_germany } has_landed_title = k_germany }
+			OR = { any_realm_lord = { has_landed_title = k_netherlands } has_landed_title = k_netherlands }
+			OR = { any_realm_lord = { has_landed_title = k_bohemia } has_landed_title = k_bohemia }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_hre = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+	create_e_italy = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_italy } }
+				OR = { any_realm_lord = { has_landed_title = k_italy } has_landed_title = k_italy }
+				OR = { any_realm_lord = { has_landed_title = k_sicily } has_landed_title = k_sicily }			
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_italy = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_italy } has_landed_title = k_italy }
+			OR = { any_realm_lord = { has_landed_title = k_sicily } has_landed_title = k_sicily }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_italy = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+	create_e_danubia = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_danubia } }
+				OR = { any_realm_lord = { has_landed_title = k_serbia } has_landed_title = k_serbia }
+				OR = { any_realm_lord = { has_landed_title = k_croatia } has_landed_title = k_croatia }
+				OR = { any_realm_lord = { has_landed_title = k_hungary } has_landed_title = k_hungary }
+				OR = { any_realm_lord = { has_landed_title = k_bulgaria } has_landed_title = k_bulgaria }		
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_danubia = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_serbia } has_landed_title = k_serbia }
+			OR = { any_realm_lord = { has_landed_title = k_croatia } has_landed_title = k_croatia }
+			OR = { any_realm_lord = { has_landed_title = k_hungary } has_landed_title = k_hungary }
+			OR = { any_realm_lord = { has_landed_title = k_bulgaria } has_landed_title = k_bulgaria }	
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_danubia = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}	
+	create_e_byzantium = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_byzantium } }
+				OR = { any_realm_lord = { has_landed_title = k_georgia } has_landed_title = k_georgia }
+				OR = { any_realm_lord = { has_landed_title = k_byzantium } has_landed_title = k_byzantium }
+				OR = { any_realm_lord = { has_landed_title = k_armenia } has_landed_title = k_armenia }
+				OR = { any_realm_lord = { has_landed_title = k_thessalonika } has_landed_title = k_thessalonika }		
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_byzantium = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_georgia } has_landed_title = k_georgia }
+			OR = { any_realm_lord = { has_landed_title = k_byzantium } has_landed_title = k_byzantium }
+			OR = { any_realm_lord = { has_landed_title = k_armenia } has_landed_title = k_armenia }
+			OR = { any_realm_lord = { has_landed_title = k_thessalonika } has_landed_title = k_thessalonika }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_byzantium = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+	create_e_poland_lithuania = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_poland_lithuania } }
+				OR = { any_realm_lord = { has_landed_title = k_poland } has_landed_title = k_poland }
+				OR = { any_realm_lord = { has_landed_title = k_lithuania } has_landed_title = k_lithuania }			
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_poland_lithuania = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_poland } has_landed_title = k_poland }
+			OR = { any_realm_lord = { has_landed_title = k_lithuania } has_landed_title = k_lithuania }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_poland_lithuania = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+	create_e_russia = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_russia } }
+				OR = { any_realm_lord = { has_landed_title = k_rus } has_landed_title = k_rus }
+				OR = { any_realm_lord = { has_landed_title = k_khazaria } has_landed_title = k_khazaria }
+				OR = { any_realm_lord = { has_landed_title = k_qazan } has_landed_title = k_qazan }
+				OR = { any_realm_lord = { has_landed_title = k_crimea } has_landed_title = k_crimea }
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_russia = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_rus } has_landed_title = k_rus }
+			OR = { any_realm_lord = { has_landed_title = k_khazaria } has_landed_title = k_khazaria }
+			OR = { any_realm_lord = { has_landed_title = k_qazan } has_landed_title = k_qazan }
+			OR = { any_realm_lord = { has_landed_title = k_crimea } has_landed_title = k_crimea }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_russia = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+	create_e_persia = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}		
+			OR = {
+				primary_title = { empire = { title = e_persia } }
+				OR = { any_realm_lord = { has_landed_title = k_persia } has_landed_title = k_persia }
+				OR = { any_realm_lord = { has_landed_title = k_mesopotamia } has_landed_title = k_mesopotamia }
+				OR = { any_realm_lord = { has_landed_title = k_azerbaijan } has_landed_title = k_azerbaijan }
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_persia = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_persia } has_landed_title = k_persia }
+			OR = { any_realm_lord = { has_landed_title = k_mesopotamia } has_landed_title = k_mesopotamia }
+			OR = { any_realm_lord = { has_landed_title = k_azerbaijan } has_landed_title = k_azerbaijan }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_persia = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}	
+	create_e_spain = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}	
+			OR = {
+				primary_title = { empire = { title = e_spain } }
+				OR = { any_realm_lord = { has_landed_title = k_castille } has_landed_title = k_castille }
+				OR = { any_realm_lord = { has_landed_title = k_andalusia } has_landed_title = k_andalusia }
+				OR = { any_realm_lord = { has_landed_title = k_leon } has_landed_title = k_leon }
+				OR = { any_realm_lord = { has_landed_title = k_portugal } has_landed_title = k_portugal }
+				OR = { any_realm_lord = { has_landed_title = k_spanish_galicia } has_landed_title = k_spanish_galicia }
+				OR = { any_realm_lord = { has_landed_title = k_aragon } has_landed_title = k_aragon }
+				OR = { any_realm_lord = { has_landed_title = k_navarra } has_landed_title = k_navarra }
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_spain = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_navarra } has_landed_title = k_navarra }
+			OR = { any_realm_lord = { has_landed_title = k_castille } has_landed_title = k_castille }
+			OR = { any_realm_lord = { has_landed_title = k_andalusia } has_landed_title = k_andalusia }
+			OR = { any_realm_lord = { has_landed_title = k_leon } has_landed_title = k_leon }
+			OR = { any_realm_lord = { has_landed_title = k_portugal } has_landed_title = k_portugal }
+			OR = { any_realm_lord = { has_landed_title = k_spanish_galicia } has_landed_title = k_spanish_galicia }
+			OR = { any_realm_lord = { has_landed_title = k_aragon } has_landed_title = k_aragon }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_spain = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}	
+	create_e_maghreb = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_maghreb } }
+				OR = { any_realm_lord = { has_landed_title = k_mauretania } has_landed_title = k_mauretania }
+				OR = { any_realm_lord = { has_landed_title = k_algiers } has_landed_title = k_algiers }
+				OR = { any_realm_lord = { has_landed_title = k_africa } has_landed_title = k_africa }		
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_maghreb = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_mauretania } has_landed_title = k_mauretania }
+			OR = { any_realm_lord = { has_landed_title = k_algiers } has_landed_title = k_algiers }
+			OR = { any_realm_lord = { has_landed_title = k_africa } has_landed_title = k_africa }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_maghreb = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}	
+	create_e_arabia = {
+		is_high_prio = yes
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_arabia } }
+				OR = { any_realm_lord = { has_landed_title = k_egypt } has_landed_title = k_egypt }
+				OR = { any_realm_lord = { has_landed_title = k_arabia } has_landed_title = k_arabia }
+				#OR = { any_realm_lord = { has_landed_title = k_jerusalem } has_landed_title = k_jerusalem }
+				OR = { any_realm_lord = { has_landed_title = k_syria } has_landed_title = k_syria }
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_arabia = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_egypt } has_landed_title = k_egypt }
+			OR = { any_realm_lord = { has_landed_title = k_arabia } has_landed_title = k_arabia }
+			OR = { any_realm_lord = { has_landed_title = k_syria } has_landed_title = k_syria }
+			#OR = { any_realm_lord = { has_landed_title = k_jerusalem } has_landed_title = k_jerusalem }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_arabia = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+	create_e_britannia = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_britannia } }
+				OR = { any_realm_lord = { has_landed_title = k_england } has_landed_title = k_england }
+				OR = { any_realm_lord = { has_landed_title = k_scotland } has_landed_title = k_scotland }
+				OR = { any_realm_lord = { has_landed_title = k_ireland } has_landed_title = k_ireland }
+				OR = { any_realm_lord = { has_landed_title = k_wales } has_landed_title = k_wales }			
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_britannia = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_england } has_landed_title = k_england }
+			OR = { any_realm_lord = { has_landed_title = k_scotland } has_landed_title = k_scotland }
+			OR = { any_realm_lord = { has_landed_title = k_ireland } has_landed_title = k_ireland }
+			OR = { any_realm_lord = { has_landed_title = k_wales } has_landed_title = k_wales }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_britannia = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}	
+	create_e_scandinavia = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_scandinavia } }
+				OR = { any_realm_lord = { has_landed_title = k_finland } has_landed_title = k_finland }
+				OR = { any_realm_lord = { has_landed_title = k_norway } has_landed_title = k_norway }
+				OR = { any_realm_lord = { has_landed_title = k_sweden } has_landed_title = k_sweden }
+				OR = { any_realm_lord = { has_landed_title = k_denmark } has_landed_title = k_denmark	}		
+			}		
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_scandinavia = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_finland } has_landed_title = k_finland }
+			OR = { any_realm_lord = { has_landed_title = k_norway } has_landed_title = k_norway }
+			OR = { any_realm_lord = { has_landed_title = k_sweden } has_landed_title = k_sweden }
+			OR = { any_realm_lord = { has_landed_title = k_denmark } has_landed_title = k_denmark }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_scandinavia = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+	create_e_ethiopia = {
+		is_high_prio = yes	
+		potential = {
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = KING }
+				ai = no
+			}
+			OR = {
+				primary_title = { empire = { title = e_ethiopia } }
+				OR = { any_realm_lord = { has_landed_title = k_abyssinia } has_landed_title = k_abyssinia }
+				OR = { any_realm_lord = { has_landed_title = k_nubia } has_landed_title = k_nubia }
+				OR = { any_realm_lord = { has_landed_title = k_adal } has_landed_title = k_adal }
+			}
+			NOT = { primary_title = { tier = EMPEROR } }
+			NOT = { e_ethiopia = { holder_scope = { age = 0 } } }
+		}
+		allow = {
+			independent = yes
+			war = no
+			OR = { any_realm_lord = { has_landed_title = k_abyssinia } has_landed_title = k_abyssinia }
+			OR = { any_realm_lord = { has_landed_title = k_nubia } has_landed_title = k_nubia }
+			OR = { any_realm_lord = { has_landed_title = k_adal } has_landed_title = k_adal }
+			treasury = 800
+			piety = 200
+		}
+		effect = {
+			e_ethiopia = {
+				hidden_tooltip = {
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_1 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = revoke_law_0 }
+							}
+						}
+						add_law_w_cooldown = revoke_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = investiture_law_0 }
+							}
+						}
+						add_law_w_cooldown = investiture_law_1
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_gavelkind }
+							}
+						}
+						add_law_w_cooldown = succ_gavelkind
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_seniority }
+							}
+						}
+						add_law_w_cooldown = succ_seniority
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_primogeniture }
+							}
+						}
+						add_law_w_cooldown = succ_primogeniture
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_feudal_elective }
+							}
+						}
+						add_law_w_cooldown = succ_feudal_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_turkish_succession }
+							}
+						}
+						add_law_w_cooldown = succ_turkish_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_open_elective }
+							}
+						}
+						add_law_w_cooldown = succ_open_elective
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = succ_catholic_bishopric }
+							}
+						}
+						add_law_w_cooldown = succ_catholic_bishopric
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = agnatic_succession }
+							}
+						}
+						add_law_w_cooldown = agnatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = true_cognatic_succession }
+							}
+						}
+						add_law_w_cooldown = true_cognatic_succession
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_tax_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_0 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_1 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_2 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_3 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = feudal_contract_4 }
+							}
+						}
+						add_law_w_cooldown = feudal_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_0 }
+							}
+						}
+						add_law_w_cooldown = city_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_1 }
+							}
+						}
+						add_law_w_cooldown = city_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_2 }
+							}
+						}
+						add_law_w_cooldown = city_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_3 }
+							}
+						}
+						add_law_w_cooldown = city_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_tax_4 }
+							}
+						}
+						add_law_w_cooldown = city_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_0 }
+							}
+						}
+						add_law_w_cooldown = city_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_1 }
+							}
+						}
+						add_law_w_cooldown = city_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_2 }
+							}
+						}
+						add_law_w_cooldown = city_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_3 }
+							}
+						}
+						add_law_w_cooldown = city_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = city_contract_4 }
+							}
+						}
+						add_law_w_cooldown = city_contract_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_0 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_1 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_2 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_3 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_tax_4 }
+							}
+						}
+						add_law_w_cooldown = temple_tax_4
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_0 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_1 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_2 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_3 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = temple_contract_4 }
+							}
+						}
+						add_law_w_cooldown = temple_contract_4
+					}					
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = {
+									NOT = {
+										has_law = centralization_0
+										has_law = centralization_1
+										has_law = centralization_2
+										has_law = centralization_3
+										has_law = centralization_4
+									}
+								}
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_0 }
+							}
+						}
+						add_law_w_cooldown = centralization_0
+					}	
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_1 }
+							}
+						}
+						add_law_w_cooldown = centralization_1
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_2 }
+							}
+						}
+						add_law_w_cooldown = centralization_2
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_3 }
+							}
+						}
+						add_law_w_cooldown = centralization_3
+					}
+					if = {
+						limit = {
+							FROM = { 
+								primary_title = { has_law = centralization_4 }
+							}
+						}
+						add_law_w_cooldown = centralization_4
+					}					
+				}
+				gain_title = FROM
+			}
+			prestige = 800
+			treasury = -800
+			piety = -200
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+	}	
+}

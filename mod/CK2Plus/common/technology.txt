@@ -1,0 +1,699 @@
+TECH_GROUP_MILITARY = {
+	TECH_BOWS = {
+		1 = {
+			modifier = {
+				ARCHERS_OFFENSIVE = 0.1		
+				HORSE_ARCHERS_OFFENSIVE = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				ARCHERS_OFFENSIVE = 0.15
+				HORSE_ARCHERS_OFFENSIVE = 0.15
+			}
+		}
+		3 = {
+			modifier = {
+				ARCHERS_OFFENSIVE = 0.2
+				HORSE_ARCHERS_OFFENSIVE = 0.2
+			}
+		}
+		4 = {
+			modifier = {
+				ARCHERS_OFFENSIVE = 0.25
+				HORSE_ARCHERS_OFFENSIVE = 0.25
+			}
+		}
+		5 = {
+			modifier = {
+				ARCHERS_OFFENSIVE = 0.3
+				HORSE_ARCHERS_OFFENSIVE = 0.3
+			}
+		}
+	}
+
+	TECH_LIGHT_ARMOUR = {
+		1 = {
+			modifier = {
+				LIGHT_INFANTRY_DEFENSIVE = 0.1
+				LIGHT_CAVALRY_DEFENSIVE = 0.1
+				ARCHERS_DEFENSIVE = 0.1
+				HORSE_ARCHERS_DEFENSIVE = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				LIGHT_INFANTRY_DEFENSIVE = 0.15
+				LIGHT_CAVALRY_DEFENSIVE = 0.15
+				ARCHERS_DEFENSIVE = 0.15
+				HORSE_ARCHERS_DEFENSIVE = 0.15
+			}
+		}
+		3 = {
+			modifier = {
+				LIGHT_INFANTRY_DEFENSIVE = 0.2
+				LIGHT_CAVALRY_DEFENSIVE = 0.2
+				ARCHERS_DEFENSIVE = 0.2
+				HORSE_ARCHERS_DEFENSIVE = 0.2
+			}
+		}
+		4 = {
+			modifier = {
+				LIGHT_INFANTRY_DEFENSIVE = 0.25
+				LIGHT_CAVALRY_DEFENSIVE = 0.25
+				ARCHERS_DEFENSIVE = 0.25
+				HORSE_ARCHERS_DEFENSIVE = 0.2
+			}
+		}
+		5 = {
+			modifier = {
+				LIGHT_INFANTRY_DEFENSIVE = 0.3
+				LIGHT_CAVALRY_DEFENSIVE = 0.3
+				ARCHERS_DEFENSIVE = 0.3
+				HORSE_ARCHERS_DEFENSIVE = 0.3
+			}
+		}
+	}
+	TECH_HEAVY_ARMOUR = {
+		1 = {
+			modifier = {
+				HEAVY_INFANTRY_DEFENSIVE = 0.1
+				PIKEMEN_DEFENSIVE = 0.1
+				KNIGHTS_DEFENSIVE = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				HEAVY_INFANTRY_DEFENSIVE = 0.15
+				PIKEMEN_DEFENSIVE = 0.15
+				KNIGHTS_DEFENSIVE = 0.15
+			}
+		}
+		3 = {
+			modifier = {
+				HEAVY_INFANTRY_DEFENSIVE = 0.2
+				PIKEMEN_DEFENSIVE = 0.2
+				KNIGHTS_DEFENSIVE = 0.2
+			}
+		}
+		4 = {
+			modifier = {
+				HEAVY_INFANTRY_DEFENSIVE = 0.25
+				PIKEMEN_DEFENSIVE = 0.25
+				KNIGHTS_DEFENSIVE = 0.25
+			}
+		}
+		5 = {
+			modifier = {
+				HEAVY_INFANTRY_DEFENSIVE = 0.3
+				PIKEMEN_DEFENSIVE = 0.3
+				KNIGHTS_DEFENSIVE = 0.3
+			}
+		}
+	}
+	TECH_INFANTRY_MELEE_WEAPONS = {
+		1 = {
+			modifier = {
+				PIKEMEN_OFFENSIVE = 0.1
+				HEAVY_INFANTRY_OFFENSIVE = 0.1
+				LIGHT_INFANTRY_OFFENSIVE = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				PIKEMEN_OFFENSIVE = 0.15
+				HEAVY_INFANTRY_OFFENSIVE = 0.15
+				LIGHT_INFANTRY_OFFENSIVE = 0.15
+			}
+		}
+		3 = {
+			modifier = {
+				PIKEMEN_OFFENSIVE = 0.2
+				HEAVY_INFANTRY_OFFENSIVE = 0.2
+				LIGHT_INFANTRY_OFFENSIVE = 0.2
+			}
+		}
+		4 = {
+			modifier = {
+				PIKEMEN_OFFENSIVE = 0.25
+				HEAVY_INFANTRY_OFFENSIVE = 0.25
+				LIGHT_INFANTRY_OFFENSIVE = 0.25
+			}
+		}
+		5 = {
+			modifier = {
+				PIKEMEN_OFFENSIVE = 0.3
+				HEAVY_INFANTRY_OFFENSIVE = 0.3
+				LIGHT_INFANTRY_OFFENSIVE = 0.3
+			}
+		}
+	}
+	TECH_CAVALRY_MELEE_WEAPONS = {
+		1 = {
+			modifier = {
+				LIGHT_CAVALRY_OFFENSIVE  = 0.1
+				KNIGHTS_OFFENSIVE = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				LIGHT_CAVALRY_OFFENSIVE  = 0.15
+				KNIGHTS_OFFENSIVE = 0.15
+			}
+		}
+		3 = {
+			modifier = {
+				LIGHT_CAVALRY_OFFENSIVE  = 0.2
+				KNIGHTS_OFFENSIVE = 0.2
+			}
+		}
+		4 = {
+			modifier = {
+				LIGHT_CAVALRY_OFFENSIVE  = 0.25
+				KNIGHTS_OFFENSIVE = 0.25
+			}
+		}
+		5 = {
+			modifier = {
+				LIGHT_CAVALRY_OFFENSIVE  = 0.3
+				KNIGHTS_OFFENSIVE = 0.3
+			}
+		}
+	}
+	TECH_SIEGE_EQUIPMENT = {
+		1 = {
+			modifier = {
+				SIEGE_SPEED = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				SIEGE_SPEED = 0.2
+			}
+		}
+		3 = {
+			modifier = {
+				SIEGE_SPEED = 0.3
+			}
+		}
+		4 = {
+			modifier = {
+				SIEGE_SPEED = 0.4
+			}
+		}
+		5 = {
+			modifier = {
+				SIEGE_SPEED = 0.5
+			}
+		}
+	}
+	TECH_CASTLES = { #military fortifications
+		1 = {
+			modifier = {
+				SIEGE_DEFENCE = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				SIEGE_DEFENCE = 0.2
+			}
+		}
+		3 = {
+			modifier = {
+				SIEGE_DEFENCE = 0.3
+			}
+		}
+		4 = {
+			modifier = {
+				SIEGE_DEFENCE = 0.4
+			}
+		}
+		5 = {
+			modifier = {
+				SIEGE_DEFENCE = 0.5
+			}
+		}
+	}
+	TECH_TACTICS = {
+		1 = {
+			modifier = {
+				LAND_MORALE = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				LAND_MORALE = 0.2
+			}
+		}
+		3 = {
+			modifier = {
+				LAND_MORALE = 0.3
+			}
+		}
+		4 = {
+			modifier = {
+				LAND_MORALE = 0.4
+			}
+		}
+		5 = {
+			modifier = {
+				LAND_MORALE = 0.5
+			}
+		}
+	}
+}
+
+TECH_GROUP_ECONOMY = {
+	TECH_CASTLE_TAXES = { #castle taxes
+		1 = {
+			modifier = {
+				CASTLE_TAX_MODIFIER = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				CASTLE_TAX_MODIFIER = 0.2
+			}
+		}
+		3 = {
+			modifier = {
+				CASTLE_TAX_MODIFIER = 0.3
+			}
+		}
+		4 = {
+			modifier = {
+				CASTLE_TAX_MODIFIER = 0.4
+			}
+		}
+		5 = {
+			modifier = {
+				CASTLE_TAX_MODIFIER = 0.5
+			}
+		}
+	}
+	TECH_CITY_TAXES = { #city taxes
+		1 = {
+			modifier = {
+				CITY_TAX_MODIFIER = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				CITY_TAX_MODIFIER = 0.2
+			}
+		}
+		3 = {
+			modifier = {
+				CITY_TAX_MODIFIER = 0.3
+			}
+		}
+		4 = {
+			modifier = {
+				CITY_TAX_MODIFIER = 0.4
+			}
+		}
+		5 = {
+			modifier = {
+				CITY_TAX_MODIFIER = 0.5
+			}
+		}
+	}
+	TECH_TEMPLE_TAXES = { #church taxes
+		1 = {
+			modifier = {
+				TEMPLE_TAX_MODIFIER = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				TEMPLE_TAX_MODIFIER = 0.2
+			}
+		}
+		3 = {
+			modifier = {
+				TEMPLE_TAX_MODIFIER = 0.3
+			}
+		}
+		4 = {
+			modifier = {
+				TEMPLE_TAX_MODIFIER = 0.4
+			}
+		}
+		5 = {
+			modifier = {
+				TEMPLE_TAX_MODIFIER = 0.5
+			}
+		}
+	}
+	
+	TECH_CASTLE_CONSTRUCTION = { #castle buildings
+		1 = {
+			add_building = ca_militia_barracks_3
+			add_building = ca_barracks_4
+		}
+		2 = {
+			add_building = ca_stable_4
+			add_building = ca_town_4
+			add_building = ca_training_grounds_2
+		}
+		3 = {
+			add_building = ca_barracks_5
+		}
+		4 = {
+			add_building = ca_stable_5
+			add_building = ca_town_5
+		}
+		5 = {
+			add_building = ca_barracks_6
+		}
+	}
+	TECH_CITY_CONSTRUCTION = { #city buildings
+		1 = {
+			add_building = ct_barracks_4
+			add_building = ct_marketplace_4
+			add_building = ct_university_1
+		}
+		2 = {
+			add_building = ct_port_4
+			add_building = ct_guard_4
+		}
+		3 = {
+			add_building = ct_barracks_5
+			add_building = ct_marketplace_5
+			add_building = ct_university_2
+		}
+		4 = {
+			add_building = ct_guard_5
+			add_building = ct_port_5
+			add_building = ct_university_3
+		}
+		5 = {
+			add_building = ct_barracks_6
+			add_building = ct_marketplace_6
+		}
+	}
+	
+	TECH_TEMPLE_CONSTRUCTION = { #temple buildings
+		1 = { 
+			add_building = tp_barracks_4
+			add_building = tp_elite_barracks_4
+		}
+		2 = {
+			add_building = tp_town_4
+		}
+		3 = {
+			add_building = tp_barracks_5
+			add_building = tp_elite_barracks_5
+		}
+		4 = {
+			add_building = tp_town_5
+			
+		}
+		5 = {
+			add_building = tp_barracks_6
+			add_building = tp_elite_barracks_6
+		}
+	}
+	TECH_FORTIFICATIONS_CONSTRUCTION = { # walls and levy buildings
+		1 = {
+			add_building = ca_wall_q_3
+			add_building = ca_keep_4
+			add_building = ct_wall_q_3
+			add_building = ct_training_grounds_4
+			add_building = tp_wall_q_3
+			add_building = tp_monastery_4
+		}
+		2 = {
+			add_building = ca_wall_4
+			add_building = ct_wall_4
+			add_building = tp_wall_4
+		}
+		3 = {
+			add_building = ca_wall_q_4
+			add_building = ca_keep_5
+			add_building = ct_wall_q_4
+			add_building = ct_training_grounds_5
+			add_building = tp_wall_q_4
+			add_building = tp_monastery_5
+		}
+		4 = {
+			add_building = ca_wall_5
+			add_building = ct_wall_5
+			add_building = tp_wall_5
+		}
+		5 = {
+			add_building = ca_wall_q_5
+			add_building = ca_keep_6
+			add_building = ct_wall_q_5
+			add_building = ct_training_grounds_6
+			add_building = tp_wall_q_5
+			add_building = tp_monastery_6
+		}
+	}
+	TECH_CONSTRUCTION = { #improved construction of all buildings
+		1 = {
+			modifier = {
+				LOCAL_BUILD_TIME_MODIFIER = -0.05
+			}
+		}
+		2 = {
+			modifier = {
+				LOCAL_BUILD_TIME_MODIFIER = -0.1
+			}
+		}
+		3 = {
+			modifier = {
+				LOCAL_BUILD_TIME_MODIFIER = -0.15
+			}
+		}
+		4 = {
+			modifier = {
+				LOCAL_BUILD_TIME_MODIFIER = -0.2
+			}
+		}
+		5 = {
+			modifier = {
+				LOCAL_BUILD_TIME_MODIFIER = -0.25
+			}
+		}
+	}
+}
+
+TECH_GROUP_CULTURE = {
+	TECH_NOBLE_CUSTOMS = {
+		1 = {
+			modifier = {
+				CASTLE_OPINION = 3
+			}
+		}
+		2 = {
+			modifier = {
+				CASTLE_OPINION = 6
+			}
+		}
+		3 = {
+			modifier = {
+				CASTLE_OPINION = 8
+			}
+		}
+		4 = {
+			modifier = {
+				CASTLE_OPINION = 10
+			}
+		}
+		5 = {
+			modifier = {
+				CASTLE_OPINION = 12
+			}
+		}
+	}
+	TECH_POPULAR_CUSTOMS = {
+		1 = {
+			modifier = {
+				TOWN_OPINION = 3
+			}
+		}
+		2 = {
+			modifier = {
+				TOWN_OPINION = 6
+			}
+		}
+		3 = {
+			modifier = {
+				TOWN_OPINION = 8
+			}
+		}
+		4 = {
+			modifier = {
+				TOWN_OPINION = 10
+			}
+		}
+		5 = {
+			modifier = {
+				TOWN_OPINION = 12
+			}
+		}
+	}
+	TECH_RELIGIOUS_CUSTOMS = {
+		1 = {
+			modifier = {
+				CHURCH_OPINION = 3
+			}
+		}
+		2 = {
+			modifier = {
+				CHURCH_OPINION = 6
+			}
+		}
+		3 = {
+			modifier = {
+				CHURCH_OPINION = 8
+			}
+		}
+		4 = {
+			modifier = {
+				CHURCH_OPINION = 10
+			}
+		}
+		5 = {
+			modifier = {
+				CHURCH_OPINION = 12
+			}
+		}
+	}
+	TECH_MAJESTY = {
+		1 = {
+			modifier = {
+				ADD_PRESTIGE_MODIFIER = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				ADD_PRESTIGE_MODIFIER = 0.2
+			}
+		}
+		3 = {
+			modifier = {
+				ADD_PRESTIGE_MODIFIER = 0.3
+			}
+		}
+		4 = {
+			modifier = {
+				ADD_PRESTIGE_MODIFIER = 0.4
+			}
+		}
+		5 = {
+			modifier = {
+				ADD_PRESTIGE_MODIFIER = 0.5
+			}
+		}
+	}
+	TECH_SPIRITUAL_ART = {
+		1 = {
+			modifier = {
+				ADD_PIETY_MODIFIER = 0.1
+			}
+		}
+		2 = {
+			modifier = {
+				ADD_PIETY_MODIFIER = 0.2
+			}
+		}
+		3 = {
+			modifier = {
+				ADD_PIETY_MODIFIER = 0.3
+			}
+		}
+		4 = {
+			modifier = {
+				ADD_PIETY_MODIFIER = 0.4
+			}
+		}
+		5 = {
+			modifier = {
+				ADD_PIETY_MODIFIER = 0.5
+			}
+		}
+	}
+	TECH_CULTURE_FLEX = {
+		1 = {
+			modifier = {
+				CULTURE_FLEX = -0.2
+			}
+		}
+		2 = {
+			modifier = {
+				CULTURE_FLEX = -0.4
+			}
+		}
+		3 = {
+			modifier = {
+				CULTURE_FLEX = -0.6
+			}
+		}
+		4 = {
+			modifier = {
+				CULTURE_FLEX = -0.8
+			}
+		}
+		5 = {
+			modifier = {
+				CULTURE_FLEX = -1.0
+			}
+		}
+	}
+	TECH_RELIGION_FLEX = {
+		1 = {
+			modifier = {
+				RELIGION_FLEX = -0.1
+			}
+		}
+		2 = {
+			modifier = {
+				RELIGION_FLEX = -0.2
+			}
+		}
+		3 = {
+			modifier = {
+				RELIGION_FLEX = -0.3
+			}
+		}
+		4 = {
+			modifier = {
+				RELIGION_FLEX = -0.4
+			}
+		}
+		5 = {
+			modifier = {
+				RELIGION_FLEX = -0.5
+			}
+		}
+	}
+	TECH_LEGALISM = {
+		1 = {
+			modifier = {
+				SHORT_REIGN_LENGTH = -1
+			}
+		}
+		2 = {
+			modifier = {
+				SHORT_REIGN_LENGTH = -2
+			}
+		}
+		3 = {
+			modifier = {
+				SHORT_REIGN_LENGTH = -3
+			}
+		}
+		4 = {
+			modifier = {
+				SHORT_REIGN_LENGTH = -4
+			}
+		}
+		5 = {
+			modifier = {
+				SHORT_REIGN_LENGTH = -5
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+# 334 - Napoli
+
+# County Title
+title = c_napoli
+
+# Settlements
+max_settlements = 6
+b_aversa = castle
+b_napoli = city
+b_cumae = temple
+
+#b_pozzuoli = temple
+#b_castellamare = castle
+#b_ischia = castle
+b_sorrento = castle
+#b_capri = castle
+
+# Misc
+culture = italian
+religion = catholic
+
+# History
+
+1157.1.1 = { culture = sicilian }

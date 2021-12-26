@@ -1,0 +1,925 @@
+plot_decisions = {
+	plot_gain_title_decision = {
+		is_high_prio = yes
+		
+		potential = {
+			age = 16
+			has_objective = plot_gain_title
+			NOT = { has_character_flag = plot_gain_title_decision_taken }
+		}
+		allow = {
+			plot_power = 1.0
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				letter_event = { id = 8000 days = 3 tooltip = "EVTTOOLTIP8000" }
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_gain_title_decision_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					had_character_flag = {
+						flag = plot_check
+						days = 365
+					}	
+				}
+			}		
+		}
+	}
+
+	plot_succ_seniority_decision = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_succ_seniority
+			NOT = { has_character_flag = plot_succ_seniority_decision_taken }
+		}
+		allow = {
+			plot_power = 1.0
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				letter_event = { id = 8005 days = 3 tooltip = "EVTTOOLTIP8005" }
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_succ_seniority_decision_taken
+				set_character_flag = plot_succ_seniority_flag
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					had_character_flag = {
+						flag = plot_check
+						days = 365
+					}	
+				}
+			}	
+		}
+	}
+
+	plot_succ_primogeniture_decision = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_succ_primogeniture
+			NOT = { has_character_flag = plot_succ_primogeniture_decision_taken }
+		}
+		allow = {
+			plot_power = 1.0
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				letter_event = { id = 8010 days = 3 tooltip = "EVTTOOLTIP8010" }
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_succ_primogeniture_decision_taken
+				set_character_flag = plot_succ_primogeniture_flag
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					had_character_flag = {
+						flag = plot_check
+						days = 365
+					}	
+				}
+			}	
+		}
+	}
+
+	plot_succ_gavelkind_decision = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_succ_gavelkind
+			NOT = { has_character_flag = plot_succ_gavelkind_decision_taken }
+		}
+		allow = {
+			plot_power = 1.0
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				letter_event = { id = 8020 days = 3 tooltip = "EVTTOOLTIP8020" }
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_succ_gavelkind_decision_taken
+				set_character_flag = plot_succ_gavelkind_flag
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					had_character_flag = {
+						flag = plot_check
+						days = 365
+					}	
+				}
+			}	
+		}
+	}
+
+	plot_succ_feudal_elective_decision = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_succ_feudal_elective
+			NOT = { has_character_flag = plot_succ_feudal_elective_decision_taken }
+		}
+		allow = {
+			plot_power = 1.0
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				letter_event = { id = 8015 days = 3 tooltip = "EVTTOOLTIP8015" }
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_succ_feudal_elective_decision_taken
+				set_character_flag = plot_succ_feudal_elective_flag
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					had_character_flag = {
+						flag = plot_check
+						days = 365
+					}	
+				}
+			}	
+		}
+	}
+
+	plot_lower_crown_authority_decision = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_lower_crown_authority
+			NOT = { has_character_flag = plot_lower_crown_authority_decision_taken }
+		}
+		allow = {
+			plot_power = 1.0
+			num_of_plot_backers = 1
+		}
+		effect = {
+			if = {
+				limit = {
+					plot_target_char = {
+						OR = {
+							NOT = { age = 16 }
+							trait = incapable
+							prisoner = yes
+						}
+					}
+					any_plot_backer = {
+						ROOT = {
+							plot_target_char = {
+								regent = { character = PREVPREVPREV }
+							}
+						}
+					}
+				}
+				plot_target_char = {
+					letter_event = { id = 8026 days = 3 tooltip = "EVTTOOLTIP8025" }
+				}
+				hidden_tooltip = {
+					set_character_flag = plot_lower_crown_authority_decision_taken
+					set_character_flag = plot_lower_crown_authority_flag
+					activate_plot = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							plot_target_char = {
+								OR = {
+									NOT = { age = 16 }
+									trait = incapable
+									prisoner = yes
+								}
+							}
+							any_plot_backer = {
+								ROOT = {
+									plot_target_char = {
+										regent = { character = PREVPREVPREV }
+									}
+								}
+							}
+						}
+					}
+				}
+				plot_target_char = {
+					letter_event = { id = 8025 days = 3 tooltip = "EVTTOOLTIP8025" }
+				}
+				hidden_tooltip = {
+					set_character_flag = plot_lower_crown_authority_decision_taken
+					set_character_flag = plot_lower_crown_authority_flag
+					activate_plot = yes
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					had_character_flag = {
+						flag = plot_check
+						days = 365
+					}	
+				}
+			}	
+		}
+	}
+	
+	plot_institute_hereditary_titles_decision = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_institute_hereditary_titles
+			NOT = { has_character_flag = plot_institute_hereditary_titles_decision_taken }
+		}
+		allow = {
+			plot_power = 1.0
+			num_of_plot_backers = 1
+		}
+		effect = {
+			if = {
+				limit = {
+					plot_target_char = {
+						OR = {
+							NOT = { age = 16 }
+							trait = incapable
+							prisoner = yes
+						}
+					}
+					any_plot_backer = {
+						ROOT = {
+							plot_target_char = {
+								regent = { character = PREVPREVPREV }
+							}
+						}
+					}
+				}
+				plot_target_char = {
+					letter_event = { id = 190048 days = 3 tooltip = "EVTTOOLTIP8025" }
+				}
+				hidden_tooltip = {
+					set_character_flag = plot_institute_hereditary_titles_decision_taken
+					set_character_flag = plot_institute_hereditary_titles_flag
+					activate_plot = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							plot_target_char = {
+								OR = {
+									NOT = { age = 16 }
+									trait = incapable
+									prisoner = yes
+								}
+							}
+							any_plot_backer = {
+								ROOT = {
+									plot_target_char = {
+										regent = { character = PREVPREVPREV }
+									}
+								}
+							}
+						}
+					}
+				}
+				plot_target_char = {
+					letter_event = { id = 190047 days = 3 tooltip = "EVTTOOLTIP8025" }
+				}
+				hidden_tooltip = {
+					set_character_flag = plot_institute_hereditary_titles_decision_taken
+					set_character_flag = plot_institute_hereditary_titles_flag
+					activate_plot = yes
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					had_character_flag = {
+						flag = plot_check
+						days = 365
+					}	
+				}
+			}				
+		}
+	}	
+	
+	plot_kill_character_decision_50 = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_kill_character
+			NOT = { has_character_flag = plot_kill_character_decision_50_taken }
+			NOT = { has_character_flag = plot_kill_character_decision_75_taken }
+			NOT = { has_character_flag = plot_kill_character_decision_100_taken }
+			NOT = { plot_power = 0.75 }
+		}
+		allow = {
+			plot_power = 0.5
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				random_list = {
+					30 = {
+						ROOT = { set_character_flag = plot_murderer }
+						set_character_flag = was_murdered_by_plot
+						tooltip = { death = yes }
+					}
+					70 = {
+						ROOT = { character_event = { id = 8220 days = 1 tooltip = "EVTTOOLTIPKILLCHARACTER" } }
+					}
+				}
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_kill_character_decision_50_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						trait = lunatic
+						trait = possessed
+						had_character_flag = {
+							flag = plot_check
+							days = 1095
+						}						
+					}					
+				}
+			}
+		}
+	}
+
+	plot_kill_character_decision_75 = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_kill_character
+			NOT = { has_character_flag = plot_kill_character_decision_50_taken }
+			NOT = { has_character_flag = plot_kill_character_decision_75_taken }
+			NOT = { has_character_flag = plot_kill_character_decision_100_taken }
+			NOT = { plot_power = 1.0 }
+		}
+		allow = {
+			plot_power = 0.75
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				random_list = {
+					50 = {
+						ROOT = { set_character_flag = plot_murderer }
+						set_character_flag = was_murdered_by_plot
+						tooltip = { death = yes }
+					}
+					50 = {
+						ROOT = { character_event = { id = 8220 days = 1 tooltip = "EVTTOOLTIPKILLCHARACTER" } }
+					}
+				}
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_kill_character_decision_75_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						trait = lunatic
+						trait = possessed
+						had_character_flag = {
+							flag = plot_check
+							days = 730
+						}						
+					}					
+				}
+			}			
+		}
+	}
+
+	plot_kill_character_decision_100 = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_kill_character
+			NOT = { has_character_flag = plot_kill_character_decision_50_taken }
+			NOT = { has_character_flag = plot_kill_character_decision_75_taken }
+			NOT = { has_character_flag = plot_kill_character_decision_100_taken }
+		}
+		allow = {
+			plot_power = 1.0
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				random_list = {
+					70 = {
+						ROOT = { set_character_flag = plot_murderer }
+						set_character_flag = was_murdered_by_plot
+						tooltip = { death = yes }
+					}
+					30 = {
+						ROOT = { character_event = { id = 8220 days = 1 tooltip = "EVTTOOLTIPKILLCHARACTER" } }
+					}
+				}
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_kill_character_decision_100_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	plot_kill_spouse_decision_50 = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_kill_spouse
+			NOT = { has_character_flag = plot_kill_spouse_decision_50_taken }
+			NOT = { has_character_flag = plot_kill_spouse_decision_75_taken }
+			NOT = { has_character_flag = plot_kill_spouse_decision_100_taken }
+			NOT = { plot_power = 0.75 }
+		}
+		allow = {
+			plot_power = 0.5
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				random_list = {
+					30 = {
+						ROOT = { set_character_flag = plot_murderer }
+						set_character_flag = was_murdered_by_plot
+						set_character_flag = was_murdered_by_spouse
+						tooltip = { death = yes }
+					}
+					70 = {
+						ROOT = { character_event = { id = 8200 days = 1 tooltip = "EVTTOOLTIPKILLSPOUSE" } }
+					}
+				}
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_kill_spouse_decision_50_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						trait = lunatic
+						trait = possessed
+						had_character_flag = {
+							flag = plot_check
+							days = 1095
+						}						
+					}					
+				}
+			}
+		}
+	}
+
+	plot_kill_spouse_decision_75 = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_kill_spouse
+			NOT = { has_character_flag = plot_kill_spouse_decision_50_taken }
+			NOT = { has_character_flag = plot_kill_spouse_decision_75_taken }
+			NOT = { has_character_flag = plot_kill_spouse_decision_100_taken }
+			NOT = { plot_power = 1.0 }
+		}
+		allow = {
+			plot_power = 0.75
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				random_list = {
+					50 = {
+						ROOT = { set_character_flag = plot_murderer }
+						set_character_flag = was_murdered_by_plot
+						set_character_flag = was_murdered_by_spouse
+						tooltip = { death = yes }
+					}
+					50 = {
+						ROOT = { character_event = { id = 8200 days = 1 tooltip = "EVTTOOLTIPKILLSPOUSE" } }
+					}
+				}
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_kill_spouse_decision_75_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						trait = lunatic
+						trait = possessed
+						had_character_flag = {
+							flag = plot_check
+							days = 730
+						}						
+					}					
+				}
+			}
+		}
+	}
+
+	plot_kill_spouse_decision_100 = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_kill_spouse
+			NOT = { has_character_flag = plot_kill_spouse_decision_50_taken }
+			NOT = { has_character_flag = plot_kill_spouse_decision_75_taken }
+			NOT = { has_character_flag = plot_kill_spouse_decision_100_taken }
+		}
+		allow = {
+			plot_power = 1.0
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				random_list = {
+					70 = {
+						ROOT = { set_character_flag = plot_murderer }
+						set_character_flag = was_murdered_by_plot
+						set_character_flag = was_murdered_by_spouse
+						tooltip = { death = yes }
+					}
+					30 = {
+						ROOT = { character_event = { id = 8200 days = 1 tooltip = "EVTTOOLTIPKILLSPOUSE" } }
+					}
+				}
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_kill_spouse_decision_100_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	plot_kidnap_liege_decision_50 = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_kidnap_liege
+			NOT = { has_character_flag = plot_kidnap_liege_decision_50_taken }
+			NOT = { has_character_flag = plot_kidnap_liege_decision_75_taken }
+			NOT = { has_character_flag = plot_kidnap_liege_decision_100_taken }
+			NOT = { plot_power = 0.75 }
+		}
+		allow = {
+			plot_power = 0.5
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				random_list = {
+					30 = {
+						character_event = { id = 190045 tooltip = "EVTTOOLTIP190045" } #success
+					}
+					70 = {
+						character_event = { id = 190046 tooltip = "EVTTOOLTIP190046" } #failure
+					}
+				}
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_kidnap_liege_decision_50_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						trait = lunatic
+						trait = possessed
+						had_character_flag = {
+							flag = plot_check
+							days = 1095
+						}						
+					}					
+				}
+			}
+		}
+	}	
+	
+	plot_kidnap_liege_decision_75 = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_kidnap_liege
+			NOT = { has_character_flag = plot_kidnap_liege_decision_50_taken }
+			NOT = { has_character_flag = plot_kidnap_liege_decision_75_taken }
+			NOT = { has_character_flag = plot_kidnap_liege_decision_100_taken }
+			NOT = { plot_power = 1.0 }
+		}
+		allow = {
+			plot_power = 0.75
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				random_list = {
+					50 = {
+						character_event = { id = 190045 tooltip = "EVTTOOLTIP190045" } #success
+					}
+					50 = {
+						character_event = { id = 190046 tooltip = "EVTTOOLTIP190046" } #failure
+					}
+				}
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_kidnap_liege_decision_75_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						trait = lunatic
+						trait = possessed
+						had_character_flag = {
+							flag = plot_check
+							days = 730
+						}						
+					}					
+				}
+			}
+		}
+	}	
+	
+	plot_kidnap_liege_decision_100 = {
+		is_high_prio = yes
+		potential = {
+			age = 16
+			has_objective = plot_kidnap_liege
+			NOT = { has_character_flag = plot_kidnap_liege_decision_50_taken }
+			NOT = { has_character_flag = plot_kidnap_liege_decision_75_taken }
+			NOT = { has_character_flag = plot_kidnap_liege_decision_100_taken }			
+		}
+		allow = {
+			plot_power = 1.0
+			num_of_plot_backers = 1
+		}
+		effect = {
+			plot_target_char = {
+				random_list = {
+					70 = {
+						character_event = { id = 190045 tooltip = "EVTTOOLTIP190045" } #success
+					}
+					30 = {
+						character_event = { id = 190046 tooltip = "EVTTOOLTIP190046" } #failure
+					}
+				}
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_kidnap_liege_decision_100_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	plot_weaken_fellow_vassal_decision = {
+		is_high_prio = yes
+		
+		potential = {
+			age = 16
+			has_objective = plot_weaken_fellow_vassal
+			NOT = { has_character_flag = plot_weaken_fellow_vassal_decision_taken }
+		}
+		allow = {
+			plot_power = 1
+			num_of_plot_backers = 1
+			plot_target_char = {
+				NOT = {
+					any_war = {
+						defender = {
+							character = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			plot_target_char = {
+				letter_event = { id = 7505 days = 3 tooltip = "EVTTOOLTIP7505" }
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_weaken_fellow_vassal_decision_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	plot_weaken_fellow_vassal_decision_liege = {
+		is_high_prio = yes
+		
+		potential = {
+			age = 16
+			has_objective = plot_weaken_fellow_vassal
+			NOT = { 
+				has_character_flag = plot_weaken_fellow_vassal_decision_liege_taken
+				has_character_flag = plot_weaken_fellow_vassal_decision_taken
+				plot_target_char  = {
+					reverse_opinion = { 
+						who = liege
+						value = 40
+					}
+				}
+			}
+		}
+		allow = {
+			plot_power = 0.6
+			num_of_plot_backers = 1
+			plot_target_char = {
+				NOT = {
+					any_war = {
+						defender = {
+							character = PREVPREV
+						}
+					}
+				}
+			}
+		}
+				
+		effect = {
+			top_liege = {
+				letter_event = {
+					id = 7500
+					days = 3
+					tooltip = "EVTTOOLTIP7500"
+				}
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_weaken_fellow_vassal_decision_liege_taken
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
+	plot_gain_vassal_title_decision = {
+		is_high_prio = yes
+		
+		potential = {
+			age = 16
+			has_objective = plot_gain_vassal_title
+			NOT = { has_character_flag = plot_gain_vassal_title_decision_taken }
+		}
+		allow = {
+			plot_power = 0.8
+			num_of_plot_backers = 1
+			plot_target_char = {
+				NOT = {
+					any_war = {
+						defender = {
+							character = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			plot_target_char = {
+				letter_event = { id = 8030 days = 3 tooltip = "EVTTOOLTIP8030" }
+			}
+			hidden_tooltip = {
+				set_character_flag = plot_gain_vassal_title_decision_taken
+				activate_plot = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 0.9 }
+			}
+		}
+	}
+}

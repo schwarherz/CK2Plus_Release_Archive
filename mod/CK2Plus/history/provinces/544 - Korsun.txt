@@ -1,0 +1,24 @@
+# 544 - Korsun
+
+# County Title
+title = c_korsun
+
+# Settlements
+max_settlements = 4
+b_korsun = castle
+b_cherkassy = city
+b_kaniv = temple
+
+#b_smila = castle
+#b_zolotonosha = castle
+#b_uman = city
+#b_zhuravky = castle
+#b_mirov = castle
+
+# Misc
+culture = russian
+religion = orthodox
+
+# History
+
+1240.1.1 = { remove_settlement = b_cherkassy } #destroyed by Batu Khan

@@ -1,0 +1,73 @@
+1060.1.1={
+	liege="d_armenia_minor"
+}
+1060.1.1={
+	holder=70440
+}
+1071.1.1={
+	holder=41589
+}
+1072.1.1={
+	holder=41590
+}
+1080.1.1={
+	holder=232561 #Roupen I Rubenid
+}
+1095.1.1={
+	holder=232563 #Gosdantin I Rubenid
+}
+1102.1.25={
+	holder=232564 #Thoros I Rubenid
+}
+1129.1.1={
+	holder=232565 #Gosdantin II Rubenid
+}
+1130.1.1={
+	holder=223012 #Levon I Rubenid
+}
+1140.2.14={
+	holder=223010 #Stepané I Rubenid
+}
+1145.1.1={
+	holder=223014 #Thoros II Rubenid
+}
+1169.1.1={
+	holder=232569 #Roupen II Rubenid
+}
+1170.1.1={
+	holder=232571 #Mleh Rubenid
+}
+1175.1.16={
+	holder=223003 #Roupen III Rubenid
+}
+1186.1.1={
+	holder=223000 #Levon II Rubenid
+}
+1199.1.1={
+	liege="k_armenia"
+}
+1219.5.2={
+	holder=30998 #Zabel I Rubenid
+}
+1250.1.1={
+	holder=71874
+}
+1256.1.1={
+	holder=71875
+	liege="k_karaman"
+}
+1261.1.1={
+	holder=71876
+}
+1277.9.1={
+	holder=71877
+}
+1300.1.1={
+	holder=71878
+}
+1308.1.1={
+	holder=71879
+}
+1312.1.1={
+	holder=71880
+}

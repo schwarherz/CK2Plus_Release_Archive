@@ -1,0 +1,98 @@
+1060.1.1=
+{
+	liege="d_nikaea"
+}
+1060.1.1=
+{
+	holder=1746
+}
+1071.8.26=
+{
+	holder=1740
+}
+1078.3.31=
+{
+
+	holder=41701
+}
+1095.1.1=
+{
+	liege="e_byzantium"
+	holder=1742
+}
+#1st crusade takes Nikaea
+1097.7.19=
+{
+	liege="d_nikaea"
+}
+1118.8.15=
+{
+	holder=1762
+}
+1143.10.1=
+{
+	holder=215504
+}
+1160.1.1=
+{
+	holder=215670
+}
+1190.1.2={
+	holder=215674
+}
+#latins
+1204.5.16={
+	liege="e_latin_empire"
+	holder=205523 #Baudouin I van Vlaanderen
+}
+1205.6.1={
+holder=205525 #Henry I van Vlaanderen
+}
+1216.6.11={
+holder=205725 #Pierre I de Courtenay
+}
+1219.1.1={
+holder=205526 #Yolande van Vlaanderen (regent)
+}
+1221.3.25={
+holder=91062 #Robert de Courtenay
+}
+1228.1.30={
+holder=461742 #Jean de Brienne (regent)
+}
+#byz
+1240.1.1={
+	liege="d_nikaea"
+	holder=125741
+}
+1254.11.3=
+{
+	holder=125742
+}
+1258.8.18=
+{
+	holder=125743
+}
+1261.7.25=
+{
+	holder=465527
+}
+1282.12.11=
+{
+	holder=465521
+}
+1295.5.1=
+{
+	holder=465501
+}
+#The Ottomans arrive
+
+1310.1.1=
+{
+	holder=71841
+}
+1332.1.1=
+{
+	holder=476500
+}
+

@@ -1,0 +1,101 @@
+1059.12.25=
+{
+	liege="d_armeniacon"
+}
+
+1059.12.25=
+{
+	holder=1752
+}
+1067.7.12=
+{
+	holder=1756
+}
+1071.4.17=
+{
+	holder=1758
+}
+#To Seljuks
+1077.1.1=
+{
+	
+	holder=3046
+}
+1086.1.1=
+{
+	holder=41701
+}
+1097.6.19=
+{	
+	liege="k_rum"
+}
+1104.1.1=
+{
+	liege="d_coloneia"
+	holder=34197
+}
+1134.1.1=
+{
+	holder=34198
+}
+1142.1.1={
+	liege="k_rum"
+	holder = 7299
+}
+1155.4.1=
+{
+	holder=225000
+}
+1164.1.1=
+{
+liege="e_byzantium"
+holder=215530
+}
+1071.8.26={
+	holder=1736
+}
+1174.1.1=
+{
+liege="d_trebizond"
+holder=215530
+}
+1204.1.1=
+{
+	holder=34187
+}
+
+1204.4.1=
+{
+	holder=215519
+	liege="k_trebizond"
+}
+1222.2.1=
+{
+	holder=125719
+}
+1227.1.1=
+{
+	liege="d_armeniacon"
+	holder=71861
+}
+1248.1.1=
+{
+	holder=71862
+}
+1250.1.1=
+{
+	liege="0"
+	holder=71855
+}
+1277.8.2=
+{
+	holder=71858
+}
+1298.1.1=
+{
+	holder=71859
+}
+1309.1.1=
+{
+	holder=476350
+}

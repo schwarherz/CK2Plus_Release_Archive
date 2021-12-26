@@ -1,0 +1,872 @@
+########################################################
+# MINOR TITLES
+# Characters can have any number of these
+########################################################
+#	grant_limit: Max number of holders.
+#	realm_in_name: Append the name of the country after the title (Queen [of Sweden])
+#	allow: conditions for the character to hold the title
+#	regent: This is the title for regents (not really "minor")
+#	gain_effect: fires when the title is granted
+#	lose_effect: fires when a title is lost if dismissal_trigger evaluates to false
+#	message: should fire a message to the its owner when set
+#	The other fields are all character modifiers.
+
+#######################################
+# HARD: AUTO-GRANTED - DO NOT REMOVE!
+#######################################
+
+title_regent = {
+	realm_in_name = yes
+	dignity = 0.9
+	
+	monthly_salary = 0.2
+	monthly_prestige = 0.02
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_ruler_consort = {
+	dignity = 0.88
+	show_as_title = yes
+	realm_in_name = yes
+	spouse_context = yes
+	
+	monthly_salary = 0.2
+	monthly_prestige = 0.02
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = no
+}
+
+title_queen_mother = {
+	dignity = 0.85
+	show_as_title = yes
+	realm_in_name = yes
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.01
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = no
+}
+
+title_prince = {
+	dignity = 0.8
+	show_as_title = yes
+	realm_in_name = yes
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.01
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = no
+}
+
+# Not currently in use
+title_courtesan = {
+	dignity = 0.05
+	realm_in_name = yes
+	
+	monthly_salary = 0.02
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = no
+}
+
+#######################################
+# SPECIAL
+#######################################
+
+title_legitimize_bastard = {
+	grant_limit = 100
+	opinion_effect = 0
+	
+	allow = {
+		trait = bastard
+		is_child_of = FROM
+		is_liege_or_above = FROM
+	}
+	
+	gain_effect = {
+		remove_trait = bastard
+		add_trait = legit_bastard
+		recalc_succession = yes
+
+		mother = {
+			opinion = {
+				who = FROM
+				modifier = legitimized_child
+				years = 10
+			}
+		}
+		FROM = {
+			spouse = {
+				if = {
+					limit = {
+						NOT = {
+							any_child = {
+								character = ROOT
+							}	
+						}
+					}
+					opinion = {
+						who = FROM
+						modifier = legitimized_bastard
+						years = 20
+					}
+				}
+			}
+			any_child = {
+				limit = {
+					NOT = { character = ROOT }
+					dynasty = FROM
+					NOT = { trait = bastard }
+					NOT = { trait = legit_bastard }
+				}
+				opinion = {
+					who = FROM
+					modifier = legitimized_bastard
+					months = 12
+				}
+			}
+		}	
+		character_event = { id = 220006 days = 1 }
+	}
+	lose_effect = { }
+	
+	message = no
+}
+
+
+title_grant_independence = {
+	grant_limit = 100
+	opinion_effect = -100
+	
+	allow = {
+		FROM = { ai = no independent = yes }
+		is_ruler = yes
+		war = no
+		FROM = { war = no }
+		OR = {
+			trait = not_dejure_liege
+			primary_title = { is_titular = yes }
+		}
+	}
+	
+	gain_effect = {
+		FROM = { prestige = -50 }	
+		set_defacto_liege = ROOT
+		opinion = {
+			modifier = opinion_independent
+			who = FROM
+			years = 100
+		}			
+		character_event = { id = 220000 days = 1 }
+	}
+	lose_effect = { }
+	
+	message = no
+}
+
+title_revoke_minor_title = {
+	grant_limit = 100
+	opinion_effect = -10
+	
+	allow = {
+		FROM = { ai = no }
+		OR = {
+			has_minor_title = title_keeper_of_swans
+			has_minor_title = title_master_of_the_horse
+			has_minor_title = title_master_of_the_hunt
+			has_minor_title = title_high_almoner
+			has_minor_title = title_cupbearer
+			has_minor_title = title_seneschal
+			has_minor_title = title_despot
+			has_minor_title = title_sebastokrator
+			has_minor_title = title_kouropalates	
+			has_minor_title = title_caesar
+			has_minor_title = title_anthypatos	
+			has_minor_title = title_concubine
+		}
+	}
+	
+	gain_effect = {
+		remove_title = title_high_almoner
+		remove_title = title_master_of_the_horse
+		remove_title = title_master_of_the_hunt
+		remove_title = title_cupbearer
+		remove_title = title_seneschal
+		remove_title = title_despot
+		remove_title = title_sebastokrator
+		remove_title = title_kouropalates
+		remove_title = title_caesar
+		remove_title = title_anthypatos
+		remove_title = title_keeper_of_swans
+		remove_title = title_concubine
+		opinion = {
+			modifier = opinion_fired_from_office
+			who = FROM
+			years = 10
+		}		
+		character_event = { id = 220001 days = 1 }
+	}
+	lose_effect = { }
+	
+	message = no
+}
+
+title_revoke_court_jester = {
+	grant_limit = 100
+	opinion_effect = 0
+	
+	allow = {
+		FROM = { ai = no }
+		has_minor_title = title_court_jester
+	}
+	
+	gain_effect = {	
+		remove_title = title_court_jester
+		character_event = { id = 220002 days = 1 }
+	}
+	lose_effect = { }
+	
+	message = no
+}
+
+title_revoke_castellian = {
+	grant_limit = 100
+	opinion_effect = -10
+	
+	allow = {
+		FROM = { war = no }
+		has_minor_title = title_castellian
+	}
+	
+	gain_effect = {
+		remove_title = title_castellian
+		opinion = {
+			modifier = opinion_fired_from_office
+			who = FROM
+			years = 10
+		}	
+		character_event = { id = 220007 }
+		character_event = { id = 220010 days = 1 }
+	}
+	lose_effect = { }
+
+	message = no
+}
+
+
+#######################################
+# SOFT: GRANTABLE - FULLY MODDABLE
+#######################################
+
+title_castellian = {
+	grant_limit = 1
+	dignity = 0.2
+	opinion_effect = 0
+	realm_in_name = yes
+	
+	allow = {
+		FROM = {
+			NOT = { religion_group = muslim }
+			ai = no
+			primary_title = { higher_tier_than = BARON }
+		}
+		age = 16
+		ai = yes
+		OR = {
+			is_ruler = no
+			has_minor_title = title_castellian
+		}
+		is_primary_heir = no
+		is_female = no
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }
+		NOT = { has_minor_title = title_seneschal }
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }	
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }	
+	}
+	
+	gain_effect = {
+		FROM = {
+			any_vassal = {
+				limit = { NOT = { has_minor_title = title_castellian } }
+				opinion = {
+					modifier = opinion_ruler_appointed_castellian
+					who = FROM
+					years = 10
+				}
+			}
+		}
+	}
+	lose_effect = {
+	}
+
+	message = no
+}
+
+title_concubine = {
+	grant_limit = 3
+	dignity = 0.05
+	opinion_effect = 10
+	realm_in_name = yes
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.01
+	
+	allow = {
+		FROM = {
+			religion_group = muslim
+			is_female = no
+			age = 16
+		}
+		NOT = { is_close_relative = FROM }
+		is_female = yes
+		is_married = no
+		is_ruler = no
+		is_betrothed = no
+		fertility = 0.1
+		age = 16
+		NOT = { age = 45 }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }
+		NOT = { has_minor_title = title_seneschal }
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }	
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_castellian }		
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = no
+}
+
+title_court_jester = {
+	dignity = 0.01
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = -10
+	
+	monthly_salary = 0.05
+	monthly_prestige = -0.01
+	
+	allow = {
+		age = 16
+		FROM = {
+			is_feudal = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+		}
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }
+		NOT = { has_minor_title = title_seneschal }
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }	
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+# Keeper of the King's Swans
+title_keeper_of_swans = {
+	dignity = 0.05
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.002
+	
+	allow = {
+		age = 16
+		FROM = {
+			is_feudal = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+			NOT = { has_landed_title = e_byzantium }
+		}
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }
+		NOT = { has_minor_title = title_seneschal }
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }	
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }		
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_master_of_the_horse = {
+	dignity = 0.06
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.004
+	
+	allow = {
+		age = 16
+		is_female = no
+		FROM = {
+			is_feudal = yes
+			NOT = { has_landed_title = e_byzantium }
+		}
+		
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }
+		NOT = { has_minor_title = title_seneschal }
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }	
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }		
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_master_of_the_hunt = {
+	dignity = 0.05
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.004
+	
+	allow = {
+		age = 16
+		is_female = no
+		FROM = {
+			is_feudal = yes
+			NOT = { has_landed_title = e_byzantium }
+		}
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }
+		NOT = { has_minor_title = title_seneschal }
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }	
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }		
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_high_almoner = {
+	dignity = 0.03
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.004
+	
+	allow = {
+		age = 16
+		FROM = {
+			is_feudal = yes
+			NOT = { has_landed_title = e_byzantium }
+		}
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_cupbearer }
+		NOT = { has_minor_title = title_seneschal }
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }	
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }		
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_cupbearer = {
+	dignity = 0.1
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.006
+	
+	allow = {
+		age = 16
+		is_female = no
+		FROM = {
+			is_feudal = yes
+			NOT = { has_landed_title = e_byzantium }
+		}
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_seneschal }
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }	
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }		
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_seneschal = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.006
+	
+	allow = {
+		age = 16
+		is_female = no
+		FROM = {
+			is_feudal = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+			NOT = { has_landed_title = e_byzantium }
+		}
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }	
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }		
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_paramount_knight = {
+	dignity = 0.8
+	grant_limit = 0 
+	opinion_effect = 0
+
+	monthly_prestige = 0.5
+
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+# Byzantine Titles
+title_despot = {
+	dignity = 0.25
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 25
+	
+	monthly_salary = 0.2
+	monthly_prestige = 0.01
+	
+	allow = {
+		is_female = no
+		is_close_relative = FROM
+		FROM = {
+			is_feudal = yes
+			has_landed_title = e_byzantium
+		}
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }		
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_kouropalates }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_sebastokrator = {
+	dignity = 0.2
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 20
+	
+	monthly_salary = 0.2
+	monthly_prestige = 0.01
+	
+	allow = {
+		is_close_relative = FROM
+		FROM = {
+			is_feudal = yes
+			has_landed_title = e_byzantium
+		}
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }		
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_kouropalates }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_caesar = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.2
+	monthly_prestige = 0.01
+	
+	allow = {
+		FROM = {
+			is_feudal = yes
+			has_landed_title = e_byzantium
+		}
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }		
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_kouropalates = {
+	dignity = 0.10
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.15
+	monthly_prestige = 0.075
+	
+	allow = {
+		age = 16
+		is_female = no
+		FROM = {
+			is_feudal = yes
+			has_landed_title = e_byzantium
+		}
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }		
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_caesar }
+		NOT = { has_minor_title = title_anthypatos }
+		NOT = { has_minor_title = title_concubine }
+		NOT = { has_minor_title = title_castellian }
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+
+title_anthypatos = {
+	dignity = 0.075
+	grant_limit = 4
+	opinion_effect = 10
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.005
+	
+	allow = {
+		age = 16
+		is_female = no		
+		FROM = {
+			is_feudal = yes
+			has_landed_title = e_byzantium
+		}
+		NOT = { has_minor_title = title_court_jester }
+		NOT = { has_minor_title = title_keeper_of_swans }
+		NOT = { has_minor_title = title_master_of_the_horse }
+		NOT = { has_minor_title = title_master_of_the_hunt }
+		NOT = { has_minor_title = title_high_almoner }
+		NOT = { has_minor_title = title_cupbearer }	
+		NOT = { has_minor_title = title_despot }
+		NOT = { has_minor_title = title_sebastokrator }
+		NOT = { has_minor_title = title_kouropalates }	
+		NOT = { has_minor_title = title_caesar }
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}

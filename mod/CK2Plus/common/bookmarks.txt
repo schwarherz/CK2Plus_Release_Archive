@@ -1,0 +1,56 @@
+bookmark =
+{
+	name = "BM_FATE_OF_ENGLAND"
+	desc = "BM_FATE_OF_ENGLAND_DESC"
+	date = 1066.9.15
+	
+	character = 140 # William the Conqueror
+	character = 122 # Harold Godwinson
+	character = 102531 # Harald Hårdråde
+}
+
+bookmark =
+{
+	name = "BM_NORMAN_CONQUEST"
+	desc = "BM_NORMAN_CONQUEST_DESC"
+	date = 1066.12.26
+	
+	character = 140 # William the Conqueror
+	character = 101515 # Svend Estridsen, King of Denmark
+}
+
+bookmark =
+{
+	name = "BM_THIRD_CRUSADE"
+	desc = "BM_THIRD_CRUSADE_DESC"
+	date = 1187.1.1
+	
+	character = 204500 # Henry II of England
+	character = 205506 # Philippe II Auguste of France
+	character = 223500 # Guy de Lusignan, King of Jerusalem
+	character = 212501 # Friedrich I of the HRE
+	character = 219500 # Hungary
+	character = 215500 # The Byzantine Empire
+}
+
+bookmark =
+{
+	name = "BM_NYMPHAEUM"
+	desc = "BM_NYMPHAEUM_DESC"
+	date = 1214.12.1
+	
+	character = 205525 # Henry I van Vlaanderen/Latins
+	character = 215674 # Basileus Theodoros I/Byz
+	character = 215514 # Theodoros I/Dyrrachion
+	character = 215519 # Alexios/Trebizond
+}
+
+bookmark =
+{
+	name = "BM_100_YEARS_WAR"
+	desc = "BM_100_YEARS_WAR_DESC"
+	date = 1337.1.1
+	
+	character = 454500 # Edward III of England
+	character = 455500 # Philippe VI of France
+}

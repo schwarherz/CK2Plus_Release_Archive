@@ -1,0 +1,59 @@
+1066.1.1={
+	liege="d_epirus"
+}
+1066.1.1={
+	holder=90092
+}
+1098.1.1={
+	holder=232512
+}
+1149.1.1={
+	holder=215035
+}
+1185.9.12={
+	liege="k_sicily"
+	holder=211531 #Margitone di Brindisi
+}
+1189.11.11 = {
+	holder = 211509 #Tancred di Lecce
+}
+1194.2.20 = {
+	holder = 211512 #William III di Lecce
+}
+1194.10.1 = {
+	holder = 212507 #Heinrich VI
+}
+1197.1.1={
+	holder=31433 #Matteo I Orsini
+}
+1238.1.1={
+	holder=31434 #Matteo II Orsini
+}
+1262.1.1={
+	holder=31435 #Riccardo Orsini
+}
+#To kingdom of Naples
+1282.8.30={
+	liege="k_naples"
+}
+1303.4.7={
+	holder=31436 #Giovanni I Orsini
+}
+1317.1.1={
+	holder=31440 #Nicolo Orsini
+}
+1318.1.1={
+	holder=31441 #Giovanni II Orsini
+}
+1325.1.1={
+	liege="d_calabria"
+}
+1325.1.1={
+	holder=461721 #Jean d'Anjou
+}
+1330.1.1={
+	holder=32541 #Guglielmo Tocco
+}
+1335.9.22={
+	holder=32543 #Leonardo Tocco
+}

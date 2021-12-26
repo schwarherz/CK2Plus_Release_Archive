@@ -1,0 +1,153 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+d_palmyra;Palmyra;Palmyra;Palmyra;Palmyra;Palmyra;;;;;;;;;x
+d_palmyra_adj;Palmyran;Palmyran;Palmyran;Palmyran;Palmyran;;;;;;;;;x
+b_kherson;Cherson;Cherson;Cherson;Cherson;Cherson;;;;;;;;;x
+b_kherson_adj;Cherson;Cherson;Cherson;Cherson;Cherson;;;;;;;;;x
+d_osterreich;Austria;Austria;Austria;Austria;Austria;;;;;;;;;x
+d_osterreich_adj;Austrian;Austrian;Austrian;Austrian;Austrian;;;;;;;;;x
+d_koln;Cologne;Cologne;Cologne;Cologne;Cologne;;;;;;;;;x
+d_koln_adj;Colognian;Colognian;Colognian;Colognian;Colognian;;;;;;;;;x
+d_kleve;Cleves;Cleves;Cleves;Cleves;Cleves;;;;;;;;;x
+d_kleve_adj;Cleves;Cleves;Cleves;Cleves;Cleves;;;;;;;;;x
+d_karbala;Karbala;Karbala;Karbala;Karbala;Karbala;;;;;;;;;x
+d_karbala_adj;Karbala;Karbala;Karbala;Karbala;Karbala;;;;;;;;;x
+d_samarkand;Samarkand;Samarkand;Samarkand;Samarkand;Samarkand;;;;;;;;;x
+d_samarkand_adj;Samarkand;Samarkand;Samarkand;Samarkand;Samarkand;;;;;;;;;x
+d_baluchistan;Baluchistan;Baluchistan;Baluchistan;Baluchistan;Baluchistan;;;;;;;;;x
+d_baluchistan_adj;Baluchistan;Baluchistan;Baluchistan;Baluchistan;Baluchistan;;;;;;;;;x
+d_sharukan;Sharukan;Sharukan;Sharukan;Sharukan;Sharukan;;;;;;;;;x
+d_sharukan_adj;Sharukan;Sharukan;Sharukan;Sharukan;Sharukan;;;;;;;;;x
+d_chuvash;Chuvash;Chuvash;Chuvash;Chuvash;Chuvash;;;;;;;;;x
+d_chuvash_adj;Chuvash;Chuvash;Chuvash;Chuvash;Chuvash;;;;;;;;;x
+d_surgut;Surgut;Surgut;Surgut;Surgut;Surgut;;;;;;;;;x
+d_surgut_adj;Surgut;Surgut;Surgut;Surgut;Surgut;;;;;;;;;x
+d_sames;Samoyedia;Samoyedia;Samoyedia;Samoyedia;Samoyedia;;;;;;;;;x
+d_sames_adj;Samoyed;Samoyed;Samoyed;Samoyed;Samoyed;;;;;;;;;x
+b_karaj;Alamut;Alamut;Alamut;Alamut;Alamut;;;;;;;;;x
+b_karaj_adj;Alamut;Alamut;Alamut;Alamut;Alamut;;;;;;;;;x
+d_pskov;Pskov;Pskov;Pskov;Pskov;Pskov;;;;;;;;;x
+d_pskov_adj;Pskov;Pskov;Pskov;Pskov;Pskov;;;;;;;;;x
+d_nordland;Nordlandet;Nordlandet;Nordlandet;Nordlandet;Nordlandet;;;;;;;;;x
+d_nordland_adj;Nordland;Nordland;Nordland;Nordland;Nordland;;;;;;;;;x
+d_ifni;Ifni;Ifni;Ifni;Ifni;Ifni;;;;;;;;;x
+d_ifni_adj;Ifni;Ifni;Ifni;Ifni;Ifni;;;;;;;;;x
+k_al_garb;Al-Garb;Al-Garb;Al-Garb;Al-Garb;Al-Garb;;;;;;;;;x
+k_al_garb_adj;Al-Garb;Al-Garb;Al-Garb;Al-Garb;Al-Garb;;;;;;;;;x
+k_al_andalus;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;;;;;;;;;x
+k_al_andalus_adj;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;;;;;;;;;x
+k_al_xarq;Al-Xarq;Al-Xarq;Al-Xarq;Al-Xarq;Al-Xarq;;;;;;;;;x
+k_al_xarq_adj;Al-Xarq;Al-Xarq;Al-Xarq;Al-Xarq;Al-Xarq;;;;;;;;;x
+k_al_tagr;Al-Tagr;Al-Tagr;Al-Tagr;Al-Tagr;Al-Tagr;;;;;;;;;x
+k_al_tagr_adj;Al-Tagr;Al-Tagr;Al-Tagr;Al-Tagr;Al-Tagr;;;;;;;;;x
+d_atlas;Atlas;Atlas;Atlas;Atlas;Atlas;;;;;;;;;x
+d_atlas_adj;Atlas;Atlas;Atlas;Atlas;Atlas;;;;;;;;;x
+k_qazan;Volga;Volga;Volga;Volga;Volga;;;;;;;;;x
+k_qazan_adj;Volgan;Volgéen;Volgan;Volgan;Volgan;;;;;;;;;x
+k_crimea;Crimea;Crimée;Crimea;Crimea;Crimea;;;;;;;;;x
+k_crimea_adj;Crimean;Criméen;Crimean;Crimean;Crimean;;;;;;;;;x
+k_khazaria;Ural;Ural;Ural;Ural;Ural;;;;;;;;;x
+k_khazaria_adj;Ural;Ural;Ural;Ural;Ural;;;;;;;;;x
+b_nursa;Ortona;Ortona;Ortona;Ortona;Ortona;;;;;;;;x;
+b_nursa_adj;Ortonan;Ortonan;Ortonan;Ortonan;Ortonan;;;;;;;;x;
+k_azerbaijan;Azerbaijan;Azerbaijan;Azerbaijan;Azerbaijan;Azerbaijan;;;;;;;;x;
+k_azerbaijan_adj;Azerbaijani;Azerbaijani;Azerbaijani;Azerbaijani;Azerbaijani;;;;;;;;x;
+k_wend;Wends;Wendes;Wends;Wends;Wends;;;;;;;;x;
+k_wend_adj;Wend;Wende;Wend;Wend;Wend;;;;;;;;x;
+c_ibiza_adj;Ibizan;Ibizéen;Ibizan;Ibizan;Ibizan;;;;;;;;x;
+c_teate_adj;Teate;Teate;Teate;Teate;Teate;;;;;;;;x;
+d_saray;Saray;Saray;Saray;Saray;Saray;;;;;;;;x;
+d_saray_adj;Saray;Saray;Saray;Saray;Saray;;;;;;;;x;
+d_piedmont;Piedmont;Piedmont;Piedmont;Piedmont;Piedmont;;;;;;;;x;
+d_piedmont_adj;Piedmontian;Piedmontain;Piedmontian;Piedmontian;Piedmontian;;;;;;;;x;
+c_trans-portage_adj;Trans-Portage;Trans-Portage;Trans-Portage;Trans-Portage;Trans-Portage;;;;;;;;x;
+d_teutonic_order2;Teutonic Order;Ordre teutonique;Deutscher Orden;;Orden teutona;;;;;;;;;x
+d_teutonic_order2_adj;Teutonic;Teutonique;Deutsch;;Teutón;;;;;;;;;x
+d_knights_templar2;Knights Templar;Chevaliers du Temple;Tempelritter;;Templarios caballeros;;;;;;;;;x
+d_knights_templar2_adj;Templar;Templier;Tempel;;Templario ;;;;;;;;;x
+d_knights_hospitaler2;Knights Hospitaller;Chevaliers de l'Hospital;Malteserorden;;Caballeros hospitalarios;;;;;;;;;x
+d_knights_hospitaler2_adj;Hospitaller;Hospitalier;Malteser;;Hospitalario;;;;;;;;;x
+k_qarakhnid;Qarakhanid;Qarakhanide;Qarakhanid;;Qarakhanid;;;;;;;;;x
+k_qarakhnid_adj;Qarakhanid;Qarakhanide;Qarakhanid;;Qarakhanid;;;;;;;;;x
+b_hadibu;Hadibu;Hadibu;Hadibu;Hadibu;Hadibu;;;;;;;;x;
+b_hadibu_adj;Hadibu;Hadibu;Hadibu;Hadibu;Hadibu;;;;;;;;x;
+b_socotra;Socotra;Socotra;Socotra;Socotra;Socotra;;;;;;;;x;
+b_socotra_adj;Socotran;Socotréen;Socotran;Socotran;Socotran;;;;;;;;x;
+c_socotra_adj;Socotran;Socotréen;Socotran;Socotran;Socotran;;;;;;;;x;
+d_ghazi_sunni;Ghazi;Ghazi;Ghazi;Ghazi;Ghazi;;;;;;;;x;
+d_ghazi_sunni_adj;Ghazi;Ghazi;Ghazi;Ghazi;Ghazi;;;;;;;;x;
+d_ghazi_shiite;Ghazi;Ghazi;Ghazi;Ghazi;Ghazi;;;;;;;;x;
+d_ghazi_shiite_adj;Ghazi;Ghazi;Ghazi;Ghazi;Ghazi;;;;;;;;x;
+d_ghazi_sunni2;Ghazi;Ghazi;Ghazi;Ghazi;Ghazi;;;;;;;;x;
+d_ghazi_sunni2_adj;Ghazi;Ghazi;Ghazi;Ghazi;Ghazi;;;;;;;;x;
+d_ghazi_shiite2;Ghazi;Ghazi;Ghazi;Ghazi;Ghazi;;;;;;;;x;
+d_ghazi_shiite2_adj;Ghazi;Ghazi;Ghazi;Ghazi;Ghazi;;;;;;;;x;
+e_seljuk_turks;Seljuk Turks;Turcs Seljoukides;Seldschuk-Türken;;Selyúcidas;;;;;;;;;x
+e_seljuk_turks_adj;Seljuk Turkish;Turc seljuk;Seldschuk-Türkischer;;Selyúcidas;;;;;;;;;x
+k_wales;Wales;Pays de Galles;Wales;Wales;Wales;;;;;;;;;x
+k_wales_adj;Welsh;Gallois;Welsh;Welsh;Welsh;;;;;;;;;x
+k_algiers;Algiers;Algiers;Algiers;Algiers;Algiers;;;;;;;;;x
+k_algiers_adj;Algerian;Algérien;Algerian;Algerian;Algerian;;;;;;;;;x
+d_order_of_santiago;Order of Santiago;Ordre de Santiago;Order of Santiago;Order of Santiago;Order of Santiago;;;;;;;;;x
+d_order_of_santiago_adj;Santiago;Santiago;Santiago;Santiago;Santiago;;;;;;;;;x
+d_livonian_order;Livonian Order;Ordre de Livonie;Livonian Order;Livonian Order;Livonian Order;;;;;;;;;x
+d_livonian_order_adj;Livonian;Livonien;Livonian;Livonian;Livonian;;;;;;;;;x
+d_order_of_santiago2;Order of Santiago;Ordre de Santiago;Order of Santiago;Order of Santiago;Order of Santiago;;;;;;;;;x
+d_order_of_santiago2_adj;Santiago;Santiago;Santiago;Santiago;Santiago;;;;;;;;;x
+d_livonian_order2;Livonian Order;Ordre de Livonie;Livonian Order;Livonian Order;Livonian Order;;;;;;;;;x
+d_livonian_order2_adj;Livonian;Livonien;Livonian;Livonian;Livonian;;;;;;;;;x
+d_ethiopian_company;Ethiopian Company;compagnie Ethiopienne;Ethiopian Company;Ethiopian Company;Ethiopian Company;;;;;;;;;x
+d_ethiopian_company_adj;Ethiopian;Ethiopien;Ethiopian;Ethiopian;Ethiopian;;;;;;;;;x
+d_ethiopian_band;Ethiopian Band;Bande Ethiopienne;Ethiopian Band;Ethiopian Band;Ethiopian Band;;;;;;;;;x
+d_ethiopian_band_adj;Ethiopian;Ethiopien;Ethiopian;Ethiopian;Ethiopian;;;;;;;;;x
+d_nubian_company;Nubian Company;Compagnie Nubienne;Nubian Company;Nubian Company;Nubian Company;;;;;;;;;x
+d_nubian_company_adj;Nubian;Nubien;Nubian;Nubian;Nubian;;;;;;;;;x
+d_nubian_band;Nubian Band;Bande Nubienne;Nubian Band;Nubian Band;Nubian Band;;;;;;;;;x
+d_nubian_band_adj;Nubian;Nubien;Nubian;Nubian;Nubian;;;;;;;;;x
+e_ethiopia;Ethiopia;Ethiopie;Ethiopia;Ethiopia;Ethiopia;;;;;;;;;x
+e_ethiopia_adj;Ethiopian;Ethiopien;Ethiopian;Ethiopian;Ethiopian;;;;;;;;;x
+d_asosa;Asosa;Asosa;Asosa;Asosa;Asosa;;;;;;;;;x
+d_asosa_adj;Asosan;Asoséen;Asosan;Asosan;Asosan;;;;;;;;;x
+d_hayya;Hayya;Hayya;Hayya;Hayya;Hayya;;;;;;;;;x
+d_hayya_adj;Hayyan;Hayyen;Hayyan;Hayyan;Hayyan;;;;;;;;;x
+d_sennar;Sennar;Sennar;Sennar;Sennar;Sennar;;;;;;;;;x
+d_sennar_adj;Sennar;Sennar;Sennar;Sennar;Sennar;;;;;;;;;x
+d_berbera;Berbera;Berbèrie;Berbera;Berbera;Berbera;;;;;;;;;x
+d_berbera_adj;Berberan;Berbères;Berberan;Berberan;Berberan;;;;;;;;;x
+k_adal;Ajuuraan;Ajuuraan;Ajuuraan;Ajuuraan;Ajuuraan;;;;;;;;;x
+k_adal_adj;Ajuuraan;Ajuuréen;Ajuuraan;Ajuuraan;;;;;;;;;;x
+e_danubia;Danubia;Danubie;Danubia;Danubia;Danubia;;;;;;;;;x
+e_danubia_adj;Danubian;Danubien;Danubian;Danubian;Danubian;;;;;;;;;x
+e_poland_lithuania;Poland-Lithuania;Polande-Lituanie;Poland-Lithuania;Poland-Lithuania;Poland-Lithuania;;;;;;;;;x
+e_poland_lithuania_adj;Polish-Lithuanian;Polo-Lituanien;Polish-Lithuanian;Polish-Lithuanian;Polish-Lithuanian;;;;;;;;;x
+e_maghreb;Maghreb;Maghreb;Maghreb;Maghreb;Maghreb;;;;;;;;;x
+e_maghreb_adj;Maghreb;Maghreb;Maghreb;Maghreb;Maghreb;;;;;;;;;x
+e_persia;Persian Empire;Empire Perse;Persian Empire;Persian Empire;Persian Empire;;;;;;;;;x
+e_persia_adj;Persian;Perse;Persian;Persian;Persian;;;;;;;;;x
+e_arabia;Arabian Empire;Empire Arabe;Arabian Empire;Arabian Empire;Arabian Empire;;;;;;;;;x
+e_arabia_adj;Arabian;Arabe;Arabian;Arabian;Arabian;;;;;;;;;x
+e_russia;Russia;Russie;Russia;Russia;Russia;;;;;;;;;x
+e_russia_adj;Russian;Russe;Russian;Russian;Russian;;;;;;;;;x
+e_spain;Hispania;Hispanie;Hispania;Hispania;Hispania;;;;;;;;;x
+e_spain_adj;Hispanian;Hispanique;Hispanian;Hispanian;Hispanian;;;;;;;;;x
+e_france;Francia;Franconie;Francia;Francia;Francia;;;;;;;;;x
+e_france_adj;Francian;Franconien;Francian;Francian;Francian;;;;;;;;;x
+e_britannia;Britannia;Britannie;Britannia;Britannia;Britannia;;;;;;;;;x
+e_britannia_adj;British;Britannique;British;British;British;;;;;;;;;x
+e_scandinavia;Scandinavia;Scandinavie;Scandinavia;Scandinavia;Scandinavia;;;;;;;;;x
+e_scandinavia_adj;Scandinavian;Scandinave;Scandinavian;Scandinavian;Scandinavian;;;;;;;;;x
+e_italy;Italia;Italie;Italia;Italia;Italia;;;;;;;;;x
+e_italy_adj;Italian;Italien;Italian;Italian;Italian;;;;;;;;;x
+k_thessalonika;Thessalonica;Thessalonique;Thessalonica;Thessalonica;Thessalonica;;;;;;;;;x
+k_thessalonika_adj;Thessalonican;Thessalonicien;Thessalonican;Thessalonican;Thessalonican;;;;;;;;;x
+k_byzantium;Nicaea;Nicée;Nicaea;Nicaea;Nicaea;;;;;;;;;x
+k_byzantium_adj;Nicaean;Nicéen;Nicaean;Nicaean;Nicaean;;;;;;;;;x
+k_netherlands;Lotharingia;Lotharingie;Lotharingia;Lotharingia;Lotharingia;;;;;;;;;x
+k_netherlands_adj;Lotharingian;Lotharingien;Lotharingian;Lotharingian;Lotharingian;;;;;;;;;x
+k_brittany;Brittany;Bretagne;Brittany;Brittany;Brittany;;;;;;;;;x
+k_brittany_adj;Breton;Breton;Breton;Breton;Breton;;;;;;;;;x
+e_easteregg;Sniperia;Sniperia;Sniperia;Sniperia;Sniperia;;;;;;;;;x
+e_easteregg_adj;Sniperian;Sniperian;Sniperian;Sniperian;Sniperian;;;;;;;;;x
+k_andalusia;Andalusia;Andalousie;Andalusia;Andalusia;Andalusia;;;;;;;;;x
+k_andalusia_adj;Andalusian;Andalousie;Andalusian;Andalusian;Andalusian;;;;;;;;;x
+k_italy;Lombardy;Lombardie;Lombardy;Lombardy;Lombardy;;;;;;;;;x
+k_italy_adj;Lombardian;Lombard;Lombardian;Lombardian;Lombardian;;;;;;;;;x

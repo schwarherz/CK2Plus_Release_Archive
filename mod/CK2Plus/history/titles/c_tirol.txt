@@ -1,0 +1,56 @@
+1066.1.1=
+{
+liege="d_bavaria"
+}
+1066.1.1=
+{
+holder=1612 #Albrecht I
+}
+1078.1.1=
+{
+holder=1614 #Albrecht II
+}
+1102.1.1=
+{
+holder=30098 #Albrecht III
+}
+1165.2.2=
+{
+holder=30100 #Berthold I
+}
+1180.3.7=
+{
+holder=30102 #Berthold II
+}
+1180.1.1=
+{
+liege="e_hre"
+}
+1181.1.1=
+{
+holder=212380 #Heinrich I
+}
+1202.6.14=
+{
+holder=212382 #Albrecht IV
+}
+1253.7.22=
+{
+holder=7633 #Meinhard I
+}
+1258.7.22=
+{
+holder=462711 #Meinhard II
+}
+1295.10.1=
+{
+holder=462714 #Otto II
+}
+1310.3.28=
+{
+holder=462720 #Heinrich II
+}
+1335.4.2=
+{
+holder=462710 #Margarete I
+}

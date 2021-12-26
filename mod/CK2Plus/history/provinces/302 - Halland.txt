@@ -1,0 +1,24 @@
+# 302 - Halland
+
+# County Title
+title = c_halland
+
+# Settlements
+max_settlements = 3
+b_varberg = castle
+b_falkenberg = city
+b_halmstad = temple
+#b_kungsbacka = castle
+#b_laholm = city
+#b_aranaes = city
+#b_baastad = castle
+#b_getinge = castle
+
+# Misc
+culture = danish
+religion = catholic
+
+# History
+
+#1231.1.1 = { b_halmstad = temple }
+#1307.1.1 = { b_halmstad = city }

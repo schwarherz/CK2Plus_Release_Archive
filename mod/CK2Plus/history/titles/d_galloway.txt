@@ -1,0 +1,33 @@
+1120.1.1=
+{
+liege="k_scotland"
+law = agnatic_succession
+law = succ_primogeniture
+}
+1120.1.1={
+	holder = 203560
+} 
+1161.1.1={
+	holder = 203555
+}
+1174.1.1={
+	holder=203550
+}
+1185.1.1={
+	holder=203570
+}
+1200.12.12={
+	holder = 203572
+}
+1236.1.2={
+	holder = 230523
+}
+1268.10.25={
+	holder = 230524
+}
+1296.1.1={
+	holder=453501
+}
+1329.6.7={
+	holder=453500
+}

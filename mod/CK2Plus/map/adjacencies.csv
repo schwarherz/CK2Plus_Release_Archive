@@ -1,0 +1,44 @@
+From;To;Type;Through;Comment
+5;45;sea;913;Ulaid-Argyll
+5;50;sea;913;Ulaid-Galloway
+35;40;sea;992;Western Isles-Moray
+36;37;sea;993;Orkney-Caithness
+50;54;sea;913;Galloway-Isle of Man
+72;73;sea;965;Essex-Kent
+78;79;sea;973;Brugge-Zeeland
+79;80;sea;973;Zeeland-Holland
+79;92;sea;973;Zeeland-Breda
+79;93;sea;973;Zeeland-Gent
+81;84;sea;973;Westfriesland-Frisia
+166;839;sea;954;Algeciras-Ceuta
+166;841;sea;954;Algeciras-Tangiers
+264;265;sea;999;Slesvig-Fyn
+265;266;sea;999;Fyn-Sjaelland
+266;303;sea;999;Sjaelland-Skåne
+290;291;sea;1005;Uppland-Åland
+290;292;sea;959;Uppland-Södermanland
+291;382;sea;1005;Åland-Suomi
+293;297;sea;962;Östergötland-Västergötland
+298;300;sea;1003;Småland-Öland
+303;305;sea;999;Skåne-Bornholm
+304;308;sea;999;Rügen-Wolgast
+324;325;sea;921;Corsica-Arborea
+338;339;sea;930;Reggio-Messina
+356;357;sea;934;Venezia-Treviso
+373;376;sea;1004;Kurzeme-Saaremaa
+376;377;sea;1004;Saaremaa-Liivimaa
+473;474;sea;931;Arta-Corfu
+474;476;sea;931;Corfu-Achaia
+475;476;sea;931;Hellas-Achaia
+483;747;sea;936;Rhodos-Lykia
+484;485;sea;911;Naxos-Euboia
+486;746;sea;935;Samos-Ephesos
+487;744;sea;935;Lesbos-Abydos
+495;744;sea;947;Kaliopolis-Abydos
+562;598;sea;969;Korchev-Tmutarakan
+826;827;sea;916;Menorca-Mallorca
+913;827;sea;916;Ibiza-Mallorca
+651;653;sea;1023;Damman-Bahrein
+652;653;sea;1023;Al Hasa-Bahrein
+939;1017;;;Nile Delta-Gulf of Suez
+-1;-1;;-1;-1

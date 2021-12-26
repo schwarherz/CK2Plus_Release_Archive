@@ -1,0 +1,42 @@
+# Western
+
+frankishgfx
+englishgfx
+germangfx
+celticgfx
+norsegfx
+knightsgfx
+saxongfx
+normangfx
+
+# Eastern
+
+easternslavicgfx
+westernslavicgfx
+ugricgfx
+
+# Muslim
+
+arabicgfx
+turkishgfx
+mongolgfx
+africangfx
+
+# Mediterranean
+
+iberiangfx
+italiangfx
+republicsgfx
+
+# Persia
+
+# Moorish
+
+# Culture groups
+
+muslimgfx
+easterngfx
+westerngfx
+mediterraneangfx
+persiagfx
+moorishgfx

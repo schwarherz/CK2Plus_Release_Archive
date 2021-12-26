@@ -1,0 +1,233 @@
+decisions = {
+
+	employ_priest = {
+		potential = {
+			ai = no
+		}
+		allow = {	
+			NOT = { has_character_modifier = employment_timer }
+			piety = 10
+		}
+		effect = {
+			piety = -10
+			create_random_priest = {
+				random_traits = yes
+				dynasty = random
+				female = no
+			}
+			new_character = {
+				character_event = { id = 100001 }
+			}			
+			add_character_modifier = {
+				name = employment_timer
+				duration = 180
+				hidden = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	employ_steward = {
+		potential = {
+			ai = no
+		}
+		allow = {	
+			NOT = { has_character_modifier = employment_timer }
+			treasury = 25
+		}
+		effect = {
+			treasury = -25
+			create_random_steward = {
+				random_traits = yes
+				dynasty = random
+				female = no
+			}
+			new_character = {
+				character_event = { id = 100001 }
+			}			
+			add_character_modifier = {
+				name = employment_timer
+				duration = 180
+				hidden = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	employ_chancellor = {
+		potential = {
+			ai = no
+		}
+		allow = {	
+			NOT = { has_character_modifier = employment_timer }
+			treasury = 25
+		}
+		effect = {
+			treasury = -25
+			create_random_diplomat = {
+				random_traits = yes
+				dynasty = random
+				female = no
+			}
+			new_character = {
+				character_event = { id = 100001 }
+			}			
+			add_character_modifier = {
+				name = employment_timer
+				duration = 180
+				hidden = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	employ_marshal = {
+		potential = {
+			ai = no
+		}
+		allow = {	
+			NOT = { has_character_modifier = employment_timer }
+			treasury = 25
+		}
+		effect = {
+			treasury = -25
+			create_random_soldier = {
+				random_traits = yes
+				dynasty = random
+				female = no
+			}
+			new_character = {
+				character_event = { id = 100001 }
+			}			
+			add_character_modifier = {
+				name = employment_timer
+				duration = 180
+				hidden = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	employ_spymaster = {
+		potential = {
+			ai = no
+		}
+		allow = {	
+			NOT = { has_character_modifier = employment_timer }
+			treasury = 25
+		}
+		effect = {
+			treasury = -25
+			create_random_intriguer = {
+				random_traits = yes
+				dynasty = random
+				female = no
+			}
+			new_character = {
+				character_event = { id = 100001 }
+			}			
+			add_character_modifier = {
+				name = employment_timer
+				duration = 180
+				hidden = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+	
+	present_debutante = {
+		potential = {
+			ai = no
+		}
+		allow = {	
+			NOT = { has_character_modifier = employment_timer }
+			treasury = 5
+		}
+		effect = {
+			treasury = -5
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				female = yes
+				age = 16
+			}
+			new_character = {
+				set_character_flag = debutante
+				character_event = { id = 100001 }
+			}
+			add_character_modifier = {
+				name = employment_timer
+				duration = 180
+				hidden = yes
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ai_concubine = {
+		potential = {
+			ai = yes
+			religion_group = muslim
+			is_female = no
+			age = 16
+			NOT = {
+				any_courtier = {
+					has_minor_title = title_concubine
+				}
+			}			
+		}
+		allow = {
+			treasury = 5
+		}
+		effect = {
+			treasury = -5
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				female = yes
+				age = 16
+			}
+			new_character = {
+				give_minor_title = title_concubine
+				character_event = { id = 100001 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+}

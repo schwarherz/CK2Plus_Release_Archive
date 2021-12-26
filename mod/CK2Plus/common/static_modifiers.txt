@@ -1,0 +1,1174 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+# The names can NOT be removed or changed since the code references them
+
+##########################################################################
+# Difficulty Modifiers
+##########################################################################
+
+very_easy_player = {
+	global_tax_modifier = 0.5
+	land_morale = 0.5
+	levy_reinforce_rate = 0.5
+}
+
+easy_player = {
+	global_tax_modifier = 0.25
+	land_morale = 0.25
+	levy_reinforce_rate = 0.25
+}
+
+normal_player = {
+}
+
+hard_player = {
+}
+
+very_hard_player = {
+}
+
+very_easy_ai = {
+}
+
+easy_ai = {
+}
+
+normal_ai = {
+}
+
+hard_ai = {
+	global_tax_modifier = 0.25
+	land_morale = 0.25
+	levy_reinforce_rate = 0.25
+}
+
+very_hard_ai = {
+	global_tax_modifier = 0.5
+	land_morale = 0.5
+	levy_reinforce_rate = 0.5
+}
+
+##########################################################################
+# Provincial Static Modifiers
+##########################################################################
+
+province_base_values = {
+	supply_limit = 10 # 10K troops
+}
+
+coastal = {
+}
+
+non_coastal = {
+}
+
+coastal_sea = {
+}
+
+sea_zone = {
+	max_attrition = 0.05			
+}
+
+land_province = {
+	max_attrition = 0.05			
+	garrison_growth = 0.1			#10% base growth
+}
+
+mild_winter = {
+	supply_limit = -1
+	max_attrition = 0.01			
+}
+
+normal_winter = {
+	supply_limit = -3		
+	max_attrition = 0.03			
+}
+
+severe_winter = {
+	supply_limit = -5		
+	max_attrition = 0.05			
+}
+
+out_of_supply = 
+{
+	max_attrition = 0.1			
+}
+
+no_adjacent_controlled = {
+}
+
+# Another culture in the same culture group
+same_culture_group = {
+	local_tax_modifier = -0.05
+	levy_size = -0.05
+	levy_reinforce_rate = -0.05
+}
+
+# A culture in another culture group
+non_accepted_culture = {
+	local_tax_modifier = -0.1
+	levy_size = -0.1
+	levy_reinforce_rate = -0.1
+}
+
+# A religion in another religion group
+different_religion = {
+	local_revolt_risk = 0.04				#4% revolt risk!
+}
+
+# Another religion in the same religion group
+same_religion_group = {
+	local_revolt_risk = 0.02				#2% revolt risk!
+}
+
+# County vs Count is heresy vs parent religion
+county_heresy = {
+	local_revolt_risk = 0.04				#4% revolt risk!
+}
+
+# Isolated county
+county_isolated = {
+	local_revolt_risk = 0.04
+}
+
+occupied = {
+	levy_size = -2
+	levy_reinforce_rate = -1
+	local_tax_modifier = -1.0
+	icon = 19
+}
+
+occupied_different_culture = {
+	icon = 41
+}
+
+occupied_different_culturegroup = {
+	icon = 41
+}
+
+occupied_different_religion = {
+	icon = 41
+}
+
+occupied_different_religiongroup = {
+	icon = 41
+}
+
+occupied_tutorial = {
+	icon = 19
+	levy_size = -2
+	garrison_size = -0.9
+}
+troops_tutorial = {
+	icon = 19
+	levy_size = 4
+}
+
+under_siege = {
+}
+
+looted = {
+	supply_limit = -1
+	local_tax_modifier = -0.5			#50% less tax income.
+}
+
+revolt_risk = {
+}
+
+foreign_rebels = {
+	local_revolt_risk = 0.05			#5% revolt risk
+	icon = 1
+}
+
+##########################################################################
+# Combat Static Modifiers
+##########################################################################
+
+river_crossing = {	
+	icon = 2
+	archers_defensive = -0.1
+	light_infantry_defensive = -0.1
+	pikemen_defensive = -0.1
+	heavy_infantry_defensive = -0.1
+	light_cavalry_defensive = -0.1
+	knights_defensive = -0.1
+	horse_archers_defensive = -0.1
+
+	archers_offensive = -0.1
+	light_infantry_offensive = -0.1
+	pikemen_offensive = -0.1
+	heavy_infantry_offensive = -0.1
+	light_cavalry_offensive = -0.1
+	knights_offensive = -0.1
+	horse_archers_offensive = -0.1
+}
+
+strait_crossing = {
+	icon = 3
+	archers_defensive = -0.15
+	light_infantry_defensive = -0.15
+	pikemen_defensive = -0.15
+	heavy_infantry_defensive = -0.15
+	light_cavalry_defensive = -0.15
+	knights_defensive = -0.15
+	horse_archers_defensive = -0.15
+
+	archers_offensive = -0.15
+	light_infantry_offensive = -0.15
+	pikemen_offensive = -0.15
+	heavy_infantry_offensive = -0.15
+	light_cavalry_offensive = -0.15
+	knights_offensive = -0.15
+	horse_archers_offensive = -0.15
+}
+
+amphibious_landing = {
+	icon = 4
+	archers_defensive = -0.15
+	light_infantry_defensive = -0.15
+	pikemen_defensive = -0.15
+	heavy_infantry_defensive = -0.15
+	light_cavalry_defensive = -0.15
+	knights_defensive = -0.15
+	horse_archers_defensive = -0.15
+
+	archers_offensive = -0.15
+	light_infantry_offensive = -0.15
+	pikemen_offensive = -0.15
+	heavy_infantry_offensive = -0.15
+	light_cavalry_offensive = -0.15
+	knights_offensive = -0.15
+	horse_archers_offensive = -0.15
+}
+
+defenderbonus_mountain = {
+	icon = 1
+	archers_defensive = 0.2
+	light_infantry_defensive = 0.2
+	pikemen_defensive = 0.2
+	heavy_infantry_defensive = 0.2
+	horse_archers_defensive = 0.2
+	knights_defensive = 0.2
+
+	archers_offensive = 0.2
+	pikemen_offensive = 0.1
+}
+
+defenderbonus_hills = {
+	icon = 1
+	archers_defensive = 0.15
+	light_infantry_defensive = 0.15
+	pikemen_defensive = 0.15
+	heavy_infantry_defensive = 0.15
+	horse_archers_defensive = 0.15
+	knights_defensive = 0.15
+
+	archers_offensive = 0.15
+	pikemen_offensive = 0.05
+}
+
+defenderbonus_plains = {
+	icon = 1
+	archers_defensive = 0.05
+	light_infantry_defensive = 0.05
+	pikemen_defensive = 0.05
+	heavy_infantry_defensive = 0.05
+	horse_archers_defensive = 0.05
+	knights_defensive = 0.05
+}
+
+defenderbonus_farmland = {
+	icon = 1
+	archers_defensive = 0.05
+	light_infantry_defensive = 0.05
+	pikemen_defensive = 0.05
+	heavy_infantry_defensive = 0.05
+	horse_archers_defensive = 0.05
+	knights_defensive = 0.05
+}
+
+defenderbonus_desert = {
+	icon = 1
+	archers_defensive = 0.15
+	light_infantry_defensive = 0.15
+	pikemen_defensive = 0.1
+	heavy_infantry_defensive = 0.1
+	horse_archers_defensive = 0.15
+	knights_defensive = 0.1
+}
+
+defenderbonus_forest = {
+	icon = 1
+	archers_defensive = 0.15
+	light_infantry_defensive = 0.15
+	pikemen_defensive = 0.1
+	heavy_infantry_defensive = 0.15
+	horse_archers_defensive = 0.1
+	knights_defensive = 0.1
+}
+
+##########################################################################
+# Attribute Mods: Multiplied by the value (including councillor and spouse additions)
+##########################################################################
+
+static_diplomacy_mod = {
+	monthly_character_prestige = 0.01
+}
+
+static_intrigue_mod = {
+}
+
+static_stewardship_mod = {
+	global_tax_modifier = 0.02
+}
+
+static_martial_mod = {
+	land_organisation = 0.01
+	global_defensive = 0.01
+	land_morale = 0.01
+	naval_morale = 0.01
+}
+
+static_learning_mod = {
+	monthly_character_piety = 0.02
+}
+
+##########################################################################
+# Realm Static Modifiers
+##########################################################################
+
+base_values = {
+	land_organisation = 0.2			#20% morale recovery.
+	naval_organisation = 0.2		#20% morale recovery.
+	city_vassal_max_levy = -1.0
+	castle_vassal_max_levy = -1.0
+	temple_vassal_max_levy = -1.0
+}
+
+war = {
+}
+
+peace = {
+}
+
+pretender_modifier = {
+}
+
+##########################################################################
+# Settlement Base Modifiers
+##########################################################################
+
+castle = {
+	tax_income = 4
+	fort_level = 3
+	build_cost_modifier = 500
+	build_time_modifier = 1825
+	light_infantry = 60
+	heavy_infantry = 150
+	light_cavalry = 15
+	galleys = 3
+	levy_reinforce_rate = 1.0
+	land_organisation = 0.2
+}
+
+city = {
+	tax_income = 12
+	fort_level = 0
+	light_infantry = 75
+	archers = 40
+	galleys = 5
+	build_cost_modifier = 500
+	build_time_modifier = 1825
+	land_organisation = 0.2
+}
+
+temple = {
+	tax_income = 8
+	heavy_infantry = 60
+	light_infantry = 75
+	archers = 40
+	galleys = 2
+	build_cost_modifier = 500
+	build_time_modifier = 1825
+	levy_reinforce_rate = 0.5
+	land_organisation = 0.2
+	tech_growth_modifier = 0.1
+}
+
+trade_post = {
+	tax_income = 2
+	fort_level = 0
+	levy_size = 0.5
+	build_cost_modifier = 0 # 25
+	build_time_modifier = 1 # 182
+	land_organisation = 0.2
+}
+
+##########################################################################
+# Culture Static Modifiers
+##########################################################################
+
+default_culture_modifier = {
+}
+
+##########################################################################
+# Landed title modifiers
+##########################################################################
+
+d_knights_templar_modifier = {
+	levy_size = 1
+	archers = 75
+	light_cavalry = 75
+	light_infantry = 150
+	heavy_infantry = 150
+	knights = 50
+}
+
+d_knights_hospitaler_modifier = {
+	levy_size = 1
+	archers = 75
+	light_cavalry = 75
+	light_infantry = 150
+	heavy_infantry = 150
+	knights = 50
+}
+
+d_order_of_santiago_modifier = {
+	levy_size = 1
+	archers = 75
+	light_cavalry = 75
+	light_infantry = 150
+	heavy_infantry = 150
+	knights = 50
+}
+
+d_teutonic_order_modifier = {
+	levy_size = 1
+	archers = 75
+	light_cavalry = 75
+	light_infantry = 150
+	heavy_infantry = 150
+	knights = 50
+}
+
+d_livonian_order_modifier = {
+	levy_size = 1
+	archers = 75
+	light_cavalry = 75
+	light_infantry = 150
+	heavy_infantry = 150
+	knights = 50
+}
+
+d_ghazi_shiite_modifier = {
+	levy_size = 1
+	archers = 100
+	light_cavalry = 100
+	light_infantry = 150
+	heavy_infantry = 125
+	horse_archers = 25
+}
+
+d_hashshashin_modifier = {
+	levy_size = 1
+	archers = 150
+	light_cavalry = 50
+	light_infantry = 150
+	heavy_infantry = 150
+}
+
+d_ulfheonar_modifier = {
+	levy_size = 1
+	archers = 75
+	light_cavalry = 50
+	light_infantry = 125
+	heavy_infantry = 250
+}
+
+d_ghazi_sunni_modifier = {
+	levy_size = 1
+	archers = 100
+	light_cavalry = 100
+	light_infantry = 150
+	heavy_infantry = 125
+	horse_archers = 25
+}
+
+d_devotees_of_the_true_prophet_modifier = {
+	levy_size = 1
+	archers = 100
+	light_cavalry = 100
+	light_infantry = 150
+	heavy_infantry = 125
+	horse_archers = 25
+}
+
+d_guardians_of_the_sacred_flame_modifier = {
+	levy_size = 1
+	archers = 100
+	light_cavalry = 50
+	light_infantry = 200
+	heavy_infantry = 150
+}
+
+d_disciples_of_the_old_gods_modifier = {
+	levy_size = 1
+	archers = 100
+	light_cavalry = 50
+	light_infantry = 200
+	heavy_infantry = 150
+}
+
+d_great_host_modifier = {
+	levy_size = 1
+	archers = 100
+	light_cavalry = 100
+	light_infantry = 150
+	heavy_infantry = 100
+	horse_archers = 50
+}
+
+#Persia
+d_turkoman_legion_modifier = {
+	levy_size = 1
+	archers = 600
+	light_infantry = 800
+	light_cavalry = 600
+	heavy_infantry = 500
+	pikemen = 400
+	horse_archers = 1000
+	knights = 100
+}
+
+d_turkic_company_modifier = {
+	levy_size = 1
+	light_infantry = 250
+	light_cavalry = 125
+	horse_archers = 125
+}
+
+d_turkic_band_modifier = {
+	levy_size = 1
+	light_infantry = 500
+	light_cavalry = 250
+	horse_archers = 250
+}
+
+d_muslim_turkic_company_modifier = {
+	levy_size = 1
+	horse_archers = 500
+	light_cavalry = 500
+}
+
+#France
+d_breton_band_modifier = {
+	levy_size = 1
+	archers = 100
+	pikemen = 100
+	heavy_infantry = 200
+	light_cavalry = 100
+}
+
+d_breton_company_modifier = {
+	levy_size = 1
+	archers = 200
+	pikemen = 200
+	heavy_infantry = 400
+	light_cavalry = 200
+}
+
+#Russia
+d_rus_band_modifier = {
+	levy_size = 1
+	archers = 100
+	light_infantry = 200
+	heavy_infantry = 100
+	light_cavalry = 100
+}
+
+d_rus_company_modifier = {
+	levy_size = 1
+	archers = 350
+	light_infantry = 350
+	heavy_infantry = 650
+	pikemen = 250
+	light_cavalry = 350
+	knights = 50
+}
+
+d_rus_legion_modifier = {
+	levy_size = 1
+	archers = 700
+	light_infantry = 700
+	heavy_infantry = 1300
+	pikemen = 500
+	light_cavalry = 700
+	knights = 100
+}
+
+d_honorable_exiles_modifier = {
+	levy_size = 1
+	archers = 50
+	light_infantry = 25
+	heavy_infantry = 75
+	pikemen = 50
+	light_cavalry = 25	
+	knights = 25
+}
+
+#Crimea
+d_cuman_band_modifier = {
+	levy_size = 1
+	horse_archers = 350
+	light_cavalry = 150
+}
+
+d_pecheneg_band_modifier = {
+	levy_size = 1
+	light_infantry = 350
+	light_cavalry = 75
+	horse_archers = 75
+}
+
+d_pecheneg_company_modifier = {
+	levy_size = 1
+	archers = 100
+	light_infantry = 500
+	light_cavalry = 200
+	horse_archers = 200
+}
+
+d_cuman_company_modifier = {
+	levy_size = 1
+	horse_archers = 700
+	light_cavalry = 300
+}
+
+d_muslim_cuman_company_modifier = {
+	levy_size = 1
+	light_infantry = 100
+	horse_archers = 600
+	light_cavalry = 300
+}
+
+#Byzantine
+d_guilded_daggers_modifier = {
+	levy_size = 1
+	archers = 100
+	light_infantry = 50
+	heavy_infantry = 50
+	light_cavalry = 50
+}
+
+d_lost_company_modifier = {
+	levy_size = 1
+	archers = 50
+	light_infantry = 50
+	heavy_infantry = 100
+	light_cavalry = 50
+}
+
+d_ghilman_modifier = {
+	levy_size = 1
+	horse_archers = 200
+	light_cavalry = 400
+	archers = 100
+	heavy_infantry = 200
+	knights = 100
+}
+
+d_varangian_guard_modifier = {
+	levy_size = 1
+	archers = 125
+	heavy_infantry = 500
+	light_infantry = 250
+	pikemen = 75
+	light_cavalry = 50
+}
+
+d_legion_of_the_black_sea_modifier = {
+	levy_size = 1
+	archers = 700
+	heavy_infantry = 1000
+	light_infantry = 850
+	pikemen = 600
+	light_cavalry = 700
+	knights = 150
+}
+
+d_black_sea_band_modifier = {
+	levy_size = 1
+	archers = 100
+	heavy_infantry = 50
+	light_infantry = 50
+	pikemen = 25
+	light_cavalry = 25
+}
+
+#Germany
+d_swiss_band_modifier = {
+	levy_size = 1
+	archers = 100
+	pikemen = 200
+	heavy_infantry = 200
+}
+
+d_swiss_company_modifier = {
+	levy_size = 1
+	archers = 200
+	pikemen = 400
+	heavy_infantry = 400
+}
+
+d_great_company_modifier = {
+	levy_size = 1
+	archers = 350
+	light_infantry = 350
+	heavy_infantry = 500
+	pikemen = 300
+	light_cavalry = 300
+	knights = 200
+}
+
+d_dutch_legion_modifier = {
+	levy_size = 1
+	archers = 700
+	light_infantry = 700
+	heavy_infantry = 1050
+	pikemen = 700
+	light_cavalry = 600
+	knights = 250
+}
+
+d_german_band_modifier = {
+	levy_size = 1
+	archers = 50
+	light_infantry = 50
+	heavy_infantry = 100
+	light_cavalry = 50
+}
+
+#Britain
+d_humble_hedge_knights_modifier = {
+	levy_size = 1
+	archers = 80
+	light_infantry = 75
+	heavy_infantry = 75
+	knights = 20
+}
+
+d_legendary_longbowmen_modifier = {
+	levy_size = 1
+	archers = 250
+	light_infantry = 150
+	pikemen = 100
+}
+
+d_sons_of_ireland_modifier = {
+	levy_size = 1
+	archers = 100
+	light_infantry = 100
+	light_cavalry = 50
+}
+
+d_saxon_band_modifier = {
+	levy_size = 1
+	archers = 300
+	pikemen = 150
+	light_infantry = 150
+	heavy_infantry = 400
+}
+
+d_white_company_modifier = {
+	levy_size = 1
+	archers = 500
+	light_infantry = 450
+	heavy_infantry = 450
+	pikemen = 300
+	light_cavalry = 200
+	knights = 100
+}
+
+#Balkans
+d_bulgarian_band_modifier = {
+	levy_size = 1
+	archers = 100
+	light_infantry = 200
+	heavy_infantry = 100
+	light_cavalry = 100
+}
+
+d_bulgarian_company_modifier = {
+	levy_size = 1
+	archers = 200
+	light_infantry = 250
+	heavy_infantry = 250
+	light_cavalry = 150
+	pikemen = 150
+}
+
+d_roaming_regiment_modifier = {
+	levy_size = 1
+	archers = 150
+	light_infantry = 100
+	heavy_infantry = 200
+	light_cavalry = 50
+}
+
+#Italy
+d_ventura_company_modifier = {
+	levy_size = 1
+	archers = 100
+	light_infantry = 100
+	heavy_infantry = 250
+	light_cavalry = 50
+}
+
+d_genovese_crossbow_contingent_modifier = {
+	levy_size = 1
+	archers = 250
+	light_infantry = 100
+	heavy_infantry = 100
+	light_cavalry = 50
+}
+
+d_company_of_st_george_modifier = {
+	levy_size = 1
+	archers = 350
+	light_infantry = 350
+	heavy_infantry = 500
+	light_cavalry = 300
+	pikemen = 400
+	knights = 100
+}
+
+d_star_company_modifier = {
+	levy_size = 1
+	archers = 150
+	light_infantry = 200
+	heavy_infantry = 400
+	light_cavalry = 100
+	pikemen = 100
+	knights = 50
+}
+
+d_little_hat_company_modifier = {
+	levy_size = 1
+	archers = 300
+	light_infantry = 300
+	heavy_infantry = 300
+	light_cavalry = 50
+	knights = 50
+}
+
+d_rose_company_modifier = {
+	levy_size = 1
+	archers = 200
+	light_infantry = 150
+	heavy_infantry = 300
+	pikemen = 300
+	knights = 50
+}
+
+d_lombard_band_modifier = {
+	levy_size = 1
+	archers = 350
+	pikemen = 200
+	heavy_infantry = 400
+	light_cavalry = 50
+}
+
+#Baltic
+d_ruriks_raiders_modifier = {
+	levy_size = 1
+	archers = 20
+	light_infantry = 50
+	heavy_infantry = 160
+	light_cavalry = 20
+	galleys = 2.5
+}
+
+d_foresters_modifier = {
+	levy_size = 1
+	archers = 50
+	light_infantry = 100
+	heavy_infantry = 50
+	light_cavalry = 50
+}
+
+d_lithuanian_band_modifier = {
+	levy_size = 1
+	archers = 50
+	light_infantry = 100
+	heavy_infantry = 100
+}
+
+d_brotherhood_of_the_shield_modifier = {
+	levy_size = 1
+	archers = 100
+	light_infantry = 200
+	heavy_infantry = 300
+	pikemen = 400
+}
+
+d_victual_brothers_modifier = {
+	levy_size = 1
+	archers = 250
+	heavy_infantry = 350
+	light_infantry = 350
+	knights = 50
+	galleys = 10
+}
+
+# Southern Med.
+d_legion_of_the_nile_modifier = {
+	levy_size = 1
+	horse_archers = 700
+	light_infantry = 800
+	light_cavalry = 800
+	archers = 600
+	heavy_infantry = 900
+	knights = 200
+}
+
+d_mamluks_modifier = {
+	levy_size = 1
+	horse_archers = 125
+	light_infantry = 200
+	light_cavalry = 200
+	archers = 200
+	heavy_infantry = 200
+	knights = 75
+}
+
+d_soldiers_of_the_crescent_moon_modifier = {
+	levy_size = 1
+	archers = 150
+	light_infantry = 50
+	heavy_infantry = 250
+	light_cavalry = 50
+}
+
+d_berber_company_modifier = {
+	levy_size = 1
+	archers = 200
+	light_cavalry = 200
+	light_infantry = 200
+	heavy_infantry = 200
+	pikemen = 150
+	horse_archers = 50
+}
+
+d_bedouin_company_modifier = {
+	levy_size = 1
+	archers = 200
+	light_cavalry = 300
+	light_infantry = 250
+	heavy_infantry = 150
+	horse_archers = 100
+}
+
+d_berber_company_modifier = {
+	levy_size = 1
+	archers = 200
+	light_cavalry = 200
+	light_infantry = 200
+	heavy_infantry = 200
+	pikemen = 150
+	horse_archers = 50
+}
+
+d_nomadic_raiders_modifier = {
+	levy_size = 1
+	archers = 50
+	light_infantry = 50
+	light_cavalry = 100
+	horse_archers = 50	
+}
+
+d_egyptian_band_modifier = {
+	levy_size = 1
+	light_infantry = 100
+	light_cavalry = 50
+	archers = 50
+	heavy_infantry = 50
+}
+
+d_arabic_band_modifier = {
+	levy_size = 1
+	light_infantry = 50
+	light_cavalry = 100
+	archers = 50
+	heavy_infantry = 50
+}
+
+#Iberia
+d_iberian_legion_modifier = {
+	levy_size = 1
+	archers = 800
+	light_infantry = 800
+	heavy_infantry = 1000
+	pikemen = 600
+	light_cavalry = 600
+	knights = 200
+}
+
+d_catalan_company_modifier = {
+	levy_size = 1
+	archers = 400
+	light_infantry = 400
+	heavy_infantry = 500
+	pikemen = 250
+	light_cavalry = 350
+	knights = 100
+}
+
+d_navarrese_company_modifier = {
+	levy_size = 1
+	archers = 200
+	light_infantry = 200
+	heavy_infantry = 500
+	light_cavalry = 100
+}
+
+d_thousand_spears_modifier = {
+	levy_size = 1
+	archers = 90
+	light_infantry = 75
+	heavy_infantry = 90
+	pikemen = 175
+	light_cavalry = 50	
+	knights = 20
+}
+
+d_iberian_horsemen_modifier = {
+	levy_size = 1
+	light_infantry = 135
+	light_cavalry = 75
+	horse_archers = 30
+	knights = 10
+}
+
+d_greenshield_sellswords_modifier = {
+	levy_size = 1
+	archers = 100
+	light_infantry = 100
+	heavy_infantry = 130
+	pikemen = 100
+	light_cavalry = 50	
+	knights = 20
+}
+
+d_catalan_band_modifier = {
+	levy_size = 1
+	archers = 150
+	pikemen = 200
+	light_infantry = 200
+	heavy_infantry = 300
+	light_cavalry = 150
+}
+
+#Horn of Africa
+d_legion_of_the_burning_sun_modifier = {
+	levy_size = 1
+	archers = 350
+	light_infantry = 350
+	heavy_infantry = 500
+	pikemen = 300
+	light_cavalry = 250
+	horse_archers = 200
+	knights = 50
+}
+
+d_ethiopian_company_modifier = {
+	levy_size = 1
+	archers = 150
+	light_infantry = 150
+	heavy_infantry = 400
+	pikemen = 100
+	light_cavalry = 200
+}
+
+d_nubian_company_modifier = {
+	levy_size = 1
+	archers = 150
+	light_infantry = 150
+	heavy_infantry = 400
+	pikemen = 100
+	light_cavalry = 200
+}
+
+d_ethiopian_band_modifier = {
+	levy_size = 1
+	archers = 100
+	light_infantry = 100
+	heavy_infantry = 200
+	light_cavalry = 100
+}
+
+d_nubian_band_modifier = {
+	levy_size = 1
+	archers = 100
+	light_infantry = 100
+	heavy_infantry = 200
+	light_cavalry = 100
+}
+
+d_band_of_the_broken_arrow_modifier = {
+	levy_size = 1
+	light_infantry = 100
+	light_cavalry = 75
+	horse_archers = 75
+}
+
+d_band_of_the_burning_sun_modifier = {
+	levy_size = 1
+	archers = 50
+	light_infantry = 75
+	heavy_infantry = 75
+	light_cavalry = 25
+	horse_archers = 25
+}
+
+#Transport Fleets
+d_venetian_transport_fleet_modifier = {
+	levy_size = 1
+	galleys = 100
+}
+
+d_genovese_transport_fleet_modifier = {
+	levy_size = 1
+	galleys = 50
+}
+
+d_baltic_transport_fleet_modifier = {
+	levy_size = 1
+	galleys = 50
+}
+
+d_venetian_transport_convoy_modifier = {
+	levy_size = 1
+	galleys = 25
+}
+
+d_genovese_transport_convoy_modifier = {
+	levy_size = 1
+	galleys = 25
+}
+
+d_baltic_transport_convoy_modifier = {
+	levy_size = 1
+	galleys = 25
+}
+
+d_black_sea_merchant_convoy_modifier = {
+	levy_size = 1
+	galleys = 25
+}
+
+d_eastern_merchant_convoy_modifier = {
+	levy_size = 1
+	galleys = 25
+}

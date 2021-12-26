@@ -1,0 +1,25 @@
+# 155 - Asturias de Oviedo
+
+# County Title
+title = c_asturias_de_oviedo
+
+# Settlements
+max_settlements = 4
+b_oviedo = castle
+b_gijon = city
+b_cangasdeonis = temple
+#b_tineo = castle
+#b_cangasdelnarcea = city
+#b_villaviciosa = city
+#b_luarca = castle
+#b_norena = castle
+
+# Misc
+culture = castillan
+religion = catholic
+
+# History
+1108.1.1 = { b_norena = castle } 
+1108.1.1 = { capital = b_norena }
+1108.1.1 = { b_oviedo = temple }
+1108.1.1 = { remove_settlement = b_cangasdeonis }

@@ -1,0 +1,371 @@
+decisions = {
+	request_holy_war_sanction = {
+		potential = {
+			rightful_religious_head_scope = {
+				is_alive = yes
+			}
+			is_ruler = yes
+			primary_title = { higher_tier_than = BARON }
+			age = 16
+		}
+		allow = {
+			war = no
+			religion_authority = 0.2	
+			piety = 0
+			prestige = 0
+			NOT = { has_character_modifier = sanction_timer }
+		}
+		effect = {
+			prestige = -75
+			#75+ relations
+			if = {
+				limit = {
+					rightful_religious_head_scope = {
+						opinion = {
+							who = ROOT
+							value = 75
+						}
+					}	
+				}
+				#< 500 piety
+				if = {
+					limit = {
+						NOT = { piety = 500 }
+					}
+					random_list = {
+						50 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						50 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#500-1000 piety
+				if = {
+					limit = {
+						piety = 500
+						NOT = { piety = 1000 }
+					}
+					random_list = {
+						60 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						40 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#1000-1500 piety
+				if = {
+					limit = {
+						piety = 1000
+						NOT = { piety = 1500 }
+					}
+					random_list = {
+						70 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						30 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#1500-2000 piety
+				if = {
+					limit = {
+						piety = 1500
+						NOT = { piety = 2000 }
+					}
+					random_list = {
+						80 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						20 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#2000+ piety
+				if = {
+					limit = {
+						piety = 2000
+					}
+					random_list = {
+						90 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						10 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}				
+			}
+			#50-75 relations
+			if = {
+				limit = {
+					rightful_religious_head_scope = {
+						opinion = {
+							who = ROOT
+							value = 50
+						}
+						NOT = {
+							opinion = {
+								who = ROOT
+								value = 75
+							}						
+						}
+					}	
+				}
+				#< 500 piety
+				if = {
+					limit = {
+						NOT = { piety = 500 }
+					}
+					random_list = {
+						40 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						60 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#500-1000 piety
+				if = {
+					limit = {
+						piety = 500
+						NOT = { piety = 1000 }
+					}
+					random_list = {
+						50 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						50 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#1000-1500 piety
+				if = {
+					limit = {
+						piety = 1000
+						NOT = { piety = 1500 }
+					}
+					random_list = {
+						60 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						40 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#1500-2000 piety
+				if = {
+					limit = {
+						piety = 1500
+						NOT = { piety = 2000 }
+					}
+					random_list = {
+						70 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						30 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#2000+ piety
+				if = {
+					limit = {
+						piety = 2000
+					}
+					random_list = {
+						80 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						20 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}				
+			}
+			#25-50 relations
+			if = {
+				limit = {
+					rightful_religious_head_scope = {
+						opinion = {
+							who = ROOT
+							value = 25
+						}
+						NOT = {
+							opinion = {
+								who = ROOT
+								value = 50
+							}						
+						}
+					}	
+				}
+				#< 500 piety
+				if = {
+					limit = {
+						NOT = { piety = 500 }
+					}
+					random_list = {
+						30 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						70 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#500-1000 piety
+				if = {
+					limit = {
+						piety = 500
+						NOT = { piety = 1000 }
+					}
+					random_list = {
+						40 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						60 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#1000-1500 piety
+				if = {
+					limit = {
+						piety = 1000
+						NOT = { piety = 1500 }
+					}
+					random_list = {
+						50 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						50 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#1500-2000 piety
+				if = {
+					limit = {
+						piety = 1500
+						NOT = { piety = 2000 }
+					}
+					random_list = {
+						60 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						40 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#2000+ piety
+				if = {
+					limit = {
+						piety = 2000
+					}
+					random_list = {
+						70 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						30 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}				
+			}
+			#0-25 relations
+			if = {
+				limit = {
+					rightful_religious_head_scope = {
+						opinion = {
+							who = ROOT
+							value = 0
+						}
+						NOT = {
+							opinion = {
+								who = ROOT
+								value = 25
+							}						
+						}
+					}	
+				}
+				#< 500 piety
+				if = {
+					limit = {
+						NOT = { piety = 500 }
+					}
+					random_list = {
+						20 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						80 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#500-1000 piety
+				if = {
+					limit = {
+						piety = 500
+						NOT = { piety = 1000 }
+					}
+					random_list = {
+						30 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						70 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#1000-1500 piety
+				if = {
+					limit = {
+						piety = 1000
+						NOT = { piety = 1500 }
+					}
+					random_list = {
+						40 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						60 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#1500-2000 piety
+				if = {
+					limit = {
+						piety = 1500
+						NOT = { piety = 2000 }
+					}
+					random_list = {
+						50 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						50 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#2000+ piety
+				if = {
+					limit = {
+						piety = 2000
+					}
+					random_list = {
+						60 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						40 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}				
+			}
+			#< 0 relations
+			if = {
+				limit = {
+					rightful_religious_head_scope = {
+						NOT = {
+							opinion = {
+								who = ROOT
+								value = 0
+							}						
+						}
+					}	
+				}
+				#< 500 piety
+				if = {
+					limit = {
+						NOT = { piety = 500 }
+					}
+					random_list = {
+						10 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						90 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#500-1000 piety
+				if = {
+					limit = {
+						piety = 500
+						NOT = { piety = 1000 }
+					}
+					random_list = {
+						20 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						80 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#1000-1500 piety
+				if = {
+					limit = {
+						piety = 1000
+						NOT = { piety = 1500 }
+					}
+					random_list = {
+						30 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						70 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#1500-2000 piety
+				if = {
+					limit = {
+						piety = 1500
+						NOT = { piety = 2000 }
+					}
+					random_list = {
+						40 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						60 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}
+				#2000+ piety
+				if = {
+					limit = {
+						piety = 2000
+					}
+					random_list = {
+						50 = { character_event = { id = 190053 days = 5 random = 12 tooltip = "war_sanction_granted" } }
+						50 = { character_event = { id = 190054 days = 5 random = 12 tooltip = "war_sanction_not_granted" } }
+					}
+				}				
+			}			
+			add_character_modifier = {
+				name = sanction_timer
+				duration = 1825
+				hidden = yes
+			}			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+	
+}

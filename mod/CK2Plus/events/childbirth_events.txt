@@ -1,0 +1,125 @@
+#A child is born
+character_event = {
+	id = 190000
+	picture = "GFX_evt_pregnancy"
+	
+	is_triggered_only = yes
+	hide_from = yes
+	
+	trigger = {
+		NOT = { trait = twin }
+		mother = { is_alive = yes }
+	}
+		
+	desc = "EVTDESC190000"
+
+	option = {
+		name = "EVTOPTA190000"
+		#check if mother dies
+		if = {
+			limit = {
+				mother = {
+					health = 6
+				}
+			}
+			random_list = {
+				1 = { set_character_flag = mother_died set_character_flag = child_died } #both die
+				1 = { set_character_flag = mother_died } #mother dies
+				1 = { set_character_flag = child_died } #child dies
+				97 = { } #nobody dies
+			}
+		}
+		if = {
+			limit = {
+				mother = {
+					NOT = { health = 6 }
+					health = 4
+				}
+			}
+			random_list = {
+				2 = { set_character_flag = mother_died set_character_flag = child_died } #both die
+				2 = { set_character_flag = mother_died } #mother dies
+				2 = { set_character_flag = child_died } #child dies
+				96 = { } #nobody dies
+			}
+		}
+		if = {
+			limit = {
+				mother = {
+					NOT = { health = 4 }
+					health = 2
+				}
+			}
+			random_list = {
+				5 = { set_character_flag = mother_died set_character_flag = child_died } #both die
+				5 = { set_character_flag = mother_died } #mother dies
+				5 = { set_character_flag = child_died } #child dies
+				85 = { } #nobody dies
+			}
+		}
+		if = {
+			limit = {
+				mother = {
+					NOT = { health = 2 }
+				}
+			}
+			random_list = {
+				10 = { set_character_flag = mother_died set_character_flag = child_died } #both die
+				10 = { set_character_flag = mother_died } #mother dies
+				10 = { set_character_flag = child_died } #child dies
+				70 = { } #nobody dies
+			}
+		}
+		#handle deaths
+		if = {
+			limit = {
+				has_character_flag = mother_died
+			}
+			mother = { character_event = { id = 190001 } }
+		}
+		if = {
+			limit = {
+				has_character_flag = child_died
+			}
+			character_event = { id = 190002 }
+		}
+		clr_character_flag = mother_died
+		clr_character_flag = child_died
+	}
+}
+
+#Mother dies in childbirth
+character_event = {
+	id = 190001
+	picture = "GFX_evt_illness"
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC190001"
+	
+	immediate = {
+		death = { death_reason = death_dungeon } #actually childbirth
+	}
+
+	option = {
+		name = "EVTOPTA190001"
+	}
+}
+
+#Child is stillborn
+character_event = {
+	id = 190002
+	picture = "GFX_evt_illness"
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC190001"
+	
+	immediate = {
+		death = { death_reason = death_dungeon } #actually childbirth
+	}
+
+	option = {
+		name = "EVTOPTA190001"
+	}
+}

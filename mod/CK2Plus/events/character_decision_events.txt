@@ -1,0 +1,571 @@
+character_event = {
+	id = 220000
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC220000"
+	
+	immediate = {
+		remove_title = title_grant_independence	
+	}
+	
+	option = {
+		name = "EVTOPTA220000"	
+		tooltip = {
+			opinion = {
+				modifier = opinion_independent
+				who = FROM
+				years = 100
+			}		
+		}
+	}
+}
+
+character_event = {
+	id = 220001
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC220001"
+	
+	immediate = {
+		remove_title = title_revoke_minor_title		
+	}
+	
+	option = {
+		name = "EVTOPTA220001"
+		tooltip = {
+			opinion = {
+				modifier = opinion_fired_from_office
+				who = FROM
+				years = 10
+			}		
+		}
+	}
+}
+
+character_event = {
+	id = 220002
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC220002"
+	
+	immediate = {
+		remove_title = title_revoke_court_jester	
+	}
+	
+	option = {
+		name = "EVTOPTA220002"	
+	}
+}
+
+character_event = {
+	id = 220003
+	picture = GFX_evt_emissary
+		
+	desc = "EVTDESC220003"
+	
+	trigger = {
+		has_minor_title = title_concubine
+		OR = {
+			age = 45
+			NOT = { fertility = 0.1 }
+			is_ruler = yes
+			is_married = yes
+			is_betrothed = yes
+			liege = { is_female = yes }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA220003"	
+		remove_title = title_concubine
+	}
+}
+
+character_event = {
+	id = 220004
+	picture = "GFX_evt_pregnancy"
+		
+	desc = "EVTDESC220004"
+	
+	trigger = {
+		has_minor_title = title_concubine
+		NOT = { age = 45 }
+		is_ruler = no
+		is_married = no
+		is_betrothed = no
+		is_pregnant = no
+		liege = { is_female = no }
+		fertility = 0.1
+		liege = { fertility = 0.1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+		modifier = {
+			factor = 0.5
+			NOT = { num_of_children = 1 }
+		}
+		modifier = {
+			factor = 2.0
+			num_of_children = 2
+		}
+		modifier = {
+			factor = 2.0
+			num_of_children = 3
+		}	
+		modifier = {
+			factor = 2.0
+			num_of_children = 4
+		}
+		modifier = {
+			factor = 2.0
+			num_of_children = 5
+		}		
+		modifier = {
+			factor = 1.5
+			NOT = { fertility = 0.2 }
+		}
+		modifier = {
+			factor = 1.5
+			liege = { NOT = { fertility = 0.2 } }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { fertility = 0.3 }
+		}
+		modifier = {
+			factor = 1.5
+			liege = { NOT = { fertility = 0.3 } }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { fertility = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			liege = { NOT = { fertility = 0.4 } }
+		}
+		modifier = {
+			factor = 0.75
+			fertility = 0.6
+		}
+		modifier = {
+			factor = 0.75
+			liege = { fertility = 0.6 }
+		}
+		modifier = {
+			factor = 0.75
+			fertility = 0.7
+		}
+		modifier = {
+			factor = 0.75
+			liege = { fertility = 0.7 }
+		}
+		modifier = {
+			factor = 0.75
+			fertility = 0.8
+		}
+		modifier = {
+			factor = 0.75
+			liege = { fertility = 0.8 }
+		}
+		modifier = {
+			factor = 0.75
+			fertility = 0.9
+		}
+		modifier = {
+			factor = 0.75
+			liege = { fertility = 0.9 }
+		}		
+	}
+	
+	option = {
+		name = "EVTOPTA220004"	
+		LIEGE = {
+			impregnate = ROOT
+		}
+	}
+}
+
+character_event = {
+	id = 220005
+	picture = "GFX_evt_pregnancy"
+	
+	is_triggered_only = yes
+	
+	desc = "EVTDESC220005"
+
+	option = {
+		name = "OK"
+		prestige = 5
+	}
+}
+
+character_event = {
+	id = 220006
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC220002"
+	
+	immediate = {
+		remove_title = title_legitimize_bastard	
+	}
+	
+	option = {
+		name = "EVTOPTA220002"	
+	}
+}
+
+# Castellian dismissed from office
+character_event = {
+	id = 220007
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC220007"
+	
+	immediate = {
+		hidden_tooltip = {
+			remove_opinion = {
+				who = LIEGE
+				modifier = opinion_granted_barony
+			}
+			remove_opinion = {
+				who = LIEGE
+				modifier = opinion_granted_county
+			}
+			remove_opinion = {
+				who = LIEGE
+				modifier = opinion_granted_duchy
+			}
+			remove_opinion = {
+				who = LIEGE
+				modifier = opinion_granted_kingdom
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA220002"
+		ai_chance = {
+			factor = 100
+		}		
+		LIEGE = {
+			ROOT = {
+				any_demesne_title = {
+					gain_title = PREVPREV
+				}
+				banish = PREV
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB220002"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0,5
+				opinion = {
+					who = LIEGE
+					value = 100
+				}
+			}			
+			modifier = {
+				factor = 0,5
+				opinion = {
+					who = LIEGE
+					value = 75
+				}
+			}			
+			modifier = {
+				factor = 0,5
+				opinion = {
+					who = LIEGE
+					value = 50
+				}
+			}			
+			modifier = {
+				factor = 0.5
+				opinion = {
+					who = LIEGE
+					value = 25
+				}
+			}				
+			modifier = {
+				factor = 0.5
+				opinion = {
+					who = LIEGE
+					value = 0
+				}
+			}			
+			modifier = {
+				factor = 2
+				NOT = {
+					opinion = {
+						who = LIEGE
+						value = -25
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					opinion = {
+						who = LIEGE
+						value = -50
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					opinion = {
+						who = LIEGE
+						value = -75
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 2
+				trait = envious
+			}
+			modifier = {
+				factor = 0.1
+				trait = content
+			}
+			modifier = {
+				factor = 0.1
+				trait = humble
+			}
+			modifier = {
+				factor = 2
+				num_of_king_titles = 1
+			}
+			modifier = {
+				factor = 2
+				num_of_king_titles = 2
+			}
+			modifier = {
+				factor = 2
+				num_of_king_titles = 3
+			}
+			modifier = {
+				factor = 2
+				num_of_king_titles = 4
+			}			
+			modifier = {
+				factor = 1.5
+				num_of_duke_titles = 2
+			}
+			modifier = {
+				factor = 1.5
+				num_of_duke_titles = 3
+			}
+			modifier = {
+				factor = 1.5
+				num_of_duke_titles = 4
+			}
+			modifier = {
+				factor = 1.5
+				num_of_duke_titles = 5
+			}
+			modifier = {
+				factor = 1.5
+				num_of_vassals = 5
+			}
+			modifier = {
+				factor = 1.5
+				num_of_vassals = 10
+			}
+			modifier = {
+				factor = 1.5
+				num_of_vassals = 15
+			}
+			modifier = {
+				factor = 1.5
+				num_of_vassals = 20
+			}
+			modifier = {
+				factor = 1.5
+				num_of_vassals = 25
+			}			
+		}	
+		LIEGE = {
+			ROOT = {
+				any_demesne_title = {
+					add_claim = PREVPREV
+				}			
+			}
+			reverse_war = {
+				target = ROOT
+				casus_belli = overthrow_ruler		
+			}
+		}
+	}	
+}
+
+# Castellian dies
+character_event = {
+	id = 220008
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_minor_title = title_castellian
+	}
+		
+	desc = "EVTDESC220008"
+	
+	immediate = {
+		LIEGE = {
+			ROOT = {
+				any_demesne_title = {
+					gain_title = PREVPREV
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA220008"	
+	}
+}
+
+# Castellian inherits dead character's titles
+character_event = {
+	id = 220009
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC220009"
+	
+	trigger = {
+		is_ruler = yes
+		current_heir = { has_minor_title = title_castellian }
+	}
+	
+	immediate = {
+		current_heir = {
+			hidden_tooltip = {
+				remove_opinion = {
+					who = LIEGE
+					modifier = opinion_granted_barony
+				}
+				remove_opinion = {
+					who = LIEGE
+					modifier = opinion_granted_county
+				}
+				remove_opinion = {
+					who = LIEGE
+					modifier = opinion_granted_duchy
+				}
+				remove_opinion = {
+					who = LIEGE
+					modifier = opinion_granted_kingdom
+				}
+			}		
+			LIEGE = {
+				ROOT = {
+					current_heir = {
+						any_demesne_title = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+			}
+			remove_title = title_castellian
+		}
+		
+	}
+	
+	option = {
+		name = "EVTOPTA220009"	
+	}
+}
+
+# Remove revoke castellian thing
+character_event = {
+	id = 220010
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC220007"
+
+	immediate = {
+		remove_title = title_revoke_castellian
+	}
+	
+	option = {
+		name = "EVTOPTA220007"	
+	}
+}
+
+# Castellian province modifier
+province_event = {
+	id = 220011
+	
+	trigger = {	
+		NOT = { has_province_modifier = castellian_ruler }
+		owner = {
+			OR = {
+				has_minor_title = title_castellian
+				any_liege = { has_minor_title = title_castellian }
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+		
+	desc = "EVTDESC220011"
+	
+	option = {
+		name = "EVTOPTA220011"	
+		add_province_modifier = {
+			name = "castellian_ruler"
+			duration = -1
+		}
+	}
+}
+
+province_event = {
+	id = 220012
+	
+	trigger = {	
+		has_province_modifier = castellian_ruler
+		owner = {
+			NOT = {
+				has_minor_title = title_castellian
+				any_liege = { has_minor_title = title_castellian }
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+		
+	desc = "EVTDESC220012"
+	
+	option = {
+		name = "EVTOPTA220012"	
+		remove_province_modifier = castellian_ruler
+	}
+}

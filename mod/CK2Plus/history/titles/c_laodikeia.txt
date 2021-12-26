@@ -1,0 +1,101 @@
+1066.1.1={
+liege="d_thracesia"
+}
+1066.1.1={
+holder=20526
+}
+1077.1.1=
+{
+
+	holder = 3046
+}
+1086.1.1=
+{
+	holder = 41701
+}
+#to Byzantiune Empire
+1099.1.1=
+{
+	holder=1742
+}
+1118.8.15=
+{
+	holder=223023
+}
+1143.4.8=
+{
+	holder=215530
+}
+#battle of Myriokephalon
+1176.9.17=
+{
+	liege="e_byzantium"
+	holder = 225000
+}
+# 1192.1.1=
+# {
+	# holder=225002
+# }
+# 1196.1.1=
+# {
+	# holder=225004
+# }
+# 1204.1.1=
+# {
+
+	# holder=34187
+# }
+#more byz instead
+1180.9.24={
+	holder=215531
+}
+1183.9.24={
+	holder=215529
+}
+1185.9.12={
+	holder=215500
+}
+1195.6.1={
+	holder=215503
+}
+1203.7.18={
+	holder=215507
+}
+1204.1.28={
+	holder=125710
+}
+##
+1204.5.16={
+	liege="e_byzantium"
+	holder=215674
+}
+1222.8.2={
+	holder=125741
+}
+1254.11.3={
+	holder=125742
+}
+1258.8.18={
+	holder=125743
+}
+1261.7.25={
+	liege="e_byzantium" 
+	holder=465527
+}
+1282.12.11={
+	holder=465521
+}
+1295.5.1=
+{
+	holder=465501
+}
+1314.1.1=
+{
+	liege=0
+	holder=93530
+}
+1334.1.1=
+{
+	holder=93531
+}
+

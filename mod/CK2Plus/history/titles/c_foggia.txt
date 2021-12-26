@@ -1,0 +1,34 @@
+1057.1.1={
+	liege="d_apulia"
+	holder=85003 #Robert de Hauteville
+}
+1107.1.1={
+	holder=30870 #William de Hauteville
+}
+1137.1.1={
+	holder=30900 #Robert I de Bassonville
+}
+1154.1.1={
+	holder=30900 #Robert II de Bassonville
+}
+1182.9.15={
+	holder=73358
+}
+1200.1.1={
+	holder=73359
+}
+1240.1.1={
+	holder=73360
+}
+1249.1.1={
+	holder=73363
+}
+1266.2.26={
+	holder=455406
+}
+1285.1.7={
+	holder=461710
+}
+1309.5.5={
+	holder=461700
+}

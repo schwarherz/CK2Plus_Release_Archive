@@ -1,0 +1,24 @@
+# c_chelyabi
+
+1066.1.1=
+{
+liege="k_cuman"
+}
+
+1227.1.1=
+{
+liege="d_tyumen"
+holder=34927
+}
+1250.1.1=
+{
+holder=34928
+}
+1285.1.1=
+{
+holder=34929
+}
+1310.1.1=
+{
+holder=34930
+}

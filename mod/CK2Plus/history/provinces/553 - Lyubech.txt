@@ -1,0 +1,24 @@
+# 553 - Lyubech
+
+# County Title
+title = c_lyubech
+
+# Settlements
+max_settlements = 4
+b_lyubech = castle
+b_gomel = city
+b_loyew = castle
+b_rechytsa = temple
+
+#b_brahin = castle
+#b_zlynka = castle
+#b_klimovo = castle
+#b_novozybkov = castle
+
+# Misc
+culture = russian
+religion = orthodox
+
+# History
+1187.1.1 = { b_brahin = castle }
+

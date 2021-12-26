@@ -1,0 +1,25 @@
+# 290 - Uppland
+
+# County Title
+title = c_uppland
+
+# Settlements
+max_settlements = 5
+b_hatuna = castle
+b_sigtuna = city
+b_uppsala = temple
+b_enkoping = city
+#b_stockholm = city
+#b_alsno = castle
+
+#b_osteras = city #Another name for uppsala; the city
+#b_vaksala
+
+# Misc
+culture = swedish
+religion = norse_pagan
+
+# History
+1090.1.1 = { religion = catholic }
+#1187.1.1 = { b_enkoping = city }
+1250.1.1 = { b_stockholm = city }

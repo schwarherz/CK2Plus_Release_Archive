@@ -1,0 +1,2686 @@
+###########################################
+#
+# Plot Events
+#
+# ID 7000-8299 is reserved
+#
+###########################################
+# Blackmail									7250-7270
+# Drunken Plot Member						7040-7045
+#
+# Ultimatum event series					8000-8040
+# Plot to kill character 					8220-8227
+#
+# Assassination notification events			8250-
+
+
+###########################################
+# Blackmail
+###########################################
+# 7250-7270
+
+# The plot have been leaked
+character_event = {
+	id = 7250
+	desc = "EVTDESC7250"
+	picture = GFX_evt_spymaster
+
+	only_rulers = yes
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		OR = {
+			has_objective = plot_gain_title
+			has_objective = plot_succ_seniority
+			has_objective = plot_succ_primogeniture
+			has_objective = plot_succ_gavelkind
+			has_objective = plot_succ_feudal_elective
+			has_objective = plot_lower_crown_authority
+			has_objective = plot_kill_character
+			has_objective = plot_kill_spouse
+		}
+		is_plot_active = no
+		num_of_plot_backers = 1
+		any_courtier = {
+			has_job_title = job_spymaster
+			NOT = { is_plot_target_of = PREV }
+		}
+		top_liege = {
+			any_realm_lord = {
+				primary_title = { higher_tier_than = BARON }
+				NOT = { character = ROOT }
+				NOT = { is_liege_of = ROOT }
+				NOT = { is_plot_target_of = ROOT }
+				any_backed_character = {
+					NOT = { character = ROOT }
+				}
+				employer = { NOT = { character = ROOT } }
+				NOT = { opinion = { who = ROOT value = 0 } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.95
+			liege = {
+				any_plot_backer = {
+					trait = imbecile
+				}
+			}
+		}
+		modifier = {
+			factor = 0.95
+			liege = {
+				any_plot_backer = {
+					trait = lunatic
+				}
+			}
+		}
+		modifier = {
+			factor = 0.95
+			liege = { num_of_plot_backers = 2 }
+		}
+		modifier = {
+			factor = 0.95
+			liege = { num_of_plot_backers = 4 }
+		}
+		modifier = {
+			factor = 0.85
+			liege = { num_of_plot_backers = 6 }
+		}
+		modifier = {
+			factor = 0.85
+			liege = { num_of_plot_backers = 8 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA7250"
+		hidden_tooltip = {
+			any_realm_lord = {
+				limit = {
+					primary_title = { higher_tier_than = BARON }
+					NOT = { character = ROOT }
+					NOT = { is_liege_of = ROOT }
+					NOT = { is_plot_target_of = ROOT }
+					any_backed_character = {
+						NOT = { character = ROOT }
+					}
+					employer = { NOT = { character = ROOT } }
+					NOT = { opinion = { who = ROOT value = 0 } }
+				}
+				letter_event = { id = 7255 days = 1 }
+			}
+		}
+	}
+}
+
+# Blackmail or not
+character_event = {
+	id = 7255
+	desc = "EVTDESC7255"
+	picture = GFX_evt_whispers
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7255"
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 2
+				NOT = { opinion = { who = FROM value = -25 } }
+			}
+		}
+		FROM = { letter_event = { id = 7260 days = 1 tooltip = "EVTTOOLTIP7260" } }
+	}
+	option = {
+		name = "EVTOPTB7255"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROM value = -50 } }
+			}
+		}
+	}
+}
+
+# Blackmail attempt
+letter_event = {
+	id = 7260
+	desc = "EVTDESC7260"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7260"
+		wealth = -100
+		hidden_tooltip = {
+			FROM = { letter_event = { id = 7265 days = 1 } }
+		}
+	}
+	option = {
+		name = "EVTOPTB7260"
+		if = {
+			limit = {
+				plot_target_char = {
+					any_courtier = {
+						has_job_title = job_spymaster
+					}
+				}
+			}
+			reveal_plot_w_message = yes
+		}
+		if = {
+			limit = {
+				plot_target_char = {
+					NOT = {
+						any_courtier = {
+							has_job_title = job_spymaster
+						}
+					}
+				}
+			}
+			reveal_plot = yes
+		}
+		hidden_tooltip = {
+			FROM = { letter_event = { id = 7270 days = 1 } }
+		}
+	}
+}
+
+# Blackmail succeded
+letter_event = {
+	id = 7265
+	desc = "EVTDESC7270"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EXCELLENT"
+		treasury = 100
+		opinion = {
+			modifier = opinion_blackmailed
+			who = FROM
+			months = 120
+		}
+	}
+}
+
+# Blackmail failed
+letter_event = {
+	id = 7270
+	desc = "EVTDESC7270"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA7270"
+	}
+}
+
+
+###########################################
+# Drunken Plot Member
+###########################################
+# 7040-7045
+
+# Drunk plot member spills the beans
+character_event = {
+	id = 7040
+	desc = "EVTDESC7040"
+	picture = GFX_evt_drunk
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		any_backed_character = {
+			OR = {
+				has_objective = plot_gain_title
+				has_objective = plot_succ_seniority
+				has_objective = plot_succ_primogeniture
+				has_objective = plot_succ_gavelkind
+				has_objective = plot_succ_feudal_elective
+				has_objective = plot_lower_crown_authority
+				has_objective = plot_kill_character
+				has_objective = plot_kill_spouse
+			}
+			is_plot_active = no
+			NOT = { has_character_flag = event7040 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.75
+			trait = drunkard
+		}
+		modifier = {
+			factor = 0.75
+			trait = imbecile
+		}		
+	}
+	
+	option = {
+		name = "EVTOPTA7040"
+		random_backed_character = {
+			limit = {
+				OR = {
+					has_objective = plot_gain_title
+					has_objective = plot_succ_seniority
+					has_objective = plot_succ_primogeniture
+					has_objective = plot_succ_gavelkind
+					has_objective = plot_succ_feudal_elective
+					has_objective = plot_lower_crown_authority
+					has_objective = plot_kill_character
+					has_objective = plot_kill_spouse
+				}
+				NOT = { has_character_flag = event7040 }
+			}
+			opinion = {
+				who = ROOT
+				modifier = revealed_plot
+				months = 120
+			}
+			set_character_flag = event7040
+			hidden_tooltip = {
+				character_event = { id = 7045 days = 1 }
+			}
+		}
+	}
+}
+
+# Plot revealed by drunken backer
+character_event = {
+	id = 7045
+	desc = "EVTDESC7045"
+	picture = GFX_evt_drunk
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7045"
+		if = {
+			limit = {
+				plot_target_char = {
+					any_courtier = {
+						has_job_title = job_spymaster
+					}
+				}
+			}
+			reveal_plot_w_message = yes
+		}
+		if = {
+			limit = {
+				plot_target_char = {
+					NOT = {
+						any_courtier = {
+							has_job_title = job_spymaster
+						}
+					}
+				}
+			}
+			reveal_plot = yes
+		}
+		plot_target_char = {
+			opinion = {
+				modifier = scheming_bastard
+				who = ROOT
+				months = 120
+			}
+		}
+	}
+}
+
+
+###########################################
+# Ultimatum event series
+###########################################
+# 8000-8120
+
+
+### Ultimatum events
+
+# Ultimatum - gain a title
+letter_event = {
+	id = 8000
+	desc = "EVTDESC8000"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8000"
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 1.25
+				trait = weak
+			}
+			modifier = {
+				factor = 1.25
+				trait = craven
+			}
+			modifier = {
+				factor = 1.25
+				trait = humble
+			}
+			modifier = {
+				factor = 1.25
+				trait = kind
+			}
+			modifier = {
+				factor = 1.25
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.25
+				trait = patient
+			}
+			modifier = {
+				factor = 1.25
+				trait = content
+			}
+		}
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = 8050 }
+				any_plot_backer = {
+					letter_event = { id = 8070 }
+				}
+			}
+		}
+		FROM = {
+			plot_target_title = {
+				usurp_title_plus_barony_if_unlanded = PREV
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8000"
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 1.25
+				trait = strong
+			}
+			modifier = {
+				factor = 1.25
+				trait = brave
+			}
+			modifier = {
+				factor = 1.25
+				trait = proud
+			}
+			modifier = {
+				factor = 1.25
+				trait = envious
+			}
+			modifier = {
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.5 }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.75 }
+			}
+			modifier = {
+				factor = 0.0
+				FROM = { plot_power = 2.0 }
+			}
+		}
+		FROM = {
+			letter_event = { id = 8100 days = 3 tooltip = "EVTTOOLTIP8100" }
+			tooltip = {
+				any_plot_backer = {
+				}
+			}
+		}
+	}
+}
+
+# Ultimatum - seniority
+letter_event = {
+	id = 8005
+	desc = "EVTDESC8005"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8000"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.25
+				trait = weak
+			}
+			modifier = {
+				factor = 1.25
+				trait = craven
+			}
+			modifier = {
+				factor = 1.25
+				trait = humble
+			}
+			modifier = {
+				factor = 1.25
+				trait = kind
+			}
+			modifier = {
+				factor = 1.25
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.25
+				trait = patient
+			}
+			modifier = {
+				factor = 1.25
+				trait = content
+			}
+		}
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = 8055 }
+				any_plot_backer = {
+					letter_event = { id = 8075 }
+				}
+			}
+		}
+		FROM = {
+			plot_target_title = {
+				succession = seniority
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8000"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.25
+				trait = strong
+			}
+			modifier = {
+				factor = 1.25
+				trait = brave
+			}
+			modifier = {
+				factor = 1.25
+				trait = proud
+			}
+			modifier = {
+				factor = 1.25
+				trait = envious
+			}
+			modifier = {
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.5 }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.75 }
+			}
+			modifier = {
+				factor = 0.0
+				FROM = { plot_power = 2.0 }
+			}
+		}
+		FROM = {
+			letter_event = { id = 8105 days = 3 tooltip = "EVTTOOLTIP8100" }
+			tooltip = {
+				any_plot_backer = {
+				}
+			}
+		}
+	}
+}
+
+# Ultimatum - primogeniture
+letter_event = {
+	id = 8010
+	desc = "EVTDESC8010"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8000"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.25
+				trait = weak
+			}
+			modifier = {
+				factor = 1.25
+				trait = craven
+			}
+			modifier = {
+				factor = 1.25
+				trait = humble
+			}
+			modifier = {
+				factor = 1.25
+				trait = kind
+			}
+			modifier = {
+				factor = 1.25
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.25
+				trait = patient
+			}
+			modifier = {
+				factor = 1.25
+				trait = content
+			}
+		}
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = 8060 }
+				any_plot_backer = {
+					letter_event = { id = 8080 }
+				}
+			}
+		}
+		FROM = {
+			plot_target_title = {
+				succession = primogeniture
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8000"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.25
+				trait = strong
+			}
+			modifier = {
+				factor = 1.25
+				trait = brave
+			}
+			modifier = {
+				factor = 1.25
+				trait = proud
+			}
+			modifier = {
+				factor = 1.25
+				trait = envious
+			}
+			modifier = {
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.5 }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.75 }
+			}
+			modifier = {
+				factor = 0.0
+				FROM = { plot_power = 2.0 }
+			}
+		}
+		FROM = {
+			letter_event = { id = 8110 days = 3 tooltip = "EVTTOOLTIP8100" }
+			tooltip = {
+				any_plot_backer = {
+				}
+			}
+		}
+	}
+}
+
+# Ultimatum - feudal elective
+letter_event = {
+	id = 8015
+	desc = "EVTDESC8015"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8000"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.25
+				trait = weak
+			}
+			modifier = {
+				factor = 1.25
+				trait = craven
+			}
+			modifier = {
+				factor = 1.25
+				trait = humble
+			}
+			modifier = {
+				factor = 1.25
+				trait = kind
+			}
+			modifier = {
+				factor = 1.25
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.25
+				trait = patient
+			}
+			modifier = {
+				factor = 1.25
+				trait = content
+			}
+		}
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = 8065 }
+				any_plot_backer = {
+					letter_event = { id = 8085 }
+				}
+			}
+		}
+		FROM = {
+			plot_target_title = {
+				succession = feudal_elective
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8000"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.25
+				trait = strong
+			}
+			modifier = {
+				factor = 1.25
+				trait = brave
+			}
+			modifier = {
+				factor = 1.25
+				trait = proud
+			}
+			modifier = {
+				factor = 1.25
+				trait = envious
+			}
+			modifier = {
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.5 }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.75 }
+			}
+			modifier = {
+				factor = 0.0
+				FROM = { plot_power = 2.0 }
+			}
+		}
+		FROM = {
+			letter_event = { id = 8115 days = 3 tooltip = "EVTTOOLTIP8100" }
+			tooltip = {
+				any_plot_backer = {
+				}
+			}
+		}
+	}
+}
+
+# Ultimatum - gavelkind
+letter_event = {
+	id = 8020
+	desc = "EVTDESC8020"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8000"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.25
+				trait = weak
+			}
+			modifier = {
+				factor = 1.25
+				trait = craven
+			}
+			modifier = {
+				factor = 1.25
+				trait = humble
+			}
+			modifier = {
+				factor = 1.25
+				trait = kind
+			}
+			modifier = {
+				factor = 1.25
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.25
+				trait = patient
+			}
+			modifier = {
+				factor = 1.25
+				trait = content
+			}
+		}
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = 8066 }
+				any_plot_backer = {
+					letter_event = { id = 8090 }
+				}
+			}
+		}
+		FROM = {
+			plot_target_title = {
+				succession = gavelkind
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8000"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.25
+				trait = strong
+			}
+			modifier = {
+				factor = 1.25
+				trait = brave
+			}
+			modifier = {
+				factor = 1.25
+				trait = proud
+			}
+			modifier = {
+				factor = 1.25
+				trait = envious
+			}
+			modifier = {
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.5 }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.75 }
+			}
+			modifier = {
+				factor = 0.0
+				FROM = { plot_power = 2.0 }
+			}
+		}
+		FROM = {
+			letter_event = { id = 8116 days = 3 tooltip = "EVTTOOLTIP8100" }
+			tooltip = {
+				any_plot_backer = {
+				}
+			}
+		}
+	}
+}
+
+# Ultimatum - crown authority
+letter_event = {
+	id = 8025
+	desc = "EVTDESC8025"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8000"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				NOT = { age = 16 }
+			}			
+			modifier = {
+				factor = 1.25
+				trait = weak
+			}
+			modifier = {
+				factor = 1.25
+				trait = craven
+			}
+			modifier = {
+				factor = 1.25
+				trait = humble
+			}
+			modifier = {
+				factor = 1.25
+				trait = kind
+			}
+			modifier = {
+				factor = 1.25
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.25
+				trait = patient
+			}
+			modifier = {
+				factor = 1.25
+				trait = content
+			}
+		}
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = 8067 }
+				any_plot_backer = {
+					letter_event = { id = 8095 }
+				}
+			}
+		}
+		ROOT = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}
+		FROM = {
+			opinion = {
+				modifier = opinion_lowered_crown_authority
+				who = ROOT
+				months = 120
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8000"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.25
+				trait = strong
+			}
+			modifier = {
+				factor = 1.25
+				trait = brave
+			}
+			modifier = {
+				factor = 1.25
+				trait = proud
+			}
+			modifier = {
+				factor = 1.25
+				trait = envious
+			}
+			modifier = {
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.5 }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.75 }
+			}
+			modifier = {
+				factor = 0.0
+				FROM = { plot_power = 2.0 }
+			}
+		}
+		FROM = {
+			letter_event = { id = 8117 days = 3 tooltip = "EVTTOOLTIP8100" }
+			tooltip = {
+				any_plot_backer = {
+				}
+			}
+		}
+	}
+}
+
+# Regent is in on the plot
+letter_event = {
+	id = 8026
+	desc = "EVTDESC8026"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8026"
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = 8067 }
+				any_plot_backer = {
+					letter_event = { id = 8095 }
+				}
+			}
+		}
+		FROM = {
+			crownlaw_title = {
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}
+		FROM = {
+			opinion = {
+				modifier = opinion_lowered_crown_authority
+				who = ROOT
+				months = 120
+			}
+		}
+	}
+}
+
+# Ultimatum - gain a vassal title
+letter_event = {
+	id = 8030
+	desc = "EVTDESC8030"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8000"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1.25
+				trait = weak
+			}
+			modifier = {
+				factor = 1.25
+				trait = craven
+			}
+			modifier = {
+				factor = 1.25
+				trait = humble
+			}
+			modifier = {
+				factor = 1.25
+				trait = kind
+			}
+			modifier = {
+				factor = 1.25
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.25
+				trait = patient
+			}
+			modifier = {
+				factor = 1.25
+				trait = content
+			}
+		}
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = 8068 }
+				any_plot_backer = {
+					letter_event = { id = 8096 }
+				}
+			}
+		}
+		FROM = {
+			plot_target_title = {
+				usurp_title_plus_barony_if_unlanded = PREV
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8000"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 1.25
+				trait = strong
+			}
+			modifier = {
+				factor = 1.25
+				trait = brave
+			}
+			modifier = {
+				factor = 1.25
+				trait = proud
+			}
+			modifier = {
+				factor = 1.25
+				trait = envious
+			}
+			modifier = {
+				factor = 1.25
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.25
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.25
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.5 }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { plot_power = 1.75 }
+			}
+			modifier = {
+				factor = 0.0
+				FROM = { plot_power = 2.0 }
+			}
+		}
+		FROM = {
+			letter_event = { id = 8118 days = 3 tooltip = "EVTTOOLTIP8100" }
+		}
+	}
+}
+
+
+
+### Demand accepted events
+
+# Demand accepted - gain a title
+letter_event = {
+	id = 8050
+	desc = "EVTDESC8050"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8050"
+	}	
+}
+
+# Demand accepted - seniority
+letter_event = {
+	id = 8055
+	desc = "EVTDESC8055"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8055"
+	}
+}
+
+# Demand accepted - primogeniture
+letter_event = {
+	id = 8060
+	desc = "EVTDESC8060"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8060"
+	}	
+}
+
+# Demand accepted - feudal elective
+letter_event = {
+	id = 8065
+	desc = "EVTDESC8065"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8065"
+	}
+}
+
+# Demand accepted - gavelkind
+letter_event = {
+	id = 8066
+	desc = "EVTDESC8066"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8066"
+	}
+}
+
+# Demand accepted - crown authority
+letter_event = {
+	id = 8067
+	desc = "EVTDESC8067"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8067"
+	}
+}
+
+# Demand accepted - gain a vassal title
+letter_event = {
+	id = 8068
+	desc = "EVTDESC8068"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8068"
+	}	
+}
+
+# Inform vassal - gain a title
+letter_event = {
+	id = 8070
+	desc = "EVTDESC8070"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8070"
+	}
+}
+
+# Inform vassal - seniority
+letter_event = {
+	id = 8075
+	desc = "EVTDESC8075"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8075"
+	}
+}
+
+# Inform vassal - primogeniture
+letter_event = {
+	id = 8080
+	desc = "EVTDESC8080"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8080"
+	}
+}
+
+# Inform vassal - feudal elective
+letter_event = {
+	id = 8085
+	desc = "EVTDESC8085"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8085"
+	}
+}
+
+# Inform vassal - gavelkind
+letter_event = {
+	id = 8090
+	desc = "EVTDESC8090"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8090"
+	}
+}
+
+# Inform vassal - crown authority
+letter_event = {
+	id = 8095
+	desc = "EVTDESC8095"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8095"
+	}
+}
+
+# Inform vassal - gain a vassal title
+letter_event = {
+	id = 8096
+	desc = "EVTDESC8096"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8096"
+	}
+}
+
+### Demand rejected events
+
+# Demand rejected - gain a title
+letter_event = {
+	id = 8100
+	desc = "EVTDESC8100"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8100"
+		ai_chance = { factor = 100 }
+		hidden_tooltip = { reveal_plot = yes }
+		plot_target_title = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = claim_on_liege_plot
+				plot_backers = yes
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8100"
+		ai_chance = { factor = 0 }
+		prestige = -100
+		any_plot_backer = {
+			opinion = {
+				modifier = opinion_coward
+				who = ROOT
+				years = 5
+			}
+			hidden_tooltip = {
+				letter_event = { id = 8120 }
+			}
+		}
+		cancel_objective = plot_gain_title
+	}
+}
+
+# Demand rejected - seniority
+letter_event = {
+	id = 8105
+	desc = "EVTDESC8105"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8105"
+		ai_chance = { factor = 100 }
+		hidden_tooltip = { reveal_plot = yes }
+		plot_target_title = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = change_seniority_succession_law
+				plot_backers = yes
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8105"
+		ai_chance = { factor = 0 }
+		prestige = -100
+		any_plot_backer = {
+			opinion = {
+				modifier = opinion_coward
+				who = ROOT
+				years = 5
+			}
+			hidden_tooltip = {
+				letter_event = { id = 8120 }
+			}
+		}
+		cancel_objective = plot_succ_seniority
+	}
+}
+
+# Demand rejected - primogeniture
+letter_event = {
+	id = 8110
+	desc = "EVTDESC8110"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8110"
+		ai_chance = { factor = 100 }
+		hidden_tooltip = { reveal_plot = yes }
+		plot_target_title = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = change_primogeniture_succession_law
+				plot_backers = yes
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8110"
+		ai_chance = { factor = 0 }
+		prestige = -100
+		any_plot_backer = {
+			opinion = {
+				modifier = opinion_coward
+				who = ROOT
+				years = 5
+			}
+			hidden_tooltip = {
+				letter_event = { id = 8120 }
+			}
+		}
+		cancel_objective = plot_succ_primogeniture
+	}
+}
+
+# Demand rejected - feudal elective
+letter_event = {
+	id = 8115
+	desc = "EVTDESC8115"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8115"
+		ai_chance = { factor = 100 }
+		hidden_tooltip = { reveal_plot = yes }
+		plot_target_title = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = change_feudal_elective_succession_law
+				plot_backers = yes
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8115"
+		ai_chance = { factor = 0 }
+		prestige = -100
+		any_plot_backer = {
+			opinion = {
+				modifier = opinion_coward
+				who = ROOT
+				years = 5
+			}
+			hidden_tooltip = {
+				letter_event = { id = 8120 }
+			}
+		}
+		cancel_objective = plot_succ_feudal_elective
+	}
+}
+
+# Demand rejected - gavelkind
+letter_event = {
+	id = 8116
+	desc = "EVTDESC8116"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8116"
+		ai_chance = { factor = 100 }
+		hidden_tooltip = { reveal_plot = yes }
+		plot_target_title = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = change_gavelkind_succession_law
+				plot_backers = yes
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8116"
+		ai_chance = { factor = 0 }
+		prestige = -100
+		any_plot_backer = {
+			opinion = {
+				modifier = opinion_coward
+				who = ROOT
+				years = 5
+			}
+			hidden_tooltip = {
+				letter_event = { id = 8120 }
+			}
+		}
+		cancel_objective = plot_succ_gavelkind
+	}
+}
+
+# Demand rejected - crown authority
+letter_event = {
+	id = 8117
+	desc = "EVTDESC8117"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8117"
+		ai_chance = { factor = 100 }
+		hidden_tooltip = { reveal_plot = yes }
+		plot_target_title = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = lower_crown_authority_law
+				plot_backers = yes
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8117"
+		ai_chance = { factor = 0 }
+		prestige = -100
+		any_plot_backer = {
+			opinion = {
+				modifier = opinion_coward
+				who = ROOT
+				years = 5
+			}
+			hidden_tooltip = {
+				letter_event = { id = 8120 }
+			}
+		}
+		cancel_objective = plot_lower_crown_authority
+	}
+}
+
+# Demand rejected - gain a vassal title
+letter_event = {
+	id = 8118
+	desc = "EVTDESC8118"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8118"
+		ai_chance = { factor = 100 }
+		hidden_tooltip = { reveal_plot = yes }
+		plot_target_title = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = claim_on_vassal_plot
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8118"
+		ai_chance = { factor = 0 }
+		prestige = -100
+		any_plot_backer = {
+			opinion = {
+				modifier = opinion_coward
+				who = ROOT
+				years = 5
+			}
+			hidden_tooltip = {
+				letter_event = { id = 8120 }
+			}
+		}
+		cancel_objective = plot_gain_vassal_title
+	}
+}
+
+# Inform vassal - plot is abandoned
+letter_event = {
+	id = 8120
+	desc = "EVTDESC8120"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_tooltip = {
+			remove_opinion = {
+				modifier = opinion_coward
+				who = FROM
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA8120"
+		opinion = {
+			modifier = opinion_coward
+			who = FROM
+			years = 5
+		}
+	}
+}
+
+
+### Plot to kill spouse ###
+#
+# 8200-8219
+
+character_event = {
+	id = 8200
+	desc = "EVTDESC8200"
+	picture = GFX_evt_spymaster
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8200"
+		if = {
+			limit = {
+				plot_target_char = {
+					any_courtier = {
+						has_job_title = job_spymaster
+					}
+				}
+			}
+			reveal_plot_w_message = yes
+			hidden_tooltip = { cancel_objective = plot_kill_spouse }
+		}
+		if = {
+			limit = {
+				plot_target_char = {
+					NOT = {
+						any_courtier = {
+							has_job_title = job_spymaster
+						}
+					}
+				}
+			}
+			reveal_plot = yes
+			hidden_tooltip = { cancel_objective = plot_kill_spouse }
+		}
+		plot_target_char = {
+			opinion = {
+				modifier = attempted_murder_of_spouse
+				who = ROOT
+				months = 120
+			}
+			opinion = {
+				modifier = opinion_dishonorable
+				who = ROOT
+				months = 120
+			}
+			hidden_tooltip = {
+				character_event = { id = 8205 days = 1 }
+			}
+			# Inform target's father
+			if = {
+				limit = {
+					father = {
+						is_alive = yes
+						NOT = {
+							any_backed_character = {
+								character = ROOT
+							}
+						}
+					}
+				}
+				liege = {
+					opinion = {
+						modifier = attempted_murder_of_child
+						who = ROOT
+						months = 120
+					}
+					opinion = {
+						modifier = opinion_dishonorable
+						who = ROOT
+						months = 120
+					}
+					hidden_tooltip = {
+						character_event = { id = 8206 days = 1 }
+					}
+				}				
+			}
+			# Inform target's mother
+			if = {
+				limit = {
+					mother = {
+						is_alive = yes
+						NOT = {
+							any_backed_character = {
+								character = ROOT
+							}
+						}
+					}
+				}
+				liege = {
+					opinion = {
+						modifier = attempted_murder_of_child
+						who = ROOT
+						months = 120
+					}
+					opinion = {
+						modifier = opinion_dishonorable
+						who = ROOT
+						months = 120
+					}
+					hidden_tooltip = {
+						character_event = { id = 8206 days = 1 }
+					}
+				}				
+			}
+			# Inform target's liege if not same as plotter
+			if = {
+				limit = {
+					NOT = { vassal_of = ROOT }
+					independent = no
+					liege = {
+						NOT = { is_father = PREV }
+						NOT = { is_mother = PREV }
+						NOT = {
+							any_backed_character = {
+								character = ROOT
+							}
+						}
+					}
+				}
+				liege = {
+					opinion = {
+						modifier = attempted_murder_of_vassal
+						who = ROOT
+						months = 60
+					}
+					opinion = {
+						modifier = opinion_dishonorable
+						who = ROOT
+						months = 60
+					}
+					hidden_tooltip = {
+						character_event = { id = 8207 days = 1 }
+					}
+				}
+			}
+		}
+		# Inform any vassal not a member of the plot
+		if = {
+			limit = {
+				NOT = {
+					any_backed_character = {
+						character = ROOT
+					}
+				}
+			}
+			any_vassal = {
+				opinion = {
+					modifier = attempted_murder_of_spouse_vassal
+					who = ROOT
+					months = 36
+				}
+				opinion = {
+					modifier = opinion_dishonorable
+					who = ROOT
+					months = 36
+				}
+				hidden_tooltip = {
+					character_event = { id = 8208 days = 1 }
+				}
+			}
+		}
+	}
+}
+
+# Inform the target
+character_event = {
+	id = 8205
+	desc = "EVTDESC8205"
+	picture = GFX_evt_shadow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8205"
+		hidden_tooltip = {
+			remove_opinion = { modifier = attempted_murder_of_spouse who = FROM }
+			remove_opinion = { modifier = opinion_dishonorable who = FROM }
+		}
+		opinion = {
+			modifier = attempted_murder_of_spouse
+			who = FROM
+			months = 120
+		}
+		opinion = {
+			modifier = opinion_dishonorable
+			who = FROM
+			months = 120
+		}
+	}
+}
+
+# Inform target's parents of attempted murder
+character_event = {
+	id = 8206
+	desc = "EVTDESC8206"
+	picture = GFX_evt_shadow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8206"
+		hidden_tooltip = {
+			remove_opinion = { modifier = attempted_murder_of_child who = FROM }
+			remove_opinion = { modifier = opinion_dishonorable who = FROM }
+		}
+		opinion = {
+			modifier = attempted_murder_of_child
+			who = FROM
+			months = 120
+		}
+		opinion = {
+			modifier = opinion_dishonorable
+			who = FROM
+			months = 120
+		}
+	}
+}
+
+# Inform target's liege of attempted murder
+character_event = {
+	id = 8207
+	desc = "EVTDESC8207"
+	picture = GFX_evt_shadow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8207"
+		hidden_tooltip = {
+			remove_opinion = { modifier = attempted_murder_of_vassal who = FROM }
+			remove_opinion = { modifier = opinion_dishonorable who = FROM }
+		}
+		opinion = {
+			modifier = attempted_murder_of_vassal
+			who = FROM
+			months = 60
+		}
+		opinion = {
+			modifier = opinion_dishonorable
+			who = FROM
+			months = 60
+		}
+	}
+}
+
+# Inform all vassals of attempted murder
+character_event = {
+	id = 8208
+	desc = "EVTDESC8208"
+	picture = GFX_evt_shadow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8208"
+		hidden_tooltip = {
+			remove_opinion = { modifier = attempted_murder_of_spouse_vassal who = FROM }
+			remove_opinion = { modifier = opinion_dishonorable who = FROM }
+		}
+		opinion = {
+			modifier = attempted_murder_of_spouse_vassal
+			who = FROM
+			months = 36
+		}
+		opinion = {
+			modifier = opinion_dishonorable
+			who = FROM
+			months = 36
+		}
+	}
+}
+
+
+### Plot to kill character ###
+#
+# 8220-
+
+character_event = {
+	id = 8220
+	desc = "EVTDESC8220"
+	picture = GFX_evt_shadow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8220"
+		if = {
+			limit = {
+				plot_target_char = {
+					any_courtier = {
+						has_job_title = job_spymaster
+					}
+				}
+			}
+			reveal_plot_w_message = yes
+			hidden_tooltip = { cancel_objective = plot_kill_character }
+		}
+		if = {
+			limit = {
+				plot_target_char = {
+					NOT = {
+						any_courtier = {
+							has_job_title = job_spymaster
+						}
+					}
+				}
+			}
+			reveal_plot = yes
+			hidden_tooltip = { cancel_objective = plot_kill_character }
+		}
+		plot_target_char = {
+			opinion = {
+				modifier = attempted_murder
+				who = ROOT
+				months = 120
+			}
+			opinion = {
+				modifier = opinion_dishonorable
+				who = ROOT
+				months = 120
+			}
+			hidden_tooltip = {
+				character_event = { id = 8225 days = 1 }
+			}
+			# Inform target's father
+			if = {
+				limit = {
+					father = {
+						is_alive = yes
+						NOT = {
+							any_backed_character = {
+								character = ROOT
+							}
+						}
+					}
+				}
+				liege = {
+					opinion = {
+						modifier = attempted_murder_of_child
+						who = ROOT
+						months = 120
+					}
+					opinion = {
+						modifier = opinion_dishonorable
+						who = ROOT
+						months = 120
+					}
+					hidden_tooltip = {
+						character_event = { id = 8226 days = 1 }
+					}
+				}				
+			}
+			# Inform target's mother
+			if = {
+				limit = {
+					mother = {
+						is_alive = yes
+						NOT = {
+							any_backed_character = {
+								character = ROOT
+							}
+						}
+					}
+				}
+				liege = {
+					opinion = {
+						modifier = attempted_murder_of_child
+						who = ROOT
+						months = 120
+					}
+					opinion = {
+						modifier = opinion_dishonorable
+						who = ROOT
+						months = 120
+					}
+					hidden_tooltip = {
+						character_event = { id = 8226 days = 1 }
+					}
+				}				
+			}
+			# Inform target's liege if not same as plotter
+			if = {
+				limit = {
+					NOT = { vassal_of = ROOT }
+					independent = no
+					liege = {
+						NOT = { is_father = PREV }
+						NOT = { is_mother = PREV }
+						NOT = {
+							any_backed_character = {
+								character = ROOT
+							}
+						}
+					}
+				}
+				liege = {
+					opinion = {
+						modifier = attempted_murder_of_vassal
+						who = ROOT
+						months = 60
+					}
+					opinion = {
+						modifier = opinion_dishonorable
+						who = ROOT
+						months = 60
+					}
+					hidden_tooltip = {
+						character_event = { id = 8227 days = 1 }
+					}
+				}
+			}
+		}
+	}
+}
+
+# Inform the target
+character_event = {
+	id = 8225
+	desc = "EVTDESC8225"
+	picture = GFX_evt_shadow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8225"
+		hidden_tooltip = {
+			remove_opinion = { modifier = attempted_murder who = FROM }
+			remove_opinion = { modifier = opinion_dishonorable who = FROM }
+		}
+		opinion = {
+			modifier = attempted_murder
+			who = FROM
+			months = 120
+		}
+		opinion = {
+			modifier = opinion_dishonorable
+			who = FROM
+			months = 120
+		}
+	}
+}
+
+# Inform target's parents of attempted murder
+character_event = {
+	id = 8226
+	desc = "EVTDESC8226"
+	picture = GFX_evt_shadow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8226"
+		hidden_tooltip = {
+			remove_opinion = { modifier = attempted_murder_of_child who = FROM }
+			remove_opinion = { modifier = opinion_dishonorable who = FROM }
+		}
+		opinion = {
+			modifier = attempted_murder_of_child
+			who = FROM
+			months = 120
+		}
+		opinion = {
+			modifier = opinion_dishonorable
+			who = FROM
+			months = 120
+		}
+	}
+}
+
+# Inform target's liege of attempted murder
+character_event = {
+	id = 8227
+	desc = "EVTDESC8227"
+	picture = GFX_evt_shadow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8227"
+		hidden_tooltip = {
+			remove_opinion = { modifier = attempted_murder_of_vassal who = FROM }
+			remove_opinion = { modifier = opinion_dishonorable who = FROM }
+		}
+		opinion = {
+			modifier = attempted_murder_of_vassal
+			who = FROM
+			months = 60
+		}
+		opinion = {
+			modifier = opinion_dishonorable
+			who = FROM
+			months = 60
+		}
+	}
+}
+
+
+### Assassination notification events
+
+# The character dies
+character_event = {
+	id = 8250	
+	desc = "EVTDESC8250"
+	picture = GFX_evt_death
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = was_murdered_by_plot
+	}
+
+	option = {
+		name = "EVTOPTA8250"
+		hidden_tooltip = {
+			death_reason = death_murder_unknown
+			# Inform the dead's spouse
+			if = {
+				limit = {
+					NOT = { has_character_flag = was_murdered_by_spouse }
+					spouse = {
+						is_alive = yes
+						is_abroad = no
+					}
+				}
+				spouse = { character_event = { id = 8251 days = 7 } }
+			}
+			# Inform the dead's children
+			if = {
+				limit = {
+					any_child = {
+						is_alive = yes
+					}
+				}
+				any_child = { character_event = { id = 8251 days = 7 } }
+			}
+			# Inform the dead's father
+			if = {
+				limit = {
+					father = {
+						is_alive = yes
+					}
+				}
+				father = { character_event = { id = 8251 days = 1 } }
+			}
+			# Inform the dead's mother
+			if = {
+				limit = {
+					mother = {
+						is_alive = yes
+					}
+				}
+				mother = { character_event = { id = 8251 days = 1 } }
+			}
+			# Inform the dead's liege
+			if = {
+				limit = {
+					independent = no
+					liege = {
+						NOT = { is_father = ROOT }
+						NOT = { is_mother = ROOT }
+						NOT = { spouse = { character = ROOT } }
+					}
+				}
+				liege = { character_event = { id = 8251 days = 1 } }
+			}
+			spouse = { clr_character_flag = was_murdered_by_spouse }
+		}
+	}
+}
+
+# The dead character's liege and family
+character_event = {
+	id = 8251
+	desc = "EVTDESC8251"
+	picture = GFX_evt_death
+
+	hide_from = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA8251"
+	}
+}
+
+###########################################
+# Plot to cut down another vassal to size #
+###########################################
+
+	
+# Top Liege is approached by Plotter
+letter_event = {
+	id = 7500
+	desc = "EVTDESC7500"
+
+	is_triggered_only = yes
+	
+	option = { #Yes
+		name = "EVTOPTA7500"
+		FROM = {
+			letter_event = { id = 7501 days = 3 tooltip = "EVTTOOLTIP7501" }
+		}
+	}
+	option = { #No
+		name = "EVTOPTB7500"
+		FROM = {
+			letter_event = { id = 7502 days = 3 tooltip = "EVTTOOLTIP7502" }
+		}
+	}
+}
+	
+# Plotter informed Top Liege agrees
+letter_event = {
+	id = 7501
+	desc = "EVTDESC7501"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7501"
+		ROOT = { set_character_flag = weaken_vassal_plotter }
+		plot_target_char = {
+			letter_event = { id = 7504 tooltip = "EVTTOOLTIP7504" }
+		}
+		FROM = {
+			opinion = {
+				modifier = approves_of_my_behaviour
+				who = ROOT
+				years = 2
+			}
+		}
+	}
+}
+	
+# Plotter informed Top Liege disagrees
+letter_event = {
+	id = 7502
+	desc = "EVTDESC7502"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7502"
+		reveal_plot = yes
+		FROM = {
+			opinion = {
+				modifier = resentful_of_my_behaviour
+				who = ROOT
+				years = 2
+			}
+		}
+	}
+}
+
+# Duke receives ultimatum from Top Liege
+letter_event = {
+	id = 7504
+	desc = "EVTDESC7504"
+
+	is_triggered_only = yes
+	
+	option = { #Take it!
+		name = "EVTOPTA7504"
+		trigger = {
+			FROM = {
+				plot_target_title = {
+					ROOT = {
+						any_vassal = {
+							is_primary_heir = no
+							tier = count
+							any_demesne_title = {
+								tier = count
+								dejure_liege_title = {
+									FROM = {
+										plot_target_title = {
+											title = PREVPREV
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			plot_target_title = {
+				ROOT = {
+					random_vassal = {
+						limit = {
+							is_primary_heir = no
+							tier = count
+							any_demesne_title = {
+								tier = count
+								dejure_liege_title = {
+									FROM = {
+										plot_target_title = {
+											title = PREVPREV
+										}
+									}
+								}
+							}
+						}
+						grant_title = PREVPREV
+					}
+				}
+			}
+		}
+		hidden_tooltip = {
+			liege = {
+				letter_event = { 
+					id = 7508
+					tooltip = "EVTTOOLTIP7508"
+				}
+			}
+		}
+	}
+	option = { #Never
+		name = "EVTOPTB7504"
+		liege = {
+			letter_event = { 
+				id = 7509
+				tooltip = "EVTTOOLTIP7509"
+			}
+		}
+	}
+}
+
+# Duke receives ultimatum from Plotter
+letter_event = {
+	id = 7505
+	desc = "EVTDESC7505"
+
+	is_triggered_only = yes
+	
+	option = { #Take it!
+		name = "EVTOPTA7505"
+		trigger = {
+			FROM = {
+				plot_target_title = {
+					ROOT = {
+						any_vassal = {
+							is_primary_heir = no
+							tier = count
+							any_demesne_title = {
+								tier = count
+								dejure_liege_title = {
+									FROM = {
+										plot_target_title = {
+											title = PREVPREV
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			plot_target_title = {
+				ROOT = {
+					random_vassal = {
+						limit = {
+							is_primary_heir = no
+							tier = count
+							any_demesne_title = {
+								tier = count
+								dejure_liege_title = {
+									FROM = {
+										plot_target_title = {
+											title = PREVPREV
+										}
+									}
+								}
+							}
+						}
+						grant_title = PREVPREV
+						character_event = { id = 7515 tooltip = "EVTTOOLTIP7515" }
+					}
+				}
+			}
+		}
+		hidden_tooltip = {
+			FROM = {
+				letter_event = { id = 7506 tooltip = "EVTTOOLTIP7506" }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC7505"
+		trigger = {
+			NOT = {
+				FROM = {
+					plot_target_title = {
+						ROOT = {
+							any_vassal = {
+								is_primary_heir = no
+								tier = count
+								any_demesne_title = {
+									tier = count
+									dejure_liege_title = {
+										FROM = {
+											plot_target_title = {
+												title = PREVPREV
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		# add effect...
+		FROM = {
+			plot_target_title = {
+				grant_title = FROM
+			}
+			hidden_tooltip = {
+				character_event = { id = 7517 tooltip = "EVTTOOLTIP7506" }
+			}
+		}
+	}
+	option = { #No!
+		name = "EVTOPTB7505"
+		FROM = {
+			letter_event = { id = 7507 tooltip = "EVTTOOLTIP7507" }
+		}
+	}
+}
+
+# Plotter informed ultimatum accepted
+letter_event = {
+	id = 7506
+	desc = "EVTDESC7506"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7506"
+		FROM = {
+			opinion = {
+				modifier = scheming_bastard
+				who = ROOT
+				years = 6
+			}
+		}	
+	}
+}
+
+# Plotter informed ultimatum rejected
+letter_event = {
+	id = 7507
+	desc = "EVTDESC7507"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7507"
+		ai_chance = { factor = 100 }
+		hidden_tooltip = { reveal_plot = yes }
+		plot_target_title = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = weaken_vassal_plot
+				plot_backers = yes
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB7507"
+		ai_chance = { factor = 0 }
+		prestige = -100
+		any_plot_backer = {
+			opinion = {
+				modifier = opinion_coward
+				who = ROOT
+				years = 5
+			}
+			hidden_tooltip = {
+				letter_event = { id = 8120 }
+			}
+		}
+		cancel_objective = plot_weaken_fellow_vassal
+	}
+}
+
+# Top Liege informed ultimatum accepted
+letter_event = {
+	id = 7508
+	desc = "EVTDESC7508"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7508"
+		any_vassal = {
+			limit = { has_character_flag = weaken_vassal_plotter }
+			character_event = { id = 7510 tooltip = "EVTTOOLTIP7510" }
+		}
+		any_vassal = {
+			limit = {
+				any_vassal = {
+					has_character_flag = weaken_vassal_plotter
+				}
+			}
+			any_vassal = {
+				limit = { has_character_flag = weaken_vassal_plotter }
+				character_event = { id = 7510 tooltip = "EVTTOOLTIP7510" }
+			}
+		}
+		FROM = {
+			opinion = {
+				modifier = opinion_bitter
+				who = ROOT
+				years = 6
+			}
+		}
+	}
+}
+
+# Top Liege informed ultimatum rejected
+letter_event = {
+	id = 7509
+	desc = "EVTDESC7509"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7509"
+		opinion = {
+			who = FROM
+			modifier = opinion_refused_abdicate_title
+		}
+		any_vassal = {
+				limit = { has_character_flag = weaken_vassal_plotter }
+				character_event = { id = 7511 tooltip = "EVTTOOLTIP7511" }
+		}
+		any_vassal = {
+			limit = {
+				any_vassal = {
+					has_character_flag = weaken_vassal_plotter
+				}
+			}
+			any_vassal = {
+				limit = { has_character_flag = weaken_vassal_plotter }
+				character_event = { id = 7511 tooltip = "EVTTOOLTIP7511" }
+			}
+		}
+		FROM = {
+			opinion = {
+				modifier = opinion_bitter
+				who = ROOT
+				years = 6
+			}
+		}
+	}
+}
+
+# Plotter informed Top Liege's ultimatum accepted
+character_event = {
+	id = 7510
+	desc = "EVTDESC7510"
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7510"
+		clr_character_flag = weaken_vassal_plotter
+	}
+}
+
+# Plotter informed Top Liege's ultimatum rejected
+character_event = {
+	id = 7511
+	desc = "EVTDESC7511"
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7511"
+		clr_character_flag = weaken_vassal_plotter
+		cancel_objective = plot_weaken_fellow_vassal
+	}
+}
+
+# Duke's vassal informed he will be granted duchy.
+character_event = {
+	id = 7515
+	desc = "EVTDESC7515"
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7515"
+	}
+}
+
+# Plotter informed he has received the title instead, as there were no vassals to give it to.
+character_event = {
+	id = 7517
+	desc = "EVTDESC7517"
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA7502"
+	}
+}

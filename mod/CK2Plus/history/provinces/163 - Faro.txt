@@ -1,0 +1,23 @@
+# 163 - Faro
+
+# County Title
+title = c_faro
+
+# Settlements
+max_settlements = 4
+b_faro = castle
+b_tavira = city
+b_loule = temple
+#b_castromarim = castle
+#b_alcoutim = castle
+#b_aljezur = castle
+#b_saobrasdealportel = castle
+#b_olhao = castle
+
+# Misc
+culture = andalusian_arabic
+religion = sunni
+
+# History
+1264.1.1 = { culture = portuguese }
+1264.1.1 = { religion = catholic }

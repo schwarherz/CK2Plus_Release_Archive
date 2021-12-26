@@ -1,0 +1,1070 @@
+objectTypes = {
+	EMFXActorType = {
+		name = "westerngfx_port"
+		actorfile = "gfx\models\Settlements\Western\Western_Port.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 300.0f
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_port"
+		actorfile = "gfx\models\Settlements\Western\Western_Port.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 300.0f
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_port"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_port.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 300.0f
+	}
+	
+	EMFXActorType = {
+		name = "mediterraneangfx_port"
+		actorfile = "gfx\models\Settlements\Western\Western_Port.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 300.0f
+	}
+	
+##	EMFXActorType = {
+##		name = "hellenegfx_port"
+##		actorfile = "gfx\models\Settlements\Western\Western_Port.xac"
+##		scale = 0.7f
+##		use_animation = no
+##		cull_distance = 300.0f
+##	}
+	EMFXActorType = {
+		name = "moorishgfx_port"
+		actorfile = "gfx\models\Settlements\Moorish\Mooris_port.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 300.0f
+	}
+	
+	EMFXActorType = {
+		name = "persiagfx_port"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_port.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 300.0f
+	}
+
+#### Muslim settlement ########################################################	
+
+	EMFXActorType = {
+		name = "muslimgfx_house_1_1"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_1_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_1_2"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_1_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	
+	EMFXActorType = {
+		name = "muslimgfx_house_1_3"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_1_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_1_4"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_1_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_2_1"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_2_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_2_2"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_2_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_house_2_3"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_2_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_2_4"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_2_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_3_1"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_3_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_3_2"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_3_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_house_3_3"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_3_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_3_4"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_3_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_4_1"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_4_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_4_2"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_4_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_4_3"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_4_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_house_4_4"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_house_4_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_castle_1"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_Castle_02.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+		
+	EMFXActorType = {
+		name = "muslimgfx_castle_2"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_Castle_02.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_castle_3"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_Castle_03.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_temple_1"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_Church03.xac"
+		scale = 1.1f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_temple_2"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_Church02.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_temple_3"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_Church03.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+
+	EMFXActorType = {
+		name = "muslimgfx_city_1"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_City_01.xac"
+		scale = 1.5f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_city_2"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_City_02.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "muslimgfx_city_3"
+		actorfile = "gfx\models\Settlements\Muslim\Muslim_City_01.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+
+#### Western settlement ########################################################
+
+	EMFXActorType = {
+		name = "westerngfx_house_1_1"
+		actorfile = "gfx\models\Settlements\Western\Western_house_1_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "westerngfx_house_1_2"
+		actorfile = "gfx\models\Settlements\Western\Western_house_1_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_house_1_3"
+		actorfile = "gfx\models\Settlements\Western\Western_house_1_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "westerngfx_house_1_4"
+		actorfile = "gfx\models\Settlements\Western\Western_house_1_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "westerngfx_house_2_1"
+		actorfile = "gfx\models\Settlements\Western\Western_house_2_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "westerngfx_house_2_2"
+		actorfile = "gfx\models\Settlements\Western\Western_house_2_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_house_2_3"
+		actorfile = "gfx\models\Settlements\Western\Western_house_2_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_house_2_4"
+		actorfile = "gfx\models\Settlements\Western\Western_house_2_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "westerngfx_house_3_1"
+		actorfile = "gfx\models\Settlements\Western\Western_house_3_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "westerngfx_house_3_2"
+		actorfile = "gfx\models\Settlements\Western\Western_house_3_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_house_3_3"
+		actorfile = "gfx\models\Settlements\Western\Western_house_3_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_house_3_4"
+		actorfile = "gfx\models\Settlements\Western\Western_house_3_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "westerngfx_house_4_1"
+		actorfile = "gfx\models\Settlements\Western\Western_house_4_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "westerngfx_house_4_2"
+		actorfile = "gfx\models\Settlements\Western\Western_house_4_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "westerngfx_house_4_3"
+		actorfile = "gfx\models\Settlements\Western\Western_house_4_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_house_4_4"
+		actorfile = "gfx\models\Settlements\Western\Western_house_4_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_castle_1"
+		actorfile = "gfx\models\Settlements\Western\Western_Castle_02.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_temple_1"
+		actorfile = "gfx\models\Settlements\Western\Western_Church_03.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "westerngfx_city_1"
+		actorfile = "gfx\models\Settlements\Western\Western_City02.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+
+#### Eastern settlement ########################################################	
+
+	EMFXActorType = {
+		name = "easterngfx_house_1_1"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_1_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_house_1_2"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_1_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_house_1_3"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_1_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_house_1_4"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_1_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_house_2_1"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_2_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_house_2_2"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_2_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_house_2_3"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_2_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_house_2_4"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_2_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_house_3_1"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_3_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_house_3_2"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_3_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_house_3_3"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_3_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_house_3_4"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_3_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_house_4_1"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_4_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_house_4_2"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_4_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_house_4_3"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_4_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_house_4_4"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_house_4_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "easterngfx_castle_1"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_Castle_03.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_temple_1"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_Church_01.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+
+	EMFXActorType = {
+		name = "easterngfx_city_1"
+		actorfile = "gfx\models\Settlements\Eastern\Eastern_City03.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+#### Mediterranean settlement ########################################################
+
+	EMFXActorType = {
+		name = "mediterraneangfx_house_1_1"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_1_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "mediterraneangfx_house_1_2"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_1_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "mediterraneangfx_house_1_3"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_1_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "mediterraneangfx_house_1_4"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_1_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "mediterraneangfx_house_2_1"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_2_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "mediterraneangfx_house_2_2"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_2_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "mediterraneangfx_house_2_3"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_2_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "mediterraneangfx_house_2_4"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_2_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "mediterraneangfx_house_3_1"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_3_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "mediterraneangfx_house_3_2"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_3_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "mediterraneangfx_house_3_3"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_3_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "mediterraneangfx_house_3_4"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_3_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "mediterraneangfx_house_4_1"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_4_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "mediterraneangfx_house_4_2"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_4_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "mediterraneangfx_house_4_3"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_4_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "mediterraneangfx_house_4_4"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_house_4_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "mediterraneangfx_castle_1"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_Castle_01.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "mediterraneangfx_temple_1"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_Church_02.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "mediterraneangfx_city_1"
+		actorfile = "gfx\models\Settlements\Mediterranean\Mediterranean_City01.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	#### Hellene settlement ########################################################
+##	EMFXActorType = {
+##		name = "hellenegfx_house_1_1"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_1_01.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##
+##	EMFXActorType = {
+##		name = "hellenegfx_house_1_2"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_1_02.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##	
+##	EMFXActorType = {
+##		name = "hellenegfx_house_1_3"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_1_03.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##
+##	EMFXActorType = {
+##		name = "hellenegfx_house_1_4"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_1_04.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##
+##	EMFXActorType = {
+##		name = "hellenegfx_house_2_1"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_2_01.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##
+##	EMFXActorType = {
+##		name = "hellenegfx_house_2_2"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_2_02.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##	
+##	EMFXActorType = {
+##		name = "hellenegfx_house_2_3"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_2_03.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##	
+##	EMFXActorType = {
+##		name = "hellenegfx_house_2_4"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_2_04.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##
+##	EMFXActorType = {
+##		name = "hellenegfx_house_3_1"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_3_01.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##
+##	EMFXActorType = {
+##		name = "hellenegfx_house_3_2"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_3_02.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##	
+##	EMFXActorType = {
+##		name = "hellenegfx_house_3_3"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_3_03.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##	
+##	EMFXActorType = {
+##		name = "hellenegfx_house_3_4"
+##		actorfile = "gfx\models\Settlements\Hellene\Hellene_house_3_04.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##
+##	EMFXActorType = {
+##		name = "hellenegfx_house_4_1"
+##		actorfile = "gfx\models\Settlements\hellene\hellene_house_4_01.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##
+##	EMFXActorType = {
+##		name = "hellenegfx_house_4_2"
+##		actorfile = "gfx\models\Settlements\hellene\hellene_house_4_02.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##
+##	EMFXActorType = {
+##		name = "hellenegfx_house_4_3"
+##		actorfile = "gfx\models\Settlements\hellene\hellene_house_4_03.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##	
+##	EMFXActorType = {
+##		name = "hellenegfx_house_4_4"
+##		actorfile = "gfx\models\Settlements\hellene\hellene_house_4_04.xac"
+##		scale = 0.7f
+##		use_animation = no
+##	}
+##	
+##	EMFXActorType = {
+##		name = "hellenegfx_castle_1"
+##		actorfile = "gfx\models\Settlements\hellene\Hellas_Church_01.xac"
+##		scale = 1.0f
+##		use_animation = no
+##		cull_distance = 550.0f
+##	}
+##	
+##	EMFXActorType = {
+##		name = "hellenegfx_temple_1"
+##		actorfile = "gfx\models\Settlements\hellene\Hellas_Church_01.xac"
+##		scale = 1.0f
+##		use_animation = no
+##		cull_distance = 550.0f
+##	}
+##	
+##	EMFXActorType = {
+##		name = "hellenegfx_city_1"
+##		actorfile = "gfx\models\Settlements\hellene\hellene_City01.xac"
+##		scale = 1.0f
+##		use_animation = no
+##		cull_distance = 550.0f
+##	}
+
+	#### Moorish settlement ########################################################
+	
+	EMFXActorType = {
+		name = "moorishgfx_house_1_1"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_1_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "moorishgfx_house_1_2"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_1_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "moorishgfx_house_1_3"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_1_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "moorishgfx_house_1_4"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_1_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "moorishgfx_house_2_1"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_2_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "moorishgfx_house_2_2"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_2_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "moorishgfx_house_2_3"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_2_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "moorishgfx_house_2_4"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_2_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "moorishgfx_house_3_1"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_3_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "moorishgfx_house_3_2"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_3_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "moorishgfx_house_3_3"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_3_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "moorishgfx_house_3_4"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_3_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "moorishgfx_house_4_1"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_4_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "moorishgfx_house_4_2"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_4_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "moorishgfx_house_4_3"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_4_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "moorishgfx_house_4_4"
+		actorfile = "gfx\models\Settlements\Moorish\mooris_house_4_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "moorishgfx_castle_1"
+		actorfile = "gfx\models\Settlements\Moorish\Mooris_Castle_03.xac"
+		scale = 0.7f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "moorishgfx_temple_1"
+		actorfile = "gfx\models\Settlements\Moorish\Mooris_Church01.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "moorishgfx_city_1"
+		actorfile = "gfx\models\Settlements\Moorish\Mooris_City_02.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	#### Persian settlement ########################################################
+	
+	EMFXActorType = {
+		name = "persiagfx_house_1_1"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_1_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "persiagfx_house_1_2"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_1_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "persiagfx_house_1_3"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_1_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "persiagfx_house_1_4"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_1_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "persiagfx_house_2_1"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_2_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "persiagfx_house_2_2"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_2_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "persiagfx_house_2_3"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_2_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "persiagfx_house_2_4"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_2_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "persiagfx_house_3_1"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_3_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "persiagfx_house_3_2"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_3_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "persiagfx_house_3_3"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_3_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "persiagfx_house_3_4"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_3_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "persiagfx_house_4_1"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_4_01.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "persiagfx_house_4_2"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_4_02.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+
+	EMFXActorType = {
+		name = "persiagfx_house_4_3"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_4_03.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "persiagfx_house_4_4"
+		actorfile = "gfx\models\Settlements\Persia\Persia_house_4_04.xac"
+		scale = 0.7f
+		use_animation = no
+	}
+	
+	EMFXActorType = {
+		name = "persiagfx_castle_1"
+		actorfile = "gfx\models\Settlements\Persia\Persia_Castle_01.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "persiagfx_temple_1"
+		actorfile = "gfx\models\Settlements\Persia\Persia_Church02.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+	
+	EMFXActorType = {
+		name = "persiagfx_city_1"
+		actorfile = "gfx\models\Settlements\Persia\Persia_City_03.xac"
+		scale = 1.0f
+		use_animation = no
+		cull_distance = 550.0f
+	}
+}

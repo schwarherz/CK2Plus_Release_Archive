@@ -1,0 +1,65 @@
+961.1.1 = {
+	liege = "k_france"
+	law = agnatic_succession
+	law = succ_primogeniture
+}
+961.1.1 = {
+	holder = 127049 #Guillaume-Sanche de Gascogne
+}
+996.12.23 = {
+	holder = 127050 #Bernard-Guillaume de Gascogne
+}
+1009.12.25 = {
+	holder = 127051 #Sanche-Guillaume de Gascogne
+}
+1032.10.4 = {
+	holder = 127055 #Bérenger d'Angoulême
+}
+1036.1.1 = {
+	holder = 228 #Eudes d'Aquitaine
+}
+1039.3.10 = {
+	holder = 127056 #Bernard d'Armagnac
+}
+1063.1.1 = {
+	holder = 240 #Guillaume VIII d'Aquitaine
+}
+1086.9.25 = {
+	holder = 205733 #Guillaume IX d'Aquitaine
+}
+1126.2.10 = {
+	holder = 205731 #Guillaume X d'Aquitaine
+}
+1137.4.9 = {
+	holder = 205730 #Alienor d'Aquitaine
+}
+1137.7.22 = {
+	holder = 205500 #Louis VII de France
+}
+1152.3.21 = {
+	holder = 205730 #Alienor d'Aquitaine
+}
+1152.5.18 = {
+	liege = "k_england"
+}
+1152.5.18 = {
+	holder = 204500 #Henry II of England
+}
+1172.1.1 = {
+	holder = 204510 #Richard I
+}
+1199.4.6 = {
+	holder = 204514 #John
+}
+1216.10.28 = {
+	holder = 454522 #Henry III
+}
+1272.11.16 = {
+	holder = 454520 #Edward I
+}
+1307.1.2 = {
+	holder = 454510 #Edward II
+}
+1327.2.1 = {
+	holder = 454500  #Edward III
+}

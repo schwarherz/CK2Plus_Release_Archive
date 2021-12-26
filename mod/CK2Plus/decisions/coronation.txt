@@ -1,0 +1,47 @@
+decisions = {
+
+	coronation  = {
+		is_high_prio = yes
+		potential = {
+			is_feudal = yes
+			NOT = {
+				has_character_flag = wants_coronation
+			}
+			not = { trait = excommunicated }
+			independent = yes
+			religion = catholic
+			NOT = { is_female = yes	}
+			NOT = { is_heretic = yes }
+			NOT = { trait = incapable }
+			NOT = { trait = crowned_by_pope }
+			tier = emperor
+			has_landed_title = e_hre
+		}
+		allow = {
+			war = no
+			prisoner = no
+			age = 16
+			prestige = 1000
+			wealth = 200
+			piety = 200
+			rightful_religious_head_scope = {
+				not = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = coronation_rejected
+					}
+				}
+			}
+							
+		}
+		effect = {
+			set_character_flag = wants_coronation
+			wealth = -200
+			character_event = { id = 2002000 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

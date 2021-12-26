@@ -1,0 +1,184 @@
+# Steam comment
+
+###########################################
+#
+# Rebel Events
+#
+# ID 80000-85000 is reserved
+#
+###########################################
+
+###########################################
+# Province Defection Events
+###########################################
+
+# Province defects
+# Isolated province
+province_event = {
+	id = 80062
+	desc = "EVTDESC80062"
+	picture = GFX_evt_peasants
+	
+	trigger = {
+		NOT = { has_global_flag = possible_province_defection }
+		# Rebel occupied
+		NOT = {
+			any_province_lord = {
+				any_demesne_title = {
+					location = {
+						province_id = ROOT
+					}
+					tier = baron
+					NOT = { controlled_by = e_rebels }
+				}
+			}
+		}
+		# Not for those in an independence war
+		owner = {
+			top_liege = {
+				independent = yes
+			}
+		}
+		# Not a player's last province
+		owner = {
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					any_demesne_province = {
+						NOT = { province_id = ROOT }
+					}
+				}
+			}
+
+		}
+		# No neighbor province from same realm
+		NOT = {
+			any_neighbor_province = {
+				owner = {
+					top_liege = {
+						ROOT = {
+							owner = {
+								top_liege = {
+									character = PREVPREVPREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		# Not the only province in the realm
+		owner = {
+			top_liege = {
+				any_realm_province = {
+					NOT = { province_id = ROOT }
+				}
+			}
+		}
+		# Not a single-province island
+		any_neighbor_province = {
+			is_land = yes
+		}
+		# Not a coastal province
+		port = no		
+		# Not if part of de jure duchy held by someone in same top realm
+		NOT = {
+			duchy = {
+				holder_scope = {
+					top_liege = {
+						ROOT = {
+							owner = {
+								top_liege = {
+									character = PREVPREVPREV
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_tooltip = {
+			set_global_flag = possible_province_defection
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA80060"
+		hidden_tooltip = {
+			owner = {
+				set_character_flag = defected_from
+			}
+		}
+		county = {
+			rebel_defection = yes
+		}
+		hidden_tooltip = {
+			province_event = { id = 80058 days = 3 }
+			clear_revolt = yes
+		}
+	}
+}
+
+# Province defects to new ruler
+province_event = {
+	id = 80058
+	desc = "EVTDESC80058"
+	picture = GFX_evt_peasants
+	
+	show_from_from = no
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA80058"
+		hidden_tooltip = {
+			owner = {
+				any_independent_ruler = {
+					any_realm_character = {
+						limit = { has_character_flag = defected_from }
+						# Liege is topliege
+						if = {
+							limit = {
+								liege = { character = PREVPREV }
+							}
+							liege = { character_event = { id = 80057 days = 3 } }
+						}
+						# Liege is not topliege
+						if = {
+							limit = {
+								liege = { NOT = { character = PREVPREV } }
+							}
+							liege = { character_event = { id = 80057 days = 3 } }
+							top_liege = { character_event = { id = 80057 days = 3 } }
+						}
+						clr_character_flag = defected_from
+					}
+				}
+			}
+			clr_global_flag = possible_province_defection
+		}
+	}
+}
+
+# Liege notified
+character_event = {
+	id = 80057
+	desc = "EVTDESC80057"
+	picture = GFX_evt_peasants
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA80054"
+	}
+}

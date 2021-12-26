@@ -1,0 +1,16 @@
+1060.1.1={
+	liege="d_adrianopolis"
+}
+1066.1.1={
+	holder=70601
+}
+1204.5.16=
+{
+	liege="c_adrianopolis"
+	holder=0
+}
+1246.8.1=
+{
+	liege="d_adrianopolis"
+	holder=465527
+}

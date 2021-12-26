@@ -1,0 +1,472 @@
+character_event = {
+	id = 100001
+	desc = "EVTDESC100001"
+	hide_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA100001"
+		remove_trait = crusader
+		remove_trait = mujahid
+		remove_trait = hunter
+		remove_trait = impaler
+		remove_trait = poet
+		remove_trait = mystic
+		remove_trait = scholar
+		remove_trait = celibate
+		remove_trait = falconer
+		remove_trait = hedonist
+		remove_trait = gardener
+		remove_trait = stressed
+		remove_trait = depressed
+		remove_trait = ill
+		remove_trait = possessed
+		remove_trait = lunatic
+		remove_trait = pneumonic
+		remove_trait = syphilitic
+		remove_trait = leper
+		remove_trait = wounded
+		remove_trait = maimed
+		remove_trait = infirm
+		remove_trait = incapable
+		remove_trait = drunkard
+		random = {
+			chance = 66
+			remove_trait = dwarf
+			remove_trait = hunchback
+			remove_trait = harelip
+			remove_trait = clubfooted
+			remove_trait = lisp
+			remove_trait = stutter
+			remove_trait = ugly
+			remove_trait = fair
+			remove_trait = quick
+			remove_trait = genius
+			remove_trait = slow
+			remove_trait = imbecile
+			remove_trait = tall
+			remove_trait = strong
+			remove_trait = weak
+			remove_trait = inbred
+		}
+	}
+}
+
+character_event = {
+	id = 100002
+	desc = "EVTDESC100002"
+	hide_from = yes
+
+	trigger = {
+		ai = yes
+		NOT = { age = 1 }
+		NOT = { has_character_flag = genetics_check }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA100002"
+		set_character_flag = genetics_check
+		
+		hidden_tooltip = {
+			#check for stillbirth
+			character_event = { id = 190000 }
+		
+			#clean up genetics traits
+			character_event = { id = 100001 }
+		
+			#check for culture change
+			if = {
+				limit = {
+					NOT = { age = 6 }
+					location = { NOT = { culture = ROOT } }
+				}
+				random = {
+					chance = 5
+					location = {
+						ROOT = {
+							culture = PREV
+						}
+					}					
+				}
+			}
+		
+			#check for inherited traits
+			if = {
+				limit = {
+					father_even_if_dead = { trait = clubfooted }
+				}
+				random = {
+					NOT = { trait = clubfooted }
+					chance = 15
+					add_trait = clubfooted
+				}					
+			}
+			if = {
+				limit = {
+					mother = { trait = clubfooted }
+				}
+				random = {
+					NOT = { trait = clubfooted }
+					chance = 15
+					add_trait = clubfooted
+				}					
+			}
+			if = {
+				limit = {
+					father_even_if_dead = { trait = harelip }
+				}
+				random = {
+					NOT = { trait = harelip }
+					chance = 15
+					add_trait = harelip
+				}					
+			}
+			if = {
+				limit = {
+					mother = { trait = harelip }
+				}
+				random = {
+					NOT = { trait = harelip }
+					chance = 15
+					add_trait = harelip
+				}					
+			}
+			if = {
+				limit = {
+					father_even_if_dead = { trait = hunchback }
+				}
+				random = {
+					NOT = { trait = hunchback }
+					chance = 15
+					add_trait = hunchback
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = hunchback }
+					mother = { trait = hunchback }
+				}
+				random = {
+					chance = 15
+					add_trait = hunchback
+				}					
+			}
+			if = {
+				limit = {
+					father_even_if_dead = { trait = lisp }
+				}
+				random = {
+					NOT = { trait = lisp }
+					chance = 15
+					add_trait = lisp
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = lisp }
+					mother = { trait = lisp }
+				}
+				random = {
+					chance = 15
+					add_trait = lisp
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = stutter }
+					father_even_if_dead  = { trait = stutter }
+				}
+				random = {
+					chance = 15
+					add_trait = stutter
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = stutter }
+					mother = { trait = stutter }
+				}
+				random = {
+					chance = 15
+					add_trait = stutter
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = ugly }
+					NOT = { trait = fair }	
+					father_even_if_dead  = { trait = fair }
+				}
+				random = {
+					chance = 33
+					add_trait = fair
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = ugly }
+					NOT = { trait = fair }	
+					mother = { trait = fair }
+				}
+				random = {
+					chance = 33
+					add_trait = fair
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = ugly }
+					NOT = { trait = fair }	
+					father_even_if_dead  = { trait = ugly }
+				}
+				random = {
+					chance = 33
+					add_trait = ugly
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = ugly }
+					NOT = { trait = fair }	
+					mother = { trait = ugly }
+				}
+				random = {
+					chance = 33
+					add_trait = ugly
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = dwarf }
+					NOT = { trait = tall }	
+					father_even_if_dead  = { trait = tall }
+				}
+				random = {
+					chance = 33
+					add_trait = tall
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = dwarf }
+					NOT = { trait = tall }	
+					mother = { trait = tall }
+				}
+				random = {
+					chance = 33
+					add_trait = tall
+				}					
+			}			
+			if = {
+				limit = {
+					NOT = { trait = dwarf }
+					NOT = { trait = tall }	
+					father_even_if_dead  = { trait = dwarf }
+				}
+				random = {
+					chance = 33
+					add_trait = dwarf
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = dwarf }
+					NOT = { trait = tall }	
+					mother = { trait = dwarf }
+				}
+				random = {
+					chance = 33
+					add_trait = dwarf
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = genius }
+					NOT = { trait = quick }
+					NOT = { trait = slow }
+					NOT = { trait = imbecile }
+					father_even_if_dead  = { OR = { trait = genius trait = quick } }
+				}
+				random = {
+					chance = 5
+					add_trait = genius
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = genius }
+					NOT = { trait = quick }
+					NOT = { trait = slow }
+					NOT = { trait = imbecile }
+					mother = { OR = { trait = genius trait = quick } }
+				}
+				random = {
+					chance = 5
+					add_trait = genius
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = genius }
+					NOT = { trait = quick }
+					NOT = { trait = slow }
+					NOT = { trait = imbecile }
+					father_even_if_dead  = { OR = { trait = genius trait = quick } }
+				}
+				random = {
+					chance = 10
+					add_trait = quick
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = genius }
+					NOT = { trait = quick }
+					NOT = { trait = slow }
+					NOT = { trait = imbecile }
+					mother = { OR = { trait = genius trait = quick } }
+				}
+				random = {
+					chance = 10
+					add_trait = quick
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = genius }
+					NOT = { trait = quick }
+					NOT = { trait = slow }
+					NOT = { trait = imbecile }
+					father_even_if_dead  = { OR = { trait = slow trait = imbecile } }
+				}
+				random = {
+					chance = 5
+					add_trait = imbecile
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = genius }
+					NOT = { trait = quick }
+					NOT = { trait = slow }
+					NOT = { trait = imbecile }
+					mother = { OR = { trait = slow trait = imbecile } }
+				}
+				random = {
+					chance = 5
+					add_trait = imbecile
+				}					
+			}			
+			if = {
+				limit = {
+					NOT = { trait = genius }
+					NOT = { trait = quick }
+					NOT = { trait = slow }
+					NOT = { trait = imbecile }
+					father_even_if_dead  = { OR = { trait = slow trait = imbecile } }
+				}
+				random = {
+					chance = 10
+					add_trait = slow
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = genius }
+					NOT = { trait = quick }
+					NOT = { trait = slow }
+					NOT = { trait = imbecile }
+					mother = { OR = { trait = slow trait = imbecile } }
+				}
+				random = {
+					chance = 10
+					add_trait = slow
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = inbred }
+					father_even_if_dead = {
+						ROOT = {
+							mother = {
+								is_close_relative = PREVPREV
+							}
+						}
+					}			
+				}
+				random = {
+					chance = 33
+					add_trait = inbred
+				}					
+			}			
+			if = {
+				limit = {
+					NOT = { trait = inbred }
+					father_even_if_dead  = { trait = inbred }
+				}
+				random = {
+					chance = 25
+					add_trait = inbred
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = inbred }
+					mother = { trait = inbred }
+				}
+				random = {
+					chance = 25
+					add_trait = inbred
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = strong }
+					NOT = { trait = weak }				
+					father_even_if_dead  = { trait = strong }
+				}
+				random = {
+					chance = 25
+					add_trait = strong
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = strong }
+					NOT = { trait = weak }	
+					mother = { trait = strong }
+				}
+				random = {
+					chance = 25
+					add_trait = strong
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = strong }
+					NOT = { trait = weak }	
+					father_even_if_dead  = { trait = weak }
+				}
+				random = {
+					chance = 25
+					add_trait = weak
+				}					
+			}
+			if = {
+				limit = {
+					NOT = { trait = strong }
+					NOT = { trait = weak }	
+					mother = { trait = weak }
+				}
+				random = {
+					chance = 25
+					add_trait = weak
+				}					
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+# 913 - Ibiza
+
+# County Title
+title = c_ibiza
+
+# Settlements
+max_settlements = 2
+b_formentera = castle
+b_eivissa = city
+
+# Misc
+culture = andalusian_arabic
+religion = sunni
+terrain = mountain
+
+# History
+1245.1.1 = { culture = catalan }
+1245.1.1 = { religion = catholic }

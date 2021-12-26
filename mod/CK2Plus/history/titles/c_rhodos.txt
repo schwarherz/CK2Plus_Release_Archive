@@ -1,0 +1,70 @@
+1060.1.1=
+{
+	liege="d_cibyrrhaeot"
+}
+1060.1.1=
+{
+	holder=90090
+}
+1078.1.1=
+{
+	holder=232531
+}
+1136.1.1=
+{
+	holder=34382
+}
+1156.3.31=
+{
+	holder=34387
+}
+1185.9.12=
+{
+	holder=215025
+}
+#seljuks invade
+1190.1.1 = {
+	liege = "k_rum"
+	holder= 225000
+}
+1192.1.1=
+{
+	holder=225002
+}
+1196.1.1=
+{
+	holder=225004
+}
+#reconquered during first crusade
+1197.1.1 = {
+	liege="d_cibyrrhaeot"
+	holder=215025
+}
+1210.1.1=
+{
+	holder=34393
+}
+1230.1.1={
+	liege = "e_byzantium"
+	holder=125741 
+}
+#genoa takes over
+1246.1.1={
+	liege="d_genoa"
+}
+1246.1.1={
+	holder = 144539
+}
+1290.1.1={
+	holder=463550
+}
+#given to knights
+1309.1.1={
+	liege="d_knights_hospitaler"
+}
+1309.1.1={
+	holder=147024
+}
+1319.6.18= {
+	holder=478502
+}

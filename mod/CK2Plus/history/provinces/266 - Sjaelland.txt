@@ -1,0 +1,36 @@
+# 266 - Sjaelland
+
+# County Title
+title = c_sjaelland
+
+# Settlements
+max_settlements = 6
+b_ringsted = castle
+b_roskilde = temple
+b_kobenhavn = city
+b_naestved = city
+b_kalundborg = castle
+#b_helsingor = city
+#b_vordingborg = city
+#b_slagelse = castle
+
+
+# Misc
+culture = danish
+religion = catholic
+
+# History
+
+1066.1.1 = { 
+	b_ringsted = ca_keep_1
+	b_ringsted = ca_stable_1
+	b_ringsted = ca_militia_barracks_1
+	b_ringsted = ca_wall_1
+	b_ringsted = ca_wall_2
+	b_kobenhavn = ct_wall_1
+	b_kobenhavn = ct_port_1
+	b_kobenhavn = ct_barracks_1
+	b_roskilde = tp_monastery_1
+}
+
+#1170.1.1 = { b_kalundborg = castle }

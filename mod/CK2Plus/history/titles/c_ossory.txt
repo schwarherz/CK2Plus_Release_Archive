@@ -1,0 +1,102 @@
+976.7.1={
+	holder=83210 #Gilla-Pátraic son of Donnchad son of Cellach
+}
+996.7.1={
+	holder=83212 #Donnchad son of Gilla-Pátraic
+}
+1039.7.1={
+	holder=83211 #Muirchertach son of Gilla-Pátraic
+}
+1041.7.1={
+	holder=83213 #Gilla-Pátraic son of Donnchad
+}
+1055.7.1={
+	holder=1020 #Domnall son of Gilla-Pátraic
+}
+1080.7.1={
+	holder=1022 #Donnchad son of Domnall
+}
+1090.7.1={
+	holder=83220 #Gilla-Pátraic Ruad
+}
+1103.7.1={
+	holder=83222 #Cerball
+}
+1113.7.1={
+	holder=83237 #Finn Ua Caellaide
+}
+1119.7.1={
+	holder=83221 #Donnchad Balc
+}
+1123.7.1={
+	holder=83223 #Conchobar son of Cerball
+}
+1123.12.1={
+	holder=83193 #Murchad son of Donnchad
+}
+1126.1.1={
+	holder=83223 #Conchobar son of Cerball
+}
+1126.7.1={
+	holder=83215 #Gilla-Pátraic son of Domnall
+}
+1146.7.1={
+	holder=83216 #Cerball son of Domnall
+}
+1163.7.1={
+	holder=83219 #Domnall son of Donnchad
+}
+1165.7.1={
+	holder=83217 #Domnall son of Cerball
+}
+1170.7.1={
+	liege="d_leinster"
+}
+1172.1.1={
+	liege="k_england"
+}
+1176.1.1={
+	holder=204770 #Richard de Clare
+}
+1176.4.20={
+	holder=204771 #Gilbert de Clare
+}
+1185.1.1={
+	liege="d_meath"
+}
+1185.7.1={
+	holder=204772 #Isabel de Clare wife of William Marshal
+}
+1219.7.1={
+	holder=7348 #William son of William Marshal and Isabella de Clare
+}
+1231.4.6={
+	holder=7357 #Richard son of William Marshal and Isabella de Clare
+}
+1234.4.16={
+	holder=7356 #Gilbert son of William Marshal and Isabella de Clare
+}
+1241.6.27={
+	holder=7355 #Walter son of William Marshal and Isabella de Clare
+}
+1245.11.1={
+	holder=7354 #Walter son of William Marshal and Isabella de Clare
+}
+1245.12.22={
+	holder=230526 #Maud daughter of William Marshal and Isabella de Clare
+}
+1248.3.27={
+	holder=454048 #Richard grandson of William Marshal and Isabella de Clare
+}
+1262.7.14={
+	holder=454606 #Gilbert son of Richard
+}
+1295.1.25={
+	holder=454049 #Gilbert son of Gilbert
+}
+1314.1.25={
+	holder=454111 #Edmund Bulter lord of Ormond
+}
+1321.1.1={
+	holder=454110 #James Butler earl of Ormond
+}

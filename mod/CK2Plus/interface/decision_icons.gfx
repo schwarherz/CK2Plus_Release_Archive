@@ -1,0 +1,48 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_hold_a_epic_tournament"
+		texturefile = "gfx\\interface\\decision_icon_tournament.dds"
+	}
+	spriteType = {
+		name = "GFX_feast_0"
+		texturefile = "gfx\\interface\\decision_icon_feast.dds"
+	}
+	spriteType = {
+		name = "GFX_feast_1"
+		texturefile = "gfx\\interface\\decision_icon_feast.dds"
+	}
+	spriteType = {
+		name = "GFX_feast_2"
+		texturefile = "gfx\\interface\\decision_icon_feast.dds"
+	}	
+	spriteType = {
+		name = "GFX_summer_fair_0"
+		texturefile = "gfx\\interface\\decision_icon_summerfair.dds"
+	}
+	spriteType = {
+		name = "GFX_summer_fair_1"
+		texturefile = "gfx\\interface\\decision_icon_summerfair.dds"
+	}	
+	spriteType = {
+		name = "GFX_summer_fair_2"
+		texturefile = "gfx\\interface\\decision_icon_summerfair.dds"
+	}	
+	spriteType = {
+		name = "GFX_hold_grand_hunt_0"
+		texturefile = "gfx\\interface\\decision_icon_hunting.dds"
+	}
+	spriteType = {
+		name = "GFX_hold_grand_hunt_1"
+		texturefile = "gfx\\interface\\decision_icon_hunting.dds"
+	}	
+	spriteType = {
+		name = "GFX_hold_grand_hunt_2"
+		texturefile = "gfx\\interface\\decision_icon_hunting.dds"
+	}	
+	spriteType = {
+		name = "GFX_demand_liege_title"
+		texturefile = "gfx\\interface\\decision_icon_liegetitle.dds"
+	}
+
+}

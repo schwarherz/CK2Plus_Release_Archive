@@ -1,0 +1,355 @@
+# DO NOT ALTER THE NAME OR NUMBER OF THESE!
+
+succession_laws = {
+
+	succ_gavelkind = {
+		oldest_child_opinion = -20
+		child_opinion = 30
+		dynasty_opinion = 10
+		vassal_opinion = 5
+	
+		potential = {									
+			OR = {
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
+			}
+			OR = {
+				is_primary_type_title = no
+				title = e_sunni
+				title = e_shiite
+				title = e_golden_horde
+				title = e_il-khanate
+				title = e_timurids				
+			}
+			NOT = { tier = baron }			
+		}
+		allow = {
+			OR = {
+				NOT = { has_law = succ_feudal_elective }
+				has_crown_law_title = no
+				crownlaw_title = {
+					OR = {
+						has_law = centralization_3
+						has_law = centralization_4
+					}
+				}
+			}
+		}		
+		effect = {
+			succession = gavelkind
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	
+	succ_seniority = {
+		oldest_child_opinion = -30
+		child_opinion = -20
+		dynasty_opinion = 10
+	
+		potential = {		
+			OR = {
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
+			}
+			OR = {
+				is_primary_type_title = no
+				title = e_sunni
+				title = e_shiite
+				title = e_golden_horde
+				title = e_il-khanate
+				title = e_timurids
+			}
+			NOT = { tier = baron }
+		}
+		allow = {
+			OR = {
+				has_crown_law_title = no
+				crownlaw_title = {
+					OR = {
+						has_law = centralization_1
+						has_law = centralization_2
+						has_law = centralization_3
+						has_law = centralization_4
+					}
+				}
+			}
+			OR = {
+				NOT = { has_law = succ_feudal_elective }
+				has_crown_law_title = no
+				crownlaw_title = {
+					OR = {
+						has_law = centralization_3
+						has_law = centralization_4
+					}
+				}
+			}			
+		}
+		
+		effect = {
+			succession = seniority
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	
+	succ_primogeniture = {
+		oldest_child_opinion = 30
+		child_opinion = -20
+		dynasty_opinion = -10
+		potential = {		
+			OR = {
+				is_primary_type_title = no
+				title = e_sunni
+				title = e_shiite
+				title = e_golden_horde
+				title = e_il-khanate
+				title = e_timurids
+			}
+			OR = {
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
+			}
+		}
+		allow = {
+			OR = {
+				has_crown_law_title = no
+				crownlaw_title = {
+					OR = {
+						has_law = centralization_2
+						has_law = centralization_3
+						has_law = centralization_4
+					}
+				}
+			}
+			OR = {
+				NOT = { has_law = succ_feudal_elective }
+				has_crown_law_title = no
+				crownlaw_title = {
+					OR = {
+						has_law = centralization_3
+						has_law = centralization_4
+					}
+				}
+			}			
+		}		
+		
+		effect = {
+			succession = primogeniture
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+
+	succ_feudal_elective = {
+		oldest_child_opinion = -30
+		child_opinion = -10
+		vassal_opinion = 10
+		potential = {
+			is_titular = no
+			OR = {
+				is_primary_type_title = no
+				title = e_sunni
+				title = e_shiite
+				title = e_golden_horde
+				title = e_il-khanate
+				title = e_timurids
+			}
+			NOT = { tier = baron }
+			holder_scope = { is_feudal = yes }
+		}
+		effect = {
+			succession = feudal_elective
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+
+	succ_turkish_succession = {
+		oldest_child_opinion = -20
+		child_opinion = 30
+		dynasty_opinion = 10
+		potential = {
+			holder_scope = {
+				is_feudal = yes 
+			}
+			holder_scope = { religion_group = muslim }			
+			OR = {
+				is_primary_type_title = no
+				title = e_sunni
+				title = e_shiite
+				title = e_golden_horde
+				title = e_il-khanate
+				title = e_timurids
+			}
+			NOT = { tier = baron }			
+		}
+		allow = {
+			OR = {
+				NOT = { has_law = succ_feudal_elective }
+				has_crown_law_title = no
+				crownlaw_title = {
+					OR = {
+						has_law = centralization_3
+						has_law = centralization_4
+					}
+				}
+			}		
+		}
+		effect = {
+			succession = turkish_succession
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	succ_open_elective = {
+		potential = {
+			NOT = { title = e_sunni }
+			NOT = { title = e_shiite }		
+			NOT = { title = e_golden_horde }
+			NOT = { title = e_il-khanate }
+			NOT = { title = e_timurids }		
+			OR = {
+				is_primary_type_title = yes
+				is_landless_type_title = yes
+				AND = {
+					tier = baron
+					is_feudal = no
+				}
+				holder_scope = { is_feudal = no }
+			}
+			OR = {
+				is_landless_type_title = yes
+				holder_scope = { is_theocracy = no }
+				holder_scope = { 
+					NOT = { religion = catholic } 
+				}
+			}
+		}
+		effect = {
+			succession = open_elective
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	succ_catholic_bishopric = {
+		potential = {
+			is_landless_type_title = no
+			NOT = { title = e_sunni }
+			NOT = { title = e_shiite }		
+			NOT = { title = e_golden_horde }
+			NOT = { title = e_il-khanate }
+			NOT = { title = e_timurids }			
+			OR = {
+				AND = {
+					tier = baron
+					is_theocracy = yes
+				}
+				holder_scope = { is_theocracy = yes }
+			}
+			
+			holder_scope = { religion = catholic }
+		}
+		effect = {
+			succession = catholic_bishopric
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+}
+
+gender_laws = {
+	cognatic_succession = {
+		potential = {		
+			OR = {
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
+			}
+			
+			OR = {
+				is_primary_type_title = no
+				title = e_sunni
+				title = e_shiite
+				title = e_golden_horde
+				title = e_il-khanate
+				title = e_timurids
+			}
+			NOT = { holder_scope = { religion_group = muslim }  }
+		}
+		effect = {
+			gender_succ = cognatic
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	agnatic_succession = {
+		female_dynasty_opinion = -10
+		male_dynasty_opinion = 10
+	
+		potential = {
+			always = yes
+		}
+		allow = {
+			has_law = cognatic_succession
+		}
+		effect = {
+			gender_succ = agnatic
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	true_cognatic_succession = {
+		male_dynasty_opinion = -10
+		female_dynasty_opinion = 10
+		
+		potential = {
+			OR = {
+				AND = {
+					tier = baron
+					is_feudal = yes
+				}
+				holder_scope = { is_feudal = yes }
+			}
+			
+			OR = {
+				is_primary_type_title = no
+				title = e_sunni
+				title = e_shiite
+				title = e_golden_horde
+				title = e_il-khanate
+				title = e_timurids
+			}
+			NOT = { holder_scope = { religion_group = muslim }  }
+		}
+		allow = {
+			has_law = cognatic_succession
+		}		
+		effect = {
+			gender_succ = true_cognatic
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+}

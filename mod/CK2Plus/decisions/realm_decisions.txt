@@ -1,0 +1,189 @@
+decisions = {
+
+	hold_a_epic_tournament  = {
+		potential = {
+			NOT = {
+				has_character_flag = epic_tournament
+			}
+			independent = yes
+			NOT = { is_female = yes	}
+			OR = {
+				tier = king
+				tier = emperor 
+			}
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }
+			NOT = { has_character_flag = holding_epic_tournament }	
+		}
+		allow = {
+			war = no
+			age = 16
+			prestige = 500
+			wealth = 200
+		}
+		effect = {
+			set_character_flag = epic_tournament
+			set_character_flag = holding_epic_tournament
+			wealth = -200
+			prestige = 100
+			character_event = { id = 70033 tooltip = "tournament_invite" }
+			hidden_tooltip = {
+				character_event = { id = 70001 days = 60 } # Tournament start
+				any_realm_character = {
+					limit = {
+						is_feudal = yes
+						NOT = { has_job_title = job_spiritual }
+						age = 16
+						NOT = { trait = incapable }
+						prisoner = no	
+						NOT = { is_female = yes	}
+					}
+					character_event = { id = 70000 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						wealth = 1000
+						scaled_wealth = 3.0
+					}
+				}
+			}
+		}
+	}
+	
+	buy_indulgence_for_sins = {
+		potential = {
+			religion = catholic
+			age = 16
+			demesne_size = 1
+			NOT = { has_character_flag = ask_for_indulgence }
+		}
+		allow = {
+			NOT = { has_character_modifier = indulgence_timer }
+			treasury = 50
+			is_heretic = no
+		}
+		effect = {
+			set_character_flag = ask_for_indulgence
+			set_character_flag = asked_for_indulgence
+			rightful_religious_head_scope = {
+				character_event = { id = 39250 days = 5 random = 12 tooltip = "indulgence_ask" }
+			}
+			if = {
+				limit = {
+					ai = no
+				}
+				add_character_modifier = {
+					name = indulgence_timer
+					duration = 1095
+					hidden = yes
+				}	
+			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				add_character_modifier = {
+					name = indulgence_timer
+					duration = 3650
+					hidden = yes
+				}	
+			}			
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { treasury = 200 }
+			}
+			modifier = {
+				factor = 0
+				piety = 100
+			}			
+		}
+	}
+
+	issue_declaration_of_repentance = {
+		potential = {
+			religion = catholic
+			age = 16
+			demesne_size = 1
+			NOT = { has_character_flag = ask_for_repentance }
+			rightful_religious_head_scope = {
+				ROOT = {
+					excommunicated_for = PREV
+				}
+			}
+		}
+		allow = {
+			scaled_wealth = 2.0
+			is_heretic = no
+		}
+		effect = {
+			set_character_flag = ask_for_repentance
+			rightful_religious_head_scope = {
+				character_event = { id = 39252 days = 5 random = 12 tooltip = "repentance_ask" }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					scaled_wealth = 10.0
+				}
+			}
+		}
+	}
+	
+	demand_liege_title = {
+		is_high_prio = yes
+		potential = {
+			NOT = { has_character_flag = requested_de_jure_title }
+			liege = {
+				NOT = { character = ROOT }
+				primary_title = {
+					OR = {
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+			}
+			age = 16
+			prisoner = no
+			is_playable = yes
+			tier = count
+			NOT = { trait = incapable }
+		}
+		allow = {
+			liege = {
+				opinion = {
+					who = ROOT
+					value = 25
+				}
+			}
+			liege = {
+				any_demesne_title = {
+					tier = duke
+					has_de_jure_pretension = ROOT
+					can_be_given_away = yes
+					lower_tier_than = PREV
+				}
+			}
+		}
+		effect = {
+			set_character_flag = requested_de_jure_title
+			liege = { character_event = { id = 63041 days = 4 tooltip = "EVTTOOLTIP63041" } } # "vassal_request_events.txt"
+		}
+		ai_will_do = {
+			factor = 0 # The AI is limited to the similar event 63040
+		}
+	}	
+	
+}

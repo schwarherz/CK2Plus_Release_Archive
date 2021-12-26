@@ -1,0 +1,27 @@
+# 587 - Mozhaysk
+
+# County Title
+title = c_mozhaysk
+
+# Settlements
+max_settlements = 4
+b_volgamozhaysk = castle
+b_yaransk = city
+b_shakhunya = temple
+
+#b_vakhtan = castle
+#b_varnavino = castle
+#b_kiknur = castle
+#b_tonshaevo = castle
+#b_uren = castle
+
+# Misc
+culture = komi
+religion = finnish_pagan
+
+# History
+
+1100.1.1= { culture = russian }
+1100.1.1= { religion = orthodox } 
+
+

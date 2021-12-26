@@ -1,0 +1,23 @@
+# 555 - Pereyaslavl
+
+# County Title
+title = c_pereyaslavl
+
+# Settlements
+max_settlements = 5
+b_pereyaslavl = castle
+b_hadyach = city
+b_myrhorod = city
+b_chornukhy = castle
+#b_hrebinka = castle
+#b_lokhvytsia = castle
+#b_boryspil = castle
+#b_velykisorochyntsi = castle
+
+# Misc
+culture = russian
+religion = orthodox
+
+# History
+1239.1.1 = { remove_settlement = b_myrhorod } #Mongol invasion
+1239.1.1 = { remove_settlement = b_chornukhy }

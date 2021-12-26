@@ -1,0 +1,5437 @@
+## normal scopes(including posttitle scopes) ##
+# ROOT = actor
+# FROM = recipient
+# <no scope change> = thirdparty character
+## title scopes ##
+# ROOT = actor
+# FROM = recipient
+# <no scope change> = thirdparty landed title	
+#
+# the following effects/triggers exists (example execution order: on_success->on_success_title->on_success_posttitle):
+# is_valid, is_valid_title, on_add, on_add_title, on_add_posttitle, on_success, on_success_title, on_success_posttitle, on_fail, on_fail_title, on_fail_posttitle, on_reverse_demand, on_reverse_demand_title, on_reverse_demand_posttitle
+#
+# Added on_attacker_leader_death, on_defender_leader_death and on_thirdparty_death, which all trigger when corresponding character dies
+# These three all have war scopes, which currently has the following scope changes: 
+# attacker, defender, thirdparty(only valid if thirdparty character is involved), thirdparty_title(only valid if thirdparty title is involved)
+#
+
+restore_papacy = {
+	name = CB_NAME_RESTORE_PAPACY
+	war_name = WAR_NAME_RESTORE_PAPACY
+	sprite = 1
+	truce_days = 3650
+	is_permanent = yes
+	can_ask_to_join_war = no
+	
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = { NOT = { has_minor_title = title_castellian } }
+		ROOT = {
+			religion = catholic
+			religion_authority = 0.2
+		}
+		FROM = {
+			independent = yes
+			OR = {
+				has_landed_title = c_roma
+				has_landed_title = b_roma
+				any_realm_lord = {
+					has_landed_title = c_roma
+				}
+				any_realm_lord = {
+					has_landed_title = b_roma
+				}
+			}
+			NOT = { has_landed_title = k_papal_state }
+			NOT = { any_realm_lord = { has_landed_title = k_papal_state } }			
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		FROM = {
+			if = {
+				limit = {
+					OR = {
+						has_landed_title = b_roma
+						any_realm_lord = {
+							has_landed_title = b_roma
+						}
+					}				
+				}
+				k_papal_state = {
+					holder_scope = {
+						b_roma = {
+							usurp_title_plus_barony_if_unlanded = PREV
+						}
+					}
+				}			
+			}		
+			if = {
+				limit = {
+					OR = {
+						has_landed_title = c_roma
+						any_realm_lord = {
+							has_landed_title = c_roma
+						}
+					}				
+				}
+				k_papal_state = {
+					holder_scope = {
+						c_roma = {
+							usurp_title_plus_barony_if_unlanded = PREV
+						}
+					}
+				}			
+			}			
+		}		
+		any_attacker = {
+			participation_scaled_prestige = 100
+			participation_scaled_piety = 100
+		}
+		FROM = {
+			prestige = -200		
+		}		
+	}	
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+			piety = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			piety = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 2.0
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 200
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+capture = {
+	name = CB_NAME_CAPTURE
+	war_name = WAR_NAME_CAPTURE
+	sprite = 1
+	truce_days = 1825
+	is_permanent = yes
+	can_ask_to_join_war = no
+	
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = { ai = no }
+		FROM = {
+			OR = {
+				FROM = {
+					OR = {
+						has_objective = plot_kill_character
+						has_objective = plot_kill_spouse
+						
+					}
+					plot_target_char = {
+						is_close_relative = ROOT
+					}
+				}
+				any_courtier = {
+					OR = {
+						has_objective = plot_kill_character
+						has_objective = plot_kill_spouse
+
+					}
+					plot_target_char = {
+						is_close_relative = ROOT
+					}
+				}
+				any_realm_lord = {
+					any_courtier = {
+						OR = {
+							has_objective = plot_kill_character
+							has_objective = plot_kill_spouse
+
+						}
+						plot_target_char = {
+							is_close_relative = ROOT
+						}
+					}				
+				}
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+		FROM = {	
+			any_courtier = {
+				limit = {
+					OR = {
+						has_objective = plot_kill_character
+						has_objective = plot_kill_spouse
+						
+					}
+					plot_target_char = {
+						is_close_relative = ROOT
+					}
+				}
+				imprison = ROOT
+			}
+			any_realm_lord = {
+				any_courtier = {
+					limit = {
+						OR = {
+							has_objective = plot_kill_character
+							has_objective = plot_kill_spouse
+
+						}
+						plot_target_char = {
+							is_close_relative = ROOT
+						}
+					}
+					imprison = ROOT
+				}				
+			}
+			if = {
+				limit = {
+					OR = {
+						has_objective = plot_kill_character
+						has_objective = plot_kill_spouse
+						
+					}
+					plot_target_char = {
+						is_close_relative = ROOT
+					}
+				}
+				imprison = ROOT
+			}
+		}
+	}	
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 2.0
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+claim = {
+	name = CB_NAME_CLAIM
+	war_name = WAR_NAME_CLAIM
+	sprite = 1
+	truce_days = 3650
+	hostile_against_others = yes
+	can_ask_to_join_war = no
+
+	press_claim = yes	
+
+	can_use_title = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }	
+		ROOT = { NOT = { has_minor_title = title_castellian } }
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+		ROOT = {
+			has_claim = PREV
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+	}
+	on_success_title = {
+		usurp_title_plus_barony_if_unlanded = ROOT
+		hidden_tooltip = {
+			holder_scope = { character_event = { id = 110017 } }
+		}
+	}	
+
+	on_fail_title = {
+		ROOT = {
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 2.0
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_reverse_demand_title = {
+		ROOT = {
+			remove_claim = PREV
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+
+other_claim = {
+	name = CB_NAME_CLAIM
+	war_name = WAR_NAME_OTHER_CLAIM
+	sprite = 2
+	truce_days = 3650
+	hostile_against_others = yes
+	can_ask_to_join_war = no
+
+	press_claim = yes
+
+	can_use_title = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }	
+		ROOT = { NOT = { has_minor_title = title_castellian } }
+		holder_scope = {
+			NOT = {
+				has_opinion_modifier = {
+					who = FROMFROM
+					modifier = pressed_my_claim
+				}
+			}
+		}
+		OR = {
+			ROOT = { is_female = no }
+			has_law = true_cognatic_succession
+		}
+		OR = {
+			ROOT = {
+				any_liege = {
+					character = FROMFROM
+					ai = no
+				}
+			}
+			de_jure_liege_or_above = FROMFROM
+			AND = {
+				ROOT = { primary_title = { tier = BARON } }
+				NOT = { higher_tier_than = BARON }
+			}
+			AND = {
+				ROOT = { primary_title = { tier = COUNT } }
+				NOT = { higher_tier_than = COUNT }
+			}
+			AND = {
+				ROOT = { primary_title = { tier = DUKE } }
+				NOT = { higher_tier_than = DUKE }
+			}
+			AND = {
+				ROOT = { primary_title = { tier = KING } }
+				NOT = { higher_tier_than = KING }
+			}							
+			ROOT = {
+				any_dynasty_member = {
+					character = FROMFROM
+				}
+			}
+		}		
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+
+		NOT = {
+			any_war = { # when used in title scope, checks all wars for that title
+				attacker = {
+					character = ROOT
+				}
+			}
+		}
+	}
+
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+		ROOT = {
+			has_claim = PREV
+		}
+	}
+
+	on_success = {
+		PREV = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			set_character_flag = other_claim
+			opinion = {
+				modifier = pressed_my_claim 
+				who = PREV
+			}
+		}
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}		
+	}
+
+	on_success_title = {
+		if = {
+			limit = {
+				controls_religion = yes
+				holder_scope = { religion = catholic }
+			}
+			holder_scope = {
+				abdicate_to = ROOT
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					controls_religion = no
+					NOT = { holder_scope = { religion = catholic } }
+				}
+			}
+			
+			# check if we qualify for staying in the realm & inform player of result with a tooltip
+			if = {
+				limit = {
+					OR = {
+						de_jure_liege_or_above = FROMFROM
+						AND = {
+							ROOT = { primary_title = { tier = BARON } }
+							NOT = { higher_tier_than = BARON }
+						}
+						AND = {
+							ROOT = { primary_title = { tier = COUNT } }
+							NOT = { higher_tier_than = COUNT }
+						}
+						AND = {
+							ROOT = { primary_title = { tier = DUKE } }
+							NOT = { higher_tier_than = DUKE }
+						}
+						AND = {
+							ROOT = { primary_title = { tier = KING } }
+							NOT = { higher_tier_than = KING }
+						}							
+						ROOT = {
+							any_dynasty_member = {
+								character = FROMFROM
+							}
+						}
+					}
+				}
+				# mark as staying in the realm
+				ROOT = { set_character_flag = stay_in_realm }
+				custom_tooltip = CUSTOMTOOLTIP1
+			}
+			if = {
+				limit = {
+					NOT = {
+						de_jure_liege_or_above = FROMFROM
+						AND = {
+							ROOT = { primary_title = { tier = BARON } }
+							NOT = { higher_tier_than = BARON }
+						}
+						AND = {
+							ROOT = { primary_title = { tier = COUNT } }
+							NOT = { higher_tier_than = COUNT }
+						}
+						AND = {
+							ROOT = { primary_title = { tier = DUKE } }
+							NOT = { higher_tier_than = DUKE }
+						}
+						AND = {
+							ROOT = { primary_title = { tier = KING } }
+							NOT = { higher_tier_than = KING }
+						}							
+						ROOT = {
+							any_dynasty_member = {
+								character = FROMFROM
+							}
+						}
+					}
+				}
+				custom_tooltip = CUSTOMTOOLTIP2
+			}			
+
+			usurp_title_plus_barony_if_unlanded = ROOT
+			hidden_tooltip = {
+				holder_scope = { character_event = { id = 110017 } }
+			}				
+			
+			# try and vassalise
+			hidden_tooltip = {	
+				# is a vassal
+				if = {
+					limit = {
+						ROOT= {
+							has_character_flag = stay_in_realm
+						}
+						NOT = { 
+							ROOT = {
+								is_liege_or_above = FROMFROM
+							}
+						}						
+					}
+					ROOT = {
+						set_defacto_liege = FROMFROM
+					}
+				}
+				# is not a vassal
+				if = {
+					limit = {
+						ROOT = {
+							NOT = { has_character_flag = stay_in_realm }
+						}
+					}
+					ROOT = {
+						set_defacto_liege = ROOT
+					}
+				}
+				ROOT = { clr_character_flag = stay_in_realm }
+			}
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		prestige = -100
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		prestige = -200
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 2.0
+		}
+		ROOT = {
+			prestige = -200
+			imprison = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_reverse_demand_title = {
+		ROOT = {
+			remove_claim = PREV
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+
+claim_on_liege = {
+	name = CB_NAME_CLAIM
+	war_name = WAR_NAME_CLAIM_LIEGE
+	sprite = 3
+	truce_days = 3650
+	hostile_against_others = yes
+
+	press_claim = yes
+	can_call_vassals = no
+	can_call_allies = yes
+	can_ask_to_join_war = no
+
+	can_use_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+		ROOT = {
+			has_claim = PREV
+		}
+	}	
+	
+	on_add = {
+		hidden_tooltip = {
+			FROM = {
+				any_vassal = {
+					letter_event = { id = 210000 days = 1 }
+				}
+			}
+		}
+	}		
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }	
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+			hidden_tooltip = {
+				any_war = {
+					limit = {
+						OR = {
+							using_cb = overthrow_ruler
+							using_cb = overthrow_ruler_no_calls
+							using_cb = depose_liege
+							using_cb = succession_on_liege
+							using_cb = other_succession_on_liege
+						}
+						attacker = {
+							NOT = { character = ROOT }
+						}
+						defender = {
+							character = PREVPREV
+						}	
+					}
+					end_war = invalid
+				}
+			}			
+		}		
+	}
+	
+	on_success_title = {
+		usurp_title_plus_barony_if_unlanded = ROOT
+		hidden_tooltip = {
+			holder_scope = { character_event = { id = 110017 } }
+		}		
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			imprison = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+	
+	on_attacker_leader_death = {
+		any_defender = {
+			letter_event = {
+				id = 251
+			}
+		}
+		end_war = invalid
+	}
+	
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+claim_on_liege_plot = {
+	name = CB_NAME_CLAIM
+	war_name = WAR_NAME_CLAIM_LIEGE
+	sprite = 3
+	truce_days = 3650
+	hostile_against_others = yes
+
+	press_claim = yes
+	can_call_allies = no
+	can_ask_to_join_war = no
+	
+	can_use_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}		
+	}
+	
+	on_success_title = {
+		usurp_title_plus_barony_if_unlanded = ROOT
+		hidden_tooltip = {
+			holder_scope = { character_event = { id = 110017 } }
+		}		
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			imprison = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+	
+	on_attacker_leader_death = {
+		any_defender = {
+			letter_event = {
+				id = 251
+			}
+		}
+		end_war = invalid
+	}
+	
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+other_claim_on_liege = {
+	name = CB_NAME_CLAIM
+	war_name = WAR_NAME_OTHER_CLAIM
+	sprite = 4
+	truce_days = 3650
+	hostile_against_others = yes
+
+	press_claim = yes
+	can_call_allies = yes
+	can_call_vassals = no
+	can_ask_to_join_war = no
+	
+	can_use_title = {
+		OR = {
+			ROOT = { is_female = no }
+			has_law = true_cognatic_succession
+		}
+
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+	
+	on_add = {
+		hidden_tooltip = {
+			FROM = {
+				any_vassal = {
+					letter_event = { id = 210000 days = 1 }
+				}
+			}
+		}
+	}	
+			
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+		ROOT = {
+			has_claim = PREV
+		}
+		NOT = {
+			any_war = { # when used in title scope, checks all wars for that title
+				attacker = {
+					character = ROOT
+				}
+			}
+		}
+	}
+	
+	on_success = {
+		PREV = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+		ROOT = {
+			opinion = {
+				modifier = pressed_my_claim 
+				who = PREV
+			}
+		}
+
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}		
+	}
+	
+	on_success_title = {
+		usurp_title_plus_barony_if_unlanded = ROOT
+		hidden_tooltip = {
+			holder_scope = { character_event = { id = 110017 } }
+		}		
+	}
+
+	on_success_posttitle = {
+		hidden_tooltip = {
+			if = {
+				limit = {
+					top_liege = {
+						ROOT = {
+							NOT = {
+								top_liege = {
+									character = PREVPREV
+								}
+							}
+						}
+					}
+				}
+
+				ROOT = {
+					set_defacto_liege = PREV
+				}
+			}
+
+			if = {
+				limit = {
+					top_liege = {
+						ROOT = {
+							NOT = {
+								top_liege = {
+									character = PREVPREV
+								}
+							}
+						}
+					}
+				}
+
+				ROOT = {
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		prestige = -100
+
+		ROOT = {
+			imprison = FROM
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		prestige = -200
+		imprison = FROM
+
+		ROOT = {
+			imprison = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+
+claim_all = {
+	name = CB_NAME_CLAIM_ALL
+	war_name = WAR_NAME_CLAIM_ALL
+	sprite = 5
+	truce_days = 3650
+	is_permanent = yes
+	is_claim_all = yes
+	can_ask_to_join_war = no
+
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = { NOT = { has_minor_title = title_castellian } }
+		ROOT = {
+			total_claims = {
+				who = FROM
+				value = 2
+			}
+		}
+	}
+
+	is_valid = {
+		ROOT = {
+			total_claims = {
+				who = FROM
+				value = 1 # must have at least one claim left
+			}
+		}
+	}
+
+	on_add = {
+		ROOT = {
+			any_claim = {
+				limit = {
+					holder_scope = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+				}
+				press_claim = ROOT
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			any_claim = {
+				limit = {
+					holder_scope = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+				}
+				usurp_title_plus_barony_if_unlanded = ROOT
+			}
+		}
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -150
+		}
+		any_defender = {
+			participation_scaled_prestige = 75
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 4.0
+			}
+			any_claim = {
+				limit = {
+					holder_scope = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+				}
+				ROOT = {
+					remove_claim = PREV
+				}
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 200
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+
+change_seniority_succession_law = {
+	name = CB_NAME_SENIORITY_SUCCESSION_LAW
+	war_name = WAR_NAME_SENIORITY_SUCCESSION_LAW
+	sprite = 6
+	truce_days = 3650
+	can_call_allies = no
+	can_ask_to_join_war = no
+		
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = {
+			vassal_of = FROM	
+		}
+	}
+
+	is_valid_title = {
+		NOT = {
+			has_law = succ_seniority
+		}
+		OR = {
+			tier = emperor
+			is_primary_holder_title = yes
+			AND = {
+				is_primary_holder_title = no
+				is_primary_holder_title_tier = yes
+				is_titular = no
+				holder_scope = {
+					overlord_of = ROOT
+				}
+				ROOT = {
+					primary_title = {
+						kingdom = {
+							title = PREVPREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}
+	}
+
+	on_success_title = {
+		succession_w_cooldown = seniority
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_succ_seniority
+			}
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_succ_seniority
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+
+change_primogeniture_succession_law = {
+	name = CB_NAME_PRIMOGENITURE_SUCCESSION_LAW
+	war_name = WAR_NAME_PRIOGENITURE_SUCCESSION_LAW
+	sprite = 6
+	truce_days = 3650
+	can_call_allies = no
+	can_ask_to_join_war = no
+	
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = {
+			vassal_of = FROM	
+		}
+	}
+		
+	is_valid_title = {
+		NOT = {
+			has_law = succ_primogeniture
+		}
+		OR = {
+			tier = emperor
+			is_primary_holder_title = yes
+			AND = {
+				is_primary_holder_title = no
+				is_primary_holder_title_tier = yes
+				is_titular = no
+				holder_scope = {
+					overlord_of = ROOT
+				}
+				ROOT = {
+					primary_title = {
+						kingdom = {
+							title = PREVPREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+
+	
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}
+	}
+
+	on_success_title = {
+		succession_w_cooldown = primogeniture
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_succ_primogeniture
+			}
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_succ_primogeniture
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+change_feudal_elective_succession_law = {
+	name = CB_NAME_FEUDAL_ELECTIVE_SUCCESSION_LAW
+	war_name = WAR_NAME_FEUDAL_ELECTIVE_SUCCESSION_LAW
+	sprite = 6
+	truce_days = 3650
+	can_call_allies = no
+	can_ask_to_join_war = no
+	
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = {
+			vassal_of = FROM	
+		}
+	}
+
+	is_valid_title = {
+		NOT = {
+			has_law = succ_feudal_elective
+		}
+		OR = {
+			tier = emperor
+			is_primary_holder_title = yes
+			AND = {
+				is_primary_holder_title = no
+				is_primary_holder_title_tier = yes
+				is_titular = no
+				holder_scope = {
+					overlord_of = ROOT
+				}
+				ROOT = {
+					primary_title = {
+						kingdom = {
+							title = PREVPREVPREV
+						}
+					}
+				}
+			}
+		}
+		OR = {
+			AND = {
+				tier = emperor
+				OR = {
+					ROOT = { tier = king }
+					ROOT = { tier = duke }
+				}
+			}
+			AND = {
+				tier = king
+				ROOT = { tier = duke }
+			}
+			AND = {
+				tier = duke
+				ROOT = { tier = count }
+			}
+		}
+	}
+	
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}
+	}
+	
+	on_success_title = {
+		succession_w_cooldown = feudal_elective
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_succ_feudal_elective
+			}
+		}
+	}
+	
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_succ_feudal_elective
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+
+invasion = {
+	name = CB_NAME_INVASION
+	war_name = WAR_NAME_INVASION
+	sprite = 7
+	truce_days = 3650
+	hostile_against_others = yes
+	can_ask_to_join_war = no
+	
+	can_use_title = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = { NOT = { has_minor_title = title_castellian } }	
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+	
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		any_attacker = {
+			participation_scaled_prestige = 400
+		}		
+		ROOT = {
+			give_nickname = nick_the_conqueror
+		}
+	}
+
+	on_success_title = {
+		hidden_tooltip = {	
+			FROM = {			
+				any_demesne_title = {
+					limit = {
+						kingdom = { title = PREVPREVPREV }
+					}
+					usurp_title_plus_barony_if_unlanded = ROOT
+				}			
+			}
+		}	
+		usurp_title_plus_barony_if_unlanded = ROOT
+		hidden_tooltip = {
+			holder_scope = { character_event = { id = 110017 } }
+		}		
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 8.0
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 400
+		}
+	}
+
+	on_reverse_demand_title = {
+		ROOT = {
+			remove_claim = PREV
+		}
+	}
+
+	on_attacker_leader_death = {
+		any_defender = {
+			letter_event = {
+				id = 251
+			}
+		}
+
+		end_war = whitepeace
+	}
+
+	attacker_ai_victory_worth = {
+		factor = 150
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+tribal_invasion = {
+	name = CB_NAME_TRIBAL_INVASION
+	war_name = WAR_NAME_TRIBAL_INVASION
+	sprite = 8
+	truce_days = 3650
+	hostile_against_others = yes
+	is_permanent = yes
+	check_de_jure_tier = KING
+
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = { NOT = { has_minor_title = title_castellian } } 
+		ROOT = {
+			OR = {
+				AND = {
+					mercenary = yes
+					NOT = { demesne_size = 1 }				
+				}
+				AND = {
+					OR = {
+						religion_group = pagan_group
+						has_landed_title = e_timurids
+					}
+					OR = {
+						has_landed_title = e_il-khanate
+						has_landed_title = e_golden_horde
+						has_landed_title = e_timurids
+					}			
+					OR = {	
+						any_realm_province = {
+							any_neighbor_province = {
+								owner = {
+									OR = {
+										same_realm = FROM
+										character = FROM
+									}
+								}
+							}
+						}		
+						AND = {
+							any_realm_province = { kingdom = { title = k_sicily } }
+							FROM = { any_realm_province = { kingdom = { title = k_sicily } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_france } }
+							FROM = { any_realm_province = { kingdom = { title = k_france } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_brittany } }
+							FROM = { any_realm_province = { kingdom = { title = k_brittany } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_burgundy } }
+							FROM = { any_realm_province = { kingdom = { title = k_burgundy } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_germany } }
+							FROM = { any_realm_province = { kingdom = { title = k_germany } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_netherlands } }
+							FROM = { any_realm_province = { kingdom = { title = k_netherlands } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_bohemia } }
+							FROM = { any_realm_province = { kingdom = { title = k_bohemia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_italy } }
+							FROM = { any_realm_province = { kingdom = { title = k_italy } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_georgia } }
+							FROM = { any_realm_province = { kingdom = { title = k_georgia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_thessalonika } }
+							FROM = { any_realm_province = { kingdom = { title = k_thessalonika } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_byzantium } }
+							FROM = { any_realm_province = { kingdom = { title = k_byzantium } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_armenia } }
+							FROM = { any_realm_province = { kingdom = { title = k_armenia } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_poland } }
+							FROM = { any_realm_province = { kingdom = { title = k_poland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_lithuania } }
+							FROM = { any_realm_province = { kingdom = { title = k_lithuania } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_rus } }
+							FROM = { any_realm_province = { kingdom = { title = k_rus } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_khazaria } }
+							FROM = { any_realm_province = { kingdom = { title = k_khazaria } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_persia } }
+							FROM = { any_realm_province = { kingdom = { title = k_persia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_azerbaijan } }
+							FROM = { any_realm_province = { kingdom = { title = k_azerbaijan } } }
+						}						
+						AND = {
+							any_realm_province = { kingdom = { title = k_mesopotamia } }
+							FROM = { any_realm_province = { kingdom = { title = k_mesopotamia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_serbia } }
+							FROM = { any_realm_province = { kingdom = { title = k_serbia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_croatia } }
+							FROM = { any_realm_province = { kingdom = { title = k_croatia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_bulgaria } }
+							FROM = { any_realm_province = { kingdom = { title = k_bulgaria } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_hungary } }
+							FROM = { any_realm_province = { kingdom = { title = k_hungary } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_castille } }
+							FROM = { any_realm_province = { kingdom = { title = k_castille } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_leon } }
+							FROM = { any_realm_province = { kingdom = { title = k_leon } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_aragon } }
+							FROM = { any_realm_province = { kingdom = { title = k_aragon } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_andalusia } }
+							FROM = { any_realm_province = { kingdom = { title = k_andalusia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_portugal } }
+							FROM = { any_realm_province = { kingdom = { title = k_portugal } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_spanish_galicia } }
+							FROM = { any_realm_province = { kingdom = { title = k_spanish_galicia } } }
+						}						
+						AND = {
+							any_realm_province = { kingdom = { title = k_mauretania } }
+							FROM = { any_realm_province = { kingdom = { title = k_mauretania } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_algiers } }
+							FROM = { any_realm_province = { kingdom = { title = k_algiers } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_africa } }
+							FROM = { any_realm_province = { kingdom = { title = k_africa } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_egypt } }
+							FROM = { any_realm_province = { kingdom = { title = k_egypt } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_arabia } }
+							FROM = { any_realm_province = { kingdom = { title = k_arabia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_syria } }
+							FROM = { any_realm_province = { kingdom = { title = k_syria } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_jerusalem } }
+							FROM = { any_realm_province = { kingdom = { title = k_jerusalem } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_abyssinia } }
+							FROM = { any_realm_province = { kingdom = { title = k_abyssinia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_nubia } }
+							FROM = { any_realm_province = { kingdom = { title = k_nubia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_adal } }
+							FROM = { any_realm_province = { kingdom = { title = k_adal } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_england } }
+							FROM = { any_realm_province = { kingdom = { title = k_england } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_ireland } }
+							FROM = { any_realm_province = { kingdom = { title = k_ireland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_wales } }
+							FROM = { any_realm_province = { kingdom = { title = k_wales } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_scotland } }
+							FROM = { any_realm_province = { kingdom = { title = k_scotland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_sweden } }
+							FROM = { any_realm_province = { kingdom = { title = k_sweden } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_denmark } }
+							FROM = { any_realm_province = { kingdom = { title = k_denmark } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_finland } }
+							FROM = { any_realm_province = { kingdom = { title = k_finland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_norway } }
+							FROM = { any_realm_province = { kingdom = { title = k_norway } } }
+						}				
+					}
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		ROOT = {
+			NOT = { same_realm = FROM }
+		}
+	}
+	
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_success_title = {
+		ROOT = {
+			gain_settlements_under_title = {
+				title = PREV
+				enemy = FROM
+			}			
+		}		
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 2.0
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 200
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+crusade = {
+	name = CB_NAME_CRUSADE
+	war_name = WAR_NAME_CRUSADE
+	sprite = 9
+	truce_days = 3650
+	is_permanent = yes
+	check_de_jure_tier = KING # this scans all de jure kingdoms for the counties which are held by or vassals(or below) of selected character. Only valid if is_permanent = yes
+
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = {
+			OR = {
+				ai = yes
+				piety = 500
+			}
+			NOT = {
+				has_character_modifier = crusade_timer
+			}
+		}
+		year = 1090
+		ROOT = {
+			can_call_crusade = yes
+			has_called_crusade = no
+			religion_authority = 0.2
+		}
+		FROM = {
+			NOT = { religion_group = ROOT }
+		}
+	}
+
+	can_use_title = {
+		FROM = {
+			any_realm_title = {
+				de_jure_liege_or_above = PREVPREV
+			}
+			independent = yes # Don't declare Crusades on revolters - chances are high the war will invalidate
+		}
+	}
+
+	is_valid = {
+		ROOT = {
+			can_call_crusade = yes
+		}
+		FROM = {
+			NOT = { religion_group = ROOT }
+		}
+	}
+
+	is_valid_title = {
+		FROM = {
+			any_realm_title = {
+				de_jure_liege_or_above = PREVPREV
+			}
+		}
+	}
+	
+	on_add = {
+		ROOT = {	
+			if = {
+				limit = { ai = no }
+				piety = -500
+			}
+			add_character_modifier = {
+				name = "crusade_timer"
+				duration = 7300
+				hidden = yes
+			}
+		}
+	}
+
+	on_success_title = {
+		if = {
+			limit = {	
+				has_holder = yes
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+			holder_scope = {
+				gain_settlements_under_title = {
+					title = PREVPREV
+					enemy = FROM
+					is_crusade = yes # Even if the title holder is not participating in the war, gain holdings occupied by all Crusade participants
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_holder = no
+				empire = {
+					has_holder = yes
+					holder_scope = {
+						religion = ROOT
+					}
+				}
+			}
+			empire = {
+				holder_scope = {
+					gain_settlements_under_title = {
+						title = PREVPREV
+						enemy = FROM
+						is_crusade = yes # Even if the title holder is not participating in the war, gain holdings occupied by all Crusade participants
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_holder = no
+					NOT = {
+						holder_scope = {
+							religion = ROOT
+						}
+					}
+				}
+				OR = {
+					empire = {
+						has_holder = no
+					}
+					NOT = {
+						empire = {
+							holder_scope = {
+								religion = ROOT
+							}
+						}
+					}				
+				}
+			}
+			most_participating_attacker = {
+				any_demesne_title = {
+					location = {
+						set_province_flag = previous_holding 
+					}	
+				}
+				gain_settlements_under_title = {
+					title = PREVPREV
+					enemy = FROM
+				}				
+				hidden_tooltip = { character_event = { id = 190061 } }
+			}
+		}
+		
+		any_attacker = {
+			participation_scaled_piety = 1000
+			participation_scaled_prestige = 500
+		}
+		
+		ROOT = { religion_authority = 0.1 }
+		
+		FROM = {
+			piety = -100
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			piety = -100
+			religion_authority = -0.05
+		}
+		any_defender = {
+			participation_scaled_piety = 200
+			participation_scaled_prestige = 100
+		}
+		FROM = {
+			religion_authority = 0.025
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			piety = -200
+			religion_authority = -0.1
+		}
+		FROM = {
+			piety = 100
+			religion_authority = 0.05
+		}
+		any_defender = {
+			participation_scaled_piety = 300
+			participation_scaled_prestige = 150
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+religious = {
+	name = CB_NAME_RELIGIOUS
+	war_name = WAR_NAME_RELIGIOUS
+	sprite = 9
+	truce_days = 3650
+	is_permanent = yes
+	can_ask_to_join_war = yes
+	check_de_jure_tier = DUKE
+
+	can_use = {
+		ROOT = { NOT = { has_minor_title = title_castellian } }
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = {
+			piety = 0
+			OR = {
+				piety = 200
+				ai = no
+			}			
+			NOT = { same_realm = FROM }
+			OR = {
+				NOT = { religion_group = FROM }
+				is_heresy_of = FROM
+				is_parent_religion = FROM
+			}
+			top_liege = {
+				religion = PREV					
+			}
+			NOT = { has_landed_title = e_timurids }
+			OR = {
+				NOT = { religion_group = pagan_group }
+				NOT = {
+					has_landed_title = e_il-khanate
+					has_landed_title = e_golden_horde
+				}			
+			}
+			OR = {
+				ai = no
+				piety = 500
+				any_realm_province = {
+					any_neighbor_province = {
+						owner = {
+							OR = {
+								same_realm = FROM
+								character = FROM
+							}
+						}
+					}
+				}		
+				AND = {
+					any_realm_province = { kingdom = { title = k_sicily } }
+					FROM = { any_realm_province = { kingdom = { title = k_sicily } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_france } }
+					FROM = { any_realm_province = { kingdom = { title = k_france } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_brittany } }
+					FROM = { any_realm_province = { kingdom = { title = k_brittany } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_burgundy } }
+					FROM = { any_realm_province = { kingdom = { title = k_burgundy } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_germany } }
+					FROM = { any_realm_province = { kingdom = { title = k_germany } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_netherlands } }
+					FROM = { any_realm_province = { kingdom = { title = k_netherlands } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_bohemia } }
+					FROM = { any_realm_province = { kingdom = { title = k_bohemia } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_italy } }
+					FROM = { any_realm_province = { kingdom = { title = k_italy } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_georgia } }
+					FROM = { any_realm_province = { kingdom = { title = k_georgia } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_thessalonika } }
+					FROM = { any_realm_province = { kingdom = { title = k_thessalonika } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_byzantium } }
+					FROM = { any_realm_province = { kingdom = { title = k_byzantium } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_armenia } }
+					FROM = { any_realm_province = { kingdom = { title = k_armenia } } }
+				}				
+				AND = {
+					any_realm_province = { kingdom = { title = k_poland } }
+					FROM = { any_realm_province = { kingdom = { title = k_poland } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_lithuania } }
+					FROM = { any_realm_province = { kingdom = { title = k_lithuania } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_rus } }
+					FROM = { any_realm_province = { kingdom = { title = k_rus } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_khazaria } }
+					FROM = { any_realm_province = { kingdom = { title = k_khazaria } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_persia } }
+					FROM = { any_realm_province = { kingdom = { title = k_persia } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_azerbaijan } }
+					FROM = { any_realm_province = { kingdom = { title = k_azerbaijan } } }
+				}				
+				AND = {
+					any_realm_province = { kingdom = { title = k_mesopotamia } }
+					FROM = { any_realm_province = { kingdom = { title = k_mesopotamia } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_serbia } }
+					FROM = { any_realm_province = { kingdom = { title = k_serbia } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_croatia } }
+					FROM = { any_realm_province = { kingdom = { title = k_croatia } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_bulgaria } }
+					FROM = { any_realm_province = { kingdom = { title = k_bulgaria } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_hungary } }
+					FROM = { any_realm_province = { kingdom = { title = k_hungary } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_castille } }
+					FROM = { any_realm_province = { kingdom = { title = k_castille } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_leon } }
+					FROM = { any_realm_province = { kingdom = { title = k_leon } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_aragon } }
+					FROM = { any_realm_province = { kingdom = { title = k_aragon } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_andalusia } }
+					FROM = { any_realm_province = { kingdom = { title = k_andalusia } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_portugal } }
+					FROM = { any_realm_province = { kingdom = { title = k_portugal } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_spanish_galicia } }
+					FROM = { any_realm_province = { kingdom = { title = k_spanish_galicia } } }
+				}					
+				AND = {
+					any_realm_province = { kingdom = { title = k_mauretania } }
+					FROM = { any_realm_province = { kingdom = { title = k_mauretania } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_algiers } }
+					FROM = { any_realm_province = { kingdom = { title = k_algiers } } }
+				}				
+				AND = {
+					any_realm_province = { kingdom = { title = k_africa } }
+					FROM = { any_realm_province = { kingdom = { title = k_africa } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_egypt } }
+					FROM = { any_realm_province = { kingdom = { title = k_egypt } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_arabia } }
+					FROM = { any_realm_province = { kingdom = { title = k_arabia } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_syria } }
+					FROM = { any_realm_province = { kingdom = { title = k_syria } } }
+				}				
+				AND = {
+					any_realm_province = { kingdom = { title = k_jerusalem } }
+					FROM = { any_realm_province = { kingdom = { title = k_jerusalem } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_abyssinia } }
+					FROM = { any_realm_province = { kingdom = { title = k_abyssinia } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_nubia } }
+					FROM = { any_realm_province = { kingdom = { title = k_nubia } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_adal } }
+					FROM = { any_realm_province = { kingdom = { title = k_adal } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_england } }
+					FROM = { any_realm_province = { kingdom = { title = k_england } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_ireland } }
+					FROM = { any_realm_province = { kingdom = { title = k_ireland } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_wales } }
+					FROM = { any_realm_province = { kingdom = { title = k_wales } } }
+				}				
+				AND = {
+					any_realm_province = { kingdom = { title = k_scotland } }
+					FROM = { any_realm_province = { kingdom = { title = k_scotland } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_sweden } }
+					FROM = { any_realm_province = { kingdom = { title = k_sweden } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_denmark } }
+					FROM = { any_realm_province = { kingdom = { title = k_denmark } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_finland } }
+					FROM = { any_realm_province = { kingdom = { title = k_finland } } }
+				}
+				AND = {
+					any_realm_province = { kingdom = { title = k_norway } }
+					FROM = { any_realm_province = { kingdom = { title = k_norway } } }
+				}				
+			}
+		}
+	}
+
+	is_valid = {
+		ROOT = {
+			NOT = { same_realm = FROM }
+			OR = {
+				NOT = { religion_group = FROM }
+				is_heresy_of = FROM
+				is_parent_religion = FROM
+			}
+		}
+	}
+	
+	on_add = {
+		if = {
+			limit = {
+				ROOT = {
+					NOT = { has_character_modifier = sanctioned_holy_war }
+					OR = {
+						any_realm_province = {
+							any_neighbor_province = {
+								owner = {
+									OR = {
+										same_realm = FROM
+										character = FROM
+									}
+								}
+							}
+						}		
+						AND = {
+							any_realm_province = { kingdom = { title = k_sicily } }
+							FROM = { any_realm_province = { kingdom = { title = k_sicily } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_france } }
+							FROM = { any_realm_province = { kingdom = { title = k_france } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_brittany } }
+							FROM = { any_realm_province = { kingdom = { title = k_brittany } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_burgundy } }
+							FROM = { any_realm_province = { kingdom = { title = k_burgundy } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_germany } }
+							FROM = { any_realm_province = { kingdom = { title = k_germany } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_netherlands } }
+							FROM = { any_realm_province = { kingdom = { title = k_netherlands } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_bohemia } }
+							FROM = { any_realm_province = { kingdom = { title = k_bohemia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_italy } }
+							FROM = { any_realm_province = { kingdom = { title = k_italy } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_georgia } }
+							FROM = { any_realm_province = { kingdom = { title = k_georgia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_thessalonika } }
+							FROM = { any_realm_province = { kingdom = { title = k_thessalonika } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_byzantium } }
+							FROM = { any_realm_province = { kingdom = { title = k_byzantium } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_armenia } }
+							FROM = { any_realm_province = { kingdom = { title = k_armenia } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_poland } }
+							FROM = { any_realm_province = { kingdom = { title = k_poland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_lithuania } }
+							FROM = { any_realm_province = { kingdom = { title = k_lithuania } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_rus } }
+							FROM = { any_realm_province = { kingdom = { title = k_rus } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_khazaria } }
+							FROM = { any_realm_province = { kingdom = { title = k_khazaria } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_persia } }
+							FROM = { any_realm_province = { kingdom = { title = k_persia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_azerbaijan } }
+							FROM = { any_realm_province = { kingdom = { title = k_azerbaijan } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_mesopotamia } }
+							FROM = { any_realm_province = { kingdom = { title = k_mesopotamia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_serbia } }
+							FROM = { any_realm_province = { kingdom = { title = k_serbia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_croatia } }
+							FROM = { any_realm_province = { kingdom = { title = k_croatia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_bulgaria } }
+							FROM = { any_realm_province = { kingdom = { title = k_bulgaria } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_hungary } }
+							FROM = { any_realm_province = { kingdom = { title = k_hungary } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_castille } }
+							FROM = { any_realm_province = { kingdom = { title = k_castille } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_leon } }
+							FROM = { any_realm_province = { kingdom = { title = k_leon } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_aragon } }
+							FROM = { any_realm_province = { kingdom = { title = k_aragon } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_andalusia } }
+							FROM = { any_realm_province = { kingdom = { title = k_andalusia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_portugal } }
+							FROM = { any_realm_province = { kingdom = { title = k_portugal } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_spanish_galicia } }
+							FROM = { any_realm_province = { kingdom = { title = k_spanish_galicia } } }
+						}					
+						AND = {
+							any_realm_province = { kingdom = { title = k_mauretania } }
+							FROM = { any_realm_province = { kingdom = { title = k_mauretania } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_algiers } }
+							FROM = { any_realm_province = { kingdom = { title = k_algiers } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_africa } }
+							FROM = { any_realm_province = { kingdom = { title = k_africa } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_egypt } }
+							FROM = { any_realm_province = { kingdom = { title = k_egypt } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_arabia } }
+							FROM = { any_realm_province = { kingdom = { title = k_arabia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_syria } }
+							FROM = { any_realm_province = { kingdom = { title = k_syria } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_jerusalem } }
+							FROM = { any_realm_province = { kingdom = { title = k_jerusalem } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_abyssinia } }
+							FROM = { any_realm_province = { kingdom = { title = k_abyssinia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_nubia } }
+							FROM = { any_realm_province = { kingdom = { title = k_nubia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_adal } }
+							FROM = { any_realm_province = { kingdom = { title = k_adal } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_england } }
+							FROM = { any_realm_province = { kingdom = { title = k_england } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_ireland } }
+							FROM = { any_realm_province = { kingdom = { title = k_ireland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_wales } }
+							FROM = { any_realm_province = { kingdom = { title = k_wales } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_scotland } }
+							FROM = { any_realm_province = { kingdom = { title = k_scotland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_sweden } }
+							FROM = { any_realm_province = { kingdom = { title = k_sweden } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_denmark } }
+							FROM = { any_realm_province = { kingdom = { title = k_denmark } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_finland } }
+							FROM = { any_realm_province = { kingdom = { title = k_finland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_norway } }
+							FROM = { any_realm_province = { kingdom = { title = k_norway } } }
+						}				
+					}
+				}
+			}
+			ROOT = {	
+				piety = -100
+				if = {
+					limit = { 
+						ai = yes
+						OR = {
+							religion_group = pagan_group
+							FROM = { religion_group = pagan_group }
+							culture_group = east_african
+							FROM = { culture_group = east_african }
+						}
+					}
+					piety = -100
+				}			
+			}			
+		}
+		if = {
+			limit = {
+				ROOT = {
+					NOT = { has_character_modifier = sanctioned_holy_war }
+					NOT = {
+						any_realm_province = {
+							any_neighbor_province = {
+								owner = {
+									OR = {
+										same_realm = FROM
+										character = FROM
+									}
+								}
+							}
+						}		
+						AND = {
+							any_realm_province = { kingdom = { title = k_sicily } }
+							FROM = { any_realm_province = { kingdom = { title = k_sicily } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_france } }
+							FROM = { any_realm_province = { kingdom = { title = k_france } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_brittany } }
+							FROM = { any_realm_province = { kingdom = { title = k_brittany } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_burgundy } }
+							FROM = { any_realm_province = { kingdom = { title = k_burgundy } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_germany } }
+							FROM = { any_realm_province = { kingdom = { title = k_germany } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_netherlands } }
+							FROM = { any_realm_province = { kingdom = { title = k_netherlands } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_bohemia } }
+							FROM = { any_realm_province = { kingdom = { title = k_bohemia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_italy } }
+							FROM = { any_realm_province = { kingdom = { title = k_italy } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_georgia } }
+							FROM = { any_realm_province = { kingdom = { title = k_georgia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_thessalonika } }
+							FROM = { any_realm_province = { kingdom = { title = k_thessalonika } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_byzantium } }
+							FROM = { any_realm_province = { kingdom = { title = k_byzantium } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_armenia } }
+							FROM = { any_realm_province = { kingdom = { title = k_armenia } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_poland } }
+							FROM = { any_realm_province = { kingdom = { title = k_poland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_lithuania } }
+							FROM = { any_realm_province = { kingdom = { title = k_lithuania } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_rus } }
+							FROM = { any_realm_province = { kingdom = { title = k_rus } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_khazaria } }
+							FROM = { any_realm_province = { kingdom = { title = k_khazaria } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_persia } }
+							FROM = { any_realm_province = { kingdom = { title = k_persia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_azerbaijan } }
+							FROM = { any_realm_province = { kingdom = { title = k_azerbaijan } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_mesopotamia } }
+							FROM = { any_realm_province = { kingdom = { title = k_mesopotamia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_serbia } }
+							FROM = { any_realm_province = { kingdom = { title = k_serbia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_croatia } }
+							FROM = { any_realm_province = { kingdom = { title = k_croatia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_bulgaria } }
+							FROM = { any_realm_province = { kingdom = { title = k_bulgaria } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_hungary } }
+							FROM = { any_realm_province = { kingdom = { title = k_hungary } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_castille } }
+							FROM = { any_realm_province = { kingdom = { title = k_castille } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_leon } }
+							FROM = { any_realm_province = { kingdom = { title = k_leon } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_aragon } }
+							FROM = { any_realm_province = { kingdom = { title = k_aragon } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_andalusia } }
+							FROM = { any_realm_province = { kingdom = { title = k_andalusia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_portugal } }
+							FROM = { any_realm_province = { kingdom = { title = k_portugal } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_spanish_galicia } }
+							FROM = { any_realm_province = { kingdom = { title = k_spanish_galicia } } }
+						}					
+						AND = {
+							any_realm_province = { kingdom = { title = k_mauretania } }
+							FROM = { any_realm_province = { kingdom = { title = k_mauretania } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_algiers } }
+							FROM = { any_realm_province = { kingdom = { title = k_algiers } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_africa } }
+							FROM = { any_realm_province = { kingdom = { title = k_africa } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_egypt } }
+							FROM = { any_realm_province = { kingdom = { title = k_egypt } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_arabia } }
+							FROM = { any_realm_province = { kingdom = { title = k_arabia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_syria } }
+							FROM = { any_realm_province = { kingdom = { title = k_syria } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_jerusalem } }
+							FROM = { any_realm_province = { kingdom = { title = k_jerusalem } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_abyssinia } }
+							FROM = { any_realm_province = { kingdom = { title = k_abyssinia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_nubia } }
+							FROM = { any_realm_province = { kingdom = { title = k_nubia } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_adal } }
+							FROM = { any_realm_province = { kingdom = { title = k_adal } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_england } }
+							FROM = { any_realm_province = { kingdom = { title = k_england } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_ireland } }
+							FROM = { any_realm_province = { kingdom = { title = k_ireland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_wales } }
+							FROM = { any_realm_province = { kingdom = { title = k_wales } } }
+						}				
+						AND = {
+							any_realm_province = { kingdom = { title = k_scotland } }
+							FROM = { any_realm_province = { kingdom = { title = k_scotland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_sweden } }
+							FROM = { any_realm_province = { kingdom = { title = k_sweden } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_denmark } }
+							FROM = { any_realm_province = { kingdom = { title = k_denmark } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_finland } }
+							FROM = { any_realm_province = { kingdom = { title = k_finland } } }
+						}
+						AND = {
+							any_realm_province = { kingdom = { title = k_norway } }
+							FROM = { any_realm_province = { kingdom = { title = k_norway } } }
+						}				
+					}
+				}
+			}
+			ROOT = {	
+				piety = -250
+				if = {
+					limit = { 
+						ai = yes
+					}
+					piety = -250
+				}			
+			}			
+		}	
+		if = {
+			limit = {
+				ROOT = { has_character_modifier = sanctioned_holy_war }
+			}
+			ROOT = { remove_character_modifier = sanctioned_holy_war }
+		}
+	}
+	
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }	
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}		
+		ROOT = {
+			religion_authority = 0.01
+		}
+		FROM = {
+			religion_authority = -0.01
+		}		
+	}
+
+	on_success_title = {
+		ROOT = {
+			gain_settlements_under_title = {
+				title = PREV
+				enemy = FROM
+			}			
+		}		
+	}
+
+	on_fail = {
+		ROOT = {
+			piety = -100
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			piety = -200
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 2.0
+			}
+			religion_authority = -0.01
+		}
+		any_defender = {
+			participation_scaled_prestige = 200
+			participation_scaled_piety = 100
+		}	
+		FROM = {
+			religion_authority = 0.01
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+excommunicated_ruler = {
+	name = CB_NAME_EXCOMMUNICATED_RULER
+	war_name = WAR_NAME_EXCOMMUNICATED_RULER
+	sprite = 11
+	truce_days = 3650
+	can_ask_to_join_war = no
+	
+	is_permanent = yes
+
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = { NOT = { has_minor_title = title_castellian } } 
+		FROM = {
+			excommunicated_for = ROOT
+		}
+	}
+
+	is_valid = {
+		FROM = {
+			excommunicated_for = ROOT
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			if = {
+				limit = {
+					FROM = {
+						primary_title = {
+							tier = BARON
+						}
+					}
+				}
+				any_attacker = {
+					participation_scaled_prestige = 50
+					participation_scaled_piety = 10
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						primary_title = {
+							tier = COUNT
+						}
+					}
+				}
+				any_attacker = {
+					participation_scaled_prestige = 100
+					participation_scaled_piety = 20
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						primary_title = {
+							tier = DUKE
+						}
+					}
+				}
+				any_attacker = {
+					participation_scaled_prestige = 150
+					participation_scaled_piety = 30
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						primary_title = {
+							tier = KING
+						}
+					}
+				}
+				any_attacker = {
+					participation_scaled_prestige = 200
+					participation_scaled_piety = 50
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						primary_title = {
+							tier = EMPEROR
+						}
+					}
+				}
+				any_attacker = {
+					participation_scaled_prestige = 200
+					participation_scaled_piety = 50
+				}
+			}
+		}
+
+		FROM = {
+			excommunicate = no
+			prestige = -500
+			rightful_religious_head_scope = {
+				opinion = {
+					who = PREV
+					modifier = opinion_repented_sins
+				}
+			}
+
+			current_heir = {
+				prestige = -500
+				inherit = PREV				
+			}
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			piety = -50
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			piety = -100
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 2.0
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+bid_for_independence = {
+	name = CB_NAME_INDEPENDENCE
+	war_name = WAR_NAME_INDEPENDENCE
+	sprite = 12
+	truce_days = 3650
+	
+	can_ask_to_join_war = no
+	is_permanent = yes
+	is_independence = yes
+	can_call_allies = yes
+
+	can_use = {
+		ROOT = {
+			de_facto_liege = FROM
+		}
+		
+		FROM = {
+			NOT = {
+				any_war = {
+					attacker = {
+						character = FROM
+					}
+					OR = {
+						using_cb = bid_for_independence
+						using_cb = depose_liege
+					}
+				}
+			}
+		}
+	}
+
+	is_valid = {	
+		ROOT = {
+			OR = {
+				liege = {
+					character = PREV # either independent
+				}
+				liege = { 
+					FROM = { 
+						is_liege_or_above = PREV # or have shared liege
+					}
+				}
+			}
+		}
+		FROM = {
+			higher_tier_than = ROOT
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		if = {
+			limit = {
+				FROM = {
+					independent = no
+				}
+			}
+			FROM = {
+				liege = {
+					ROOT = {
+						set_defacto_liege = PREV
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				FROM = {
+					independent = yes
+				}
+			}
+			ROOT = {
+				set_defacto_liege = ROOT
+			}
+		}
+
+		any_attacker = {
+			participation_scaled_prestige = 200
+		}
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}			
+		}			
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		FROM = {
+			remove_opinion = {
+				modifier = opinion_traitor
+				who = ROOT
+			}
+		}		
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			prisoner = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 150
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+depose_liege = {
+	name = CB_NAME_DEPOSE_LIEGE
+	war_name = WAR_NAME_DEPOSE_LIEGE
+	sprite = 12
+	truce_days = 3650
+	
+	can_ask_to_join_war = no
+	is_permanent = yes
+	can_call_vassals = no
+
+	can_use = {
+		ROOT = {
+			de_facto_liege = FROM
+		}
+		
+		# cannot depose 
+		FROM = {
+			NOT = {
+				any_war = {
+					OR = {
+						AND = { # Cannot depose liege when our liege is currently involved in such a war
+							attacker = {
+								character = FROM
+							}
+							OR = {
+								using_cb = bid_for_independence
+								using_cb = depose_liege
+							}
+						}
+						AND = { # Cannot depose liege if someone else is already deposing liege
+							defender = {
+								character = FROM
+							}
+							using_cb = depose_liege
+						}
+					}
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		ROOT = {
+			OR = {
+				liege = {
+					character = PREV # either independent
+				}
+				liege = { 
+					FROM = { 
+						is_liege_or_above = PREV # or have shared liege
+					}
+				}
+			}
+		}
+		FROM = {
+			higher_tier_than = ROOT
+		}
+	}
+	
+	on_add = {
+		hidden_tooltip = {
+			FROM = {
+				any_vassal = {
+					letter_event = { id = 210000 days = 1 }
+				}
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		FROM = {
+			prestige = -500
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+			hidden_tooltip = {
+				any_war = {
+					limit = {
+						OR = {
+							using_cb = overthrow_ruler
+							using_cb = overthrow_ruler_no_calls
+							using_cb = depose_liege
+							using_cb = succession_on_liege
+							using_cb = other_succession_on_liege
+						}
+						attacker = {
+							NOT = { character = ROOT }
+						}
+						defender = {
+							character = PREVPREV
+						}	
+					}
+					end_war = invalid
+				}
+			}
+			current_heir = {
+				prestige = -200			
+			}
+			abdicate = yes
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			prisoner = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 150
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+overthrow_ruler = {
+	name = CB_NAME_OVERTHROWRULER
+	war_name = WAR_NAME_OVERTHROWRULER
+	sprite = 12
+	truce_days = 3650
+	
+	is_revolt_cb = yes
+	can_call_vassals = yes
+
+	can_use = {
+		ROOT = {
+			de_facto_liege = FROM
+		}
+	}
+
+	is_valid = {
+		ROOT = {
+			OR = {
+				liege = {
+					character = PREV # either independent
+				}
+				liege = { 
+					FROM = { 
+						is_liege_or_above = PREV # or have shared liege
+					}
+				}
+			}
+		}
+		FROM = {
+			higher_tier_than = ROOT
+		}
+	}
+	
+	on_add = {
+		hidden_tooltip = {
+			FROM = {
+				any_vassal = {
+					letter_event = { id = 210000 days = 1 }
+				}
+			}
+		}
+	}	
+
+	on_success = {
+		ROOT = {
+			primary_title = {
+				add_pressed_claim = FROM	
+			}
+		}
+		FROM = {
+			prestige = -500
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law = centralization_2
+				}
+			}
+			current_heir = {
+				prestige = -200			
+			}
+			abdicate = yes			
+			hidden_tooltip = {
+				any_war = {
+					limit = {
+						OR = {
+							using_cb = overthrow_ruler
+							using_cb = overthrow_ruler_no_calls
+							using_cb = depose_liege
+							using_cb = succession_on_liege
+							using_cb = other_succession_on_liege
+						}
+						attacker = {
+							NOT = { character = ROOT }
+						}
+						defender = {
+							character = PREVPREV
+						}	
+					}
+					end_war = invalid
+				}
+			}			
+		}
+		any_attacker = {
+			participation_scaled_prestige = 250
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			prestige = -200
+			prisoner = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 150
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+overthrow_ruler_no_calls = {
+	name = CB_NAME_OVERTHROWRULER_NC
+	war_name = WAR_NAME_OVERTHROWRULER_NC
+	sprite = 12
+	truce_days = 3650
+	
+	is_revolt_cb = yes
+	can_call_vassals = no
+	can_ask_to_join_war = no
+
+	can_use = {
+		ROOT = {
+			de_facto_liege = FROM
+		}
+	}
+
+	is_valid = {
+		ROOT = {
+			OR = {
+				liege = {
+					character = PREV # either independent
+				}
+				liege = { 
+					FROM = { 
+						is_liege_or_above = PREV # or have shared liege
+					}
+				}
+			}
+		}
+		FROM = {
+			higher_tier_than = ROOT
+		}
+	}
+	
+	on_add = {
+		hidden_tooltip = {
+			FROM = {
+				any_vassal = {
+					letter_event = { id = 210000 days = 1 }
+				}
+			}
+		}
+	}	
+
+	on_success = {
+		ROOT = {
+			prestige = 200
+			primary_title = {
+				add_pressed_claim = FROM	
+			}
+		}
+		FROM = {
+			prestige = -500
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law = centralization_2
+				}
+			}
+			current_heir = {
+				prestige = -200			
+			}
+			abdicate = yes			
+			hidden_tooltip = {
+				any_war = {
+					limit = {
+						OR = {
+							using_cb = overthrow_ruler
+							using_cb = overthrow_ruler_no_calls
+							using_cb = depose_liege
+							using_cb = succession_on_liege
+							using_cb = other_succession_on_liege
+						}
+						attacker = {
+							NOT = { character = ROOT }
+						}
+						defender = {
+							character = PREVPREV
+						}	
+					}
+					end_war = invalid
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		
+		FROM = {
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			prestige = -200
+			prisoner = FROM
+		}
+		FROM = {
+			prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 150
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+succession_on_liege = {
+	name = CB_NAME_SUCCESSION
+	war_name = WAR_NAME_SUCCESSION
+	sprite = 13
+	truce_days = 3650
+	
+	can_ask_to_join_war = no
+	hostile_against_others = yes
+	press_claim = yes
+	can_call_vassals = no
+
+	allow_whitepeace = no
+
+	is_valid_title = {
+		FROM = {
+			has_landed_title = PREV
+		}
+	}
+	
+	on_add = {
+		hidden_tooltip = {
+			FROM = {
+				any_vassal = {
+					letter_event = { id = 210000 days = 1 }
+				}
+			}
+		}
+	}
+	
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		FROM = {
+			hidden_tooltip = {
+				any_war = {
+					limit = {
+						OR = {
+							using_cb = overthrow_ruler
+							using_cb = overthrow_ruler_no_calls
+							using_cb = depose_liege
+							using_cb = succession_on_liege
+							using_cb = other_succession_on_liege
+						}
+						attacker = {
+							NOT = { character = ROOT }
+						}
+						defender = {
+							character = PREVPREV
+						}	
+					}
+					end_war = invalid
+				}
+			}		
+			any_demesne_title = {
+				limit = {
+					tier = FROM
+				}
+				usurp_title_plus_barony_if_unlanded = ROOT
+				hidden_tooltip = {
+					holder_scope = { character_event = { id = 110017 } }
+				}				
+			}			
+		}	
+	}
+	
+	on_success_title = {
+		if = {
+			limit = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+				NOT = { has_law = centralization_0 }
+			}
+			if = {
+				limit = { has_law = centralization_1 }
+				add_law_w_cooldown = centralization_0
+			}
+			if = {
+				limit = { has_law = centralization_2 }
+				add_law_w_cooldown = centralization_1
+			}
+			if = {
+				limit = { has_law = centralization_3 }
+				add_law_w_cooldown = centralization_2
+			}
+			if = {
+				limit = { has_law = centralization_4 }
+				add_law_w_cooldown = centralization_3
+			}
+		}
+	}
+
+	on_attacker_leader_death = {
+		any_defender = {
+			letter_event = {
+				id = 251
+			}
+		}
+		
+		end_war = invalid
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			imprison = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_reverse_demand_title = {
+		ROOT = {
+			remove_claim = PREV
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 150
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+other_succession = {
+	name = CB_NAME_SUCCESSION
+	war_name = WAR_NAME_OTHER_SUCCESSION
+	sprite = 14
+	truce_days = 3650
+	
+	can_ask_to_join_war = no
+	hostile_against_others = yes
+	press_claim = yes
+	can_call_vassals = no
+
+	allow_whitepeace = no
+
+	can_use_title = {
+		ROOT = { NOT = { has_minor_title = title_castellian } } 
+		OR = {
+			ROOT = { is_female = no }
+			has_law = true_cognatic_succession
+		}
+	}
+
+	is_valid_title = {
+
+		FROM = {
+			has_landed_title = PREV
+		}
+	}
+
+	on_success = {
+		PREV = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		FROM = {
+			hidden_tooltip = {
+				any_war = {
+					limit = {
+						OR = {
+							using_cb = overthrow_ruler
+							using_cb = overthrow_ruler_no_calls
+							using_cb = depose_liege
+							using_cb = succession_on_liege
+							using_cb = other_succession_on_liege
+						}
+						attacker = {
+							NOT = { character = PREVPREVPREV }
+						}
+						defender = {
+							character = PREVPREV
+						}	
+					}
+					end_war = invalid
+				}
+			}		
+		}
+		ROOT = {		
+			opinion = {
+				modifier = pressed_my_claim 
+				who = PREV
+			}
+		}
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_success_title = {
+		usurp_title_plus_barony_if_unlanded = ROOT
+		hidden_tooltip = {
+			holder_scope = { character_event = { id = 110017 } }
+		}		
+		if = {
+			limit = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+				NOT = { has_law = centralization_0 }
+			}
+			if = {
+				limit = { has_law = centralization_1 }
+				add_law_w_cooldown = centralization_0
+			}
+			if = {
+				limit = { has_law = centralization_2 }
+				add_law_w_cooldown = centralization_1
+			}
+			if = {
+				limit = { has_law = centralization_3 }
+				add_law_w_cooldown = centralization_2
+			}
+			if = {
+				limit = { has_law = centralization_4 }
+				add_law_w_cooldown = centralization_3
+			}
+		}
+	}
+
+	on_success_posttitle = {
+		hidden_tooltip = {
+			if = {
+				limit = {
+					top_liege = {
+						ROOT = {
+							NOT = {
+								top_liege = {
+									character = PREVPREV
+								}
+							}
+						}
+					}
+				}
+
+				ROOT = {
+					set_defacto_liege = PREV
+				}
+			}
+
+			if = {
+				limit = {
+					top_liege = {
+						ROOT = {
+							NOT = {
+								top_liege = {
+									character = PREVPREV
+								}
+							}
+						}
+					}
+				}
+
+				ROOT = {
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+	}
+
+
+	on_defender_leader_death = {
+		any_attacker = {
+			letter_event = {
+				id = 251
+			}
+		}
+		
+		end_war = invalid
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		prestige = -200
+
+		ROOT = {
+			imprison = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_reverse_demand_title = {
+		ROOT = {
+			remove_claim = PREV
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+
+other_succession_on_liege = {
+	name = CB_NAME_SUCCESSION
+	war_name = WAR_NAME_OTHER_SUCCESSION
+	sprite = 15
+	truce_days = 3650
+	
+	can_ask_to_join_war = no
+	hostile_against_others = yes
+	press_claim = yes
+	can_call_vassals = no
+
+	allow_whitepeace = no
+
+	can_use_title = {
+		OR = {
+			ROOT = { is_female = no }
+			has_law = true_cognatic_succession
+		}
+	}
+
+	is_valid_title = {
+		FROM = {
+			has_landed_title = PREV
+		}
+	}
+	
+	on_add = {
+		hidden_tooltip = {
+			FROM = {
+				any_vassal = {
+					letter_event = { id = 210000 days = 1 }
+				}
+			}
+		}
+	}	
+
+	on_success = {
+		PREV = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		FROM = {
+			hidden_tooltip = {
+				any_war = {
+					limit = {
+						OR = {
+							using_cb = overthrow_ruler
+							using_cb = overthrow_ruler_no_calls
+							using_cb = depose_liege
+							using_cb = succession_on_liege
+							using_cb = other_succession_on_liege
+						}
+						attacker = {
+							NOT = { character = PREVPREVPREV }
+						}
+						defender = {
+							character = PREVPREV
+						}	
+					}
+					end_war = invalid
+				}
+			}		
+		}	
+		ROOT = {
+			opinion = {
+				modifier = pressed_my_claim 
+				who = PREV
+			}
+		}
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_success_title = {
+		usurp_title_plus_barony_if_unlanded = ROOT
+		hidden_tooltip = {
+			holder_scope = { character_event = { id = 110017 } }
+		}		
+		if = {
+			limit = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+				NOT = { has_law = centralization_0 }
+			}
+			if = {
+				limit = { has_law = centralization_1 }
+				add_law_w_cooldown = centralization_0
+			}
+			if = {
+				limit = { has_law = centralization_2 }
+				add_law_w_cooldown = centralization_1
+			}
+			if = {
+				limit = { has_law = centralization_3 }
+				add_law_w_cooldown = centralization_2
+			}
+			if = {
+				limit = { has_law = centralization_4 }
+				add_law_w_cooldown = centralization_3
+			}
+		}
+	}
+
+	on_success_posttitle = {
+		hidden_tooltip = {
+			if = {
+				limit = {
+					top_liege = {
+						ROOT = {
+							NOT = {
+								top_liege = {
+									character = PREVPREV
+								}
+							}
+						}
+					}
+				}
+
+				ROOT = {
+					set_defacto_liege = PREV
+				}
+			}
+
+			if = {
+				limit = {
+					top_liege = {
+						ROOT = {
+							NOT = {
+								top_liege = {
+									character = PREVPREV
+								}
+							}
+						}
+					}
+				}
+
+				ROOT = {
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+	}
+
+	on_defender_leader_death = {
+		any_attacker = {
+			letter_event = {
+				id = 251
+			}
+		}
+
+		end_war = invalid
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		prestige = -200
+		imprison = FROM
+
+		ROOT = {
+			imprison = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_reverse_demand_title = {
+		ROOT = {
+			remove_claim = PREV
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+
+dejure_county_claim = {
+	name = CB_NAME_DEJURECLAIM
+	war_name = WAR_NAME_DEJURECLAIM
+	sprite = 16
+	truce_days = 1825
+	hostile_against_others = yes
+	is_permanent = yes
+	check_all_titles = yes # if permanent, setting this to true will check against all of someones titles, including vassal held titles
+	press_claim = yes
+	can_ask_to_join_war = no
+
+	can_use_title = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = { NOT = { has_minor_title = title_castellian } }
+		tier = count
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+		
+		OR = {
+			kingdom = {
+				holder = ROOT
+			}
+			empire = {
+				holder = ROOT
+			}
+			dejure_liege_title = {
+				holder = ROOT
+			}
+		}
+
+		NOT = {
+			OR = {
+				ROOT = {
+					has_landed_title = PREV
+				}
+				holder_scope = {
+					is_liege_or_above = ROOT
+				}
+			}
+		}
+	}
+
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+	
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+	}
+
+	on_success_title = {
+		if = {
+			limit = {
+				holder_scope = {
+					tier = count
+					NOT = {
+						num_of_count_titles = 2
+					}
+				}
+			}
+
+			holder_scope = {
+				set_defacto_liege = ROOT
+			}
+		}
+
+		if = {
+			limit = {
+				holder_scope = {
+					OR = {
+						higher_tier_than = count
+						num_of_count_titles = 2
+					}
+				}
+			}
+
+			usurp_title_plus_barony_if_unlanded = ROOT
+			any_de_jure_vassal_title = { # take all baronies under the one we're fighting for
+				limit = {
+					has_holder = yes
+					NOT = {
+						de_facto_liege = PREV
+					}
+					holder_scope = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+				}
+
+				usurp_title_plus_barony_if_unlanded = ROOT
+			}
+		}
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_fail_title = {
+		ROOT = {
+			prestige = -100
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 2.0
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+dejure_barony_claim = {
+	name = CB_NAME_DEJUREBARONYCLAIM
+	war_name = WAR_NAME_DEJUREBARONYCLAIM
+	sprite = 16
+	truce_days = 1825
+	hostile_against_others = yes
+	is_permanent = yes
+	check_all_titles = yes # if permanent, setting this to true will check against all of someones titles, including vassal held titles
+	press_claim = yes
+	can_ask_to_join_war = no
+
+	can_use_title = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = { NOT = { has_minor_title = title_castellian } }
+		tier = baron
+		dejure_liege_title = {
+			AND = {
+				has_holder = yes
+				ROOT = {
+					has_landed_title = PREV
+				}
+			}
+		}
+
+		NOT = {
+			OR = {
+				ROOT = {
+					has_landed_title = PREV
+				}
+				holder_scope = {
+					is_liege_or_above = ROOT
+				}
+			}
+		}
+
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+
+		NOT = {
+			holder_scope = {
+				liege = {
+					ROOT = {
+						liege = {
+							character = PREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+	
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+	}
+
+	on_success_title = {
+		usurp_title_plus_barony_if_unlanded = ROOT
+		any_attacker = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	on_fail_title = {
+		ROOT = {
+			prestige = -50
+		}
+		any_defender = {
+			participation_scaled_prestige = 25
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -100
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 2.0
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+other_dejure_barony_claim = {
+	name = CB_NAME_DEJUREBARONYCLAIM
+	war_name = WAR_NAME_OTHER_DEJUREBARONYCLAIM
+	sprite = 16
+	truce_days = 1825
+	hostile_against_others = yes
+	is_permanent = yes
+	check_all_titles = yes # if permanent, setting this to true will check against all of someones titles, including vassal held titles
+	check_actor_direct_vassals = yes # checks direct vassals of actor, currently only enabled if check_all_titles is set to yes
+	press_claim = yes
+	can_ask_to_join_war = no
+
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		NOT = {
+			ROOT = {
+				character = PREV
+			}
+		}
+	}
+
+	can_use_title = {
+		ROOT = { NOT = { has_minor_title = title_castellian } }
+		tier = baron
+
+		dejure_liege_title = {
+			AND = {
+				has_holder = yes
+				ROOT = {
+					has_landed_title = PREV
+				}
+			}
+		}
+
+		NOT = {
+			OR = {
+				ROOT = {
+					has_landed_title = PREV
+				}
+				holder_scope = {
+					is_liege_or_above = ROOT
+				}
+			}
+		}
+
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+
+		NOT = {
+			holder_scope = {
+				liege = {
+					ROOT = {
+						liege = {
+							character = PREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	on_success = {
+		PREV = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			opinion = {
+				modifier = pressed_my_claim 
+				who = PREV
+			}
+		}
+		any_attacker = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	on_success_title = {
+		usurp_title_plus_barony_if_unlanded = ROOT
+	}
+
+	on_fail = {
+		prestige = -50
+		ROOT = {
+			prestige = -50
+		}
+		any_defender = {
+			participation_scaled_prestige = 25
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		prestige = -50
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 2.0
+		}
+		ROOT = {
+			prestige = -50
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+
+other_dejure_county_claim = {
+	name = CB_NAME_DEJURECLAIM
+	war_name = WAR_NAME_OTHER_DEJURECLAIM
+	sprite = 16
+	truce_days = 1825
+	hostile_against_others = yes
+	is_permanent = yes
+	check_all_titles = yes # if permanent, setting this to true will check against all of someones titles, including vassal held titles
+	check_actor_direct_vassals = yes # checks direct vassals of actor, currently only enabled if check_all_titles is set to yes
+	press_claim = yes
+	can_ask_to_join_war = no
+
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		NOT = {
+			ROOT = {
+				character = PREV
+			}
+		}
+	}
+
+	can_use_title = {
+		ROOT = { NOT = { has_minor_title = title_castellian } }
+		tier = count
+		dejure_liege_title = {
+			AND = {
+				has_holder = yes
+				ROOT = {
+					has_landed_title = PREV
+				}
+			}
+		}
+
+		NOT = {
+			OR = {
+				ROOT = {
+					has_landed_title = PREV
+				}
+				holder_scope = {
+					is_liege_or_above = ROOT
+				}
+			}
+		}
+
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	on_success = {
+		PREV = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			opinion = {
+				modifier = pressed_my_claim 
+				who = PREV
+			}
+		}
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	on_success_title = {
+		if = {
+			limit = {
+				holder_scope = {
+					tier = count
+					NOT = {
+						num_of_count_titles = 2
+					}
+				}
+			}
+
+			holder_scope = {
+				set_defacto_liege = ROOT
+			}
+		}
+
+		if = {
+			limit = {
+				holder_scope = {
+					OR = {
+						higher_tier_than = count
+						num_of_count_titles = 2
+					}
+				}
+			}
+
+			usurp_title_plus_barony_if_unlanded = ROOT
+			any_de_jure_vassal_title = { # take all baronies under the one we're fighting for
+				limit = {
+					has_holder = yes
+					NOT = {
+						de_facto_liege = PREV
+					}
+					holder_scope = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+				}
+
+				usurp_title_plus_barony_if_unlanded = ROOT
+			}
+		}
+	}
+
+	on_fail = {
+		prestige = -50
+		ROOT = {
+			prestige = -100
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		prestige = -100
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 2.0
+		}
+		ROOT = {
+			prestige = -200
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+change_gavelkind_succession_law = {
+	name = CB_NAME_GAVELKIND_SUCCESSION_LAW
+	war_name = WAR_NAME_GAVELKIND_SUCCESSION_LAW
+	sprite = 6
+	truce_days = 3650
+	can_call_allies = no
+	can_ask_to_join_war = no
+	
+	can_use = {
+		ROOT = {
+			vassal_of = FROM	
+		}
+	}
+
+	is_valid_title = {
+		NOT = {
+			has_law = succ_gavelkind
+		}
+		OR = {
+			tier = emperor
+			is_primary_holder_title = yes
+			AND = {
+				is_primary_holder_title = no
+				is_primary_holder_title_tier = yes
+				is_titular = no
+				holder_scope = {
+					overlord_of = ROOT
+				}
+				ROOT = {
+					primary_title = {
+						kingdom = {
+							title = PREVPREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}
+	}
+
+	on_success_title = {
+		succession_w_cooldown = gavelkind
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_succ_gavelkind
+			}
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_succ_gavelkind
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+lower_crown_authority_law = {
+	name = CB_NAME_LOWER_CROWN_AUTHORITY_LAW
+	war_name = WAR_NAME_LOWER_CROWN_AUTHORITY_LAW
+	sprite = 6
+	truce_days = 3650
+	can_call_allies = no
+	can_ask_to_join_war = no
+	
+	can_use = {
+		ROOT = {
+			vassal_of = FROM
+			crownlaw_title = {
+				holder_scope = { independent = yes }
+				OR = {
+					tier = king
+					tier = emperor
+				}
+				OR = {
+					has_law = centralization_1
+					has_law = centralization_2
+					has_law = centralization_3
+					has_law = centralization_4
+				}
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			opinion = {
+				modifier = opinion_lowered_crown_authority
+				who = FROM
+				months = 120
+			}
+		}
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}		
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_lower_crown_authority
+			}
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_lower_crown_authority
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+change_title_revoke_law = {
+	name = CB_NAME_CHANGE_TITLE_REVOKE_LAW
+	war_name = WAR_NAME_CHANGE_TITLE_REVOKE_LAW
+	sprite = 6
+	truce_days = 3650
+	can_call_allies = no
+	can_ask_to_join_war = no
+	
+	can_use = {
+		ROOT = {
+			vassal_of = FROM
+			crownlaw_title = {
+				holder_scope = { independent = yes }
+				OR = {
+					tier = king
+					tier = emperor
+				}
+				has_law = revoke_law_1
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			opinion = {
+				modifier = opinion_lowered_crown_authority
+				who = FROM
+				months = 120
+			}
+		}
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}		
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_institute_hereditary_titles
+			}
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+		}
+		hidden_tooltip = {
+			ROOT = {
+				cancel_objective = plot_institute_hereditary_titles
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+coastal_republic = {
+	name = CB_NAME_COASTAL_REPUBLIC
+	war_name = WAR_NAME_COASTAL_REPUBLIC
+	sprite = 1
+	truce_days = 3650
+	is_permanent = yes
+	check_all_titles = yes
+	can_ask_to_join_war = no
+
+	can_use = {
+		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
+		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
+		ROOT = { NOT = { has_minor_title = title_castellian } }
+		ROOT = {
+			prestige = 200
+			is_republic = yes
+			capital_scope = {
+				port = yes
+			}
+		}
+	}
+
+	can_use_title = {
+		tier = COUNT
+		location = {
+			port = yes
+		}
+	}
+
+	is_valid = {
+		ROOT = {
+			is_republic = yes
+			capital_scope = {
+				port = yes
+			}
+		}
+	}
+
+	is_valid_title = {
+		tier = COUNT
+		location = {
+			port = yes
+		}
+	}
+	
+	on_add = {
+		ROOT = { prestige = -200 }
+	}
+	
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+	}
+
+	on_success_title = {
+		any_de_jure_vassal_title = {
+			limit = {
+				holding_type = CITY
+			}
+			usurp_title = ROOT	
+		}
+		usurp_title = ROOT
+		any_attacker = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 4.0
+			}
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+
+weaken_vassal_plot = {
+	name = CB_NAME_WEAKEN_VASSAL
+	war_name = WAR_NAME_WEAKEN_VASSAL
+	sprite = 3
+	truce_days = 3650
+	hostile_against_others = yes
+
+	press_claim = yes
+	can_call_allies = no
+	can_ask_to_join_war = no
+
+	can_use_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }	
+		any_attacker = {
+			participation_scaled_prestige = 100
+		}
+		FROM = {
+			any_demesne_title = { # All titles
+				limit = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					NOT = { has_law = centralization_0 }
+				}
+				if = {
+					limit = { has_law = centralization_1 }
+					add_law_w_cooldown = centralization_0
+				}
+				if = {
+					limit = { has_law = centralization_2 }
+					add_law_w_cooldown = centralization_1
+				}
+				if = {
+					limit = { has_law = centralization_3 }
+					add_law_w_cooldown = centralization_2
+				}
+				if = {
+					limit = { has_law = centralization_4 }
+					add_law_w_cooldown = centralization_3
+				}
+			}
+		}
+	}
+	
+	on_success_title = {
+		FROM = {
+			random_vassal = {
+				limit = {
+					is_primary_heir = no
+					tier = count
+					any_demesne_title = {
+						tier = count
+						dejure_liege_title = {
+							ROOT = {
+								plot_target_title = {
+									title = PREVPREV
+								}
+							}
+						}
+					}
+				}
+				grant_title = PREVPREV
+			}
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	on_reverse_demand = {
+		FROM = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
+		ROOT = {
+			prestige = -200
+			imprison = FROM
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+	
+	on_attacker_leader_death = {
+		any_defender = {
+			letter_event = {
+				id = 251
+			}
+		}
+		end_war = invalid
+	}
+	
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+claim_on_vassal_plot = {
+	name = CB_NAME_CLAIM_VASSAL
+	war_name = WAR_NAME_CLAIM_VASSAL
+	sprite = 3
+	truce_days = 3650
+	hostile_against_others = yes
+
+	press_claim = yes
+	can_call_allies = no
+	can_attack_vassals = yes
+
+	can_use_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				de_facto_liege = ROOT
+			}
+		}
+	}
+
+	is_valid_title = {
+		FROM = {
+			has_landed_title = PREV
+		}
+		ROOT = {
+			has_objective = plot_gain_vassal_title
+		}
+	}
+
+	on_success = {
+		ROOT = {
+			prestige = 50
+		}
+	}
+	
+	on_success_title = {
+		usurp_title_only = ROOT
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		any_defender = {
+			participation_scaled_prestige = 50
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			prestige = -200
+		}
+		any_defender = {
+			participation_scaled_prestige = 100
+		}
+	}
+	
+	on_attacker_leader_death = {
+		any_defender = {
+			letter_event = {
+				id = 251
+			}
+		}
+		end_war = invalid
+	}
+	
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}

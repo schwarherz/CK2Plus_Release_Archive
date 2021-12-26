@@ -1,0 +1,1043 @@
+#Hunter
+character_event = {
+	id = 200000
+	desc = "EVTDESC200000"
+	picture = "GFX_evt_hunt"
+	
+	min_age = 25
+	prisoner = no
+	only_men = yes
+	capable_only = yes
+
+	trigger = {
+		NOT = {
+			lifestyle_traits = 1
+			trait = incapable
+		}
+		martial = 5
+		NOT = { 
+			trait = craven 
+			trait = slothful
+			trait = weak
+		}		
+		OR = {
+			trait = brave
+			trait = strong
+			trait = diligent
+			check_variable = { which = "lifestyle_hunter" value = 0.99 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000	
+		modifier = {
+			factor = 0.5
+			has_objective = obj_adopt_a_lifestyle
+		}		
+		modifier = {
+			factor = 0.75
+			trait = diligent
+		}			
+		modifier = {
+			factor = 0.75
+			trait = brave
+		}	
+		modifier = {
+			factor = 0.75
+			trait = strong
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 10
+		}
+		modifier = {
+			factor = 0.75
+			martial = 15
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 20
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hunter" value = 0.99 }
+		}		
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hunter" value = 1.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hunter" value = 2.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hunter" value = 3.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hunter" value = 4.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hunter" value = 5.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hunter" value = 6.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hunter" value = 7.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hunter" value = 8.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hunter" value = 9.99 }
+		}		
+	}
+	
+	option = {
+		name = "EVTOPTA200000"
+		add_trait = hunter
+	}
+}
+
+#Falconer
+character_event = {
+	id = 200001
+	desc = "EVTDESC200001"
+	picture = "GFX_evt_falconing"
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		NOT = {
+			lifestyle_traits = 1
+			trait = incapable
+		}
+		diplomacy = 5
+		NOT = { 
+			trait = shy
+			trait = slothful
+		}		
+		OR = {
+			trait = diligent
+			trait = gregarious
+			check_variable = { which = "lifestyle_falconer" value = 0.99 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000	
+		modifier = {
+			factor = 0.5
+			has_objective = obj_adopt_a_lifestyle
+		}
+		modifier = {
+			factor = 0.75
+			trait = diligent
+		}		
+		modifier = {
+			factor = 0.75
+			trait = gregarious
+		}		
+		modifier = {
+			factor = 0.75
+			diplomacy = 10
+		}
+		modifier = {
+			factor = 0.75
+			diplomacy = 15
+		}		
+		modifier = {
+			factor = 0.75
+			diplomacy = 20
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_falconer" value = 0.99 }
+		}		
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_falconer" value = 1.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_falconer" value = 2.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_falconer" value = 3.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_falconer" value = 4.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_falconer" value = 5.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_falconer" value = 6.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_falconer" value = 7.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_falconer" value = 8.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_falconer" value = 9.99 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA200001"
+		add_trait = falconer
+	}
+}
+
+#Scholar
+character_event = {
+	id = 200002
+	desc = "EVTDESC200002"
+	picture = "GFX_evt_monk"
+
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		NOT = {
+			lifestyle_traits = 1
+			trait = incapable
+		}
+		learning = 5
+		NOT = { 
+			trait = gregarious
+			trait = slothful
+		}		
+		OR = {
+			trait = shy
+			trait = quick
+			trait = genius
+			check_variable = { which = "lifestyle_scholar" value = 0.99 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000	
+		modifier = {
+			factor = 0.5
+			has_objective = obj_adopt_a_lifestyle
+		}
+		modifier = {
+			factor = 0.75
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.75
+			trait = quick
+		}	
+		modifier = {
+			factor = 0.75
+			trait = genius
+		}			
+		modifier = {
+			factor = 0.75
+			trait = shy
+		}		
+		modifier = {
+			factor = 0.75
+			learning = 10
+		}
+		modifier = {
+			factor = 0.75
+			learning = 15
+		}		
+		modifier = {
+			factor = 0.75
+			learning = 20
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_scholar" value = 0.99 }
+		}		
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_scholar" value = 1.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_scholar" value = 2.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_scholar" value = 3.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_scholar" value = 4.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_scholar" value = 5.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_scholar" value = 6.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_scholar" value = 7.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_scholar" value = 8.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_scholar" value = 9.99 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA200002"
+		add_trait = scholar
+	}
+}
+
+#Mystic
+character_event = {
+	id = 200003
+	desc = "EVTDESC200003"
+	picture = "GFX_evt_comet"
+
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		NOT = {
+			lifestyle_traits = 1
+			trait = incapable
+		}
+		intrigue = 5
+		NOT = { 
+			trait = honest
+			trait = trusting
+			trait = slothful
+		}		
+		OR = {
+			trait = paranoid
+			trait = deceitful
+			check_variable = { which = "lifestyle_mystic" value = 0.99 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000	
+		modifier = {
+			factor = 0.5
+			has_objective = obj_adopt_a_lifestyle
+		}
+		modifier = {
+			factor = 0.75
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.75
+			trait = deceitful
+		}			
+		modifier = {
+			factor = 0.75
+			trait = paranoid
+		}		
+		modifier = {
+			factor = 0.75
+			intrigue = 10
+		}
+		modifier = {
+			factor = 0.75
+			intrigue = 15
+		}		
+		modifier = {
+			factor = 0.75
+			intrigue = 20
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_mystic" value = 0.99 }
+		}		
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_mystic" value = 1.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_mystic" value = 2.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_mystic" value = 3.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_mystic" value = 4.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_mystic" value = 5.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_mystic" value = 6.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_mystic" value = 7.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_mystic" value = 8.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_mystic" value = 9.99 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA200003"
+		add_trait = mystic
+	}
+}
+
+#Impaler
+character_event = {
+	id = 200004
+	desc = "EVTDESC200004"
+	picture = "GFX_evt_pale_rider"
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		NOT = {
+			lifestyle_traits = 1
+			trait = incapable
+		}
+		intrigue = 5
+		NOT = { 
+			trait = kind
+			trait = charitable
+			trait = slothful
+		}		
+		OR = {
+			trait = cruel
+			trait = wroth
+			check_variable = { which = "lifestyle_impaler" value = 0.99 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000	
+		modifier = {
+			factor = 0.5
+			has_objective = obj_adopt_a_lifestyle
+		}
+		modifier = {
+			factor = 0.75
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.75
+			trait = cruel
+		}	
+		modifier = {
+			factor = 0.75
+			trait = wroth
+		}					
+		modifier = {
+			factor = 0.75
+			intrigue = 10
+		}
+		modifier = {
+			factor = 0.75
+			intrigue = 15
+		}		
+		modifier = {
+			factor = 0.75
+			intrigue = 20
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_impaler" value = 0.99 }
+		}		
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_impaler" value = 1.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_impaler" value = 2.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_impaler" value = 3.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_impaler" value = 4.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_impaler" value = 5.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_impaler" value = 6.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_impaler" value = 7.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_impaler" value = 8.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_impaler" value = 9.99 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA200004"
+		add_trait = impaler
+	}
+}
+
+#Gardener
+character_event = {
+	id = 200005
+	desc = "EVTDESC200005"
+	picture = "GFX_evt_garden"
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		NOT = {
+			lifestyle_traits = 1
+			trait = incapable
+		}
+		stewardship = 5
+		NOT = { 
+			trait = greedy
+			trait = wroth
+			trait = slothful
+		}		
+		OR = {
+			trait = temperate
+			trait = patient
+			trait = diligent
+			check_variable = { which = "lifestyle_gardener" value = 0.99 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000	
+		modifier = {
+			factor = 0.5
+			has_objective = obj_adopt_a_lifestyle
+		}
+		modifier = {
+			factor = 0.75
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.75
+			trait = patient
+		}	
+		modifier = {
+			factor = 0.75
+			trait = temperate
+		}					
+		modifier = {
+			factor = 0.75
+			stewardship = 10
+		}
+		modifier = {
+			factor = 0.75
+			stewardship = 15
+		}		
+		modifier = {
+			factor = 0.75
+			stewardship = 20
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_gardener" value = 0.99 }
+		}		
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_gardener" value = 1.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_gardener" value = 2.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_gardener" value = 3.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_gardener" value = 4.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_gardener" value = 5.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_gardener" value = 6.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_gardener" value = 7.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_gardener" value = 8.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_gardener" value = 9.99 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA200005"
+		add_trait = gardener
+
+	}
+}
+
+#Poet
+character_event = {
+	id = 200006
+	desc = "EVTDESC200006"
+	picture = "GFX_evt_library"
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		NOT = {
+			lifestyle_traits = 1
+			trait = incapable
+		}
+		diplomacy = 5
+		NOT = { 
+			trait = cruel
+			trait = greedy
+			trait = shy
+			trait = slothful
+		}		
+		OR = {
+			trait = kind
+			trait = charitable
+			trait = gregarious
+			check_variable = { which = "lifestyle_poet" value = 0.99 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000	
+		modifier = {
+			factor = 0.5
+			has_objective = obj_adopt_a_lifestyle
+		}
+		modifier = {
+			factor = 0.75
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.75
+			trait = kind
+		}	
+		modifier = {
+			factor = 0.75
+			trait = charitable
+		}	
+		modifier = {
+			factor = 0.75
+			trait = gregarious
+		}		
+		modifier = {
+			factor = 0.75
+			diplomacy = 10
+		}
+		modifier = {
+			factor = 0.75
+			diplomacy = 15
+		}		
+		modifier = {
+			factor = 0.75
+			diplomacy = 20
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_poet" value = 0.99 }
+		}		
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_poet" value = 1.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_poet" value = 2.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_poet" value = 3.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_poet" value = 4.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_poet" value = 5.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_poet" value = 6.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_poet" value = 7.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_poet" value = 8.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_poet" value = 9.99 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA200006"
+		add_trait = poet
+
+	}
+}
+
+#Celibate
+character_event = {
+	id = 200007
+	desc = "EVTDESC200007"
+	picture = "GFX_evt_heretic"
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		NOT = {
+			lifestyle_traits = 1
+			trait = incapable
+		}
+		trait = chaste
+		OR = {
+			trait = temperate
+			trait = shy		
+			check_variable = { which = "lifestyle_celibate" value = 0.99 }
+		}
+		NOT = {
+			trait = lustful
+			trait = gluttonous
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000	
+		modifier = {
+			factor = 0.5
+			has_objective = obj_adopt_a_lifestyle
+		}
+		modifier = {
+			factor = 0.75
+			trait = temperate
+		}	
+		modifier = {
+			factor = 0.75
+			trait = shy
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_celibate" value = 0.99 }
+		}		
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_celibate" value = 1.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_celibate" value = 2.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_celibate" value = 3.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_celibate" value = 4.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_celibate" value = 5.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_celibate" value = 6.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_celibate" value = 7.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_celibate" value = 8.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_celibate" value = 9.99 }
+		}
+	}	
+	
+	option = {
+		name = "EVTOPTA200007"
+		add_trait = celibate
+	}		
+}
+
+#Hedonist
+character_event = {
+	id = 200008
+	desc = "EVTDESC200008"
+	picture = "GFX_evt_brothel"
+	
+	min_age = 25
+	prisoner = no
+	capable_only = yes
+
+	trigger = {
+		NOT = {
+			lifestyle_traits = 1
+			trait = incapable
+		}
+		trait = lustful
+		OR = {
+			trait = drunkard
+			trait = gluttonous
+			check_variable = { which = "lifestyle_hedonist" value = 0.99 }
+		}
+		NOT = {
+			trait = temperate
+			trait = chaste
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000	
+		modifier = {
+			factor = 0.5
+			has_objective = obj_adopt_a_lifestyle
+		}
+		modifier = {
+			factor = 0.75
+			trait = drunkard
+		}	
+		modifier = {
+			factor = 0.75
+			trait = gluttonous
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hedonist" value = 0.99 }
+		}		
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hedonist" value = 1.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hedonist" value = 2.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hedonist" value = 3.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hedonist" value = 4.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hedonist" value = 5.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hedonist" value = 6.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hedonist" value = 7.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hedonist" value = 8.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_hedonist" value = 9.99 }
+		}
+	}	
+	
+	option = {
+		name = "EVTOPTA200008"
+		add_trait = hedonist
+	}		
+}
+
+#Duelist
+character_event = {
+	id = 200009
+	desc = "EVTDESC200009"
+	picture = "GFX_evt_joust"
+	
+	min_age = 25
+	prisoner = no
+	only_men = yes
+	capable_only = yes
+
+	trigger = {
+		NOT = {
+			lifestyle_traits = 1
+			trait = incapable
+		}
+		martial = 5
+		NOT = { 
+			trait = content
+			trait = kind
+			trait = craven
+			trait = weak
+		}		
+		OR = {
+			trait = wroth
+			trait = brave
+			trait = strong
+			trait = ambitious
+			check_variable = { which = "lifestyle_duelist" value = 0.99 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2000	
+		modifier = {
+			factor = 0.5
+			has_objective = obj_adopt_a_lifestyle
+		}
+		modifier = {
+			factor = 0.75
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.75
+			trait = wroth
+		}	
+		modifier = {
+			factor = 0.75
+			trait = brave
+		}	
+		modifier = {
+			factor = 0.75
+			trait = strong
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 10
+		}
+		modifier = {
+			factor = 0.75
+			martial = 15
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 20
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_duelist" value = 0.99 }
+		}		
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_duelist" value = 1.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_duelist" value = 2.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_duelist" value = 3.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_duelist" value = 4.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_duelist" value = 5.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_duelist" value = 6.99 }
+		}	
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_duelist" value = 7.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_duelist" value = 8.99 }
+		}
+		modifier = {
+			factor = 0.75
+			check_variable = { which = "lifestyle_duelist" value = 9.99 }
+		}
+	}	
+
+	option = {
+		name = "EVTOPTA200009"
+		add_trait = duelist
+	}
+}

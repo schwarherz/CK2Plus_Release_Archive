@@ -1,0 +1,1222 @@
+############
+# EDUCATION
+############
+
+# INTRIGUE OUTCOMES
+amateurish_plotter = { #1
+	education = yes
+	ai_zeal = -50
+	
+	intrigue = 1
+	stewardship = -1
+}
+flamboyant_schemer = { #2 
+	education = yes
+	ai_zeal = -50
+	
+	intrigue = 3
+	stewardship = -1
+}
+intricate_webweaver = { #3
+	education = yes
+	ai_zeal = -50
+	
+	intrigue = 6
+	martial = 1
+	diplomacy = 1
+	stewardship = -1
+}
+elusive_shadow = { #4
+	education = yes
+	ai_zeal = -50
+	
+	intrigue = 9
+	martial = 2
+	diplomacy = 2
+	stewardship = -1
+}
+
+# DIPLOMACY OUTCOMES
+naive_appeaser = { #5
+	education = yes
+	ai_zeal = -50
+	
+	diplomacy = 1
+	martial = -1
+}
+underhanded_rogue = { #6
+	education = yes
+	ai_zeal = -50
+	
+	diplomacy = 3
+	martial = -1
+}
+charismatic_negotiator = { #7
+	education = yes
+	ai_zeal = -50
+	
+	diplomacy = 6
+	intrigue = 1
+	learning = 1
+	martial = -1
+	
+}
+grey_eminence = { #8
+	education = yes
+	ai_zeal = -50
+	
+	diplomacy = 9
+	intrigue = 2
+	learning = 2
+	martial = -1
+}
+
+# STEWARDSHIP OUTCOMES
+indulgent_wastrel = { #9
+	education = yes
+	ai_zeal = -50
+	
+	stewardship = 1
+	diplomacy = -1
+}
+thrifty_clerk = { #10
+	education = yes
+	ai_zeal = -50
+	
+	stewardship = 3
+	diplomacy = -1
+}
+fortune_builder = { #11	
+	education = yes
+	ai_zeal = -50
+	
+	stewardship = 6
+	martial = 1
+	learning = 1
+	diplomacy = -1
+}
+midas_touched = { #12
+	education = yes
+	ai_zeal = -50
+	
+	stewardship = 9
+	martial = 2
+	learning = 2
+	diplomacy = -1
+}
+
+# MARTIAL OUTCOMES
+misguided_warrior = { #13
+	education = yes
+	ai_zeal = -50
+	
+	martial = 1
+	learning = -1
+}
+tough_soldier = { #14
+	education = yes
+	ai_zeal = -50
+	
+	martial = 3
+	learning = -1
+}
+skilled_tactician = { #15
+	education = yes
+	ai_zeal = -50
+	
+	martial = 6
+	intrigue = 1
+	stewardship = 1
+	learning = -1
+}
+brilliant_strategist = { #16
+	education = yes
+	ai_zeal = -50
+	
+	martial = 9
+	intrigue = 2
+	stewardship = 2
+	learning = -1
+}
+
+# ECCLESIASTICAL OUTCOMES
+detached_priest = { #17
+	priest = yes
+	education = yes
+	ai_zeal = -50
+	
+	learning = 1
+	intrigue = -1
+}
+martial_cleric = { #18
+	priest = yes
+	education = yes
+	ai_zeal = -50
+	
+	learning = 3
+	intrigue = -1
+}
+scholarly_theologian = { #19
+	priest = yes
+	education = yes
+	ai_zeal = -50
+	
+	learning = 6
+	diplomacy = 1
+	stewardship = 1
+	intrigue = -1
+}
+mastermind_theologian = { #20
+	priest = yes
+	education = yes
+	ai_zeal = -50
+	
+	learning = 9
+	diplomacy = 2
+	stewardship = 2
+	intrigue = -1
+}
+
+########################
+# HEALTH - Events
+########################
+
+stressed = { #21
+	is_health = yes
+	intrigue = -1
+	stewardship = -1
+	health = -1
+	fertility = -0.1
+	opposites = {
+		depressed
+	}
+	customizer = no
+}
+depressed = { #22
+	is_health = yes
+	diplomacy = -2
+	stewardship = -2
+	martial = -2
+	intrigue = -2
+	health = -2
+	fertility = -0.2
+	opposites = {
+		stressed
+	}	
+	customizer = no
+}
+lunatic = { #23
+	is_health = yes
+	# Highly event driven
+	
+	diplomacy = -8
+	stewardship = -8
+	martial = -8
+	intrigue = -8	
+	
+	vassal_opinion = -10
+	sex_appeal_opinion = -10
+	
+	ai_rationality = -50
+	customizer = no
+}
+possessed = { #24
+	is_health = yes
+	
+	diplomacy = -4
+	stewardship = -4
+	martial = -4
+	intrigue = -4	
+	
+	vassal_opinion = -20
+	sex_appeal_opinion = -20	
+	
+	# Highly event driven
+	customizer = no
+}
+ill = { #25
+	is_health = yes
+	is_illness = yes
+	
+	opposites =  {
+		pneumonic
+	}
+	
+	martial = -1
+	health = -2
+	fertility = -0.1
+	customizer = no
+}
+pneumonic = { #26
+	is_health = yes
+	is_illness = yes
+	
+	opposites =  {
+		ill
+	}
+	
+	diplomacy = -2
+	stewardship = -2
+	martial = -2
+	intrigue = -2
+	learning = -2
+	health = -4
+	fertility = -0.5
+	customizer = no
+}
+syphilitic = { #27
+	is_health = yes
+	is_illness = yes
+	
+	sex_appeal_opinion = -20
+	
+	diplomacy = -1
+	stewardship = -1
+	martial = -1
+	intrigue = -1
+	learning = -1
+	
+	health = -1
+	fertility = -0.2
+	customizer = no
+}
+leper = { #28
+	is_health = yes
+	is_illness = yes
+	diplomacy = -2
+	health = -2
+	fertility = -1
+	
+	sex_appeal_opinion = -40	
+	vassal_opinion = -20
+	customizer = no
+}
+wounded = { #29
+	is_health = yes
+	
+	opposites =  {
+		maimed
+	}
+	
+	martial = -1
+	health = -1
+	customizer = no
+}
+maimed = { #30
+	is_health = yes
+	
+	opposites =  {
+		wounded
+	}
+	
+	sex_appeal_opinion = -10
+	
+	martial = -2
+	health = -2
+	customizer = no
+}
+infirm = { #31
+	is_health = yes
+
+	diplomacy = -4
+	intrigue = -4
+	stewardship = -4
+	martial = -4
+	learning = -4
+	
+	health = -1
+	fertility = -0.3
+	
+	ai_rationality = -10
+	customizer = no
+}
+incapable = { #32
+	is_health = yes
+	
+	incapacitating = yes # Will need a regent
+	
+	diplomacy = -100
+	intrigue = -100
+	stewardship = -100
+	martial = -100
+	learning = -100
+	
+	health = -3
+	fertility = -10
+	customizer = no
+}
+drunkard = { #33
+	is_health = yes
+	
+	stewardship = -2
+	learning = -2
+	health = -1
+	
+	same_opinion = 10
+	church_opinion = -10
+	sex_appeal_opinion = -10
+	
+	ai_rationality = -5
+}
+has_tuberculosis = { #34
+	is_epidemic = yes
+	is_illness = yes
+	
+	martial = -1
+	health = -3
+	fertility = -0.2
+	customizer = no
+}
+has_typhoid_fever = { #35
+	is_epidemic = yes
+	is_illness = yes
+	
+	martial = -1
+	health = -3
+	fertility = -0.2
+	customizer = no
+}
+has_typhus = { #36
+	is_epidemic = yes
+	is_illness = yes
+	
+	martial = -1
+	health = -3
+	fertility = -0.2
+	customizer = no
+}
+has_bubonic_plague = { #37
+	is_epidemic = yes
+	is_illness = yes
+	
+	diplomacy = -4
+	stewardship = -4
+	martial = -4
+	intrigue = -4
+	learning = -4
+	health = -6
+	fertility = -0.6
+	customizer = no
+}
+has_measles = { #38
+	is_epidemic = yes
+	is_illness = yes
+	
+	martial = -1
+	health = -3
+	fertility = -0.2
+	customizer = no
+}
+has_small_pox = { #39
+	is_epidemic = yes
+	is_illness = yes
+
+	martial = -1
+	health = -4
+	fertility = -0.3
+	customizer = no
+}
+
+############################
+# SOFT STATUS - Undecided
+############################
+
+crusader = { #40
+	martial = 2
+	
+	church_opinion = 25
+	same_opinion = 30
+	customizer = no
+}
+
+############################
+# HARD STATUS - DO NOT ADD OR REMOVE!
+############################
+
+bastard = { #41
+	diplomacy = -2
+	same_opinion = 10
+	customizer = no
+}
+twin = { #42
+	twin_opinion = 50
+	customizer = no
+}
+legit_bastard = { #43
+	diplomacy = -2
+}
+pregnant = { #44
+	spouse_opinion = 25
+	customizer = no
+}
+excommunicated = { #45
+	diplomacy = -5
+	same_religion_opinion = -30
+	customizer = no
+}
+kinslayer = { #46
+	diplomacy = -3
+	dynasty_opinion = -30
+}
+homosexual = { #47
+	sex_appeal_opinion = 30
+	vassal_opinion = -10
+	
+	fertility = -0.2
+}
+
+#####################
+# POSSIBLY CONGENITAL
+#####################
+
+clubfooted = { #48
+	congenital = yes
+	birth = yes
+	
+	sex_appeal_opinion = -10
+	
+	martial = -2
+}
+harelip = { #49
+	congenital = yes
+	birth = yes
+	
+	sex_appeal_opinion = -10
+	
+	diplomacy = -2
+}
+hunchback = { #50
+	congenital = yes
+	birth = yes
+	
+	sex_appeal_opinion = -20
+	
+	vassal_opinion = -5
+	
+	martial = -2
+}
+lisp = { #51
+	congenital = yes
+	birth = yes
+	
+	sex_appeal_opinion = -10
+	
+	diplomacy = -2
+}
+stutter = { #52
+	congenital = yes
+	birth = yes
+	
+	diplomacy = -2
+}
+fair = { #53
+	congenital = yes
+	birth = yes
+	
+	sex_appeal_opinion = 30
+	
+	opposites =  {
+		ugly
+	}
+	
+	diplomacy = 1
+	fertility = 0.1
+}
+ugly = { #54
+	congenital = yes
+	birth = yes
+	
+	sex_appeal_opinion = -30
+	
+	opposites =  {
+		fair
+	}
+	
+	diplomacy = -1
+	fertility = -0.1
+}
+dwarf = { #55  
+	congenital = yes
+	birth = yes
+	
+	opposites =  {
+		tall
+	}	
+	
+	sex_appeal_opinion = -20
+	same_opinion = 20
+	
+	martial = -2
+}
+genius = { #56
+	congenital = yes
+	birth = yes
+	
+	opposites =  {
+		imbecile
+		slow
+		quick
+	}
+	
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	martial = 5
+	learning = 5
+	
+	ai_rationality = 30
+	
+}
+quick = { #57
+	congenital = yes
+	birth = yes
+	
+	opposites =  {
+		imbecile
+		slow
+		genius
+	}
+	
+	diplomacy = 3
+	intrigue = 3
+	stewardship =3
+	martial = 3
+	learning = 3
+	
+	ai_rationality = 15
+}
+slow = { #58
+	congenital = yes
+	birth = yes
+	
+	opposites =  {
+		imbecile
+		quick
+		genius
+	}
+	
+	sex_appeal_opinion = -10
+	diplomacy = -3
+	intrigue = -3
+	stewardship = -3
+	martial = -3
+	learning = -3
+	
+	ai_rationality = -15
+}
+imbecile = { #59
+	congenital = yes
+	birth = yes
+	
+	sex_appeal_opinion = -20
+	
+	opposites =  {
+		slow
+		quick
+		genius
+	}
+	
+	diplomacy = -8
+	intrigue = -8
+	stewardship = -8
+	martial = -8
+	learning = -8
+	
+	ai_rationality = -30
+	
+	vassal_opinion = -10
+}
+inbred = { #60
+	inbred = yes
+	congenital = yes
+	
+	sex_appeal_opinion = -30
+	
+	fertility = -0.4
+	health = -2
+	diplomacy = -5
+	intrigue = -5
+	stewardship = -5
+	martial = -5
+	learning = -5
+	
+	vassal_opinion = -10
+	
+	ai_rationality = -20
+}
+strong = { #61
+	congenital = yes
+	birth = yes
+	
+	opposites =  {
+		weak
+	}
+	
+	martial = 1
+	health = 2
+	fertility = 0.1
+	
+	sex_appeal_opinion = 5
+	vassal_opinion = 5
+}
+weak = { #62
+	congenital = yes
+	birth = yes
+	
+	opposites =  {
+		strong
+	}
+	
+	health = -1
+	martial = -2
+	fertility = -0.1
+	
+	sex_appeal_opinion = -5
+	vassal_opinion = -5
+}
+
+################################################
+# LIFESTYLE - Events - only 1 lifestyle (adult)
+################################################
+
+celibate = { #63
+	lifestyle = yes
+	
+	opposites =  {
+		hedonist
+		lustful
+	}
+	fertility = -10
+	
+	church_opinion = 10
+	opposite_opinion = -20
+	same_opinion = 10
+	
+	monthly_character_piety = 0.25
+}
+hedonist = { #64
+	lifestyle = yes
+	
+	opposites =  {
+		celibate
+		chaste
+	}
+
+	fertility = 0.2
+	
+	opposite_opinion = -20
+	same_opinion = 10
+	
+	church_opinion = -10
+	
+	monthly_character_piety = -0.25
+}
+scholar = { #65
+	lifestyle = yes
+	
+	learning = 2
+	
+	same_opinion = 10
+}
+gardener = { #66
+	lifestyle = yes
+	
+	stewardship = 2
+	
+	same_opinion = 10
+}
+mystic = { #67
+	lifestyle = yes
+	
+	intrigue = 2
+	
+	same_opinion = 10
+}
+impaler = { #68
+	lifestyle = yes
+	
+	martial = 1
+	intrigue = 1
+	
+	opposites = {
+		kind
+		charitable
+	}	
+	
+	same_opinion = 10
+	
+	ai_honor = -15
+}
+duelist = { #69
+	lifestyle = yes
+	
+	martial = 2
+	
+	same_opinion = 10
+}
+hunter = { #70
+	lifestyle = yes
+	
+	martial = 1
+	monthly_character_prestige = 0.25
+	
+	same_opinion = 10
+}
+poet = { #71
+	lifestyle = yes
+	
+	diplomacy = 1
+	sex_appeal_opinion = 10
+	
+	same_opinion = 10
+}
+falconer = { #72
+	lifestyle = yes
+	
+	diplomacy = 2
+	
+	same_opinion = 10
+}
+
+#################################################################
+# PERSONALITY - Events, should happen more often during childhood
+#################################################################
+
+# THE SEVEN SINS AND VIRTUES
+lustful = { #73
+	personality = yes
+	opposites =  {
+		chaste
+		celibate
+	}
+	fertility = 0.2
+	
+	church_opinion = -10
+	
+	monthly_character_piety = -0.1
+	
+	ai_greed = 10
+	ai_zeal = -10	
+}
+chaste = { #74
+	personality = yes
+	opposites =  {
+		lustful
+		hedonist
+	}
+	fertility = -0.1
+	
+	church_opinion = 10
+	opposite_opinion = -10
+	
+	monthly_character_piety = 0.1
+	
+	ai_zeal = 10	
+}
+gluttonous = { #75
+	personality = yes
+	opposites =  {
+		temperate
+	}
+	
+	sex_appeal_opinion = -10
+	church_opinion = -10
+	
+	monthly_character_piety = -0.05
+	
+	ai_greed = 10
+	ai_zeal = -10	
+}
+temperate = { #76
+	personality = yes
+	opposites =  {
+		gluttonous
+	}
+	
+	church_opinion = 10
+	opposite_opinion = -10
+	
+	stewardship = 2
+	intrigue = -1
+	martial = -1
+	
+	monthly_character_piety = 0.05
+	
+	ai_greed = -10
+	ai_zeal = 10	
+}
+greedy = { #77
+	personality = yes
+	opposites =  {
+		charitable
+		content
+	}
+	global_tax_modifier = 0.1
+	diplomacy = -2
+	vassal_opinion = -5
+	
+	ai_honor = -10
+	ai_ambition = 15
+	ai_greed = 20
+	
+	monthly_character_piety = -0.1
+}
+charitable = { #78
+	personality = yes
+	opposites =  {
+		greedy
+		cruel
+		impaler
+	}
+	diplomacy = 3
+	
+	global_tax_modifier = -0.1
+	church_opinion = 10
+	opposite_opinion = -10
+	
+	ai_honor = 10
+	ai_ambition = -15
+	ai_greed = -20
+	
+	ai_zeal = 10
+	
+	monthly_character_piety = 0.1
+}
+slothful = { #79
+	personality = yes
+	opposites =  {
+		diligent
+	}
+	
+	vassal_opinion = -10
+	
+	diplomacy = -1
+	intrigue = -1
+	stewardship = -1
+	martial = -1
+	learning = -1
+	
+	ai_ambition = -10
+	ai_zeal = -10
+	
+	monthly_character_piety = -0.05
+}
+diligent = { #80
+	personality = yes
+	opposites =  {
+		slothful
+	}
+	
+	opposite_opinion = -10
+	
+	diplomacy = 1
+	intrigue = 1
+	stewardship = 1
+	martial = 1
+	learning = 1
+	
+	ai_zeal = 10
+	ai_ambition = 10
+	
+	monthly_character_piety = 0.05
+}
+envious = { #81
+	personality = yes
+	opposites =  {
+		kind
+		content
+	}
+	intrigue = 2
+	diplomacy = -1
+	
+	liege_opinion = -15
+	
+	ai_honor = -10
+	
+	monthly_character_piety = -0.1
+}
+kind = { #82
+	personality = yes
+	opposites =  {
+		envious
+		cruel
+		impaler
+	}
+	martial = -2
+	intrigue = -1
+	diplomacy = 2
+	
+	vassal_opinion = 10
+	opposite_opinion = -10
+	
+	ai_honor = 10
+	
+	monthly_character_piety = 0.1
+}
+wroth = { #83
+	personality = yes
+	opposites =  {
+		patient
+	}
+	diplomacy = -1
+	intrigue = -1
+	martial = 3
+	
+	ai_rationality = -10
+	ai_honor = -5
+	
+	monthly_character_piety = -0.05
+}
+patient = { #84
+	personality = yes
+	opposites =  {
+		wroth
+	}
+	diplomacy = 1
+	intrigue = 1
+	stewardship = 1
+	learning = 1
+	opposite_opinion = -10
+	
+	ai_rationality = 10
+	ai_ambition = -10
+	
+	monthly_character_piety = 0.05
+}
+proud = { #85
+	personality = yes
+	opposites =  {
+		humble
+	}
+	
+	monthly_character_prestige = 0.25
+	monthly_character_piety = -0.1
+	
+	ai_ambition = 10
+}
+humble = { #86
+	personality = yes
+	opposites =  {
+		proud
+		ambitious
+	}
+	
+	monthly_character_piety = 0.25
+	monthly_character_prestige = -0.1
+	opposite_opinion = -10
+	
+	ai_ambition = -10
+}
+
+# OTHER
+
+deceitful = { #87
+	personality = yes
+	opposites =  {
+		honest
+	}
+	
+	intrigue = 3
+	diplomacy = -2
+	
+	opposite_opinion = -10
+	
+	ai_honor = -25
+}
+honest = { #88
+	personality = yes
+	opposites =  {
+		deceitful
+	}
+	
+	intrigue = -2
+	diplomacy = 3
+	
+	opposite_opinion = -10
+	
+	ai_honor = 25
+}
+craven = { #89
+	personality = yes
+	opposites =  {
+		brave
+	}
+	
+	vassal_opinion = -5
+	
+	martial = -2
+	intrigue = 2
+}
+brave = { #90
+	personality = yes
+	opposites =  {
+		craven
+	}
+	
+	vassal_opinion = 10
+	opposite_opinion = -10
+	
+	martial = 2
+	intrigue = -2
+}
+shy = { #91
+	personality = yes
+	opposites =  {
+		gregarious
+	}
+	
+	diplomacy = -2
+	stewardship = 1
+	learning = 2
+}
+gregarious = { #92
+	personality = yes
+	opposites =  {
+		shy
+	}
+	
+	sex_appeal_opinion = 5
+	
+	vassal_opinion = 5
+	
+	diplomacy = 2
+	learning = -2
+}
+ambitious = { #93
+	personality = yes
+	opposites =  {
+		content
+		humble
+	}
+	
+	intrigue = 2
+	stewardship = 2
+	diplomacy = 2
+	martial = 2
+	learning = 2
+	
+	ambition_opinion = -30 # Against those they want something from
+	
+	ai_ambition = 40
+	ai_zeal = 10
+}
+content = { #94
+	personality = yes
+	opposites =  {
+		ambitious
+		greedy
+		envious
+	}
+	
+	intrigue = -3
+	
+	liege_opinion = 30
+	
+	monthly_character_piety = 0.25
+	
+	ai_ambition = -40
+	ai_zeal = -10
+}
+arbitrary = { #95
+	personality = yes
+	opposites =  {
+		just
+	}
+	
+	intrigue = 1
+	stewardship = -2
+	learning = -1
+	
+	vassal_opinion = -10
+	
+	ai_rationality = -20
+	ai_honor = -10
+	ai_zeal = 10
+}
+just = { #96
+	personality = yes
+	opposites =  {
+		arbitrary
+	}
+	
+	intrigue = -3
+	stewardship = 2
+	learning = 1
+	
+	vassal_opinion = 10
+	opposite_opinion = -10
+	
+	ai_rationality = 20
+	ai_honor = 10
+	ai_zeal = -10
+}
+cynical = { #97
+	personality = yes
+	opposites = {
+		zealous
+	}
+	
+	intrigue = 3
+	
+	church_opinion = -5
+	opposite_opinion = -10
+	
+	monthly_character_piety = -0.25
+	
+	ai_rationality = 10
+	ai_zeal = -100
+	
+}
+zealous = { #98
+	personality = yes
+	opposites =  {
+		cynical
+	}
+	
+	martial = 1
+	
+	church_opinion = 10
+	infidel_opinion = -30
+	opposite_opinion = -10
+	
+	monthly_character_piety = 0.5
+	
+	ai_rationality = -10
+	ai_zeal = 100
+}
+paranoid = { #99
+	personality = yes
+	opposites =  {
+		trusting
+	}
+	
+	intrigue = 3
+	diplomacy = -2
+	
+	ai_rationality = 10
+	ai_zeal = -100
+}
+trusting = { #100
+	personality = yes
+	opposites =  {
+		paranoid
+	}
+	
+	intrigue = -2
+	diplomacy = 2
+	
+	ai_honor = 10
+}
+cruel = { #101
+	personality = yes
+	opposites =  {
+		kind
+		charitable
+	}
+	
+	martial = 2
+	diplomacy = -1
+	
+	vassal_opinion = -10
+	ai_honor = -10	
+}

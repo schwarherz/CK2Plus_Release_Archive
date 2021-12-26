@@ -1,0 +1,1916 @@
+###################################
+#
+# Mongol Horde Events
+#
+# Id 60000 - 61000 is reserved
+#
+###################################
+
+# Rumors of a Steppe Menace
+narrative_event = {
+	id = 60000
+	title = "EVTNAME60000"
+	desc = "EVTDESC60000"
+	major = yes
+	
+	picture = "GFX_evt_mongols"
+	
+	is_playable = yes
+	
+	trigger = {
+		year = 1215
+		has_landed_title = k_papal_state
+		NOT = { has_global_flag = mongol_horde_rumors }
+		NOT = { has_global_flag = il_khanate_arrival }
+		NOT = { has_global_flag = golden_horde_arrival }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "EVTOPTA60000"
+		if = {
+			limit = {
+				has_landed_title = k_papal_state
+			}
+			set_global_flag = mongol_horde_rumors
+		}
+	}
+}
+
+# Arrival of the Ilkhanate
+narrative_event = {
+	id = 60001
+	title = "EVTNAME60001"
+	desc = "EVTDESC60001"
+	major = yes
+	hide_new = yes
+	
+	picture = "GFX_evt_mongols"
+	
+	is_ruler = yes
+	
+	trigger = {
+		year = 1216
+		has_global_flag = mongol_horde_rumors
+		has_landed_title = k_papal_state
+		NOT = { year = 1224 }
+		NOT = { has_global_flag = il_khanate_arrival }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = "OK"
+		trigger = {
+			has_landed_title = k_papal_state
+		}
+		set_global_flag = il_khanate_arrival
+		create_character = {
+			random_traits = yes
+			dynasty = 2109002
+			religion = tengri_pagan
+			culture = mongol
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			904 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
+			907 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
+			activate_title = { title = e_il-khanate status = yes }
+			e_il-khanate = {
+				add_law_w_cooldown = feudal_tax_0
+				add_law_w_cooldown = feudal_contract_0
+				add_law_w_cooldown = city_tax_0
+				add_law_w_cooldown = city_contract_0
+				add_law_w_cooldown = temple_tax_0
+				add_law_w_cooldown = temple_contract_0
+				add_law_w_cooldown = centralization_1
+				add_law_w_cooldown = revoke_law_0
+				add_law_w_cooldown = investiture_law_0			
+				gain_title = PREV
+			}	
+			wealth = 5000		
+			spawn_unit = {
+				province = 904 # Balkh
+				troops =
+				{
+					horse_archers = { 10000 10000 }
+					light_cavalry = { 6666 6666 }
+					light_infantry = { 2222 2222 }
+					heavy_infantry = { 1112 1112 }
+					knights = { 200 200 }
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 40
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 904 # Balkh
+					troops =
+					{
+						horse_archers = { 10000 10000 }
+						light_cavalry = { 6666 6666 }
+						light_infantry = { 2222 2222 }
+						heavy_infantry = { 1112 1112 }
+						knights = { 200 200 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 31
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 904 # Balkh
+					troops =
+					{
+						horse_archers = { 10000 10000 }
+						light_cavalry = { 6666 6666 }
+						light_infantry = { 2222 2222 }
+						heavy_infantry = { 1112 1112 }
+						knights = { 200 200 }
+					}
+				}
+			}
+			random = {
+				chance = 50			
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					religion = tengri_pagan
+					culture = mongol
+					female = no
+					age = 36
+					attributes = {
+						martial = 11
+					}
+					trait = brilliant_strategist
+				}
+				new_character = {
+					spawn_unit = {
+						province = 904 # Balkh
+						troops =
+						{
+							horse_archers = { 10000 10000 }
+							light_cavalry = { 6666 6666 }
+							light_infantry = { 2222 2222 }
+							heavy_infantry = { 1112 1112 }
+							knights = { 200 200 }
+						}
+					}
+				}
+			}
+			random = {
+				chance = 25
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					religion = tengri_pagan
+					culture = mongol
+					female = no
+					age = 34
+					attributes = {
+						martial = 12
+					}
+					trait = brilliant_strategist
+				}
+				new_character = {
+					spawn_unit = {
+						province = 904 # Balkh
+						troops =
+						{
+							horse_archers = { 10000 10000 }
+							light_cavalry = { 6666 6666 }
+							light_infantry = { 2222 2222 }
+							heavy_infantry = { 1112 1112 }
+							knights = { 200 200 }
+						}
+					}
+				}
+			}
+			random = {
+				chance = 25
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					religion = tengri_pagan
+					culture = mongol
+					female = no
+					age = 26
+					attributes = {
+						martial = 12
+					}
+					trait = brilliant_strategist
+				}
+				new_character = {
+					spawn_unit = {
+						province = 904 # Balkh
+						troops =
+						{
+							horse_archers = { 10000 10000 }
+							light_cavalry = { 6666 6666 }
+							light_infantry = { 2222 2222 }
+							heavy_infantry = { 1112 1112 }
+							knights = { 200 200 }
+						}
+					}
+				}
+			}
+
+			# Some extra courtiers
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 16
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 20
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 25
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 26
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 28
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = yes
+				age = 16
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = yes
+				age = 17
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = yes
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = yes
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = yes
+				age = 20
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB60001"
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = k_papal_state }
+		}
+	}
+	option = {
+		name = "EVTOPTC60001"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = k_papal_state }
+		}
+	}
+	option = {
+		name = "EVTOPTD60001"
+		trigger = {
+			religion_group = pagan_group
+			NOT = { has_landed_title = k_papal_state }
+		}
+	}
+}
+
+
+# Arrival of the Golden Horde
+narrative_event = {
+	id = 60002
+	title = "EVTNAME60002"
+	desc = "EVTDESC60002"
+	major = yes
+	hide_new = yes
+	
+	picture = "GFX_evt_mongols"
+	
+	is_ruler = yes
+	
+	trigger = {
+		year = 1224
+		NOT = { year = 1250 }
+		has_landed_title = k_papal_state
+		has_global_flag = il_khanate_arrival
+		NOT = { has_global_flag = golden_horde_arrival }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.5
+			year = 1235
+		}
+		modifier = {
+			factor = 0.5
+			year = 1240
+		}
+	}
+	
+	option = {
+		name = "OK"
+		trigger = {
+			has_landed_title = k_papal_state
+		}
+		set_global_flag = golden_horde_arrival
+		create_character = {
+			random_traits = yes
+			dynasty = 2109002
+			religion = tengri_pagan
+			culture = mongol
+			female = no
+			age = 35
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}		
+		new_character = {
+			893 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
+			898 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
+			activate_title = { title = e_golden_horde status = yes }
+			e_golden_horde = {
+				add_law_w_cooldown = feudal_tax_0
+				add_law_w_cooldown = feudal_contract_0
+				add_law_w_cooldown = city_tax_0
+				add_law_w_cooldown = city_contract_0
+				add_law_w_cooldown = temple_tax_0
+				add_law_w_cooldown = temple_contract_0
+				add_law_w_cooldown = centralization_1
+				add_law_w_cooldown = revoke_law_0
+				add_law_w_cooldown = investiture_law_0			
+				gain_title = PREV
+			}
+			wealth = 5000
+			spawn_unit = {
+				province = 893 # Surgut
+				troops =
+				{
+					horse_archers = { 10000 10000 }
+					light_cavalry = { 6666 6666 }
+					light_infantry = { 2222 2222 }
+					heavy_infantry = { 1112 1112 }
+					knights = { 200 200 }
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 38
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 893 # Surgut
+					troops =
+					{
+						horse_archers = { 10000 10000 }
+						light_cavalry = { 6666 6666 }
+						light_infantry = { 2222 2222 }
+						heavy_infantry = { 1112 1112 }
+						knights = { 200 200 }
+					}
+				}
+			}
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					religion = tengri_pagan
+					culture = mongol
+					female = no
+					age = 35
+					attributes = {
+						martial = 12
+					}
+					trait = brilliant_strategist
+				}
+				new_character = {
+					spawn_unit = {
+						province = 893 # Surgut
+						troops =
+						{
+							horse_archers = { 10000 10000 }
+							light_cavalry = { 6666 6666 }
+							light_infantry = { 2222 2222 }
+							heavy_infantry = { 1112 1112 }
+							knights = { 200 200 }
+						}
+					}
+				}
+			}
+			random = {
+				chance = 25
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					religion = tengri_pagan
+					culture = mongol
+					female = no
+					age = 29
+					attributes = {
+						martial = 12
+					}
+					trait = brilliant_strategist
+				}
+				new_character = {
+					spawn_unit = {
+						province = 893 # Surgut
+						troops =
+						{
+							horse_archers = { 10000 10000 }
+							light_cavalry = { 6666 6666 }
+							light_infantry = { 2222 2222 }
+							heavy_infantry = { 1112 1112 }
+							knights = { 200 200 }
+						}
+					}
+				}
+			}
+			random = {
+				chance = 25
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					religion = tengri_pagan
+					culture = mongol
+					female = no
+					age = 24
+					attributes = {
+						martial = 12
+					}
+					trait = brilliant_strategist
+				}
+				new_character = {
+					spawn_unit = {
+						province = 893 # Surgut
+						troops =
+						{
+							horse_archers = { 10000 10000 }
+							light_cavalry = { 6666 6666 }
+							light_infantry = { 2222 2222 }
+							heavy_infantry = { 1112 1112 }
+							knights = { 200 200 }
+						}
+					}
+				}
+			}
+
+			# Some extra courtiers
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 16
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 20
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 25
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 26
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 28
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = yes
+				age = 16
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = yes
+				age = 17
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = yes
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = yes
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = yes
+				age = 20
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB60002"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = k_papal_state }
+		}
+	}
+	option = {
+		name = "EVTOPTC60002"
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = k_papal_state }
+		}
+	}
+	option = {
+		name = "EVTOPTD60002"
+		trigger = {
+			religion_group = pagan_group
+			NOT = { has_landed_title = k_papal_state }
+		}
+	}
+}
+
+# Arrival of the Timurids
+narrative_event = {
+	id = 60003
+	title = "EVTNAME60003"
+	desc = "EVTDESC60003"
+	major = yes
+	hide_new = yes
+	
+	picture = "GFX_evt_mongols"
+	
+	is_ruler = yes
+	
+	trigger = {
+		year = 1360
+		NOT = { year = 1405 }
+		has_landed_title = k_papal_state
+		NOT = { has_global_flag = timurid_arrival }
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		modifier = {
+			factor = 0.2
+			year = 1380
+		}
+	}
+	
+	option = {
+		name = "OK"
+		trigger = {
+			has_landed_title = k_papal_state
+		}
+		set_global_flag = timurid_arrival
+		create_character = {
+			random_traits = no
+			name = "Timur"
+			dynasty = 800
+			religion = shiite
+			culture = mongol
+			female = no
+			age = 35
+			attributes = {
+				martial = 12
+				diplomacy = 8
+				stewardship = 9
+				intrigue = 9
+				learning = 6
+			}
+			health = 6
+			fertility = 0.8
+			trait = brilliant_strategist
+			trait = diligent
+			trait = ambitious
+			trait = proud
+			trait = quick
+			trait = clubfooted
+		}		
+		new_character = {
+			900 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
+			901 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
+			activate_title = { title = e_timurids status = yes }
+			e_timurids = {
+				add_law_w_cooldown = feudal_tax_0
+				add_law_w_cooldown = feudal_contract_0
+				add_law_w_cooldown = city_tax_0
+				add_law_w_cooldown = city_contract_0
+				add_law_w_cooldown = temple_tax_0
+				add_law_w_cooldown = temple_contract_0
+				add_law_w_cooldown = centralization_1
+				add_law_w_cooldown = revoke_law_0
+				add_law_w_cooldown = investiture_law_0			
+				gain_title = PREV
+			}			
+			wealth = 5000
+			spawn_unit = {
+				province = 901 # Khiva
+				troops =
+				{
+					horse_archers = { 10000 10000 }
+					light_cavalry = { 6666 6666 }
+					light_infantry = { 2222 2222 }
+					heavy_infantry = { 1112 1112 }
+					knights = { 200 200 }
+				}
+			}		
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = no
+				age = 35
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 901 # Khiva
+					troops =
+					{
+						horse_archers = { 10000 10000 }
+						light_cavalry = { 6666 6666 }
+						light_infantry = { 2222 2222 }
+						heavy_infantry = { 1112 1112 }
+						knights = { 200 200 }
+					}
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = no
+				age = 35
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 901 # Khiva
+					troops =
+					{
+						horse_archers = { 10000 10000 }
+						light_cavalry = { 6666 6666 }
+						light_infantry = { 2222 2222 }
+						heavy_infantry = { 1112 1112 }
+						knights = { 200 200 }
+					}
+				}
+			}
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					religion = shiite
+					culture = mongol
+					female = no
+					age = 29
+					attributes = {
+						martial = 12
+					}
+					trait = brilliant_strategist
+				}
+				new_character = {
+					spawn_unit = {
+						province = 901 # Khiva
+						troops =
+						{
+							horse_archers = { 10000 10000 }
+							light_cavalry = { 6666 6666 }
+							light_infantry = { 2222 2222 }
+							heavy_infantry = { 1112 1112 }
+							knights = { 200 200 }
+						}
+					}
+				}
+			}
+			random = {
+				chance = 50
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					religion = shiite
+					culture = mongol
+					female = no
+					age = 29
+					attributes = {
+						martial = 12
+					}
+					trait = brilliant_strategist
+				}
+				new_character = {
+					spawn_unit = {
+						province = 901 # Khiva
+						troops =
+						{
+							horse_archers = { 10000 10000 }
+							light_cavalry = { 6666 6666 }
+							light_infantry = { 2222 2222 }
+							heavy_infantry = { 1112 1112 }
+							knights = { 200 200 }
+						}
+					}
+				}
+			}			
+
+			# Some extra courtiers
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = no
+				age = 16
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = no
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = no
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = no
+				age = 20
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = no
+				age = 25
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = no
+				age = 26
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = no
+				age = 28
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = yes
+				age = 16
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = yes
+				age = 17
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = yes
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = yes
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = shiite
+				culture = mongol
+				female = yes
+				age = 20
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB60003"
+		trigger = {
+			NOT = { has_landed_title = k_papal_state }
+		}
+	}
+}
+
+# Ilkhanate reinforcements
+character_event = {
+	id = 60004
+	desc = "EVTDESC60004"
+	
+	picture = "GFX_evt_mongols"
+	
+	is_ruler = yes
+	
+	trigger = {
+		NOT = { year = 1300 }
+		has_landed_title = e_il-khanate
+		NOT = { has_character_flag = ilkhanate_reinf }
+		had_global_flag = { flag = il_khanate_arrival days = 3650 }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "OK"
+		set_character_flag = ilkhanate_reinf
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = tengri_pagan
+			culture = mongol
+			female = no
+			age = 25
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 904 # Balkh
+				troops =
+				{
+					horse_archers = { 10000 10000 }
+					light_cavalry = { 6666 6666 }
+					light_infantry = { 2222 2222 }
+					heavy_infantry = { 1112 1112 }
+					knights = { 200 200 }
+				}
+			}
+		}
+		
+		random = {
+			chance = 33
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 27
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 904 # Balkh
+					troops =
+					{
+						horse_archers = { 10000 10000 }
+						light_cavalry = { 6666 6666 }
+						light_infantry = { 2222 2222 }
+						heavy_infantry = { 1112 1112 }
+						knights = { 200 200 }
+					}
+				}
+			}
+		}
+	}
+}
+
+# Golden Horde reinforcements
+character_event = {
+	id = 60005
+	desc = "EVTDESC60004"
+	
+	picture = "GFX_evt_mongols"
+	
+	is_ruler = yes
+	
+	trigger = {
+		NOT = { year = 1320 }
+		has_landed_title = e_golden_horde
+		NOT = { has_character_flag = golden_horde_reinf }
+		had_global_flag = { flag = golden_horde_arrival days = 3650 }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "OK"
+		set_character_flag = golden_horde_reinf
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = tengri_pagan
+			culture = mongol
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 893 # Surgut
+				troops =
+				{
+					horse_archers = { 10000 10000 }
+					light_cavalry = { 6666 6666 }
+					light_infantry = { 2222 2222 }
+					heavy_infantry = { 1112 1112 }
+					knights = { 200 200 }
+				}
+			}
+		}
+		random = {
+			chance = 33
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 29
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 893 # Surgut
+					troops =
+					{
+						horse_archers = { 10000 10000 }
+						light_cavalry = { 6666 6666 }
+						light_infantry = { 2222 2222 }
+						heavy_infantry = { 1112 1112 }
+						knights = { 200 200 }
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# Timurid reinforcements
+character_event = {
+	id = 60006
+	desc = "EVTDESC60004"
+	
+	picture = "GFX_evt_mongols"
+	
+	is_ruler = yes
+	
+	trigger = {
+		NOT = { year = 1410 }
+		has_landed_title = e_timurids
+		NOT = { has_character_flag = timurid_reinf }
+		had_global_flag = { flag = timurid_arrival days = 3650 }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "OK"
+		set_character_flag = timurid_reinf
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = shiite
+			culture = mongol
+			female = no
+			age = 32
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 901 # Khiva
+				troops =
+				{
+					horse_archers = { 10000 10000 }
+					light_cavalry = { 6666 6666 }
+					light_infantry = { 2222 2222 }
+					heavy_infantry = { 1112 1112 }
+					knights = { 200 200 }
+				}
+			}
+		}
+		random = {
+			chance = 66
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = tengri_pagan
+				culture = mongol
+				female = no
+				age = 22
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 901 # Khiva
+					troops =
+					{
+						horse_archers = { 10000 10000 }
+						light_cavalry = { 6666 6666 }
+						light_infantry = { 2222 2222 }
+						heavy_infantry = { 1112 1112 }
+						knights = { 200 200 }
+					}
+				}
+			}
+		}
+	}
+}
+
+### The Hordes Convert ###
+
+# Ilkhanate converts to Catholic
+character_event = {
+	id = 60010
+	title = "EVTNAME60010"
+	desc = "EVTDESC60010"
+	picture = "GFX_evt_mongols"
+	major = yes
+	
+	is_ruler = yes
+	
+	trigger = {
+		primary_title = {
+			title = e_il-khanate
+			holder_scope = {
+				religion = tengri_pagan
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = il_khanate_arrival days = 14600 }
+		NOT = { had_global_flag = { flag = il_khanate_arrival days = 29200 } }
+		NOT = { has_global_flag = il_khanate_converts }
+		any_realm_province = {
+			religion = catholic
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = catholic
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = il_khanate_converts
+	}
+	
+	option = {	# Catholic
+		name = "EVTOPTA60010"
+		trigger = {
+			has_landed_title = e_il-khanate
+		}
+		religion = catholic
+		capital_scope = {
+			religion = catholic
+		}
+		any_realm_character = {
+			limit = { religion = tengri_pagan }
+			religion = catholic
+			if = {
+				limit = {
+					capital_scope = {
+						religion = tengri_pagan
+					}
+				}
+				capital_scope = {
+					religion = catholic
+				}
+			}
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EVTOPTB60010"
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+	option = {
+		name = "EVTOPTD60010"
+		trigger = {
+			religion_group = pagan_group
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+}
+
+# Ilkhanate converts to Orthodox
+character_event = {
+	id = 60011
+	title = "EVTNAME60010"
+	desc = "EVTDESC60011"
+	picture = "GFX_evt_mongols"
+	major = yes
+	
+	is_ruler = yes
+	
+	trigger = {
+		primary_title = {
+			title = e_il-khanate
+			holder_scope = {
+				religion = tengri_pagan
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = il_khanate_arrival days = 14600 }
+		NOT = { had_global_flag = { flag = il_khanate_arrival days = 29200 } }
+		NOT = { has_global_flag = il_khanate_converts }
+		any_realm_province = {
+			religion = orthodox
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = orthodox
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = il_khanate_converts
+	}
+	
+	option = {	# Orthodox
+		name = "EVTOPTA60010"
+		trigger = {
+			has_landed_title = e_il-khanate
+		}
+		religion = orthodox
+		any_realm_character = {
+			limit = { religion = tengri_pagan }
+			religion = orthodox
+			if = {
+				limit = {
+					capital_scope = {
+						religion = tengri_pagan
+					}
+				}
+				capital_scope = {
+					religion = orthodox
+				}
+			}
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EVTOPTB60010"
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+	option = {
+		name = "EVTOPTD60010"
+		trigger = {
+			religion_group = pagan_group
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+}
+
+# Ilkhanate converts to Sunni
+character_event = {
+	id = 60012
+	title = "EVTNAME60010"
+	desc = "EVTDESC60012"
+	picture = "GFX_evt_mongols"
+	major = yes
+	
+	is_ruler = yes
+	
+	trigger = {
+		primary_title = {
+			title = e_il-khanate
+			holder_scope = {
+				religion = tengri_pagan
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = il_khanate_arrival days = 14600 }
+		NOT = { had_global_flag = { flag = il_khanate_arrival days = 29200 } }
+		NOT = { has_global_flag = il_khanate_converts }
+		any_realm_province = {
+			religion = sunni
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = sunni
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = il_khanate_converts
+	}
+	
+	option = {	# Sunni
+		name = "EVTOPTA60010"
+		trigger = {
+			has_landed_title = e_il-khanate
+		}
+		religion = sunni
+		any_realm_character = {
+			limit = { religion = tengri_pagan }
+			religion = sunni
+			if = {
+				limit = {
+					capital_scope = {
+						religion = tengri_pagan
+					}
+				}
+				capital_scope = {
+					religion = sunni
+				}
+			}
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+	option = {
+		name = "EVTOPTC60010"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+	option = {
+		name = "EVTOPTD60010"
+		trigger = {
+			religion_group = pagan_group
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+}
+
+# Ilkhanate converts to Shiite
+character_event = {
+	id = 60013
+	title = "EVTNAME60010"
+	desc = "EVTDESC60013"
+	picture = "GFX_evt_mongols"
+	major = yes
+	
+	is_ruler = yes
+	
+	trigger = {
+		primary_title = {
+			title = e_il-khanate
+			holder_scope = {
+				religion = tengri_pagan
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = il_khanate_arrival days = 14600 }
+		NOT = { had_global_flag = { flag = il_khanate_arrival days = 29200 } }
+		NOT = { has_global_flag = il_khanate_converts }
+		any_realm_province = {
+			religion = shiite
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = shiite
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = il_khanate_converts
+	}
+	
+	option = {	# Shiite
+		name = "EVTOPTA60010"
+		trigger = {
+			has_landed_title = e_il-khanate
+		}
+		religion = shiite
+		any_realm_character = {
+			limit = { religion = tengri_pagan }
+			religion = shiite
+			if = {
+				limit = {
+					capital_scope = {
+						religion = tengri_pagan
+					}
+				}
+				capital_scope = {
+					religion = shiite
+				}
+			}
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+	option = {
+		name = "EVTOPTC60010"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+	option = {
+		name = "EVTOPTD60010"
+		trigger = {
+			religion_group = pagan_group
+			NOT = { has_landed_title = e_il-khanate }
+		}
+	}
+}
+
+# Golden Horde converts to Catholic
+character_event = {
+	id = 60020
+	title = "EVTNAME60020"
+	desc = "EVTDESC60010"
+	picture = "GFX_evt_mongols"
+	major = yes
+	
+	is_ruler = yes
+	
+	trigger = {
+		primary_title = {
+			title = e_golden_horde
+			holder_scope = {
+				religion = tengri_pagan
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = golden_horde_arrival days = 14600 }
+		NOT = { had_global_flag = { flag = il_khanate_arrival days = 29200 } }
+		NOT = { has_global_flag = golden_horde_converts }
+		any_realm_province = {
+			religion = catholic
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = catholic
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = golden_horde_converts
+	}
+	
+	option = {	# Catholic
+		name = "EVTOPTA60010"
+		trigger = {
+			has_landed_title = e_golden_horde
+		}
+		religion = catholic
+		capital_scope = {
+			religion = catholic
+		}
+		any_realm_character = {
+			limit = { religion = tengri_pagan }
+			religion = catholic
+			if = {
+				limit = {
+					capital_scope = {
+						religion = tengri_pagan
+					}
+				}
+				capital_scope = {
+					religion = catholic
+				}
+			}
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EVTOPTB60010"
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+	option = {
+		name = "EVTOPTD60010"
+		trigger = {
+			religion_group = pagan_group
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+}
+
+# Golden Horde converts to Orthodox
+character_event = {
+	id = 60021
+	title = "EVTNAME60020"
+	desc = "EVTDESC60011"
+	picture = "GFX_evt_mongols"
+	major = yes
+	
+	is_ruler = yes
+	
+	trigger = {
+		primary_title = {
+			title = e_golden_horde
+			holder_scope = {
+				religion = tengri_pagan
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = golden_horde_arrival days = 14600 }
+		NOT = { had_global_flag = { flag = il_khanate_arrival days = 29200 } }
+		NOT = { has_global_flag = golden_horde_converts }
+		any_realm_province = {
+			religion = orthodox
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = orthodox
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = golden_horde_converts
+	}
+	
+	option = {	# Orthodox
+		name = "EVTOPTA60010"
+		trigger = {
+			has_landed_title = e_golden_horde
+		}
+		religion = orthodox
+		any_realm_character = {
+			limit = { religion = tengri_pagan }
+			religion = orthodox
+			if = {
+				limit = {
+					capital_scope = {
+						religion = tengri_pagan
+					}
+				}
+				capital_scope = {
+					religion = orthodox
+				}
+			}
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EVTOPTB60010"
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+	option = {
+		name = "EVTOPTD60010"
+		trigger = {
+			religion_group = pagan_group
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+}
+
+# Golden Horde converts to Sunni
+character_event = {
+	id = 60022
+	title = "EVTNAME60020"
+	desc = "EVTDESC60012"
+	picture = "GFX_evt_mongols"
+	major = yes
+	
+	is_ruler = yes
+	
+	trigger = {
+		primary_title = {
+			title = e_golden_horde
+			holder_scope = {
+				religion = tengri_pagan
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = golden_horde_arrival days = 14600 }
+		NOT = { had_global_flag = { flag = il_khanate_arrival days = 29200 } }
+		NOT = { has_global_flag = golden_horde_converts }
+		any_realm_province = {
+			religion = sunni
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = sunni
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = golden_horde_converts
+	}
+	
+	option = {	# Sunni
+		name = "EVTOPTA60010"
+		trigger = {
+			has_landed_title = e_golden_horde
+		}
+		religion = sunni
+		any_realm_character = {
+			limit = { religion = tengri_pagan }
+			religion = sunni
+			if = {
+				limit = {
+					capital_scope = {
+						religion = tengri_pagan
+					}
+				}
+				capital_scope = {
+					religion = sunni
+				}
+			}
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+	option = {
+		name = "EVTOPTC60010"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+	option = {
+		name = "EVTOPTD60010"
+		trigger = {
+			religion_group = pagan_group
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+}
+
+# Golden Horde converts to Shiite
+character_event = {
+	id = 60023
+	title = "EVTNAME60020"
+	desc = "EVTDESC60013"
+	picture = "GFX_evt_mongols"
+	major = yes
+	
+	is_ruler = yes
+	
+	trigger = {
+		primary_title = {
+			title = e_golden_horde
+			holder_scope = {
+				religion = tengri_pagan
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = golden_horde_arrival days = 14600 }
+		NOT = { had_global_flag = { flag = il_khanate_arrival days = 29200 } }
+		NOT = { has_global_flag = golden_horde_converts }
+		any_realm_province = {
+			religion = shiite
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = shiite
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = golden_horde_converts
+	}
+	
+	option = {	# Shiite
+		name = "EVTOPTA60010"
+		trigger = {
+			has_landed_title = e_golden_horde
+		}
+		religion = shiite
+		any_realm_character = {
+			limit = { religion = tengri_pagan }
+			religion = shiite
+			if = {
+				limit = {
+					capital_scope = {
+						religion = tengri_pagan
+					}
+				}
+				capital_scope = {
+					religion = shiite
+				}
+			}
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+	option = {
+		name = "EVTOPTC60010"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+	option = {
+		name = "EVTOPTD60010"
+		trigger = {
+			religion_group = pagan_group
+			NOT = { has_landed_title = e_golden_horde }
+		}
+	}
+}

@@ -1,0 +1,102 @@
+decisions = {
+	arrange_marriages = {
+		potential = { ai = no }
+		allow = { 
+			any_courtier = {
+				age = 16
+				NOT = { age = 60 }
+				NOT = { trait = celibate }
+				NOT = { trait = infirm }
+				NOT = { trait = incapable }
+				is_married = no
+				is_betrothed = no
+				can_marry = yes
+				is_female = no
+				is_ruler = no	
+				is_primary_heir = no
+				NOT = { is_close_relative = ROOT }
+			}
+			treasury = 5
+		}
+		effect = {
+			treasury = -5
+			any_courtier = {
+				limit = {
+					age = 16
+					NOT = { age = 60 }
+					NOT = { trait = celibate }
+					NOT = { trait = infirm }
+					NOT = { trait = incapable }
+					is_married = no
+					is_betrothed = no
+					can_marry = yes
+					is_female = no
+					is_ruler = no	
+					is_primary_heir = no
+					NOT = { is_close_relative = ROOT }
+				}
+				character_event = { id = 190043 tooltip = EVTTOOLTIP190043 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ai_baron_marries = {
+		potential = { 
+			ai = yes 
+			age = 18
+			NOT = { age = 60 }
+			NOT = { trait = celibate }
+			NOT = { trait = infirm }
+			NOT = { trait = incapable }
+			is_married = no
+			is_betrothed = no
+			can_marry = yes
+			is_ruler = yes
+			OR = {
+				primary_title = { tier = BARON }
+				is_feudal = no
+			}
+		}
+		allow = { 
+			treasury = 5
+		}
+		effect = {
+			treasury = -5
+			if = {
+				limit = { is_female = no }
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					female = yes
+					age = 16
+				}
+				new_character = {
+					add_spouse = ROOT
+				}				
+			}
+			if = {
+				limit = { is_female = yes }
+				create_character = {
+					random_traits = yes
+					dynasty = random
+					female = no
+					age = 16
+				}
+				new_character = {
+					add_spouse = ROOT
+				}				
+			}			
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+}

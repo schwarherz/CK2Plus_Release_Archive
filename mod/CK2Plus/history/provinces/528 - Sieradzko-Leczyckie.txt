@@ -1,0 +1,23 @@
+# 528 - Sieradzko-Leczyckie
+
+# County Title
+title = c_sieradzko-leczyckie
+
+# Settlements
+max_settlements = 5
+b_sieradz = castle
+b_leczyka = city
+b_radomsko = temple
+
+#b_warta = castle
+#b_sochaczew = castle
+#b_piotrkow = castle
+#b_wachock = castle
+#b_blaski = castle
+
+# Misc
+culture = polish
+religion = catholic
+
+# History
+1187.1.1 = { b_warta = castle }

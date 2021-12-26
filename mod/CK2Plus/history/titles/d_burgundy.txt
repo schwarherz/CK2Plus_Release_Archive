@@ -1,0 +1,50 @@
+956.1.1={
+	liege="k_france"
+	holder=91006 #Otton, son of Hugues the Great
+}
+965.1.1={
+	holder=91007 #Henri Ier, the Great
+}
+1002.1.1 = {
+	holder=272 #Otte-Guillaume
+}
+1004.1.1 = {
+	holder=0
+	liege=0
+}
+1032.1.1={
+	liege="k_france"
+	holder=210 #Robert I le Vieux
+	law = agnatic_succession
+	law = succ_primogeniture
+}
+1076.3.21={
+	holder = 224 #Hugues I
+}
+1103.3.23={
+	holder = 225 #Eudes I Borel
+}
+1103.3.23 = {
+	holder = 206003 #Hugues II
+}
+1143.1.1={
+	holder = 206001 #Eudes II
+}
+1162.9.27={
+	holder=206000 #Hugues III
+}
+1192.1.1={
+	holder = 206011 #Eudes III
+}
+1218.7.6={
+	holder = 7618 #Hugues IV
+}
+1271.10.27={
+	holder = 455535 #Robert II
+}
+1306.3.21={
+	holder = 455911 #Hugues V
+}
+1315.5.9={
+	holder=455910 #Eudes IV
+}

@@ -1,0 +1,29 @@
+# 336 - Salerno
+
+# County Title
+title = c_salerno
+
+# Settlements
+max_settlements = 5
+b_salerno = castle
+b_amalfi = city
+b_acerno = temple
+
+#b_nocera = temple
+#b_acenzera = temple
+#b_lucania = city
+#b_agropoli = temple
+#b_sarno = castle
+
+# Misc
+culture = italian
+religion = catholic
+terrain = hills
+
+# History
+
+1150.1.1 = { remove_settlement = b_amalfi }
+
+1150.1.1 = { b_nocera = temple }
+
+1161.1.1 = { culture = sicilian }

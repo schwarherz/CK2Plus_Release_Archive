@@ -1,0 +1,33 @@
+# 623 - Khwarizm
+
+# County Title
+title = c_khwarizm
+
+# Settlements
+max_settlements = 6
+b_kassarma = castle
+b_kuljandi = city
+b_kaszkarata = castle
+b_dawletgirei = temple
+
+#b_aszczeatrik = city
+#b_kosbulak = castle
+#b_sokyrbulak = castle
+#b_karakul = castle
+
+# Misc
+culture = turkish
+religion = sunni
+
+# History
+
+1187.1.1 = { b_kosbulak = castle }
+
+#Mongol invasion
+
+1221.1.1 = { remove_settlement = b_dawletgirei }
+1221.1.1 = { remove_settlement = b_kaszkarata }
+
+1221.1.1 = { culture = mongol } 
+
+1337.1.1 = { b_dawletgirei = temple } 

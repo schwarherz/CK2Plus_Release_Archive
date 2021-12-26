@@ -1,0 +1,234 @@
+plot_decisions = {
+	ai_begin_plot_check = {
+		potential = {
+			ai = yes
+			NOT = { has_character_flag = plot_check }
+			OR = {
+				has_objective = plot_institute_hereditary_titles
+				has_objective = plot_gain_title
+				has_objective = plot_succ_seniority
+				has_objective = plot_succ_primogeniture
+				has_objective = plot_succ_gavelkind
+				has_objective = plot_succ_feudal_elective
+				has_objective = plot_lower_crown_authority
+				has_objective = plot_kill_character
+				has_objective = plot_kill_spouse
+				has_objective = plot_kidnap_liege
+			}
+		}
+		allow = { }
+		effect = {
+			set_character_flag = plot_check
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	ai_abort_plot = {
+		potential = {
+			ai = yes
+			had_character_flag = {
+				flag = plot_check
+				days = 730
+			}
+			OR = {
+				NOT = { num_of_plot_backers = 1 }
+				had_character_flag = {
+					flag = plot_check
+					days = 1095
+				}				
+			}
+			OR = {
+				NOT = { num_of_plot_backers = 2 }
+				had_character_flag = {
+					flag = plot_check
+					days = 1460
+				}				
+			}				
+		}
+		allow = { }
+		effect = {
+			set_character_flag = abort_plot
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}	
+}
+
+decisions = {
+	ai_regency = {
+		potential = {
+			ai = yes
+			is_ruler = yes
+			independent = no
+			liege = { 
+				regent = { is_alive = yes } 
+				NOT = { trait = regency } 
+			}
+		}
+		allow = { }
+		effect = {
+			liege = {
+				add_trait = regency
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}		
+	}
+	ai_no_regency = {
+		potential = {
+			ai = yes
+			is_ruler = yes
+			independent = no
+			liege = { 
+				NOT = { regent = { is_alive = yes } }
+				trait = regency
+			}
+		}
+		allow = { }
+		effect = {
+			liege = {
+				remove_trait = regency
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}		
+	}	
+	ai_begin_obj_check = {
+		potential = {
+			ai = yes
+			NOT = { has_character_flag = obj_check }
+			age = 16
+			OR = {
+				has_objective = obj_become_chancellor
+				has_objective = obj_become_marshal
+				has_objective = obj_become_treasurer
+				has_objective = obj_become_spymaster
+				has_objective = obj_become_spiritual
+				has_objective = obj_amass_wealth_1
+				has_objective = obj_amass_wealth_2
+				has_objective = obj_amass_wealth_3
+				has_objective = obj_amass_wealth_4
+				has_objective = obj_become_paragon_of_virtue
+				has_objective = obj_become_exalted_1
+				has_objective = obj_become_exalted_2
+				has_objective = obj_become_exalted_3
+				has_objective = obj_become_exalted_4
+				has_objective = obj_get_married
+				has_objective = obj_marry_ruler
+				has_objective = obj_have_a_daughter
+				has_objective = obj_have_a_son
+				has_objective = obj_become_heir
+				has_objective = obj_wants_landed_title
+				has_objective = obj_five_children
+				has_objective = obj_ten_children
+				has_objective = obj_fifteen_children
+				has_objective = obj_twenty_children
+				has_objective = obj_increase_demesne_1
+				has_objective = obj_increase_demesne_2
+				has_objective = obj_increase_demesne_3
+				has_objective = obj_increase_demesne_4
+				has_objective = obj_increase_demesne_5
+				has_objective = obj_increase_demesne_6
+				has_objective = obj_increase_demesne_7
+				has_objective = obj_increase_demesne_8				
+				has_objective = obj_increase_demesne_9
+				has_objective = obj_increase_demesne_10
+				has_objective = obj_become_duke
+				has_objective = obj_go_crusade
+				has_objective = obj_go_jihad
+				has_objective = obj_find_lover
+				has_objective = obj_become_independent
+				has_objective = obj_status_quo
+				has_objective = obj_become_king
+				has_objective = obj_become_emperor
+				has_objective = obj_adopt_a_lifestyle
+				has_objective = obj_gain_honorary_title
+				has_objective = obj_convert_a_province
+				has_objective = obj_win_a_war
+				#has_objective = obj_break_out_of_prison #EXCEPTION	
+			}
+		}
+		allow = { }
+		effect = {
+			set_character_flag = obj_check
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	ai_abort_obj = {
+		potential = {
+			ai = yes
+			had_character_flag = {
+				flag = obj_check
+				days = 3650
+			}				
+		}
+		allow = { }
+		effect = {
+			set_character_flag = abort_obj
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	ai_not_dejure_liege = {
+		potential = {				
+			ai = yes
+			NOT = { trait = not_dejure_liege }
+			is_ruler = yes
+			independent = no
+			primary_title = { is_titular = no }
+			NOT = {
+				liege = {
+					any_demesne_title = {
+						ROOT = {
+							primary_title = {
+								de_jure_liege_or_above = PREVPREV
+							}
+						}
+					}
+				}
+			}
+		}
+		allow = { }
+		effect = {
+			add_trait = not_dejure_liege
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	ai_is_dejure_liege = {
+		potential = {		
+			ai = yes
+			trait = not_dejure_liege
+			OR = {
+				is_ruler = no
+				independent = yes
+				primary_title = { is_titular = yes }
+				liege = {
+					any_demesne_title = {
+						ROOT = {
+							primary_title = {
+								de_jure_liege_or_above = PREVPREV
+							}
+						}
+					}
+				}	
+			}
+		}
+		allow = { }
+		effect = {
+			remove_trait = not_dejure_liege
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}	
+
+}

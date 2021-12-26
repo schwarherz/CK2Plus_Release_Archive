@@ -1,0 +1,625 @@
+decisions = {
+	
+	feast_0 = {
+		potential = {
+			age = 16
+			is_ruler = yes
+			is_feudal = yes
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }
+			NOT = { has_character_flag = holding_epic_tournament }				
+			NOT = {
+				has_character_modifier = large_feast_timer
+			}
+			
+			NOT = {
+				has_character_flag = guest_feast_started
+			}
+			NOT = {
+				liege = {
+					has_character_modifier = holding_large_feast
+				}
+			}			
+			num_of_vassals = 1
+			primary_title = { tier = COUNT }			
+		}
+		allow = {
+			war = no
+			prisoner = no
+			treasury = 5
+			month = 10
+			prestige = 100
+		}
+		effect = {
+			treasury = -5
+			add_character_modifier = {
+				name = holding_large_feast
+				duration = -1
+			}
+			
+			hidden_tooltip = {
+				character_event = {
+					id = 72003
+					days = 25
+					random = 10
+				}
+				
+				letter_event = { 
+					id = 72109  
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 200
+				}
+				NOT = {
+					OR = {
+						trait = charitable
+						trait = gregarious
+						trait = gluttonous
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 100
+				}
+			}	
+			modifier = {
+				factor = 0
+				trait = temperate
+			}			
+			modifier = {
+				factor = 0
+				trait = greedy
+			}
+			modifier = {
+				factor = 0
+				trait = shy
+			}			
+			modifier = {
+				factor = 0
+				NOT = { age = 25 }
+			}						
+		}
+	}
+	feast_1 = {
+		potential = {
+			age = 16
+			is_ruler = yes
+			is_feudal = yes
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }
+			NOT = { has_character_flag = holding_epic_tournament }	
+			NOT = {
+				has_character_modifier = large_feast_timer
+			}
+			
+			NOT = {
+				has_character_flag = guest_feast_started
+			}
+			NOT = {
+				liege = {
+					has_character_modifier = holding_large_feast
+				}
+			}			
+			num_of_vassals = 1
+			primary_title = { tier = DUKE }
+		}
+		allow = {
+			war = no
+			prisoner = no
+			treasury = 10
+			month = 10
+			prestige = 100
+		}
+		effect = {
+			treasury = -10
+			add_character_modifier = {
+				name = holding_large_feast
+				duration = -1
+			}
+			
+			hidden_tooltip = {
+				character_event = {
+					id = 72003
+					days = 25
+					random = 10
+				}
+				
+				letter_event = { 
+					id = 72109  
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 250
+				}
+				NOT = {
+					OR = {
+						trait = charitable
+						trait = gregarious
+						trait = gluttonous
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 125
+				}
+			}	
+			modifier = {
+				factor = 0
+				trait = temperate
+			}			
+			modifier = {
+				factor = 0
+				trait = greedy
+			}
+			modifier = {
+				factor = 0
+				trait = shy
+			}			
+			modifier = {
+				factor = 0
+				NOT = { age = 25 }
+			}						
+		}
+	}
+	feast_2 = {
+		potential = {
+			age = 16
+			is_ruler = yes
+			is_feudal = yes
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }
+			NOT = { has_character_flag = holding_epic_tournament }
+			NOT = {
+				has_character_modifier = large_feast_timer
+			}
+			
+			NOT = {
+				has_character_flag = guest_feast_started
+			}
+			NOT = {
+				liege = {
+					has_character_modifier = holding_large_feast
+				}
+			}			
+			num_of_vassals = 1
+			primary_title = { higher_tier_than = DUKE }
+		}
+		allow = {
+			war = no
+			prisoner = no
+			treasury = 20
+			month = 10
+			prestige = 100
+		}
+		effect = {
+			treasury = -20
+			add_character_modifier = {
+				name = holding_large_feast
+				duration = -1
+			}
+			
+			hidden_tooltip = {
+				character_event = {
+					id = 72003
+					days = 25
+					random = 10
+				}
+				
+				letter_event = { 
+					id = 72109  
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 300
+				}
+				NOT = {
+					OR = {
+						trait = charitable
+						trait = gregarious
+						trait = gluttonous
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 150
+				}
+			}	
+			modifier = {
+				factor = 0
+				trait = temperate
+			}			
+			modifier = {
+				factor = 0
+				trait = greedy
+			}
+			modifier = {
+				factor = 0
+				trait = shy
+			}			
+			modifier = {
+				factor = 0
+				NOT = { age = 25 }
+			}				
+		}
+	}	
+	
+	summer_fair_0 = {
+		potential = {
+			age = 16
+			is_ruler = yes
+			is_feudal = yes
+			religion_group = christian
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }
+			NOT = { has_character_flag = holding_epic_tournament }
+			NOT = {
+				has_character_modifier = summer_fair_timer
+			}
+			num_of_vassals = 1
+			primary_title = { tier = COUNT }
+		}
+		allow = {
+			war = no
+			treasury = 5
+			prisoner = no
+			month = 4
+			NOT = {
+				month = 7
+			}
+		}
+		effect = {
+			treasury = -5
+			add_character_modifier = {
+				name = holding_summer_fair
+				duration = -1
+			}
+			hidden_tooltip = {
+				character_event = {
+					id = 74047
+					days = 65
+				}
+				character_event = { id = 74050 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 100
+				}
+			}
+			
+			modifier = {
+				factor = 0
+				NOT = { stewardship = 10 }
+			}			
+		}
+	}
+
+	summer_fair_1 = {
+		potential = {
+			age = 16
+			is_ruler = yes
+			is_feudal = yes
+			religion_group = christian
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }
+			NOT = { has_character_flag = holding_epic_tournament }
+			NOT = {
+				has_character_modifier = summer_fair_timer
+			}
+			num_of_vassals = 1
+			primary_title = { tier = DUKE }
+		}
+		allow = {
+			war = no
+			treasury = 10
+			prisoner = no
+			month = 4
+			NOT = {
+				month = 7
+			}
+		}
+		effect = {
+			treasury = -10
+			add_character_modifier = {
+				name = holding_summer_fair
+				duration = -1
+			}
+			hidden_tooltip = {
+				character_event = {
+					id = 74047
+					days = 65
+				}
+				character_event = { id = 74050 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 150
+				}
+			}
+			
+			modifier = {
+				factor = 0
+				NOT = { stewardship = 10 }
+			}			
+		}
+	}
+	
+	summer_fair_2 = {
+		potential = {
+			age = 16
+			is_ruler = yes
+			is_feudal = yes
+			religion_group = christian
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }
+			NOT = { has_character_flag = holding_epic_tournament }
+			NOT = {
+				has_character_modifier = summer_fair_timer
+			}
+			num_of_vassals = 1
+			primary_title = { higher_tier_than = DUKE }
+		}
+		allow = {
+			war = no
+			treasury = 20
+			prisoner = no
+			month = 4
+			NOT = {
+				month = 7
+			}
+		}
+		effect = {
+			treasury = -20
+			add_character_modifier = {
+				name = holding_summer_fair
+				duration = -1
+			}
+			hidden_tooltip = {
+				character_event = {
+					id = 74047
+					days = 65
+				}
+				character_event = { id = 74050 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 200
+				}
+			}
+			
+			modifier = {
+				factor = 0
+				NOT = { stewardship = 10 }
+			}			
+		}
+	}	
+	
+	hold_grand_hunt_0 = {
+		potential = {
+			is_ruler = yes
+			is_feudal = yes
+			age = 16
+			is_female = no
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }
+			NOT = { has_character_flag = holding_epic_tournament }
+			NOT = {
+				has_character_modifier = grand_hunt_timer
+			}
+			primary_title = { tier = COUNT }
+		}
+		allow = {
+			war = no
+			month = 8
+			treasury = 5
+			NOT = { month = 10 }
+			NOT = {	health_traits = 1 }
+			prisoner = no
+		}
+		effect = {
+			treasury = -5
+			add_character_modifier = {
+				name = holding_grand_hunt
+				duration = -1
+			}			
+			hidden_tooltip = { 
+				character_event = { id = 36090 days = 16 random = 25 } 
+				letter_event = { id = 36080 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 100
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					martial = 10
+				}
+			}
+		}
+	}
+	
+	hold_grand_hunt_1 = {
+		potential = {
+			is_ruler = yes
+			is_feudal = yes
+			age = 16
+			is_female = no
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }
+			NOT = { has_character_flag = holding_epic_tournament }
+			NOT = {
+				has_character_modifier = grand_hunt_timer
+			}
+			primary_title = { tier = DUKE }
+		}
+		allow = {
+			war = no
+			month = 8
+			treasury = 10
+			NOT = { month = 10 }
+			NOT = {	health_traits = 1 }
+			prisoner = no
+		}
+		effect = {
+			treasury = -10
+			add_character_modifier = {
+				name = holding_grand_hunt
+				duration = -1
+			}			
+			hidden_tooltip = { 
+				character_event = { id = 36090 days = 16 random = 25 } 
+				letter_event = { id = 36080 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 150
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					martial = 10
+				}
+			}
+		}
+	}
+	
+	hold_grand_hunt_2 = {
+		potential = {
+			is_ruler = yes
+			is_feudal = yes
+			age = 16
+			is_female = no
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }
+			NOT = { has_character_flag = holding_epic_tournament }
+			NOT = {
+				has_character_modifier = grand_hunt_timer
+			}
+			primary_title = { higher_tier_than = DUKE }
+		}
+		allow = {
+			war = no
+			month = 8
+			treasury = 20
+			NOT = { month = 10 }
+			NOT = {	health_traits = 1 }
+			prisoner = no
+		}
+		effect = {
+			treasury = -20
+			add_character_modifier = {
+				name = holding_grand_hunt
+				duration = -1
+			}			
+			hidden_tooltip = { 
+				character_event = { id = 36090 days = 16 random = 25 } 
+				letter_event = { id = 36080 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					treasury = 200
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					martial = 10
+				}
+			}
+		}
+	}	
+	
+}

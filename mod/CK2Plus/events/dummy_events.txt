@@ -1,0 +1,10 @@
+character_event = {
+	id = 500000
+	desc = "EVTDESC500000"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA500000"
+	}
+}

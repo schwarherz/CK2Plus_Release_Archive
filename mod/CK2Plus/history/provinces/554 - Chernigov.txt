@@ -1,0 +1,22 @@
+# 554 - Chernigov
+
+# County Title
+title = c_chernigov
+
+# Settlements
+max_settlements = 5
+b_chernigov = castle
+b_nizhyn = city
+b_kozelets = city
+b_borzna = castle
+#b_horodnia = castle
+#b_gorodets = castle
+#b_sosnytsia = castle
+#b_mglin = castle
+
+# Misc
+culture = russian
+religion = orthodox
+
+# History
+1239.1.1 = { remove_settlement = b_nizhyn } #Mongol invasion
