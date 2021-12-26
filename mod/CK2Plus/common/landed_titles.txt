@@ -35,6 +35,10 @@ e_papal_state = {
 	short_name = yes
 	location_ruler_title = yes
 	
+	allow = {
+		always = no
+	}
+	
 	# Always exists
 	landless = yes
 	
@@ -65,6 +69,10 @@ k_orthodox = {
 
 	# Always exists
 	landless = yes
+	
+	allow = {
+		always = no
+	}	
 	
 	# Controls a religion
 	controls_religion = orthodox
@@ -3107,6 +3115,315 @@ d_arabic_band = {
 	modifier = d_arabic_band_modifier
 }
 
+d_canarias_raiders = {
+	color = { 135 170 60 }
+	color2 = { 255 255 255 }
+
+	capital = 849 # Canarias
+	
+	# Hire Trigger
+	allow = {
+		OR = {
+			religion_group = christian
+			religion_group = pagan_group
+			religion = orthodox
+			religion_group = muslim
+			religion_group = judaism_group
+		}
+	}
+	
+	# Parent Religion 
+	religion = pagan
+	
+	mercenary = yes
+
+	title = "Lord"
+	foa = "LORD_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	modifier = d_canarias_raiders_modifier
+}
+
+d_ghanaian_band = {
+	color = { 135 170 60 }
+	color2 = { 255 255 255 }
+
+	capital = 925 # Soumpi
+	
+	# Hire Trigger
+	allow = {
+		OR = {
+			religion_group = pagan_group
+			religion_group = muslim
+		}
+	}
+	
+	# Parent Religion 
+	religion = pagan
+	
+	mercenary = yes
+
+	title = "Lord"
+	foa = "LORD_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	modifier = d_ghanaian_band_modifier
+}
+
+d_ghanaian_company = {
+	color = { 135 170 60 }
+	color2 = { 255 255 255 }
+
+	capital = 925 # Soumpi
+	
+	# Hire Trigger
+	allow = {
+		OR = {
+			religion_group = pagan_group
+			religion_group = muslim
+		}
+	}
+	
+	# Parent Religion 
+	religion = pagan
+	
+	mercenary = yes
+
+	title = "Lord"
+	foa = "LORD_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	modifier = d_ghanaian_company_modifier
+}
+
+d_songhai_spearmen = {
+	color = { 135 170 60 }
+	color2 = { 255 255 255 }
+
+	capital = 919 # Gao
+	
+	# Hire Trigger
+	allow = {
+		OR = {
+			religion_group = pagan_group
+			religion_group = muslim
+		}
+	}
+	
+	# Parent Religion 
+	religion = sunni
+	
+	mercenary = yes
+
+	title = "Lord"
+	foa = "LORD_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	modifier = d_songhai_spearmen_modifier
+}
+
+d_songhai_company = {
+	color = { 135 170 60 }
+	color2 = { 255 255 255 }
+
+	capital = 919 # Gao
+	
+	# Hire Trigger
+	allow = {
+		OR = {
+			religion_group = pagan_group
+			religion_group = muslim
+		}
+	}
+	
+	# Parent Religion 
+	religion = sunni
+	
+	mercenary = yes
+
+	title = "Lord"
+	foa = "LORD_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	modifier = d_songhai_company_modifier
+}
+
+d_mali_legion = {
+	color = { 135 170 60 }
+	color2 = { 255 255 255 }
+
+	capital = 931 # Bamako
+	
+	# Hire Trigger
+	allow = {
+		OR = {
+			religion_group = pagan_group
+			religion_group = muslim
+		}
+	}
+	
+	# Parent Religion 
+	religion = pagan
+	
+	mercenary = yes
+
+	title = "Lord"
+	foa = "LORD_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	modifier = d_mali_legion_modifier
+}
+
+d_mali_warriors = {
+	color = { 135 170 60 }
+	color2 = { 255 255 255 }
+
+	capital = 931 # Bamako
+	
+	# Hire Trigger
+	allow = {
+		OR = {
+			religion_group = pagan_group
+			religion_group = muslim
+		}
+	}
+	
+	# Parent Religion 
+	religion = pagan
+	
+	mercenary = yes
+
+	title = "Lord"
+	foa = "LORD_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	modifier = d_mali_warriors_modifier
+}
+
+d_jolof_band = {
+	color = { 135 170 60 }
+	color2 = { 255 255 255 }
+
+	capital = 937 # Cayor
+	
+	# Hire Trigger
+	allow = {
+		OR = {
+			religion_group = pagan_group
+			religion_group = muslim
+		}
+	}
+	
+	# Parent Religion 
+	religion = pagan
+	
+	mercenary = yes
+
+	title = "Lord"
+	foa = "LORD_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	modifier = d_jolof_band_modifier
+}
+
+d_jolof_company = {
+	color = { 135 170 60 }
+	color2 = { 255 255 255 }
+
+	capital = 937 # Cayor
+	
+	# Hire Trigger
+	allow = {
+		OR = {
+			religion_group = pagan_group
+			religion_group = muslim
+		}
+	}
+	
+	# Parent Religion 
+	religion = pagan
+	
+	mercenary = yes
+
+	title = "Lord"
+	foa = "LORD_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	modifier = d_jolof_company_modifier
+}
+
 # EMPIRES
 
 e_france = {
@@ -3114,6 +3431,7 @@ e_france = {
 	color2={ 255 255 20 }	
 	capital = 112 # Ile de France
 	
+	short_name = yes
 	culture = frankish	
 	religion = catholic
 	
@@ -3378,6 +3696,27 @@ k_burgundy = {
 			b_cuisery = {
 			}
 		}
+		c_bern = {
+			color={ 165 26 64 }
+			color2={ 255 255 255 }
+
+			b_bern = {
+			}
+			b_interlaken = {
+			}
+			b_luzern = {
+			}
+			b_biel = {
+			}
+			b_sempach = {
+			}
+			b_langenthal = {
+			}
+			b_kyburg = {
+			}
+			b_sursee = {
+			}
+		}		
 		c_neuchatel = {
 			color={ 163 24 62 }
 			color2={ 255 255 255 }
@@ -3397,48 +3736,6 @@ k_burgundy = {
 			b_avences = {
 			}
 			b_murten = {
-			}
-		}
-		c_bern = {
-			color={ 165 26 64 }
-			color2={ 255 255 255 }
-			
-			b_bern = {
-			}
-			b_interlaken = {
-			}
-			b_luzern = {
-			}
-			b_biel = {
-			}
-			b_sempach = {
-			}
-			b_langenthal = {
-			}
-			b_kyburg = {
-			}
-			b_sursee = {
-			}
-		}
-		c_schwyz = {
-			color={ 167 28 66 }
-			color2={ 255 255 255 }
-			
-			b_schwyz = {
-			}
-			b_engelberg = {
-			}
-			b_zurich = {
-			}
-			b_zug = {
-			}
-			b_altdorf = {
-			}
-			b_stans = {
-			}
-			b_glarus = {
-			}
-			b_winterthur = {
 			}
 		}
 		c_aargau = {
@@ -5189,7 +5486,7 @@ e_hre = {
 			}
 		}
 		d_kleve = {
-			color={ 132 147 147 }
+			color={ 232 232 107 }
 			color2={ 255 255 255 }
 			
 			gain_effect = { character_event = { id = 110017 } }		
@@ -6308,35 +6605,33 @@ e_hre = {
 				}
 			}
 		}
-		d_tyrol = {  
-			color={ 197 154 154 }
+		d_swiss = {
+			color = { 255 1 1 }
 			color2={ 255 255 255 }
 			
-			capital = 316 #Tirol
-			
 			gain_effect = { character_event = { id = 110017 } }
-		
-			c_tirol = {
-				color={ 90 90 90 }
-				color2={ 255 255 255 }
 			
-				b_bregenz = {
+			c_schwyz = {
+				color={ 167 28 66 }
+				color2={ 255 255 255 }
+
+				b_schwyz = {
 				}
-				b_landeck = {
+				b_engelberg = {
 				}
-				b_stanton = {
+				b_zurich = {
 				}
-				b_imst = {
+				b_zug = {
 				}
-				b_sterzing = {
+				b_altdorf = {
 				}
-				b_ried = {
+				b_stans = {
 				}
-				b_dornbirn = {
+				b_glarus = {
 				}
-				b_nenzing = {
+				b_winterthur = {
 				}
-			}
+			}			
 			c_grisons = {
 				color={ 255 241 230 }
 				color2={ 255 255 255 }
@@ -6379,27 +6674,6 @@ e_hre = {
 				b_herisau = {
 				}
 			}
-			c_innsbruck = {
-				color={ 84 84 84 }
-				color2={ 255 255 255 }
-			
-				b_innsbruck = {
-				}
-				b_kufstein = {
-				}
-				b_stams = {
-				}
-				b_lienz = {
-				}
-				b_schwaz = {
-				}
-				b_kitzbuhel = {
-				}
-				b_jenbach = {
-				}
-				b_fugen = {
-				}
-			}
 			c_chur = {
 				color={ 87 87 87 }
 				color2={ 255 255 255 }
@@ -6419,6 +6693,57 @@ e_hre = {
 				b_glurns = {
 				}
 				b_zuoz = {
+				}
+			}			
+		}		
+		d_tyrol = {  
+			color={ 197 154 154 }
+			color2={ 255 255 255 }
+			
+			capital = 316 #Tirol
+			
+			gain_effect = { character_event = { id = 110017 } }
+		
+			c_tirol = {
+				color={ 90 90 90 }
+				color2={ 255 255 255 }
+			
+				b_bregenz = {
+				}
+				b_landeck = {
+				}
+				b_stanton = {
+				}
+				b_imst = {
+				}
+				b_sterzing = {
+				}
+				b_ried = {
+				}
+				b_dornbirn = {
+				}
+				b_nenzing = {
+				}
+			}
+			c_innsbruck = {
+				color={ 84 84 84 }
+				color2={ 255 255 255 }
+			
+				b_innsbruck = {
+				}
+				b_kufstein = {
+				}
+				b_stams = {
+				}
+				b_lienz = {
+				}
+				b_schwaz = {
+				}
+				b_kitzbuhel = {
+				}
+				b_jenbach = {
+				}
+				b_fugen = {
 				}
 			}
 		}
@@ -6932,6 +7257,7 @@ e_italy = {
 	color = { 125  171  84 }
 	culture = italian
 	capital = 333
+	short_name = yes
 	
 	allow = {
 		e_italy = {
@@ -6941,6 +7267,7 @@ e_italy = {
 		}
 		religion_group = christian		
 	}
+	
 
 	k_sicily = {
 		color={ 175 244 86 }
@@ -9130,6 +9457,8 @@ k_georgia = {
 				}
 				b_knossos = {
 				}
+				b_gorgolainis = {
+				}
 			}
 		}		
 	}
@@ -10312,6 +10641,7 @@ e_poland_lithuania = {
 	capital = 527 # Krakowskie
 	
 	culture = polish
+	short_name = yes
 	
 	allow = {
 		e_poland_lithuania = {
@@ -11227,6 +11557,7 @@ e_russia = {
 	capital = 547 # Kiev
 	
 	culture = russian
+	short_name = yes
 	
 	allow = {
 		e_russia = {
@@ -14123,6 +14454,7 @@ e_persia = {
 	capital = 646 #	Esfahan
 	
 	culture = persian
+	short_name = yes
 	
 	k_azerbaijan = {
 		color={ 70 142 20 }
@@ -15842,6 +16174,7 @@ e_danubia = {
 	color2={ 255 255 255 }
 	
 	capital	= 444 # Esztergom
+	short_name = yes
 	
 	allow = {
 		e_danubia = {
@@ -17229,6 +17562,7 @@ e_spain = { #Spain
 	capital = 199 # Burgos
 	religion = catholic
 	culture = castillan
+	short_name = yes
 	
 	allow = {
 		e_spain = {
@@ -18746,6 +19080,7 @@ e_maghreb = {
 	capital = 843 # Marrakech
 	
 	culture = maghreb_arabic
+	short_name = yes
 	
 	allow = {
 		e_maghreb = {
@@ -19467,6 +19802,12 @@ k_mauretania = {
 			b_tichla = { 
 			}			
 		}
+		c_ouadene = {
+			color={ 126 178 55 }
+			color2={ 255 255 255 }
+			b_ouadene = { 
+			}			
+		}		
 	}	
 }
 
@@ -19809,6 +20150,7 @@ e_arabia = {
 	color2={ 255 255 255 }
 	
 	capital	= 796 # Cairo
+	short_name = yes
 	
 	allow = {
 		e_arabia = {
@@ -21786,6 +22128,7 @@ e_ethiopia = {
 	color={ 198 30 93 }
 	color2={ 255 255 255 }
 	
+	short_name = yes
 	capital = 883
 	
 	allow = {
@@ -22287,6 +22630,7 @@ e_britannia = {
 	capital = 32
 	
 	religion=catholic
+	short_name = yes
 	
 	allow = {
 		e_britannia = {
@@ -23942,6 +24286,7 @@ e_scandinavia = {
 	capital = 266
 	
 	religion=catholic
+	short_name = yes
 	
 	allow = {
 		e_scandinavia = {
@@ -25503,14 +25848,14 @@ k_norway = {
 e_mali = {
 	color={ 251 133 78 }
 	color2={ 185 48 15 }
+	short_name = yes	
 	
 	allow = {
 		e_mali = {
 			holder_scope = {
 				is_alive = yes
 			} 
-		}
-		religion_group = muslim		
+		}	
 	}	
 	
 	k_jolof = { #West (Senegal, Gambia)
@@ -25773,8 +26118,7 @@ e_mali = {
 		color2={ 75 50 10 }
 		
 		allow = {
-			NOT = { e_mali = { holder_scope = { character = ROOT } } }	
-			religion_group = muslim		
+			NOT = { e_mali = { holder_scope = { character = ROOT } } }		
 		}
 
 		d_songhai = {
@@ -26162,9 +26506,6 @@ e_mali = {
 			religion_group = muslim
 		}
 	}
-	d_swiss = {
-		color = { 255 1 1 }
-	}
 	d_tavasts = {
 		color = { 131 21 21 }
 		
@@ -26442,6 +26783,63 @@ k_al_mawsat = { #muslim andalusia
 		religion_group = muslim
 	}
 }
+
+k_of_mann_and_the_isles = {
+	color={ 25 65 243 }
+	capital = 54 # Isle of Man
+	culture = irish
+	allow = {
+		OR = {
+			culture_group = north_germanic
+			culture = irish
+			religion = norse_pagan
+		}	
+	}
+}
+
+k_cornwall = {
+	color = { 195 65 15 }
+	capital = 31 # Cornwall
+	culture = breton
+	allow = {
+		culture = cornish
+		NOT = { has_landed_title = k_england }
+	}
+}
+
+k_mercia = {
+	color = { 255 65 20 }
+	capital = 63 # Derby
+	culture = saxon
+	allow = {
+		culture = saxon
+		NOT = { has_landed_title = k_england }
+	}
+}
+
+k_dublin = {
+	color = { 255 65 20 }
+	capital = 11 # Dublin
+	culture = danish
+	allow = {
+		OR = {
+			culture_group = north_germanic
+			religion = norse_pagan
+			culture = irish
+		}
+	}
+}
+
+k_sardinia = {
+        color={ 170 200 170 }
+	capital = 326 # Cagliari
+	culture = italian
+	allow = {
+		culture = italian
+		religion = catholic
+	}
+}	
+
 	
 # TITULAR EMPIRES
 e_cuman = {
@@ -26461,11 +26859,7 @@ e_cuman = {
 	
 }
 e_easteregg = {
-	color = { 255 105 180 }
-	
-	allow = {
-		always = no
-	}	
+	color = { 255 105 180 }	
 }
 e_al_andalus = { #muslim iberia
 	color = { 211  181  142 }

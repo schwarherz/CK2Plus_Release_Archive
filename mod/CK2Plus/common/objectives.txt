@@ -109,7 +109,7 @@ plot_gain_vassal_title = {
 	}
 	
 	chance = {
-		factor = 5
+		factor = 10
 		
 		modifier = {
 			factor = 0.0
@@ -210,6 +210,7 @@ plot_gain_vassal_title = {
 	}
 	abort = {
 		OR = {
+			FROM = { has_character_flag = abort_plot }
 			NOT = {
 				OR = {
 					# Count title outside a Duke's duchy
@@ -300,6 +301,7 @@ plot_gain_vassal_title = {
 	}
 	abort_effect = {
 		FROM = {
+			clr_character_flag = abort_plot
 			# Clear flags
 			hidden_tooltip = {
 				clr_character_flag = event7040
@@ -410,7 +412,7 @@ plot_weaken_fellow_vassal = {
 	
 	
 	chance = {
-		factor = 10
+		factor = 20
 		
 		modifier = {
 			factor = 0.0
@@ -534,6 +536,7 @@ plot_weaken_fellow_vassal = {
 	}
 	abort = {
 		OR = {
+			FROM = { has_character_flag = abort_plot }
 			holder_scope = {
 				spouse = { character = FROM }
 			}
@@ -548,6 +551,7 @@ plot_weaken_fellow_vassal = {
 	}
 	abort_effect = {
 		FROM = {
+			clr_character_flag = abort_plot
 			# Clear flags
 			hidden_tooltip = {
 				clr_character_flag = plot_weaken_fellow_vassal_decision_liege_taken
@@ -617,7 +621,7 @@ plot_institute_hereditary_titles = {
 	}
 	
 	chance = {
-		factor = 50
+		factor = 100
 
 		modifier = {
 			factor = 10.0
@@ -831,7 +835,7 @@ plot_kidnap_liege = {
 	}
 	
 	chance = {
-		factor = 50
+		factor = 100
 	
 		modifier = {
 			factor = 0.0
@@ -859,9 +863,16 @@ plot_kidnap_liege = {
 		modifier = {
 			factor = 0
 			FROM = { opinion = { who = liege value = 50 } }
+			NOT = {
+				OR = {
+					FROM = { trait = envious }
+					FROM = { trait = deceitful }
+					FROM = { trait = ambitious }
+				}
+			}			
 		}
 		modifier = {
-			factor = 0
+			factor = 0.25
 			FROM = { opinion = { who = liege value = 25 } }
 			NOT = {
 				OR = {
@@ -925,6 +936,7 @@ plot_kidnap_liege = {
 	}
 	abort = {
 		OR = {	
+			FROM = { has_character_flag = abort_plot }
 			FROM = { 			
 				is_ruler = yes
 				NOT = {
@@ -940,6 +952,7 @@ plot_kidnap_liege = {
 	}
 	abort_effect = {
 		FROM = {
+			clr_character_flag = abort_plot
 			# Clear flags
 			hidden_tooltip = {
 				clr_character_flag = plot_kidnap_liege_decision_50_taken
@@ -1061,7 +1074,7 @@ plot_gain_title = {
 	}
 	
 	chance = {
-		factor = 50
+		factor = 100
 	
 		modifier = {
 			factor = 0.0
@@ -1288,7 +1301,7 @@ plot_succ_seniority = {
 	}
 	
 	chance = {
-		factor = 50
+		factor = 100
 		
 		modifier = {
 			factor = 0.0
@@ -1513,7 +1526,7 @@ plot_succ_primogeniture = {
 	}
 	
 	chance = {
-		factor = 50
+		factor = 100
 		
 		modifier = {
 			factor = 0.0
@@ -1747,7 +1760,7 @@ plot_succ_gavelkind = {
 	}
 	
 	chance = {
-		factor = 50
+		factor = 100
 		
 		modifier = {
 			factor = 0.0
@@ -2025,7 +2038,7 @@ plot_succ_feudal_elective = {
 	}
 	
 	chance = {
-		factor = 50
+		factor = 100
 		
 		modifier = {
 			factor = 0.0
@@ -2236,16 +2249,24 @@ plot_lower_crown_authority = {
 	}
 	
 	chance = {
-		factor = 20
+		factor = 50
 
 		modifier = {
 			factor = 5.0
 			holder_scope = {
 				FROM = {
-					has_opinion_modifier = { who = PREV modifier = opinion_increased_authority2 }
+					has_opinion_modifier = { who = PREV modifier = opinion_increased_authority }
 				}
 			}
 		}
+		modifier = {
+			factor = 5.0
+			holder_scope = {
+				FROM = {
+					has_opinion_modifier = { who = PREV modifier = opinion_increased_authority_ai }
+				}
+			}
+		}		
 		modifier = {
 			factor = 10.0
 			holder_scope = { 
@@ -2635,7 +2656,7 @@ plot_kill_character = {
 	}
 	
 	chance = {
-		factor = 5
+		factor = 20
 		
 		modifier = {
 			factor = 0.01
@@ -2716,7 +2737,6 @@ plot_kill_character = {
 		hidden_tooltip = {
 			death = {
 				death_reason = death_murder_unknown
-				killer = FROM
 			}
 		}
 		FROM = {
@@ -2833,7 +2853,7 @@ plot_kill_spouse = {
 	}	
 	
 	chance = {
-		factor = 5
+		factor = 20
 		
 		modifier = {
 			factor = 0.01
@@ -2931,7 +2951,6 @@ plot_kill_spouse = {
 		hidden_tooltip = {
 			death = {
 				death_reason = death_murder_unknown
-				killer = FROM
 			}
 		}
 		FROM = {
@@ -4851,7 +4870,7 @@ obj_five_children = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		piety = 50
+		prestige = 50
 		set_character_flag = obj_have_child_3
 	}
 }
@@ -4920,7 +4939,7 @@ obj_ten_children = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		piety = 50
+		prestige = 50
 		set_character_flag = obj_have_child_4
 	}
 }
@@ -4989,7 +5008,7 @@ obj_fifteen_children = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		piety = 50
+		prestige = 50
 		set_character_flag = obj_have_child_5
 	}
 }
@@ -5064,7 +5083,7 @@ obj_twenty_children = {
 			}
 			give_nickname = nick_the_quiverfull
 		}	
-		piety = 50
+		prestige = 50
 		set_character_flag = obj_have_child_6
 	}
 }
@@ -6236,6 +6255,7 @@ obj_convert_a_province = {
 	}
 	effect = {
 		change_learning = 1
+		piety = 50
 		set_character_flag = obj_convert_a_province
 	}
 }

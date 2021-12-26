@@ -6,10 +6,7 @@ character_event = {
 	
 	trigger = {
 		ai = no 
-		OR = {
-			trait = not_dejure_liege
-			has_minor_title = title_castellian
-		}
+		trait = not_dejure_liege
 	}
 		
 	desc = "EVTDESC110000"
@@ -20,10 +17,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA110000"
-		hidden_tooltip = {
-			remove_trait = not_dejure_liege
-			remove_title = title_castellian			
-		}
+		remove_trait = not_dejure_liege
 	}
 }
 
@@ -31,6 +25,7 @@ character_event = {
 	id = 110001
 	picture = "GFX_evt_council"	
 	
+	is_triggered_only = yes
 	only_rulers = yes
 	
 	trigger = {
@@ -87,6 +82,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA110001"	
+		set_character_flag = centralize_without_penalties
 		any_demesne_title = {
 			limit = {
 				tier = KING
@@ -185,35 +181,13 @@ character_event = {
 				add_law_w_cooldown = revoke_law_1
 			}			
 		}
-	}
-}
-
-character_event = {
-	id = 110015
-	
-	trigger = {
-		year = 1113
-		has_landed_title = e_papal_state
-		NOT = { has_global_flag = holy_orders_enabled }
-	}
-		
-	desc = "EVTDESC110015"
-	
-	mean_time_to_happen = {
-		months = 1		
-	}
-	
-
-	option = {
-		name = "EVTOPTA110015"
-		set_global_flag = holy_orders_enabled		
-		activate_title = { title = d_devotees_of_the_true_prophet status = yes }
-		activate_title = { title = d_hashshashin status = yes }
+		clr_character_flag = centralize_without_penalties
 	}
 }
 
 character_event = {
 	id = 110017
+	is_triggered_only = yes
 	
 	trigger = {
 		ai = yes
@@ -273,7 +247,195 @@ character_event = {
 		name = "EVTOPTA110017"
 		hidden_tooltip = {
 			#try to give it to a count with their capital in the duchy
-			#give to lords with which we have a decent relationship first
+			#give it to lords with good relationship + same culture
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 50 }
+					opinion = { who = ROOT value = 0 }
+					primary_title = {
+						tier = COUNT
+					}
+					capital_scope = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}				
+					}
+				}
+				capital_scope = {
+					duchy = {
+						gain_title = PREVPREV
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 25 }
+					opinion = { who = ROOT value = -25 }
+					primary_title = {
+						tier = COUNT
+					}
+					capital_scope = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}				
+					}
+				}
+				capital_scope = {
+					duchy = {
+						gain_title = PREVPREV
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 0 }
+					opinion = { who = ROOT value = -50 }
+					primary_title = {
+						tier = COUNT
+					}
+					capital_scope = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}				
+					}
+				}
+				capital_scope = {
+					duchy = {
+						gain_title = PREVPREV
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			#give it to lords with good relationship + same culture group
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture_group = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 50 }
+					opinion = { who = ROOT value = 0 }
+					primary_title = {
+						tier = COUNT
+					}
+					capital_scope = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}				
+					}
+				}
+				capital_scope = {
+					duchy = {
+						gain_title = PREVPREV
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture_group = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 25 }
+					opinion = { who = ROOT value = -25 }
+					primary_title = {
+						tier = COUNT
+					}
+					capital_scope = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}				
+					}
+				}
+				capital_scope = {
+					duchy = {
+						gain_title = PREVPREV
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture_group = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 0 }
+					opinion = { who = ROOT value = -50 }
+					primary_title = {
+						tier = COUNT
+					}
+					capital_scope = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}				
+					}
+				}
+				capital_scope = {
+					duchy = {
+						gain_title = PREVPREV
+					}
+				}
+				set_global_flag = duchy_granted
+			}			
+			#give to lords with which we have a decent relationship
 			random_realm_lord = {
 				limit = {
 					NOT = { has_global_flag = duchy_granted }
@@ -341,34 +503,6 @@ character_event = {
 					is_liege_or_above = ROOT
 					reverse_opinion = { who = ROOT value = 0 }
 					opinion = { who = ROOT value = -50 }
-					primary_title = {
-						tier = COUNT
-					}
-					capital_scope = {
-						duchy = {
-							holder_scope = { character = ROOT }
-							NOT = {
-								ROOT = {
-									capital_scope = {
-										duchy = { title = PREVPREVPREV }
-									}									
-								}
-							}
-						}				
-					}
-				}
-				capital_scope = {
-					duchy = {
-						gain_title = PREVPREV
-					}
-				}
-				set_global_flag = duchy_granted
-			}
-			random_realm_lord = {
-				limit = {
-					NOT = { has_global_flag = duchy_granted }
-					religion = ROOT
-					is_liege_or_above = ROOT
 					primary_title = {
 						tier = COUNT
 					}
@@ -393,10 +527,12 @@ character_event = {
 				set_global_flag = duchy_granted
 			}
 			#try to give it to a count who has a province in the duchy
+			#same culture
 			random_realm_lord = {
 				limit = {
 					NOT = { has_global_flag = duchy_granted }
 					religion = ROOT
+					culture = ROOT
 					is_liege_or_above = ROOT
 					reverse_opinion = { who = ROOT value = 50 }
 					opinion = { who = ROOT value = 0 }
@@ -447,6 +583,7 @@ character_event = {
 				limit = {
 					NOT = { has_global_flag = duchy_granted }
 					religion = ROOT
+					culture = ROOT
 					is_liege_or_above = ROOT
 					reverse_opinion = { who = ROOT value = 25 }
 					opinion = { who = ROOT value = -25 }
@@ -497,9 +634,62 @@ character_event = {
 				limit = {
 					NOT = { has_global_flag = duchy_granted }
 					religion = ROOT
+					culture = ROOT
 					is_liege_or_above = ROOT
 					reverse_opinion = { who = ROOT value = 0 }
 					opinion = { who = ROOT value = -50 }
+					primary_title = {
+						tier = COUNT
+					}
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			#same culture group
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture_group = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 50 }
+					opinion = { who = ROOT value = 0 }
 					primary_title = {
 						tier = COUNT
 					}
@@ -547,7 +737,61 @@ character_event = {
 				limit = {
 					NOT = { has_global_flag = duchy_granted }
 					religion = ROOT
+					culture_group = ROOT
 					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 25 }
+					opinion = { who = ROOT value = -25 }
+					primary_title = {
+						tier = COUNT
+					}
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture_group = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 0 }
+					opinion = { who = ROOT value = -50 }
 					primary_title = {
 						tier = COUNT
 					}
@@ -591,10 +835,162 @@ character_event = {
 				}
 				set_global_flag = duchy_granted
 			}			
-			#try to give it to a randomly generated character along with a count title in the duchy that we hold
+			#by relation
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 50 }
+					opinion = { who = ROOT value = 0 }
+					primary_title = {
+						tier = COUNT
+					}
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 25 }
+					opinion = { who = ROOT value = -25 }
+					primary_title = {
+						tier = COUNT
+					}
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 0 }
+					opinion = { who = ROOT value = -50 }
+					primary_title = {
+						tier = COUNT
+					}
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}			
+			#if we have a large demesne, try to give it to a randomly generated character along with a count title in the duchy that we hold
 			random_demesne_title = {
 				limit = {
 					tier = COUNT
+					ROOT = { NOT = { demesne_efficiency = 1.5 } }
 					NOT = { has_global_flag = duchy_granted }
 					location = {
 						duchy = {
@@ -655,7 +1051,597 @@ character_event = {
 				}
 				set_global_flag = duchy_granted
 			}
+			#give it to anyone with their capital in the duchy
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture = ROOT
+					is_liege_or_above = ROOT
+					primary_title = {
+						tier = COUNT
+					}
+					capital_scope = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}				
+					}
+				}
+				capital_scope = {
+					duchy = {
+						gain_title = PREVPREV
+					}
+				}
+				set_global_flag = duchy_granted
+			}			
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture_group = ROOT
+					is_liege_or_above = ROOT
+					primary_title = {
+						tier = COUNT
+					}
+					capital_scope = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}				
+					}
+				}
+				capital_scope = {
+					duchy = {
+						gain_title = PREVPREV
+					}
+				}
+				set_global_flag = duchy_granted
+			}			
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					is_liege_or_above = ROOT
+					primary_title = {
+						tier = COUNT
+					}
+					capital_scope = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}				
+					}
+				}
+				capital_scope = {
+					duchy = {
+						gain_title = PREVPREV
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			#anyone with a province in the duchy
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture = ROOT
+					is_liege_or_above = ROOT
+					primary_title = {
+						tier = COUNT
+					}
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}			
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture_group = ROOT
+					is_liege_or_above = ROOT
+					primary_title = {
+						tier = COUNT
+					}
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}			
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					is_liege_or_above = ROOT
+					primary_title = {
+						tier = COUNT
+					}
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}			
+			#if we have at least half our demesne size in provinces, try to give it to a randomly generated character along with a count title in the duchy that we hold
+			random_demesne_title = {
+				limit = {
+					tier = COUNT
+					ROOT = { NOT = { demesne_efficiency = 2.0 } }
+					NOT = { has_global_flag = duchy_granted }
+					location = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}	
+					}
+				}	
+				ROOT = {
+					create_random_steward = {
+						random_traits = yes
+						dynasty = random
+						female = no
+					}
+					new_character = {
+						character_event = { id = 300001 }					
+						ROOT = {
+							random_demesne_title = {
+								limit = {
+									tier = COUNT
+									location = {
+										duchy = {
+											holder_scope = { character = ROOT }
+											NOT = {
+												ROOT = {
+													capital_scope = {
+														duchy = { title = PREVPREVPREV }
+													}									
+												}
+											}
+										}
+									}
+								}
+								location = {
+									set_province_flag = this_duchy
+								}
+							}
+							random_demesne_province = {
+								limit = {
+									has_province_flag = this_duchy
+								}
+								county = {
+									gain_title = PREVPREVPREV
+								}
+								duchy = {
+									gain_title = PREVPREVPREV
+								}
+								clr_province_flag = this_duchy
+							}
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}						
 			#if all else fails, give it to any vassal that has land in the duchy
+			#same culture
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 50 }
+					opinion = { who = ROOT value = 0 }
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}	
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 25 }
+					opinion = { who = ROOT value = -25 }
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 0 }
+					opinion = { who = ROOT value = -50 }
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			#culture group
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture_group = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 50 }
+					opinion = { who = ROOT value = 0 }
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}	
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture_group = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 25 }
+					opinion = { who = ROOT value = -25 }
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					culture_group = ROOT
+					is_liege_or_above = ROOT
+					reverse_opinion = { who = ROOT value = 0 }
+					opinion = { who = ROOT value = -50 }
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}			
+			#by relation
 			random_realm_lord = {
 				limit = {
 					NOT = { has_global_flag = duchy_granted }
@@ -797,6 +1783,99 @@ character_event = {
 				}
 				set_global_flag = duchy_granted
 			}
+			#anyone
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					is_liege_or_above = ROOT
+					culture = ROOT
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}			
+			random_realm_lord = {
+				limit = {
+					NOT = { has_global_flag = duchy_granted }
+					religion = ROOT
+					is_liege_or_above = ROOT
+					culture_group = ROOT
+					any_demesne_title = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+				}
+				random_demesne_title = {
+					limit = {
+						tier = COUNT
+						location = {
+							duchy = {
+								holder_scope = { character = ROOT }
+								NOT = {
+									ROOT = {
+										capital_scope = {
+											duchy = { title = PREVPREVPREV }
+										}									
+									}
+								}
+							}	
+						}
+					}
+					location = {
+						duchy = {
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}			
 			random_realm_lord = {
 				limit = {
 					NOT = { has_global_flag = duchy_granted }
@@ -837,6 +1916,70 @@ character_event = {
 					location = {
 						duchy = {
 							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_global_flag = duchy_granted
+			}	
+			#give it away to random character, regardless of demesne size
+			random_demesne_title = {
+				limit = {
+					tier = COUNT
+					NOT = { has_global_flag = duchy_granted }
+					location = {
+						duchy = {
+							holder_scope = { character = ROOT }
+							NOT = {
+								ROOT = {
+									capital_scope = {
+										duchy = { title = PREVPREVPREV }
+									}									
+								}
+							}
+						}	
+					}
+				}	
+				ROOT = {
+					create_random_steward = {
+						random_traits = yes
+						dynasty = random
+						female = no
+					}
+					new_character = {
+						character_event = { id = 300001 }					
+						ROOT = {
+							random_demesne_title = {
+								limit = {
+									tier = COUNT
+									location = {
+										duchy = {
+											holder_scope = { character = ROOT }
+											NOT = {
+												ROOT = {
+													capital_scope = {
+														duchy = { title = PREVPREVPREV }
+													}									
+												}
+											}
+										}
+									}
+								}
+								location = {
+									set_province_flag = this_duchy
+								}
+							}
+							random_demesne_province = {
+								limit = {
+									has_province_flag = this_duchy
+								}
+								county = {
+									gain_title = PREVPREVPREV
+								}
+								duchy = {
+									gain_title = PREVPREVPREV
+								}
+								clr_province_flag = this_duchy
+							}
 						}
 					}
 				}

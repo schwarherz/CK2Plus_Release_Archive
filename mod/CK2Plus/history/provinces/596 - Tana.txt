@@ -20,10 +20,6 @@ culture = cuman
 religion = tengri_pagan
 
 # History
-
-
-1227.1.1 = { religion = sunni } 
-
 1187.1.1 = { b_bataysk = castle } 
-
+1227.1.1 = { religion = sunni } 
 1238.1.1 = { culture = mongol }

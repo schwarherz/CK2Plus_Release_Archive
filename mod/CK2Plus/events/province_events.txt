@@ -404,7 +404,11 @@ character_event = {
 	
 	trigger = {
 		year = 1100
-		culture = norman
+		OR = {
+			culture = norman
+			culture = frankish
+			culture = occitan
+		}
 		any_demesne_province = {
 			kingdom = {
 				title = k_england
@@ -415,7 +419,7 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 800
-modifier = {
+		modifier = {
 			factor = 1.05
 			NOT = { learning = 1 }
 		}		
@@ -544,6 +548,8 @@ character_event = {
 			OR = {
 				culture = saxon
 				culture = norman
+				culture = frankish
+				culture = occitan
 			}
 		}
 	}
@@ -562,6 +568,8 @@ character_event = {
 				OR = {	
 					culture = saxon
 					culture = norman
+					culture = frankish
+					culture = occitan
 				}
 			}
 			culture = english
@@ -587,6 +595,8 @@ character_event = {
 			OR = {
 				culture = saxon
 				culture = norman
+				culture = frankish
+				culture = occitan
 			}
 		}
 	}
@@ -602,6 +612,8 @@ character_event = {
 				OR = {	
 					culture = saxon
 					culture = norman
+					culture = frankish
+					culture = occitan
 				}
 			}
 			culture = english
@@ -630,6 +642,8 @@ character_event = {
 			OR = {
 				culture = saxon
 				culture = norman
+				culture = frankish
+				culture = occitan
 			}
 		}
 	}
@@ -645,6 +659,8 @@ character_event = {
 				OR = {	
 					culture = saxon
 					culture = norman
+					culture = frankish
+					culture = occitan
 				}
 			}
 			culture = english
@@ -667,3 +683,4 @@ character_event = {
 		culture = english
 	}
 }
+

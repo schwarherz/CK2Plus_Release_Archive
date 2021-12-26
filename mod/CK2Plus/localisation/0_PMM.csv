@@ -184,13 +184,6 @@ EVTOPTB7777808;On second thought, lets leave them be.;A la réfléxion, laissez le
 EVTNAME7777809;Arrest of the Templars;Arrestations des Templiers;Sperrt die Templer ein;;Arrest of the Templars;;;;;;;;;x
 EVTDESC7777809;The Pope has arrested the Templars within his domain. The holy order is charged with heresy, blasphemy, and a litany of other crimes against God.;Le Pape a arrêté les Templiers de ses Etats. L'Ordre est accusé d'hérésie, de blasphèmes, and de bien d'autres crimes envers Dieu. ;Der Papst hat die Templer innerhalb seines Gebiets eingekerkert. Der heilige Orden wird wegen der Ketzerei, Gotteslästerung, und einer Litanei anderer Verbrechen gegen  Gott angeklagt.;;;;;;;;;x;;
 EVTOPTA7777809;I see.;Je vois.;Ich verstehe;;I see.;;;;;;;;;x
-EVTNAME7777810;Raiding Party;Incursion;Beutezug;;Raiding Party;;;;;;;;;x
-EVTDESC7777810;Let us lead a raiding party against our heathen neighbors!;Laissez nous conduire une incursion contre nos voisins païens! ;Lassen Sie uns einen Beutezug gegen unsere Heide-Nachbarn führen!;;;;;;;;;x;;
-EVTOPTA7777810;I will lead it personally.;Je vais la diriger personnellement.;Ich werde es persönlich führen.;;I will lead it personally.;;;;;;;;;x
-EVTOPTC7777810;Nevermind.;Peu importe.;Macht nichts.;;Nevermind.;;;;;;;;;x
-raiding_party;Raiding Party;Incursion;Beutezug;;Raiding Party;;;;;;;;;x
-raiding_party_desc;Organize a raid on a neighboring country for loot and slaves.;Organiser une incursion dans un pays voisin pour du butin et des esclaves.;Organisieren Sie einen Überfall auf einen Anliegerstaat für die Beute und Sklaven.;;Organize a raid on a neighboring country for loot and slaves.;;;;;;;;;x
-raid;Begin plotting the raid.;Commencer à comploter l'incursion;Beginnen Sie damit, den Überfall zu planen.;;Begin plotting the raid.;;;;;;;;;x
 d_german_band;German Band;Bande allemande;Deutscher Bund;;German Band;;;;;;;;;x
 d_german_band_adj;German Band;Bande allemande;Deutscher Bund;;German Band;;;;;;;;;x
 d_lithuanian_band;Lithuanian Band;Bande lithuanienne;Lithauischer Bund;;Lithuanian Band;;;;;;;;;x
@@ -205,3 +198,21 @@ d_black_sea_merchant_convoy;Black Sea Merchant Convoy;Convoi marchand de la Mer 
 d_black_sea_merchant_convoy_adj;Black Sea Merchant Convoy;Convoi marchand de la Mer Noire;Handelskonvoi des Schwarzen Meeres;;Black Sea Merchant Convoy;;;;;;;;;x
 d_eastern_merchant_convoy;Eastern Merchant Convoy;Convoi marchand oriental;Osthandelskonvoi;;Eastern Merchant Convoy;;;;;;;;;x
 d_eastern_merchant_convoy_adj;Eastern Merchant Convoy;Convoi marchand oriental;Osthandelskonvoi;;Eastern Merchant Convoy;;;;;;;;;x
+d_canarias_raiders;Canarias Raiders;Canarias Raiders;Canarias Raiders;;Canarias Raiders;;;;;;;;;x
+d_canarias_raiders_adj;Canarias Raiders;Canarias Raiders;Canarias Raiders;;Canarias Raiders;;;;;;;;;x
+d_ghanaian_band;Ghanaian Band;Ghanaian Band;Ghanaian Band;;Ghanaian Band;;;;;;;;;x
+d_ghanaian_band_adj;Ghanaian Band;Ghanaian Band;Ghanaian Band;;Ghanaian Band;;;;;;;;;x
+d_ghanaian_company;Ghanaian Company;Ghanaian Company;Ghanaian Company;;Ghanaian Company;;;;;;;;;x
+d_ghanaian_company_adj;Ghanaian Company;Ghanaian Company;Ghanaian Company;;Ghanaian Company;;;;;;;;;x
+d_songhai_company;Songhai Company;Songhai Company;Songhai Company;;Songhai Company;;;;;;;;;x
+d_songhai_company_adj;Songhai Company;Songhai Company;Songhai Company;;Songhai Company;;;;;;;;;x
+d_songhai_spearmen;Songhai Spearmen;Songhai Spearmen;Songhai Spearmen;;Songhai Spearmen;;;;;;;;;x
+d_songhai_spearmen_adj;Songhai Spearmen;Songhai Spearmen;Songhai Spearmen;;Songhai Spearmen;;;;;;;;;x
+d_mali_legion;Mali Legion;Mali Legion;Mali Legion;;Mali Legion;;;;;;;;;x
+d_mali_legion_adj;Mali Legion;Mali Legion;Mali Legion;;Mali Legion;;;;;;;;;x
+d_mali_warriors;Mali Warriors;Mali Warriors;Mali Warriors;;Mali Warriors;;;;;;;;;x
+d_mali_warriors_adj;Mali Warriors;Mali Warriors;Mali Warriors;;Mali Warriors;;;;;;;;;x
+d_jolof_band;Jolof Band;Jolof Band;Jolof Band;;Jolof Band;;;;;;;;;x
+d_jolof_band_adj;Jolof Band;Jolof Band;Jolof Band;;Jolof Band;;;;;;;;;x
+d_jolof_company;Jolof Company;Jolof Company;Jolof Company;;Jolof Company;;;;;;;;;x
+d_jolof_company_adj;Jolof Company;Jolof Company;Jolof Company;;Jolof Company;;;;;;;;;x

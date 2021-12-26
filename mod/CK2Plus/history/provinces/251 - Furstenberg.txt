@@ -6,11 +6,10 @@ title = c_furstenberg
 # Settlements
 max_settlements = 5
 b_furstenberg = castle
+b_villingen = city
 b_hirsau = temple
 b_zollern = castle
 
-
-#b_villingen = city
 #b_baar = castle
 #b_haslach = castle
 #b_donaueschingen = city

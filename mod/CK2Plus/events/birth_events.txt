@@ -16,6 +16,7 @@ character_event = {
 	id = 450
 	desc = "EVTDESC450"
 	picture = "GFX_evt_lovers"
+	is_triggered_only = yes
 	
 	min_age = 16
 	capable_only = yes
@@ -82,31 +83,31 @@ character_event = {
 	
 	
 	mean_time_to_happen = {
-		months = 600
+		days = 1
 
 		modifier = {
-			factor = 10.0 #make it possible (but unlikely) for a courtier to 'come out of the closet' to make a pass at the liege
+			factor = 0.1 #make it possible (but unlikely) for a courtier to 'come out of the closet' to make a pass at the liege
 			OR = {
 				AND = {
 					NOT = { trait = homosexual }
-					LIEGE = { trait = homosexual }
+					liege = { trait = homosexual }
 					is_female = yes
 					ROOT = { is_female = yes }
 				}
 				AND = {
 					NOT = { trait = homosexual }
-					LIEGE = { trait = homosexual }
+					liege = { trait = homosexual }
 					is_female = no
 					ROOT = { is_female = no }
 				}				
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			trait = homosexual #to balance for fewer potential lovers
 		}	
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			has_character_flag = debutante
 			NOT = {
 				had_character_flag = {
@@ -116,90 +117,90 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			NOT = { age = 20 }
 		}
 		modifier = {
-			factor = 3.0
+			factor = 0.33
 			liege = {
 				is_close_relative = ROOT
 				NOT = { trait = hedonist }
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			age = 30
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			liege = { has_objective = obj_find_lover }
 		}
 		modifier = {
-			factor = 0.4
+			factor = 2.0
 			trait = hedonist
 		}
 		modifier = {
-			factor = 0.4
+			factor = 2.0
 			liege = { trait = hedonist }
 		}		
 		modifier = {
-			factor = 0.4
+			factor = 2.0
 			trait = lustful
 		}
 		modifier = {
-			factor = 0.4
+			factor = 2.0
 			liege = { trait = lustful }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.5
 			NOT = { opinion = { who = liege value = 0 } }
 		}	
 		modifier = {
-			factor = 1.5
+			factor = 0.5
 			NOT = { reverse_opinion = { who = liege value = 0 } }
 		}			
 		modifier = {
-			factor = 1.5
+			factor = 0.5
 			NOT = { opinion = { who = liege value = 25 } }
 		}	
 		modifier = {
-			factor = 1.5
+			factor = 0.5
 			NOT = { reverse_opinion = { who = liege value = 25 } }
 		}			
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			opinion = { who = liege value = 25 }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			reverse_opinion = { who = liege value = 25 }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			opinion = { who = liege value = 50 }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			reverse_opinion = { who = liege value = 50 }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			opinion = { who = liege value = 75 }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			reverse_opinion = { who = liege value = 75 }
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			trait = chaste
 		}
 		modifier = {
-			factor = 5.0
+			factor = 0.2
 			liege = { trait = chaste }
 		}
 		modifier = {
-			factor = 2
+			factor = 0.5
 			liege = { any_child = { trait = bastard } }
 		}
 	}
@@ -211,13 +212,13 @@ character_event = {
 				OR = {
 					AND = {
 						NOT = { trait = homosexual }
-						LIEGE = { trait = homosexual }
+						liege = { trait = homosexual }
 						is_female = yes
 						ROOT = { is_female = yes }
 					}
 					AND = {
 						NOT = { trait = homosexual }
-						LIEGE = { trait = homosexual }
+						liege = { trait = homosexual }
 						is_female = no
 						ROOT = { is_female = no }
 					}				
@@ -301,6 +302,7 @@ character_event = {
 		if = {
 			limit = {
 				is_female = yes
+				NOT = { age = 45 }
 				FROM = { is_female = no }
 			}
 			random_list = {
@@ -311,7 +313,10 @@ character_event = {
 		if = {
 			limit = {
 				is_female = no
-				FROM = { is_female = yes }
+				FROM = { 
+					NOT = { age = 45 } 
+					is_female = yes 
+				}
 			}
 			random_list = {
 				50 = { FROM = { impregnate = ROOT } }

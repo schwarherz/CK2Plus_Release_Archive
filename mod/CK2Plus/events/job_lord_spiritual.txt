@@ -40,6 +40,16 @@ character_event = {
 		location = {
 			owner = { same_realm = ROOT }
 		}
+		NOT = {
+			liege = {
+				religion_group = pagan_group
+				OR = {
+					has_landed_title = e_il-khanate
+					has_landed_title = e_golden_horde
+					has_landed_title = e_timurids
+				}				
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -345,7 +355,9 @@ character_event = {
 	option = {
 		name = "EVTOPTA900"
 		piety = 10
-		location = { 
+		religion_authority = 0.001
+		location = {
+			religion_authority = -0.001
 			religion = ROOT 
 			hidden_tooltip = {
 				if = {
@@ -436,6 +448,16 @@ character_event = {
 				same_realm = ROOT
 			}
 		}
+		NOT = {
+			liege = {
+				religion_group = pagan_group
+				OR = {
+					has_landed_title = e_il-khanate
+					has_landed_title = e_golden_horde
+					has_landed_title = e_timurids
+				}				
+			}
+		}		
 	}
 	
 	mean_time_to_happen = {
@@ -778,6 +800,16 @@ character_event = {
 			NOT = { religion = ROOT }
 			owner = { same_realm = ROOT }
 		}
+		NOT = {
+			liege = {
+				religion_group = pagan_group
+				OR = {
+					has_landed_title = e_il-khanate
+					has_landed_title = e_golden_horde
+					has_landed_title = e_timurids
+				}				
+			}
+		}		
 	}
 	
 	mean_time_to_happen = {
@@ -1059,6 +1091,16 @@ character_event = {
 	
 	trigger = {
 		has_job_action = action_inquisition
+		NOT = {
+			liege = {
+				religion_group = pagan_group
+				OR = {
+					has_landed_title = e_il-khanate
+					has_landed_title = e_golden_horde
+					has_landed_title = e_timurids
+				}				
+			}
+		}		
 		location = {
 			any_province_lord = {
 				NOT = { is_liege_of = ROOT }
@@ -1480,6 +1522,16 @@ character_event = {
 			NOT = { religion = ROOT }
 			NOT = { has_province_modifier = religious_tension }
 		}
+		NOT = {
+			liege = {
+				religion_group = pagan_group
+				OR = {
+					has_landed_title = e_il-khanate
+					has_landed_title = e_golden_horde
+					has_landed_title = e_timurids
+				}				
+			}
+		}		
 	}
 	
 	mean_time_to_happen = {
@@ -2354,6 +2406,11 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
+		liege = { religion = ROOT }
+		OR = {
+			religion_group = christian
+			religion_group = muslim
+		}
 		has_job_action = action_advance_cul_tech
 	}
 	

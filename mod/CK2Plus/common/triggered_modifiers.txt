@@ -381,9 +381,9 @@ crusade_war = {
 	
 	icon = 13
 	
-	castle_vassal_max_levy = 0.5
-	city_vassal_max_levy = 0.5
-	temple_vassal_max_levy = 0.5	
+	castle_vassal_max_levy = 0.4
+	city_vassal_max_levy = 0.4
+	temple_vassal_max_levy = 0.4	
 }
 
 crusade_war = {
@@ -416,9 +416,9 @@ crusade_war = {
 	
 	icon = 13
 	
-	castle_vassal_max_levy = 0.4
-	city_vassal_max_levy = 0.4
-	temple_vassal_max_levy = 0.4	
+	castle_vassal_max_levy = 0.3
+	city_vassal_max_levy = 0.3
+	temple_vassal_max_levy = 0.3	
 }
 
 crusade_war = {
@@ -451,9 +451,9 @@ crusade_war = {
 	
 	icon = 13
 	
-	castle_vassal_max_levy = 0.35
-	city_vassal_max_levy = 0.35
-	temple_vassal_max_levy = 0.35	
+	castle_vassal_max_levy = 0.25
+	city_vassal_max_levy = 0.25
+	temple_vassal_max_levy = 0.25	
 }
 
 crusade_war = {
@@ -486,9 +486,9 @@ crusade_war = {
 	
 	icon = 13
 	
-	castle_vassal_max_levy = 0.3
-	city_vassal_max_levy = 0.3
-	temple_vassal_max_levy = 0.3	
+	castle_vassal_max_levy = 0.2
+	city_vassal_max_levy = 0.2
+	temple_vassal_max_levy = 0.2	
 }
 
 crusade_war = {
@@ -521,9 +521,9 @@ crusade_war = {
 	
 	icon = 13
 	
-	castle_vassal_max_levy = 0.25
-	city_vassal_max_levy = 0.25
-	temple_vassal_max_levy = 0.25	
+	castle_vassal_max_levy = 0.15
+	city_vassal_max_levy = 0.15
+	temple_vassal_max_levy = 0.15	
 }
 
 crusade_war = {
@@ -556,9 +556,9 @@ crusade_war = {
 	
 	icon = 13
 	
-	castle_vassal_max_levy = 0.2
-	city_vassal_max_levy = 0.2
-	temple_vassal_max_levy = 0.2
+	castle_vassal_max_levy = 0.1
+	city_vassal_max_levy = 0.1
+	temple_vassal_max_levy = 0.1
 }
 
 # Bankruptcy

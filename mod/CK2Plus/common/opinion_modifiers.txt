@@ -11,7 +11,7 @@
 ##############
 
 same_dynasty = {
-	opinion = 15
+	opinion = 5
 }
 
 opinion_ally = {
@@ -1181,7 +1181,7 @@ opinion_munificent = {
 	opinion = 15
 }
 opinion_delighted = {
-	opinion = 15
+	opinion = 25
 }
 opinion_shocked = {
 	opinion = -15
@@ -1517,18 +1517,9 @@ talent_recognized = {
 	opinion = 15
 }
 
-opinion_increased_authority_ai2 = {
-	opinion = -30
-}
-
 opinion_increased_authority_ai = {
 	opinion = -20
 }
-
-opinion_increased_authority2 = {
-	opinion = -50
-}
-
 opinion_increased_authority = {
 	opinion = -40
 }
@@ -1720,6 +1711,54 @@ opinion_defending_liege = {
 	opinion = 30
 }
 
-opinion_ruler_appointed_castellian = {
+opinion_defending_me = {
+	opinion = 20
+}
+
+opinion_not_defending_me = {
 	opinion = -10
+}
+
+####################
+# Family relations #
+####################
+
+opinion_father = {
+	opinion = 20
+}
+
+opinion_mother = {
+	opinion = 20
+}
+
+opinion_sibling = {
+	opinion = 20
+}
+
+opinion_grandfather = {
+	opinion = 10
+}
+
+opinion_grandmother = {
+	opinion = 10
+}
+
+opinion_grandchild = {
+	opinion = 10
+}
+
+opinion_uncle = {
+	opinion = 5
+}
+
+opinion_aunt = {
+	opinion = 5
+}
+
+opinion_nephew = {
+	opinion = 5
+}
+
+opinion_niece = {
+	opinion = 5
 }

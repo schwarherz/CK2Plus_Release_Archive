@@ -107,7 +107,6 @@ character_event = {
 		}
 		piety = 50
 		prestige = -200
-		religion_authority = 0.02
 		clr_character_flag = pope_wants_our_law_changed
 		FROM = {
 			opinion = {

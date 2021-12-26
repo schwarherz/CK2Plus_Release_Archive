@@ -4,7 +4,7 @@
 title = c_sacz
 
 # Settlements
-max_settlements = 3
+max_settlements = 4
 b_szczyrzycz = temple
 b_nowysacz = castle
 b_gorlice = city

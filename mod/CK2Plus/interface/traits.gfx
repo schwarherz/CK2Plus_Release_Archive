@@ -918,13 +918,5 @@ spriteTypes = {
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
-	}	
-
-	spriteType = {
-		name = "GFX_trait_castellian"
-		texturefile = "gfx/CK2Plus/regency.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
 	}	  
 }

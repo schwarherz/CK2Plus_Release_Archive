@@ -45,7 +45,6 @@ laws = {
 		}		
 		allow = {
 			holder_scope = { war = no }
-			has_crown_law_title = yes
 		}
 		revoke_allowed = {
 			always = no
@@ -245,8 +244,7 @@ laws = {
 			NOT = { tier = baron }
 		}
 		allow = {
-			holder_scope = { war = no }
-			has_crown_law_title = yes			
+			holder_scope = { war = no }			
 		}
 		revoke_allowed = {
 			always = no
@@ -448,7 +446,6 @@ laws = {
 		}
 		allow = {
 			holder_scope = { war = no }
-			has_crown_law_title = yes
 		}
 		revoke_allowed = {
 			always = no
@@ -618,8 +615,7 @@ laws = {
 			NOT = { tier = baron }
 		}
 		allow = {
-			holder_scope = { war = no }
-			has_crown_law_title = yes			
+			holder_scope = { war = no }		
 		}
 		revoke_allowed = {
 			always = no
@@ -829,7 +825,6 @@ laws = {
 		}
 		allow = {
 			holder_scope = { war = no }
-			has_crown_law_title = yes
 		}
 		revoke_allowed = {
 			always = no
@@ -994,8 +989,7 @@ laws = {
 			NOT = { tier = baron }
 		}
 		allow = {
-			holder_scope = { war = no }
-			has_crown_law_title = yes			
+			holder_scope = { war = no }			
 		}
 		revoke_allowed = {
 			always = no

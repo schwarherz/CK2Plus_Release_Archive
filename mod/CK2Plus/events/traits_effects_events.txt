@@ -6826,7 +6826,7 @@ character_event = {
 			in_command = no
 		}
 		trait = craven
-		opinion = { who = LIEGE value = 0 }
+		opinion = { who = liege value = 0 }
 	}
 	
 	mean_time_to_happen = {

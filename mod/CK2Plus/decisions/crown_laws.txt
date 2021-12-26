@@ -71,7 +71,10 @@ de_jure_laws = {
 
 		potential = {
 			NOT = { has_law = revoke_law_0 }
-			holder_scope = { religion_group = muslim }
+			OR = {
+				holder_scope = { religion_group = muslim }
+				title = e_byzantium
+			}
 		}
 		allow = {
 			OR = {
@@ -105,7 +108,10 @@ de_jure_laws = {
 
 		potential = {
 			NOT = { has_law = revoke_law_1 }
-			holder_scope = { religion_group = muslim }
+			OR = {
+				holder_scope = { religion_group = muslim }
+				title = e_byzantium
+			}
 		}
 		allow = {
 			OR = {
@@ -207,7 +213,7 @@ de_jure_laws = {
 			}
 			OR = {
 				has_law = centralization_2
-				holder_scope = { demesne_size = 4 demesne_efficiency = 1.0 }
+				holder_scope = { demesne_size = 3 demesne_efficiency = 1.0 }
 			}
 			OR = {
 				has_law = centralization_2
@@ -233,8 +239,8 @@ de_jure_laws = {
 				if = { 
 					limit = {
 						has_law = centralization_0
-						NOT = { has_law = succ_feudal_elective }
-						holder_scope = { ai = no }
+						holder_scope = { ai = no NOT = { has_character_flag = centralize_without_penalties } }
+						has_global_flag = startup
 					}
 					any_de_jure_vassal = {
 						limit = {
@@ -253,28 +259,9 @@ de_jure_laws = {
 				if = { 
 					limit = {
 						has_law = centralization_0
-						has_law = succ_feudal_elective
-						holder_scope = { ai = no }
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority2
-							months = 120
-						}
-					}					
-				}
-				if = { 
-					limit = {
-						has_law = centralization_0
-						NOT = { has_law = succ_feudal_elective }
-						holder_scope = { ai = yes }
+						holder_scope = { ai = yes NOT = { has_character_flag = centralize_without_penalties } }
+						has_global_flag = startup
+						
 					}
 					any_de_jure_vassal = {
 						limit = {
@@ -286,26 +273,6 @@ de_jure_laws = {
 						opinion = {
 							who = ROOT
 							modifier = opinion_increased_authority_ai
-							months = 120
-						}
-					}					
-				}
-				if = { 
-					limit = {
-						has_law = centralization_0
-						has_law = succ_feudal_elective
-						holder_scope = { ai = yes }
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority_ai2
 							months = 120
 						}
 					}					
@@ -353,7 +320,7 @@ de_jure_laws = {
 			}
 			OR = {
 				has_law = centralization_3
-				holder_scope = { demesne_size = 5 demesne_efficiency = 1.0 }
+				holder_scope = { demesne_size = 4 demesne_efficiency = 1.0 }
 			}
 			OR = {
 				has_law = centralization_3
@@ -379,8 +346,8 @@ de_jure_laws = {
 				if = { 
 					limit = {
 						has_law = centralization_1
-						NOT = { has_law = succ_feudal_elective }
-						holder_scope = { ai = no }
+						holder_scope = { ai = no NOT = { has_character_flag = centralize_without_penalties } }
+						has_global_flag = startup
 					}
 					any_de_jure_vassal = {
 						limit = {
@@ -399,28 +366,8 @@ de_jure_laws = {
 				if = { 
 					limit = {
 						has_law = centralization_1
-						has_law = succ_feudal_elective
-						holder_scope = { ai = no }
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority2
-							months = 120
-						}
-					}					
-				}
-				if = { 
-					limit = {
-						has_law = centralization_1
-						NOT = { has_law = succ_feudal_elective }
-						holder_scope = { ai = yes }
+						holder_scope = { ai = yes NOT = { has_character_flag = centralize_without_penalties } }
+						has_global_flag = startup
 					}
 					any_de_jure_vassal = {
 						limit = {
@@ -432,26 +379,6 @@ de_jure_laws = {
 						opinion = {
 							who = ROOT
 							modifier = opinion_increased_authority_ai
-							months = 120
-						}
-					}					
-				}
-				if = { 
-					limit = {
-						has_law = centralization_1
-						has_law = succ_feudal_elective
-						holder_scope = { ai = yes }
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority_ai2
 							months = 120
 						}
 					}					
@@ -499,7 +426,7 @@ de_jure_laws = {
 			}
 			OR = {
 				has_law = centralization_4
-				holder_scope = { demesne_size = 6 demesne_efficiency = 1.0 }
+				holder_scope = { demesne_size = 5 demesne_efficiency = 1.0 }
 			}			
 			OR = {
 				has_law = centralization_4
@@ -525,8 +452,8 @@ de_jure_laws = {
 				if = { 
 					limit = {
 						has_law = centralization_2
-						NOT = { has_law = succ_feudal_elective }
-						holder_scope = { ai = no }
+						holder_scope = { ai = no NOT = { has_character_flag = centralize_without_penalties } }
+						has_global_flag = startup
 					}
 					any_de_jure_vassal = {
 						limit = {
@@ -545,28 +472,8 @@ de_jure_laws = {
 				if = { 
 					limit = {
 						has_law = centralization_2
-						has_law = succ_feudal_elective
-						holder_scope = { ai = no }
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority2
-							months = 120
-						}
-					}					
-				}
-				if = { 
-					limit = {
-						has_law = centralization_2
-						NOT = { has_law = succ_feudal_elective }
-						holder_scope = { ai = yes }
+						holder_scope = { ai = yes NOT = { has_character_flag = centralize_without_penalties } }
+						has_global_flag = startup
 					}
 					any_de_jure_vassal = {
 						limit = {
@@ -578,26 +485,6 @@ de_jure_laws = {
 						opinion = {
 							who = ROOT
 							modifier = opinion_increased_authority_ai
-							months = 120
-						}
-					}					
-				}
-				if = { 
-					limit = {
-						has_law = centralization_2
-						has_law = succ_feudal_elective
-						holder_scope = { ai = yes }
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority_ai2
 							months = 120
 						}
 					}					
@@ -637,7 +524,7 @@ de_jure_laws = {
 			}
 			has_law = centralization_3
 			holder_scope = { prestige = 5000 }
-			holder_scope = { demesne_size = 8 demesne_efficiency = 1.0 }			
+			holder_scope = { demesne_size = 6 demesne_efficiency = 1.0 }			
 			OR = {
 				NOT = { title = e_hre }
 				holder_scope = { trait = crowned_by_pope }
@@ -661,8 +548,8 @@ de_jure_laws = {
 				if = { 
 					limit = {
 						has_law = centralization_3
-						NOT = { has_law = succ_feudal_elective }
-						holder_scope = { ai = no }
+						holder_scope = { ai = no NOT = { has_character_flag = centralize_without_penalties } }
+						has_global_flag = startup
 					}
 					any_de_jure_vassal = {
 						limit = {
@@ -681,28 +568,8 @@ de_jure_laws = {
 				if = { 
 					limit = {
 						has_law = centralization_3
-						has_law = succ_feudal_elective
-						holder_scope = { ai = no }
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority2
-							months = 120
-						}
-					}					
-				}
-				if = { 
-					limit = {
-						has_law = centralization_3
-						NOT = { has_law = succ_feudal_elective }
-						holder_scope = { ai = yes }
+						holder_scope = { ai = yes NOT = { has_character_flag = centralize_without_penalties } }
+						has_global_flag = startup
 					}
 					any_de_jure_vassal = {
 						limit = {
@@ -714,26 +581,6 @@ de_jure_laws = {
 						opinion = {
 							who = ROOT
 							modifier = opinion_increased_authority_ai
-							months = 120
-						}
-					}					
-				}
-				if = { 
-					limit = {
-						has_law = centralization_3
-						has_law = succ_feudal_elective
-						holder_scope = { ai = yes }
-					}
-					any_de_jure_vassal = {
-						limit = {
-							OR = {
-								religion = ROOT
-								is_liege_or_above = ROOT
-							}
-						}
-						opinion = {
-							who = ROOT
-							modifier = opinion_increased_authority_ai2
 							months = 120
 						}
 					}					

@@ -14,10 +14,6 @@ holder=32958
 {
 holder=3853
 }
-1061.1.1=
-{
-holder=32965
-}
 1071.1.1={
 liege="k_mauretania"
 }

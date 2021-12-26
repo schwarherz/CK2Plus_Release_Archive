@@ -70,7 +70,7 @@ north_germanic = {
 		color = { 0.2 0.55 0.65 }
 		
 		male_names = {
-			Ingólfr Isleifur Arnar Einar Ólafur Jón Eilífr Goðrún Heiðar Dagur Agnar Angantýr Arnleifur Austri Baugur Benedikt Bjarnleifur Brynjar Dagur Einar Elfar Elimar Eldgrímur Feyr Gnýr Grímkell Grímar Grímúlfur Hermundur Hildi Hinrik Hiram Hjarnar
+			Ingólfr Isleifur Arnar Einar Ólafur Jón Eilífr Goðrún Heiðar Agnar Angantýr Arnleifur Austri Baugur Benedikt Bjarnleifur Brynjar Dagur Elfar Elimar Eldgrímur Feyr Gnýr Grímkell Grímar Grímúlfur Hermundur Hildi Hinrik Hiram Hjarnar
                         Hjövar Hnikar Holgeir Ían Ívar Ívan Ísmael Jóndór Jósúa Kató Krister Kolmar Kjaran Kjalar Knútur Leifur Loftur Loki Lúther Matti Marri Marel Margrimur Manfred Mikjáll Muninn Nonni Oddfreyr Oddi Oddkell Otti Ottó Pétur Rafn Ragnar
                         Sigur Signar Seifur Sandur Svan Svein Styr Thor Tarfur Tumi Valmar Veigur Veifur
 		}
@@ -86,7 +86,6 @@ north_germanic = {
 		female_patronym = "sdóttir"
 		prefix = no
 
-		modifier = default_culture_modifier
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 80
 		mat_grf_name_chance = 0
@@ -541,7 +540,7 @@ iberian = {
 		}
 		female_names = {
 			Adosinda Aldonza_Aldonza Alduara_Alduara Anderquina Andregoto Aragonta Argilo Arsenda_Arsenda Aurovita Ava Beatriz_Beatrice Benita Berenguela Blanca_Blanche Brígida_Brigid Constanza_Constance Corexia Cristina_Christina Dalia Dueña Dulce_Douce Elvira Eslonza
-			Emilia_Emily Ermengarda_Ermengarde Ermesinda_Ermesinda Eslonza Estefanía_Stephania Eulalia Eva_Eva Eylo Fronilda_Fronilde Gaudiosa Godo Gontroda Gotina_Gotina Guina Guiomar Inés_Agnes Isabel_Elisabeth Jimena Juana Juliana_Juliana Justa Leonor_Eleanor
+			Emilia_Emily Ermengarda_Ermengarde Ermesinda_Ermesinda Estefanía_Stephania Eulalia Eva_Eva Eylo Fronilda_Fronilde Gaudiosa Godo Gontroda Gotina_Gotina Guina Guiomar Inés_Agnes Isabel_Elisabeth Jimena Juana Juliana_Juliana Justa Leonor_Eleanor
 			Lopa_Lopa Mafalda Margarita_Margaret María_Maria Marina_Marine Marquesa Matrona
 			Mayor_Mayor Mencía_Mencia Milia Muña Muñadona_Mumadona Nicor Nuñadona Ónega Petronila_Petronilla Sancha_Sancha Sol Tegridia Teresa_Teresa Toda_Toda Urraca_Urraca
 			Usenda Varela Velasquita Viscavlara
@@ -571,7 +570,7 @@ iberian = {
 		male_names = {
 			Adalbert_Albert Alfons_Alphonse Àlvar_Oliver Amat Arnau_Arnold Arnau-Miró Artau_Artal Bartomeu_Bartolomeus Benet_Benedict Berenguer_Berengar "Berenguer Ramon" "Berenguer Renard" Bernat_Bernard Bernat-Amat Bernat-Hug Bertran_Bertrand Borrell Carles_Charles Dalmau Dalmau-Berenguer Deodat_Theodat Enric_Henry Ermengol Felip_Philip  Felip-Dalmau Ferran_Ferdinand Ferrer Folc_Folke Francesc_Francis
 			Frederic_Frederick Galcerà Gausbert Gausfred_Godfrey Geribert  Gombau_Gundoald Guerau_Gerald Guifré Guillem_William Guillem-Galcerà Guillem-Jordà Guillem-Ramon Guislabert_Gilbert Guitard Hug_Hugh Hug-Jofré Jaume_Jacob Joan_John  Joan-Alfons_John-Alphonse Joan-Guerau Jofré_Godfrey Jordá_Jordan Llop_Lupo Mateu_Matthew Miró
-			Nunó_Nuno Oliba Ot_Otto Pagan_Pagan Pere_Peter Pere-Amat Ponç_Pons Riambau Ramon_Raymond Ramon Berenguer_Raymond Berengar Ramon Borrell Ramon Folc Renard Reverter Ricard_Richard Robert_Robert Roderic_Roderick Roger_Roger Sanç_Sancho Simó_Simon Sunifred Sunyer Tetbald_Theobald Udalard Vidal
+			Nunó_Nuno Oliba Ot_Otto Pagan_Pagan Pere_Peter Pere-Amat Ponç_Pons Riambau Ramon_Raymond Berenguer_Raymond Berengar Ramon Folc Renard Reverter Ricard_Richard Robert_Robert Roderic_Roderick Roger_Roger Sanç_Sancho Simó_Simon Sunifred Sunyer Tetbald_Theobald Udalard Vidal
 		}
 		female_names = {
 			Adelaida_Adelaide Agnès_Agnes Alamanda Aldonça_Aldonza Algaburga Almodis_Almodis Angarina Anglesa Arnaua Arsenda_Arsenda Aurembaix Ava Beatriu Beliarda Berenguera Blanca_Blanche Brunisenda Caterina_Catherine Cecília Clemencia_ClementiaConstança_Constance
@@ -754,12 +753,12 @@ byzantine = {
 			Sigismondo Silvano Silvestro Simone_Simon Simonetto Sinibaldo Tedaldo Teodoro Tibaldo_Theobald Tony Torgodorio Torquato Uberto Ugo_Hugh Vincenzo_Vincent Vitale Vito Vittore Zaccaria
 		}
 		female_names = {
-			Adriana Agathe_Agatha Agne_Agnes Aikaterine Alexandra Alexeia Anastasia_Anastasia Anna_Anna Anthe Anthousa Antipatra Antonina Apollonia Athanasia Barbara Basileia Basilissa
-			Chrysogone Damiane Demetra Dionysia Dorothea_Dorothy Aigidia Eirene_Irene Elaiodora Epiphania Eudokia_Eudocia Eudoxia Eugenia Eulalia Eunike Euphemia Euphrasia Euphrosyne_Euphrosyne
+			Adriana Agathe_Agatha Agne_Agnes Aikaterine Alexandra Alexeia Anna_Anna Anthe Anthousa Antipatra Antonina Apollonia Athanasia Barbara Basileia Basilissa
+			Chrysogone Damiane Demetra Dionysia Dorothea_Dorothy Aigidia Eirene_Irene Elaiodora Epiphania Eudokia_Eudocia Eudoxia Eulalia Eunike Euphemia Euphrasia Euphrosyne_Euphrosyne
 			Eupraxia Eusebia Eustathia Evanthia Gabrielia Garyphallia Georgia Gregoria Helene_Helen Hypatia Ioanna_Joan Ioulia_Juliana Iouliana_Juliana Iustina Kale Konstantine Kyra Kyriake
-			Leontia Margarita_Margaret Maria_Maria Markia Martha_Martha Melissa_Melisende Nikarete Nikoletta Nonna Parthena Pavlina Pelagia Petronella_Petronilla Philippa_Philippa Phyllis Pulcheria Rhodanthe Romane Romylia Sergia Sibylla_Sibylla
+			Leontia Margarita_Margaret Markia Martha_Martha Melissa_Melisende Nikarete Nikoletta Nonna Parthena Pavlina Pelagia Petronella_Petronilla Philippa_Philippa Phyllis Pulcheria Rhodanthe Romane Romylia Sergia Sibylla_Sibylla
 			Simonis Sophia_Sophia Stephania_Stephania Thekla Theochariste Theodora_Theodora Theodosia_Theodosia Theognosia Theoktiste Theophano Thomais Valeria Viviana Xene Zenobia Zoe
-			Adriana Agnese_Agnes Agostina Alessandra Alisia_Alice Aloisia	 Ambrosia Anastasia_Anastasia Angela Antonella Antonia Argentina Assunta Augusta Aurelia Ausonia
+			Agnese_Agnes Agostina Alessandra Alisia_Alice Aloisia Ambrosia Anastasia_Anastasia Angela Antonella Antonia Argentina Assunta Augusta Aurelia Ausonia
 			Bianca_Blanche Candida Caracosa Carla Carmela Caterina_Catherine Cecilia_Cecilia Claudia Cornelia Dora Edda Elena_Helen Eleonora_Eleanor Elisa_Elisabeth Ermenegilda Eudossia Eugenia
 			Eva Filomena Flavia Fortunata Fosca Francesca_Francesca Giacinta Giovanna Georgina Giuditta Giulia_Juliana 
 			Joscella Laura_Laura Lavinia Leonide Livia Lodovica Lucia_Lucia Lucrezia Maddalena_Magdalena Marcella Margherita_Margaret Maria_Maria Mariana 
@@ -1121,13 +1120,13 @@ altaic = {
 	graphical_culture = muslimgfx
 
 	turkish = {
-		graphical_culture = turkishgfx #turkishgfx
+		graphical_culture = turkishgfx
 
 		color = { 0.85 0.55 0.15 }
 
 		male_names = {
 			Çagri Çaka Afsin Ahmet Aksonqor Alaeddin Ali Alkan Alp-Arslan Alp-Yurek Alptigin Artuk Ayaz Aydin Aydogan Aydogdu Aytekin Böru Bulend
-			Bahadir Balaban Basbuga Batuhan Baturay Baybars Bayezid Baytas Belek Berkan Berkiyaruk Bozan Bozan Bugra Burak Cuneyd Dundar Danismend
+			Bahadir Balaban Basbuga Batuhan Baturay Baybars Bayezid Baytas Belek Berkan Berkiyaruk Bozan Bugra Burak Cuneyd Dundar Danismend
 			Davud_David Demir Dogan Dogukan Dukak Erdem Ertan Ertekin Ertugrul Gunduz Hasan Hizir Ibrahim Ilgazi Inal Iskender_Alexander Kurboga Kaikaus Kaikhusraw
 			Kaiqobad Kara Karatay Kasim Kaya Kaytun Kemal Kiliç Korkut Kutalmis Kutay Kutlug Mursel Mahmud Mehmed Meliksah Mengucek
 			Mesud Murad Mustafa Orhan Osman Porsuk Rustem Ramazan Ridvan Söbuk Sökmen Sönmez Suleyman Saim Saltuk Saruca Savtekin Savur Sehinsah
@@ -1172,7 +1171,7 @@ altaic = {
 		modifier = default_culture_modifier
 	}
 	cuman = {
-		graphical_culture = cumangfx #turkishgfx
+		graphical_culture = cumangfx
 		
 		color = { 0.7 0.45 0.1 }
 
@@ -1190,7 +1189,7 @@ altaic = {
 		modifier = default_culture_modifier
 	}
 	pecheneg = {
-		graphical_culture = cumangfx #turkishgfx
+		graphical_culture = cumangfx
 		
 		color = { 0.625 0.4 0.1 }
 
@@ -1213,14 +1212,14 @@ arabic = {
 	graphical_culture = muslimgfx
 	
 	bedouin_arabic = { 
-		graphical_culture = muslimgfx #arabicgfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.1 0.75 0.1 }
 
 		male_names = {
-			Aarif Abdul-Gafur Abdul-Jaleel Abdul-Qadir Abdul-Wahab Abdullah AbuBakr Aghlab Akin Ali Abdul-Wahab Muhammad Alim Aram Azam Bahir
+			Aarif Abdul-Gafur Abdul-Jaleel Abdul-Qadir Abdul-Wahab Abdullah AbuBakr Aghlab Akin Ali Muhammad Alim Aram Azam Bahir
 			Burhanaddin Fadil Fadl Faruk Ghalib Hafiz Halil Hasan Husam Hussayn Ibrahim Mukhtar Idris Is'mail Isa Jabir Jalil Jibril Khaireddin
-			Khalil Mahmud Mansur Mirza Mubarak Mahdi Mukhtar Murad Musa Muzaffaraddin Najib Sami Muslihiddin Nasr Nizam Qawurd Ramadan Sa'daddin
+			Khalil Mahmud Mansur Mirza Mubarak Mahdi Murad Musa Muzaffaraddin Najib Sami Muslihiddin Nasr Nizam Qawurd Ramadan Sa'daddin
 			Sadiq Samir Shaiban Shamir Shujah Sulayman Talib Ubayd Uways Ya'qub Yusuf Zeyd
 		}
 		female_names = {
@@ -1237,19 +1236,19 @@ arabic = {
 		modifier = default_culture_modifier
 	}
 	maghreb_arabic = { 
-		graphical_culture = moorishgfx #arabicgfx
+		graphical_culture = berbergfx
 		
 		color = { 0.2 0.9 0.2 }
 
 		male_names = {
 			Abbas Abdul-Haleem Abdul-Kareem Abdul-Rahman Abdullah Adam_Adam Ahmad Al'a'addin Ali Muhammad Amin Asad Azim Barakat Buwayh Fahd Fath Ghani
 			Haidar Hamad Hashim Hussamaddin Ibrahim Mukhtar Ilyas Is'mail Ishaq Jaffar Jamal Kamal Khalid Khidr Mahtar Marwan Mu'izz Abdul-Azeem Malik
-			Mukhtar Murad Musa Muzaffaraddin Nazar Tahir Mustafa Nasr Nizamaddin Qutaiba Rashid Sa'id Salah Sayyid Shamsaddin Sinbad Sultan Tariq
+			Murad Musa Muzaffaraddin Nazar Tahir Mustafa Nasr Nizamaddin Qutaiba Rashid Sa'id Salah Sayyid Shamsaddin Sinbad Sultan Tariq
 			Umar Wahab Yahya Zafir Zubeyr
 		}
 		female_names = {
 			Amira Bahiyya Bilqis Fahriya Hadiya Hawwa Jaida Kamila Lem'an Melek Najiba Ra'isa Rahima Sadiqa Salaama Siddiqa Tarifa Zahida Zubayda 
-			Aisha Aaliyah Aamina Aamira Aaqila Aarifa Adelah_Adela Adiba Adilah Adilia Adiva Aeesha Aesha Badeea Badia Badra Bahiyya Bajila Baraah Barakah
+			Aisha Aaliyah Aamina Aamira Aaqila Aarifa Adelah_Adela Adiba Adilah Adilia Adiva Aeesha Aesha Badeea Badia Badra Bajila Baraah Barakah
 			Baria Bashira Basilie Basima Basimah Cala Cantara Daisha Dalal Dema Dimah Dinara Dua Durra Durriyya Eleonorka
 		}
 		from_dynasty_prefix = "mn "
@@ -1269,14 +1268,14 @@ arabic = {
 		mother_name_chance = 30
 	}
 	levantine_arabic = {
-		graphical_culture = berbergfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.3 0.95 0.3 }
 
 		male_names = {
 			Abdul-Azeem Abdul-Hamid Abdul-Lateef Abdul-Razzaq Abdullah Adhid Adil Akab Ala'i Ali Muhammad Amir Ashraf Aziz Bashar Da'ud Faisal
 			Fayiz Ghazi Hakam Hamdan Hashmaddin Hussayn Ibrahim Mukhtar Imamaddin Is'mail Ismat Jahan Jamil Kamran Khalid Khudayar Majid Mas'ud
-			Muaddam Abdul-Wahad Muhsin Mukhtar Murad Musa Muzaffaraddin Nuri Ya'qub Muzaffar Nasraddin Nuraddin Radhi Rasul Sa'ud Salahaddin 
+			Muaddam Abdul-Wahad Muhsin Murad Musa Muzaffaraddin Nuri Ya'qub Muzaffar Nasraddin Nuraddin Radhi Rasul Sa'ud Salahaddin 
 			Seyfullah Sharaf Sirhan Taimur Tawfiq Umaya Wahid Yasar Zahir
 		}
 		female_names = {
@@ -1293,7 +1292,7 @@ arabic = {
 		modifier = default_culture_modifier
 	}
 	egyptian_arabic = {
-		graphical_culture = muslimgfx #arabicgfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.1 0.6 0.1 }
 
@@ -1317,7 +1316,7 @@ arabic = {
 		modifier = default_culture_modifier
 	}
 	andalusian_arabic = {
-		graphical_culture = andalusiangfx #arabicgfx
+		graphical_culture = andalusiangfx
 		
 		color = { 0.4 0.6 0.1 }
 
@@ -1355,7 +1354,7 @@ arabic = {
 		male_names = {
 			Abbas Abdul-Haleem Abdul-Kareem Abdul-Rahman Abdullah Adam_Adam Ahmad Al'a'addin Ali Muhammad Amin Asad Azim Barakat Buwayh Fahd Fath Ghani
 			Haidar Hamad Hashim Hussamaddin Ibrahim Mukhtar Ilyas Is'mail Ishaq Jaffar Jamal Kamal Khalid Khidr Mahtar Marwan Mu'izz Abdul-Azeem Malik
-			Mukhtar Murad Musa Muzaffaraddin Nazar Tahir Mustafa Nasr Nizamaddin Qutaiba Rashid Sa'id Salah Sayyid Shamsaddin Sinbad Sultan Tariq
+			Murad Musa Muzaffaraddin Nazar Tahir Mustafa Nasr Nizamaddin Qutaiba Rashid Sa'id Salah Sayyid Shamsaddin Sinbad Sultan Tariq
 			Umar Wahab Yahya Zafir Zubeyr Abelardo Achille Adalberto_Albert Adelmio Adelmo Adolfo Adriano Agostino Alamanno 
 			Alberico Alberto_Albert Alessio Alighiero Ambrogio Amedeo Anastasio Angelo_Angel Anselmo Antonin Arcibaldo Arderico Armando Arnolfo Arrigo Arsenio Artemio Ascanio Astorre
 			Atenolfo Attilio Augusto Aurelio_Aurelius Ausilio Ausonio Azzo Azzone Baldovino_Baldwin Bartolomeo_Bartolomeus Basilio_Basil Bassiano 
@@ -1369,7 +1368,7 @@ arabic = {
 			Sigismondo Silvano Silvestro Simone_Simon Simonetto Sinibaldo Tedaldo Teodoro Tibaldo_Theobald Tony Torgodorio Torquato Uberto Ugo_Hugh Vincenzo_Vincent Vitale Vito Vittore Zaccaria
 		}
 		female_names = {
-			Amira Bahiyya Bilqis Fahriya Hadiya Hawwa Jaida Kamila Lem'an Melek Najiba Ra'isa Rahima Sadiqa Salaama Siddiqa Tarifa Zahida Zubayda 
+			Amira Bilqis Fahriya Hadiya Hawwa Jaida Kamila Lem'an Melek Najiba Ra'isa Rahima Sadiqa Salaama Siddiqa Tarifa Zahida Zubayda 
 			Aisha Aaliyah Aamina Aamira Aaqila Aarifa Adelah_Adela Adiba Adilah Adilia Adiva Aeesha Aesha Badeea Badia Badra Bahiyya Bajila Baraah Barakah
 			Baria Bashira Basilie Basima Basimah Cala Cantara Daisha Dalal Dema Dimah Dinara Dua Durra Durriyya Eleonorka Adriana Agnese_Agnes Agostina Alessandra Alisia_Alice Aloisia	 Ambrosia Anastasia_Anastasia Angela Antonella Antonia Argentina Assunta Augusta Aurelia Ausonia
 			Bianca_Blanche Candida Caracosa Carla Carmela Caterina_Catherine Cecilia_Cecilia Claudia Cornelia Dora Edda Elena_Helen Eleonora_Eleanor Elisa_Elisabeth Ermenegilda Eudossia Eugenia
@@ -1545,7 +1544,7 @@ south_slavic = {
 			Vukan Zvonimir
 		}
 		female_names = {
-			Adriana Anna_Anna Borislava Cededa Doroteja_Dorothy Ekaterina_Catherine Helena_Helen Jadviga Jovana Kera Ladika Maria_Maria Mihaela Nada Petra Viola_Yolanda Jadranka Mare
+			Adriana Anna_Anna Borislava Cededa Doroteja_Dorothy Ekaterina_Catherine Helena_Helen Jadviga Jovana Kera Ladika Maria_Maria Mihaela Nada Petra Viola_Yolanda Jadranka
 			Antonija Capeka Dragana Dubravka Emilija_Emily Gordana Jagoda Jelena Jelka Lucija_Lucia Katalin_Catherine Mare Marija_Maria Marijana Mirjana Mirna Mojca Natalija NataŠa
 			Rijeka Silvija Snjezana Sofija_Sophia Suzana_Susana Svjetlana Suronja Tatjana Tihana Valerija Vedrana Visnja Vjekoslava Zlata Zvonimira
 		}
@@ -1687,7 +1686,7 @@ iranian = {
 	graphical_culture = muslimgfx
 
 	persian = {
-		graphical_culture = persiagfx #arabicgfx
+		graphical_culture = andalusiangfx #arabicgfx
 
 		color = { 0.5 0.5 0.05 }
 
@@ -1715,16 +1714,16 @@ east_african = {
 	graphical_culture = muslimgfx
 
 	nubian = {
-		graphical_culture = africangfx #africangfx
+		graphical_culture = africangfx
 		
 		color = { 0.4 0.4 0.3 }
 
 		male_names = {
 			Amare Assefa Bekele Berhanu Berihun Dahnay Daniachew Dawit Demissie Desta Getachew Geteye Girma Hagos Hakim Iskinder Kaleb Kelile Lebna
-			Negasi Yonas Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie
-			Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima
-			Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad
-			Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas
+			Negasi Yonas Abai Abebe Afework Aman Atoberhan Azmera Benaim Berhanua Berta Bworo
+			Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hakeem Hakiem Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima
+			Kafa Kelyle Kifle Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negus Ogbae Ogbai Oromo Rahad
+			Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas
 			Zula
 		}
 		female_names = {
@@ -1737,16 +1736,16 @@ east_african = {
 		modifier = default_culture_modifier
 	}
 	somali = {
-		graphical_culture = africangfx #africangfx
+		graphical_culture = africangfx
 		
 		color = { 0.4 0.4 0.3 }
 
 		male_names = {
 			Amare Assefa Bekele Berhanu Berihun Dahnay Daniachew Dawit Demissie Desta Getachew Geteye Girma Hagos Hakim Iskinder Kaleb Kelile Lebna
-			Negasi Yonas Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie
-			Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima
-			Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad
-			Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas
+			Negasi Yonas Abai Abebe Afework Aman Atoberhan Azmera Benaim Berhanua Berta Bworo
+			Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hakeem Hakiem Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima
+			Kafa Kelyle Kifle Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negus Ogbae Ogbai Oromo Rahad
+			Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas
 			Zula
 		}
 		female_names = {
@@ -1759,16 +1758,16 @@ east_african = {
 		modifier = default_culture_modifier
 	}
 	ethiopian = {
-		graphical_culture = africangfx #africangfx
+		graphical_culture = africangfx
 		
 		color = { 0.4 0.4 0.3 }
 
 		male_names = {
 			Amare Assefa Bekele Berhanu Berihun Dahnay Daniachew Dawit Demissie Desta Getachew Geteye Girma Hagos Hakim Iskinder Kaleb Kelile Lebna
-			Negasi Yonas Abai Abebe Afework Aman Assefa Atoberhan Azmera Bekele Benaim Berhanu Berhanua Berihun Berta Bworo Daniachew Dawit Demissie
-			Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hagos Hakeem Hakiem Hakim Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima
-			Kafa Kaleb Kelile Kelyle Kifle Lebna Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negasi Negus Ogbae Ogbai Oromo Rahad
-			Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas Yonas
+			Negasi Yonas Abai Abebe Afework Aman Atoberhan Azmera Benaim Berhanua Berta Bworo
+			Eremias Ezana Fasilidas Fethee Gabra Gebereal Gebre Gondar Hackeem Haeran Hakeem Hakiem Hakym Iskander_Alexander Iskinder_Alexander Iyasu Jima
+			Kafa Kelyle Kifle Lema Loua Mamo Mekonnen Melaku Mengesha Merille Miruts Negash Negus Ogbae Ogbai Oromo Rahad
+			Selassie Semer Semere Sisay Tamirat Tariku Taye Tefere Teferi Teka Tekle Tengene Teruworq Tesfaye Tessema Tewodros Yacob Yohannas
 			Zula
 		}
 		female_names = {
@@ -1782,12 +1781,11 @@ east_african = {
 	}
 }
 
-
 west_african = {
 	graphical_culture = muslimgfx
 	
 	mande = {
-		graphical_culture = africangfx #africangfx
+		graphical_culture = africangfx
 		
 		color = { 0.7 0.2 0.1 }
 
@@ -1798,12 +1796,14 @@ west_african = {
 		}
 		female_names = {
 			Abena Amira Bahiyya Bilqis Fahriya Hadiya Hawwa Jaida Kamila Lem'an Melek Najiba Ra'isa Rahima Sadiqa Salaama Siddiqa Tarifa Zahida Zubayda 
-			Aisha Aaliyah Aamina Aamira Aaqila Aarifa Adelah_Adela Adiba Adilah Adilia Adiva Aeesha Aesha Badeea Badia Badra Bahiyya Bajila Baraah Barakah
+			Aisha Aaliyah Aamina Aamira Aaqila Aarifa Adelah_Adela Adiba Adilah Adilia Adiva Aeesha Aesha Badeea Badia Badra Bajila Baraah Barakah
 			Baria Bashira Basilie Basima Basimah Cala Cantara Daisha Dalal Dema Dimah Dinara Dua Durra Durriyya Eleonorka Kolonkan Sassouma Sogolon
 		}
+		
+		modifier = default_culture_modifier
 	}
 	sosso = {
-		graphical_culture = africangfx #africangfx
+		graphical_culture = africangfx
 		
 		color = { 0.5 0.3 0.1 }
 
@@ -1813,13 +1813,15 @@ west_african = {
 			Umar Wahab Yahya Zafir Zubeyr
 		}
 		female_names = {
-			Abena Amira Bahiyya Bilqis Fahriya Hadiya Hawwa Jaida Kamila Lem'an Melek Najiba Ra'isa Rahima Sadiqa Salaama Siddiqa Tarifa Zahida Zubayda 
-			Aisha Aaliyah Aamina Aamira Aaqila Aarifa Adelah_Adela Adiba Adilah Adilia Adiva Aeesha Aesha Badeea Badia Badra Bahiyya Bajila Baraah Barakah
+			Abena Amira Bilqis Fahriya Hadiya Hawwa Jaida Kamila Lem'an Melek Najiba Ra'isa Rahima Sadiqa Salaama Siddiqa Tarifa Zahida Zubayda 
+			Aisha Aaliyah Aamina Aamira Aaqila Aarifa Adelah_Adela Adiba Adilah Adilia Adiva Aeesha Aesha Badeea Badia Badra Bajila Baraah Barakah
 			Baria Bashira Basilie Basima Basimah Cala Cantara Daisha Dalal Dema Dimah Dinara Dua Durra Durriyya Eleonorka Kolonkan Sassouma Sogolon
 		}
+		
+		modifier = default_culture_modifier
 	}
 	jolof = {
-		graphical_culture = africangfx #africangfx
+		graphical_culture = africangfx
 		
 		color = { 0.9 0.4 0.2 }
 
@@ -1830,8 +1832,10 @@ west_african = {
 		}
 		female_names = {
 			Abena Amira Bahiyya Bilqis Fahriya Hadiya Hawwa Jaida Kamila Lingeer Lem'an Melek Najiba Ra'isa Rahima Sadiqa Salaama Siddiqa Tarifa Zahida Zubayda 
-			Aisha Aaliyah Aamina Aamira Aaqila Aarifa Adelah_Adela Adiba Adilah Adilia Adiva Aeesha Aesha Badeea Badia Badra Bahiyya Bajila Baraah Barakah
+			Aisha Aaliyah Aamina Aamira Aaqila Aarifa Adelah_Adela Adiba Adilah Adilia Adiva Aeesha Aesha Badeea Badia Badra Bajila Baraah Barakah
 			Baria Bashira Basilie Basima Basimah Cala Cantara Daisha Dalal Dema Dimah Dinara Dua Durra Durriyya Eleonorka Kolonkan Sassouma Sogolon
 		}
+		
+		modifier = default_culture_modifier
 	}
 }

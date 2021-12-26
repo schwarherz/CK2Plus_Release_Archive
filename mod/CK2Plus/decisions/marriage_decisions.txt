@@ -57,6 +57,26 @@ decisions = {
 			is_betrothed = no
 			can_marry = yes
 			is_ruler = yes
+			primary_title = {
+				NOT = {
+					mercenary = yes
+					title = d_livonian_order
+					title = d_teutonic_order
+					title = d_order_of_santiago
+					title = d_knights_templar
+					title = d_knights_hospitaler
+					title = d_ghazi_sunni
+					title = d_ghazi_shiite
+					title = d_hashshashin
+					title = d_ulfheonar
+					title = d_devotees_of_the_true_prophet
+					title = d_great_host
+					title = d_guardians_of_the_sacred_flame
+					title = d_disciples_of_the_old_gods
+					title = e_rebels
+					title = e_pirates
+				}
+			}			
 			OR = {
 				primary_title = { tier = BARON }
 				is_feudal = no

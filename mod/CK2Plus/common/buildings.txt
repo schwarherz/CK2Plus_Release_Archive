@@ -70,7 +70,7 @@ castle = {
 					year = 1066
 				}
 				AND = {
-					FROM = { OR = { culture = jolof culture = mande } independent = yes }
+					FROM = { culture_group = west_african }
 					year = 1066
 				}			
 				AND = {
@@ -552,7 +552,7 @@ castle = {
 					year = 1100
 				}
 				AND = {
-					FROM = { OR = { culture = jolof culture = mande } independent = yes }
+					FROM = { culture_group = west_african }
 					year = 1066
 				}				
 				AND = {
@@ -724,11 +724,7 @@ castle = {
 					year = 1100
 				}
 				AND = {
-					FROM = { OR = { culture = jolof culture = mande } independent = yes }
-					year = 1066
-				}
-				AND = {
-					FROM = { top_liege = { primary_title = { OR = { title = d_apulia title = k_sicily } } } }
+					FROM = { culture_group = west_african }
 					year = 1066
 				}				
 				AND = {
@@ -900,7 +896,7 @@ castle = {
 					year = 1066
 				}
 				AND = {
-					FROM = { OR = { culture = jolof culture = mande } independent = yes }
+					FROM = { culture_group = west_african }
 					year = 1066
 				}			
 				AND = {
@@ -1354,13 +1350,13 @@ castle = {
 	ca_culture_group_baltic_0 = {
 		potential = {
 			FROM = {
-				religion_group = pagan
+				religion_group = pagan_group
 				OR = {
 					culture_group = baltic
 					culture = pommeranian
 				}
 			}
-			religion_group = pagan
+			religion_group = pagan_group
 			OR = {
 				culture_group = baltic
 				culture = pommeranian
@@ -2637,7 +2633,7 @@ city = {
 					year = 1095
 				}
 				AND = {
-					FROM = { OR = { culture = jolof culture = mande } independent = yes }
+					FROM = { culture_group = west_african }
 					year = 1066
 				}				
 				AND = {

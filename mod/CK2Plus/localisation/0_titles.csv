@@ -1,4 +1,7 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+b_gorgolainis;Gorgolainis;Gorgolainis;Gorgolainis;;Gorgolainis;;;;;;;;;x
+b_gorgolainis_adj;Gorgolainian;Gorgolainian;Gorgolainian;;Gorgolainian;;;;;;;;;x
+c_syria_adj;Hauran;Hauran;Hauran;;Hauran;;;;;;;;;x
 k_almohad;Almohads;Almohads;Almohads;;Almohads;;;;;;;;;x
 k_almohad_adj;Almohad;Almohad;Almohad;;Almohad;;;;;;;;;x
 k_morocco;Morocco;Morocco;Morocco;;Morocco;;;;;;;;;x
@@ -111,7 +114,7 @@ d_nubian_company;Nubian Company;Compagnie Nubienne;Nubian Company;Nubian Company
 d_nubian_company_adj;Nubian;Nubien;Nubian;Nubian;Nubian;;;;;;;;;x
 d_nubian_band;Nubian Band;Bande Nubienne;Nubian Band;Nubian Band;Nubian Band;;;;;;;;;x
 d_nubian_band_adj;Nubian;Nubien;Nubian;Nubian;Nubian;;;;;;;;;x
-e_ethiopia;Ethiopia;Ethiopie;Ethiopia;Ethiopia;Ethiopia;;;;;;;;;x
+e_ethiopia;Ethiopian Empire;Ethiopian Empire;Ethiopian Empire;Ethiopian Empire;Ethiopian Empire;;;;;;;;;x
 e_ethiopia_adj;Ethiopian;Ethiopien;Ethiopian;Ethiopian;Ethiopian;;;;;;;;;x
 d_asosa;Asosa;Asosa;Asosa;Asosa;Asosa;;;;;;;;;x
 d_asosa_adj;Asosan;Asoséen;Asosan;Asosan;Asosan;;;;;;;;;x
@@ -123,27 +126,27 @@ d_berbera;Berbera;Berbèrie;Berbera;Berbera;Berbera;;;;;;;;;x
 d_berbera_adj;Berberan;Berbères;Berberan;Berberan;Berberan;;;;;;;;;x
 k_adal;Ifat;Ifat;Ifat;Ifat;Ifat;;;;;;;;;x
 k_adal_adj;Ifati;Ifati;Ifati;Ifati;;;;;;;;;;x
-e_danubia;Danubia;Danubie;Danubia;Danubia;Danubia;;;;;;;;;x
+e_danubia;Danubian Empire;Danubian Empire;Danubian Empire;Danubian Empire;Danubian Empire;;;;;;;;;x
 e_danubia_adj;Danubian;Danubien;Danubian;Danubian;Danubian;;;;;;;;;x
-e_poland_lithuania;Poland-Lithuania;Polande-Lituanie;Poland-Lithuania;Poland-Lithuania;Poland-Lithuania;;;;;;;;;x
+e_poland_lithuania;Polish-Lithuanian Commonwealth;Polish-Lithuanian Commonwealth;Polish-Lithuanian Commonwealth;Polish-Lithuanian Commonwealth;Polish-Lithuanian Commonwealth;;;;;;;;;x
 e_poland_lithuania_adj;Polish-Lithuanian;Polo-Lituanien;Polish-Lithuanian;Polish-Lithuanian;Polish-Lithuanian;;;;;;;;;x
-e_maghreb;Maghreb;Maghreb;Maghreb;Maghreb;Maghreb;;;;;;;;;x
+e_maghreb;Maghreb Empire;Maghreb Empire;Maghreb Empire;Maghreb Empire;Maghreb Empire;;;;;;;;;x
 e_maghreb_adj;Maghreb;Maghreb;Maghreb;Maghreb;Maghreb;;;;;;;;;x
 e_persia;Persian Empire;Empire Perse;Persian Empire;Persian Empire;Persian Empire;;;;;;;;;x
 e_persia_adj;Persian;Perse;Persian;Persian;Persian;;;;;;;;;x
 e_arabia;Arabian Empire;Empire Arabe;Arabian Empire;Arabian Empire;Arabian Empire;;;;;;;;;x
 e_arabia_adj;Arabian;Arabe;Arabian;Arabian;Arabian;;;;;;;;;x
-e_russia;Russia;Russie;Russia;Russia;Russia;;;;;;;;;x
+e_russia;Russian Empire;Russian Empire;Russian Empire;Russian Empire;Russian Empire;;;;;;;;;x
 e_russia_adj;Russian;Russe;Russian;Russian;Russian;;;;;;;;;x
-e_spain;Hispania;Hispanie;Hispania;Hispania;Hispania;;;;;;;;;x
+e_spain;Hispanian Empire;Hispanian Empire;Hispanian Empire;Hispanian Empire;Hispanian Empire;;;;;;;;;x
 e_spain_adj;Hispanian;Hispanique;Hispanian;Hispanian;Hispanian;;;;;;;;;x
-e_france;Francia;Franconie;Francia;Francia;Francia;;;;;;;;;x
-e_france_adj;Francian;Franconien;Francian;Francian;Francian;;;;;;;;;x
-e_britannia;Britannia;Britannie;Britannia;Britannia;Britannia;;;;;;;;;x
+e_france;Frankish Empire;Frankish Empire;Frankish Empire;Frankish Empire;Frankish Empire;;;;;;;;;x
+e_france_adj;Frankish;Frankish;Frankish;Frankish;Frankish;;;;;;;;;x
+e_britannia;Britannian Empire;Britannian Empire;Britannian Empire;Britannian Empire;Britannian Empire;;;;;;;;;x
 e_britannia_adj;British;Britannique;British;British;British;;;;;;;;;x
-e_scandinavia;Scandinavia;Scandinavie;Scandinavia;Scandinavia;Scandinavia;;;;;;;;;x
+e_scandinavia;Scandinavian Empire;Scandinavian Empire;Scandinavian Empire;Scandinavian Empire;Scandinavian Empire;;;;;;;;;x
 e_scandinavia_adj;Scandinavian;Scandinave;Scandinavian;Scandinavian;Scandinavian;;;;;;;;;x
-e_italy;Italia;Italie;Italia;Italia;Italia;;;;;;;;;x
+e_italy;Italian Empire;Italian Empire;Italian Empire;Italian Empire;Italian Empire;;;;;;;;;x
 e_italy_adj;Italian;Italien;Italian;Italian;Italian;;;;;;;;;x
 k_thessalonika;Thessalonica;Thessalonique;Thessalonica;Thessalonica;Thessalonica;;;;;;;;;x
 k_thessalonika_adj;Thessalonican;Thessalonicien;Thessalonican;Thessalonican;Thessalonican;;;;;;;;;x

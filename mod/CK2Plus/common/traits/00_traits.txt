@@ -453,8 +453,8 @@ homosexual = { #47
 #####################
 
 clubfooted = { #48
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	sex_appeal_opinion = -10
 	
@@ -462,8 +462,8 @@ clubfooted = { #48
 	vassal_opinion = -5
 }
 harelip = { #49
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	sex_appeal_opinion = -10
 	
@@ -471,8 +471,8 @@ harelip = { #49
 	vassal_opinion = -5
 }
 hunchback = { #50
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	sex_appeal_opinion = -20
 	
@@ -481,8 +481,8 @@ hunchback = { #50
 	martial = -2
 }
 lisp = { #51
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	sex_appeal_opinion = -10
 	
@@ -490,15 +490,15 @@ lisp = { #51
 	vassal_opinion = -5
 }
 stutter = { #52
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	diplomacy = -2
 	vassal_opinion = -5
 }
 fair = { #53
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	sex_appeal_opinion = 30
 	
@@ -510,8 +510,8 @@ fair = { #53
 	fertility = 0.1
 }
 ugly = { #54
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	sex_appeal_opinion = -30
 	
@@ -523,8 +523,8 @@ ugly = { #54
 	fertility = -0.1
 }
 dwarf = { #55  
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	opposites =  {
 		tall
@@ -537,8 +537,8 @@ dwarf = { #55
 	vassal_opinion = -10
 }
 genius = { #56
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	opposites =  {
 		imbecile
@@ -556,8 +556,8 @@ genius = { #56
 	
 }
 quick = { #57
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	opposites =  {
 		imbecile
@@ -574,8 +574,8 @@ quick = { #57
 	ai_rationality = 15
 }
 slow = { #58
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	opposites =  {
 		imbecile
@@ -595,8 +595,8 @@ slow = { #58
 	vassal_opinion = -10
 }
 imbecile = { #59
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	sex_appeal_opinion = -20
 	
@@ -617,8 +617,8 @@ imbecile = { #59
 	vassal_opinion = -20
 }
 inbred = { #60
-	inbred = yes
-	congenital = yes
+	#congenital = yes
+	#birth = yes
 	
 	sex_appeal_opinion = -30
 	
@@ -635,8 +635,8 @@ inbred = { #60
 	ai_rationality = -20
 }
 strong = { #61
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	opposites =  {
 		weak
@@ -650,8 +650,8 @@ strong = { #61
 	vassal_opinion = 5
 }
 weak = { #62
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	opposites =  {
 		strong

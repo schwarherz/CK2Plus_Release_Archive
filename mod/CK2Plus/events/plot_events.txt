@@ -32,14 +32,18 @@ character_event = {
 	
 	trigger = {
 		OR = {
+			has_objective = plot_gain_vassal_title
 			has_objective = plot_gain_title
+			has_objective = plot_weaken_fellow_vassal
+			has_objective = plot_institute_hereditary_titles
+			has_objective = plot_kidnap_liege
 			has_objective = plot_succ_seniority
 			has_objective = plot_succ_primogeniture
 			has_objective = plot_succ_gavelkind
 			has_objective = plot_succ_feudal_elective
-			has_objective = plot_lower_crown_authority
 			has_objective = plot_kill_character
 			has_objective = plot_kill_spouse
+			has_objective = plot_lower_crown_authority
 		}
 		is_plot_active = no
 		num_of_plot_backers = 1
@@ -245,14 +249,18 @@ character_event = {
 	trigger = {
 		any_backed_character = {
 			OR = {
+				has_objective = plot_gain_vassal_title
 				has_objective = plot_gain_title
+				has_objective = plot_weaken_fellow_vassal
+				has_objective = plot_institute_hereditary_titles
+				has_objective = plot_kidnap_liege
 				has_objective = plot_succ_seniority
 				has_objective = plot_succ_primogeniture
 				has_objective = plot_succ_gavelkind
 				has_objective = plot_succ_feudal_elective
-				has_objective = plot_lower_crown_authority
 				has_objective = plot_kill_character
 				has_objective = plot_kill_spouse
+				has_objective = plot_lower_crown_authority
 			}
 			is_plot_active = no
 			NOT = { has_character_flag = event7040 }
@@ -277,14 +285,18 @@ character_event = {
 		random_backed_character = {
 			limit = {
 				OR = {
+					has_objective = plot_gain_vassal_title
 					has_objective = plot_gain_title
+					has_objective = plot_weaken_fellow_vassal
+					has_objective = plot_institute_hereditary_titles
+					has_objective = plot_kidnap_liege
 					has_objective = plot_succ_seniority
 					has_objective = plot_succ_primogeniture
 					has_objective = plot_succ_gavelkind
 					has_objective = plot_succ_feudal_elective
-					has_objective = plot_lower_crown_authority
 					has_objective = plot_kill_character
 					has_objective = plot_kill_spouse
+					has_objective = plot_lower_crown_authority
 				}
 				NOT = { has_character_flag = event7040 }
 			}

@@ -6,12 +6,12 @@ title = c_besancon
 # Settlements
 max_settlements = 6
 b_besancon = castle
+b_belfort = temple
 b_vesoul = city
 b_beaucourt = castle
 
 #b_besancon = castle
 #b_vesoul = city
-#b_belfort = temple
 #b_montbeliard = castle
 #b_beaucourt = castle
 #b_valdahon = castle
@@ -25,4 +25,4 @@ religion = catholic
 # History
 
 1187.1.1 = { b_montbeliard = castle }
-1337.1.1 = { b_belfort = temple }
+#1337.1.1 = { b_belfort = temple }

@@ -8,8 +8,15 @@ decisions = {
 		effect = {
 			set_global_flag = startup
 			any_independent_ruler = {				
-				any_realm_character = {
+				character_event = { id = 190052 }
+				any_courtier = {
 					character_event = { id = 190052 }
+				}				
+				any_realm_lord = {
+					character_event = { id = 190052 }
+					any_courtier = {
+						character_event = { id = 190052 }
+					}					
 				}
 			}
 		}

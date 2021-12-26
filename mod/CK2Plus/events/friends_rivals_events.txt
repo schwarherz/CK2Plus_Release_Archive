@@ -12567,10 +12567,13 @@ character_event = {
 			is_ruler = yes
 			same_liege = ROOT
 			OR = {
+				has_objective = plot_gain_title
+				has_objective = plot_institute_hereditary_titles
 				has_objective = plot_succ_seniority
 				has_objective = plot_succ_primogeniture
 				has_objective = plot_succ_gavelkind
 				has_objective = plot_succ_feudal_elective
+				has_objective = plot_lower_crown_authority
 			}
 		}
 	}
@@ -12598,22 +12601,6 @@ character_event = {
 					NOT = {
 						num_of_traits = 5
 					}
-					NOT = {
-							trait = ambitious
-						}
-					}
-				add_trait = ambitious
-				hidden_tooltip = {
-					character_event = {
-						id = 38278 #Notify Ambitious
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						num_of_traits = 5
-					}
 					trait = ambitious
 					NOT = {
 						trait = diligent
@@ -12623,6 +12610,22 @@ character_event = {
 				hidden_tooltip = {
 					character_event = {
 						id = 38256 #Notify diligent
+					}
+				}
+			}			
+			if = {
+				limit = {
+					NOT = {
+						num_of_traits = 5
+					}
+					NOT = {
+							trait = ambitious
+						}
+					}
+				add_trait = ambitious
+				hidden_tooltip = {
+					character_event = {
+						id = 38278 #Notify Ambitious
 					}
 				}
 			}
@@ -12651,12 +12654,39 @@ character_event = {
 				same_liege = ROOT
 				prisoner = no
 				OR = {
+					has_objective = plot_gain_title
+					has_objective = plot_institute_hereditary_titles
 					has_objective = plot_succ_seniority
 					has_objective = plot_succ_primogeniture
 					has_objective = plot_succ_gavelkind
 					has_objective = plot_succ_feudal_elective
+					has_objective = plot_lower_crown_authority
 				}
 			}
+			if = {
+				limit = {
+					has_objective =  plot_gain_title
+				}
+				ROOT = {
+					back_plot = PREV
+				}
+			}			
+			if = {
+				limit = {
+					has_objective = plot_institute_hereditary_titles
+				}
+				ROOT = {
+					back_plot = PREV
+				}
+			}			
+			if = {
+				limit = {
+					has_objective = plot_lower_crown_authority
+				}
+				ROOT = {
+					back_plot = PREV
+				}
+			}						
 			if = {
 				limit = {
 					has_objective = plot_succ_seniority

@@ -10,7 +10,6 @@ decisions = {
 			not = { trait = excommunicated }
 			independent = yes
 			religion = catholic
-			NOT = { is_female = yes	}
 			NOT = { is_heretic = yes }
 			NOT = { trait = incapable }
 			NOT = { trait = crowned_by_pope }

@@ -942,7 +942,7 @@ province;red;green;blue;x;x
 941;85;39;131;Socotra;x
 942;126;90;204;Teate;x
 943;85;109;131;Ibiza;x
-944;168;186;57;Mediterranean Sea;x
+944;122;122;129;Ouadane;x
 945;0;189;185;Golfo de Valencia;x
 946;42;192;58;Islas Baleares;x
 947;84;195;186;Ponant;x
@@ -1055,7 +1055,7 @@ province;red;green;blue;x;x
 1054;84;30;31;Western Cyclades;x
 1055;85;54;6;Päijänne;x
 1056;84;165;181;Irish Sea;x
-1057;122;122;129;;x
+1057;168;186;57;Mediterranean Sea;x
 1058;127;192;29;;x
 1059;169;195;157;;x
 1060;1;198;30;;x

@@ -2,6 +2,7 @@
 character_event = {
 	id = 190004
 	picture = GFX_evt_lunatic
+	is_triggered_only = yes
 	
 	trigger = {
 		has_character_flag = filthy_murderer
@@ -22,81 +23,81 @@ character_event = {
 	desc = "EVTDESC190004"
 	
 	mean_time_to_happen = {
-		years = 100
+		days = 1
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = 0 } } }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -25 } } }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -50 } } }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -75 } } }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -100 } } }
 		}		
 		modifier = {
-			factor = 1.5
+			factor = 0.75
 			piety = 200
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.75
 			piety = 100
 		}		
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			NOT = { piety = 0 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			NOT = { piety = -100 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			NOT = { piety = -200 }
 		}		
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			trait = dishonorable2
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.25
 			trait = dishonorable3
 		}
 		modifier = {
-			factor = 0.7
+			factor = 1.5
 			trait = dishonorable4
 		}
 		modifier = {
-			factor = 0.6
+			factor = 1.75
 			trait = dishonorable5
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = dishonorable6
 		}
 		modifier = {
-			factor = 0.4
+			factor = 2.5
 			trait = dishonorable7
 		}
 		modifier = {
-			factor = 0.3
+			factor = 3.0
 			trait = dishonorable8
 		}
 		modifier = {
-			factor = 0.2
+			factor = 5.0
 			trait = dishonorable9
 		}
 		modifier = {
-			factor = 0.1
+			factor = 10.0
 			trait = dishonorable10
 		}		
 	}
@@ -110,270 +111,11 @@ character_event = {
 	}
 }
 
-#Claimaint moves to the King's court in the hopes of having their claim enforced
-character_event = {
-	id = 190005
-	picture = GFX_evt_emissary
-	
-	trigger = {
-		age = 16
-		is_female = no
-		is_ruler = no
-		is_primary_heir = no
-		NOT = { trait = incapable }
-		NOT = { trait = imbecile }	
-		NOT = { trait = content }
-		liege = { war = no }
-		num_of_claims = 1
-		OR = {
-			NOT = { has_character_flag = packing_bags }
-			had_character_flag = {
-				flag = packing_bags
-				days = 730
-			}
-		}
-		any_claim = {
-			NOT = { higher_tier_than = DUKE }
-			holder_scope = {
-				NOT = {
-					reverse_opinion = {
-						who = ROOT
-						value = 25
-					}	
-				}
-				OR = {
-					independent = yes
-					trait = not_dejure_liege
-					liege = { primary_title = { is_titular = yes } }
-				}
-			}			
-			kingdom = {
-				holder_scope = {
-					religion = ROOT
-					NOT = { same_realm = ROOT }
-					NOT = { has_character_flag = no_claimant_requests }
-					reverse_opinion = {
-						who = ROOT
-						value = 0
-					}
-				}
-			}
-		}
-	}
-		
-	desc = "EVTDESC190005"
-	
-	mean_time_to_happen = {
-		years = 20
-		modifier = {
-			factor = 1.5
-			liege = {
-				reverse_opinion = {
-					who = ROOT
-					value = 0
-				}				
-			}
-		}
-		modifier = {
-			factor = 2.0
-			OR = {
-				has_job_title = job_marshal
-				has_job_title = job_treasurer
-				has_job_title = job_spiritual
-				has_job_title = job_chancellor
-				has_job_title = job_spymaster
-			}
-		}
-		modifier = {
-			factor = 0.1
-			trait = ambitious
-		}			
-		modifier = {
-			factor = 0.5
-			trait = proud
-		}		
-		modifier = {
-			factor = 2.0
-			trait = humble
-		}
-		modifier = {
-			factor = 0.75
-			prestige = 200
-		}
-		modifier = {
-			factor = 0.75
-			prestige = 400
-		}
-		modifier = {
-			factor = 0.75
-			prestige = 600
-		}	
-		modifier = {
-			factor = 0.75
-			prestige = 800
-		}
-		modifier = {
-			factor = 0.75
-			prestige = 1000
-		}		
-	}
-
-	option = {
-		name = "EVTOPTA190005"
-		set_character_flag = packing_bags
-		random_claim = {
-			limit = {
-				NOT = { higher_tier_than = DUKE }
-				holder_scope = {
-					NOT = {
-						reverse_opinion = {
-							who = ROOT
-							value = 0
-						}	
-					}
-					OR = {
-						independent = yes
-						trait = not_dejure_liege
-						liege = { primary_title = { is_titular = yes } }
-					}	
-				}			
-				kingdom = {
-					holder_scope = {
-						religion = ROOT
-						NOT = { same_realm = ROOT }
-						NOT = { has_character_flag = no_claimant_requests }
-						reverse_opinion = {
-							who = ROOT
-							value = 0
-						}
-					}
-				}
-			}
-			kingdom = {
-				holder_scope = { character_event = { id = 190006 days = 3 } }
-			}
-		}
-	}
-}
-
-character_event = {
-	id = 190006
-	picture = GFX_evt_emissary
-	
-	is_triggered_only = yes
-		
-	desc = "EVTDESC190006"
-	
-	option = {
-		name = "EVTOPTA190006"
-		ai_chance = {
-			factor = 90	
-		}	
-		FROM = {
-			liege = { 
-				opinion = {
-					modifier = opinion_angry
-					who = ROOT
-					years = 10
-				}	
-			}
-			character_event = { id = 190007 days = 3 tooltip = EVTOPTA190006TOOLTIP }
-		}
-	}
-	option = {
-		name = "EVTOPTB190006"
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0.1
-				trait = trusting
-			}
-			modifier = {
-				factor = 10
-				trait = paranoid
-			}				
-		}		
-		FROM = {
-			opinion = {
-				modifier = opinion_outraged
-				who = ROOT
-				years = 10
-			}
-		}
-	}
-	option = {
-		name = "EVTOPTC190006"
-		ai_chance = {
-			factor = 0			
-		}		
-		FROM = {
-			opinion = {
-				modifier = opinion_hate
-				who = ROOT
-				years = 10
-			}
-			character_event = { id = 190009 days = 3 tooltip = EVTOPTC190006TOOLTIP }
-		}
-		set_character_flag = no_claimant_requests
-	}	
-}
-
-character_event = {
-	id = 190007
-	picture = GFX_evt_emissary
-	
-	is_triggered_only = yes
-		
-	desc = "EVTDESC190007"
-	
-	option = {
-		name = "EVTOPTA190007"
-		liege = {
-			character_event = { id = 190008 days = 3 }
-		}
-		hidden_tooltip = {
-			banish = FROM	
-		}
-	}
-}
-
-character_event = {
-	id = 190008
-	picture = GFX_evt_emissary
-	
-	is_triggered_only = yes
-		
-	desc = "EVTDESC190008"
-	
-	option = {
-		name = "EVTOPTA190008"
-		opinion = {
-			modifier = opinion_angry
-			who = FROM
-			years = 10
-		}		
-		prestige = -5
-	}
-}
-
-character_event = {
-	id = 190009
-	picture = GFX_evt_emissary
-	
-	is_triggered_only = yes
-		
-	desc = "EVTDESC190009"
-	
-	option = {
-		name = "EVTOPTA190009"
-		prestige = -10
-	}
-}
-
 #Pope demands return of Rome
 character_event = {
 	id = 190020
 	picture = "GFX_evt_pope"
+	is_triggered_only = yes
 	
 	trigger = {
 		OR = {
@@ -392,53 +134,53 @@ character_event = {
 	desc = "EVTDESC190020"
 	
 	mean_time_to_happen = {
-		years = 10
+		days = 1
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = 25 } } }
 		}		
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = 0 } } }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -25 } } }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -50 } } }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -75 } } }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			rightful_religious_head_scope = { NOT = { opinion = { who = ROOT value = -100 } } }
 		}		
 		modifier = {
-			factor = 1.5
+			factor = 0.75
 			piety = 200
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.75
 			piety = 100
 		}		
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			NOT = { piety = 0 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			NOT = { piety = -100 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			NOT = { piety = -200 }
 		}
 		modifier = {
-			factor = 0.01
+			factor = 100.0
 			rightful_religious_head_scope = { NOT = { demesne_size = 1 } }
 		}		
 	}
@@ -549,7 +291,6 @@ character_event = {
 	}
 		
 	desc = "EVTDESC190021"
-	
 
 	option = {
 		name = "EVTOPTA190021"
@@ -821,6 +562,7 @@ character_event = {
 character_event = {
 	id = 190031
 	picture = GFX_evt_lunatic
+	is_triggered_only = yes
 	
 	trigger = {
 		has_character_flag = filthy_murderer
@@ -844,79 +586,79 @@ character_event = {
 	desc = "EVTDESC190031"
 	
 	mean_time_to_happen = {
-		years = 100
+		days = 1
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			trait = deceitful
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			trait = envious
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			trait = wroth
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = stressed
 		}		
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = kind
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = charitable
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = just
 		}	
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = honest
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			trait = dishonorable2
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.25
 			trait = dishonorable3
 		}
 		modifier = {
-			factor = 0.7
+			factor = 1.5
 			trait = dishonorable4
 		}
 		modifier = {
-			factor = 0.6
+			factor = 1.75
 			trait = dishonorable5
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = dishonorable6
 		}
 		modifier = {
-			factor = 0.4
+			factor = 2.5
 			trait = dishonorable7
 		}
 		modifier = {
-			factor = 0.3
+			factor = 3.0
 			trait = dishonorable8
 		}
 		modifier = {
-			factor = 0.2
+			factor = 5.0
 			trait = dishonorable9
 		}
 		modifier = {
-			factor = 0.1
+			factor = 10.0
 			trait = dishonorable10
-		}		
+		}	
 	}
 	
 	option = {
@@ -1064,6 +806,7 @@ character_event = {
 character_event = {
 	id = 190032
 	picture = GFX_evt_lunatic
+	is_triggered_only = yes
 	
 	trigger = {
 		has_character_flag = filthy_murderer
@@ -1089,71 +832,79 @@ character_event = {
 	desc = "EVTDESC190032"
 	
 	mean_time_to_happen = {
-		years = 100
+		days = 1
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			trait = deceitful
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			trait = envious
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			trait = wroth
+		}
+		modifier = {
+			factor = 2.0
+			trait = stressed
 		}		
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = kind
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = charitable
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = just
-		}			
+		}	
 		modifier = {
-			factor = 0.9
+			factor = 2.0
+			trait = honest
+		}
+		modifier = {
+			factor = 1.1
 			trait = dishonorable2
 		}
 		modifier = {
-			factor = 0.8
+			factor = 1.25
 			trait = dishonorable3
 		}
 		modifier = {
-			factor = 0.7
+			factor = 1.5
 			trait = dishonorable4
 		}
 		modifier = {
-			factor = 0.6
+			factor = 1.75
 			trait = dishonorable5
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			trait = dishonorable6
 		}
 		modifier = {
-			factor = 0.4
+			factor = 2.5
 			trait = dishonorable7
 		}
 		modifier = {
-			factor = 0.3
+			factor = 3.0
 			trait = dishonorable8
 		}
 		modifier = {
-			factor = 0.2
+			factor = 5.0
 			trait = dishonorable9
 		}
 		modifier = {
-			factor = 0.1
+			factor = 10.0
 			trait = dishonorable10
-		}		
+		}	
 	}
 	
 
@@ -1174,6 +925,7 @@ character_event = {
 
 character_event = {
 	id = 190033
+	is_triggered_only = yes
 	
 	trigger = {
 		trait = crowned_by_pope
@@ -1183,7 +935,7 @@ character_event = {
 	desc = "EVTDESC190033"
 	
 	mean_time_to_happen = {
-		months = 1		
+		days = 1		
 	}
 	
 
@@ -1637,7 +1389,7 @@ character_event = {
 
 character_event = {
 	id = 190036
-	
+	is_triggered_only = yes
 	only_rulers = yes
 	
 	trigger = {
@@ -1677,7 +1429,7 @@ character_event = {
 	desc = "EVTDESC190036"
 	
 	mean_time_to_happen = {
-		months = 1		
+		days = 1		
 	}
 
 	option = {
@@ -1695,7 +1447,7 @@ character_event = {
 
 character_event = {
 	id = 190037
-	
+	is_triggered_only = yes
 	trigger = {
 		OR = {
 			has_landed_title = e_papal_state
@@ -1711,7 +1463,7 @@ character_event = {
 	desc = "EVTDESC190037"
 	
 	mean_time_to_happen = {
-		months = 1		
+		days = 1		
 	}
 	
 
@@ -1723,7 +1475,7 @@ character_event = {
 
 character_event = {
 	id = 190038
-	
+	is_triggered_only = yes
 	trigger = {
 		has_landed_title = k_orthodox	
 		NOT = { religion = orthodox }
@@ -1732,7 +1484,7 @@ character_event = {
 	desc = "EVTDESC190037"
 	
 	mean_time_to_happen = {
-		months = 1		
+		days = 1		
 	}
 	
 
@@ -1744,7 +1496,7 @@ character_event = {
 
 character_event = {
 	id = 190039
-	
+	is_triggered_only = yes
 	trigger = {
 		NOT = {
 			has_landed_title = e_sunni #sanity check, should really disallow holding both...
@@ -1760,7 +1512,7 @@ character_event = {
 	desc = "EVTDESC190037"
 	
 	mean_time_to_happen = {
-		months = 1		
+		days = 1		
 	}
 	
 
@@ -1772,7 +1524,7 @@ character_event = {
 
 character_event = {
 	id = 190040
-	
+	is_triggered_only = yes
 	trigger = {	
 		NOT = {
 			has_landed_title = e_shiite #sanity check, should really disallow holding both...
@@ -1788,7 +1540,7 @@ character_event = {
 	desc = "EVTDESC190037"
 	
 	mean_time_to_happen = {
-		months = 1		
+		days = 1		
 	}
 	
 
@@ -1803,7 +1555,7 @@ character_event = {
 	id = 190041
 	desc = "EVTDESC190041"
 	picture = GFX_evt_throne_room
-	
+	is_triggered_only = yes
 	only_rulers = yes
 	
 	trigger = {	
@@ -1815,7 +1567,13 @@ character_event = {
 			NOT = {
 				AND = {
 					culture = saxon
-					ROOT = { culture = norman }
+					ROOT = {
+						OR = {
+							culture = norman
+							culture = frankish
+							culture = occitan
+						}					
+					}
 				}
 			}			
 			NOT = {	
@@ -1839,46 +1597,45 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1000
-
+		days = 1
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			NOT = { age = 20 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			NOT = { age = 30 }
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			age = 40
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			age = 50
 		}	
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			age = 60
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			age = 70
 		}	
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			age = 80
 		}		
 		modifier = {
-			factor = 5.0
+			factor = 0.25
 			primary_title = { tier = EMPEROR }
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			primary_title = { tier = KING }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 2.0
 			NOT = {
 				any_demesne_province = {
 					culture = ROOT
@@ -1886,157 +1643,157 @@ character_event = {
 			}
 		}		
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			independent = no
 			top_liege = { NOT = { culture = ROOT } }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 0.9
 			demesne_size = 2
 		}
 		modifier = {
-			factor = 1.1
+			factor = 0.9
 			demesne_size = 4
 		}	
 		modifier = {
-			factor = 1.1
+			factor = 0.9
 			demesne_size = 6
 		}		
 		modifier = {
-			factor = 1.1
+			factor = 0.9
 			demesne_size = 8
 		}	
 		modifier = {
-			factor = 1.1
+			factor = 0.9
 			demesne_size = 10
 		}		
 		modifier = {
-			factor = 0.95
+			factor = 1.05
 			NOT = { learning = 1 }
 		}		
 		modifier = {
-			factor = 0.95
+			factor = 1.05
 			NOT = { learning = 2 }
 		}
 		modifier = {
-			factor = 0.95
+			factor = 1.05
 			NOT = { learning = 3 }
 		}
 		modifier = {
-			factor = 0.95
+			factor = 1.05
 			NOT = { learning = 4 }
 		}
 		modifier = {
-			factor = 0.95
+			factor = 1.05
 			NOT = { learning = 5 }
 		}
 		modifier = {
-			factor = 0.95
+			factor = 1.05
 			NOT = { learning = 6 }
 		}
 		modifier = {
-			factor = 0.95
+			factor = 1.05
 			NOT = { learning = 7 }
 		}
 		modifier = {
-			factor = 0.95
+			factor = 1.05
 			NOT = { learning = 8 }
 		}
 		modifier = {
-			factor = 0.95
+			factor = 1.05
 			NOT = { learning = 9 }
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 11
 		}		
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 12
 		}	
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 13
 		}	
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 14
 		}	
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 15
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 16
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 17
 		}	
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 18
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 19
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 20
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 21
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 22
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 23
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 24
 		}
 		modifier = {
-			factor = 1.05
+			factor = 0.95
 			learning = 25
 		}	
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			trait = gregarious
 		}
 		modifier = {
-			factor = 1.25
+			factor = 0.75
 			trait = shy
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			trait = poet
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			trait = diligent
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			trait = humble
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			trait = content
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			culture = turkish
 			NOT = { year = 1150 }
 		}		
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			culture = mongol
 			NOT = { year = 1300 }
 		}
@@ -2182,7 +1939,7 @@ character_event = {
 character_event = {
 	id = 190044
 	picture = GFX_evt_lovers
-	
+	is_triggered_only = yes
 	trigger = {
 		is_married = yes
 		has_lover = no
@@ -2214,78 +1971,77 @@ character_event = {
 	desc = "EVTDESC190044"
 	
 	mean_time_to_happen = {
-		months = 600
-	
+		days = 1
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			spouse = { NOT = { age = 20 } }
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.5
 			spouse = { age = 30 }
 		}
 		modifier = {
-			factor = 0.33
+			factor = 3.0
 			has_objective = obj_find_lover
 		}
 		modifier = {
-			factor = 0.4
+			factor = 2.0
 			trait = chaste
 		}
 		modifier = {
-			factor = 0.4
+			factor = 2.0
 			spouse = { trait = chaste }
 		}		
 		modifier = {
-			factor = 6.0
+			factor = 0.1
 			trait = hedonist
 		}
 		modifier = {
-			factor = 6.0
+			factor = 0.1
 			spouse = { trait = hedonist }
 		}		
 		modifier = {
-			factor = 4.0
+			factor = 0.25
 			trait = lustful
 		}
 		modifier = {
-			factor = 4.0
+			factor = 0.25
 			spouse = { trait = lustful }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.75
 			spouse = { NOT = { opinion = { who = ROOT value = 25 } } }
 		}	
 		modifier = {
-			factor = 1.5
+			factor = 0.75
 			spouse = { NOT = { reverse_opinion = { who = ROOT value = 25 } } }
 		}			
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			spouse = { opinion = { who = ROOT value = 25 } }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			spouse = { reverse_opinion = { who = ROOT value = 25 } }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			spouse = { opinion = { who = ROOT value = 50 } }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			spouse = { reverse_opinion = { who = ROOT value = 50 } }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			spouse = { opinion = { who = ROOT value = 75 } }
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			spouse = { reverse_opinion = { who = ROOT value = 75 } }
 		}
 		modifier = {
-			factor = 5
+			factor = 0.1
 			any_child = { trait = bastard }
 		}
 	}
@@ -2752,6 +2508,9 @@ character_event = {
 			has_claim = d_novgorod-seversk
 			has_claim = d_pereyaslavl
 			has_claim = d_chernigov
+			has_claim = d_aquitaine
+			has_claim = d_poitou
+			has_claim = k_norway
 		}
 	}
 	
@@ -2794,12 +2553,20 @@ character_event = {
 			remove_claim = d_novgorod-seversk
 		}		
 		if = {
-			limit = { has_claim = d_pereyaslavl }
-			remove_claim = d_pereyaslavl
-		}
-		if = {
 			limit = { has_claim = d_chernigov }
 			remove_claim = d_chernigov
+		}
+		if = {
+			limit = { has_claim = d_aquitaine }
+			remove_claim = d_aquitaine
+		}
+		if = {
+			limit = { has_claim = d_poitou }
+			remove_claim = d_poitou
+		}
+		if = {
+			limit = { has_claim = k_norway }
+			remove_claim = k_norway
 		}		
 	}
 }
@@ -2836,7 +2603,7 @@ character_event = {
 character_event = {
 	id = 190057
 	desc = "EVTDESC190057"	
-	picture = GFX_evt_pope
+	is_triggered_only = yes
 	
 	trigger = {
 		ai = no
@@ -2869,10 +2636,6 @@ character_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
 	immediate = {
 		any_courtier = {
 			limit = { has_minor_title = title_concubine }
@@ -2902,6 +2665,7 @@ character_event = {
 	id = 190059
 	desc = "EVTDESC190058"	
 	picture = GFX_evt_pope
+	is_triggered_only = yes
 	
 	trigger = {
 		has_landed_title = e_papal_state
@@ -2911,7 +2675,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		days = 1
 	}
 	
 	option = {
@@ -2926,10 +2690,6 @@ character_event = {
 	trigger = {
 		trait = regency
 		OR = {
-			ai = yes
-			NOT = { num_of_vassals = 1 }
-		}
-		OR = {
 			is_ruler = no
 			NOT = { regent = { is_alive = yes } }
 		}
@@ -2938,9 +2698,8 @@ character_event = {
 	desc = "EVTDESC190060"
 	
 	mean_time_to_happen = {
-		months = 1		
+		days = 1		
 	}
-	
 
 	option = {
 		name = "EVTOPTA190060"
@@ -3045,7 +2804,10 @@ character_event = {
 							}
 							if = {
 								limit = {
-									ROOT = { religion_group = muslim }
+									OR = {
+										ROOT = { religion_group = muslim }
+										title = e_byzantium
+									}
 								}
 								add_law_w_cooldown = revoke_law_1
 							}							
@@ -3162,7 +2924,10 @@ character_event = {
 							}
 							if = {
 								limit = {
-									ROOT = { religion_group = muslim }
+									OR = {
+										ROOT = { religion_group = muslim }
+										title = e_byzantium
+									}
 								}
 								add_law_w_cooldown = revoke_law_1
 							}							
@@ -3258,7 +3023,10 @@ character_event = {
 							}
 							if = {
 								limit = {
-									ROOT = { religion_group = muslim }
+									OR = {
+										ROOT = { religion_group = muslim }
+										title = e_byzantium
+									}
 								}
 								add_law_w_cooldown = revoke_law_1
 							}							
@@ -3450,6 +3218,7 @@ character_event = {
 	id = 190062
 	picture = GFX_evt_emissary
 	only_rulers = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		independent = yes
@@ -3511,29 +3280,29 @@ character_event = {
 	desc = "EVTDESC190062"
 	
 	mean_time_to_happen = {
-		years = 200		
+		days = 1		
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			realm_diplomacy = 20
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			realm_diplomacy = 30
 		}	
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			realm_diplomacy = 40
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			realm_diplomacy = 50
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			primary_title = { higher_tier_than = COUNT }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			primary_title = { higher_tier_than = DUKE }
 		}		
 	}
@@ -3613,6 +3382,7 @@ character_event = {
 	id = 190063
 	picture = GFX_evt_emissary
 	only_rulers = yes
+	is_triggered_only = yes
 	
 	trigger = {
 		independent = no
@@ -3638,29 +3408,29 @@ character_event = {
 	desc = "EVTDESC190062"
 	
 	mean_time_to_happen = {
-		years = 200		
+		days = 1		
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			realm_diplomacy = 20
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			realm_diplomacy = 30
 		}	
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			realm_diplomacy = 40
 		}
 		modifier = {
-			factor = 0.9
+			factor = 1.1
 			realm_diplomacy = 50
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			primary_title = { higher_tier_than = COUNT }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.25
 			primary_title = { higher_tier_than = DUKE }
 		}		
 	}
@@ -3710,7 +3480,7 @@ character_event = {
 # End depose type wars inconclusively
 character_event = {
 	id = 190064
-	is_triggered_only = yes
+	is_triggered_only = yes	
 	
 	immediate = {
 		any_war = {
@@ -3765,5 +3535,146 @@ character_event = {
 		host = {
 			character_event = { id = 190034 }
 		}
+	}
+}
+
+character_event = {
+	id = 190066
+	desc = "EVTDESC190066"	
+	picture = "GFX_evt_family"
+	is_triggered_only = yes
+	
+	trigger = {
+		age = 12
+		NOT = { has_character_flag = attribute_adjustment }
+		OR = {
+			NOT = { martial = 1 }
+			NOT = { diplomacy = 1 }
+			NOT = { intrigue = 1 }
+			NOT = { stewardship = 1 }
+			NOT = { learning = 1 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1		
+	}
+	
+	option = {
+		name = "EVTOPTA190066"	
+		set_character_flag = attribute_adjustment
+		hidden_tooltip = {		
+			if = {
+				limit = {
+					NOT = { martial = 1 }
+				}
+				change_martial = 1
+			}
+			if = {
+				limit = {
+					NOT = { martial = 1 }
+				}
+				change_martial = 1
+			}
+			if = {
+				limit = {
+					NOT = { martial = 1 }
+				}
+				change_martial = 1
+			}				
+			if = {
+				limit = {
+					NOT = { intrigue = 1 }
+				}
+				change_intrigue = 1
+			}
+			if = {
+				limit = {
+					NOT = { intrigue = 1 }
+				}
+				change_intrigue = 1
+			}
+			if = {
+				limit = {
+					NOT = { intrigue = 1 }
+				}
+				change_intrigue = 1
+			}					
+			if = {
+				limit = {
+					NOT = { stewardship = 1 }
+				}
+				change_stewardship = 1
+			}
+			if = {
+				limit = {
+					NOT = { stewardship = 1 }
+				}
+				change_stewardship = 1
+			}
+			if = {
+				limit = {
+					NOT = { stewardship = 1 }
+				}
+				change_stewardship = 1
+			}					
+			if = {
+				limit = {
+					NOT = { diplomacy = 1 }
+				}
+				change_diplomacy = 1
+			}
+			if = {
+				limit = {
+					NOT = { diplomacy = 1 }
+				}
+				change_diplomacy = 1
+			}
+			if = {
+				limit = {
+					NOT = { diplomacy = 1 }
+				}
+				change_diplomacy = 1
+			}					
+			if = {
+				limit = {
+					NOT = { learning = 1 }
+				}
+				change_learning = 1
+			}
+			if = {
+				limit = {
+					NOT = { learning = 1 }
+				}
+				change_learning = 1
+			}
+			if = {
+				limit = {
+					NOT = { learning = 1 }
+				}
+				change_learning = 1
+			}		
+		}		
+	}
+}
+
+character_event = {
+	id = 190067
+	picture = "GFX_evt_council"
+	trigger = {
+		is_ruler = yes
+		regent = { is_alive = yes }
+		trait = regency
+	}
+		
+	desc = "EVTDESC190067"
+	
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = "EVTOPTA190067"
+		add_trait = regency
 	}
 }

@@ -266,87 +266,10 @@ title_revoke_court_jester = {
 	message = no
 }
 
-title_revoke_castellian = {
-	grant_limit = 100
-	opinion_effect = -10
-	
-	allow = {
-		FROM = { war = no }
-		has_minor_title = title_castellian
-	}
-	
-	gain_effect = {
-		remove_title = title_castellian
-		opinion = {
-			modifier = opinion_fired_from_office
-			who = FROM
-			years = 10
-		}	
-		character_event = { id = 220007 }
-		character_event = { id = 220010 days = 1 }
-	}
-	lose_effect = { }
-
-	message = no
-}
-
 
 #######################################
 # SOFT: GRANTABLE - FULLY MODDABLE
 #######################################
-
-title_castellian = {
-	grant_limit = 1
-	dignity = 0.2
-	opinion_effect = 0
-	realm_in_name = yes
-	
-	allow = {
-		FROM = {
-			NOT = { religion_group = muslim }
-			ai = no
-			primary_title = { higher_tier_than = BARON }
-		}
-		age = 16
-		ai = yes
-		OR = {
-			is_ruler = no
-			has_minor_title = title_castellian
-		}
-		is_primary_heir = no
-		is_female = no
-		NOT = { has_minor_title = title_keeper_of_swans }
-		NOT = { has_minor_title = title_master_of_the_horse }
-		NOT = { has_minor_title = title_master_of_the_hunt }
-		NOT = { has_minor_title = title_high_almoner }
-		NOT = { has_minor_title = title_cupbearer }
-		NOT = { has_minor_title = title_seneschal }
-		NOT = { has_minor_title = title_despot }
-		NOT = { has_minor_title = title_sebastokrator }
-		NOT = { has_minor_title = title_kouropalates }	
-		NOT = { has_minor_title = title_caesar }
-		NOT = { has_minor_title = title_anthypatos }
-		NOT = { has_minor_title = title_concubine }	
-	}
-	
-	gain_effect = {
-		FROM = {
-			any_vassal = {
-				limit = { NOT = { has_minor_title = title_castellian } }
-				opinion = {
-					modifier = opinion_ruler_appointed_castellian
-					who = FROM
-					years = 10
-				}
-			}
-		}
-	}
-	lose_effect = {
-	}
-
-	message = no
-}
-
 title_concubine = {
 	grant_limit = 1
 	dignity = 0.05
@@ -380,8 +303,7 @@ title_concubine = {
 		NOT = { has_minor_title = title_sebastokrator }
 		NOT = { has_minor_title = title_kouropalates }	
 		NOT = { has_minor_title = title_caesar }
-		NOT = { has_minor_title = title_anthypatos }
-		NOT = { has_minor_title = title_castellian }		
+		NOT = { has_minor_title = title_anthypatos }		
 	}
 	
 	gain_effect = {
@@ -424,7 +346,6 @@ title_court_jester = {
 		NOT = { has_minor_title = title_caesar }
 		NOT = { has_minor_title = title_anthypatos }
 		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }
 	}
 	
 	gain_effect = {
@@ -468,8 +389,7 @@ title_keeper_of_swans = {
 		NOT = { has_minor_title = title_kouropalates }	
 		NOT = { has_minor_title = title_caesar }
 		NOT = { has_minor_title = title_anthypatos }
-		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }		
+		NOT = { has_minor_title = title_concubine }		
 	}
 	
 	gain_effect = {
@@ -508,8 +428,7 @@ title_master_of_the_horse = {
 		NOT = { has_minor_title = title_kouropalates }	
 		NOT = { has_minor_title = title_caesar }
 		NOT = { has_minor_title = title_anthypatos }
-		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }		
+		NOT = { has_minor_title = title_concubine }		
 	}
 	
 	gain_effect = {
@@ -547,8 +466,7 @@ title_master_of_the_hunt = {
 		NOT = { has_minor_title = title_kouropalates }	
 		NOT = { has_minor_title = title_caesar }
 		NOT = { has_minor_title = title_anthypatos }
-		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }		
+		NOT = { has_minor_title = title_concubine }		
 	}
 	
 	gain_effect = {
@@ -585,8 +503,7 @@ title_high_almoner = {
 		NOT = { has_minor_title = title_kouropalates }	
 		NOT = { has_minor_title = title_caesar }
 		NOT = { has_minor_title = title_anthypatos }
-		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }		
+		NOT = { has_minor_title = title_concubine }		
 	}
 	
 	gain_effect = {
@@ -624,8 +541,7 @@ title_cupbearer = {
 		NOT = { has_minor_title = title_kouropalates }	
 		NOT = { has_minor_title = title_caesar }
 		NOT = { has_minor_title = title_anthypatos }
-		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }		
+		NOT = { has_minor_title = title_concubine }		
 	}
 	
 	gain_effect = {
@@ -669,8 +585,7 @@ title_seneschal = {
 		NOT = { has_minor_title = title_kouropalates }	
 		NOT = { has_minor_title = title_caesar }
 		NOT = { has_minor_title = title_anthypatos }
-		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }		
+		NOT = { has_minor_title = title_concubine }		
 	}
 	
 	gain_effect = {
@@ -724,7 +639,6 @@ title_despot = {
 		NOT = { has_minor_title = title_kouropalates }
 		NOT = { has_minor_title = title_anthypatos }
 		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }
 	}
 	
 	gain_effect = {
@@ -761,7 +675,6 @@ title_sebastokrator = {
 		NOT = { has_minor_title = title_kouropalates }
 		NOT = { has_minor_title = title_anthypatos }
 		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }
 	}
 	
 	gain_effect = {
@@ -797,7 +710,6 @@ title_caesar = {
 		NOT = { has_minor_title = title_kouropalates }
 		NOT = { has_minor_title = title_anthypatos }
 		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }
 	}
 	
 	gain_effect = {
@@ -835,7 +747,6 @@ title_kouropalates = {
 		NOT = { has_minor_title = title_caesar }
 		NOT = { has_minor_title = title_anthypatos }
 		NOT = { has_minor_title = title_concubine }
-		NOT = { has_minor_title = title_castellian }
 	}
 	
 	gain_effect = {

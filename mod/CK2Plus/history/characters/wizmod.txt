@@ -22,12 +22,10 @@
 	}
 	1067.9.16={
 	employer=0
-	religion="judaism"
 	}
 	1067.10.16=
 	{
 	employer=20516
-	religion="orthodox"
 	}	
 	1093.1.1=
 	{

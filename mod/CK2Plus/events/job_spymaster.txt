@@ -39,13 +39,18 @@ character_event = {
 				NOT = { is_liege_of = ROOT }
 				NOT = { character = ROOT }
 				OR = {
+					has_objective = plot_gain_vassal_title
 					has_objective = plot_gain_title
+					has_objective = plot_weaken_fellow_vassal
+					has_objective = plot_institute_hereditary_titles
+					has_objective = plot_kidnap_liege
 					has_objective = plot_succ_seniority
 					has_objective = plot_succ_primogeniture
 					has_objective = plot_succ_gavelkind
 					has_objective = plot_succ_feudal_elective
 					has_objective = plot_kill_character
 					has_objective = plot_kill_spouse
+					has_objective = plot_lower_crown_authority
 				}
 			}
 		}
@@ -193,13 +198,18 @@ character_event = {
 						NOT = { is_liege_of = ROOT }
 						NOT = { character = ROOT }
 						OR = {
+							has_objective = plot_gain_vassal_title
 							has_objective = plot_gain_title
+							has_objective = plot_weaken_fellow_vassal
+							has_objective = plot_institute_hereditary_titles
+							has_objective = plot_kidnap_liege
 							has_objective = plot_succ_seniority
 							has_objective = plot_succ_primogeniture
 							has_objective = plot_succ_gavelkind
 							has_objective = plot_succ_feudal_elective
 							has_objective = plot_kill_character
 							has_objective = plot_kill_spouse
+							has_objective = plot_lower_crown_authority
 						}
 					}
 					character_event = { id = 20290 days = 7 }
@@ -349,13 +359,18 @@ character_event = {
 				NOT = { is_liege_of = ROOT }
 				NOT = { character = ROOT }
 				OR = {
+					has_objective = plot_gain_vassal_title
 					has_objective = plot_gain_title
+					has_objective = plot_weaken_fellow_vassal
+					has_objective = plot_institute_hereditary_titles
+					has_objective = plot_kidnap_liege
 					has_objective = plot_succ_seniority
 					has_objective = plot_succ_primogeniture
 					has_objective = plot_succ_gavelkind
 					has_objective = plot_succ_feudal_elective
 					has_objective = plot_kill_character
 					has_objective = plot_kill_spouse
+					has_objective = plot_lower_crown_authority
 				}
 			}
 		}

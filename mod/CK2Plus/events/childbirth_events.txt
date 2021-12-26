@@ -6,7 +6,8 @@ character_event = {
 	is_triggered_only = yes
 	hide_from = yes
 	
-	trigger = {
+	trigger = {	
+		ai = yes
 		NOT = { trait = twin }
 		mother = { is_alive = yes }
 	}
@@ -73,15 +74,15 @@ character_event = {
 		#handle deaths
 		if = {
 			limit = {
-				has_character_flag = mother_died
-			}
-			mother = { character_event = { id = 190001 } }
-		}
-		if = {
-			limit = {
 				has_character_flag = child_died
 			}
 			character_event = { id = 190002 }
+		}		
+		if = {
+			limit = {
+				has_character_flag = mother_died
+			}
+			mother = { character_event = { id = 190001 } }
 		}
 		clr_character_flag = mother_died
 		clr_character_flag = child_died

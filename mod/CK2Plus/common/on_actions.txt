@@ -1,7 +1,6 @@
 #character
 on_yearly_pulse = {
 	random_events = {
-
 		#Old age events
 		1000000 = 190021
 		1000000 = 190022
@@ -12,7 +11,31 @@ on_yearly_pulse = {
 		1000000 = 190027
 		1000000 = 190028
 		1000000 = 190029
-		1000000 = 190030	
+		1000000 = 190030
+		
+		#Lifestyles
+		25 = 200000
+		25 = 200001
+		25 = 200002
+		25 = 200003
+		25 = 200004
+		25 = 200005
+		25 = 200006
+		25 = 200007
+		25 = 200008
+		25 = 200009
+		
+		#CK2+ Events
+		200 = 450
+		200 = 190044
+		100 = 190004
+		100 = 190031
+		100 = 190032
+		100 = 190041
+		50 = 190062
+		50 = 190063
+		100 = 220004
+		1000 = 190020
 		
 		# Feudal Life Events
 		100 = 4000
@@ -168,6 +191,18 @@ on_yearly_pulse = {
 #character
 on_bi_yearly_pulse = {
 	random_events = {
+	
+		#Maintenance Events
+		100000 = 110001
+		100000 = 110017
+		100000 = 190036
+		100000 = 190037
+		100000 = 190038
+		100000 = 190039
+		100000 = 190040
+		100000 = 190057
+		100000 = 190059
+		100000 = 190033
 
 		#Various Traits Events
 		10 = 65000
@@ -494,6 +529,9 @@ on_decade_pulse = {
 # For characters 2 to 16 years old
 on_yearly_childhood_pulse = {
 	random_events = {
+		# Attribute Fix
+		100000 = 190066
+	
 		# Childhood Personality Events
 		
 		#Age 6-16, aiming to get at least 4 traits before adult.
@@ -565,7 +603,7 @@ on_yearly_childhood_pulse = {
 		50 = 1934
 		50 = 1935
 		
-		1500 = 0
+		500 = 0
 	}
 }
 
@@ -790,8 +828,6 @@ on_death = {
 		190065
 		190035		
 		190058
-		220008
-		220009
 	}
 	random_events = {
 		10 = 24505

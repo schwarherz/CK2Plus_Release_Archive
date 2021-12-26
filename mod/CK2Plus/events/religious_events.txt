@@ -32,11 +32,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 15000
-		modifier = {
-			factor = 0.75
-			religion = catholic
-		}		
+		months = 17500	
 		modifier = {
 			factor = 1.25
 			religion_authority = 0.6
@@ -80,6 +76,7 @@ province_event = {
 	}
 	
 	immediate = {
+		religion_authority = -0.001
 		become_heretic = yes
 		set_province_flag = heresy_in_province
 		add_province_modifier = {
@@ -693,6 +690,7 @@ province_event = {
 	}
 	
 	immediate = {
+		religion_authority = -0.001
 		random_neighbor_province = {
 			limit = {
 				is_heresy_of = ROOT
@@ -1361,7 +1359,7 @@ character_event = {
 						had_character_flag = { flag = money_from_the_pope days = 365 }
 						any_war = {
 							OR = {
-								using_cb = religious
+								using_cb = holy_war
 								using_cb = crusade
 							}
 							OR = {
@@ -1803,8 +1801,8 @@ character_event = {
 			prisoner = no 
 			clr_character_flag = nag_pope_to_help_me
 		}
-		piety = 10
-		religion_authority = 0.02
+		piety = 25
+		religion_authority = 0.01
 	}	
 	option = {
 		name = "EVTOPTB39226"	#no
@@ -1825,7 +1823,7 @@ character_event = {
 				}
 			}
 		}
-		piety = -25
+		piety = -100
 		religion_authority = -0.01
 		religion_head = {
 			opinion = {
@@ -1893,13 +1891,12 @@ character_event = {
 			prisoner = no 
 		}
 		religion_authority = 0.01
-		piety = 10
+		piety = 25
 	}
 	
 	option = {
 		name = "EVTOPTB39230"	#refuse
-		piety = -25
-		prestige = -25
+		piety = -100
 		religion_authority = -0.01
 	}
 	

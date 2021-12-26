@@ -6,7 +6,7 @@ liege="d_khazars"
 holder=20663
 }
 1067.9.16={
-holder=89000
+holder=89001
 }
 1067.10.16=
 {

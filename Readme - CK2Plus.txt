@@ -1,17 +1,18 @@
 CK2Plus for Crusader Kings 2
 Author: Martin "Wiz" Anward
 Contact: m(dot)anward(at)live(dot)se
-Credits: Spartan_One (Mod File Hosting), Peuri (Little Portait Mod), Trovador and trashing mad (Enhanced Portraits Mod), EmperorTojo (Icelandic Culture Mod), Ijtzoi (All the Way to Timbuktu), Syren (Syren's Nicknames Mod), mate0815 (Better Looking Characters integration), Shaytana (Better Looking Characters), Werther (French Localisation), EOOQE (German Localisation), Keanon (Patrum Scuta), Zaldax (An Offer You Can't Refuse), Velho e Bom Joe (Culturally Different Cities), Icecream Jones (flags, new countries), Strudel Man (many tweaks and additions), NoNotTheMindProbe (russian kingdoms), pothkan (CK2 heraldy mod), Keanon (Patrum Scuta), The_Chancellor (Council Reshuffling mod), avee (Better Rebels mod, Death Causes mod), Sniper4625 (misc graphics), Van Diemen (HRE Revised Mod), riso (Treaty of Nymphaeum scenario), Six Gun South (PMM)
+Credits: Cetan (Expanded Character Tooltips), Crackdtoothgrin (Crackdtoothgrin's Graphical Goodies), Spartan_One (Mod File Hosting), Peuri (Little Portait Mod), Trovador and thrashing mad (Enhanced Portraits Mod), EmperorTojo (Icelandic Culture Mod), Ijtzoi (All the Way to Timbuktu), Syren (Syren's Nicknames Mod), mate0815 (Better Looking Characters integration), Shaytana (Better Looking Characters), Werther (French Localisation), EOOQE (German Localisation), Keanon (Patrum Scuta), Zaldax (An Offer You Can't Refuse), Velho e Bom Joe (Culturally Different Cities), Icecream Jones (flags, new countries), Strudel Man (many tweaks and additions), NoNotTheMindProbe (russian kingdoms), pothkan (CK2 heraldy mod), Keanon (Patrum Scuta), The_Chancellor (Council Reshuffling mod), avee (Family Relations Mod, Better Rebels mod, Death Causes mod), Sniper4625 (misc graphics), Van Diemen (HRE Revised Mod), riso (Treaty of Nymphaeum scenario), Six Gun South (PMM)
 
 ****************
 * Installation *
 ****************
 1) If you have an older version of the mod installed, go into the Crusader Kings II mod folder and delete the 'CK2Plus' folder and .mod file.
 2) Unzip to your Crusader Kings II folder. IMPORTANT: The mod files should go into your GAME INSTALLATION folder, NOT your My Documents/Paradox Interactive folder.
-3) Unzip any Hotfixes to your Crusader Kings II folder (same place you installed the mod in step 2).
-4) Start the CK2 launcher and check 'CK2Plus (MAIN)' in the list of mods.
-5) Check any optional modules you want to use along with CK2Plus.
-6) Hit play.
+3) If you have Steam, you will also need to unzip to your My Documents/Paradox Interactive/Crusader Kings II folder, in ADDITION to unzipping to your game directory as outlined in step 2.
+4) Unzip any Hotfixes to your Crusader Kings II folder (same place you installed the mod in step 2).
+5) Start the CK2 launcher and check 'CK2Plus (MAIN)' in the list of mods.
+6) Check any optional modules you want to use along with CK2Plus.
+7) Hit play.
 
 **************
 * Disclaimer *
@@ -53,6 +54,7 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 ********************
 * Optional Modules *
 ********************
+- 'Dev Module' adds developer and debugging tools (for now, it just lets you see the IDs of characters by mouseovering them).
 - 'Mongol Faces' adds additional character portraits from Better Looking Characters that require the Mongol Faces DLC to work correctly.
 - 'No Time Limit' allows for play up to the year 100000.
 - 'No New Empires' disables creation of all of the new Empire-level titles. Note that they will still show up on empire mapmode but cannot possibly be held by a character with this mode on.
@@ -65,6 +67,45 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 *************
 * Changelog *
 *************
+1.09:
+- Fixed a bug that was causing significant slowdown due to bloated AI courts. Game performance should now be much better.
+- Moved most CK2+ events to the yearly or bi-yearly character event pulses to further improve performance.
+- Increased AI tendency to plot.
+- Reduced opinion bonus for same dynasty.
+- Integration avee's family relations mod that increases character's opinions of their close family.
+- Realms without crown authority can now have up to the second level of taxation/levy laws.
+- Fixed a bug that was breaking the invasion CB.
+- Further improved title distribution AI, to make the AI less willing to hand away its demesne when there are other alternatives.
+- Added dynasty, culture and religion information to character tooltips.
+- Reduced minimum gift size (but kept the increased gift scaled cost the same).
+- Increased the plot power required to execute the better assassination decisions, and also slightly increased their chance of success.
+- Removed Castellans. While I feel they are a good feature, I couldn't find a way to fix the various bugs and issues with the way honorary titles are coded, and I don't want to have a permanently half-broken feature in the mod.
+- Greatly increased prestige gain from winning battles.
+- Reworked the way joining wars works. The ask to join war diplomatic mechanic is now reserved solely for Crusades. Instead, when a ruler is declared on by a ruler of a different faith for any conquest-type CB (holy war, claim, de jure claim, etc), they get the option to ask all their neighbours of the same faith (neighbour being defined as sharing a border or sharing provinces in the same kingdom). Chance of joining depends on relations, traits, dynastic ties and other such factors. This should make the AI far more reasonable and realistic about which holy wars it joins (you no longer get all of North Africa defending Sicily, for instance), and simultaneously eliminates the exploit of using other CBs to get around holy war defensive chains.
+- Reduced demesne size requirements for raising crown authority to a level the AI can better cope with.
+- Buildings can now be randomly destroyed as a consequense of provinces being besieged.
+- Added province prosperity mechanics. Provinces now have a prosperity level that goes (in descending order): Rich - Prosperous - Normal - Poor - Struggling. Prosperity level affects the tax and levies you can get from the province, and will go up and down from various events. Peace and quiet tends to increase province prosperity, while war and rebellions reduces it.
+- Restored the ability for women to pass on pressable claims to their kids. This makes it possible once again to marry into claims.
+- Province conversions will now very slightly increase the moral authority of the converting religion, and decrease the authority of the converted.
+- Religions no longer gain any moral authority from the diplomacy of their head of religion.
+- Anti-Popes no longer cause continous moral authority loss, but the moral authority loss from creating one was greatly increased.
+- Reduced the moral authority hit to the loser in a Crusade.
+- Reduced frequency of heresies.
+- Reduced maintenance cost of levies.
+- Reduced the bonus troops granted to rulers defending against a Crusade/Jihad.
+- The Almoravids once again start as a Sultanate instead of an Emirate, as this leads to more historical results.
+- Fixed a bug where the Pope getting the land in a Crusade would result in a smattering of independent counts.
+- The inherited/appointed titles law is now available to Byzantium (to represent the Theme system).
+- Added the titular kingdoms of Sardinia, Dublin, Mann and the Isles, Mercia and Cornwall.
+- Newborn characters now start with negative stats, in an effort to reduce the extreme stat inflation from education over time. An adjustment event fires later in childhood to ensure that base stats do not remain in the negative.
+- Removed the vassal opinion bonus from Elective. While it makes sense, it feel it makes an already extremely good succession law even better.
+- Primogeniture no longer lowers the opínion of your dynasty.
+- Elective now lowers the opinion of your dynasty (due to opening up the succession outside of the bloodline).
+- Tweaked mercenaries to have more 500 and 1000-size companies.
+- Added mercenaries to West Africa.
+- Tweaked provinces in West Africa and added an additional province to the Duchy of Laayoune.
+- Fixed a bug where changing the crown authority of an Empire would cause multiple stacking opinion penalties.
+
 1.08:
 - Players can now do De Jure wars against other religion groups, until I rework the way joining Holy Wars works.
 - Tumbling your courtiers is no longer a male-only or straight-only activity.

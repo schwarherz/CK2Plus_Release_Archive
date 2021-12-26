@@ -4,16 +4,18 @@ plot_decisions = {
 			ai = yes
 			NOT = { has_character_flag = plot_check }
 			OR = {
-				has_objective = plot_institute_hereditary_titles
+				has_objective = plot_gain_vassal_title
 				has_objective = plot_gain_title
+				has_objective = plot_weaken_fellow_vassal
+				has_objective = plot_institute_hereditary_titles
+				has_objective = plot_kidnap_liege
 				has_objective = plot_succ_seniority
 				has_objective = plot_succ_primogeniture
 				has_objective = plot_succ_gavelkind
 				has_objective = plot_succ_feudal_elective
-				has_objective = plot_lower_crown_authority
 				has_objective = plot_kill_character
 				has_objective = plot_kill_spouse
-				has_objective = plot_kidnap_liege
+				has_objective = plot_lower_crown_authority
 			}
 		}
 		allow = { }
@@ -57,52 +59,13 @@ plot_decisions = {
 }
 
 decisions = {
-	ai_regency = {
-		potential = {
-			ai = yes
-			is_ruler = yes
-			independent = no
-			liege = { 
-				regent = { is_alive = yes } 
-				NOT = { trait = regency } 
-			}
-		}
-		allow = { }
-		effect = {
-			liege = {
-				add_trait = regency
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}		
-	}
-	ai_no_regency = {
-		potential = {
-			ai = yes
-			is_ruler = yes
-			independent = no
-			liege = { 
-				NOT = { regent = { is_alive = yes } }
-				trait = regency
-			}
-		}
-		allow = { }
-		effect = {
-			liege = {
-				remove_trait = regency
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}		
-	}	
 	ai_begin_obj_check = {
 		potential = {
 			ai = yes
 			NOT = { has_character_flag = obj_check }
 			age = 16
 			OR = {
+				has_objective = obj_status_quo
 				has_objective = obj_become_chancellor
 				has_objective = obj_become_marshal
 				has_objective = obj_become_treasurer
@@ -136,12 +99,11 @@ decisions = {
 				has_objective = obj_increase_demesne_7
 				has_objective = obj_increase_demesne_8				
 				has_objective = obj_increase_demesne_9
-				has_objective = obj_become_duke
 				has_objective = obj_go_crusade
 				has_objective = obj_go_jihad
 				has_objective = obj_find_lover
 				has_objective = obj_become_independent
-				has_objective = obj_status_quo
+				has_objective = obj_become_duke				
 				has_objective = obj_become_king
 				has_objective = obj_become_emperor
 				has_objective = obj_adopt_a_lifestyle

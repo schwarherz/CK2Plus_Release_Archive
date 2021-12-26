@@ -4,7 +4,7 @@
 title = c_marienburg
 
 # Settlements
-max_settlements = 4
+max_settlements = 5
 b_marienburg = castle
 b_elbing = city
 b_braunsberg = temple
@@ -22,6 +22,5 @@ religion = baltic_pagan
 # History
 1225.1.1 = { religion = catholic }
 #1243.1.1 = { b_braunsberg = temple } #bishopric of Warmia
-1225.1.1 = { religion = catholic }
 1255.1.1 = { culture = german }
 1337.1.1 = { b_bartenstein = castle }

@@ -214,7 +214,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA76006"
-		scaled_wealth = -0.33
+		treasury = -50
 		add_trait = deceitful
 		random = {
 			chance = 10
@@ -229,7 +229,7 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTB76006"
-		scaled_wealth = -0.2
+		treasury = -25
 		piety = -10
 		random = {
 			chance = 33

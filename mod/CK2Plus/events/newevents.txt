@@ -6,32 +6,31 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA300001"
-		remove_trait = crusader
-		remove_trait = mujahid
-		remove_trait = hunter
-		remove_trait = impaler
-		remove_trait = poet
-		remove_trait = mystic
-		remove_trait = scholar
-		remove_trait = celibate
-		remove_trait = falconer
-		remove_trait = hedonist
-		remove_trait = gardener
-		remove_trait = stressed
-		remove_trait = depressed
-		remove_trait = ill
-		remove_trait = possessed
-		remove_trait = lunatic
-		remove_trait = pneumonic
-		remove_trait = syphilitic
-		remove_trait = leper
-		remove_trait = wounded
-		remove_trait = maimed
-		remove_trait = infirm
-		remove_trait = incapable
-		remove_trait = drunkard
-		random = {
-			chance = 66
+		hidden_tooltip = {
+			remove_trait = crusader
+			remove_trait = mujahid
+			remove_trait = hunter
+			remove_trait = impaler
+			remove_trait = poet
+			remove_trait = mystic
+			remove_trait = scholar
+			remove_trait = celibate
+			remove_trait = falconer
+			remove_trait = hedonist
+			remove_trait = gardener
+			remove_trait = stressed
+			remove_trait = depressed
+			remove_trait = ill
+			remove_trait = possessed
+			remove_trait = lunatic
+			remove_trait = pneumonic
+			remove_trait = syphilitic
+			remove_trait = leper
+			remove_trait = wounded
+			remove_trait = maimed
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = drunkard
 			remove_trait = dwarf
 			remove_trait = hunchback
 			remove_trait = harelip
@@ -48,17 +47,35 @@ character_event = {
 			remove_trait = strong
 			remove_trait = weak
 			remove_trait = inbred
+			#4% chance of a random genetic trait
+			random_list = {
+				960 = { }
+				1 = { add_trait = dwarf }
+				2 = { add_trait = hunchback }
+				3 = { add_trait = harelip }
+				3 = { add_trait = clubfooted }
+				3 = { add_trait = lisp }
+				3 = { add_trait = stutter }
+				5 = { add_trait = ugly }
+				5 = { add_trait = fair }
+				2 = { add_trait = quick }
+				1 = { add_trait = genius }
+				2 = { add_trait = slow }
+				1 = { add_trait = imbecile }
+				3 = { add_trait = tall }
+				3 = { add_trait = strong }
+				3 = { add_trait = weak }		
+			}			
 		}
 	}
 }
 
 character_event = {
 	id = 300002
-	desc = "EVTDESC300002"
+	desc = "EVTDESC300001"
 	hide_from = yes
 
 	trigger = {
-		ai = yes
 		NOT = { age = 1 }
 		NOT = { has_character_flag = genetics_check }
 	}
@@ -68,15 +85,82 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA300002"
+		name = "EVTOPTA300001"
 		set_character_flag = genetics_check
+		set_character_flag = family_relations_initialised
 		
-		hidden_tooltip = {
+		hidden_tooltip = {	
 			#check for stillbirth
 			character_event = { id = 190000 }
 		
 			#clean up genetics traits
-			character_event = { id = 300001 }
+			remove_trait = crusader
+			remove_trait = mujahid
+			remove_trait = hunter
+			remove_trait = impaler
+			remove_trait = poet
+			remove_trait = mystic
+			remove_trait = scholar
+			remove_trait = celibate
+			remove_trait = falconer
+			remove_trait = hedonist
+			remove_trait = gardener
+			remove_trait = stressed
+			remove_trait = depressed
+			remove_trait = ill
+			remove_trait = possessed
+			remove_trait = lunatic
+			remove_trait = pneumonic
+			remove_trait = syphilitic
+			remove_trait = leper
+			remove_trait = wounded
+			remove_trait = maimed
+			remove_trait = infirm
+			remove_trait = incapable
+			remove_trait = drunkard
+			remove_trait = dwarf
+			remove_trait = hunchback
+			remove_trait = harelip
+			remove_trait = clubfooted
+			remove_trait = lisp
+			remove_trait = stutter
+			remove_trait = ugly
+			remove_trait = fair
+			remove_trait = quick
+			remove_trait = genius
+			remove_trait = slow
+			remove_trait = imbecile
+			remove_trait = tall
+			remove_trait = strong
+			remove_trait = weak
+			remove_trait = inbred
+			
+			#4% chance of a random genetic trait
+			random_list = {
+				960 = { }
+				1 = { add_trait = dwarf }
+				2 = { add_trait = hunchback }
+				3 = { add_trait = harelip }
+				3 = { add_trait = clubfooted }
+				3 = { add_trait = lisp }
+				3 = { add_trait = stutter }
+				5 = { add_trait = ugly }
+				5 = { add_trait = fair }
+				2 = { add_trait = quick }
+				1 = { add_trait = genius }
+				2 = { add_trait = slow }
+				1 = { add_trait = imbecile }
+				3 = { add_trait = tall }
+				3 = { add_trait = strong }
+				3 = { add_trait = weak }		
+			}			
+			
+			#reduce stats
+			change_martial = -3
+			change_diplomacy = -3
+			change_intrigue = -3
+			change_stewardship = -3
+			change_learning = -3
 		
 			#check for culture change
 			if = {
@@ -87,7 +171,13 @@ character_event = {
 						NOT = {
 							AND = {
 								culture = saxon
-								ROOT = { culture = norman }
+								ROOT = { 	
+									OR = {
+										culture = norman
+										culture = frankish
+										culture = occitan
+									}
+								}
 							}
 						}			
 						NOT = {
@@ -123,7 +213,7 @@ character_event = {
 					NOT = { trait = clubfooted }
 				}
 				random = {
-					chance = 15
+					chance = 25
 					add_trait = clubfooted
 				}					
 			}
@@ -134,7 +224,7 @@ character_event = {
 					
 				}
 				random = {
-					chance = 15
+					chance = 25
 					add_trait = clubfooted
 				}					
 			}
@@ -144,7 +234,7 @@ character_event = {
 					NOT = { trait = harelip }					
 				}
 				random = {
-					chance = 15
+					chance = 25
 					add_trait = harelip
 				}					
 			}
@@ -154,7 +244,7 @@ character_event = {
 					NOT = { trait = harelip }
 				}
 				random = {
-					chance = 15
+					chance = 25
 					add_trait = harelip
 				}					
 			}
@@ -184,7 +274,7 @@ character_event = {
 					NOT = { trait = lisp }					
 				}
 				random = {
-					chance = 15
+					chance = 25
 					add_trait = lisp
 				}					
 			}
@@ -194,7 +284,7 @@ character_event = {
 					mother = { trait = lisp }
 				}
 				random = {
-					chance = 15
+					chance = 25
 					add_trait = lisp
 				}					
 			}
@@ -204,7 +294,7 @@ character_event = {
 					father_even_if_dead  = { trait = stutter }
 				}
 				random = {
-					chance = 15
+					chance = 25
 					add_trait = stutter
 				}					
 			}
@@ -214,7 +304,7 @@ character_event = {
 					mother = { trait = stutter }
 				}
 				random = {
-					chance = 15
+					chance = 25
 					add_trait = stutter
 				}					
 			}
@@ -490,6 +580,401 @@ character_event = {
 					add_trait = weak
 				}					
 			}
+			#add family opinions
+			any_sibling = {
+				hidden_tooltip = {
+					reverse_remove_opinion = {
+						modifier = opinion_sibling
+						who = ROOT
+					}	
+				}
+				reverse_opinion = {
+					modifier = opinion_sibling
+					who = ROOT
+					years = 100
+				}
+				hidden_tooltip = {
+					remove_opinion = {
+						modifier = opinion_sibling
+						who = ROOT
+					}		
+				}
+				opinion = {
+					modifier = opinion_sibling
+					who = ROOT
+					years = 100
+				}				
+				any_child = {
+					if = {
+						limit = {
+							is_female = no
+						}
+						hidden_tooltip = {
+							reverse_remove_opinion = {
+								modifier = opinion_nephew
+								who = ROOT					
+							}
+						}
+						reverse_opinion = {
+							modifier = opinion_nephew
+							who = ROOT
+							years = 100
+						}
+					}
+					if = {
+						limit = {
+							is_female = yes
+						}
+						hidden_tooltip = {
+							reverse_remove_opinion = {
+								modifier = opinion_niece
+								who = ROOT					
+							}
+						}
+						reverse_opinion = {
+							modifier = opinion_niece
+							who = ROOT
+							years = 100
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { is_female = no }
+						}
+						hidden_tooltip = {
+							remove_opinion = {
+								modifier = opinion_uncle
+								who = ROOT					
+							}
+						}
+						opinion = {
+							modifier = opinion_uncle
+							who = ROOT
+							years = 100
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { is_female = yes }
+						}
+						hidden_tooltip = {
+							remove_opinion = {
+								modifier = opinion_aunt
+								who = ROOT					
+							}
+						}
+						opinion = {
+							modifier = opinion_aunt
+							who = ROOT
+							years = 100
+						}
+					}				
+				}
+			}
+			any_child = {
+				any_child = {
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_grandchild
+							who = ROOT
+						}	
+					}
+					reverse_opinion = {
+						modifier = opinion_grandchild
+						who = ROOT
+						years = 100
+					}
+					if = {
+						limit = {
+							ROOT = { is_female = no }
+						}
+						hidden_tooltip = {
+							remove_opinion = {
+								modifier = opinion_grandfather
+								who = ROOT					
+							}
+						}
+						opinion = {
+							modifier = opinion_grandfather
+							who = ROOT
+							years = 100
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { is_female = yes }
+						}
+						hidden_tooltip = {
+							remove_opinion = {
+								modifier = opinion_grandmother
+								who = ROOT					
+							}	
+						}
+						opinion = {
+							modifier = opinion_grandmother
+							who = ROOT
+							years = 100
+						}
+					}					
+				}
+			}
+			father = {
+				any_sibling = {
+					if = {
+						limit = {
+							is_female = no
+						}
+						hidden_tooltip = {
+							reverse_remove_opinion = {
+								modifier = opinion_uncle
+								who = ROOT
+							}	
+						}
+						reverse_opinion = {
+							modifier = opinion_uncle
+							who = ROOT
+							years = 100
+						}
+					}
+					if = {
+						limit = {
+							is_female = yes
+						}
+						hidden_tooltip = {
+							reverse_remove_opinion = {
+								modifier = opinion_aunt
+								who = ROOT
+							}	
+						}
+						reverse_opinion = {
+							modifier = opinion_aunt
+							who = ROOT
+							years = 100
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { is_female = no }
+						}
+						hidden_tooltip = {
+							remove_opinion = {
+								modifier = opinion_nephew
+								who = ROOT					
+							}
+						}
+						opinion = {
+							modifier = opinion_nephew
+							who = ROOT
+							years = 100
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { is_female = yes }
+						}
+						hidden_tooltip = {
+							remove_opinion = {
+								modifier = opinion_niece
+								who = ROOT					
+							}	
+						}
+						opinion = {
+							modifier = opinion_niece
+							who = ROOT
+							years = 100
+						}
+					}					
+				}
+				hidden_tooltip = {
+					reverse_remove_opinion = {
+						modifier = opinion_father
+						who = ROOT
+						years = 100
+					}	
+				}
+				reverse_opinion = {
+					modifier = opinion_father
+					who = ROOT
+					years = 100
+				}
+				father = {	
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_grandfather
+							who = ROOT
+						}	
+					}
+					reverse_opinion = {
+						modifier = opinion_grandfather
+						who = ROOT
+						years = 100
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_grandchild
+							who = ROOT
+						}
+					}
+					opinion = {
+						modifier = opinion_grandchild
+						who = ROOT
+						years = 100
+					}					
+				}
+				mother = {
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_grandmother
+							who = ROOT
+						}	
+					}
+					reverse_opinion = {
+						modifier = opinion_grandmother
+						who = ROOT
+						years = 100
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_grandchild
+							who = ROOT
+						}		
+					}
+					opinion = {
+						modifier = opinion_grandchild
+						who = ROOT
+						years = 100
+					}					
+				}
+			}
+
+			mother = {
+				any_sibling = {
+					if = {
+						limit = {
+							is_female = no
+						}
+						hidden_tooltip = {
+							reverse_remove_opinion = {
+								modifier = opinion_uncle
+								who = ROOT
+							}	
+						}
+						reverse_opinion = {
+							modifier = opinion_uncle
+							who = ROOT
+							years = 100
+						}
+					}
+					if = {
+						limit = {
+							is_female = yes
+						}
+						hidden_tooltip = {
+							reverse_remove_opinion = {
+								modifier = opinion_aunt
+								who = ROOT
+							}	
+						}
+						reverse_opinion = {
+							modifier = opinion_aunt
+							who = ROOT
+							years = 100
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { is_female = no }
+						}
+						hidden_tooltip = {
+							remove_opinion = {
+								modifier = opinion_nephew
+								who = ROOT					
+							}
+						}
+						opinion = {
+							modifier = opinion_nephew
+							who = ROOT
+							years = 100
+						}
+					}
+					if = {
+						limit = {
+							ROOT = { is_female = yes }
+						}
+						hidden_tooltip = {
+							remove_opinion = {
+								modifier = opinion_niece
+								who = ROOT					
+							}	
+						}
+						opinion = {
+							modifier = opinion_niece
+							who = ROOT
+							years = 100
+						}
+					}					
+				}
+				hidden_tooltip = {
+					reverse_remove_opinion = {
+						modifier = opinion_mother
+						who = ROOT
+						years = 100
+					}	
+				}
+				reverse_opinion = {
+					modifier = opinion_mother
+					who = ROOT
+					years = 100
+				}
+				father = {	
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_grandfather
+							who = ROOT
+						}	
+					}
+					reverse_opinion = {
+						modifier = opinion_grandfather
+						who = ROOT
+						years = 100
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_grandchild
+							who = ROOT
+						}
+					}
+					opinion = {
+						modifier = opinion_grandchild
+						who = ROOT
+						years = 100
+					}					
+				}
+				mother = {
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_grandmother
+							who = ROOT
+						}	
+					}
+					reverse_opinion = {
+						modifier = opinion_grandmother
+						who = ROOT
+						years = 100
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_grandchild
+							who = ROOT
+						}		
+					}
+					opinion = {
+						modifier = opinion_grandchild
+						who = ROOT
+						years = 100
+					}					
+				}
+			}			
 		}
 	}
 }

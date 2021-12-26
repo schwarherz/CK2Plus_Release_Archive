@@ -1,0 +1,848 @@
+# Inadequate soil preparation
+province_event = {
+	id = 1059000
+	desc = "EVTDESC1059000"
+	picture = GFX_evt_throne_room
+
+	trigger = {
+		NOT = { has_province_modifier = province_poverty_2 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 1.25
+			owner = { war = no }
+		}		
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_stewardship = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_stewardship = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_stewardship = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			has_province_modifier = province_prosperity_2
+		}		
+		modifier = {
+			factor = 0.9
+			has_province_modifier = province_prosperity_1
+		}
+		modifier = {
+			factor = 1.1
+			has_province_modifier = province_poverty_1
+		}
+		modifier = {
+			factor = 1.1
+			terrain = farmlands
+		}			
+		modifier = {
+			factor = 0.9
+			terrain = desert
+		}	
+		modifier = {
+			factor = 0.9
+			terrain = mountain
+		}			
+	}
+
+	option = {
+		name = "OK"
+		#prosperity decrease
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_1
+			}
+			remove_province_modifier = province_poverty_1
+			add_province_modifier = { name = "province_poverty_2" duration = -1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_province_modifier = province_prosperity_2 }
+				NOT = { has_province_modifier = province_prosperity_1 }
+				NOT = { has_province_modifier = province_poverty_1 }	
+				NOT = { has_province_modifier = province_poverty_2 }
+			}
+			add_province_modifier = { name = "province_poverty_1" duration = -1 }
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_1
+			}
+			remove_province_modifier = province_prosperity_1
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_2
+			}
+			remove_province_modifier = province_prosperity_2
+			add_province_modifier = { name = "province_prosperity_1" duration = -1 }
+		}		
+	}
+}
+
+# Poor seed selection hurts farming
+province_event = {
+	id = 1059001
+	desc = "EVTDESC1059001"
+	picture = GFX_evt_throne_room
+
+	trigger = {
+		NOT = { has_province_modifier = province_poverty_2 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 1.25
+			owner = { war = no }
+		}		
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_stewardship = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_stewardship = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_stewardship = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			has_province_modifier = province_prosperity_2
+		}		
+		modifier = {
+			factor = 0.9
+			has_province_modifier = province_prosperity_1
+		}
+		modifier = {
+			factor = 1.1
+			has_province_modifier = province_poverty_1
+		}
+		modifier = {
+			factor = 1.1
+			terrain = farmlands
+		}			
+		modifier = {
+			factor = 0.9
+			terrain = desert
+		}	
+		modifier = {
+			factor = 0.9
+			terrain = mountain
+		}			
+	}
+
+	option = {
+		name = "OK"
+		#prosperity decrease
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_1
+			}
+			remove_province_modifier = province_poverty_1
+			add_province_modifier = { name = "province_poverty_2" duration = -1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_province_modifier = province_prosperity_2 }
+				NOT = { has_province_modifier = province_prosperity_1 }
+				NOT = { has_province_modifier = province_poverty_1 }	
+				NOT = { has_province_modifier = province_poverty_2 }
+			}
+			add_province_modifier = { name = "province_poverty_1" duration = -1 }
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_1
+			}
+			remove_province_modifier = province_prosperity_1
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_2
+			}
+			remove_province_modifier = province_prosperity_2
+			add_province_modifier = { name = "province_prosperity_1" duration = -1 }
+		}		
+	}
+}
+
+# Lack of manure hurts farming
+province_event = {
+	id = 1059002
+	desc = "EVTDESC1059002"
+	picture = GFX_evt_throne_room
+
+	trigger = {
+		NOT = { has_province_modifier = province_poverty_2 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 1.25
+			owner = { war = no }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_stewardship = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_stewardship = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_stewardship = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			has_province_modifier = province_prosperity_2
+		}		
+		modifier = {
+			factor = 0.9
+			has_province_modifier = province_prosperity_1
+		}
+		modifier = {
+			factor = 1.1
+			has_province_modifier = province_poverty_1
+		}
+		modifier = {
+			factor = 1.1
+			terrain = farmlands
+		}			
+		modifier = {
+			factor = 0.9
+			terrain = desert
+		}	
+		modifier = {
+			factor = 0.9
+			terrain = mountain
+		}			
+	}
+
+	option = {
+		name = "OK"
+		#prosperity decrease
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_1
+			}
+			remove_province_modifier = province_poverty_1
+			add_province_modifier = { name = "province_poverty_2" duration = -1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_province_modifier = province_prosperity_2 }
+				NOT = { has_province_modifier = province_prosperity_1 }
+				NOT = { has_province_modifier = province_poverty_1 }	
+				NOT = { has_province_modifier = province_poverty_2 }
+			}
+			add_province_modifier = { name = "province_poverty_1" duration = -1 }
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_1
+			}
+			remove_province_modifier = province_prosperity_1
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_2
+			}
+			remove_province_modifier = province_prosperity_2
+			add_province_modifier = { name = "province_prosperity_1" duration = -1 }
+		}		
+	}
+}
+
+# Lower mean temperature hurts farming
+province_event = {
+	id = 1059003
+	desc = "EVTDESC1059003"
+	picture = GFX_evt_throne_room
+
+	trigger = {
+		NOT = { has_province_modifier = province_poverty_2 }
+		year = 1290 
+		NOT = { year = 1365 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 1.25
+			owner = { war = no }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_stewardship = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_stewardship = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_stewardship = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			has_province_modifier = province_prosperity_2
+		}		
+		modifier = {
+			factor = 0.9
+			has_province_modifier = province_prosperity_1
+		}
+		modifier = {
+			factor = 1.1
+			has_province_modifier = province_poverty_1
+		}
+		modifier = {
+			factor = 1.1
+			terrain = farmlands
+		}			
+		modifier = {
+			factor = 0.9
+			terrain = desert
+		}	
+		modifier = {
+			factor = 0.9
+			terrain = mountain
+		}			
+	}
+
+	option = {
+		name = "OK"
+		#prosperity decrease
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_1
+			}
+			remove_province_modifier = province_poverty_1
+			add_province_modifier = { name = "province_poverty_2" duration = -1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_province_modifier = province_prosperity_2 }
+				NOT = { has_province_modifier = province_prosperity_1 }
+				NOT = { has_province_modifier = province_poverty_1 }	
+				NOT = { has_province_modifier = province_poverty_2 }
+			}
+			add_province_modifier = { name = "province_poverty_1" duration = -1 }
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_1
+			}
+			remove_province_modifier = province_prosperity_1
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_2
+			}
+			remove_province_modifier = province_prosperity_2
+			add_province_modifier = { name = "province_prosperity_1" duration = -1 }
+		}		
+	}
+}
+
+# Arable land deserted
+province_event = {
+	id = 1059004
+	desc = "EVTDESC1059004"
+	picture = GFX_evt_throne_room
+
+	trigger = {
+		NOT = { has_province_modifier = province_poverty_2 }
+		OR = {
+			has_siege = yes
+			has_province_modifier = brm_revolt
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.4
+			has_siege = yes
+		}		
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_stewardship = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_stewardship = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_stewardship = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			has_province_modifier = province_prosperity_2
+		}		
+		modifier = {
+			factor = 0.9
+			has_province_modifier = province_prosperity_1
+		}
+		modifier = {
+			factor = 1.1
+			has_province_modifier = province_poverty_1
+		}
+		modifier = {
+			factor = 0.9
+			terrain = farmlands
+		}			
+		modifier = {
+			factor = 1.1
+			terrain = desert
+		}	
+		modifier = {
+			factor = 1.1
+			terrain = mountain
+		}			
+	}
+
+	option = {
+		name = "OK"
+		#prosperity decrease
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_1
+			}
+			remove_province_modifier = province_poverty_1
+			add_province_modifier = { name = "province_poverty_2" duration = -1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_province_modifier = province_prosperity_2 }
+				NOT = { has_province_modifier = province_prosperity_1 }
+				NOT = { has_province_modifier = province_poverty_1 }	
+				NOT = { has_province_modifier = province_poverty_2 }
+			}
+			add_province_modifier = { name = "province_poverty_1" duration = -1 }
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_1
+			}
+			remove_province_modifier = province_prosperity_1
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_2
+			}
+			remove_province_modifier = province_prosperity_2
+			add_province_modifier = { name = "province_prosperity_1" duration = -1 }
+		}		
+	}
+}
+
+# Draining of marshes and fens
+province_event = {
+	id = 1059005
+	desc = "EVTDESC1059005"
+	picture = GFX_evt_throne_room
+
+	trigger = {
+		NOT = { has_province_modifier = province_prosperity_2 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 0.75
+			owner = { war = no }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_stewardship = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_stewardship = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_stewardship = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			has_province_modifier = province_poverty_2
+		}		
+		modifier = {
+			factor = 0.9
+			has_province_modifier = province_poverty_1
+		}
+		modifier = {
+			factor = 1.1
+			has_province_modifier = province_prosperity_1
+		}				
+		modifier = {
+			factor = 0.75
+			terrain = marsh
+		}			
+		modifier = {
+			factor = 1.25
+			terrain = desert
+		}	
+		modifier = {
+			factor = 1.25
+			terrain = mountain
+		}			
+	}
+
+	option = {
+		name = "OK"
+		#prosperity increase
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_1
+			}
+			remove_province_modifier = province_prosperity_1
+			add_province_modifier = { name = "province_prosperity_2" duration = -1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_province_modifier = province_prosperity_2 }
+				NOT = { has_province_modifier = province_prosperity_1 }
+				NOT = { has_province_modifier = province_poverty_1 }	
+				NOT = { has_province_modifier = province_poverty_2 }
+			}
+			add_province_modifier = { name = "province_prosperity_1" duration = -1 }
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_1
+			}
+			remove_province_modifier = province_poverty_1
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_2
+			}
+			remove_province_modifier = province_poverty_2
+			add_province_modifier = { name = "province_poverty_1" duration = -1 }
+		}					
+	}
+}
+
+# Resettlement on newly claimed land
+province_event = {
+	id = 1059006
+	desc = "EVTDESC1059006"
+	picture = GFX_evt_throne_room
+
+	trigger = {
+		NOT = { has_province_modifier = province_prosperity_2 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 0.75
+			owner = { war = no }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_stewardship = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_stewardship = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_stewardship = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			has_province_modifier = province_poverty_2
+		}		
+		modifier = {
+			factor = 0.9
+			has_province_modifier = province_poverty_1
+		}
+		modifier = {
+			factor = 1.1
+			has_province_modifier = province_prosperity_1
+		}
+		modifier = {
+			factor = 0.9
+			terrain = farmlands
+		}			
+		modifier = {
+			factor = 1.1
+			terrain = desert
+		}	
+		modifier = {
+			factor = 1.1
+			terrain = mountain
+		}			
+	}
+
+	option = {
+		name = "OK"
+		#prosperity increase
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_1
+			}
+			remove_province_modifier = province_prosperity_1
+			add_province_modifier = { name = "province_prosperity_2" duration = -1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_province_modifier = province_prosperity_2 }
+				NOT = { has_province_modifier = province_prosperity_1 }
+				NOT = { has_province_modifier = province_poverty_1 }	
+				NOT = { has_province_modifier = province_poverty_2 }
+			}
+			add_province_modifier = { name = "province_prosperity_1" duration = -1 }
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_1
+			}
+			remove_province_modifier = province_poverty_1
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_2
+			}
+			remove_province_modifier = province_poverty_2
+			add_province_modifier = { name = "province_poverty_1" duration = -1 }
+		}					
+	}
+}
+
+# Increased land productivity
+province_event = {
+	id = 1059007
+	desc = "EVTDESC1059007"
+	picture = GFX_evt_throne_room
+
+	trigger = {
+		NOT = { has_province_modifier = province_prosperity_2 }
+	}
+	
+	mean_time_to_happen = {
+		months = 2000
+		modifier = {
+			factor = 0.75
+			owner = { war = no }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_stewardship = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_stewardship = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_stewardship = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 0.8
+			has_province_modifier = province_poverty_2
+		}		
+		modifier = {
+			factor = 0.9
+			has_province_modifier = province_poverty_1
+		}
+		modifier = {
+			factor = 1.1
+			has_province_modifier = province_prosperity_1
+		}
+		modifier = {
+			factor = 0.9
+			terrain = farmlands
+		}			
+		modifier = {
+			factor = 1.1
+			terrain = desert
+		}	
+		modifier = {
+			factor = 1.1
+			terrain = mountain
+		}			
+	}
+
+	option = {
+		name = "OK"
+		#prosperity increase
+		if = {
+			limit = {
+				has_province_modifier = province_prosperity_1
+			}
+			remove_province_modifier = province_prosperity_1
+			add_province_modifier = { name = "province_prosperity_2" duration = -1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_province_modifier = province_prosperity_2 }
+				NOT = { has_province_modifier = province_prosperity_1 }
+				NOT = { has_province_modifier = province_poverty_1 }	
+				NOT = { has_province_modifier = province_poverty_2 }
+			}
+			add_province_modifier = { name = "province_prosperity_1" duration = -1 }
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_1
+			}
+			remove_province_modifier = province_poverty_1
+		}
+		if = {
+			limit = {
+				has_province_modifier = province_poverty_2
+			}
+			remove_province_modifier = province_poverty_2
+			add_province_modifier = { name = "province_poverty_1" duration = -1 }
+		}					
+	}
+}
+
+# Building sacked during siege
+province_event = {
+	id = 1059008
+	desc = "EVTDESC1059008"
+	picture = "GFX_evt_burning_house"
+
+	trigger = {
+		has_siege = yes
+		any_province_lord = {
+			any_demesne_title = {
+				location = {
+					province_id = ROOT
+				}
+				tier = baron
+				num_of_buildings = 1
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	immediate = {
+		hidden_tooltip = {
+			random_province_lord = {
+				limit = {
+					any_demesne_title = {
+						location = {
+							province_id = ROOT
+						}
+						tier = baron
+						num_of_buildings = 1
+					}
+				}
+				set_character_flag = building_is_destroyed
+			}		
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA1059008"
+		trigger = { owner = { has_character_flag = building_is_destroyed } }
+		owner = {
+			random_demesne_title = {
+				limit = {
+					location = {
+						province_id = ROOT
+					}
+					tier = baron
+					num_of_buildings = 1
+				}
+				destroy_random_building = yes
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB1059008"
+		trigger = { NOT = { owner = { has_character_flag = building_is_destroyed } } }
+		hidden_tooltip = {
+			random_province_lord = {
+				limit = {
+					any_demesne_title = {
+						location = {
+							province_id = ROOT
+						}
+						tier = baron
+						num_of_buildings = 1
+					}
+					has_character_flag = building_is_destroyed
+				}
+				character_event = { id = 1059009 days = 1 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = 1059009
+	desc = "EVTDESC1059008"
+	picture = "GFX_evt_burning_house"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "1059008"
+		random_demesne_title = {
+			limit = {
+				location = {
+					province_id = FROM
+				}
+				tier = baron
+				num_of_buildings = 1
+			}
+			destroy_random_building = yes
+		}
+	}
+}

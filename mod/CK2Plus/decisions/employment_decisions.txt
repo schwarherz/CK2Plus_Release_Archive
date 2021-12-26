@@ -199,6 +199,7 @@ decisions = {
 			ai = yes
 			religion_group = muslim
 			is_female = no
+			is_ruler = yes
 			age = 16
 			NOT = {
 				any_courtier = {
@@ -228,6 +229,6 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}		
 	
 }

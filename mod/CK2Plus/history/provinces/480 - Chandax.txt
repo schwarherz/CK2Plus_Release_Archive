@@ -23,6 +23,16 @@ terrain = mountain
 # History
 #4th crusade
 
+#the restoration of gorgolainis
+1067.9.16={
+b_gorgolainis = castle
+capital = b_gorgolainis
+}
+1067.10.16=
+{
+capital = b_iraklio
+remove_settlement = b_gorgolainis
+}
 
 #4th crusade
 #1205.1.1 = { culture = italian }

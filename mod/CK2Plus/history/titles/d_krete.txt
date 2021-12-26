@@ -6,6 +6,13 @@ liege="e_byzantium"
 {
 holder=20516
 }
+1067.9.16={
+holder=89000
+}
+1067.10.16=
+{
+holder=20516
+}
 1093.1.1=
 {
 holder = 1781

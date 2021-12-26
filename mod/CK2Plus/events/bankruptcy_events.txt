@@ -19,7 +19,7 @@ character_event = {
 		NOT = { has_character_flag = loan_taken }
 		OR = {
 			NOT = { has_character_flag = loan_refused }
-			had_character_flag = { flag = loan_refused days = 365 }
+			had_character_flag = { flag = loan_refused days = 1825 }
 		}
 	}
 	

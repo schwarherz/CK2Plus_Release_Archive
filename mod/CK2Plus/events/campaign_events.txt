@@ -72,7 +72,8 @@ character_event = {
 				clr_character_flag = campaign_friend
 				
 				opinion = {
-					modifier = campaign_friend
+					modifier = opinion_friend
+					years = 100
 					who = ROOT
 				}
 				hidden_tooltip = {
@@ -94,7 +95,8 @@ character_event = {
 	option = {
 		name = "EVTOPTA6901"
 		reverse_opinion = {
-			modifier = campaign_friend
+			modifier = opinion_friend
+			years = 100
 			who = FROM
 		}		
 	}
@@ -257,7 +259,8 @@ character_event = {
 				clr_character_flag = campaign_friend
 				
 				opinion = {
-					modifier = campaign_rival
+					modifier = opinion_rival
+					years = 100
 					who = ROOT
 				}
 				hidden_tooltip = {
@@ -280,7 +283,8 @@ character_event = {
 	option = {
 		name = "EVTOPTA6921"
 		reverse_opinion = {
-			modifier = campaign_rival
+			modifier = opinion_rival
+			years = 100
 			who = FROM
 		}		
 	}

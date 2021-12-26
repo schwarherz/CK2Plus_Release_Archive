@@ -725,7 +725,7 @@ PROV723;Madaba;Madaba;Madaba;;Madaba;;;;;;;;;x
 PROV724;Amman;Amman;Amman;;Amman;;;;;;;;;x
 PROV725;Irbid;Irbid;Irbid;;Irbid;;;;;;;;;x
 PROV726;Al Mafraq;Al Mafraq;Mafrak;;Al Mafraq;;;;;;;;;x
-PROV727;Syria;Syrie;Syrien;;Siria;;;;;;;;;x
+PROV727;Hauran;Hauran;Hauran;;Hauran;;;;;;;;;x
 PROV728;Damascus;Damas;Damaskus;;Damasco;;;;;;;;;x
 PROV729;Tadmor;Tadmor;Tadmor;;Tadmor;;;;;;;;;x
 PROV730;Palmyra;Palmyre;Palmyra;;Palmira;;;;;;;;;x
@@ -942,7 +942,7 @@ PROV940;Baol;Baol;Baol;;Baol;;;;;;;;;x
 PROV941;Socotra;Socotra;Socotra;;Socotra;;;;;;;;;x
 PROV942;Teate;Teate;Teate;;Teate;;;;;;;;;x
 PROV943;Ibiza;Ibiza;Ibiza;;Ibiza;;;;;;;;;x
-PROV944;Western Mediterranean;Méditerranée Occidentale;Westliches Mittelmeer;;Mediterráneo del Oeste;;;;;;;;;x
+PROV944;Ouadene;Ouadene;Ouadene;;Ouadene;;;;;;;;;x
 PROV945;Golfo de Valencia;Golfe de Valence;Golf von Valencia;;Golfo de Valencia;;;;;;;;;x
 PROV946;Islas Baleares;Îles Baléares;Balearen;;Islas Baleares;;;;;;;;;x
 PROV947;Ponant;Ponant;Ponant;;Ponant;;;;;;;;;x
@@ -1055,3 +1055,4 @@ PROV1053;Gulf of Persia;Gulf of Persia;Gulf of Persia;Gulf of Persia;Gulf of Per
 PROV1054;Western Cyclades;Cyclades Occidentales;West-Kykladen;;Cícladas del oeste;;;;;;;;;x
 PROV1055;Päijänne;Päijänne;Päijänne;;Päijänne;;;;;;;;;x
 PROV1056;Irish Sea;Mer d'Irlande;Irische See;;Mar de Irlanda;;;;;;;;;x
+PROV1057;Western Mediterranean;Méditerranée Occidentale;Westliches Mittelmeer;;Mediterráneo del Oeste;;;;;;;;;x

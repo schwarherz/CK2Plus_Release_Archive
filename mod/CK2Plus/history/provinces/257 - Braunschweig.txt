@@ -4,7 +4,7 @@
 title = c_braunschweig
 
 # Settlements
-max_settlements = 4
+max_settlements = 5
 b_braunschweig = castle
 b_bielefeld = city
 b_paderborn = temple

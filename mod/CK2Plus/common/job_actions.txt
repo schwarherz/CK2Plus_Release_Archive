@@ -196,6 +196,16 @@ action_inquisition = {
 	attribute = learning
 	
 	trigger = {
+		NOT = {
+			FROM = {
+				religion_group = pagan_group
+				OR = {
+					has_landed_title = e_il-khanate
+					has_landed_title = e_golden_horde
+					has_landed_title = e_timurids
+				}				
+			}
+		}	
 		any_province_lord = {
 			OR = {
 				character = FROM

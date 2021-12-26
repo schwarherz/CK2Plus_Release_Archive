@@ -36,19 +36,19 @@ plot_decisions = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 2.0 }
+				NOT = { plot_power = 3.0 }
 				NOT = { num_of_plot_backers = 2 }
 				NOT = { relative_power_to_liege = 0.25 }
 			}			
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.66 }
+				NOT = { plot_power = 2.5 }
 				NOT = { num_of_plot_backers = 3 }
 				NOT = { relative_power_to_liege = 0.5 }
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.33 }
+				NOT = { plot_power = 2.0 }
 				NOT = { num_of_plot_backers = 4 }
 				NOT = { relative_power_to_liege = 0.75 }				
 			}			
@@ -92,19 +92,19 @@ plot_decisions = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 2.0 }
+				NOT = { plot_power = 3.0 }
 				NOT = { num_of_plot_backers = 2 }
 				NOT = { relative_power_to_liege = 0.25 }
 			}			
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.66 }
+				NOT = { plot_power = 2.5 }
 				NOT = { num_of_plot_backers = 3 }
 				NOT = { relative_power_to_liege = 0.5 }
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.33 }
+				NOT = { plot_power = 2.0 }
 				NOT = { num_of_plot_backers = 4 }
 				NOT = { relative_power_to_liege = 0.75 }				
 			}			
@@ -148,19 +148,19 @@ plot_decisions = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 2.0 }
+				NOT = { plot_power = 3.0 }
 				NOT = { num_of_plot_backers = 2 }
 				NOT = { relative_power_to_liege = 0.25 }
 			}			
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.66 }
+				NOT = { plot_power = 2.5 }
 				NOT = { num_of_plot_backers = 3 }
 				NOT = { relative_power_to_liege = 0.5 }
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.33 }
+				NOT = { plot_power = 2.0 }
 				NOT = { num_of_plot_backers = 4 }
 				NOT = { relative_power_to_liege = 0.75 }				
 			}			
@@ -204,19 +204,19 @@ plot_decisions = {
 			}	
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 2.0 }
+				NOT = { plot_power = 3.0 }
 				NOT = { num_of_plot_backers = 2 }
 				NOT = { relative_power_to_liege = 0.25 }
 			}			
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.66 }
+				NOT = { plot_power = 2.5 }
 				NOT = { num_of_plot_backers = 3 }
 				NOT = { relative_power_to_liege = 0.5 }
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.33 }
+				NOT = { plot_power = 2.0 }
 				NOT = { num_of_plot_backers = 4 }
 				NOT = { relative_power_to_liege = 0.75 }				
 			}			
@@ -260,19 +260,19 @@ plot_decisions = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 2.0 }
+				NOT = { plot_power = 3.0 }
 				NOT = { num_of_plot_backers = 2 }
 				NOT = { relative_power_to_liege = 0.25 }
 			}			
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.66 }
+				NOT = { plot_power = 2.5 }
 				NOT = { num_of_plot_backers = 3 }
 				NOT = { relative_power_to_liege = 0.5 }
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.33 }
+				NOT = { plot_power = 2.0 }
 				NOT = { num_of_plot_backers = 4 }
 				NOT = { relative_power_to_liege = 0.75 }				
 			}			
@@ -364,19 +364,19 @@ plot_decisions = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 2.0 }
+				NOT = { plot_power = 3.0 }
 				NOT = { num_of_plot_backers = 2 }
 				NOT = { relative_power_to_liege = 0.25 }
 			}			
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.66 }
+				NOT = { plot_power = 2.5 }
 				NOT = { num_of_plot_backers = 3 }
 				NOT = { relative_power_to_liege = 0.5 }
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.33 }
+				NOT = { plot_power = 2.0 }
 				NOT = { num_of_plot_backers = 4 }
 				NOT = { relative_power_to_liege = 0.75 }				
 			}			
@@ -468,19 +468,19 @@ plot_decisions = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 2.0 }
+				NOT = { plot_power = 3.0 }
 				NOT = { num_of_plot_backers = 2 }
 				NOT = { relative_power_to_liege = 0.25 }
 			}			
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.66 }
+				NOT = { plot_power = 2.5 }
 				NOT = { num_of_plot_backers = 3 }
 				NOT = { relative_power_to_liege = 0.5 }
 			}
 			modifier = {
 				factor = 0
-				NOT = { plot_power = 1.33 }
+				NOT = { plot_power = 2.0 }
 				NOT = { num_of_plot_backers = 4 }
 				NOT = { relative_power_to_liege = 0.75 }				
 			}			
@@ -495,7 +495,7 @@ plot_decisions = {
 			NOT = { has_character_flag = plot_kill_character_decision_50_taken }
 			NOT = { has_character_flag = plot_kill_character_decision_75_taken }
 			NOT = { has_character_flag = plot_kill_character_decision_100_taken }
-			NOT = { plot_power = 0.75 }
+			NOT = { plot_power = 1.0 }
 		}
 		allow = {
 			plot_power = 0.5
@@ -504,12 +504,12 @@ plot_decisions = {
 		effect = {
 			plot_target_char = {
 				random_list = {
-					30 = {
+					25 = {
 						ROOT = { set_character_flag = plot_murderer }
 						set_character_flag = was_murdered_by_plot
 						tooltip = { death = yes }
 					}
-					70 = {
+					75 = {
 						ROOT = { character_event = { id = 8220 days = 1 tooltip = "EVTTOOLTIPKILLCHARACTER" } }
 					}
 				}
@@ -548,10 +548,10 @@ plot_decisions = {
 			NOT = { has_character_flag = plot_kill_character_decision_50_taken }
 			NOT = { has_character_flag = plot_kill_character_decision_75_taken }
 			NOT = { has_character_flag = plot_kill_character_decision_100_taken }
-			NOT = { plot_power = 1.0 }
+			NOT = { plot_power = 2.0 }
 		}
 		allow = {
-			plot_power = 0.75
+			plot_power = 1.0
 			num_of_plot_backers = 1
 		}
 		effect = {
@@ -603,18 +603,18 @@ plot_decisions = {
 			NOT = { has_character_flag = plot_kill_character_decision_100_taken }
 		}
 		allow = {
-			plot_power = 1.0
+			plot_power = 2.0
 			num_of_plot_backers = 1
 		}
 		effect = {
 			plot_target_char = {
 				random_list = {
-					70 = {
+					75 = {
 						ROOT = { set_character_flag = plot_murderer }
 						set_character_flag = was_murdered_by_plot
 						tooltip = { death = yes }
 					}
-					30 = {
+					25 = {
 						ROOT = { character_event = { id = 8220 days = 1 tooltip = "EVTTOOLTIPKILLCHARACTER" } }
 					}
 				}
@@ -640,7 +640,7 @@ plot_decisions = {
 			NOT = { has_character_flag = plot_kill_spouse_decision_50_taken }
 			NOT = { has_character_flag = plot_kill_spouse_decision_75_taken }
 			NOT = { has_character_flag = plot_kill_spouse_decision_100_taken }
-			NOT = { plot_power = 0.75 }
+			NOT = { plot_power = 1.0 }
 		}
 		allow = {
 			plot_power = 0.5
@@ -649,13 +649,13 @@ plot_decisions = {
 		effect = {
 			plot_target_char = {
 				random_list = {
-					30 = {
+					25 = {
 						ROOT = { set_character_flag = plot_murderer }
 						set_character_flag = was_murdered_by_plot
 						set_character_flag = was_murdered_by_spouse
 						tooltip = { death = yes }
 					}
-					70 = {
+					75 = {
 						ROOT = { character_event = { id = 8200 days = 1 tooltip = "EVTTOOLTIPKILLSPOUSE" } }
 					}
 				}
@@ -694,10 +694,10 @@ plot_decisions = {
 			NOT = { has_character_flag = plot_kill_spouse_decision_50_taken }
 			NOT = { has_character_flag = plot_kill_spouse_decision_75_taken }
 			NOT = { has_character_flag = plot_kill_spouse_decision_100_taken }
-			NOT = { plot_power = 1.0 }
+			NOT = { plot_power = 2.0 }
 		}
 		allow = {
-			plot_power = 0.75
+			plot_power = 1.0
 			num_of_plot_backers = 1
 		}
 		effect = {
@@ -750,19 +750,19 @@ plot_decisions = {
 			NOT = { has_character_flag = plot_kill_spouse_decision_100_taken }
 		}
 		allow = {
-			plot_power = 1.0
+			plot_power = 2.0
 			num_of_plot_backers = 1
 		}
 		effect = {
 			plot_target_char = {
 				random_list = {
-					70 = {
+					75 = {
 						ROOT = { set_character_flag = plot_murderer }
 						set_character_flag = was_murdered_by_plot
 						set_character_flag = was_murdered_by_spouse
 						tooltip = { death = yes }
 					}
-					30 = {
+					25 = {
 						ROOT = { character_event = { id = 8200 days = 1 tooltip = "EVTTOOLTIPKILLSPOUSE" } }
 					}
 				}
@@ -788,7 +788,7 @@ plot_decisions = {
 			NOT = { has_character_flag = plot_kidnap_liege_decision_50_taken }
 			NOT = { has_character_flag = plot_kidnap_liege_decision_75_taken }
 			NOT = { has_character_flag = plot_kidnap_liege_decision_100_taken }
-			NOT = { plot_power = 0.75 }
+			NOT = { plot_power = 1.0 }
 		}
 		allow = {
 			plot_power = 0.5
@@ -797,10 +797,10 @@ plot_decisions = {
 		effect = {
 			plot_target_char = {
 				random_list = {
-					30 = {
+					25 = {
 						character_event = { id = 190045 tooltip = "EVTTOOLTIP190045" } #success
 					}
-					70 = {
+					75 = {
 						character_event = { id = 190046 tooltip = "EVTTOOLTIP190046" } #failure
 					}
 				}
@@ -839,10 +839,10 @@ plot_decisions = {
 			NOT = { has_character_flag = plot_kidnap_liege_decision_50_taken }
 			NOT = { has_character_flag = plot_kidnap_liege_decision_75_taken }
 			NOT = { has_character_flag = plot_kidnap_liege_decision_100_taken }
-			NOT = { plot_power = 1.0 }
+			NOT = { plot_power = 2.0 }
 		}
 		allow = {
-			plot_power = 0.75
+			plot_power = 1.0
 			num_of_plot_backers = 1
 		}
 		effect = {
@@ -892,16 +892,16 @@ plot_decisions = {
 			NOT = { has_character_flag = plot_kidnap_liege_decision_100_taken }			
 		}
 		allow = {
-			plot_power = 1.0
+			plot_power = 2.0
 			num_of_plot_backers = 1
 		}
 		effect = {
 			plot_target_char = {
 				random_list = {
-					70 = {
+					75 = {
 						character_event = { id = 190045 tooltip = "EVTTOOLTIP190045" } #success
 					}
-					30 = {
+					25 = {
 						character_event = { id = 190046 tooltip = "EVTTOOLTIP190046" } #failure
 					}
 				}
@@ -976,7 +976,7 @@ plot_decisions = {
 			}
 		}
 		allow = {
-			plot_power = 0.6
+			plot_power = 1.0
 			num_of_plot_backers = 1
 			plot_target_char = {
 				NOT = {
@@ -1018,7 +1018,7 @@ plot_decisions = {
 			NOT = { has_character_flag = plot_gain_vassal_title_decision_taken }
 		}
 		allow = {
-			plot_power = 0.8
+			plot_power = 1.0
 			num_of_plot_backers = 1
 			plot_target_char = {
 				NOT = {
@@ -1044,10 +1044,6 @@ plot_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { plot_power = 0.9 }
-			}
 		}
 	}
 }

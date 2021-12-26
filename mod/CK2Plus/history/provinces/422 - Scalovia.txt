@@ -4,7 +4,7 @@
 title = c_scalovia
 
 # Settlements
-max_settlements = 4
+max_settlements = 3
 b_ragnit = castle
 b_russ = city
 #b_jurgaiten = temple
@@ -21,4 +21,4 @@ religion = baltic_pagan
 
 # History
 1290.1.1 = { religion = catholic }
-1337.1.1 = { b_russ = city }
+#1337.1.1 = { b_russ = city }

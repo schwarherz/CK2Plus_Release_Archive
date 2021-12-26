@@ -1064,19 +1064,20 @@
 	}
 	1066.9.14 = {
 		wealth = 500
+		prestige = 600
 		raise_levies = {
 			location = 97 # Rouen
 			force_mult = 6.5
 		}
 	}
 	1066.10.14 = {
+		wealth = 100
+		prestige = 1000
 		raise_levies = {
 			dismiss = yes
 			location = 97 # Rouen
 			force_mult = 6.5
 		}
-	}
-	1066.12.26  = {
 		give_nickname = nick_the_conqueror
 	}
 	1087.9.9 = {

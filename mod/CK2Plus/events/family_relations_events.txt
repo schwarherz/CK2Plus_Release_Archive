@@ -1,0 +1,416 @@
+character_event = {
+	id = 1000046500
+	desc = "EVTDESC1000046500"
+	picture = "GFX_evt_family"
+	
+	trigger = {
+		age = 1 #for newborns this is handled in newevents.txt
+		NOT = {
+			has_character_flag = family_relations_initialised
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		
+		set_character_flag = family_relations_initialised
+		any_sibling = {
+			hidden_tooltip = {
+				reverse_remove_opinion = {
+					modifier = opinion_sibling
+					who = ROOT
+				}	
+			}
+			reverse_opinion = {
+				modifier = opinion_sibling
+				who = ROOT
+				years = 100
+			}
+			hidden_tooltip = {
+				remove_opinion = {
+					modifier = opinion_sibling
+					who = ROOT
+				}		
+			}
+			opinion = {
+				modifier = opinion_sibling
+				who = ROOT
+				years = 100
+			}				
+			any_child = {
+				if = {
+					limit = {
+						is_female = no
+					}
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_nephew
+							who = ROOT					
+						}
+					}
+					reverse_opinion = {
+						modifier = opinion_nephew
+						who = ROOT
+						years = 100
+					}
+				}
+				if = {
+					limit = {
+						is_female = yes
+					}
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_niece
+							who = ROOT					
+						}
+					}
+					reverse_opinion = {
+						modifier = opinion_niece
+						who = ROOT
+						years = 100
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { is_female = no }
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_uncle
+							who = ROOT					
+						}
+					}
+					opinion = {
+						modifier = opinion_uncle
+						who = ROOT
+						years = 100
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { is_female = yes }
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_aunt
+							who = ROOT					
+						}
+					}
+					opinion = {
+						modifier = opinion_aunt
+						who = ROOT
+						years = 100
+					}
+				}				
+			}
+		}
+		any_child = {
+			any_child = {
+				hidden_tooltip = {
+					reverse_remove_opinion = {
+						modifier = opinion_grandchild
+						who = ROOT
+					}	
+				}
+				reverse_opinion = {
+					modifier = opinion_grandchild
+					who = ROOT
+					years = 100
+				}
+				if = {
+					limit = {
+						ROOT = { is_female = no }
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_grandfather
+							who = ROOT					
+						}
+					}
+					opinion = {
+						modifier = opinion_grandfather
+						who = ROOT
+						years = 100
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { is_female = yes }
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_grandmother
+							who = ROOT					
+						}	
+					}
+					opinion = {
+						modifier = opinion_grandmother
+						who = ROOT
+						years = 100
+					}
+				}					
+			}
+		}
+		father = {
+			any_sibling = {
+				if = {
+					limit = {
+						is_female = no
+					}
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_uncle
+							who = ROOT
+						}	
+					}
+					reverse_opinion = {
+						modifier = opinion_uncle
+						who = ROOT
+						years = 100
+					}
+				}
+				if = {
+					limit = {
+						is_female = yes
+					}
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_aunt
+							who = ROOT
+						}	
+					}
+					reverse_opinion = {
+						modifier = opinion_aunt
+						who = ROOT
+						years = 100
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { is_female = no }
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_nephew
+							who = ROOT					
+						}
+					}
+					opinion = {
+						modifier = opinion_nephew
+						who = ROOT
+						years = 100
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { is_female = yes }
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_niece
+							who = ROOT					
+						}	
+					}
+					opinion = {
+						modifier = opinion_niece
+						who = ROOT
+						years = 100
+					}
+				}					
+			}
+			hidden_tooltip = {
+				reverse_remove_opinion = {
+					modifier = opinion_father
+					who = ROOT
+					years = 100
+				}	
+			}
+			reverse_opinion = {
+				modifier = opinion_father
+				who = ROOT
+				years = 100
+			}
+			father = {	
+				hidden_tooltip = {
+					reverse_remove_opinion = {
+						modifier = opinion_grandfather
+						who = ROOT
+					}	
+				}
+				reverse_opinion = {
+					modifier = opinion_grandfather
+					who = ROOT
+					years = 100
+				}
+				hidden_tooltip = {
+					remove_opinion = {
+						modifier = opinion_grandchild
+						who = ROOT
+					}
+				}
+				opinion = {
+					modifier = opinion_grandchild
+					who = ROOT
+					years = 100
+				}					
+			}
+			mother = {
+				hidden_tooltip = {
+					reverse_remove_opinion = {
+						modifier = opinion_grandmother
+						who = ROOT
+					}	
+				}
+				reverse_opinion = {
+					modifier = opinion_grandmother
+					who = ROOT
+					years = 100
+				}
+				hidden_tooltip = {
+					remove_opinion = {
+						modifier = opinion_grandchild
+						who = ROOT
+					}		
+				}
+				opinion = {
+					modifier = opinion_grandchild
+					who = ROOT
+					years = 100
+				}					
+			}
+		}
+
+		mother = {
+			any_sibling = {
+				if = {
+					limit = {
+						is_female = no
+					}
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_uncle
+							who = ROOT
+						}	
+					}
+					reverse_opinion = {
+						modifier = opinion_uncle
+						who = ROOT
+						years = 100
+					}
+				}
+				if = {
+					limit = {
+						is_female = yes
+					}
+					hidden_tooltip = {
+						reverse_remove_opinion = {
+							modifier = opinion_aunt
+							who = ROOT
+						}	
+					}
+					reverse_opinion = {
+						modifier = opinion_aunt
+						who = ROOT
+						years = 100
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { is_female = no }
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_nephew
+							who = ROOT					
+						}
+					}
+					opinion = {
+						modifier = opinion_nephew
+						who = ROOT
+						years = 100
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { is_female = yes }
+					}
+					hidden_tooltip = {
+						remove_opinion = {
+							modifier = opinion_niece
+							who = ROOT					
+						}	
+					}
+					opinion = {
+						modifier = opinion_niece
+						who = ROOT
+						years = 100
+					}
+				}					
+			}
+			hidden_tooltip = {
+				reverse_remove_opinion = {
+					modifier = opinion_mother
+					who = ROOT
+					years = 100
+				}	
+			}
+			reverse_opinion = {
+				modifier = opinion_mother
+				who = ROOT
+				years = 100
+			}
+			father = {	
+				hidden_tooltip = {
+					reverse_remove_opinion = {
+						modifier = opinion_grandfather
+						who = ROOT
+					}	
+				}
+				reverse_opinion = {
+					modifier = opinion_grandfather
+					who = ROOT
+					years = 100
+				}
+				hidden_tooltip = {
+					remove_opinion = {
+						modifier = opinion_grandchild
+						who = ROOT
+					}
+				}
+				opinion = {
+					modifier = opinion_grandchild
+					who = ROOT
+					years = 100
+				}					
+			}
+			mother = {
+				hidden_tooltip = {
+					reverse_remove_opinion = {
+						modifier = opinion_grandmother
+						who = ROOT
+					}	
+				}
+				reverse_opinion = {
+					modifier = opinion_grandmother
+					who = ROOT
+					years = 100
+				}
+				hidden_tooltip = {
+					remove_opinion = {
+						modifier = opinion_grandchild
+						who = ROOT
+					}		
+				}
+				opinion = {
+					modifier = opinion_grandchild
+					who = ROOT
+					years = 100
+				}					
+			}
+		}
+	}
+}
