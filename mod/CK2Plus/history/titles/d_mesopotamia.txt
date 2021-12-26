@@ -18,6 +18,10 @@
 {
 	holder = 144065
 }
+1077.1.1=
+{
+	de_jure_liege="k_muslim_armenia"
+}
 1091.1.1=
 {
 	holder = 144067

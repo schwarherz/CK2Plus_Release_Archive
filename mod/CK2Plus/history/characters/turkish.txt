@@ -3062,7 +3062,8 @@
 	diplomacy=8
 	intrigue=5
 	stewardship=7
-	health=10
+	health=7
+	piety=300
 	religion="sunni"
 	culture="turkish"
 	add_trait="just"
@@ -3096,14 +3097,31 @@
 		add_claim = c_oromieh
 		raise_levies = {
 			location = 659
-			force_mult = 1.5
+			force_mult = 1.25
 		}	
 	}
 	1067.5.22 = {
+		remove_claim = c_suenik
+		remove_claim = c_trapezous
+		remove_claim = c_vaspurakan
+		remove_claim = c_ani
+		remove_claim = c_karin
+		remove_claim = c_mesopotamia
+		remove_claim = c_koloneia
+		remove_claim = c_chaldea
+		remove_claim = c_melitene
+		remove_claim = c_theodosiopolis
+		remove_claim = c_kaisereia
+		remove_claim = c_galatia
+		remove_claim = c_tyana
+		remove_claim = d_tabriz
+		remove_claim = d_azerbaijan
+		remove_claim = c_tabriz
+		remove_claim = c_oromieh	
 		raise_levies = {
 			dismiss = yes
 			location = 659
-			force_mult = 1.5
+			force_mult = 1.25
 		}	
 	}	
 	1072.11.1={

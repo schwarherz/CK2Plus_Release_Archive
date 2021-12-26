@@ -179,3 +179,123 @@ placeholder = { #128
 	birth = yes
 	customizer = no
 }
+
+tyrant1 = { #129
+	monthly_character_prestige = -0.05
+	vassal_opinion = -5
+	customizer = no
+}
+
+tyrant2 = { #130
+	monthly_character_prestige = -0.10
+	vassal_opinion = -10
+	customizer = no
+}
+
+tyrant3 = { #131
+	monthly_character_prestige = -0.15
+	vassal_opinion = -15
+	customizer = no
+}
+
+tyrant4 = { #132
+	monthly_character_prestige = -0.20
+	vassal_opinion = -20
+	customizer = no
+}
+
+tyrant5 = { #133
+	monthly_character_prestige = -0.25
+	vassal_opinion = -25
+	customizer = no
+}
+
+tyrant6 = { #134
+	monthly_character_prestige = -0.30
+	vassal_opinion = -30
+	customizer = no
+}
+
+tyrant7 = { #135
+	monthly_character_prestige = -0.35
+	vassal_opinion = -35
+	customizer = no
+}
+
+tyrant8 = { #136
+	monthly_character_prestige = -0.40
+	vassal_opinion = -40
+	customizer = no
+}
+
+tyrant9 = { #137
+	monthly_character_prestige = -0.45
+	vassal_opinion = -45
+	customizer = no
+}
+
+tyrant10 = { #138
+	monthly_character_prestige = -0.50
+	vassal_opinion = -50
+	customizer = no
+}
+
+tyrant11 = { #139
+	monthly_character_prestige = -0.55
+	vassal_opinion = -55
+	customizer = no
+}
+
+tyrant12 = { #140
+	monthly_character_prestige = -0.60
+	vassal_opinion = -60
+	customizer = no
+}
+
+tyrant13 = { #131
+	monthly_character_prestige = -0.65
+	vassal_opinion = -65
+	customizer = no
+}
+
+tyrant14 = { #142
+	monthly_character_prestige = -0.70
+	vassal_opinion = -70
+	customizer = no
+}
+
+tyrant15 = { #143
+	monthly_character_prestige = -0.75
+	vassal_opinion = -75
+	customizer = no
+}
+
+tyrant16 = { #144
+	monthly_character_prestige = -0.80
+	vassal_opinion = -80
+	customizer = no
+}
+
+tyrant17 = { #145
+	monthly_character_prestige = -0.85
+	vassal_opinion = -85
+	customizer = no
+}
+
+tyrant18 = { #146
+	monthly_character_prestige = -0.90
+	vassal_opinion = -90
+	customizer = no
+}
+
+tyrant19 = { #147
+	monthly_character_prestige = -0.95
+	vassal_opinion = -95
+	customizer = no
+}
+
+tyrant20 = { #148
+	monthly_character_prestige = -1.0
+	vassal_opinion = -100
+	customizer = no
+}

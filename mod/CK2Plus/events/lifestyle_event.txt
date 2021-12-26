@@ -10,6 +10,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		prisoner = no
 		NOT = {
 			lifestyle_traits = 1
 			trait = incapable
@@ -118,6 +119,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		prisoner = no
 		NOT = {
 			lifestyle_traits = 1
 			trait = incapable
@@ -220,6 +222,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		prisoner = no
 		NOT = {
 			lifestyle_traits = 1
 			trait = incapable
@@ -331,6 +334,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		prisoner = no
 		NOT = {
 			lifestyle_traits = 1
 			trait = incapable
@@ -438,6 +442,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		prisoner = no
 		NOT = {
 			lifestyle_traits = 1
 			trait = incapable
@@ -545,6 +550,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		prisoner = no
 		NOT = {
 			lifestyle_traits = 1
 			trait = incapable
@@ -654,6 +660,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		prisoner = no
 		NOT = {
 			lifestyle_traits = 1
 			trait = incapable
@@ -768,6 +775,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		prisoner = no
 		NOT = {
 			lifestyle_traits = 1
 			trait = incapable
@@ -858,6 +866,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		prisoner = no
 		NOT = {
 			lifestyle_traits = 1
 			trait = incapable
@@ -949,6 +958,7 @@ character_event = {
 	capable_only = yes
 
 	trigger = {
+		prisoner = no
 		NOT = {
 			lifestyle_traits = 1
 			trait = incapable

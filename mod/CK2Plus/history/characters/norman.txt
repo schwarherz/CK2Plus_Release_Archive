@@ -416,7 +416,7 @@
 	diplomacy=4
 	intrigue=6
 	stewardship=6
-	health=10
+	health=7
 	piety=250
 	religion="catholic"
 	culture="norman"
@@ -429,6 +429,7 @@
 	mother=10008
 	1015.1.1 = {
 		birth="1015.1.1"
+		add_claim = c_dyrrachion
 	}
 	1051.1.1 = {
 		add_spouse=10003
@@ -745,7 +746,6 @@
 	stewardship=4
 	religion="catholic"
 	culture="norman"
-	add_trait="bastard"
 	add_trait="charitable"
 	add_trait="martial_cleric"
 	father=1128
@@ -1035,6 +1035,7 @@
 	diplomacy=7
 	intrigue=10
 	stewardship=6
+	prestige=500
 	religion="catholic"
 	culture="norman"
 	add_trait="ambitious"
@@ -1075,10 +1076,17 @@
 			location=97 # Rouen
 			force_mult=6.5
 		}
+		give_nickname=nick_the_conqueror
 	}
 	1066.12.25  = {
-		#remove_claim=k_england
-		give_nickname=nick_the_conqueror
+		add_claim = d_lancaster
+		add_claim = d_northumberland
+		add_claim = d_york
+		add_claim = c_york
+		add_claim = c_lancaster
+		add_claim = c_westmorland
+		add_claim = c_durham
+		add_claim = c_northumberland
 	}
 	1087.9.9 = {
 		death="1087.9.9"

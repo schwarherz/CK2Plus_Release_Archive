@@ -26,7 +26,6 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTB70000"
-		prestige = -100
 	}
 }	
 
@@ -68,6 +67,7 @@ character_event = {
 			}
 		}
 		clr_character_flag = epic_tournament
+		remove_character_modifier = holding_epic_tournament
 	}
 }
 
@@ -181,6 +181,7 @@ province_event = {
 	
 	option = {
 		name = "EVTOPTA70002"
+		remove_character_modifier = holding_epic_tournament
 		clr_province_flag = tournament_60_days
 		owner = {
 			clr_character_flag = tournament_begins
@@ -206,11 +207,11 @@ province_event = {
 				clr_character_flag = tournament_third_place
 				clr_character_flag = tournament_second_place
 				clr_character_flag = tournament_winner
-				reverse_opinion = {
+				opinion = {
 					modifier = opinion_tournament_participant
 					who = PREV
 					years = 2
-				}
+				}				
 				clr_character_flag = attending_tournament
 				clr_character_flag = attending_tournament_event
 			}
@@ -253,6 +254,11 @@ province_event = {
 					}
 				}
 				set_character_flag = tournament_has_ended
+				opinion = {
+					modifier = opinion_tournament_participant
+					who = PREV
+					years = 2
+				}				
 				reverse_opinion = {
 					modifier = opinion_tournament_participant
 					who = PREV
@@ -383,35 +389,83 @@ character_event = {
 	mean_time_to_happen = {
 		months = 1000
 		modifier = {
-			factor = 1.25
-			martial = 8
-		}
+			factor = 1.1
+			martial = 20
+		}		
 		modifier = {
-			factor = 1.25
-			martial = 10
-		}
+			factor = 1.1
+			martial = 19
+		}		
 		modifier = {
-			factor = 1.25
+			factor = 1.1
+			martial = 18
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 17
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 16
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 15
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 14
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 13
+		}		
+		modifier = {
+			factor = 1.1
 			martial = 12
 		}
 		modifier = {
-			factor = 1.25
-			martial = 14
+			factor = 1.1
+			martial = 11
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 8 }
+		}
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 7 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 6 }
+		}
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 5 }
 		}
 		modifier = {
-			factor = 0.75
-			NOT = { martial = 3 }
-		}
+			factor = 0.9
+			NOT = { martial = 4 }
+		}		
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 3 }
+		}		
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 2 }
+		}		
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 1 }
 		}
 		modifier = {
@@ -483,35 +537,83 @@ character_event = {
 	mean_time_to_happen = {
 		months = 800
 		modifier = {
-			factor = 1.25
-			martial = 8
-		}
+			factor = 1.1
+			martial = 20
+		}		
 		modifier = {
-			factor = 1.25
-			martial = 10
-		}
+			factor = 1.1
+			martial = 19
+		}		
 		modifier = {
-			factor = 1.25
+			factor = 1.1
+			martial = 18
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 17
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 16
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 15
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 14
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 13
+		}		
+		modifier = {
+			factor = 1.1
 			martial = 12
 		}
 		modifier = {
-			factor = 1.25
-			martial = 14
+			factor = 1.1
+			martial = 11
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 8 }
+		}
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 7 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 6 }
+		}
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 5 }
 		}
 		modifier = {
-			factor = 0.75
-			NOT = { martial = 3 }
-		}
+			factor = 0.9
+			NOT = { martial = 4 }
+		}		
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 3 }
+		}		
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 2 }
+		}		
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 1 }
 		}
 		modifier = {
@@ -585,35 +687,83 @@ character_event = {
 	mean_time_to_happen = {
 		months = 500
 		modifier = {
-			factor = 1.25
-			martial = 8
-		}
+			factor = 1.1
+			martial = 20
+		}		
 		modifier = {
-			factor = 1.25
-			martial = 10
-		}
+			factor = 1.1
+			martial = 19
+		}		
 		modifier = {
-			factor = 1.25
+			factor = 1.1
+			martial = 18
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 17
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 16
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 15
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 14
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 13
+		}		
+		modifier = {
+			factor = 1.1
 			martial = 12
 		}
 		modifier = {
-			factor = 1.25
-			martial = 14
+			factor = 1.1
+			martial = 11
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 8 }
+		}
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 7 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 6 }
+		}
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 5 }
 		}
 		modifier = {
-			factor = 0.75
-			NOT = { martial = 3 }
-		}
+			factor = 0.9
+			NOT = { martial = 4 }
+		}		
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 3 }
+		}		
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 2 }
+		}		
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 1 }
 		}
 		modifier = {
@@ -680,35 +830,83 @@ character_event = {
 	mean_time_to_happen = {
 		months = 250
 		modifier = {
-			factor = 1.25
-			martial = 8
-		}
+			factor = 1.1
+			martial = 20
+		}		
 		modifier = {
-			factor = 1.25
-			martial = 10
-		}
+			factor = 1.1
+			martial = 19
+		}		
 		modifier = {
-			factor = 1.25
+			factor = 1.1
+			martial = 18
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 17
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 16
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 15
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 14
+		}		
+		modifier = {
+			factor = 1.1
+			martial = 13
+		}		
+		modifier = {
+			factor = 1.1
 			martial = 12
 		}
 		modifier = {
-			factor = 1.25
-			martial = 14
+			factor = 1.1
+			martial = 11
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 9 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 8 }
+		}
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 7 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 6 }
+		}
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 5 }
 		}
 		modifier = {
-			factor = 0.75
-			NOT = { martial = 3 }
-		}
+			factor = 0.9
+			NOT = { martial = 4 }
+		}		
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			NOT = { martial = 3 }
+		}		
+		modifier = {
+			factor = 0.9
+			NOT = { martial = 2 }
+		}		
+		modifier = {
+			factor = 0.9
 			NOT = { martial = 1 }
 		}
 	}
@@ -755,35 +953,83 @@ character_event = {
 	mean_time_to_happen = {
 		months = 250
 		modifier = {
-			factor = 0.75
-			martial = 8
-		}
+			factor = 0.9
+			martial = 20
+		}		
 		modifier = {
-			factor = 0.75
-			martial = 10
-		}
+			factor = 0.9
+			martial = 19
+		}		
 		modifier = {
-			factor = 0.75
+			factor = 0.9
+			martial = 18
+		}		
+		modifier = {
+			factor = 0.9
+			martial = 17
+		}		
+		modifier = {
+			factor = 0.9
+			martial = 16
+		}		
+		modifier = {
+			factor = 0.9
+			martial = 15
+		}		
+		modifier = {
+			factor = 0.9
+			martial = 14
+		}		
+		modifier = {
+			factor = 0.9
+			martial = 13
+		}		
+		modifier = {
+			factor = 0.9
 			martial = 12
 		}
 		modifier = {
-			factor = 0.75
-			martial = 14
+			factor = 0.9
+			martial = 11
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.1
+			NOT = { martial = 10 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { martial = 9 }
+		}
+		modifier = {
+			factor = 1.1
+			NOT = { martial = 8 }
+		}
+		modifier = {
+			factor = 1.1
 			NOT = { martial = 7 }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.1
+			NOT = { martial = 6 }
+		}
+		modifier = {
+			factor = 1.1
 			NOT = { martial = 5 }
 		}
 		modifier = {
-			factor = 1.25
-			NOT = { martial = 3 }
-		}
+			factor = 1.1
+			NOT = { martial = 4 }
+		}		
 		modifier = {
-			factor = 1.25
+			factor = 1.1
+			NOT = { martial = 3 }
+		}		
+		modifier = {
+			factor = 1.1
+			NOT = { martial = 2 }
+		}		
+		modifier = {
+			factor = 1.1
 			NOT = { martial = 1 }
 		}
 	}
@@ -827,38 +1073,6 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 250
-		modifier = {
-			factor = 0.75
-			martial = 8
-		}
-		modifier = {
-			factor = 0.75
-			martial = 10
-		}
-		modifier = {
-			factor = 0.75
-			martial = 12
-		}
-		modifier = {
-			factor = 0.75
-			martial = 14
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 7 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 5 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 3 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 1 }
-		}
 	}
 
 	immediate = {
@@ -901,38 +1115,6 @@ character_event = {
 
 	mean_time_to_happen = {
 		months = 250
-		modifier = {
-			factor = 0.75
-			martial = 8
-		}
-		modifier = {
-			factor = 0.75
-			martial = 10
-		}
-		modifier = {
-			factor = 0.75
-			martial = 12
-		}
-		modifier = {
-			factor = 0.75
-			martial = 14
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 7 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 5 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 3 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 1 }
-		}
 	}
 
 	immediate = {
@@ -975,38 +1157,6 @@ character_event = {
 
 	mean_time_to_happen = {
 		months = 250
-		modifier = {
-			factor = 0.75
-			martial = 8
-		}
-		modifier = {
-			factor = 0.75
-			martial = 10
-		}
-		modifier = {
-			factor = 0.75
-			martial = 12
-		}
-		modifier = {
-			factor = 0.75
-			martial = 14
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 7 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 5 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 3 }
-		}
-		modifier = {
-			factor = 1.25
-			NOT = { martial = 1 }
-		}
 	}
 
 	immediate = {
@@ -1049,38 +1199,6 @@ character_event = {
 
 	mean_time_to_happen = {
 		months = 250
-		modifier = {
-			factor = 1.25
-			martial = 8
-		}
-		modifier = {
-			factor = 1.25
-			martial = 10
-		}
-		modifier = {
-			factor = 1.25
-			martial = 12
-		}
-		modifier = {
-			factor = 1.25
-			martial = 14
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 7 }
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 5 }
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 3 }
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 1 }
-		}
 	}
 	
 	immediate = {
@@ -1123,38 +1241,6 @@ character_event = {
 
 	mean_time_to_happen = {
 		months = 250
-		modifier = {
-			factor = 1.25
-			martial = 8
-		}
-		modifier = {
-			factor = 1.25
-			martial = 10
-		}
-		modifier = {
-			factor = 1.25
-			martial = 12
-		}
-		modifier = {
-			factor = 1.25
-			martial = 14
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 7 }
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 5 }
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 3 }
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 1 }
-		}
 	}
 	
 	immediate = {
@@ -1197,38 +1283,6 @@ character_event = {
 
 	mean_time_to_happen = {
 		months = 250
-		modifier = {
-			factor = 1.25
-			martial = 8
-		}
-		modifier = {
-			factor = 1.25
-			martial = 10
-		}
-		modifier = {
-			factor = 1.25
-			martial = 12
-		}
-		modifier = {
-			factor = 1.25
-			martial = 14
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 7 }
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 5 }
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 3 }
-		}
-		modifier = {
-			factor = 0.75
-			NOT = { martial = 1 }
-		}
 	}
 	
 	immediate = {
@@ -1274,19 +1328,55 @@ character_event = {
 		months = 10
 		modifier = {
 			factor = 0.75
-			martial = 8
-		}
+			martial = 20
+		}		
 		modifier = {
 			factor = 0.75
-			martial = 10
-		}
+			martial = 19
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 18
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 17
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 16
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 15
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 14
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 13
+		}		
 		modifier = {
 			factor = 0.75
 			martial = 12
 		}
 		modifier = {
 			factor = 0.75
-			martial = 14
+			martial = 11
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 9 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 8 }
 		}
 		modifier = {
 			factor = 1.25
@@ -1294,12 +1384,24 @@ character_event = {
 		}
 		modifier = {
 			factor = 1.25
+			NOT = { martial = 6 }
+		}
+		modifier = {
+			factor = 1.25
 			NOT = { martial = 5 }
 		}
 		modifier = {
 			factor = 1.25
+			NOT = { martial = 4 }
+		}		
+		modifier = {
+			factor = 1.25
 			NOT = { martial = 3 }
-		}
+		}		
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 2 }
+		}		
 		modifier = {
 			factor = 1.25
 			NOT = { martial = 1 }
@@ -1385,19 +1487,55 @@ character_event = {
 		months = 10
 		modifier = {
 			factor = 0.75
-			martial = 8
-		}
+			martial = 20
+		}		
 		modifier = {
 			factor = 0.75
-			martial = 10
-		}
+			martial = 19
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 18
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 17
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 16
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 15
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 14
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 13
+		}		
 		modifier = {
 			factor = 0.75
 			martial = 12
 		}
 		modifier = {
 			factor = 0.75
-			martial = 14
+			martial = 11
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 9 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 8 }
 		}
 		modifier = {
 			factor = 1.25
@@ -1405,12 +1543,24 @@ character_event = {
 		}
 		modifier = {
 			factor = 1.25
+			NOT = { martial = 6 }
+		}
+		modifier = {
+			factor = 1.25
 			NOT = { martial = 5 }
 		}
 		modifier = {
 			factor = 1.25
+			NOT = { martial = 4 }
+		}		
+		modifier = {
+			factor = 1.25
 			NOT = { martial = 3 }
-		}
+		}		
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 2 }
+		}		
 		modifier = {
 			factor = 1.25
 			NOT = { martial = 1 }
@@ -1496,19 +1646,55 @@ character_event = {
 		months = 10
 		modifier = {
 			factor = 0.75
-			martial = 8
-		}
+			martial = 20
+		}		
 		modifier = {
 			factor = 0.75
-			martial = 10
-		}
+			martial = 19
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 18
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 17
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 16
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 15
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 14
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 13
+		}		
 		modifier = {
 			factor = 0.75
 			martial = 12
 		}
 		modifier = {
 			factor = 0.75
-			martial = 14
+			martial = 11
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 10 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 9 }
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 8 }
 		}
 		modifier = {
 			factor = 1.25
@@ -1516,16 +1702,28 @@ character_event = {
 		}
 		modifier = {
 			factor = 1.25
+			NOT = { martial = 6 }
+		}
+		modifier = {
+			factor = 1.25
 			NOT = { martial = 5 }
 		}
 		modifier = {
 			factor = 1.25
+			NOT = { martial = 4 }
+		}		
+		modifier = {
+			factor = 1.25
 			NOT = { martial = 3 }
-		}
+		}		
+		modifier = {
+			factor = 1.25
+			NOT = { martial = 2 }
+		}		
 		modifier = {
 			factor = 1.25
 			NOT = { martial = 1 }
-		}
+		}		
 	}
 
 	immediate = {
@@ -1596,6 +1794,7 @@ character_event = {
 		NOT = { has_character_flag = attending_tournament_event }
 		NOT = {
 			trait = homosexual
+			trait = celibate
 		}
 	}
 
@@ -1606,35 +1805,19 @@ character_event = {
 			trait = drunkard
 		}
 		modifier = {
-			factor = 0.9
-			trait = excommunicated
-		}
-		modifier = {
-			factor = 0.9
-			trait = ugly
-		}
-		modifier = {
-			factor = 1.5
-			trait = fair
-		}
-		modifier = {
-			factor = 0.9
-			trait = celibate
-		}
-		modifier = {
-			factor = 0.9
+			factor = 0.75
 			trait = hedonist
 		}
 		modifier = {
-			factor = 0.5
-			trait = impaler
-		}
-		modifier = {
-			factor = 1.5
+			factor = 0.9
 			trait = lustful
 		}
 		modifier = {
-			factor = 0.9
+			factor = 2
+			trait = temperate
+		}		
+		modifier = {
+			factor = 3
 			trait = chaste
 		}
 		modifier = {
@@ -1680,27 +1863,23 @@ character_event = {
 	mean_time_to_happen = {
 		months = 800
 		modifier = {
-			factor = 1.5
-			trait = ugly
-		}
-		modifier = {
 			factor = 0.9
-			trait = fair
-		}
-		modifier = {
-			factor = 0.9
-			trait = hedonist
+			trait = drunkard
 		}
 		modifier = {
 			factor = 0.5
-			trait = impaler
+			trait = hedonist
 		}
 		modifier = {
-			factor = 0.9
+			factor = 0.75
 			trait = lustful
 		}
 		modifier = {
 			factor = 2
+			trait = temperate
+		}		
+		modifier = {
+			factor = 3
 			trait = chaste
 		}
 		modifier = {
@@ -1745,19 +1924,7 @@ character_event = {
 	mean_time_to_happen = {
 		months = 500
 		modifier = {
-			factor = 0.5
-			trait = depressed
-		}
-		modifier = {
-			factor = 1.5
-			trait = strong
-		}
-		modifier = {
-			factor = 0.9
-			trait = dwarf
-		}
-		modifier = {
-			factor = 0.9
+			factor = 0.75
 			trait = gluttonous
 		}
 		modifier = {
@@ -1769,8 +1936,8 @@ character_event = {
 			trait = temperate
 		}
 		modifier = {
-			factor = 0.9
-			trait = greedy
+			factor = 2
+			trait = chaste
 		}
 	}
 	
@@ -1802,7 +1969,12 @@ character_event = {
 			has_character_flag = tournament_has_ended
 		}
 		NOT = { has_character_flag = attending_tournament_event }
-		NOT = {
+		martial = 5
+		NOT = { 
+			trait = content
+			trait = kind
+			trait = craven
+			trait = weak
 			lifestyle_traits = 1
 		}
 	}
@@ -1810,36 +1982,32 @@ character_event = {
 	mean_time_to_happen = {
 		months = 500
 		modifier = {
-			factor = 0.9
+			factor = 0.75
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.75
 			trait = wroth
-		}
+		}	
 		modifier = {
-			factor = 1.5
-			trait = kind
-		}
-		modifier = {
-			factor = 0.9
-			trait = proud
-		}
-		modifier = {
-			factor = 1.5
-			trait = humble
-		}
-		modifier = {
-			factor = 1.5
-			trait = craven
-		}
-		modifier = {
-			factor = 0.9
+			factor = 0.75
 			trait = brave
+		}	
+		modifier = {
+			factor = 0.75
+			trait = strong
+		}		
+		modifier = {
+			factor = 0.75
+			martial = 10
 		}
 		modifier = {
-			factor = 1.5
-			trait = just
-		}
+			factor = 0.75
+			martial = 15
+		}		
 		modifier = {
-			factor = 0.9
-			trait = cruel
+			factor = 0.75
+			martial = 20
 		}
 	}
 
@@ -1853,7 +2021,7 @@ character_event = {
 	}
 }
 
-# Character gains diplomacy
+# Character gains intrigue
 character_event = {
 	id = 70027
 	title = "TOURNAMENTTITLE"
@@ -1928,11 +2096,11 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA70027"
-		change_diplomacy = 1
+		change_intrigue = 1
 	}
 }
 
-# Character loses diplomacy
+# Character loses intrigue
 character_event = {
 	id = 70028
 	title = "TOURNAMENTTITLE"
@@ -2007,7 +2175,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA70028"
-		change_diplomacy = -1
+		change_intrigue = -1
 	}
 }
 

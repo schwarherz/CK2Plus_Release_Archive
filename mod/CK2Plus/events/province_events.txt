@@ -26,16 +26,53 @@ character_event = {
 		capital_scope = {
 			NOT = { culture = ROOT }
 			religion = ROOT
-			OR = {
-				any_neighbor_province = { culture = ROOT }
-				NOT = { any_neighbor_province = { is_land = yes } }
-			}
+			NOT = {
+				AND = {
+					culture = saxon
+					ROOT = {
+						OR = {
+							culture = norman
+							culture = frankish
+							culture = occitan
+						}					
+					}
+				}
+			}			
+			NOT = {	
+				AND = {
+					kingdom = {
+						title = k_sicily
+					}
+					ROOT = {
+						OR = {
+							culture = greek
+							culture = maghreb_arabic
+							culture = norman
+						}	
+					}
+				}
+			}			
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 1000
 
+		modifier = {
+			factor = 2
+			capital_scope = {
+				NOT = { any_neighbor_province = { culture = ROOT } }
+				any_neighbor_province = { is_land = yes }
+			}
+			independent = no
+		}
+		modifier = {
+			factor = 2
+			capital_scope = {
+				NOT = { any_neighbor_province = { culture = ROOT } }
+				any_neighbor_province = { is_land = yes }
+			}
+		}
 		modifier = {
 			factor = 0.8
 			demesne_size = 2
@@ -177,12 +214,22 @@ character_event = {
 			trait = content
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.25
 			culture = turkish
+			capital_scope = {
+				kingdom = {
+					OR = {
+						title = k_byzantium
+						title = k_rum
+						title = k_armenia
+						title = k_muslim_armenia
+					}
+				}			
+			}
 			NOT = { year = 1150 }
 		}		
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			culture = mongol
 			NOT = { year = 1300 }
 		}
@@ -222,11 +269,37 @@ character_event = {
 				any_neighbor_province = { culture = ROOT }
 				NOT = { any_neighbor_province = { is_land = yes } }
 			}
+			NOT = {
+				AND = {
+					culture = saxon
+					ROOT = {
+						OR = {
+							culture = norman
+							culture = frankish
+							culture = occitan
+						}					
+					}
+				}
+			}			
+			NOT = {	
+				AND = {
+					kingdom = {
+						title = k_sicily
+					}
+					ROOT = {
+						OR = {
+							culture = greek
+							culture = maghreb_arabic
+							culture = norman
+						}	
+					}
+				}
+			}			
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 1000
 
 		modifier = {
 			factor = 0.8
@@ -390,6 +463,32 @@ character_event = {
 					any_neighbor_province = { culture = ROOT }
 					NOT = { any_neighbor_province = { is_land = yes } }
 				}
+				NOT = {
+					AND = {
+						culture = saxon
+						ROOT = {
+							OR = {
+								culture = norman
+								culture = frankish
+								culture = occitan
+							}					
+						}
+					}
+				}			
+				NOT = {	
+					AND = {
+						kingdom = {
+							title = k_sicily
+						}
+						ROOT = {
+							OR = {
+								culture = greek
+								culture = maghreb_arabic
+								culture = norman
+							}	
+						}
+					}
+				}				
 			}
 			culture = ROOT
 		}

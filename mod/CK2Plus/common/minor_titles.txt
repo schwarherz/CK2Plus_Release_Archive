@@ -19,7 +19,7 @@ title_regent = {
 	realm_in_name = yes
 	dignity = 0.9
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.02
 	
 	gain_effect = {
@@ -36,7 +36,7 @@ title_ruler_consort = {
 	realm_in_name = yes
 	spouse_context = yes
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.02
 	
 	gain_effect = {
@@ -53,7 +53,7 @@ title_queen_mother = {
 	show_as_title = yes
 	realm_in_name = yes
 	
-	monthly_salary = 0.05
+	monthly_salary = 0.025
 	monthly_prestige = 0.01
 	
 	gain_effect = {
@@ -69,7 +69,7 @@ title_prince = {
 	show_as_title = yes
 	realm_in_name = yes
 	
-	monthly_salary = 0.05
+	monthly_salary = 0.025
 	monthly_prestige = 0.01
 	
 	gain_effect = {
@@ -85,7 +85,7 @@ title_courtesan = {
 	dignity = 0.05
 	realm_in_name = yes
 	
-	monthly_salary = 0.02
+	monthly_salary = 0.01
 	
 	gain_effect = {
 	}
@@ -159,7 +159,6 @@ title_legitimize_bastard = {
 	message = no
 }
 
-
 title_grant_independence = {
 	grant_limit = 100
 	opinion_effect = -100
@@ -228,6 +227,19 @@ title_revoke_minor_title = {
 	}
 	
 	gain_effect = {
+		if = {
+			limit = {
+				has_minor_title = title_concubine
+			}
+			remove_opinion = {
+				who = FROM
+				modifier = opinion_lover
+			}
+			reverse_remove_opinion = {
+				who = FROM
+				modifier = opinion_lover
+			}		
+		}
 		remove_title = title_high_almoner
 		remove_title = title_master_of_the_horse
 		remove_title = title_master_of_the_hunt
@@ -275,7 +287,7 @@ title_concubine = {
 	opinion_effect = 10
 	realm_in_name = yes
 	
-	monthly_salary = 0.05
+	monthly_salary = 0.025
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -322,7 +334,7 @@ title_court_jester = {
 	grant_limit = 1
 	opinion_effect = -10
 	
-	monthly_salary = 0.05
+	monthly_salary = 0.025
 	monthly_prestige = -0.01
 	
 	allow = {
@@ -365,7 +377,7 @@ title_keeper_of_swans = {
 	grant_limit = 1
 	opinion_effect = 10
 	
-	monthly_salary = 0.025
+	monthly_salary = 0.01
 	monthly_prestige = 0.005
 	
 	allow = {
@@ -408,7 +420,7 @@ title_master_of_the_horse = {
 	grant_limit = 1
 	opinion_effect = 10
 	
-	monthly_salary = 0.025
+	monthly_salary = 0.01
 	monthly_prestige = 0.005
 	
 	allow = {
@@ -447,7 +459,7 @@ title_master_of_the_hunt = {
 	grant_limit = 1
 	opinion_effect = 10
 	
-	monthly_salary = 0.025
+	monthly_salary = 0.01
 	monthly_prestige = 0.005
 	
 	allow = {
@@ -485,7 +497,7 @@ title_high_almoner = {
 	grant_limit = 1
 	opinion_effect = 10
 	
-	monthly_salary = 0.025
+	monthly_salary = 0.01
 	monthly_prestige = 0.005
 	
 	allow = {
@@ -522,7 +534,7 @@ title_cupbearer = {
 	grant_limit = 1
 	opinion_effect = 15
 	
-	monthly_salary = 0.05
+	monthly_salary = 0.025
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -560,7 +572,7 @@ title_seneschal = {
 	grant_limit = 1
 	opinion_effect = 15
 	
-	monthly_salary = 0.05
+	monthly_salary = 0.025
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -620,7 +632,7 @@ title_despot = {
 	grant_limit = 1
 	opinion_effect = 25
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -657,7 +669,7 @@ title_sebastokrator = {
 	grant_limit = 1
 	opinion_effect = 20
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -693,7 +705,7 @@ title_caesar = {
 	grant_limit = 1
 	opinion_effect = 15
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -728,7 +740,7 @@ title_kouropalates = {
 	grant_limit = 1
 	opinion_effect = 15
 	
-	monthly_salary = 0.075
+	monthly_salary = 0.05
 	monthly_prestige = 0.075
 	
 	allow = {

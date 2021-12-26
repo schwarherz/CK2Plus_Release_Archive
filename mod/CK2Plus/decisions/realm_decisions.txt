@@ -11,22 +11,26 @@ decisions = {
 				tier = king
 				tier = emperor 
 			}
-			NOT = { has_character_modifier = holding_large_feast }
-			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }
-			NOT = { has_character_flag = holding_epic_tournament }	
 		}
 		allow = {
 			war = no
 			age = 16
 			prestige = 500
 			wealth = 200
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }	
+			NOT = { has_character_modifier = holding_epic_tournament }
 		}
 		effect = {
 			set_character_flag = epic_tournament
 			set_character_flag = holding_epic_tournament
 			wealth = -200
 			prestige = 100
+			add_character_modifier = {
+				name = "holding_epic_tournament"
+				duration = -1
+			}
 			character_event = { id = 70033 tooltip = "tournament_invite" }
 			hidden_tooltip = {
 				character_event = { id = 70001 days = 60 } # Tournament start
@@ -35,7 +39,7 @@ decisions = {
 						is_feudal = yes
 						NOT = { has_job_title = job_spiritual }
 						age = 16
-						NOT = { trait = incapable }
+						NOT = { health_traits = 1 }
 						prisoner = no	
 						NOT = { is_female = yes	}
 					}
@@ -63,6 +67,7 @@ decisions = {
 			age = 16
 			demesne_size = 1
 			NOT = { has_character_flag = ask_for_indulgence }
+			NOT = { trait = excommunicated }
 		}
 		allow = {
 			NOT = { has_character_modifier = indulgence_timer }

@@ -13,7 +13,7 @@ de_jure_laws = {
 			NOT = { has_law = investiture_law_0 }
 			holder_scope = { religion = catholic }
 		}
-		allow = {
+		allow = {	
 			OR = {
 				tier = EMPEROR
 				NOT = { empire = { holder_scope = { OR = { character = ROOT is_liege_of = ROOT } } } }
@@ -51,7 +51,7 @@ de_jure_laws = {
 			NOT = { has_law = investiture_law_1 }
 			holder_scope = { religion = catholic }
 		}
-		allow = {
+		allow = {	
 			NOT = { title = e_papal_state }
 			OR = {
 				tier = EMPEROR
@@ -135,7 +135,7 @@ de_jure_laws = {
 				title = e_byzantium
 			}
 		}
-		allow = {
+		allow = {	
 			OR = {
 				tier = EMPEROR
 				NOT = { empire = { holder_scope = { OR = { character = ROOT is_liege_of = ROOT } } } }
@@ -177,7 +177,7 @@ de_jure_laws = {
 		potential = {
 			NOT = { has_law = centralization_0 }
 		}
-		allow = {
+		allow = {	
 			OR = {
 				tier = EMPEROR
 				NOT = { empire = { holder_scope = { OR = { character = ROOT is_liege_of = ROOT } } } }
@@ -220,7 +220,7 @@ de_jure_laws = {
 		potential = {
 			NOT = { has_law = centralization_1 }
 		}
-		allow = {
+		allow = {	
 			OR = {
 				tier = EMPEROR
 				NOT = { empire = { holder_scope = { OR = { character = ROOT is_liege_of = ROOT } } } }
@@ -323,7 +323,7 @@ de_jure_laws = {
 		potential = {
 			NOT = { has_law = centralization_2 }
 		}
-		allow = {
+		allow = {	
 			OR = {
 				tier = EMPEROR
 				NOT = { empire = { holder_scope = { OR = { character = ROOT is_liege_of = ROOT } } } }
@@ -425,7 +425,7 @@ de_jure_laws = {
 		potential = {
 			NOT = { has_law = centralization_3 }
 		}
-		allow = {
+		allow = {	
 			OR = {
 				tier = EMPEROR
 				NOT = { empire = { holder_scope = { OR = { character = ROOT is_liege_of = ROOT } } } }
@@ -527,7 +527,7 @@ de_jure_laws = {
 		potential = {
 			NOT = { has_law = centralization_4 }
 		}
-		allow = {
+		allow = {	
 			OR = {
 				tier = EMPEROR
 				NOT = { empire = { holder_scope = { OR = { character = ROOT is_liege_of = ROOT } } } }

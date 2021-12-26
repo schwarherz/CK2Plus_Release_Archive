@@ -8,6 +8,10 @@
 }
 #Seljuks
 1077.1.1=
+{
+	de_jure_liege="k_rum"
+}
+1077.1.1=
 	
 {
 	liege="k_rum"
@@ -96,7 +100,7 @@
 1302.1.1=
 {
 	holder=476501
-	liege="k_ottoman"
+	liege="e_ottoman"
 }
 1324.1.1=
 {

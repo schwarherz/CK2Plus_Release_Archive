@@ -1,0 +1,68 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x;;;
+west_african;West African;West African;West-Afrikanisch;West African;West African;;;;;;;x;;;;;
+pommeranian;Wend;Wende;Wendisch;Wend;Wend;;;;;;;x;;;;;
+bohemian;Czech;Tchèque;Tschechisch;Czech;Czech;;;;;;;x;;;;;
+nubian;Nubian;Nubien;Nubisch;Nubian;Nubian;;;;;;;x;;;;;
+somali;Somali;Somali;Somalisch;Somali;Somali;;;;;;;x;;;;;
+cornish;Cornish;Cornouaillais;Kornisch;Cornish;Cornish;;;;;;;x;;;;;
+judaism_group;Jewish;Juif;Judentum;;Jewish;;;;;;;;;x;;;
+judaism;Jewish;Juif;Jüdisch;;Jewish;;;;;;;;;x;;;
+baron_mongol;Taishi;Taishi;Taishi;;Taishi mongol;;;;;;;;;x
+barony_of_mongol;Taishi of;Taishi de;Taishi von;;Taishi de;;;;;;;;;x
+count_mongol;Chief;Chef;Häuptling;;Mandatario;;;;;;;;;x
+county_of_mongol;Chiefdom of;Chefferie de;Häuptlingdom von;;Cacicazgo de;;;;;;;;;x
+duke_mongol;High Chief;Grand chef;Großhäuptling;;Alto mandatario;;;;;;;;;x
+duke_female_mongol;High Chief;Grand chef;Großhäuptling;;Alto mandatario;;;;;;;;;x
+duchy_of_norse_pagan;Jarldom of;Jarldom of;Jarldom of;;Jarldom of;;;;;;;;;x
+county_of_pagan_group;Chiefdom of;Chefferie de;Häuptlingdom von;;Cacicazgo de;;;;;;;;;x
+duchy_of_pagan_group;High Chiefdom of;Grande chefferie de;Großhäuptlingstum von;;Alto Cacicazgo de;;;;;;;;;x
+duchy_of_mongol;High Chiefdom of;Grande chefferie de;Großhäuptlingstum von;;Alto Cacicazgo de;;;;;;;;;x
+duke_pagan_group;High Chief;Grand chef;Großhäuptling;;Alto mandatario;;;;;;;;;x
+duke_norse_pagan;Jarl;Jarl;Jarl;;Jarl;;;;;;;;;x
+count_pagan_group;Chief;Chef;Häuptling;;Mandatario;;;;;;;;;x
+baron_pagan_group;Hetman;Hetman;Hetman;;Hetman;;;;;;;;;x
+baron_norse_pagan;Lord;Seigneur;Fürst;;Señor;;;;;;;;;x
+empire_of_turkish;Empire of;Empire de;Reich von;Empire of;Empire of;;;;;;;x;;;;;
+baron_turkish;Timariot;Timariote;Timariot;;Timariots;;;;;;;;;x
+barony_of_turkish;Timar of;Timar de;Timar von;;Timariot de;;;;;;;;;x
+count_turkish;Bey;Bey;Bey;;Gobernador turco;;;;;;;;;x
+county_of_turkish;Beylik of;Beylik de;Beylik von;;Beylicato de;;;;;;;;;x
+duke_turkish;Beylerbey;Beylerbey;Beylerbey;;Gobernador de gobernadores;;;;;;;;;x
+duchy_of_turkish;Beylerbeylik of;Beylerbeylik de;Beylerbeylik von;;Beylicato de Beylicatos de;;;;;;;;;x
+emperor_altaic;Khagan;Khagan;Khagan;;Gran Kan;;;;;;;;;x
+emperor_female_altaic;Khatun;Khatoun;Khatun;;Khatun;;;;;;;;;x
+empire_of_altaic;Khaganate of;Khaganat de;Großkhanat von;;Kaganato de;;;;;;;;;x
+king_altaic;Khan;Khan;Khan;;Kan;;;;;;;;;x
+king_female_altaic;Khanum;Khanoum;Khanum;;Khanum;;;;;;;;;x
+kingdom_of_altaic;Khanate of;Khanat de;Khanat von;;Kanato de;;;;;;;;;x
+emperor_german;Kaiser;Kaiser;Kaiser;;Káiser;;;;;;;;;x
+emperor_female_german;Kaiserin;Kaiserin;Kaiserin;;Emperatriz;;;;;;;;;x
+duke_greek;Doux;Doux;Doux;;Duque;;;;;;;;;x
+king_greek;Despot;Despote;Despot;;Déspota;;;;;;;;;x
+emperor_greek;Basileus;Basileus;Basileus;;Basileus;;;;;;;;;x
+duke_russian;Grand Prince;Grand Prince;Grand Prince;;Grand Prince;;;;;;;;;x
+duke_female_russian;Grand Princess;Grand Princess;Grand Princess;;Grand Princess;;;;;;;;;x
+duchy_of_russian;Principality of;Principality of;Principality of;;Principality of;;;;;;;;;x
+emperor_russian;Tsar;Tsar;Zar;;Zar;;;;;;;;;x
+emperor_female_russian;Tsaritsa;Tsarine;Zarin;;Zarina;;;;;;;;;x
+king_turkish;Sultan;Sultan;Sultan;;Sultán;;;;;;;;;x
+kingdom_of_turkish;Sultanate of;Sultanat de;Sultanat von;;Sultanato de;;;;;;;;;x
+emperor_turkish;Padishah;Padishah;Padishah;;Emperador Padishah;;;;;;;;;x
+king_iranian_group;Shah;Shah;Schah;;Shah;;;;;;;;;x
+kingdom_of_iranian_group;Shahdom of;Shahdom of;Schahreich von;;Shahdom of;;;;;;;;;x
+iranian_group;Iranian;iranien;Iranisch;;Iraní;;;;;;;;;x
+emperor_iranian_group;Shahanshah;Shahanshah;Schahanschah;;Rey de reyes;;;;;;;;;x
+arabic_group;Arabic;arabe;Arabisch;;Arábiga;;;;;;;;;x
+baron_muslim;Wâli;Wâli;Wâli;;Valí;;;;;;;;;x;;;
+barony_of_muslim;Wilayah of;Wilaya de;Wilayah von;;Vilayato de;;;;;;;;;x;;;
+count_muslim;Sheikh;Cheikh;Scheich;;Jeque;;;;;;;;;x;;;
+county_of_muslim;Sheikhdom of;Cheikat de;Scheichtum von;;Dominio del Jeque;;;;;;;;;x;;;
+temple_barony_of_muslim;Masjid of;Cheikat de;Scheichtum von;;Dominio del jeque de;;;;;;;;;x;;;
+arrange_marriages;Arrange Courtier Marriages;Arranger des mariages de courtisans;Ordnen Sie Höfling-Ehen an;;Arrange Courtier Marriages;;;;;;;;;x;;;
+arrange_marriages_desc;Wed all your unmarried courtiers in a grand ceremony.;Marier tous vos courtisans célibataires lors d'une grande cérémonie.;Verheiraten Sie alle Ihre unverheirateten Höflinge in einer großartigen Zeremonie.;;Wed all your unmarried courtiers in a grand ceremony.;;;;;;;;;x;;;
+duke_muslim;Emir;Émir;Emir;;Emir;;;;;;;;;x;;;
+duke_muslim_female;Emira;Émira;Emirin;;Emira;;;;;;;;;x;;;
+duchy_of_muslim;Emirate of;Émirat de;Emirat von;;Emirato de;;;;;;;;;x;;;
+king_muslim;Sultan;Sultan;Sultan;;Sultán;;;;;;;;;x;;;
+king_muslim_female;Sultana;Sultane;Sultanin;;Sultana;;;;;;;;;x;;;
+kingdom_of_muslim;Sultanate of;Sultanat de;Sultanat von;;Sultanato de;;;;;;;;;x;;;

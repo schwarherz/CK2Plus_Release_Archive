@@ -46,6 +46,26 @@ character_event = {
 		months = 360
 
 		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
@@ -224,6 +244,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 240
 
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
 		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
@@ -474,7 +514,7 @@ character_event = {
 # 20214: Increased revolt risk
 character_event = {
 	id = 20214
-	desc = "EVTDESC200214"
+	desc = "EVTDESC20214"
 	picture = GFX_evt_peasants
 
 	only_men = yes
@@ -496,6 +536,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 240
 
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
 		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
@@ -763,6 +823,26 @@ character_event = {
 		months = 480
 
 		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
@@ -958,6 +1038,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 120
 
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
 		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
@@ -1251,6 +1351,31 @@ character_event = {
 		months = 480
 
 		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
@@ -1521,6 +1646,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 240
 
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
 		modifier = {
 			factor = 3.0
 			liege = { ai = yes }

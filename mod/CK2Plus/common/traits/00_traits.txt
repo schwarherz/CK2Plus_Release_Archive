@@ -197,30 +197,23 @@ lunatic = { #23
 	is_health = yes
 	# Highly event driven
 	
-	diplomacy = -8
-	stewardship = -8
-	martial = -8
-	intrigue = -8	
+	diplomacy = -10
 	health = -1
 	fertility = -0.2
 	
 	vassal_opinion = -20
 	sex_appeal_opinion = -20
-	
 	ai_rationality = -100
 	customizer = no
 }
 possessed = { #24
 	is_health = yes
 	
-	diplomacy = -4
-	stewardship = -4
-	martial = -4
-	intrigue = -4	
+	diplomacy = -5
 	fertility = -0.1
 	
-	vassal_opinion = -30
-	sex_appeal_opinion = -30
+	vassal_opinion = -10
+	sex_appeal_opinion = -10
 	ai_rationality = -50
 	
 	# Highly event driven
@@ -684,6 +677,7 @@ weak = { #62
 
 celibate = { #63
 	lifestyle = yes
+	customizer = no
 	
 	opposites =  {
 		hedonist
@@ -699,6 +693,7 @@ celibate = { #63
 }
 hedonist = { #64
 	lifestyle = yes
+	customizer = no
 	
 	opposites =  {
 		celibate
@@ -716,6 +711,7 @@ hedonist = { #64
 }
 scholar = { #65
 	lifestyle = yes
+	customizer = no
 	
 	learning = 2
 	
@@ -723,6 +719,7 @@ scholar = { #65
 }
 gardener = { #66
 	lifestyle = yes
+	customizer = no
 	
 	stewardship = 2
 	
@@ -730,6 +727,7 @@ gardener = { #66
 }
 mystic = { #67
 	lifestyle = yes
+	customizer = no
 	
 	intrigue = 2
 	
@@ -737,6 +735,7 @@ mystic = { #67
 }
 impaler = { #68
 	lifestyle = yes
+	customizer = no
 	
 	martial = 1
 	intrigue = 1
@@ -752,6 +751,7 @@ impaler = { #68
 }
 duelist = { #69
 	lifestyle = yes
+	customizer = no
 	
 	martial = 2
 	
@@ -759,6 +759,7 @@ duelist = { #69
 }
 hunter = { #70
 	lifestyle = yes
+	customizer = no
 	
 	martial = 1
 	monthly_character_prestige = 0.25
@@ -767,6 +768,7 @@ hunter = { #70
 }
 poet = { #71
 	lifestyle = yes
+	customizer = no
 	
 	diplomacy = 1
 	sex_appeal_opinion = 10
@@ -775,6 +777,7 @@ poet = { #71
 }
 falconer = { #72
 	lifestyle = yes
+	customizer = no
 	
 	diplomacy = 2
 	
@@ -1136,7 +1139,7 @@ arbitrary = { #95
 		just
 	}
 	
-	intrigue = 1
+	intrigue = 2
 	stewardship = -2
 	learning = -1
 	

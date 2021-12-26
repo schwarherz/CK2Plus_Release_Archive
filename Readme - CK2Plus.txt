@@ -1,16 +1,16 @@
 CK2Plus for Crusader Kings 2
 Author: Martin "Wiz" Anward
 Contact: m(dot)anward(at)live(dot)se
-Credits: themendios (Performance Tweaks), zeress (Flavorful Titular Titles), Viscardus (Cornish Characters), Cetan (Expanded Character Tooltips), Crackdtoothgrin (Crackdtoothgrin's Graphical Goodies), Spartan_One (Mod File Hosting), Peuri (Little Portait Mod), Trovador and thrashing mad (Enhanced Portraits Mod), EmperorTojo (Icelandic Culture Mod), Ijtzoi (All the Way to Timbuktu), Syren (Syren's Nicknames Mod), mate0815 (Better Looking Characters integration), Shaytana (Better Looking Characters), Werther (French Localisation), EOOQE (German Localisation), Keanon (Patrum Scuta), Zaldax (An Offer You Can't Refuse), Velho e Bom Joe (Culturally Different Cities), Icecream Jones (flags, new countries), Strudel Man (many tweaks and additions), NoNotTheMindProbe (russian kingdoms), pothkan (CK2 heraldy mod), Keanon (Patrum Scuta), The_Chancellor (Council Reshuffling mod), avee (Family Relations Mod, Better Rebels mod, Death Causes mod), Sniper4625 (misc graphics), Van Diemen (HRE Revised Mod), riso (Treaty of Nymphaeum scenario), Six Gun South (PMM)
+Credits: Maestro Ugo (Lupus Agnum), Elryck and Arko (Mercator Mod), zeress (Flavorful Titular Titles), Viscardus (Cornish Characters), Cetan (Expanded Character Tooltips), Crackdtoothgrin (Crackdtoothgrin's Graphical Goodies), Spartan_One (Mod File Hosting), Peuri (Little Portait Mod), Trovador and thrashing mad (Enhanced Portraits Mod), EmperorTojo (Icelandic Culture Mod), Ijtzoi (All the Way to Timbuktu), Syren (Syren's Nicknames Mod), mate0815 (Better Looking Characters integration), Shaytana (Better Looking Characters), Werther (French Localisation), EOOQE (German Localisation), Keanon (Patrum Scuta), Zaldax (An Offer You Can't Refuse), Velho e Bom Joe (Culturally Different Cities), Icecream Jones (flags, new countries), Strudel Man (many tweaks and additions), NoNotTheMindProbe (russian kingdoms), pothkan (CK2 heraldy mod), The_Chancellor (Council Reshuffling mod), avee (Family Relations Mod, Better Rebels mod, Death Causes mod), Sniper4625 (misc graphics), Van Diemen (HRE Revised Mod), riso (Treaty of Nymphaeum scenario), Six Gun South (PMM)
 
 ****************
 * Installation *
 ****************
 1) If you have an older version of the mod installed, go into the Crusader Kings II mod folder and delete the 'CK2Plus' folder and .mod file.
-2) Unzip to your Crusader Kings II folder. IMPORTANT: The mod files should go into your GAME INSTALLATION folder, NOT your My Documents/Paradox Interactive folder.
+2) Unzip to your Crusader Kings II folder. IMPORTANT: The mod files should go into your GAME INSTALLATION folder, NOT your My Documents/Paradox Interactive folder. For Steam users, the game directory is found in the steam folder, under steamapps/common/crusader kings II.
 3) If you have the Steam version of CK2, you may need to unzip to your My Documents/Paradox Interactive/Crusader Kings II folder in ADDITION to unzipping to your game directory as outlined in step 2.
 4) Unzip any Hotfixes to your Crusader Kings II folder (same place you installed the mod in step 2).
-5) Start the CK2 launcher and check 'CK2Plus (MAIN)' in the list of mods.
+5) Start the CK2 launcher and check 'CK2+ X.XX' in the list of mods.
 6) Check any optional modules you want to use along with CK2Plus.
 7) Hit play.
 
@@ -23,14 +23,17 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 * Features *
 ************
 - More provinces and sea zones.
+- Martial and Learning are no longer useless stats for rulers, as the former will affect the size of your levies and the latter determines your chance of spreading your culture and religion to your provinces.
+- Reduced fertility/health and altered attributes for old characters: 80-year olds will no longer have a new child every year while leading their armies from the front, and characters that live to very old ages are suitably rare.
 - New tyranny system that assigns reasonable but noticeable penalties for imprisoning, banishing and executing characters and allows for more leeway in dealing with traitors.
 - New education system. Children's attributes now matter in how well they take to an education (so a high martial child will do better in a martial education), and characters will not simply always end up having the exact same education trait as their tutor.
 - Crusades can result in independent Crusader states with a special truce that makes them able to survive their first few years. A Crusade for Jerusalem will now much more closely mirror the historical First Crusade with an independent Jerusalem being created.
 - Civil wars are more dangerous: A revolting vassal that is trying to depose you will ask all other vassals to join him, which can result in a major revolt among vassals that like him better than they like you.
-- Better title distribution AI: The AI will no longer give all its Duke titles to a single ruler or put Duchies in oddly misplaced locations when a better option exists.
+- Councillor opinions of you matter: A councillor that really likes you will work harder and do better at his job, while one that dislikes you will perform worse.
 - Holy Wars cost piety to fight, so that the general rate of expansion in Iberia and the Middle East is slowed. Overseas Holy Wars cost a large amount of piety, and the AI will largely avoid fighting them. Crusades/Jihads are not affected.
 - More lethal diseases and battles, making medieval life the violent and uncertain existance it should be.
 - Many more Empires and Kingdoms to create.
+- Dynamic Kingdom creation system where de jure Kingdoms are createable by anyone, but certain Kingdoms will change their names depending on which religion is holding them.
 - Rebalanced combat where the martial score of the generals is an important factor.
 - More mercenaries and holy orders.
 - More cultures.
@@ -48,8 +51,6 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 - More nuanced way of handling prisoners: A count should not be able to execute the child of a king and expect to get away with it scot free.
 - More dynamic civil wars: Vassals without high loyalty that demand titles or favors to stay loyal, while loyalist vassals give you additional support.
 - Vassals with whom you have marriage alliances become more loyal. Marry your way into a stable realm.
-- Rebalance province values to better match history.
-- Balanced heresies.
 - Even more ambitions and plots.
 - More character events, especially everyday life events.
 
@@ -58,7 +59,6 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 ********************
 - 'BLC' (Better Looking Characters) adds new and more historical portaits, clothes, hairstyles, beards and so on for the characters in the game. Not recommended for users with less than 2gb of RAM. BLC requires the Mongol Face Pack DLC to work correctly.
 - 'No Time Limit' allows for play up to the year 100000.
-- 'No New Empires' disables creation of all of the new Empire-level titles. Note that they will still show up on empire mapmode but cannot possibly be held by a character with this mode on.
 
 ******************
 * Known Problems *
@@ -68,8 +68,56 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 *************
 * Changelog *
 *************
+1.15:
+- Now compatible with version 1.05g.
+- Upgraded to the latest version of Better Looking Characters, which features a number of performance improvements that should make it less memory intensive.
+- Integrated Mercator Mod, which improves greatly on the game's terrain with proper mountain placement, river locations, etc.
+- Titular titles will now never be elective when created.
+- If your demesne laws are higher than what crown authority allows (for example because crown authority went down) an event will now fire that adjusts them to their highest allowed level.
+- Added events for pious Muslim or Christian rulers to sponsor missions to a neighbouring Pagan ruler, which have a chance of converting that ruler to the sponsor's faith.
+- Reworked the effects of difficulty. Instead of providing flat bonuses to the player or the AI, difficulty now instead influences things such as councillor actions, loans and vassal loyalty. A player on low difficulty will (to name a few effects) find it easier to fabricate claims and have vassals stay loyal during civil wars, while getting the opposite effect on high difficulty. A high difficulty AI will get more claims, better terms on loans and other such things to make up for its various shortcomings versus a player. On Normal, AIs play almost entirely by the same rules as a player. Only a single flat bonus was left in place: Siege speed. High difficulty AIs will be more difficult to siege to account for their tendency to only siege a single province at once.
+- Victory in a succession war will now result in taking all the enemy's titles you have claims on in addition to taking the title whose succession you were disputing.
+- Reworked civil wars. Vassals who choose to side with their liege will now actively join the war and raise their troops to fight the traitors. To compensate for this, the base chance of vassals joining a civil war was increased.
+- AI vassals will now be reluctant to rebel against an AI ruler that has recently been in a civil war.
+- It is once again possible for your character's culture to spread to your capital, even if there is no adjacent province of the same culture. The chance is greatly reduced unless your character is independent.
+- Neighbours will no longer get a religious call to arms when war is declared between characters of the same religion group (as long as one is not a heresy of the other).
+- Further refined education formula. The child's attributes are now more important than the tutor's trait in how well they take to their education, though educator trait still makes a significant difference. Overall frequency of level 3 and 4 education traits were lowered.
+- Nearly all decisions now have graphical icons to make them more immediately visually identifiable.
+- Martial skill is now much more important in determining who wins a grand tournament.
+- Upped Kingdom creation cost to 500 gold and Empire creation cost to 1000 gold.
+- Further decreased effects of personal stewardship on demesne limit.
+- Removed piety cost for Kingdom creation. While it makes sense for Catholics, it doesn't for pretty much every other faith and it always felt strange how impious, ambitious characters were locked out of making themselves Kings.
+- AI rulers will now only attempt to Restore the Papacy once after it is lost. If they make the attempt and fail, the same character will not try again.
+- Attempts to Restore the Papacy to Rome can now only be made for 100 years after it is lost.
+- De Jure claim wars now always result in seizing the province, to prevent the situations where you would force-vassalize a character and he would revolt immediately as the war ends.
+- State martial skill now influences the amount of troops you can raise from your vassals.
+- The AI will now usurp Kingdoms that it controls more than 50% of the land in, even if it already has a Kingdom or Empire level title.
+- The AI will no longer limit itself to a single Kingdom, creating any Kingdom titles it is eligible for with the exception of titles inside a de jure empire that it holds.
+- Added titular Kingdoms of Bavaria, Prussia and Khazaria.
+- If a titular kingdom turns de jure, the special creation/usurp penalties from it are now removed (so if the Kingdom of Venice has de jure land, it is no longer only holdable by republics, for example).
+- Players without an ambition will now suffer a penalty to their prestige (to prevent an exploit where the player would only pick ambitions as they are about to complete).
+- Removed the 'No New Empires' module (as it no longer serves a purpose).
+- Implemented a new system of dynamic empires. All de jure Empires except the HRE and Byzantium are now gone, and are instead replaced by a large number of titular empires that can be formed by any ruler with the right culture and 4 kingdom titles. The following empires are currently createable via this system: Latin Empire, Frankish Empire, Occitan Empire, Italian Empire, Roman Empire, Polish Empire, Russian Empire, Persian Empire, Danubian Empire, Spanish Empire, Maghreb Empire, Arabian Empire, Egyptian Empire, Celtic Empire, Nordic Empire, Ethiopian Empire, Britannian Empire, Mali Empire, Lithuanian Empire, Finnish Empire, Magyar Empire, Seljuk Turks, Ottoman Empire and Al-Andalus.
+- Removed all religion limits on creating de jure kingdom titles. Instead, some titles will have an 'alternate' version for muslims, and on creating that title the non-muslim title will be destroyed and the muslim title will take its place. If the muslim title is then destroyed and re-created by christians or pagans, it reverts to the non-muslim version. (For example: If a muslim ruler creates Portugal, he will get the Sultanate of Al-Garb instead, with Portugal's de jure lands. If his realm is wiped out and Al-Garb is created by a Christian, that Christian will get the Kingdom of Portugal).
+- Fixed some bugs related to starting succession laws. As a result, you will be unable to change succession laws in the first week or so after starting a new game.
+- Heresies no longer affect or are affected by moral authority changes from Holy Wars and province conversion.
+- Courtiers can now take lovers among other courtiers, and young men or women with much older spouses will be particularily suspectible to romance.
+- Changing succession laws now requires and costs 125/250/500/750/1000 prestige for Barons/Counts/Dukes/Kings/Emperors respectively. Changing gender succession laws does not cost prestige.
+- Removed crown law requirements for switching succession laws. Medium Crown Authority is still required for switching an Elective Kingdom or Empire away from being Elective.
+- You can no longer complete the 'Amass Wealth' objective by taking a loan.
+- Increased base amount of troops from holdings.
+- Increased build cost of holdings.
+- Fixed a bug that caused countries to incorrectly become independent when a third-party claim was pressed.
+- Revamped tyranny mechanics. When you perform tyrannical actions (such as imprisoning, banishing or executing characters) without a rightful cause, you will now get tyranny 'points' that translate into a Tyrant trait with a potency from 1 to 100. For each point of tyranny, you suffer penalties to prestige and vassal opinion. Imprisoning and executing characters when you have rightful cause to do so (for example if they rebelled against you) will not result in any tyranny, and the tyranny penalties for banishment are lowered if you have rightful cause. Note that a character revolting/acting dishonorably towards you will only give you cause for ONE punishment, so you can either revoke, banish OR execute them... additional punishments will result in normal amounts of tyranny. Tyranny goes away over time, and will not be inherited by your successor when you die.
+- You will now get kinslayer only for executing or assassinating close relatives (rather than any dynasty member).
+- Fixed some issues with weird/conflicting assassination plot requirements.
+- AI characters that have been caught assassinating before are now less likely to plan new assassinations.
+- A character that wins an invasion will now get claims on all Counties and Duchies in the target Kingdom.
+- You can no longer pick the ambition to befriend a character you are at war with (and the ambition will abort if you go to war with them).
+- Added an ambition to befriend your top liege (if not the same as your direct liege).
+
 1.14:
-- BLC is now an optional module that requires the Mongol Faces DLC. If you are having issues with graphics, performance or load times, try playing without BLC as it increases CK2's memory usage considerably.
+- Better Looking Characters is now an optional module that requires the Mongol Faces DLC. If you are having issues with graphics, performance or load times, try playing without BLC as it increases CK2's memory usage considerably.
 
 1.13:
 - Upgraded to version 7 of Better Looking Characters.

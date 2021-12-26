@@ -125,6 +125,7 @@ e_golden_horde = {
 	primary = yes
 	
 	tribe = yes
+	short_name = yes
 	
 	culture = mongol
 	religion = tengri_pagan
@@ -136,6 +137,7 @@ e_il-khanate = {
 	primary = yes
 	
 	tribe = yes
+	short_name = yes
 	
 	culture = mongol
 	religion = tengri_pagan
@@ -147,6 +149,7 @@ e_timurids = {
 	primary = yes
 	
 	tribe = yes
+	short_name = yes
 	
 	culture = mongol
 	religion = shiite
@@ -3408,24 +3411,6 @@ d_jolof_company = {
 
 # EMPIRES
 
-e_france = {
-	color={ 45 47 207 }
-	color2={ 255 255 20 }	
-	capital = 112 # Ile de France
-	
-	short_name = yes
-	culture = frankish	
-	religion = catholic
-	
-	allow = {
-		e_france = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-		NOT = { religion_group = muslim }		
-	}	
-
 k_burgundy = {
 	color={ 134 0 37 }
 	color2={ 220 220 0 }
@@ -3434,11 +3419,19 @@ k_burgundy = {
 	
 	culture = occitan
 	
-	catholic = 100 #Crusade target weight
+	catholic = 100 #Crusade target weight	
 	
-	allow = {
-		NOT = { e_france = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
 	}	
 	
 	d_dauphine = {
@@ -3765,6 +3758,2058 @@ k_burgundy = {
 	}
 }
 
+	k_netherlands = {
+		color = { 220  138  57 }
+		color2={ 255 255 255 }
+		
+		culture = dutch
+		
+		capital = 80
+		
+		catholic = 10 #Crusade target weight
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
+		
+		d_alsace = { 
+			color={ 137 130 130 }
+			color2={ 255 255 255 }
+			
+			capital = 134 #Sundgau
+			
+			gain_effect = { character_event = { id = 110017 } }
+		
+			c_nordgau = {
+				color={ 96 96 96 }
+				color2={ 255 255 255 }
+			
+				b_egisheim = {
+				}
+				b_strassburg = {
+				}
+				b_lauterburg = {
+				}
+				b_selz = {
+				}
+				b_erstein = {
+				}
+				b_molsheim = {
+				}
+				b_brumath = {
+				}
+				b_schlettstadt = {
+				}
+			}
+			c_sundgau = {
+				color={ 93 93 93 }
+				color2={ 255 255 255 }
+			
+				b_ensisheim = {
+				}
+				b_kolmar = {
+				}
+				b_murbach = {
+				}
+				b_mulhouse = {
+				}
+				b_landser = {
+				}
+				b_thann = {
+				}
+				b_altkirch = {
+				}
+				b_ferette = {
+				}
+			}
+		}		
+		d_lower_lorraine = {
+			color={ 166 157 157 }
+			color2={ 255 255 255 }
+			
+			capital = 118 # Trier
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_pfalz = {
+				color={ 117 117 117 }
+				color2={ 255 255 255 }
+			
+				b_kaiserslautern = {
+				}
+				b_worms = {
+				}
+				b_hagenau = {
+				}
+				b_stahleck = {
+				}
+				b_trifels = {
+				}
+				b_speyer = {
+				}
+				b_zweibrucken = {
+				}
+				b_saarbrucken = {
+				}
+			}			
+			c_trier = {
+				color={ 135 135 135 }
+				color2={ 255 255 255 }
+			
+				b_andernach = {
+				}
+				b_trier = {
+				}
+				b_coblenz = {
+				}
+				b_sponheim = {
+				}
+				b_wittlich = {
+				}
+				b_gerolstein = {
+				}
+				b_laach = {
+				}
+				b_bitburg = {
+				}
+			}
+			c_metz = {	
+				color={ 114 114 114 }
+				color2={ 255 255 255 }
+			
+				b_metz = {
+				}
+				b_thionville = {
+				}
+				b_saintjulien = {
+				}
+				b_marslatour = {
+				}
+				b_bouzonville = {
+				}
+				b_briey = {
+				}
+				b_joudreville = {
+				}
+				b_audunleroman = {
+				}
+			}
+		}		
+		d_upper_lorraine = {
+			color={ 190 150 187 }
+			color2={ 255 255 255 }
+			
+			capital = 127 #Lorraine	
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_verdun = {
+				color={ 111 111 111 }
+				color2={ 255 255 255 }
+			
+				b_verdun = {
+				}
+				b_grandpre = {
+				}
+				b_barleduc = {
+				}
+				b_vaucouleurs = {
+				}
+				b_barlecomte = {
+				}
+				b_saintmihel = {
+				}
+				b_longuyon = {
+				}
+				b_doaumont = {
+				}
+			}
+			c_lorraine = {
+				color={ 108 108 108 }
+				color2={ 255 255 255 }
+			
+				b_nancy = {
+				}
+				b_toul = {
+				}
+				b_sarrebourg = {
+				}
+				b_epinal = {
+				}
+				b_luneville = {
+				}
+				b_charpeigne = {
+				}
+				b_mortagnedevosges = {
+				}
+				b_saintavoid = {
+				}
+			}
+			c_saintois = {
+				color={ 105 105 105 }
+				color2={ 255 255 255 }
+		
+				b_saintois = {
+				}
+				b_vaudemont = {
+				}
+				b_brixey = {
+				}
+				b_sorcystmartin = {
+				}
+				b_ivios = {
+				}
+				b_ornois = {
+				}
+				b_saulnois = {
+				}
+				b_dompaire = {
+				}
+			}
+		}		
+		d_luxembourg = {
+			color={ 102 97 150 }
+			color2={ 255 255 255 }
+			
+			capital = 115 #Luxembourg
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_luxembourg = {
+				color={ 147 147 147 }
+				color2={ 255 255 255 }
+			
+				b_luxembourg = {
+				}
+				b_bouillon = {
+				}
+				b_saintvith = {
+				}
+				b_arlon = {
+				}
+				b_neufchateau = {
+				}
+				b_longwy = {
+				}
+				b_differdange = {
+				}
+				b_ettelbruck = {
+				}
+			}
+			c_liege = {
+				color={ 144 144 144 }
+				color2={ 255 255 255 }
+			
+				b_liege = {
+				}
+				b_bastogne = {
+				}
+				b_namur = {
+				}
+				b_huy = {
+				}
+				b_laroche = {
+				}
+				b_cine = {
+				}
+				b_salm = {
+				}
+				b_stavelot = {
+				}
+			}
+		}
+		d_kleve = {
+			color={ 232 232 107 }
+			color2={ 255 255 255 }
+			
+			gain_effect = { character_event = { id = 110017 } }		
+		
+			c_kleve = {
+				color={ 132 132 132 }
+				color2={ 255 255 255 }
+		
+				b_kleve = {
+				}
+				b_goch = {
+				}
+				b_rees = {
+				}
+				b_anholt = {
+				}
+				b_Xanten = {
+				}
+				b_wesel = {
+				}
+				b_emmerich = {
+				}
+				b_isselburg = {
+				}
+			}			
+			c_julich = {
+				color={ 138 138 138 }
+				color2={ 255 255 255 }
+			
+				b_julich = {
+				}
+				b_aachen = {
+				}
+				b_prum = {
+				}
+				b_geldern = {
+				}
+				b_roermond = {
+				}
+				b_duren = {
+				}
+				b_moers = {
+				}
+				b_monschau = {
+				}
+			}			
+			c_loon = {
+				color={ 147 146 140 }
+				color2={ 255 255 255 }
+			
+				b_loon = {
+				}
+				b_maastricht = {
+				}
+				b_hasselt = {
+				}
+				b_valkenburg = {
+				}
+				b_heinsberg = {
+				}
+				b_hesbaie = {
+				}
+				b_wassenberg = {
+				}
+				b_tongeren = {
+				}
+			}		
+		}
+		d_holland = {
+			color={ 200 145 145 }
+			color2={ 255 255 255 }
+		
+			capital = 80 #Holland
+			
+			culture = dutch
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_holland = {
+				color={ 168 168 168 }
+				color2={ 255 255 255 }
+			
+				b_haarlem = {
+				}
+				b_amsterdam = {
+				}
+				b_vlaardingen = {
+				}
+				b_sgravenhage = {
+				}
+				b_dordrecht = {
+				}
+				b_gouda = {
+				}
+				b_leiden = {
+				}
+				b_muiden = {
+				}
+			}
+			c_sticht = {
+				color={ 156 156 156 }
+				color2={ 255 255 255 }
+			
+				b_woerden = {
+				}
+				b_utrecht = {
+				}
+				b_dorestad = {
+				}
+				b_gorinchem = {
+				}
+				b_zeist = {
+				}
+				b_buren = {
+				}
+				b_ijsselstein = {
+				}
+				b_oudewater = {
+				}
+			}
+			c_westfriesland = {
+				color={ 40 40 40 }
+				color2={ 255 255 255 }
+			
+				b_alkmaar = {
+				}
+				b_hoorn = {
+				}
+				b_medemblik = {
+				}
+				b_enkhuizen = {
+				}
+				b_heerhugowaard = {
+				}
+				b_texel = {
+				}
+				b_egmond = {
+				}
+				b_schagen = {
+				}
+			}
+			c_zeeland = {
+				color={ 165 165 165 }
+				color2={ 255 255 255 }
+			
+				b_middelburg = {
+				}
+				b_tholen = {
+				}
+				b_veere = {
+				}
+				b_cadzand = {
+				}
+				b_vlissingen = {
+				}
+				b_renesse = {
+				}
+				b_borsele = {
+				}
+				b_zierikzee = {
+				}
+			}
+		}
+		d_gelre = {
+			color = { 139  66  97 }
+			color2={ 255 255 220 }
+			
+			capital = 83 #Gelre
+			
+			culture = dutch
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_gelre = {
+				color={ 159 159 159 }
+				color2={ 255 255 255 }
+			
+				b_nijmegen = {
+				}
+				b_zutphen = {
+				}
+				b_deventer = {
+				}
+				b_arnhem = {
+				}
+				b_zwolle = {
+				}
+				b_kampen = {
+				}
+				b_bergh = {
+				}
+				b_bronckhorst = {
+				}
+			}			
+			c_ostfriesland = {
+				color={ 162 162 162 }
+				color2={ 255 255 255 }
+			
+				b_emden = {
+				}
+				b_aurich = {
+				}
+				b_borkum = {
+				}
+				b_norden = {
+				}
+				b_norderney = {
+				}
+				b_leer = {
+				}
+				b_wittmund = {
+				}
+				b_esens = {
+				}
+			}
+			c_frisia = {
+				color={ 160 160 160 }
+				color2={ 255 255 255 }
+			
+				b_groningen = {
+				}
+				b_leeuwarden = {
+				}
+				b_stavoren = {
+				}
+				b_bolsward = {
+				}
+				b_franeker = {
+				}
+				b_dokkum = {
+				}
+				b_assen = {
+				}
+				b_harlingen = {
+				}
+			}
+		}
+		d_brabant = {
+			color={ 180 176 176 }
+			color2={ 120 255 255 }
+			
+			capital = 117 #Brabant
+			
+			culture = dutch
+			
+			gain_effect = { character_event = { id = 110017 } }
+		
+			c_brabant = {
+				color={ 153 153 153 }
+				color2={ 255 255 255 }
+			
+				b_leuven = {
+				}
+				b_mechelen = {
+				}
+				b_brussel = {
+				}
+				b_antwerpen = {
+				}
+				b_aarschot = {
+				}
+				b_grimbergen = {
+				}
+				b_herstal = {
+				}
+				b_lier = {
+				}
+			}
+			c_hainaut = {
+				color={ 151 152 153 }
+				color2={ 255 255 255 }
+			
+				b_valenciennes = {
+				}
+				b_cambrai = {
+				}
+				b_avesnes = {
+				}
+				b_mons = {
+				}
+				b_chievres = {
+				}
+				b_enghien = {
+				}
+				b_charleroi = {
+				}
+				b_ath = {
+				}
+			}
+			c_breda = {
+				color={ 150 150 150 }
+				color2={ 255 255 255 }
+			
+				b_breda = {
+				}
+				b_shertogenbosch = {
+				}
+				b_tilburg = {
+				}
+				b_willemstad = {
+				}
+				b_bergenopzoom = {
+				}
+				b_cuijck = {
+				}
+				b_ravenstein = {
+				}
+				b_horn = {
+				}
+			}
+		}
+}	
+	
+	k_germany = {
+		color={ 160 95 95 }
+		color2={ 220 220 20 }
+		
+		culture = german
+		
+		capital = 121 #Nassau	
+		
+		catholic = 1 #Crusade target weight
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
+		
+		d_holstein = {
+			color={ 152 225 112 }
+			color2={ 255 255 255 }
+		
+			capital = 263 #Holstein
+			
+			gain_effect = { character_event = { id = 110017 } }
+		
+			c_hamburg = {
+				color={ 225 225 225 }
+				color2={ 255 255 255 }
+			
+				b_hamburg = {
+				}
+				b_altona = {
+				}
+				b_harburg = {
+				}
+				b_brunsbuttel = {
+				}
+				b_buxtehude = {
+				}
+				b_dithmarschen = {
+				}
+				b_niendorf = {
+				}
+				b_lokstedt = {
+				}
+			}
+			c_lubeck = {
+				color={ 142 142 142 }
+				color2={ 255 255 255 }
+				
+				b_lubeck = {
+				}
+				b_ratzeburg = {
+				}
+				b_travemunde = {
+				}
+				b_wulfsdorf = {
+				}
+				b_schlutup = {
+				}
+				b_starigard = {
+				}
+				b_weslo = {
+				}
+				b_bucu = {
+				}
+			}
+			c_holstein = {
+				color={ 219 219 219 }
+				color2={ 255 255 255 }
+				
+				b_kiel = {
+				}
+				b_gottorp = {
+				}
+				b_itzehoe = {
+				}
+				b_reinholdsburg = {
+				}
+				b_elmshorn = {
+				}
+				b_gluckstadt = {
+				}
+				b_lauenburg = {
+				}
+				b_segeberg = {
+				}
+			}
+			c_bremen = {
+				color={ 216 216 216 }
+				color2={ 255 255 255 }
+				
+				b_bremen = {
+				}
+				b_hoya = {
+				}
+				b_verden = {
+				}
+				b_stade = {
+				}
+				b_blumenthal = {
+				}
+				b_ritzebuttel = {
+				}
+				b_achim = {
+				}
+				b_beverstedt = {
+				} 
+			}
+		}
+		d_koln = {
+			color={ 213 216 212 }
+			color2={ 255 255 255 }
+			
+			capital = 119 #Köln
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_koln = {
+				color={ 141 141 141 }
+				color2={ 255 255 255 }
+			
+				b_koln = {
+				}
+				b_berg = {
+				}
+				b_mark = {
+				}
+				b_bonn = {
+				}
+				b_dietz = {
+				}
+				b_saffenburg = {
+				}
+				b_hochstaden = {
+				}
+				b_brauweiler = {
+				}
+			}
+			c_munster = {
+				color={ 212 212 212 }
+				color2={ 255 255 255 }
+				
+				b_munster = {
+				}
+				b_dortmund = {
+				}
+				b_essen = {
+				}
+				b_greven = {
+				}
+				b_gutersloh = {
+				}
+				b_steinfurt = {
+				}
+				b_gronau = {
+				}
+				b_ahlen = {
+				}
+			}
+			c_gottingen = {
+				color={ 210 210 210 }
+				color2={ 255 255 255 }
+				
+				b_gottingen = {
+				}
+				b_corvey = {
+				}
+				b_lippe = {
+				}
+				b_kassel = {
+				}
+				b_goslar = {
+				}
+				b_northeim = {
+				}
+				b_eisenach = {
+				}
+				b_detmold = {
+				}
+			}			
+		}		
+		d_saxony = {
+			color={ 164 162 195 }
+			color2={ 70 255 255 }
+			
+			capital = 256
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_plauen = {
+				color={ 180 180 180 }
+				color2={ 255 255 255 }
+				
+				b_plauen = {
+				}
+				b_leipzig = {
+				}
+				b_merseburg = {
+				}
+				b_halle = {
+				}
+				b_knobelsdorf = {
+				}
+				b_zeitz = {
+				}
+				b_zwickau = {
+				}
+				b_naumburg = {
+				}
+			}
+			c_weimar = {
+				color={ 183 183 183 }
+				color2={ 255 255 255 }
+				
+				b_weimar = {
+				}
+				b_jena = {
+				}
+				b_walkenried = {
+				}
+				b_nordhausen = {
+				}
+				b_memelsen = {
+				}
+				b_gotha = {
+				}
+				b_apoldoa = {
+				}
+				b_gera = {
+				}
+			}
+		}
+		d_pommerania = {
+			color={ 111 143 51 }
+			color2={ 255 255 255 }
+
+			capital = 366 # Stettin
+
+			gain_effect = { character_event = { id = 110017 } }
+
+			c_wolgast = {
+				color={ 51 243 51 }
+				color2={ 255 255 255 }
+
+				b_wolgast = {
+				}
+				b_usedom = {
+				}
+				b_anklam = {
+				}
+				b_ueckermunde = {
+				}
+				b_zinnowitz = {
+				}
+				b_zussow = {
+				}
+				b_kemnitz = {
+				}
+				b_eggesin = {
+				}
+			}
+			c_stettin = {
+				color={ 51 213 51 }
+				color2={ 255 255 255 }
+
+				b_soldin = {
+				}
+				b_stettin = {
+				}
+				b_wollin = {
+				} 
+				b_stestargard = {
+				}
+				b_kammin = {
+				}
+				b_kolbatz = {
+				}
+				b_cedene = {
+				}
+				b_pyritz = {
+				}
+			}
+			c_rugen = {
+				color={ 201 201 201 }
+				color2={ 255 255 255 }
+				
+				b_charenza = {
+				}
+				b_arkona = {
+				}
+				b_rugard = {
+				}
+				b_putbus = {
+				}
+				b_barth = {
+				}
+				b_ralswiek = {
+				}
+				b_hiddensee = {
+				}
+				b_tribuzin = {
+				}
+			}			
+		}		
+		d_mecklemburg = {
+			color={ 162 160 110 }
+			color2={ 255 167 255 }
+			
+			capital = 260 #mecklemburg
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_mecklemburg = {
+				color={ 207 207 207 }
+				color2={ 255 255 255 }
+				
+				b_mecklemburg = {
+				}
+				b_wismar = {
+				}
+				b_gevezin = {
+				}
+				b_schwerin = {
+				}
+				b_lutzow = {
+				}
+				b_grevesmuhlen = {
+				}
+				b_parchim = {
+				}
+				b_hagenow = {
+				}
+			}
+			c_rostock = {
+				color={ 204 204 204 }
+				color2={ 255 255 255 }
+				
+				b_rostock = {
+				}
+				b_penzlin = {
+				}
+				b_gustrow = {
+				}
+				b_malchin = {
+				}
+				b_damgarten = {
+				}
+				b_strelitz = {
+				}
+				b_stargard = {
+				}
+				b_ahrensberg = {
+				}
+			}
+			c_werle = {
+				color={ 202 202 202 }
+				color2={ 255 255 255 }
+				
+				b_waren = {
+				}
+				b_greifswald = {
+				}
+				b_stralsund = {
+				}
+				b_tribsees = {
+				}
+				b_demmin = {
+				}
+				b_treptow = {
+				}
+				b_friedland = {
+				}
+				b_templin = {
+				}
+			}
+		}
+		d_brunswick = {
+			color={ 183 172 172 }
+			color2={ 97 255 255 }
+		
+			capital = 258 #Lüneburg
+			
+			gain_effect = { character_event = { id = 110017 } }
+		
+			c_celle = {
+				color={ 198 198 198 }
+				color2={ 255 255 255 }
+				
+				b_celle = {
+				}
+				b_hannover = {
+				}
+				b_herford = {
+				}
+				b_hermannsburg = {
+				}
+				b_ravensberg = {
+				}
+				b_nienburg = {
+				}
+				b_wedemark = {
+				}
+				b_wittingen = {
+				}
+			}
+			c_luneburg = {
+				color={ 195 195 195 }
+				color2={ 255 255 255 }
+				
+				b_luneburg = {
+				}
+				b_bardowick = {
+				}
+				b_gifhorn = {
+				}
+				b_evern = {
+				}
+				b_reppenstedt = {
+				}
+				b_ludersburg = {
+				}
+				b_thomasburg = {
+				}
+				b_uelzen = {
+				}
+			}
+			c_braunschweig = {
+				color={ 192 192 192 }
+				color2={ 255 255 255 }
+				
+				b_braunschweig = {
+				}
+				b_bielefeld = {
+				}
+				b_paderborn = {
+				}
+				b_hildesheim = {
+				}
+				b_waldeck = {
+				}
+				b_wolfenbuttel = {
+				}
+				b_helmstedt = {
+				}
+				b_gandersheim = {
+				}
+			}
+			c_oldenburg = {
+				color={ 214 214 214 }
+				color2={ 255 255 255 }
+				
+				b_oldenburg = {
+				}
+				b_cloppenburg = {
+				}
+				b_jever = {
+				}
+				b_delmenhorst = {
+				}
+				b_loningen = {
+				}
+				b_nordenham = {
+				}
+				b_kniphausen = {
+				}
+				b_varel = {
+				}
+			}
+			c_osnabruck = {
+				color={ 213 213 213 }
+				color2={ 255 255 255 }
+				
+				b_osnabruck = {
+				}
+				b_lingen = {
+				}
+				b_bentheim = {
+				}
+				b_wildeshausen = {
+				}
+				b_tecklenburg = {
+				}
+				b_minden = {
+				}
+				b_quackenbruck = {
+				}
+				b_meppen = {
+				}
+			}
+		}
+		d_brandenburg = {
+			color={ 175 121 200 }
+			color2={ 255 255 255 }
+			
+			capital = 365 #Brandenburg
+			
+			gain_effect = { character_event = { id = 110017 } }
+		
+			c_altmark = {
+				color={ 189 189 189 }
+				color2={ 255 255 255 }
+				
+				b_werben = {
+				}
+				b_halberstedt = {
+				}
+				b_walbeck = {
+				}
+				b_luchow = {
+				}
+				b_salzwedel = {
+				}
+				b_stendal = {
+				}
+				b_osterburg = {
+				}
+				b_tangermunde = {
+				}
+			}
+			c_anhalt = {
+				color={ 184 184 184 }
+				color2={ 255 255 255 }
+				
+				b_zerbst = {
+				}
+				b_magdeburg = {
+				}
+				b_haldensleben = {
+				}
+				b_mansfeld = {
+				}
+				b_dessau = {
+				}
+				b_arnstein = {
+				}
+				b_querfurt = {
+				}
+				b_bernburg = {
+				}
+			}			
+			c_brandenburg = {
+				color={ 186 186 186 }
+				color2={ 255 255 255 }
+				
+				b_brandenburg = {
+				}
+				b_havelberg = {
+				}
+				b_berlin = {
+				}
+				b_juterborg = {
+				}
+				b_belzig = {
+				}
+				b_ruppin = {
+				}
+				b_oranienburg = {
+				}
+				b_muncheberg = {
+				}
+			}
+		}
+		d_meissen = {
+			color={ 182 18 181 }
+			color2={ 25 255 255 }
+			
+			capital = 312 #Meissen
+			
+			gain_effect = { character_event = { id = 110017 } }
+		
+			c_meissen = {
+				color={ 177 177 177 }
+				color2={ 255 255 255 }
+				
+				b_dresden = {
+				}
+				b_meissen = {
+				}
+				b_dohna = {
+				}
+				b_belgern = {
+				}
+				b_strehla = {
+				}
+				b_rabenau = {
+				}
+				b_wettin = {
+				}
+				b_radeburg = {
+				}
+			}
+			c_lausitz = {
+				color={ 174 174 174 }
+				color2={ 255 255 255 }
+				
+				b_gorlitz = {
+				}
+				b_bautzen = {
+				} 
+				b_lebus = {
+				}
+				b_cottbus = {
+				}
+				b_rothenburg = {
+				}
+				b_forst = {
+				}
+				b_zittau = {
+				}
+				b_luckau = {
+				}
+			}
+		}
+		d_thuringia = {
+			color={ 207 206 26 }
+			color2={ 255 25 255 }
+		
+			capital = 255 #Thuringen
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_thuringen = {
+				color={ 42 42 42 }
+				color2={ 255 255 255 }
+			
+				b_erfurt = {
+				}
+				b_muhlhausen = {
+				}
+				b_arnstadt = {
+				}
+				b_eichsfeld = {
+				}
+				b_reuss = {
+				}
+				b_salzungen = {
+				}
+				b_schmalkalden = {
+				}
+				b_henneberg = {
+				}
+			}
+			c_nassau = {
+				color={ 171 171 171 }
+				color2={ 255 255 255 }
+			
+				b_nassau = {
+				}
+				b_fulda = {
+				}
+				b_wetzlar = {
+				}
+				b_marburg = {
+				}
+				b_katzenelnbogen = {
+				}
+				b_hersfeld = {
+				}
+				b_falkenstein = {
+				}
+				b_isenburg = {
+				}
+			}
+		}		
+		d_franconia = {
+			color={ 100 9 170 }
+			color2={ 255 255 255 }
+			
+			gain_effect = { character_event = { id = 110017 } }
+
+			c_mainz = {
+				color={ 129 129 129 }
+				color2={ 255 255 255 }
+			
+				b_mainz = {
+				}
+				b_frankfurt = {
+				}
+				b_eppstein = {
+				}
+				b_ingelheim = {
+				}
+				b_mannheim = {
+				}
+				b_weilburg = {
+				}
+				b_dornburg = {
+				}
+				b_hanau = {
+				}
+			}		
+			c_leiningen = {
+				color={ 126 126 126 }
+				color2={ 255 255 255 }
+			
+				b_leiningen = {
+				}
+				b_heidelberg = {
+				}
+				b_lorsch = {
+				}
+				b_durkheim = {
+				}
+				b_battenberg = {
+				}
+				b_hardenburg = {
+				}
+				b_ungstein = {
+				}
+				b_pfeffingen = {
+				}
+			}
+			c_wurzburg = {
+				color={ 123 123 123 }
+				color2={ 255 255 255 }
+			
+				b_wurzburg = {
+				}
+				b_aschaffenburg = {
+				}
+				b_schweinfurt = {
+				}
+				b_marienberg = {
+				}
+				b_hammelburg = {
+				}
+				b_schwarzenberg = {
+				}
+				b_theiheim = {
+				}
+				b_mainderheim = {
+				}
+			}
+			c_bamberg = {
+				color={ 120 120 120 }
+				color2={ 255 255 255 }
+			
+				b_ansbach = {
+				}
+				b_bamberg = {
+				}
+				b_babenberg = {
+				}
+				b_cadolzburg = {
+				}
+				b_colmberg = {
+				}
+				b_roth = {
+				}
+				b_uffenheim = {
+				}
+				b_crailsheim = {
+				}
+			}
+		}
+		d_baden = { 
+			color={ 115 149 109 }
+			color2={ 255 255 255 }
+			
+			capital = 125 #Baden
+			
+			gain_effect = { character_event = { id = 110017 } }
+		
+			c_baden = {
+				color={ 102 102 102 }
+				color2={ 255 255 255 }
+			
+				b_baden = {
+				}
+				b_karlsruhe = {
+				}
+				b_wimpfen = {
+				}
+				b_calw = {
+				}
+				b_pforzheim = {
+				}
+				b_durlach = {
+				}
+				b_rastatt = {
+				}
+				b_neuhausen = {
+				}
+			}
+			c_breisgau = {
+				color={ 105 94 105 }
+				color2={ 255 255 255 }
+		
+				b_freiburg = {
+				}
+				b_stblasien = {
+				}
+				b_offenburg = {
+				}
+				b_zahringen = {
+				}
+				b_lahr = {
+				}
+				b_lohrrach = {
+				}
+				b_breisach = {
+				}
+				b_rottweil = {
+				}
+			}
+		}
+		d_swiss = {
+			color = { 255 1 1 }
+			color2={ 255 255 255 }
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_schwyz = {
+				color={ 167 28 66 }
+				color2={ 255 255 255 }
+
+				b_schwyz = {
+				}
+				b_engelberg = {
+				}
+				b_zurich = {
+				}
+				b_zug = {
+				}
+				b_altdorf = {
+				}
+				b_stans = {
+				}
+				b_glarus = {
+				}
+				b_winterthur = {
+				}
+			}			
+			c_grisons = {
+				color={ 255 241 230 }
+				color2={ 255 255 255 }
+
+				b_bellinzona = {
+				}
+				b_disentis = {
+				}
+				b_locarno = {
+				}
+				b_biasca = {
+				}
+				b_domo = {
+				}
+				b_lugano = {
+				}
+				b_musso = {
+				}
+				b_mendrisio = {
+				}
+			}			
+			c_st_gallen = {
+				color={ 85 80 85 }
+				color2={ 255 255 255 }
+		
+				b_rheineck = {
+				}
+				b_stgallen = {
+				}
+				b_appenzell = {
+				}
+				b_frauenfeld = {
+				}
+				b_altstatten = {
+				}
+				b_lichtensteig = {
+				}
+				b_vaduz = {
+				}
+				b_herisau = {
+				}
+			}
+			c_chur = {
+				color={ 87 87 87 }
+				color2={ 255 255 255 }
+			
+				b_chur = {
+				}
+				b_churwalden = {
+				}
+				b_davos = {
+				}
+				b_maienfeld = {
+				}
+				b_illanz = {
+				}
+				b_thusis = {
+				}
+				b_glurns = {
+				}
+				b_zuoz = {
+				}
+			}			
+		}		
+		d_tyrol = {  
+			color={ 197 154 154 }
+			color2={ 255 255 255 }
+			
+			capital = 316 #Tirol
+			
+			gain_effect = { character_event = { id = 110017 } }
+		
+			c_tirol = {
+				color={ 90 90 90 }
+				color2={ 255 255 255 }
+			
+				b_bregenz = {
+				}
+				b_landeck = {
+				}
+				b_stanton = {
+				}
+				b_imst = {
+				}
+				b_sterzing = {
+				}
+				b_ried = {
+				}
+				b_dornbirn = {
+				}
+				b_nenzing = {
+				}
+			}
+			c_innsbruck = {
+				color={ 84 84 84 }
+				color2={ 255 255 255 }
+			
+				b_innsbruck = {
+				}
+				b_kufstein = {
+				}
+				b_stams = {
+				}
+				b_lienz = {
+				}
+				b_schwaz = {
+				}
+				b_kitzbuhel = {
+				}
+				b_jenbach = {
+				}
+				b_fugen = {
+				}
+			}
+		}
+		d_swabia = {
+			color={ 246 203 203 }
+			color2={ 255 255 255 }
+			
+			capital = 249 #Schwaben
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_schwaben = {
+				color={ 81 81 81 }
+				color2={ 255 255 255 }
+			
+				b_tubingen = {
+				}
+				b_konstanz = {
+				}
+				b_heiligenberg = {
+				}
+				b_uberlingen = {
+				}
+				b_hohenberg = {
+				}
+				b_friedrichshafen = {
+				}
+				b_wangen = {
+				}
+				b_lindau = {
+				}
+			}
+			c_ulm = {
+				color={ 78 78 78 }
+				color2={ 255 255 255 }
+			
+				b_ulm = {
+				}
+				b_zwiefalten = {
+				}
+				b_teck = {
+				}
+				b_biberach = {
+				}
+				b_memmingen = {
+				}
+				b_isny = {
+				}
+				b_goppingen = {
+				}
+				b_erbach = {
+				}
+			}
+			c_furstenberg = {
+				color={ 75 75 75 }
+				color2={ 255 255 255 }
+			
+				b_furstenberg = {
+				}
+				b_villingen = {
+				}
+				b_hirsau = {
+				}
+				b_baar = {
+				}
+				b_haslach = {
+				}
+				b_zollern = {
+				}
+				b_wolfach = {
+				}
+				b_donaueschingen = {
+				}
+			}
+			c_wurttemberg = {
+				color={ 72 72 72 }
+				color2={ 255 255 255 }
+			
+				b_stuttgart = {
+				}
+				b_heilbronn = {
+				}
+				b_reutlingen = {
+				}
+				b_waiblingen = {
+				}
+				b_esslingen = {
+				}
+				b_gmund = {
+				}
+				b_staufen = {
+				}
+				b_katzenstein = {
+				}
+			}
+		}
+		d_bavaria = {
+			color={ 18 121 121 }
+			color2={ 255 255 255 }
+			
+			capital = 360 #Oberbayern
+			
+			gain_effect = { character_event = { id = 110017 } }
+			
+			c_kempten = {
+				color={ 69 69 69 }
+				color2={ 255 255 255 }
+			
+				b_kempten = {
+				}
+				b_augsburg = {
+				}
+				b_zumarshausen = {
+				}
+				b_kaufbeuren = {
+				}
+				b_donauworth = {
+				}
+				b_friedberg = {
+				}
+				b_hochstadt = {
+				}
+				b_rain = {
+				}
+			}
+			c_oberbayern = {
+				color={ 66 66 66 }
+				color2={ 255 255 255 }
+			
+				b_munchen = {
+				}
+				b_dachau = {
+				}
+				b_freising = {
+				}
+				b_andechs = {
+				}
+				b_diessen = {
+				}
+				b_dingolfing = {
+				}
+				b_pfaffenberg = {
+				}
+				b_ebersberg = {
+				}
+			}
+			c_niederbayern = {
+				color={ 60 60 60 }
+				color2={ 255 255 255 }
+		
+				b_straubing = {
+				}
+				b_regensburg = {
+				}
+				b_landshut = {
+				}
+				b_ingolstadt = {
+				}
+				b_wittelsbach = {
+				}
+				b_cham = {
+				}
+				b_rohrbach = {
+				}
+				b_kirchroth = {
+				}
+			}
+			c_nurnberg = {
+				color={ 57 57 57 }
+				color2={ 255 255 255 }
+		
+				b_nurnberg = {
+				}
+				b_ellwangen = {
+				}
+				b_furth = {
+				}
+				b_kulmbach = {
+				}
+				b_hohenburg = {
+				}
+				b_nordlingen = {
+				}
+				b_eichstatt = {
+				}
+				b_erlangen = {
+				}
+			}
+		}
+		d_osterreich = { 
+			color={ 191 182 182 }
+			color2={ 255 255 25 }
+			
+			capital = 449 #Österreich
+			
+			gain_effect = { character_event = { id = 110017 } }
+
+			c_salzburg = {
+				color={ 63 63 63 }
+				color2={ 255 255 255 }
+			
+				b_salzburg = {
+				}
+				b_durmberg = {
+				}
+				b_waging = {
+				}
+				b_berchtesgaden = {
+				}
+				b_tittmoning = {
+				}
+				b_laufen = {
+				}
+				b_muhldorf = {
+				}
+				b_gastein = {
+				}
+			}		
+			c_passau = {
+				color={ 54 54 54 }
+				color2={ 255 255 255 }
+		
+				b_passau = {
+				}
+				b_ortenburg = {
+				}
+				b_schaumberg = {
+				}
+				b_formbach = {
+				}
+				b_ulrichsberg = {
+				}
+				b_freistadt = {
+				}
+				b_raab = {
+				}
+				b_freyung = {
+				}
+			}
+			c_znojmo = {
+				color={ 51 51 51 }
+				color2={ 255 255 255 }
+		
+				b_mikulov = {
+				}
+				b_iglau = {
+				}
+				b_lundenburg = {
+				}
+				b_skalitz = {
+				}
+				b_trebic = {
+				}
+				b_eibenshitz = {
+				}
+				b_znojmo = {
+				}
+				b_ivancice = {
+				}
+			}
+			c_osterreich = {
+				color={ 48 48 48 }
+				color2={ 255 255 255 }
+			
+				b_wien = {
+				}
+				b_linz = {
+				}
+				b_melk = {
+				}
+				b_stpolten = {
+				}
+				b_hohenwarth = {
+				}
+				b_wagram = {
+				}
+				b_krems = {
+				}
+				b_steyr = {
+				}
+			}
+			c_steiermark = {
+				color={ 45 45 45 }
+				color2={ 255 255 255 }
+				
+				b_eppenstein = {
+				}
+				b_graz = {
+				}
+				b_lavant = {
+				}
+				b_cilli = {
+				}
+				b_seckau = {
+				}
+				b_leibnitz = {
+				}
+				b_radkersburg = {
+				}
+				b_stubing = {
+				}
+			}
+		}
+	}
+
+	k_bohemia = {
+        color={ 176 110 32 }
+        color2={ 255 255 255 }
+        
+        culture = bohemian
+        
+        capital = 437 # Praha
+        
+        catholic = 10 #Crusade target weight 
+        
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}        
+        
+        d_bohemia = {
+            color={ 195 110 11 }
+            color2={ 255 255 255 }
+            
+            capital = 437 # Praha
+            
+            gain_effect = { character_event = { id = 110017 } }
+            
+            c_domazlice = {
+                color={ 197 112 13 }
+                color2={ 255 255 255 }
+                
+                b_pisek = {
+                }
+                b_kladruby = {
+                }
+                b_budejovice = {
+                }
+                b_domazlice = {
+                }
+                b_hohenfurth = {
+                }
+                b_rosenberg = {
+                }
+                b_goldenkron = {
+                }
+                b_sobeslav = {
+                }
+            }
+            c_praha = {
+                color={ 199 114 15 }
+                color2={ 255 255 255 }
+                
+                b_praha = {
+                }
+                b_brevnov = {
+                }
+                b_kuttenberg = {
+                }
+                b_karlstein = {
+                }
+                b_slany = {
+                }
+                b_kolin = {
+                }
+                b_stare_mesto = {
+                }
+                b_zbraslav = {
+                }
+            }
+            c_boleslav = {
+                color={ 201 116 17 }
+                color2={ 255 255 255 }
+                
+                b_glatz = {
+                }
+                b_nachod = {
+                }
+                b_hradiste = {
+                }
+                b_jicin = {
+                }
+                b_trutnov = {
+                }
+                b_kamieniec = {
+                }
+                b_jaromer = {
+                }
+                b_turnov = {
+                }
+            }
+            c_litomerice = {
+                color={ 203 118 19 }
+                color2={ 255 255 255 }
+                
+                b_usti = {
+                }
+                b_zatec = {
+                }
+                b_jachymov = {
+                }
+                b_kadan = {
+                }
+                b_ceskalipa = {
+                }
+                b_duchcov = {
+                }
+                b_chomutov = {
+                }
+                b_osek = {
+                }
+            }
+            c_plzen = {
+                color={ 205 120 21 }
+                color2={ 255 255 255 }
+                
+                b_plzen = {
+                }
+                b_stribo = {
+                }
+                b_rokycany = {
+                }
+                b_plasy = {
+                }
+                b_pomuk = {
+                }
+                b_susice = {
+                }
+                b_tachov = {
+                }
+                b_cheb = {
+                }
+            }
+        }
+        d_moravia = {
+            color={ 157 101 35 }
+            color2={ 255 255 255 }
+            
+            capital = 440 # Olomouc
+            
+            gain_effect = { character_event = { id = 110017 } }
+            
+            c_hradec = {
+                color={ 160 104 38 }
+                color2={ 255 255 255 }
+                
+                b_hradeckralove = {
+                }
+                b_pardubice = {
+                }
+                b_litomysl = {
+                }
+                b_zamberk = {
+                }
+                b_policka = {
+                }
+                b_jihlava = {
+                }
+                b_pelhrimov = {
+                }
+                b_chrudim = {
+                }
+            }
+            c_olomouc = {
+                color={ 163 107 41 }
+                color2={ 255 255 255 }
+                
+                b_opava = {
+                }
+                b_olomouc = {
+                }
+                b_sternberk = {
+                }
+                b_ostrava = {
+                }
+                b_zabreh = {
+                }
+                b_moravskatrebova = {
+                }
+                b_zdar = {
+                }
+                b_unicov = {
+                }
+            }
+            c_brno = {
+                color={ 166 110 44 }
+                color2={ 255 255 255 }
+                
+                b_boskovice = {
+                }
+                b_prerov = {
+                }
+                b_velehrad = {
+                }
+                b_wisowitz = {
+                }
+                b_uherskebrod = {
+                }
+                b_uherskehradiste = {
+                }
+                b_kromeriz = {
+                }
+                b_zlin = {
+                }
+            }
+        }
+    }
+
 k_france = {
 	color={ 15 27 187 }
 	color2={ 255 255 20 }
@@ -3774,9 +5819,17 @@ k_france = {
 	
 	catholic = 100 #Crusade target weight
 	
-	allow = {
-		NOT = { e_france = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
 	}	
 	
 	d_bourbon = {
@@ -5033,7 +7086,7 @@ k_france = {
 	}
 }
 
-k_brittany = {
+	k_brittany = {
 		color={ 133 34 210 }
 		color2={ 255 255 255 }
 
@@ -5041,12 +7094,20 @@ k_brittany = {
 		
 		culture = breton
 		
-		catholic = 10 #Crusade target weight
+		catholic = 10 #Crusade target weight	
 		
-	allow = {
-		NOT = { e_france = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
-	}		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 
 	d_brittany = {
 		color={ 133 34 210 }
@@ -5185,2071 +7246,7 @@ k_brittany = {
 	}
 }
 
-}
 
-e_hre = {
-
-	allow = {	
-		e_hre = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-		religion_group = christian		
-	}
-	color={ 155 155 155 }
-	color2={ 220 220 20 }
-	
-	capital = 254 #Franken
-	
-	religion=catholic
-	culture = german
-	short_name = yes
-	
-	k_netherlands = {
-		color = { 220  138  57 }
-		color2={ 255 255 255 }
-		
-		culture = dutch
-		
-		capital = 80
-		
-		catholic = 10 #Crusade target weight
-		
-		allow = {
-			NOT = { e_hre = { holder_scope = { character = ROOT } } }
-			NOT = { religion_group = muslim }
-		}		
-
-		d_alsace = { 
-			color={ 137 130 130 }
-			color2={ 255 255 255 }
-			
-			capital = 134 #Sundgau
-			
-			gain_effect = { character_event = { id = 110017 } }
-		
-			c_nordgau = {
-				color={ 96 96 96 }
-				color2={ 255 255 255 }
-			
-				b_egisheim = {
-				}
-				b_strassburg = {
-				}
-				b_lauterburg = {
-				}
-				b_selz = {
-				}
-				b_erstein = {
-				}
-				b_molsheim = {
-				}
-				b_brumath = {
-				}
-				b_schlettstadt = {
-				}
-			}
-			c_sundgau = {
-				color={ 93 93 93 }
-				color2={ 255 255 255 }
-			
-				b_ensisheim = {
-				}
-				b_kolmar = {
-				}
-				b_murbach = {
-				}
-				b_mulhouse = {
-				}
-				b_landser = {
-				}
-				b_thann = {
-				}
-				b_altkirch = {
-				}
-				b_ferette = {
-				}
-			}
-		}		
-		d_lower_lorraine = {
-			color={ 166 157 157 }
-			color2={ 255 255 255 }
-			
-			capital = 118 # Trier
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_pfalz = {
-				color={ 117 117 117 }
-				color2={ 255 255 255 }
-			
-				b_kaiserslautern = {
-				}
-				b_worms = {
-				}
-				b_hagenau = {
-				}
-				b_stahleck = {
-				}
-				b_trifels = {
-				}
-				b_speyer = {
-				}
-				b_zweibrucken = {
-				}
-				b_saarbrucken = {
-				}
-			}			
-			c_trier = {
-				color={ 135 135 135 }
-				color2={ 255 255 255 }
-			
-				b_andernach = {
-				}
-				b_trier = {
-				}
-				b_coblenz = {
-				}
-				b_sponheim = {
-				}
-				b_wittlich = {
-				}
-				b_gerolstein = {
-				}
-				b_laach = {
-				}
-				b_bitburg = {
-				}
-			}
-			c_metz = {	
-				color={ 114 114 114 }
-				color2={ 255 255 255 }
-			
-				b_metz = {
-				}
-				b_thionville = {
-				}
-				b_saintjulien = {
-				}
-				b_marslatour = {
-				}
-				b_bouzonville = {
-				}
-				b_briey = {
-				}
-				b_joudreville = {
-				}
-				b_audunleroman = {
-				}
-			}
-		}		
-		d_upper_lorraine = {
-			color={ 190 150 187 }
-			color2={ 255 255 255 }
-			
-			capital = 127 #Lorraine	
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_verdun = {
-				color={ 111 111 111 }
-				color2={ 255 255 255 }
-			
-				b_verdun = {
-				}
-				b_grandpre = {
-				}
-				b_barleduc = {
-				}
-				b_vaucouleurs = {
-				}
-				b_barlecomte = {
-				}
-				b_saintmihel = {
-				}
-				b_longuyon = {
-				}
-				b_doaumont = {
-				}
-			}
-			c_lorraine = {
-				color={ 108 108 108 }
-				color2={ 255 255 255 }
-			
-				b_nancy = {
-				}
-				b_toul = {
-				}
-				b_sarrebourg = {
-				}
-				b_epinal = {
-				}
-				b_luneville = {
-				}
-				b_charpeigne = {
-				}
-				b_mortagnedevosges = {
-				}
-				b_saintavoid = {
-				}
-			}
-			c_saintois = {
-				color={ 105 105 105 }
-				color2={ 255 255 255 }
-		
-				b_saintois = {
-				}
-				b_vaudemont = {
-				}
-				b_brixey = {
-				}
-				b_sorcystmartin = {
-				}
-				b_ivios = {
-				}
-				b_ornois = {
-				}
-				b_saulnois = {
-				}
-				b_dompaire = {
-				}
-			}
-		}		
-		d_luxembourg = {
-			color={ 102 97 150 }
-			color2={ 255 255 255 }
-			
-			capital = 115 #Luxembourg
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_luxembourg = {
-				color={ 147 147 147 }
-				color2={ 255 255 255 }
-			
-				b_luxembourg = {
-				}
-				b_bouillon = {
-				}
-				b_saintvith = {
-				}
-				b_arlon = {
-				}
-				b_neufchateau = {
-				}
-				b_longwy = {
-				}
-				b_differdange = {
-				}
-				b_ettelbruck = {
-				}
-			}
-			c_liege = {
-				color={ 144 144 144 }
-				color2={ 255 255 255 }
-			
-				b_liege = {
-				}
-				b_bastogne = {
-				}
-				b_namur = {
-				}
-				b_huy = {
-				}
-				b_laroche = {
-				}
-				b_cine = {
-				}
-				b_salm = {
-				}
-				b_stavelot = {
-				}
-			}
-		}
-		d_kleve = {
-			color={ 232 232 107 }
-			color2={ 255 255 255 }
-			
-			gain_effect = { character_event = { id = 110017 } }		
-		
-			c_kleve = {
-				color={ 132 132 132 }
-				color2={ 255 255 255 }
-		
-				b_kleve = {
-				}
-				b_goch = {
-				}
-				b_rees = {
-				}
-				b_anholt = {
-				}
-				b_Xanten = {
-				}
-				b_wesel = {
-				}
-				b_emmerich = {
-				}
-				b_isselburg = {
-				}
-			}			
-			c_julich = {
-				color={ 138 138 138 }
-				color2={ 255 255 255 }
-			
-				b_julich = {
-				}
-				b_aachen = {
-				}
-				b_prum = {
-				}
-				b_geldern = {
-				}
-				b_roermond = {
-				}
-				b_duren = {
-				}
-				b_moers = {
-				}
-				b_monschau = {
-				}
-			}			
-			c_loon = {
-				color={ 147 146 140 }
-				color2={ 255 255 255 }
-			
-				b_loon = {
-				}
-				b_maastricht = {
-				}
-				b_hasselt = {
-				}
-				b_valkenburg = {
-				}
-				b_heinsberg = {
-				}
-				b_hesbaie = {
-				}
-				b_wassenberg = {
-				}
-				b_tongeren = {
-				}
-			}		
-		}
-		d_holland = {
-			color={ 200 145 145 }
-			color2={ 255 255 255 }
-		
-			capital = 80 #Holland
-			
-			culture = dutch
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_holland = {
-				color={ 168 168 168 }
-				color2={ 255 255 255 }
-			
-				b_haarlem = {
-				}
-				b_amsterdam = {
-				}
-				b_vlaardingen = {
-				}
-				b_sgravenhage = {
-				}
-				b_dordrecht = {
-				}
-				b_gouda = {
-				}
-				b_leiden = {
-				}
-				b_muiden = {
-				}
-			}
-			c_sticht = {
-				color={ 156 156 156 }
-				color2={ 255 255 255 }
-			
-				b_woerden = {
-				}
-				b_utrecht = {
-				}
-				b_dorestad = {
-				}
-				b_gorinchem = {
-				}
-				b_zeist = {
-				}
-				b_buren = {
-				}
-				b_ijsselstein = {
-				}
-				b_oudewater = {
-				}
-			}
-			c_westfriesland = {
-				color={ 40 40 40 }
-				color2={ 255 255 255 }
-			
-				b_alkmaar = {
-				}
-				b_hoorn = {
-				}
-				b_medemblik = {
-				}
-				b_enkhuizen = {
-				}
-				b_heerhugowaard = {
-				}
-				b_texel = {
-				}
-				b_egmond = {
-				}
-				b_schagen = {
-				}
-			}
-			c_zeeland = {
-				color={ 165 165 165 }
-				color2={ 255 255 255 }
-			
-				b_middelburg = {
-				}
-				b_tholen = {
-				}
-				b_veere = {
-				}
-				b_cadzand = {
-				}
-				b_vlissingen = {
-				}
-				b_renesse = {
-				}
-				b_borsele = {
-				}
-				b_zierikzee = {
-				}
-			}
-		}
-		d_gelre = {
-			color = { 139  66  97 }
-			color2={ 255 255 220 }
-			
-			capital = 83 #Gelre
-			
-			culture = dutch
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_gelre = {
-				color={ 159 159 159 }
-				color2={ 255 255 255 }
-			
-				b_nijmegen = {
-				}
-				b_zutphen = {
-				}
-				b_deventer = {
-				}
-				b_arnhem = {
-				}
-				b_zwolle = {
-				}
-				b_kampen = {
-				}
-				b_bergh = {
-				}
-				b_bronckhorst = {
-				}
-			}			
-			c_ostfriesland = {
-				color={ 162 162 162 }
-				color2={ 255 255 255 }
-			
-				b_emden = {
-				}
-				b_aurich = {
-				}
-				b_borkum = {
-				}
-				b_norden = {
-				}
-				b_norderney = {
-				}
-				b_leer = {
-				}
-				b_wittmund = {
-				}
-				b_esens = {
-				}
-			}
-			c_frisia = {
-				color={ 160 160 160 }
-				color2={ 255 255 255 }
-			
-				b_groningen = {
-				}
-				b_leeuwarden = {
-				}
-				b_stavoren = {
-				}
-				b_bolsward = {
-				}
-				b_franeker = {
-				}
-				b_dokkum = {
-				}
-				b_assen = {
-				}
-				b_harlingen = {
-				}
-			}
-		}
-		d_brabant = {
-			color={ 180 176 176 }
-			color2={ 120 255 255 }
-			
-			capital = 117 #Brabant
-			
-			culture = dutch
-			
-			gain_effect = { character_event = { id = 110017 } }
-		
-			c_brabant = {
-				color={ 153 153 153 }
-				color2={ 255 255 255 }
-			
-				b_leuven = {
-				}
-				b_mechelen = {
-				}
-				b_brussel = {
-				}
-				b_antwerpen = {
-				}
-				b_aarschot = {
-				}
-				b_grimbergen = {
-				}
-				b_herstal = {
-				}
-				b_lier = {
-				}
-			}
-			c_hainaut = {
-				color={ 151 152 153 }
-				color2={ 255 255 255 }
-			
-				b_valenciennes = {
-				}
-				b_cambrai = {
-				}
-				b_avesnes = {
-				}
-				b_mons = {
-				}
-				b_chievres = {
-				}
-				b_enghien = {
-				}
-				b_charleroi = {
-				}
-				b_ath = {
-				}
-			}
-			c_breda = {
-				color={ 150 150 150 }
-				color2={ 255 255 255 }
-			
-				b_breda = {
-				}
-				b_shertogenbosch = {
-				}
-				b_tilburg = {
-				}
-				b_willemstad = {
-				}
-				b_bergenopzoom = {
-				}
-				b_cuijck = {
-				}
-				b_ravenstein = {
-				}
-				b_horn = {
-				}
-			}
-		}
-}	
-	
-	k_germany = {
-		color={ 160 95 95 }
-		color2={ 220 220 20 }
-		
-		culture = german
-		
-		capital = 121 #Nassau
-		
-		catholic = 10 #Crusade target weight
-		
-		allow = {
-			NOT = { e_hre = { holder_scope = { character = ROOT } } }
-			NOT = { religion_group = muslim }
-		}		
-		
-		d_holstein = {
-			color={ 152 225 112 }
-			color2={ 255 255 255 }
-		
-			capital = 263 #Holstein
-			
-			gain_effect = { character_event = { id = 110017 } }
-		
-			c_hamburg = {
-				color={ 225 225 225 }
-				color2={ 255 255 255 }
-			
-				b_hamburg = {
-				}
-				b_altona = {
-				}
-				b_harburg = {
-				}
-				b_brunsbuttel = {
-				}
-				b_buxtehude = {
-				}
-				b_dithmarschen = {
-				}
-				b_niendorf = {
-				}
-				b_lokstedt = {
-				}
-			}
-			c_lubeck = {
-				color={ 142 142 142 }
-				color2={ 255 255 255 }
-				
-				b_lubeck = {
-				}
-				b_ratzeburg = {
-				}
-				b_travemunde = {
-				}
-				b_wulfsdorf = {
-				}
-				b_schlutup = {
-				}
-				b_starigard = {
-				}
-				b_weslo = {
-				}
-				b_bucu = {
-				}
-			}
-			c_holstein = {
-				color={ 219 219 219 }
-				color2={ 255 255 255 }
-				
-				b_kiel = {
-				}
-				b_gottorp = {
-				}
-				b_itzehoe = {
-				}
-				b_reinholdsburg = {
-				}
-				b_elmshorn = {
-				}
-				b_gluckstadt = {
-				}
-				b_lauenburg = {
-				}
-				b_segeberg = {
-				}
-			}
-			c_bremen = {
-				color={ 216 216 216 }
-				color2={ 255 255 255 }
-				
-				b_bremen = {
-				}
-				b_hoya = {
-				}
-				b_verden = {
-				}
-				b_stade = {
-				}
-				b_blumenthal = {
-				}
-				b_ritzebuttel = {
-				}
-				b_achim = {
-				}
-				b_beverstedt = {
-				} 
-			}
-		}
-		d_koln = {
-			color={ 213 216 212 }
-			color2={ 255 255 255 }
-			
-			capital = 119 #Köln
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_koln = {
-				color={ 141 141 141 }
-				color2={ 255 255 255 }
-			
-				b_koln = {
-				}
-				b_berg = {
-				}
-				b_mark = {
-				}
-				b_bonn = {
-				}
-				b_dietz = {
-				}
-				b_saffenburg = {
-				}
-				b_hochstaden = {
-				}
-				b_brauweiler = {
-				}
-			}
-			c_munster = {
-				color={ 212 212 212 }
-				color2={ 255 255 255 }
-				
-				b_munster = {
-				}
-				b_dortmund = {
-				}
-				b_essen = {
-				}
-				b_greven = {
-				}
-				b_gutersloh = {
-				}
-				b_steinfurt = {
-				}
-				b_gronau = {
-				}
-				b_ahlen = {
-				}
-			}
-			c_gottingen = {
-				color={ 210 210 210 }
-				color2={ 255 255 255 }
-				
-				b_gottingen = {
-				}
-				b_corvey = {
-				}
-				b_lippe = {
-				}
-				b_kassel = {
-				}
-				b_goslar = {
-				}
-				b_northeim = {
-				}
-				b_eisenach = {
-				}
-				b_detmold = {
-				}
-			}			
-		}		
-		d_saxony = {
-			color={ 164 162 195 }
-			color2={ 70 255 255 }
-			
-			capital = 256
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_plauen = {
-				color={ 180 180 180 }
-				color2={ 255 255 255 }
-				
-				b_plauen = {
-				}
-				b_leipzig = {
-				}
-				b_merseburg = {
-				}
-				b_halle = {
-				}
-				b_knobelsdorf = {
-				}
-				b_zeitz = {
-				}
-				b_zwickau = {
-				}
-				b_naumburg = {
-				}
-			}
-			c_weimar = {
-				color={ 183 183 183 }
-				color2={ 255 255 255 }
-				
-				b_weimar = {
-				}
-				b_jena = {
-				}
-				b_walkenried = {
-				}
-				b_nordhausen = {
-				}
-				b_memelsen = {
-				}
-				b_gotha = {
-				}
-				b_apoldoa = {
-				}
-				b_gera = {
-				}
-			}
-		}
-		d_pommerania = {
-			color={ 111 143 51 }
-			color2={ 255 255 255 }
-
-			capital = 366 # Stettin
-
-			gain_effect = { character_event = { id = 110017 } }
-
-			c_wolgast = {
-				color={ 51 243 51 }
-				color2={ 255 255 255 }
-
-				b_wolgast = {
-				}
-				b_usedom = {
-				}
-				b_anklam = {
-				}
-				b_ueckermunde = {
-				}
-				b_zinnowitz = {
-				}
-				b_zussow = {
-				}
-				b_kemnitz = {
-				}
-				b_eggesin = {
-				}
-			}
-			c_stettin = {
-				color={ 51 213 51 }
-				color2={ 255 255 255 }
-
-				b_soldin = {
-				}
-				b_stettin = {
-				}
-				b_wollin = {
-				} 
-				b_stestargard = {
-				}
-				b_kammin = {
-				}
-				b_kolbatz = {
-				}
-				b_cedene = {
-				}
-				b_pyritz = {
-				}
-			}
-			c_rugen = {
-				color={ 201 201 201 }
-				color2={ 255 255 255 }
-				
-				b_charenza = {
-				}
-				b_arkona = {
-				}
-				b_rugard = {
-				}
-				b_putbus = {
-				}
-				b_barth = {
-				}
-				b_ralswiek = {
-				}
-				b_hiddensee = {
-				}
-				b_tribuzin = {
-				}
-			}			
-		}		
-		d_mecklemburg = {
-			color={ 162 160 110 }
-			color2={ 255 167 255 }
-			
-			capital = 260 #mecklemburg
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_mecklemburg = {
-				color={ 207 207 207 }
-				color2={ 255 255 255 }
-				
-				b_mecklemburg = {
-				}
-				b_wismar = {
-				}
-				b_gevezin = {
-				}
-				b_schwerin = {
-				}
-				b_lutzow = {
-				}
-				b_grevesmuhlen = {
-				}
-				b_parchim = {
-				}
-				b_hagenow = {
-				}
-			}
-			c_rostock = {
-				color={ 204 204 204 }
-				color2={ 255 255 255 }
-				
-				b_rostock = {
-				}
-				b_penzlin = {
-				}
-				b_gustrow = {
-				}
-				b_malchin = {
-				}
-				b_damgarten = {
-				}
-				b_strelitz = {
-				}
-				b_stargard = {
-				}
-				b_ahrensberg = {
-				}
-			}
-			c_werle = {
-				color={ 202 202 202 }
-				color2={ 255 255 255 }
-				
-				b_waren = {
-				}
-				b_greifswald = {
-				}
-				b_stralsund = {
-				}
-				b_tribsees = {
-				}
-				b_demmin = {
-				}
-				b_treptow = {
-				}
-				b_friedland = {
-				}
-				b_templin = {
-				}
-			}
-		}
-		d_brunswick = {
-			color={ 183 172 172 }
-			color2={ 97 255 255 }
-		
-			capital = 258 #Lüneburg
-			
-			gain_effect = { character_event = { id = 110017 } }
-		
-			c_celle = {
-				color={ 198 198 198 }
-				color2={ 255 255 255 }
-				
-				b_celle = {
-				}
-				b_hannover = {
-				}
-				b_herford = {
-				}
-				b_hermannsburg = {
-				}
-				b_ravensberg = {
-				}
-				b_nienburg = {
-				}
-				b_wedemark = {
-				}
-				b_wittingen = {
-				}
-			}
-			c_luneburg = {
-				color={ 195 195 195 }
-				color2={ 255 255 255 }
-				
-				b_luneburg = {
-				}
-				b_bardowick = {
-				}
-				b_gifhorn = {
-				}
-				b_evern = {
-				}
-				b_reppenstedt = {
-				}
-				b_ludersburg = {
-				}
-				b_thomasburg = {
-				}
-				b_uelzen = {
-				}
-			}
-			c_braunschweig = {
-				color={ 192 192 192 }
-				color2={ 255 255 255 }
-				
-				b_braunschweig = {
-				}
-				b_bielefeld = {
-				}
-				b_paderborn = {
-				}
-				b_hildesheim = {
-				}
-				b_waldeck = {
-				}
-				b_wolfenbuttel = {
-				}
-				b_helmstedt = {
-				}
-				b_gandersheim = {
-				}
-			}
-			c_oldenburg = {
-				color={ 214 214 214 }
-				color2={ 255 255 255 }
-				
-				b_oldenburg = {
-				}
-				b_cloppenburg = {
-				}
-				b_jever = {
-				}
-				b_delmenhorst = {
-				}
-				b_loningen = {
-				}
-				b_nordenham = {
-				}
-				b_kniphausen = {
-				}
-				b_varel = {
-				}
-			}
-			c_osnabruck = {
-				color={ 213 213 213 }
-				color2={ 255 255 255 }
-				
-				b_osnabruck = {
-				}
-				b_lingen = {
-				}
-				b_bentheim = {
-				}
-				b_wildeshausen = {
-				}
-				b_tecklenburg = {
-				}
-				b_minden = {
-				}
-				b_quackenbruck = {
-				}
-				b_meppen = {
-				}
-			}
-		}
-		d_brandenburg = {
-			color={ 175 121 200 }
-			color2={ 255 255 255 }
-			
-			capital = 365 #Brandenburg
-			
-			gain_effect = { character_event = { id = 110017 } }
-		
-			c_altmark = {
-				color={ 189 189 189 }
-				color2={ 255 255 255 }
-				
-				b_werben = {
-				}
-				b_halberstedt = {
-				}
-				b_walbeck = {
-				}
-				b_luchow = {
-				}
-				b_salzwedel = {
-				}
-				b_stendal = {
-				}
-				b_osterburg = {
-				}
-				b_tangermunde = {
-				}
-			}
-			c_anhalt = {
-				color={ 184 184 184 }
-				color2={ 255 255 255 }
-				
-				b_zerbst = {
-				}
-				b_magdeburg = {
-				}
-				b_haldensleben = {
-				}
-				b_mansfeld = {
-				}
-				b_dessau = {
-				}
-				b_arnstein = {
-				}
-				b_querfurt = {
-				}
-				b_bernburg = {
-				}
-			}			
-			c_brandenburg = {
-				color={ 186 186 186 }
-				color2={ 255 255 255 }
-				
-				b_brandenburg = {
-				}
-				b_havelberg = {
-				}
-				b_berlin = {
-				}
-				b_juterborg = {
-				}
-				b_belzig = {
-				}
-				b_ruppin = {
-				}
-				b_oranienburg = {
-				}
-				b_muncheberg = {
-				}
-			}
-		}
-		d_meissen = {
-			color={ 182 18 181 }
-			color2={ 25 255 255 }
-			
-			capital = 312 #Meissen
-			
-			gain_effect = { character_event = { id = 110017 } }
-		
-			c_meissen = {
-				color={ 177 177 177 }
-				color2={ 255 255 255 }
-				
-				b_dresden = {
-				}
-				b_meissen = {
-				}
-				b_dohna = {
-				}
-				b_belgern = {
-				}
-				b_strehla = {
-				}
-				b_rabenau = {
-				}
-				b_wettin = {
-				}
-				b_radeburg = {
-				}
-			}
-			c_lausitz = {
-				color={ 174 174 174 }
-				color2={ 255 255 255 }
-				
-				b_gorlitz = {
-				}
-				b_bautzen = {
-				} 
-				b_lebus = {
-				}
-				b_cottbus = {
-				}
-				b_rothenburg = {
-				}
-				b_forst = {
-				}
-				b_zittau = {
-				}
-				b_luckau = {
-				}
-			}
-		}
-		d_thuringia = {
-			color={ 207 206 26 }
-			color2={ 255 25 255 }
-		
-			capital = 255 #Thuringen
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_thuringen = {
-				color={ 42 42 42 }
-				color2={ 255 255 255 }
-			
-				b_erfurt = {
-				}
-				b_muhlhausen = {
-				}
-				b_arnstadt = {
-				}
-				b_eichsfeld = {
-				}
-				b_reuss = {
-				}
-				b_salzungen = {
-				}
-				b_schmalkalden = {
-				}
-				b_henneberg = {
-				}
-			}
-			c_nassau = {
-				color={ 171 171 171 }
-				color2={ 255 255 255 }
-			
-				b_nassau = {
-				}
-				b_fulda = {
-				}
-				b_wetzlar = {
-				}
-				b_marburg = {
-				}
-				b_katzenelnbogen = {
-				}
-				b_hersfeld = {
-				}
-				b_falkenstein = {
-				}
-				b_isenburg = {
-				}
-			}
-		}		
-		d_franconia = {
-			color={ 100 9 170 }
-			color2={ 255 255 255 }
-			
-			gain_effect = { character_event = { id = 110017 } }
-
-			c_mainz = {
-				color={ 129 129 129 }
-				color2={ 255 255 255 }
-			
-				b_mainz = {
-				}
-				b_frankfurt = {
-				}
-				b_eppstein = {
-				}
-				b_ingelheim = {
-				}
-				b_mannheim = {
-				}
-				b_weilburg = {
-				}
-				b_dornburg = {
-				}
-				b_hanau = {
-				}
-			}		
-			c_leiningen = {
-				color={ 126 126 126 }
-				color2={ 255 255 255 }
-			
-				b_leiningen = {
-				}
-				b_heidelberg = {
-				}
-				b_lorsch = {
-				}
-				b_durkheim = {
-				}
-				b_battenberg = {
-				}
-				b_hardenburg = {
-				}
-				b_ungstein = {
-				}
-				b_pfeffingen = {
-				}
-			}
-			c_wurzburg = {
-				color={ 123 123 123 }
-				color2={ 255 255 255 }
-			
-				b_wurzburg = {
-				}
-				b_aschaffenburg = {
-				}
-				b_schweinfurt = {
-				}
-				b_marienberg = {
-				}
-				b_hammelburg = {
-				}
-				b_schwarzenberg = {
-				}
-				b_theiheim = {
-				}
-				b_mainderheim = {
-				}
-			}
-			c_bamberg = {
-				color={ 120 120 120 }
-				color2={ 255 255 255 }
-			
-				b_ansbach = {
-				}
-				b_bamberg = {
-				}
-				b_babenberg = {
-				}
-				b_cadolzburg = {
-				}
-				b_colmberg = {
-				}
-				b_roth = {
-				}
-				b_uffenheim = {
-				}
-				b_crailsheim = {
-				}
-			}
-		}
-		d_baden = { 
-			color={ 115 149 109 }
-			color2={ 255 255 255 }
-			
-			capital = 125 #Baden
-			
-			gain_effect = { character_event = { id = 110017 } }
-		
-			c_baden = {
-				color={ 102 102 102 }
-				color2={ 255 255 255 }
-			
-				b_baden = {
-				}
-				b_karlsruhe = {
-				}
-				b_wimpfen = {
-				}
-				b_calw = {
-				}
-				b_pforzheim = {
-				}
-				b_durlach = {
-				}
-				b_rastatt = {
-				}
-				b_neuhausen = {
-				}
-			}
-			c_breisgau = {
-				color={ 105 94 105 }
-				color2={ 255 255 255 }
-		
-				b_freiburg = {
-				}
-				b_stblasien = {
-				}
-				b_offenburg = {
-				}
-				b_zahringen = {
-				}
-				b_lahr = {
-				}
-				b_lohrrach = {
-				}
-				b_breisach = {
-				}
-				b_rottweil = {
-				}
-			}
-		}
-		d_swiss = {
-			color = { 255 1 1 }
-			color2={ 255 255 255 }
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_schwyz = {
-				color={ 167 28 66 }
-				color2={ 255 255 255 }
-
-				b_schwyz = {
-				}
-				b_engelberg = {
-				}
-				b_zurich = {
-				}
-				b_zug = {
-				}
-				b_altdorf = {
-				}
-				b_stans = {
-				}
-				b_glarus = {
-				}
-				b_winterthur = {
-				}
-			}			
-			c_grisons = {
-				color={ 255 241 230 }
-				color2={ 255 255 255 }
-
-				b_bellinzona = {
-				}
-				b_disentis = {
-				}
-				b_locarno = {
-				}
-				b_biasca = {
-				}
-				b_domo = {
-				}
-				b_lugano = {
-				}
-				b_musso = {
-				}
-				b_mendrisio = {
-				}
-			}			
-			c_st_gallen = {
-				color={ 85 80 85 }
-				color2={ 255 255 255 }
-		
-				b_rheineck = {
-				}
-				b_stgallen = {
-				}
-				b_appenzell = {
-				}
-				b_frauenfeld = {
-				}
-				b_altstatten = {
-				}
-				b_lichtensteig = {
-				}
-				b_vaduz = {
-				}
-				b_herisau = {
-				}
-			}
-			c_chur = {
-				color={ 87 87 87 }
-				color2={ 255 255 255 }
-			
-				b_chur = {
-				}
-				b_churwalden = {
-				}
-				b_davos = {
-				}
-				b_maienfeld = {
-				}
-				b_illanz = {
-				}
-				b_thusis = {
-				}
-				b_glurns = {
-				}
-				b_zuoz = {
-				}
-			}			
-		}		
-		d_tyrol = {  
-			color={ 197 154 154 }
-			color2={ 255 255 255 }
-			
-			capital = 316 #Tirol
-			
-			gain_effect = { character_event = { id = 110017 } }
-		
-			c_tirol = {
-				color={ 90 90 90 }
-				color2={ 255 255 255 }
-			
-				b_bregenz = {
-				}
-				b_landeck = {
-				}
-				b_stanton = {
-				}
-				b_imst = {
-				}
-				b_sterzing = {
-				}
-				b_ried = {
-				}
-				b_dornbirn = {
-				}
-				b_nenzing = {
-				}
-			}
-			c_innsbruck = {
-				color={ 84 84 84 }
-				color2={ 255 255 255 }
-			
-				b_innsbruck = {
-				}
-				b_kufstein = {
-				}
-				b_stams = {
-				}
-				b_lienz = {
-				}
-				b_schwaz = {
-				}
-				b_kitzbuhel = {
-				}
-				b_jenbach = {
-				}
-				b_fugen = {
-				}
-			}
-		}
-		d_swabia = {
-			color={ 246 203 203 }
-			color2={ 255 255 255 }
-			
-			capital = 249 #Schwaben
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_schwaben = {
-				color={ 81 81 81 }
-				color2={ 255 255 255 }
-			
-				b_tubingen = {
-				}
-				b_konstanz = {
-				}
-				b_heiligenberg = {
-				}
-				b_uberlingen = {
-				}
-				b_hohenberg = {
-				}
-				b_friedrichshafen = {
-				}
-				b_wangen = {
-				}
-				b_lindau = {
-				}
-			}
-			c_ulm = {
-				color={ 78 78 78 }
-				color2={ 255 255 255 }
-			
-				b_ulm = {
-				}
-				b_zwiefalten = {
-				}
-				b_teck = {
-				}
-				b_biberach = {
-				}
-				b_memmingen = {
-				}
-				b_isny = {
-				}
-				b_goppingen = {
-				}
-				b_erbach = {
-				}
-			}
-			c_furstenberg = {
-				color={ 75 75 75 }
-				color2={ 255 255 255 }
-			
-				b_furstenberg = {
-				}
-				b_villingen = {
-				}
-				b_hirsau = {
-				}
-				b_baar = {
-				}
-				b_haslach = {
-				}
-				b_zollern = {
-				}
-				b_wolfach = {
-				}
-				b_donaueschingen = {
-				}
-			}
-			c_wurttemberg = {
-				color={ 72 72 72 }
-				color2={ 255 255 255 }
-			
-				b_stuttgart = {
-				}
-				b_heilbronn = {
-				}
-				b_reutlingen = {
-				}
-				b_waiblingen = {
-				}
-				b_esslingen = {
-				}
-				b_gmund = {
-				}
-				b_staufen = {
-				}
-				b_katzenstein = {
-				}
-			}
-		}
-		d_bavaria = {
-			color={ 18 121 121 }
-			color2={ 255 255 255 }
-			
-			capital = 360 #Oberbayern
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			c_kempten = {
-				color={ 69 69 69 }
-				color2={ 255 255 255 }
-			
-				b_kempten = {
-				}
-				b_augsburg = {
-				}
-				b_zumarshausen = {
-				}
-				b_kaufbeuren = {
-				}
-				b_donauworth = {
-				}
-				b_friedberg = {
-				}
-				b_hochstadt = {
-				}
-				b_rain = {
-				}
-			}
-			c_oberbayern = {
-				color={ 66 66 66 }
-				color2={ 255 255 255 }
-			
-				b_munchen = {
-				}
-				b_dachau = {
-				}
-				b_freising = {
-				}
-				b_andechs = {
-				}
-				b_diessen = {
-				}
-				b_dingolfing = {
-				}
-				b_pfaffenberg = {
-				}
-				b_ebersberg = {
-				}
-			}
-			c_niederbayern = {
-				color={ 60 60 60 }
-				color2={ 255 255 255 }
-		
-				b_straubing = {
-				}
-				b_regensburg = {
-				}
-				b_landshut = {
-				}
-				b_ingolstadt = {
-				}
-				b_wittelsbach = {
-				}
-				b_cham = {
-				}
-				b_rohrbach = {
-				}
-				b_kirchroth = {
-				}
-			}
-			c_nurnberg = {
-				color={ 57 57 57 }
-				color2={ 255 255 255 }
-		
-				b_nurnberg = {
-				}
-				b_ellwangen = {
-				}
-				b_furth = {
-				}
-				b_kulmbach = {
-				}
-				b_hohenburg = {
-				}
-				b_nordlingen = {
-				}
-				b_eichstatt = {
-				}
-				b_erlangen = {
-				}
-			}
-		}
-		d_osterreich = { 
-			color={ 191 182 182 }
-			color2={ 255 255 25 }
-			
-			capital = 449 #Österreich
-			
-			gain_effect = { character_event = { id = 110017 } }
-
-			c_salzburg = {
-				color={ 63 63 63 }
-				color2={ 255 255 255 }
-			
-				b_salzburg = {
-				}
-				b_durmberg = {
-				}
-				b_waging = {
-				}
-				b_berchtesgaden = {
-				}
-				b_tittmoning = {
-				}
-				b_laufen = {
-				}
-				b_muhldorf = {
-				}
-				b_gastein = {
-				}
-			}		
-			c_passau = {
-				color={ 54 54 54 }
-				color2={ 255 255 255 }
-		
-				b_passau = {
-				}
-				b_ortenburg = {
-				}
-				b_schaumberg = {
-				}
-				b_formbach = {
-				}
-				b_ulrichsberg = {
-				}
-				b_freistadt = {
-				}
-				b_raab = {
-				}
-				b_freyung = {
-				}
-			}
-			c_znojmo = {
-				color={ 51 51 51 }
-				color2={ 255 255 255 }
-		
-				b_mikulov = {
-				}
-				b_iglau = {
-				}
-				b_lundenburg = {
-				}
-				b_skalitz = {
-				}
-				b_trebic = {
-				}
-				b_eibenshitz = {
-				}
-				b_znojmo = {
-				}
-				b_ivancice = {
-				}
-			}
-			c_osterreich = {
-				color={ 48 48 48 }
-				color2={ 255 255 255 }
-			
-				b_wien = {
-				}
-				b_linz = {
-				}
-				b_melk = {
-				}
-				b_stpolten = {
-				}
-				b_hohenwarth = {
-				}
-				b_wagram = {
-				}
-				b_krems = {
-				}
-				b_steyr = {
-				}
-			}
-			c_steiermark = {
-				color={ 45 45 45 }
-				color2={ 255 255 255 }
-				
-				b_eppenstein = {
-				}
-				b_graz = {
-				}
-				b_lavant = {
-				}
-				b_cilli = {
-				}
-				b_seckau = {
-				}
-				b_leibnitz = {
-				}
-				b_radkersburg = {
-				}
-				b_stubing = {
-				}
-			}
-		}
-	}
-
-	k_bohemia = {
-        color={ 176 110 32 }
-        color2={ 255 255 255 }
-        
-        culture = bohemian
-        
-        capital = 437 # Praha
-        
-        catholic = 10 #Crusade target weight
-        
-	allow = {
-		NOT = { e_hre = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
-	}        
-        
-        d_bohemia = {
-            color={ 195 110 11 }
-            color2={ 255 255 255 }
-            
-            capital = 437 # Praha
-            
-            gain_effect = { character_event = { id = 110017 } }
-            
-            c_domazlice = {
-                color={ 197 112 13 }
-                color2={ 255 255 255 }
-                
-                b_pisek = {
-                }
-                b_kladruby = {
-                }
-                b_budejovice = {
-                }
-                b_domazlice = {
-                }
-                b_hohenfurth = {
-                }
-                b_rosenberg = {
-                }
-                b_goldenkron = {
-                }
-                b_sobeslav = {
-                }
-            }
-            c_praha = {
-                color={ 199 114 15 }
-                color2={ 255 255 255 }
-                
-                b_praha = {
-                }
-                b_brevnov = {
-                }
-                b_kuttenberg = {
-                }
-                b_karlstein = {
-                }
-                b_slany = {
-                }
-                b_kolin = {
-                }
-                b_stare_mesto = {
-                }
-                b_zbraslav = {
-                }
-            }
-            c_boleslav = {
-                color={ 201 116 17 }
-                color2={ 255 255 255 }
-                
-                b_glatz = {
-                }
-                b_nachod = {
-                }
-                b_hradiste = {
-                }
-                b_jicin = {
-                }
-                b_trutnov = {
-                }
-                b_kamieniec = {
-                }
-                b_jaromer = {
-                }
-                b_turnov = {
-                }
-            }
-            c_litomerice = {
-                color={ 203 118 19 }
-                color2={ 255 255 255 }
-                
-                b_usti = {
-                }
-                b_zatec = {
-                }
-                b_jachymov = {
-                }
-                b_kadan = {
-                }
-                b_ceskalipa = {
-                }
-                b_duchcov = {
-                }
-                b_chomutov = {
-                }
-                b_osek = {
-                }
-            }
-            c_plzen = {
-                color={ 205 120 21 }
-                color2={ 255 255 255 }
-                
-                b_plzen = {
-                }
-                b_stribo = {
-                }
-                b_rokycany = {
-                }
-                b_plasy = {
-                }
-                b_pomuk = {
-                }
-                b_susice = {
-                }
-                b_tachov = {
-                }
-                b_cheb = {
-                }
-            }
-        }
-        d_moravia = {
-            color={ 157 101 35 }
-            color2={ 255 255 255 }
-            
-            capital = 440 # Olomouc
-            
-            gain_effect = { character_event = { id = 110017 } }
-            
-            c_hradec = {
-                color={ 160 104 38 }
-                color2={ 255 255 255 }
-                
-                b_hradeckralove = {
-                }
-                b_pardubice = {
-                }
-                b_litomysl = {
-                }
-                b_zamberk = {
-                }
-                b_policka = {
-                }
-                b_jihlava = {
-                }
-                b_pelhrimov = {
-                }
-                b_chrudim = {
-                }
-            }
-            c_olomouc = {
-                color={ 163 107 41 }
-                color2={ 255 255 255 }
-                
-                b_opava = {
-                }
-                b_olomouc = {
-                }
-                b_sternberk = {
-                }
-                b_ostrava = {
-                }
-                b_zabreh = {
-                }
-                b_moravskatrebova = {
-                }
-                b_zdar = {
-                }
-                b_unicov = {
-                }
-            }
-            c_brno = {
-                color={ 166 110 44 }
-                color2={ 255 255 255 }
-                
-                b_boskovice = {
-                }
-                b_prerov = {
-                }
-                b_velehrad = {
-                }
-                b_wisowitz = {
-                }
-                b_uherskebrod = {
-                }
-                b_uherskehradiste = {
-                }
-                b_kromeriz = {
-                }
-                b_zlin = {
-                }
-            }
-        }
-    }
-}
-
-e_italy = {
-	color = { 125  171  84 }
-	culture = italian
-	capital = 333
-	short_name = yes
-	
-	allow = {
-		e_italy = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-		NOT = { religion_group = muslim }		
-	}
-	
 
 	k_sicily = {
 		color={ 175 244 86 }
@@ -7260,10 +7257,19 @@ e_italy = {
 		culture = italian
 		
 		sunni = 10 #Crusade target weight
-		catholic = 10 #Crusade target weight
+		catholic = 10 #Crusade target weight	
 		
-		allow = {
-			NOT = { e_italy = { holder_scope = { character = ROOT } } }
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
 		}		
 		
 		d_benevento = {
@@ -7689,11 +7695,19 @@ k_italy = {
 	
 	catholic = 100 #Crusade target weight
 	
-	allow = {
-		NOT = { e_italy = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
 	}	
-
+	
 	d_carinthia = {
 		color={ 165 255 250 }
 		color2={ 255 255 255 }
@@ -8580,29 +8594,6 @@ k_italy = {
 	}	
 }
 
-}
-
-e_byzantium = {
-	color={ 163 10 145 }
-	color2={ 255 255 20 }
-	
-	capital = 496 #Byzantion
-	
-	short_name = yes
-	
-	culture = greek
-	religion=orthodox
-	
-	allow = {
-		e_byzantium = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-		religion_group = christian		
-	}		
-	
-	
 k_georgia = {
 	color={ 122 26 98 }
 	color2={ 255 255 255 }
@@ -8611,9 +8602,17 @@ k_georgia = {
 	
 	culture = georgian
 	
-	allow = {
-		NOT = { e_byzantium = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
 	}	
 
 	d_kartli = {
@@ -8788,11 +8787,19 @@ k_georgia = {
 		
 		sunni = 10 #Crusade target weight
 		
-		allow = {
-			NOT = { e_byzantium = { holder_scope = { character = ROOT } } }
-			NOT = { religion_group = muslim }
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
 		}		
-
+	
 		d_aegean_islands = {
 			color={ 104 8 103 }
 			color2={ 255 255 20 }
@@ -9453,12 +9460,28 @@ k_georgia = {
 		capital = 750
 		
 		sunni = 10 #Crusade target weight
-		
+
 		allow = {
-			NOT = { e_byzantium = { holder_scope = { character = ROOT } } }
-			NOT = { religion_group = muslim }
+			k_byzantium= { is_titular = no }
+			OR = {
+				NOT = { religion_group = muslim }
+				k_byzantium = { has_holder = no }
+			}
 		}		
-		
+		gain_effect = {
+			hidden_tooltip = { e_papal_state = { holder_scope = { character_event = { id = 110024 } } } }			
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
+
 		d_charsianon = {
 			color={ 237 68 178 }
 			color2={ 255 255 20 }
@@ -10122,12 +10145,28 @@ k_georgia = {
 		
 		sunni = 10 #Crusade target weight
 		
-		culture = armenian
-		
 		allow = {
-			NOT = { e_byzantium = { holder_scope = { character = ROOT } } }
-			NOT = { religion_group = muslim }
-		}		
+			k_armenia = { is_titular = no }
+			OR = {
+				NOT = { religion_group = muslim }
+				k_armenia = { has_holder = no }
+			}
+		}	
+		gain_effect = {
+			hidden_tooltip = { e_papal_state = { holder_scope = { character_event = { id = 110024 } } } }			
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}				
+		
+		culture = armenian	
 	
 		d_armenia = {
 			color={ 159 188 41 }
@@ -10614,25 +10653,6 @@ k_georgia = {
 		}
 	}
 
-}
-
-e_poland_lithuania = {
-	color={ 120 53 53 }
-	color2={ 200 0 0 }
-	
-	capital = 527 # Krakowskie
-	
-	culture = polish
-	short_name = yes
-	
-	allow = {
-		e_poland_lithuania = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-	}	
-
 k_poland = {
 	color={ 150 23 23 }
 	color2={ 200 0 0 }
@@ -10641,11 +10661,20 @@ k_poland = {
 	
 	culture = polish
 	
-	catholic = 10 #Crusade target weight
+	catholic = 1 #Crusade target weight
 	
-	allow = {
-		NOT = { e_poland_lithuania = { holder_scope = { character = ROOT } } }
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 	
 	d_mazovia = {
 		color={ 49 181 44 }
@@ -11088,14 +11117,23 @@ k_lithuania = {
 	
 	capital = 420 # Aukshayts
 	
-	catholic = 10 #Crusade target weight
+	catholic = 25 #Crusade target weight
 	
 	culture = lithuanian
 	
-	allow = {
-		NOT = { e_poland_lithuania = { holder_scope = { character = ROOT } } }
-	}
-		
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+	
 	d_livonia = {
 		color={ 110 50 50 }
 		color2={ 255 255 255 }
@@ -11530,26 +11568,6 @@ k_lithuania = {
 	}
 }
 
-}
-
-e_russia = {
-	color = { 96  131  80 }
-	color2={ 255 255 255 }
-
-	capital = 547 # Kiev
-	
-	culture = russian
-	short_name = yes
-	
-	allow = {
-		e_russia = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-		NOT = { religion_group = muslim }		
-	}
-
 k_rus = {
 	color={ 147 164 104 }
 	color2={ 255 255 255 }
@@ -11558,10 +11576,18 @@ k_rus = {
 	
 	capital = 547 # Kiev
 	
-	allow = {
-		NOT = { e_russia = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
-	}
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 	
 	d_bjarmia = {
 		color={ 100 115 55 }
@@ -12981,13 +13007,22 @@ k_rus = {
 
 k_qazan = {
 	color={ 51 204 51 }
-	color2={ 51 128 204 }
-	
-	allow = {
-		NOT = { e_russia = { holder_scope = { character = ROOT } } }
-	}	
+	color2={ 51 128 204 }	
 	
 	capital = 615 #	Bashkirs
+	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 	
 	d_bulgar = { 
 		color={ 193 158 63 }
@@ -13505,10 +13540,19 @@ k_crimea = {
 	color={ 214 70 0 }
 	color2={ 20 177 255 }
 	
-	capital = 559 # Crimea
+	capital = 559 # Crimea	
 	
-	allow = {
-		NOT = { e_russia = { holder_scope = { character = ROOT } } }
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
 	}	
 	
 	d_crimea = { 
@@ -13960,11 +14004,20 @@ k_khazaria = {
 	color={ 250 184 31 }
 	color2={ 255 255 255 }
 	
-	capital = 620 #	Itil
+	capital = 620 #	Itil		
 	
-	allow = {
-		NOT = { e_russia = { holder_scope = { character = ROOT } } }
-	}		
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 
 	d_saray = {
 		color={ 121 138 40 }
@@ -14416,38 +14469,28 @@ k_khazaria = {
 	}
 }
 
-}
-
-e_persia = {
-	color = { 204  119  31 }
-	color2={ 255 255 255 }
-
-	allow = {
-		e_persia = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-	}
-	
-	capital = 646 #	Esfahan
-	
-	culture = persian
-	short_name = yes
-	
 	k_azerbaijan = {
 		color={ 70 142 20 }
 		color2={ 255 255 255 }	
 		
 		shiite = 10 #Crusade target weight
 		sunni = 10 #Crusade target weight
-		
-		allow = {
-			NOT = { e_persia = { holder_scope = { character = ROOT } } }
-		}
 	
 		capital = 667 #Tabriz
 		culture = persian
+		
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 
 		d_tabriz = {
 			color={ 58 83 130 }
@@ -14693,15 +14736,24 @@ k_persia = {
 	culture = persian
 	
 	shiite = 100 #Crusade target weight
-	sunni = 100 #Crusade target weight	
+	sunni = 100 #Crusade target weight
+	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 	
 	d_bukhara = {
 		color={ 163 241 28 }
-		color2={ 255 255 255 }
-		
-		allow = {
-			NOT = { e_persia = { holder_scope = { character = ROOT } } }
-		}		
+		color2={ 255 255 255 }	
 		
 		gain_effect = { character_event = { id = 110017 } }
 		
@@ -15691,15 +15743,24 @@ k_mesopotamia = {
 	color2={ 255 255 255 }
 	
 	shiite = 100 #Crusade target weight
-	sunni = 1000 #Crusade target weight	
-	
-	allow = {
-		NOT = { e_persia = { holder_scope = { character = ROOT } } }
-	}	
+	sunni = 1000 #Crusade target weight
 	
 	capital	= 693 # Bagdad
 	
 	culture = levantine_arabic
+	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 	
 	d_kermanshah = {
 		color={ 68 105 174 }
@@ -16146,24 +16207,6 @@ k_mesopotamia = {
 	}
 }
 
-}
-
-e_danubia = {
-	color = { 213 0 39 }
-	color2={ 255 255 255 }
-	
-	capital	= 444 # Esztergom
-	short_name = yes
-	
-	allow = {
-		e_danubia = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-		NOT = { religion_group = muslim }		
-	}
-
 	k_serbia = {
 		color={ 113 98 61 }
 		color2={ 255 255 255 }
@@ -16174,11 +16217,19 @@ e_danubia = {
 		
 		capital = 502 # Rashka
 		
-		allow = {
-			NOT = { e_danubia = { holder_scope = { character = ROOT } } }		
-			NOT = { religion_group = muslim }
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
 		}		
-		
+
 		d_rashka = {
 			color={ 168 135 57 }
 			color2={ 255 255 255 }
@@ -16308,11 +16359,19 @@ e_danubia = {
 		
 		culture = croatian
 		
-		capital = 465 # Zadar
+		capital = 465 # Zadar	
 		
-		allow = {
-			NOT = { e_danubia = { holder_scope = { character = ROOT } } }	
-			NOT = { religion_group = muslim }
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
 		}		
 	
 		d_slavonia = {
@@ -16554,18 +16613,27 @@ e_danubia = {
 				}
 			}
 		}
-	}	
+	}
+	
 	k_bulgaria = {
 		color={ 113 88 101 }
 		color2={ 255 255 255 }
 		
 		culture = bulgarian
 		
-		capital = 499 # Tyrnovo
+		capital = 499 # Tyrnovo	
 		
-		allow = {
-			NOT = { e_danubia = { holder_scope = { character = ROOT } } }	
-			NOT = { religion_group = muslim }
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
 		}		
 		
 		d_vidin = {
@@ -16994,11 +17062,19 @@ e_danubia = {
 
 		capital	= 444 # Esztergom
 
-		culture = hungarian
+		culture = hungarian	
 		
-		allow = {
-			NOT = { e_danubia = { holder_scope = { character = ROOT } } }	
-			NOT = { religion_group = muslim }
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
 		}		
 
 		d_pecs = {
@@ -17532,26 +17608,8 @@ e_danubia = {
 			}
 		}
 	}
-}
 
-e_spain = { #Spain
-	color={ 243 209 23 }
-	color2={ 200 80 10 }
-	
-	capital = 199 # Burgos
-	religion = catholic
-	culture = castillan
-	short_name = yes
-	
-	allow = {
-		e_spain = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-		NOT = { religion_group = muslim }		
-	}
-	
+
 	k_navarra = {
 		color = { 150 120 5 }
 		capital = 152 # Navarra
@@ -17561,10 +17619,18 @@ e_spain = { #Spain
 		
 		culture = basque
 		
-		allow = {
-			NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-			NOT = { religion_group = muslim }
-		}
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 	
 		d_navarra = {
 			color = { 230 198 90 }
@@ -17646,14 +17712,31 @@ k_castille = { #Spain
 	capital = 199 # Burgos
 	
 	catholic = 10 #Crusade target weight
-	sunni = 10 #Crusade target weight
-	
-	culture = castillan
+	sunni = 10 #Crusade target weight	
 	
 	allow = {
-		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		NOT = { religion_group = muslim }
+		k_castille = { is_titular = no }
+		OR = {
+			NOT = { religion_group = muslim }
+			k_castille = { has_holder = no }
+		}
+	}
+	
+	gain_effect = {	
+		hidden_tooltip = {
+			e_papal_state = { holder_scope = { character_event = { id = 110024 } } }
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
 	}	
+	
+	culture = castillan	
 	
 	d_castilla = {
 		color = { 242 196 12 }
@@ -17824,17 +17907,34 @@ k_andalusia = {
 	color={ 244 227 160 }
 	color2={ 255 255 255 }
 	
+	allow = {
+		k_andalusia = { is_titular = no }
+		OR = {
+			NOT = { religion_group = muslim }
+			k_andalusia = { has_holder = no }
+		}
+	}
+	
+	gain_effect = {	
+		hidden_tooltip = {
+			e_papal_state = { holder_scope = { character_event = { id = 110024 } } }
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+	
 	capital = 181 # Cordoba
 	
 	catholic = 10 #Crusade target weight
 	sunni = 10 #Crusade target weight
 	
-	culture = andalusian_arabic
-
-	allow = {
-		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		NOT = { religion_group = muslim }
-	}	
+	culture = andalusian_arabic	
 	
 	d_cordoba = {
 		color = { 60 180 12 }
@@ -18139,21 +18239,39 @@ k_andalusia = {
 	}
 }
 
-k_spanish_galicia = {
-	color={ 255 224 94 }
-	capital = 156 # Coruña
+k_leon = {
+	color={ 233 158 51 }
+	color2={ 255 255 255 }
 	
-	culture = portuguese
+	capital = 190 # Leon
 	
 	catholic = 10 #Crusade target weight
 	sunni = 10 #Crusade target weight	
 	
-	# Creation/usurpation trigger
+	culture = castillan
+	
 	allow = {
-		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		NOT = { religion_group = muslim }
+		k_leon = { is_titular = no }
+		OR = {
+			NOT = { religion_group = muslim }
+			k_leon = { has_holder = no }
+		}
 	}
 	
+	gain_effect = {	
+		hidden_tooltip = {
+			e_papal_state = { holder_scope = { character_event = { id = 110024 } } }
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+
 	d_galicia = {
 		color = { 213 158 51 }
 		color2={ 255 255 255 }
@@ -18200,117 +18318,7 @@ k_spanish_galicia = {
 			b_vilagarcia = {
 			}
 		}
-	}
-	
-	d_porto = {
-		color = { 182 108 45 }
-		color2={ 255 255 255 }
-		
-		culture = portuguese
-		
-		c_porto = {
-			color = { 182 88 5 }
-			color2={ 255 255 255 }
-			
-			b_braga = {
-			}
-			b_porto = {
-			}
-			b_guimaraes = {
-			}
-			b_vianadocastelo = {
-			}
-			b_pontedelima = {
-			}
-			b_barcelos = {
-			}
-			b_arcosdevaldevez = {
-			}
-			b_moncao = {
-			}
-		}
-		c_braganza = {
-			color = { 182 98 5 }
-			color2={ 255 255 255 }
-			
-			b_braganza = {
-			}
-			b_chaves = {
-			}
-			b_vilareal = {
-			}
-			b_torredemoncorvo = {
-			}
-			b_mogadouro = {
-			}
-			b_castelomelhor = {
-			}
-			b_castelorodrigo = {
-			}
-			b_azinhoso = {
-			}
-		}
-		c_castelo_branco = {
-			color = { 182 78 5 }
-			color2={ 255 255 255 }
-			
-			b_castelobranco = {
-			}
-			b_guarda = {
-			}
-			b_covilha = {
-			}
-			b_acores = {
-			}
-			b_trancoso = {
-			}
-			b_sabugal = {
-			}
-			b_pinhel = {
-			}
-			b_almeida = {
-			}
-		}
-		c_coimbra = {
-			color = { 182 88 25 }
-			color2={ 255 255 255 }
-			
-			b_coimbra = {
-			}
-			b_viseu = {
-			}
-			b_aveiro = {
-			}
-			b_pedondo = {
-			}
-			b_cantanhede = {
-			}
-			b_condeixa = {
-			}
-			b_montereal = {
-			}
-			b_penela = {
-			}
-		}
-	}
-}
-
-k_leon = {
-	color={ 233 158 51 }
-	color2={ 255 255 255 }
-	
-	capital = 190 # Leon
-	
-	catholic = 10 #Crusade target weight
-	sunni = 10 #Crusade target weight	
-	
-	culture = castillan
-	
-	allow = {
-		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		NOT = { religion_group = muslim }
 	}	
-	
 	d_asturias = {
 		color = { 233 188 91 }
 		color2={ 255 255 255 }
@@ -18535,10 +18543,118 @@ k_portugal = {
 	culture = portuguese
 	
 	allow = {
-		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		NOT = { religion_group = muslim }
+		k_portugal = { is_titular = no }
+		OR = {
+			NOT = { religion_group = muslim }
+			k_portugal = { has_holder = no }
+		}
 	}
 	
+	gain_effect = {	
+		hidden_tooltip = {
+			e_papal_state = { holder_scope = { character_event = { id = 110024 } } }
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}
+
+	d_porto = {
+		color = { 182 108 45 }
+		color2={ 255 255 255 }
+		
+		culture = portuguese
+		
+		c_porto = {
+			color = { 182 88 5 }
+			color2={ 255 255 255 }
+			
+			b_braga = {
+			}
+			b_porto = {
+			}
+			b_guimaraes = {
+			}
+			b_vianadocastelo = {
+			}
+			b_pontedelima = {
+			}
+			b_barcelos = {
+			}
+			b_arcosdevaldevez = {
+			}
+			b_moncao = {
+			}
+		}
+		c_braganza = {
+			color = { 182 98 5 }
+			color2={ 255 255 255 }
+			
+			b_braganza = {
+			}
+			b_chaves = {
+			}
+			b_vilareal = {
+			}
+			b_torredemoncorvo = {
+			}
+			b_mogadouro = {
+			}
+			b_castelomelhor = {
+			}
+			b_castelorodrigo = {
+			}
+			b_azinhoso = {
+			}
+		}
+		c_castelo_branco = {
+			color = { 182 78 5 }
+			color2={ 255 255 255 }
+			
+			b_castelobranco = {
+			}
+			b_guarda = {
+			}
+			b_covilha = {
+			}
+			b_acores = {
+			}
+			b_trancoso = {
+			}
+			b_sabugal = {
+			}
+			b_pinhel = {
+			}
+			b_almeida = {
+			}
+		}
+		c_coimbra = {
+			color = { 182 88 25 }
+			color2={ 255 255 255 }
+			
+			b_coimbra = {
+			}
+			b_viseu = {
+			}
+			b_aveiro = {
+			}
+			b_pedondo = {
+			}
+			b_cantanhede = {
+			}
+			b_condeixa = {
+			}
+			b_montereal = {
+			}
+			b_penela = {
+			}
+		}
+	}	
 	d_beja = {
 		color = { 182 98 5 }
 		color2={ 255 255 255 }
@@ -18695,8 +18811,25 @@ k_aragon = {
 	culture = castillan
 	
 	allow = {
-		NOT = { e_spain = { holder_scope = { character = ROOT } } }	
-		NOT = { religion_group = muslim }
+		k_aragon = { is_titular = no }
+		OR = {
+			NOT = { religion_group = muslim }
+			k_aragon = { has_holder = no }
+		}
+	}
+	
+	gain_effect = {	
+		hidden_tooltip = {
+			e_papal_state = { holder_scope = { character_event = { id = 110024 } } }
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
 	}	
 
 	d_aragon = {
@@ -19050,24 +19183,6 @@ k_aragon = {
 		}
 	}
 }
-}
-
-e_maghreb = {
-	color = { 220  202  96 } 
-	color2={ 255 255 255 }
-	
-	capital = 843 # Marrakech
-	
-	culture = maghreb_arabic
-	short_name = yes
-	
-	allow = {
-		e_maghreb = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-	}
 	
 k_algiers = {
 	color={ 201 202 203 }
@@ -19080,9 +19195,18 @@ k_algiers = {
 	
 	culture = maghreb_arabic
 	
-	allow = {
-		NOT = { e_maghreb = { holder_scope = { character = ROOT } } }	
-	}
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 	
 	d_kabylia = {
 		color={ 164 247 131 }
@@ -19438,11 +19562,20 @@ k_morocco = {
 	culture = maghreb_arabic
 	
 	catholic = 10 #Crusade target weight
-	sunni = 100 #Crusade target weight	
+	sunni = 100 #Crusade target weight
 	
-	allow = {
-		NOT = { e_maghreb = { holder_scope = { character = ROOT } } }	
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 	
 	d_marrakech = {
 		color={ 43 150 32 }
@@ -19667,9 +19800,18 @@ k_mauretania = {
 	catholic = 10 #Crusade target weight
 	sunni = 100 #Crusade target weight	
 	
-	allow = {
-		NOT = { e_maghreb = { holder_scope = { character = ROOT } } }	
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 
 	d_ifni = {
 		color={ 79 122 48 }
@@ -19801,9 +19943,18 @@ k_africa = {
 	catholic = 10 #Crusade target weight
 	sunni = 100 #Crusade target weight	
 	
-	allow = {
-		NOT = { e_maghreb = { holder_scope = { character = ROOT } } }	
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 	
 	d_tunis = {
 		color={ 20 232 95 }
@@ -20122,23 +20273,6 @@ k_africa = {
 	}
 }
 
-}
-
-e_arabia = {
-	color = { 204 51 51  }
-	color2={ 255 255 255 }
-	
-	capital	= 796 # Cairo
-	short_name = yes
-	
-	allow = {
-		e_arabia = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-	}
-
 k_egypt = {
 	color={ 10 255 180 }
 	color2={ 255 255 255 }
@@ -20149,11 +20283,20 @@ k_egypt = {
 	
 	catholic = 50 #Crusade target weight
 	sunni = 100 #Crusade target weight
-	shiite = 1000 #Crusade target weight
+	shiite = 1000 #Crusade target weight	
 	
-	allow = {
-		NOT = { e_arabia = { holder_scope = { character = ROOT } } }	
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 	
 	d_alexandria = {
 		color={ 100 219 134 }
@@ -20557,9 +20700,18 @@ k_egypt = {
 		
 		capital = 728 # Damascus
 		
-		allow = {
-			NOT = { e_arabia = { holder_scope = { character = ROOT } } }	
-		}
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}			
 		
 		d_palmyra = {
 			color={ 99 206 44 }
@@ -20986,15 +21138,20 @@ k_egypt = {
 		sunni = 1000 #Crusade target weight
 		shiite = 1000 #Crusade target weight			
 		
-		culture = levantine_arabic
+		culture = levantine_arabic	
 		
-		allow = {
-			NOT = { e_arabia = { holder_scope = { character = ROOT } } }
-			OR = {
-				religion_group = christian
-				religion = judaism 
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
 			}
-		}		
+		}			
 		
 		d_oultrejourdain = {
 			color={ 37 221 116 }
@@ -21374,9 +21531,18 @@ k_arabia = {
 	
 	culture = bedouin_arabic
 	
-	allow = {
-		NOT = { e_arabia = { holder_scope = { character = ROOT } } }	
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 
 	d_basra = {
 		color={ 84 137 235 }
@@ -22103,33 +22269,24 @@ k_arabia = {
 	}
 }
 
-}
-
-e_ethiopia = {
-
-	color={ 198 30 93 }
-	color2={ 255 255 255 }
-	
-	short_name = yes
-	capital = 883
-	
-	allow = {
-		e_ethiopia = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}		
-	}
-
 	k_adal = {
 		color = { 161 72 126 }
 		capital = 872 #Berbera
 		
-		culture = somali		
+		culture = somali
 		
-		allow = {
-			NOT = { e_ethiopia = { holder_scope = { character = ROOT } } }	
-		}		
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}			
 		
 		d_berbera = {
 			color={ 145 14 41 }
@@ -22244,12 +22401,21 @@ e_ethiopia = {
 		color2={ 255 255 255 }
 
 		capital = 883 # Gondar		
-		
-		allow = {
-			NOT = { e_ethiopia = { holder_scope = { character = ROOT } } }
-		}		
 
 		culture = ethiopian
+		
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}			
 
 		d_axum = {
 			color={ 178 30 193 }
@@ -22471,13 +22637,22 @@ e_ethiopia = {
 	}
 	k_nubia = {
 		color = { 161 172 86 }
-		capital = 793 # Makuria	
-		
-		allow = {
-			NOT = { e_ethiopia = { holder_scope = { character = ROOT } } }
-		}
+		capital = 793 # Makuria
 		
 		culture = nubian
+		
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}			
 		
 		d_aswan = {
 			color={ 41 188 120 }
@@ -22598,41 +22773,27 @@ e_ethiopia = {
 				}
 			}		
 		}		
-	}	
-
-}
-
-e_britannia = {
-
-	color={ 198 30 93 }
-	color2={ 255 255 255 }
-	
-	capital = 32
-	
-	religion=catholic
-	short_name = yes
-	
-	allow = {
-		e_britannia = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}
-		NOT = { religion_group = muslim }		
-	}
-	
+	}		
 
 k_england = {
 	color={ 202 26 26 }
 	color2={ 255 255 255 }
 	capital = 32 # Middlesex
 	
-	catholic = 10 #Crusade target weight
+	catholic = 10 #Crusade target weight	
 	
-	allow = {
-		NOT = { e_britannia = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 	
 	d_northumberland = {
 		color={ 255 0 0 }
@@ -23375,10 +23536,18 @@ k_wales = {
 	
 	culture = welsh
 	
-	allow = {
-		NOT = { e_britannia = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 	
 	d_gwynedd = {
 		color={ 172 99 22 }
@@ -23532,10 +23701,18 @@ k_scotland = {
 	
 	culture = scottish
 	
-	allow = {
-		NOT = { e_britannia = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 	
 	d_galloway = {
 		color = { 6 42 127 }
@@ -23942,10 +24119,18 @@ k_ireland = {
 	
 	culture = irish
 	
-	allow = {
-		NOT = { e_britannia = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 	
 	d_ulster = {
 		color={ 5 222 31 }
@@ -24256,26 +24441,6 @@ k_ireland = {
 		}
 	}
 }
-}
-
-e_scandinavia = {
-
-	color={ 20 120 182 }
-	color2={ 255 255 255 }
-	
-	capital = 266
-	
-	religion=catholic
-	short_name = yes
-	
-	allow = {
-		e_scandinavia = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}	
-		NOT = { religion_group = muslim }
-	}
 	
 k_finland = {
 	color={ 140 65 65 }
@@ -24287,10 +24452,18 @@ k_finland = {
 	
 	culture = finnish
 	
-	allow = {
-		NOT = { e_scandinavia = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }		
-	}
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 
 	d_esthonia = {
 		color={ 150 75 75 }
@@ -24646,12 +24819,20 @@ k_sweden = {
 	
 	catholic = 10 #Crusade target weight
 	
-	culture = swedish
+	culture = swedish	
 	
-	allow = {
-		NOT = { e_scandinavia = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }		
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 
 	d_jamtland = {
 		color={ 15 199 239 }
@@ -25168,10 +25349,18 @@ k_denmark = {
 	
 	capital = 266 # Sjaelland
 	
-	allow = {
-		NOT = { e_scandinavia = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }		
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 	
 	d_skane = {
 		color={ 210 2 2 }
@@ -25379,10 +25568,18 @@ k_norway = {
 	
 	capital = 274 # Bergenshus
 	
-	allow = {
-		NOT = { e_scandinavia = { holder_scope = { character = ROOT } } }
-		NOT = { religion_group = muslim }		
-	}	
+	gain_effect = {	
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}		
 
 	d_iceland = {
 		color={ 195 190 255 }
@@ -25806,29 +26003,22 @@ k_norway = {
 		}
 	}	
 }
-}
 
-#WEST AFRICAN ADDITIONS
-#Kingdoms
-e_mali = {
-	color={ 251 133 78 }
-	color2={ 185 48 15 }
-	short_name = yes	
-	
-	allow = {
-		e_mali = {
-			holder_scope = {
-				is_alive = yes
-			} 
-		}	
-	}	
-	
 	k_jolof = { #West (Senegal, Gambia)
 		color={ 251 163 38 }
 		color2={ 185 48 15 }
-		allow = {
-			NOT = { e_mali = { holder_scope = { character = ROOT } } }	
-		}		
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}			
 		d_takrur = {#North
 			color={ 251 173 138 }
 			color2={ 155 58 55 }
@@ -25937,10 +26127,18 @@ e_mali = {
 	k_ghana = { #central
 		color={ 199 103 13 }
 		color2={ 65 130 36 }
-		
-		allow = {
-			NOT = { e_mali = { holder_scope = { character = ROOT } } }	
-		}
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}			
 		d_susu = { #East
 			color={ 213 94 26 }
 			color2={ 68 164 51 }
@@ -26081,11 +26279,18 @@ e_mali = {
 	k_songhai = {#Northeast
 		color={ 186 120 74 }
 		color2={ 75 50 10 }
-		
-		allow = {
-			NOT = { e_mali = { holder_scope = { character = ROOT } } }		
-		}
-
+		gain_effect = {	
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}	
 		d_songhai = {
 			color={ 136 90 74 }
 			color2={ 75 50 10 }
@@ -26163,7 +26368,6 @@ e_mali = {
 			}
 		}
 	}
-}
 
 # TITULAR DUCHIES
 	d_abbasid = {
@@ -26175,7 +26379,20 @@ e_mali = {
 		capital = 716
 		
 		allow = {
-			religion_group = muslim
+			culture_group = arabic_group
+		}
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
 		}
 	}
 	d_assassin = {
@@ -26188,7 +26405,20 @@ e_mali = {
 		color = { 151 125 62 }
 		capital = 505
 		allow = {
-			religion_group = christian
+			culture_group = south_slavic
+		}
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
 		}		
 	}
 	d_bergen = {
@@ -26242,8 +26472,21 @@ e_mali = {
 		capital = 704
 		
 		allow = {
-			religion_group = muslim
+			culture_group = altaic
 		}
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 	}
 	d_estonia = {
 		color = { 94 60 22 }	
@@ -26311,8 +26554,28 @@ e_mali = {
 		capital = 846
 		
 		allow = {
+			culture_group = altaic
 			religion = judaism
 		}
+		tribe = yes
+		
+		culture = turkish
+		title = "HIGH_CHIEF"
+		foa = "HIGH_CHIEF_FOA"
+		title_prefix = "TRIBE_OF"	
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 	}
 	d_kola = {
 		color = { 146 36 36 }
@@ -26360,6 +26623,19 @@ e_mali = {
 		allow = {
 			religion_group = muslim
 		}
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 	}
 	d_milano = {
 		color = { 252 238 227 }
@@ -26387,8 +26663,21 @@ e_mali = {
 		color = { 23 132 81 }
 		capital = 577
 		allow = {
-			religion_group = christian
+			culture_group = east_slavic
 		}
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 	}
 	d_pruthenians = {
 		color = { 159 195 75 }
@@ -26416,8 +26705,21 @@ e_mali = {
 		capital = 192
 		
 		allow = {
-			religion_group = christian
+			culture_group = iberian
 		}
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 	}
 	
 	d_sandomiersk = {
@@ -26445,15 +26747,41 @@ e_mali = {
 		capital = 637
 		
 		allow = {
-			religion_group = muslim
+			culture_group = iranian_group
 		}
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 	}
 	d_slovakia = {
 		color = { 209 61 61 }
 		capital = 442
 		allow = {
-			religion_group = christian
+			culture_group = magyar
 		}
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 	}
 	d_tavasts = {
 		color = { 131 21 21 }
@@ -26513,8 +26841,21 @@ e_mali = {
 		capital = 202
 		
 		allow = {
-			religion_group = muslim
+			culture_group = arabic_group
 		}
+		
+		gain_effect = {
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = {
+							is_titular = yes has_law = succ_feudal_elective
+						}
+						add_law = succ_primogeniture
+					}
+				}
+			}
+		}		
 	}	
 	d_zemigalians = {
 		color = { 183 21 21 }
@@ -26545,8 +26886,21 @@ k_cyprus = {
 		OR = {
 			religion = catholic
 			is_heresy_of = catholic
-		}
+			k_cyprus = { is_titular = no }
+		}		
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 k_beni_helal = {
 	color = { 128 163 56 }
@@ -26561,12 +26915,7 @@ k_eretnid = {
 k_fatimids = {
 	color={ 10 140 4 }
 	color2={ 200 200 0 }
-	capital	= 796 # Cairo
 	culture = egyptian_arabic
-	
-	allow = {
-		always = no
-	}
 }
 k_frisia = {
 	color={ 245 100 20 }
@@ -26577,7 +26926,22 @@ k_frisia = {
 	capital = 84 #Frisia
 	
 	allow = {
-		culture = dutch
+		OR = {
+			culture = dutch
+			k_frisia = { is_titular = no }
+		}	
+	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
 	}	
 }
 k_germiyan = {
@@ -26608,9 +26972,21 @@ k_naples = {
 		OR = {
 			culture = italian
 			culture = sicilian
-		}	
+			k_naples = { is_titular = no }
+		}		
 	}	
-	
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 	culture = italian
 }
 k_bosnia = {
@@ -26619,12 +26995,23 @@ k_bosnia = {
 	culture = serbian
 	
 	allow = {
-		religion_group = christian
+		OR = {
+			culture_group = south_slavic
+			k_bosnia = { is_titular = no }
+		}			
 	}
-}
-k_ottoman = {
-	color = { 247 145 30 }
-	culture = turkish
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 k_aquitaine = {
 	color={ 54 50 226 }
@@ -26633,22 +27020,26 @@ k_aquitaine = {
 	
 	culture = occitan
 	allow = {
-		culture = occitan
-		religion_group = christian
+		OR = {
+			culture = occitan
+			k_aquitaine = { is_titular = no }
+		}		
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 k_qarakhnid = {
 	color = { 39 138 51 }
-}
-k_rum = {
-	color = { 144 182 161 }
-	culture = turkish
-	capital = 737
-	
-	allow = {
-		culture_group = altaic
-		religion_group = muslim
-	}
 }
 k_saruhan = {
 	color = { 144 171 225 }
@@ -26663,9 +27054,23 @@ k_trebizond = {
 	culture = greek
 	
 	allow = {
-		culture_group = byzantine
-		religion_group = christian
+		OR = {
+			culture_group = byzantine
+			k_trebizond = { is_titular = no }
+		}		
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 k_trinacria = {
 	color={ 239 222 247 }
@@ -26674,6 +27079,18 @@ k_trinacria = {
 	allow = {
 		always = no
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 k_venice = {
 	color = { 54  167  156 }
@@ -26681,8 +27098,23 @@ k_venice = {
 	culture = italian
 	
 	allow = {
-		is_republic = yes
+		OR = {
+			is_republic = yes
+			k_venice = { is_titular = no }
+		}	
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 k_zenata = {
 	color = { 0 71 189 }
@@ -26695,50 +27127,82 @@ k_ziyanids = {
 }
 	
 #NEW TITULAR KINGDOMS
+k_spanish_galicia = {
+	color={ 255 224 94 }
+	capital = 156 # Coruña
+	
+	culture = portuguese
+
+	allow = {
+		OR = {
+			culture_group = iberian
+			k_spanish_galicia = { is_titular = no }
+		}
+	}
+	
+	catholic = 10 #Crusade target weight
+	sunni = 10 #Crusade target weight
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+
 k_wend = {
 	color={ 142 160 40 }
 	capital = 260 #Mecklemburg
 	culture = pommeranian
 	
 	allow = {
-		culture = pommeranian
-		NOT = { religion_group = muslim }
+		OR = {
+			culture = pommeranian
+			k_wend = { is_titular = no }
+		}		
 	}
-}	
-k_al_garb = { #muslim portugal
-	color={ 215 75 112 }
-	capital = 158 #Porto
-	culture = andalusian_arabic
-	
-	allow = {
-		religion_group = muslim
-	}
-}		
-k_al_xarq = { #muslim aragon
-	color={ 55 150 215 }
-	capital = 202 #Zaragoza
-	culture = andalusian_arabic
-	allow = {
-		religion_group = muslim
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
 	}	
-}		
-k_al_mawsat = { #muslim andalusia
-	culture = andalusian_arabic
-	color={ 116 116 55 }
-	capital = 180 #Granada
-	allow = {
-		religion_group = muslim
-	}
-}
+}	
 
 k_of_mann_and_the_isles = {
 	color={ 25 65 243 }
 	capital = 54 # Isle of Man
 	culture = irish
 	allow = {
-		culture_group = north_germanic
-		NOT = { religion_group = muslim }
+		OR = {
+			culture_group = north_germanic
+			k_of_mann_and_the_isles = { is_titular = no }
+		}	
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 
 k_cornwall = {
@@ -26746,9 +27210,23 @@ k_cornwall = {
 	capital = 31 # Cornwall
 	culture = breton
 	allow = {
-		culture = cornish
-		NOT = { religion_group = muslim }
+		OR = {
+			culture = cornish
+			k_cornwall = { is_titular = no }
+		}	
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 
 k_epirus = {
@@ -26756,9 +27234,26 @@ k_epirus = {
 	capital = 473 # Arta
 	culture = greek	
 	allow = {
-		culture = greek
-		religion_group = christian
+		OR = {
+			AND = {
+				culture_group = byzantine
+				NOT = { has_landed_title = e_byzantium }
+			}
+			k_epirus = { is_titular = no }
+		}	
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 
 k_mercia = {
@@ -26766,9 +27261,26 @@ k_mercia = {
 	capital = 63 # Derby
 	culture = saxon
 	allow = {
-		culture = saxon
-		NOT = { religion_group = muslim }
+		OR = {
+			AND = {
+				culture = saxon
+				NOT = { has_landed_title = k_england }
+			}
+			k_mercia = { is_titular = no }
+		}	
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 
 k_dublin = {
@@ -26776,9 +27288,52 @@ k_dublin = {
 	capital = 11 # Dublin
 	culture = danish
 	allow = {
-		culture_group = north_germanic
-		NOT = { religion_group = muslim }
+		OR = {
+			culture_group = north_germanic			
+			k_dublin = { is_titular = no }
+		}	
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+
+k_bavaria = {
+	color={ 91 91 102 }
+	color2={ 220 220 20 }
+
+	culture = german
+	allow = {
+		OR = {
+			AND = {
+				culture = german
+				NOT = { has_landed_title = e_hre }
+			}
+			k_bavaria = { is_titular = no }
+		}	
+	}
+	capital = 360 #Oberbayern
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 
 k_sardinia = {
@@ -26786,70 +27341,988 @@ k_sardinia = {
 	capital = 326 # Cagliari
 	culture = italian
 	allow = {
-		culture_group = latin
-		NOT = { religion_group = muslim }
+		OR = {
+			culture_group = latin
+			culture_group = iberian
+			k_sardinia = { is_titular = no }
+		}	
 	}
-}	
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
 
-	
-# TITULAR EMPIRES
-e_cuman = {
-	color = { 231 192 88 }
-	
-	culture = cuman
-	tribe = yes
+k_prussia = {
+	color={ 121 146 209 }
+	capital = 370 # Marienburg
+	culture = german
+	allow = {
+		OR = {
+			culture = german
+			culture_group = baltic
+			k_prussia = { is_titular = no }
+		}
+	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+
+k_jkhaz = {
+	color={ 12 132 245 }
+	capital = 620 #	Itil
+	culture = turkish		
+	allow = {
+		OR = {
+			AND = {
+				culture_group = altaic
+				religion = judaism
+			}
+			k_jkhaz = { is_titular = no }
+		}
+	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+
+# MUSLIM ALTERNATES TO EXISTING TITLES
+k_al_garb = { #muslim portugal
+	color={ 215 75 112 }
+	culture = andalusian_arabic
+	capital = 158 #Porto
+	short_name = yes
 	
 	allow = {
-		e_cuman = {
-			holder_scope = {
-				is_alive = yes
-			} 
+		k_al_garb = { is_titular = no }
+		OR = {
+			religion_group = muslim
+			k_al_garb = { has_holder = no }
 		}
-		religion_group = pagan_group
 	}
-	
+	gain_effect = { 
+		hidden_tooltip = { e_papal_state = { holder_scope = { character_event = { id = 110024 } } } }
+	}
+	catholic = 10 #Crusade target weight
+	sunni = 10 #Crusade target weight	
+}		
+k_al_xarq = { #muslim aragon
+	color={ 55 150 215 }
+	capital = 202 #Zaragoza
+	culture = andalusian_arabic
+	short_name = yes
+	allow = {
+		k_al_xarq = { is_titular = no }
+		OR = {
+			religion_group = muslim
+			k_al_xarq = { has_holder = no }
+		}
+	}
+	gain_effect = { 
+		hidden_tooltip = { e_papal_state = { holder_scope = { character_event = { id = 110024 } } } }
+	}
+	catholic = 10 #Crusade target weight
+	sunni = 10 #Crusade target weight	
+}		
+k_al_awsat = { #muslim castille
+	culture = andalusian_arabic
+	short_name = yes
+	color={ 116 116 55 }
+	capital = 197 #Toledo
+	allow = {
+		k_al_awsat = { is_titular = no }
+		OR = {
+			religion_group = muslim
+			k_al_awsat = { has_holder = no }
+		}
+	}
+	gain_effect = { 
+		hidden_tooltip = { e_papal_state = { holder_scope = { character_event = { id = 110024 } } } }
+	}
+	catholic = 10 #Crusade target weight
+	sunni = 10 #Crusade target weight	
 }
+k_al_tagr = { #muslim leon
+	culture = andalusian_arabic
+	short_name = yes
+	color={ 146 186 99 }
+	capital = 184 #Badajoz
+	allow = {
+		k_al_tagr = { is_titular = no }
+		OR = {
+			religion_group = muslim
+			k_al_tagr = { has_holder = no }
+		}
+	}
+	gain_effect = { 
+		hidden_tooltip = { e_papal_state = { holder_scope = { character_event = { id = 110024 } } } }
+	}
+	catholic = 10 #Crusade target weight
+	sunni = 10 #Crusade target weight	
+}
+k_al_andalus = { #muslim andalusia
+	color = { 211  181  142 }
+	culture = andalusian_arabic
+	short_name = yes
+	capital = 180 #Granada
+	allow = {
+		k_al_andalus = { is_titular = no }
+		OR = {
+			religion_group = muslim
+			k_al_andalus = { has_holder = no }
+		}
+	}
+	gain_effect = { 
+		hidden_tooltip = { e_papal_state = { holder_scope = { character_event = { id = 110024 } } } }
+	}
+	catholic = 10 #Crusade target weight
+	sunni = 10 #Crusade target weight	
+}
+k_rum = { #muslim nicaea
+	color = { 144 182 161 }
+	culture = turkish
+	capital = 737 #Caesara
+	
+	allow = {
+		k_rum = { is_titular = no }
+		OR = {
+			religion_group = muslim
+			k_rum = { has_holder = no }
+		}
+	}
+	gain_effect = { 
+		hidden_tooltip = { e_papal_state = { holder_scope = { character_event = { id = 110024 } } } }
+	}	
+	sunni = 10 #Crusade target weight
+}
+k_muslim_armenia = {
+	color={ 140 41 171 }
+	color2={ 255 255 255 }
+
+	capital = 681 #	Ani
+
+	sunni = 10 #Crusade target weight
+
+	allow = {
+		k_muslim_armenia = { is_titular = no }
+		OR = {
+			religion_group = muslim
+			k_muslim_armenia = { has_holder = no }
+		}
+	}
+	gain_effect = { 
+		hidden_tooltip = { e_papal_state = { holder_scope = { character_event = { id = 110024 } } } }
+	}	
+	culture = armenian
+}
+	
+# TITULAR EMPIRES
 e_easteregg = {
 	color = { 255 105 180 }	
 }
-e_al_andalus = { #muslim iberia
-	color = { 211  181  142 }
-	culture = andalusian_arabic
-	capital = 181 #Cordoba
+e_cuman = {
+	color = { 231 192 88 }
+	color2={ 255 255 20 }
+	capital = 619 #Saray
+	culture = cuman
+	tribe = yes
+	short_name = yes
+	
 	allow = {
-		e_al_andalus = {
-			holder_scope = {
-				is_alive = yes
-			} 
+		not = { tier = emperor }
+		culture = cuman
+		OR = {
+			num_of_king_titles = 4
+			e_cuman = { has_holder = yes }
 		}
-		religion_group = muslim
+	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
 	}	
 }
 e_latin_empire = {
 	color = { 200 190 195 }
+	color2={ 255 255 20 }
 	allow = {
+		not = { tier = emperor }
 		culture_group = latin
-		religion = catholic
+		OR = {
+			num_of_king_titles = 4
+			e_latin_empire = { has_holder = yes }
+		}		
 	}	
-	capital = 496 #Byzantion	
+	capital = 496 # Byzantion
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_france = {
+	color={ 45 47 207 }
+	color2={ 255 255 20 }	
+	capital = 112 # Ile de France
+	
+	allow = {
+		not = { tier = emperor }
+		OR = {
+			culture = frankish
+			culture = occitan
+			culture = norman
+		}
+		OR = {
+			num_of_king_titles = 4
+			e_france = { has_holder = yes }
+		}
+	}
+	short_name = yes
+	culture = frankish
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_occitan = {
+	color={ 74 50 246 }
+	color2={ 255 255 20 }
+	capital = 149 # Bordaeux
+	
+	allow = {
+		not = { tier = emperor }
+		culture = occitan
+		OR = {
+			num_of_king_titles = 4
+			e_france = { has_holder = yes }
+		}
+	}
+	short_name = yes
+	culture = occitan
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_rome = {
+	color = { 205 12 7 }
+	culture = italian
+	capital = 333 #Rome
+	
+	allow = {
+		not = { tier = emperor }
+		OR = {
+			culture = italian
+			culture = sicilian
+		}
+		OR = {
+			num_of_king_titles = 4
+			e_rome = { has_holder = yes }
+		}
+	}
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_italy = {
+	color = { 125  171  84 }
+	culture = italian
+	capital = 235 # Lombardy
+	
+	allow = {
+		not = { tier = emperor }
+		OR = {
+			culture = italian
+			culture = sicilian
+		}
+		OR = {
+			num_of_king_titles = 4
+			e_italy = { has_holder = yes }
+		}
+	}
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_poland = {
+	color={ 120 53 53 }
+	color2={ 200 0 0 }
+	
+	capital = 527 # Krakowskie
+	
+	allow = {
+		not = { tier = emperor }
+		culture_group = west_slavic
+		OR = {
+			num_of_king_titles = 4
+			e_poland = { has_holder = yes }
+		}
+	}
+	culture = polish
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_russia = {
+	color = { 96  131  80 }
+	color2={ 255 255 255 }
+
+	capital = 547 # Kiev
+
+	allow = {
+		not = { tier = emperor }
+		culture_group = east_slavic
+		OR = {
+			num_of_king_titles = 4
+			e_russia = { has_holder = yes }
+		}
+	}	
+	culture = russian
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_persia = {
+	color = { 204  119  31 }
+	color2={ 255 255 255 }
+	
+	capital = 646 #	Esfahan
+
+	allow = {
+		not = { tier = emperor }
+		culture_group = iranian_group
+		OR = {
+			num_of_king_titles = 4
+			e_persia = { has_holder = yes }
+		}
+	}	
+	culture = persian
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_danubia = {
+	color = { 213 0 39 }
+	color2={ 255 255 255 }
+
+	capital	= 499 #Turnovo
+	allow = {
+		not = { tier = emperor }
+		culture_group = south_slavic
+		OR = {
+			num_of_king_titles = 4
+			e_danubia = { has_holder = yes }
+		}
+	}	
+	culture = bulgarian
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_hungary = {
+	color={ 187 70 70 }
+	color2={ 255 255 255 }
+	
+	capital	= 444 # Esztergom
+		
+	allow = {
+		not = { tier = emperor }
+		culture_group = magyar
+		OR = {
+			num_of_king_titles = 4
+			e_hungary = { has_holder = yes }
+		}
+	}	
+	culture = hungarian
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_spain = { #Spain
+	color={ 243 209 23 }
+	color2={ 200 80 10 }
+	
+	capital = 197 #Toledo
+	allow = {
+		not = { tier = emperor }
+		culture_group = iberian
+		OR = {
+			num_of_king_titles = 4
+			e_spain = { has_holder = yes }
+		}
+	}
+	culture = castillan
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_maghreb = {
+	color = { 220  202  96 } 
+	color2={ 255 255 255 }
+	
+	capital = 843 # Marrakech
+	allow = {
+		not = { tier = emperor }
+		culture = maghreb_arabic
+		OR = {
+			num_of_king_titles = 4
+			e_maghreb = { has_holder = yes }
+		}
+	}	
+	culture = maghreb_arabic
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_arabia = {
+	color = { 204 51 51  }
+	color2={ 255 255 255 }
+	capital	= 719 #Mecca
+	allow = {
+		not = { tier = emperor }
+		OR = {
+			culture = levantine_arabic
+			culture = bedouin_arabic
+		}
+		OR = {
+			num_of_king_titles = 4
+			e_arabia = { has_holder = yes }
+		}
+	}	
+	culture = bedouin_arabic
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_ethiopia = {
+	color={ 198 30 93 }
+	color2={ 255 255 255 }
+	capital = 883 #Gonder
+	allow = {
+		not = { tier = emperor }
+		culture_group = east_african
+		OR = {
+			num_of_king_titles = 4
+			e_ethiopia = { has_holder = yes }
+		}
+	}
+	culture = ethiopian
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_britannia = {
+	color={ 198 30 93 }
+	color2={ 255 255 255 }
+	
+	capital = 32 #Middlesex
+	allow = {
+		not = { tier = emperor }
+		OR = {
+			culture = english
+			culture = saxon
+		}
+		OR = {
+			num_of_king_titles = 4
+			e_britannia = { has_holder = yes }
+		}
+	}	
+	culture = saxon
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_scandinavia = {
+	color={ 20 120 182 }
+	color2={ 255 255 255 }
+	
+	capital = 266 #Sjaelland
+	allow = {
+		not = { tier = emperor }
+		culture_group = north_germanic
+		OR = {
+			num_of_king_titles = 4
+			e_scandinavia = { has_holder = yes }
+		}
+	}	
+	culture = danish
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_mali = {
+	color={ 251 133 78 }
+	color2={ 185 48 15 }
+	
+	capital = 920 #Timbuktu
+	allow = {
+		not = { tier = emperor }
+		culture_group = west_african
+		OR = {
+			num_of_king_titles = 4
+			e_mali = { has_holder = yes }
+		}
+	}
+	culture = mande
+	short_name = yes	
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_celtic = {
+	color={ 16 107 2 }
+	color2={ 185 48 15 }
+	
+	capital = 11 #Dublin
+	allow = {
+		not = { tier = emperor }
+		culture_group = celtic
+		OR = {
+			num_of_king_titles = 4
+			e_celtic = { has_holder = yes }
+		}
+	}
+	culture = irish
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_lithuania = {
+	color={ 125 175 6 }
+	color2={ 185 48 15 }
+	
+	capital = 420 # Aukshayts
+	allow = {
+		not = { tier = emperor }
+		culture_group = baltic
+		OR = {
+			num_of_king_titles = 4
+			e_baltic = { has_holder = yes }
+		}
+	}
+	culture = lithuanian
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_egypt = {
+	color={ 45 245 200 }
+	color2={ 255 255 255 }
+	
+	capital	= 796 # Cairo
+	allow = {
+		not = { tier = emperor }
+		culture = egyptian_arabic
+		OR = {
+			num_of_king_titles = 4
+			e_egypt = { has_holder = yes }
+		}
+	}
+	culture = egyptian_arabic
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_andalusia = {
+	color = { 201  191  122 }
+	capital = 181 #Cordoba
+	
+	allow = {
+		not = { tier = emperor }
+		culture = andalusian_arabic
+		OR = {
+			num_of_king_titles = 4
+			e_andalusia = { has_holder = yes }
+		}
+	}
+	culture = andalusian_arabic
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_finland = {
+	color={ 180 95 95 }
+	capital = 381 # Uusimaa
+	
+	allow = {
+		not = { tier = emperor }
+		culture_group = finno_ugric
+		OR = {
+			num_of_king_titles = 4
+			e_andalusia = { has_holder = yes }
+		}
+	}
+	culture = finnish
+	short_name = yes
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }
 e_seljuk_turks = {
 	color={ 99 168 74 }
 	color2={ 200 200 0 }
 	capital = 687 # Kirkuk
 	culture = turkish
-
-	title = "PADISHAH"
+	short_name = yes
 	
 	allow = {
-		e_seljuk_turks = {
-			holder_scope = {
-				is_alive = yes
-			} 
+		not = { tier = emperor }
+		culture = turkish
+		OR = {
+			num_of_king_titles = 4
+			e_seljuk_turks = { has_holder = yes }
 		}
-		religion_group = muslim
 	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
 }	
+e_ottoman = {
+	color = { 247 145 30 }
+	culture = turkish
+	capital = 753 #Ankara
+	short_name = yes
 	
+	allow = {
+		not = { tier = emperor }
+		culture = turkish
+		OR = {
+			num_of_king_titles = 4
+			e_ottoman = { has_holder = yes }
+		}
+	}	
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_byzantium = {
+	color={ 163 10 145 }
+	color2={ 255 255 20 }
 	
-
+	capital = 496 #Byzantion
+	
+	short_name = yes
+	
+	culture = greek
+	religion=orthodox
+	
+	allow = {
+		not = { tier = emperor }
+		culture_group = byzantine
+		OR = {
+			num_of_king_titles = 4
+			e_byzantium = { has_holder = yes }
+		}
+	}
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}
+e_hre = {
+	color={ 155 155 155 }
+	color2={ 220 220 20 }
+	
+	capital = 254 #Franken
+	
+	allow = {
+		not = { tier = emperor }
+		OR = {
+			culture = german
+			culture = bohemian
+			culture = dutch
+		}
+		OR = {
+			num_of_king_titles = 4
+			e_hre = { has_holder = yes }
+		}
+	}	
+	
+	religion=catholic
+	culture = german
+	short_name = yes	
+	gain_effect = {
+		hidden_tooltip = {
+			any_demesne_title = {
+				if = {
+					limit = {
+						is_titular = yes has_law = succ_feudal_elective
+					}
+					add_law = succ_primogeniture
+				}
+			}
+		}
+	}	
+}

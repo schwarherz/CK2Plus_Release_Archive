@@ -356,6 +356,11 @@ character_event = {
 		has_character_flag = loan_taken
 		NOT = { has_character_flag = loan_heir }
 		NOT = { has_character_modifier = loan_timer }
+		NOT = { has_character_flag = loan_in_progress }
+	}
+	
+	immediate = {
+		set_character_flag = loan_in_progress
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -444,6 +449,7 @@ character_event = {
 			clr_character_flag = loan_1000
 		}		
 		clr_character_flag = loan_taken
+		clr_character_flag = loan_in_progress
 	}
 	option = {
 		name = "EVTOPTB38002" # Pay the interest
@@ -560,7 +566,8 @@ character_event = {
 				name = "loan_timer"
 				duration = 730
 			}		
-		}		
+		}	
+		clr_character_flag = loan_in_progress
 	}	
 	option = {
 		name = "EVTOPTC38002" # Cannot afford it
@@ -648,6 +655,7 @@ character_event = {
 			}		
 		}
 		custom_tooltip = EVTTOOLTIP38002B
+		clr_character_flag = loan_in_progress
 	}
 	option = { 
 		name = "EVTOPTD38002" # Get rid of them!
@@ -750,6 +758,7 @@ character_event = {
 			duration = 1825
 		}
 		clr_character_flag = loan_taken
+		clr_character_flag = loan_in_progress
 	}
 }
 

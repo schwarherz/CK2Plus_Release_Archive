@@ -52,6 +52,26 @@ character_event = {
 			liege = { ai = yes }
 		}
 		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}		
+		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
 		}
@@ -269,6 +289,26 @@ character_event = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}		
 		modifier = {
 			factor = 0.9
 			NOT = { opinion = { who = liege value = -100 } }
@@ -508,6 +548,26 @@ character_event = {
 			factor = 5.0
 			liege = { ai = yes }
 		}
+		modifier = {
+			factor = 0.5
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.5
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.5
+			liege = { ai = no }
+			difficulty = 4
+		}		
 		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
@@ -1108,6 +1168,26 @@ character_event = {
 			liege = { ai = yes }
 		}
 		modifier = {
+			factor = 1.5
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.5
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.5
+			liege = { ai = no }
+			difficulty = 4
+		}		
+		modifier = {
 			factor = 0.9
 			NOT = { opinion = { who = liege value = -100 } }
 		}
@@ -1445,6 +1525,26 @@ character_event = {
 			liege = { ai = yes }
 		}
 		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}		
+		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
 		}
@@ -1694,6 +1794,26 @@ character_event = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}		
 		modifier = {
 			factor = 0.9
 			NOT = { opinion = { who = liege value = -100 } }

@@ -10,6 +10,10 @@
 {
 	holder=20536
 }
+1077.1.1=
+{
+	de_jure_liege="k_rum"
+}
 1071.8.26=
 {
 	liege=0

@@ -55,6 +55,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 1000
 		modifier = {
+			factor = 0.9
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.1
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.1
+			liege = { ai = no }
+			difficulty = 4
+		}		
+		modifier = {
 			factor = 0.75
 			location = { is_capital = yes }
 		}		
@@ -343,7 +363,7 @@ character_event = {
 			has_province_modifier = heretic_stronghold
 		}		
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			has_province_modifier = force_converting
 		}
 		modifier = {
@@ -355,9 +375,19 @@ character_event = {
 	option = {
 		name = "EVTOPTA900"
 		piety = 10
-		religion_authority = 0.001
+		if = {
+			limit = {
+				ROOT = {
+					is_heretic = no
+					location = {
+						is_heretic = no
+					}
+				}
+			}
+			religion_authority = 0.001
+			location = { religion_authority = -0.001 }
+		}
 		location = {
-			religion_authority = -0.001
 			religion = ROOT 
 			hidden_tooltip = {
 				if = {
@@ -463,6 +493,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 120
 
+		modifier = {
+			factor = 0.9
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.9
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.1
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.1
+			liege = { ai = no }
+			difficulty = 4
+		}
 		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
@@ -816,6 +866,26 @@ character_event = {
 		months = 120
 
 		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 0.9
 			NOT = { opinion = { who = liege value = -100 } }
 		}
@@ -1134,6 +1204,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 480
 
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
 		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
@@ -1538,6 +1628,26 @@ character_event = {
 		months = 240
 
 		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 0.9
 			NOT = { opinion = { who = liege value = -100 } }
 		}
@@ -1792,6 +1902,26 @@ character_event = {
 		months = 120
 
 		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
 		}
@@ -2007,6 +2137,7 @@ character_event = {
 	
 	trigger = {
 		has_job_action = action_improve_rel_relations
+		religion = catholic
 		location = { 
 			any_province_lord = {
 				is_theocracy = yes
@@ -2024,6 +2155,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 240
 
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}
 		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
@@ -2241,6 +2392,26 @@ character_event = {
 		months = 1000
 
 		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
 		}
@@ -2419,6 +2590,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 1000
 
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
 		modifier = {
 			factor = 0.95
 			NOT = { opinion = { who = liege value = -100 } }

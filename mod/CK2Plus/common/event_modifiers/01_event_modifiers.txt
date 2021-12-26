@@ -51,6 +51,10 @@ employment_timer = { icon = 1 }
 
 sanction_timer = { icon = 1 }
 
+holding_epic_tournament = {
+	icon = 7
+}
+
 # Better rebels mod
 brm_revolt = {
 	local_tax_modifier = -0.5
@@ -63,7 +67,7 @@ brm_revolt = {
 
 brm_reduced_tax = {
 	local_tax_modifier = -0.2
-	local_revolt_risk = -1
+	local_revolt_risk = -0.1
 	icon = 24
 }
 

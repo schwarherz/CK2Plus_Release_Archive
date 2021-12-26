@@ -28,6 +28,10 @@ decisions = {
 			treasury = 5
 			month = 10
 			prestige = 100
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }	
+			NOT = { has_character_modifier = holding_epic_tournament }
 		}
 		effect = {
 			treasury = -5
@@ -85,7 +89,8 @@ decisions = {
 			prestige = 100
 			NOT = { has_character_modifier = holding_large_feast }
 			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }			
+			NOT = { has_character_modifier = holding_grand_hunt }	
+			NOT = { has_character_modifier = holding_epic_tournament }			
 		}
 		effect = {
 			treasury = -10
@@ -179,7 +184,8 @@ decisions = {
 			prestige = 100
 			NOT = { has_character_modifier = holding_large_feast }
 			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }			
+			NOT = { has_character_modifier = holding_grand_hunt }	
+			NOT = { has_character_modifier = holding_epic_tournament }			
 		}
 		effect = {
 			treasury = -20
@@ -249,7 +255,6 @@ decisions = {
 			age = 16
 			is_ruler = yes
 			is_feudal = yes
-			religion_group = christian
 			NOT = {
 				has_character_modifier = summer_fair_timer
 			}
@@ -263,11 +268,12 @@ decisions = {
 			prisoner = no
 			month = 4
 			NOT = {
-				month = 7
+				month = 8
 			}
 			NOT = { has_character_modifier = holding_large_feast }
 			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }			
+			NOT = { has_character_modifier = holding_grand_hunt }	
+			NOT = { has_character_modifier = holding_epic_tournament }			
 		}
 		effect = {
 			treasury = -5
@@ -296,7 +302,6 @@ decisions = {
 			age = 16
 			is_ruler = yes
 			is_feudal = yes
-			religion_group = christian
 			NOT = {
 				has_character_modifier = summer_fair_timer
 			}
@@ -310,11 +315,12 @@ decisions = {
 			prisoner = no
 			month = 4
 			NOT = {
-				month = 7
+				month = 8
 			}
 			NOT = { has_character_modifier = holding_large_feast }
 			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }			
+			NOT = { has_character_modifier = holding_grand_hunt }	
+			NOT = { has_character_modifier = holding_epic_tournament }			
 		}
 		effect = {
 			treasury = -10
@@ -355,7 +361,6 @@ decisions = {
 			age = 16
 			is_ruler = yes
 			is_feudal = yes
-			religion_group = christian
 			NOT = {
 				has_character_modifier = summer_fair_timer
 			}
@@ -369,11 +374,12 @@ decisions = {
 			prisoner = no
 			month = 4
 			NOT = {
-				month = 7
+				month = 8
 			}
 			NOT = { has_character_modifier = holding_large_feast }
 			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }			
+			NOT = { has_character_modifier = holding_grand_hunt }	
+			NOT = { has_character_modifier = holding_epic_tournament }			
 		}
 		effect = {
 			treasury = -20
@@ -430,7 +436,8 @@ decisions = {
 			prisoner = no
 			NOT = { has_character_modifier = holding_large_feast }
 			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }			
+			NOT = { has_character_modifier = holding_grand_hunt }	
+			NOT = { has_character_modifier = holding_epic_tournament }			
 		}
 		effect = {
 			treasury = -5
@@ -472,7 +479,8 @@ decisions = {
 			prisoner = no
 			NOT = { has_character_modifier = holding_large_feast }
 			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }			
+			NOT = { has_character_modifier = holding_grand_hunt }	
+			NOT = { has_character_modifier = holding_epic_tournament }			
 		}
 		effect = {
 			treasury = -10
@@ -527,7 +535,8 @@ decisions = {
 			prisoner = no
 			NOT = { has_character_modifier = holding_large_feast }
 			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }			
+			NOT = { has_character_modifier = holding_grand_hunt }	
+			NOT = { has_character_modifier = holding_epic_tournament }			
 		}
 		effect = {
 			treasury = -20

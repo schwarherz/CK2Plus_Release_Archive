@@ -46,6 +46,26 @@ character_event = {
 		months = 240
 
 		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
@@ -276,6 +296,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 1000
 
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}
 		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
@@ -544,6 +584,26 @@ character_event = {
 		months = 120
 
 		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
@@ -746,6 +806,26 @@ character_event = {
 	mean_time_to_happen = {
 		months = 240
 
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
 		modifier = {
 			factor = 3.0
 			liege = { ai = yes }

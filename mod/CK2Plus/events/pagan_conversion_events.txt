@@ -1,0 +1,352 @@
+#Send mission to neighbour pagan
+character_event = {
+	id = 1200000
+	picture = GFX_evt_heretic
+	border = "GFX_event_normal_frame_religion"
+	
+	only_rulers = yes
+	capable_only = yes
+	min_age = 16
+	
+	trigger = {
+		war = no
+		OR = {
+			religion_group = christian
+			religion_group = muslim
+		}
+		NOT = { trait = cynical }
+		piety = 100
+		wealth = 100
+		OR = {
+			NOT = { has_character_flag = missionary_expedition }
+			had_character_flag = {
+				flag = missionary_expedition
+				days = 3650
+			}
+		}
+		any_independent_ruler = {
+			war = no
+			religion_group = pagan_group
+			opinion = {
+				who = ROOT
+				value = -25
+			}			
+			NOT = { trait = zealous }
+			NOT = { piety = 100 }
+			age = 16
+			NOT = { age = 35 }
+			NOT = { has_character_flag = missionary_expedition }
+			lower_tier_than = ROOT
+			any_realm_province = {
+				any_neighbor_province = {
+					owner = {
+						OR = {
+							same_realm = ROOT
+							character = ROOT
+						}
+					}
+				}
+			}		
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 100
+		modifier = {
+			factor = 1.1
+			trait = slothful
+		}	
+		modifier = {
+			factor = 0.9
+			trait = diligent
+		}			
+		modifier = {
+			factor = 0.75
+			trait = zealous
+		}		
+		modifier = {
+			factor = 0.75
+			piety = 250
+		}
+		modifier = {
+			factor = 0.75
+			piety = 500
+		}
+		modifier = {
+			factor = 0.75
+			piety = 750
+		}
+		modifier = {
+			factor = 0.75
+			piety = 1000
+		}
+	}
+		
+	desc = "EVTDESC1200000"
+	
+	option = {
+		name = "EVTOPTA1200000"
+		ai_chance = {
+			factor = 100
+		}
+		wealth = -100
+		if = {
+			limit = { NOT = { trait = zealous } }
+			random = {
+				chance = 33
+				add_trait = zealous
+				hidden_tooltip = {
+					character_event = {
+						id = 38269 #Notify Zealous
+					}
+				}
+			}
+		}		
+		random_independent_ruler = {	
+			limit = {
+				war = no
+				religion_group = pagan_group
+				opinion = {
+					who = ROOT
+					value = -25
+				}	
+				NOT = { trait = zealous }
+				NOT = { piety = 100 }
+				age = 16
+				NOT = { age = 35 }
+				NOT = { has_character_flag = missionary_expedition }
+				lower_tier_than = ROOT
+				any_realm_province = {
+					any_neighbor_province = {
+						owner = {
+							OR = {
+								same_realm = ROOT
+								character = ROOT
+							}
+						}
+					}
+				}	
+			}
+			set_character_flag = missionary_expedition
+			character_event = { id = 1200001 days = 14 tooltip = EVTTOOLTIP1200001 }
+		}
+		set_character_flag = missionary_expedition
+	}
+	option = {
+		name = "EVTOPTB1200000"	
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				NOT = { wealth = 200 }
+			}
+		}
+		piety = -50
+		if = {
+			limit = { trait = zealous }
+			remove_trait = zealous
+		}
+		set_character_flag = missionary_expedition
+	}	
+}
+
+#Pagan ruler receives mission
+character_event = {
+	id = 1200001
+	picture = GFX_evt_heretic
+	border = "GFX_event_normal_frame_religion"
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC1200001"
+	
+	option = {
+		name = "EVTOPTA1200001"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				NOT = { age = 20 }
+			}			
+			modifier = {
+				factor = 2
+				trait = cynical
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { piety = 0 }
+			}		
+			modifier = {
+				factor = 1.5
+				opinion = {
+					who = FROM
+					value = 0
+				}
+			}		
+			modifier = {
+				factor = 1.5
+				opinion = {
+					who = FROM
+					value = 25
+				}
+			}
+			modifier = {
+				factor = 1.5
+				opinion = {
+					who = FROM
+					value = 50
+				}
+			}	
+			modifier = {
+				factor = 1.5
+				opinion = {
+					who = FROM
+					value = 75
+				}
+			}
+			modifier = {
+				factor = 1.5
+				opinion = {
+					who = FROM
+					value = 100
+				}
+			}			
+		}
+		wealth = 100
+		religion = FROM
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_converted
+			years = 10
+		}
+		hidden_tooltip = { FROM = { character_event = { id = 1200002 } } }
+	}
+	option = {
+		name = "EVTOPTB1200000"	
+		trigger = {
+			NOT = { trait = charitable }
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 1.33
+				trait = greedy
+			}			
+		}		
+		wealth = 100
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_refused_convert
+			years = 10
+		}		
+		hidden_tooltip = { FROM = { character_event = { id = 1200003 } } }
+	}		
+	option = {
+		name = "EVTOPTC1200000"	
+		trigger = {
+			NOT = { trait = greedy }
+		}		
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 4.0
+				trait = charitable
+			}						
+		}		
+		piety = 50
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_refused_convert
+			years = 10
+		}		
+		hidden_tooltip = { FROM = { character_event = { id = 1200004 } } }
+	}	
+}
+
+#Pagan ruler converts
+character_event = {
+	id = 1200002
+	picture = GFX_evt_heretic
+	border = "GFX_event_normal_frame_religion"
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC1200002"
+	
+	option = {
+		name = "EVTOPTA1200002"
+		trigger = {
+			religion_group = christian
+		}
+		piety = 100
+		tooltip = {
+			FROM = { religion = ROOT }
+			opinion = {
+				who = FROM
+				modifier = opinion_converted
+				years = 10
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB1200002"
+		trigger = {
+			religion_group = muslim
+		}		
+		piety = 100
+		tooltip = {
+			FROM = { religion = ROOT }
+			opinion = {
+				who = FROM
+				modifier = opinion_converted
+				years = 10
+			}
+		}
+	}	
+}
+
+#Pagan ruler takes gifts but does not convert
+character_event = {
+	id = 1200003
+	picture = GFX_evt_heretic
+	border = "GFX_event_normal_frame_religion"
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC1200003"
+	
+	option = {
+		name = "EVTOPTA1200003"
+		piety = 25
+		tooltip = {
+			opinion = {
+				who = FROM
+				modifier = opinion_refused_convert
+				years = 10
+			}
+		}
+	}	
+}
+
+#Pagan ruler throws out missionaries!
+character_event = {
+	id = 1200004
+	picture = GFX_evt_heretic
+	border = "GFX_event_normal_frame_religion"
+	
+	is_triggered_only = yes
+		
+	desc = "EVTDESC1200004"
+	
+	option = {
+		name = "EVTOPTA1200004"
+		wealth = 100
+		tooltip = {
+			opinion = {
+				who = FROM
+				modifier = opinion_refused_convert
+				years = 10
+			}
+		}
+	}	
+}

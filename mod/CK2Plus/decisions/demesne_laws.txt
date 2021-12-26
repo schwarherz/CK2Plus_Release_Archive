@@ -14,7 +14,7 @@ laws = {
 			NOT = { has_law = feudal_contract_0 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 		}
 		revoke_allowed = {
@@ -43,22 +43,14 @@ laws = {
 			NOT = { has_law = feudal_contract_1 }
 			NOT = { tier = baron }
 		}		
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 		}
 		revoke_allowed = {
 			always = no
 		}			
 		ai_will_do = {
-			factor = 1	
-			modifier = {
-				factor = 0
-				holder_scope = { NOT = { martial = 10 } }
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_law = feudal_contract_0 }
-			}			
+			factor = 0			
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -81,7 +73,7 @@ laws = {
 			NOT = { has_law = feudal_contract_2 }
 			NOT = { tier = baron }
 		}		
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -95,15 +87,7 @@ laws = {
 			always = no
 		}			
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				holder_scope = { NOT = { martial = 15 } }
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_law = feudal_contract_1 }
-			}			
+			factor = 0			
 		}
 		ai_will_revoke = {
 			factor = 0			
@@ -126,7 +110,7 @@ laws = {
 			NOT = { has_law = feudal_contract_3 }
 			NOT = { tier = baron }
 		}		
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -139,15 +123,7 @@ laws = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				holder_scope = { NOT = { martial = 20 } }
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_law = feudal_contract_2 }
-			}			
+			factor = 0			
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -170,7 +146,7 @@ laws = {
 			NOT = { has_law = feudal_contract_3 }
 			NOT = { tier = baron }
 		}		
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -206,7 +182,7 @@ laws = {
 		feudal_opinion = 0
 		default = yes
 			
-		allow = {
+		allow = {	
 			holder_scope = { war = no }			
 		}
 		revoke_allowed = {
@@ -216,11 +192,11 @@ laws = {
 			factor = 1
 			modifier = {
 				factor = 0
-				holder_scope = { NOT = { trait = charitable } }
-			}
+				NOT = { has_law = feudal_tax_1 }
+			}			
 			modifier = {
 				factor = 0
-				has_law = feudal_tax_0
+				holder_scope = { NOT = { trait = charitable } }
 			}			
 		}
 		ai_will_revoke = {
@@ -243,7 +219,7 @@ laws = {
 			NOT = { has_law = feudal_tax_1 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }			
 		}
 		revoke_allowed = {
@@ -253,8 +229,8 @@ laws = {
 			factor = 1
 			modifier = {
 				factor = 0
-				holder_scope = { trait = charitable }
-				has_law = feudal_tax_0
+				NOT = { has_law = feudal_tax_0 }
+				NOT = { has_law = feudal_tax_2 }
 			}
 			modifier = {
 				factor = 0
@@ -265,10 +241,6 @@ laws = {
 				factor = 0
 				holder_scope = { NOT = { trait = charitable } }
 				has_law = feudal_tax_2
-			}		
-			modifier = {
-				factor = 0
-				has_law = feudal_tax_1
 			}			
 		}
 		ai_will_revoke = {
@@ -291,7 +263,7 @@ laws = {
 			NOT = { has_law = feudal_tax_2 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -338,7 +310,7 @@ laws = {
 			NOT = { has_law = feudal_tax_3 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -373,7 +345,7 @@ laws = {
 			NOT = { has_law = feudal_tax_4 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -411,7 +383,7 @@ laws = {
 			NOT = { has_law = city_contract_0 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 		}
 		revoke_allowed = {
@@ -444,7 +416,7 @@ laws = {
 			NOT = { has_law = city_contract_1 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 		}
 		revoke_allowed = {
@@ -473,7 +445,7 @@ laws = {
 			NOT = { has_law = city_contract_2 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -509,7 +481,7 @@ laws = {
 			NOT = { has_law = city_contract_3 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -544,7 +516,7 @@ laws = {
 			NOT = { has_law = city_contract_4 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -584,7 +556,7 @@ laws = {
 			NOT = { has_law = city_tax_0 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 		}
 		revoke_allowed = {
@@ -614,7 +586,7 @@ laws = {
 			NOT = { has_law = city_tax_1 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }		
 		}
 		revoke_allowed = {
@@ -658,7 +630,7 @@ laws = {
 			NOT = { has_law = city_tax_2 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -708,7 +680,7 @@ laws = {
 			NOT = { has_law = city_tax_3 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -752,7 +724,7 @@ laws = {
 			NOT = { has_law = city_tax_4 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -791,7 +763,7 @@ laws = {
 			NOT = { has_law = temple_contract_0 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 		}
 		revoke_allowed = {
@@ -823,7 +795,7 @@ laws = {
 			NOT = { has_law = temple_contract_1 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 		}
 		revoke_allowed = {
@@ -851,7 +823,7 @@ laws = {
 			NOT = { has_law = temple_contract_2 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -886,7 +858,7 @@ laws = {
 			NOT = { has_law = temple_contract_3 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -920,7 +892,7 @@ laws = {
 			NOT = { has_law = temple_contract_4 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -958,7 +930,7 @@ laws = {
 			NOT = { has_law = temple_tax_0 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 		}
 		revoke_allowed = {
@@ -988,7 +960,7 @@ laws = {
 			NOT = { has_law = temple_tax_1 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }			
 		}
 		revoke_allowed = {
@@ -1031,7 +1003,7 @@ laws = {
 			NOT = { has_law = temple_tax_2 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -1080,7 +1052,7 @@ laws = {
 			NOT = { has_law = temple_tax_3 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {
@@ -1122,7 +1094,7 @@ laws = {
 			NOT = { has_law = temple_tax_4 }
 			NOT = { tier = baron }
 		}
-		allow = {
+		allow = {	
 			holder_scope = { war = no }
 			has_crown_law_title = yes
 			OR = {

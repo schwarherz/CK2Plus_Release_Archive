@@ -14,8 +14,11 @@ on_yearly_pulse = {
 		40 = 200009
 		
 		#CK2+ Events
+		500 = 190068
 		250 = 450
+		250 = 7000002
 		250 = 190044
+		250 = 190083
 		150 = 190004
 		150 = 190031
 		150 = 190032
@@ -28,7 +31,8 @@ on_yearly_pulse = {
 		2000 = 190072
 		2000 = 190073
 		100 = 190070
-		100 = 190071
+		50 = 190071
+		50 = 312
 		
 		# Feudal Life Events
 		100 = 4000
@@ -381,35 +385,40 @@ on_yearly_pulse = {
 #maintenance
 on_bi_yearly_pulse = {
 	random_events = {
-		#Old age events
-		100000 = 190021
-		100000 = 190022
-		100000 = 190023
-		100000 = 190024
-		100000 = 190025
-		100000 = 190026
-		100000 = 190027
-		100000 = 190028
-		100000 = 190029
-		100000 = 190030	
-	
-		#Maintenance Events
-		100000 = 110001
-		100000 = 110018
-		100000 = 110019
-		100000 = 110020
-		100000 = 110021
-		100000 = 110022
-		100000 = 110023		
-		100000 = 190033
+		#High prio maintenance	
 		100000 = 190037
 		100000 = 190038
 		100000 = 190039
 		100000 = 190040
-		100000 = 190057
-		100000 = 190059
-		100000 = 190068
-		100000 = 300001
+		100000 = 190081
+		100000 = 110025
+		100000 = 110027
+		
+		#Mid prio maintenance
+		10000 = 190059
+		10000 = 190033
+		10000 = 110022
+		10000 = 110023	
+		
+		#Low prio maintenance
+		1000 = 110018
+		1000 = 110019
+		1000 = 110020
+		1000 = 110001
+		1000 = 110021
+		1000 = 190057
+		
+		#Old age events
+		1000 = 190021
+		1000 = 190022
+		1000 = 190023
+		1000 = 190024
+		1000 = 190025
+		1000 = 190026
+		1000 = 190027
+		1000 = 190028
+		1000 = 190029
+		1000 = 190030	
 		
 		10 = 0 # No maintenance event
 	}
@@ -619,13 +628,13 @@ on_yearly_childhood_pulse = {
 #on combat pulse
 on_combat_pulse = {
 	random_events = {
-		2000 = 0
-		10 = 242 # Killed
-		20 = 243 # Wounded
-		10 = 244 # Maimed
+		3000 = 0
+		15 = 242 # Killed
+		30 = 243 # Wounded
+		20 = 244 # Maimed
 		5 = 245 # Serious head injury
-		50 = 246 # Improves martial education
-		20 = 247 # Flat improvement to martial skill
+		25 = 246 # Improves martial education
+		25 = 247 # Flat improvement to martial skill
 
 		20 = 248 # Knowledge boost in capital from battle.
 		10 = 255 # Marshal: Unnecessary violence
@@ -836,7 +845,6 @@ on_death = {
 		24500
 		24502
 		38000
-		190065
 		190035
 	}
 	random_events = {

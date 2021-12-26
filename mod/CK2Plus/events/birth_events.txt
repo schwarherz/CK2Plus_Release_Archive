@@ -63,6 +63,12 @@ character_event = {
 			NOT = {
 				has_character_modifier = lustful_affair_timer
 			}
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = opinion_former_lover
+				}
+			}
 			NOT = { trait = infirm }
 			NOT = { trait = incapable }
 			NOT = { trait = celibate }
@@ -73,8 +79,7 @@ character_event = {
 				is_married = no
 				NOT = { trait = chaste }
 			}
-		}
-		NOT = { has_character_flag = recent_lover }	
+		}	
 		NOT = { has_minor_title = title_concubine }
 		has_lover = no
 		is_pregnant = no
@@ -106,6 +111,10 @@ character_event = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			religion_group = muslim
+		}		
+		modifier = {
 			factor = 3.0
 			trait = homosexual #to balance for fewer potential lovers
 		}	
@@ -128,6 +137,7 @@ character_event = {
 			liege = {
 				is_close_relative = ROOT
 				NOT = { trait = hedonist }
+				NOT = { ROOT = { trait = hedonist } }
 			}
 		}
 		modifier = {
@@ -155,6 +165,22 @@ character_event = {
 			liege = { trait = lustful }
 		}
 		modifier = {
+			factor = 2.0
+			trait = fair
+		}
+		modifier = {
+			factor = 2.0
+			liege = { trait = fair }
+		}	
+		modifier = {
+			factor = 0.5
+			trait = ugly
+		}
+		modifier = {
+			factor = 0.5
+			liege = { trait = ugly }
+		}		
+		modifier = {
 			factor = 0.5
 			NOT = { opinion = { who = liege value = 0 } }
 		}	
@@ -171,35 +197,27 @@ character_event = {
 			NOT = { reverse_opinion = { who = liege value = 25 } }
 		}			
 		modifier = {
-			factor = 1.1
-			opinion = { who = liege value = 25 }
-		}
-		modifier = {
-			factor = 1.1
-			reverse_opinion = { who = liege value = 25 }
-		}
-		modifier = {
-			factor = 1.1
+			factor = 1.25
 			opinion = { who = liege value = 50 }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			reverse_opinion = { who = liege value = 50 }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			opinion = { who = liege value = 75 }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			reverse_opinion = { who = liege value = 75 }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.1
 			trait = chaste
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			liege = { trait = chaste }
 		}
 		modifier = {
@@ -229,7 +247,14 @@ character_event = {
 			}
 			add_trait = homosexual
 		}
-		liege = { character_event = { id = 451 days = 7 tooltip = EVTTOOLTIP451 } }
+		liege = { 
+			add_character_modifier = {
+				name = lustful_affair_timer
+				duration = 365
+				hidden = yes
+			}		
+			character_event = { id = 451 days = 7 tooltip = EVTTOOLTIP451 } 
+		}
 	}
 }
 
@@ -240,17 +265,6 @@ character_event = {
 	picture = "GFX_evt_lovers"
 
 	is_triggered_only = yes 
-	
-	immediate = {
-		hidden_tooltip = {
-			add_character_modifier = {
-				name = lustful_affair_timer
-				duration = 730
-				hidden = yes
-			}
-		}
-	}
-	
 	option = {
 		name = "EVTOPTA451"
 		ai_chance = { factor = 90 }
@@ -286,7 +300,7 @@ character_event = {
 	}
 }
 
-# The female courtier accepts or spurns the liege lord
+# The courtier accepts or spurns the liege lord
 character_event = {
 	id = 452
 	
@@ -912,6 +926,182 @@ character_event = {
 				modifier = unfaithful
 				years = 5
 			}
+		}
+	}
+}
+
+# A courtier initiates romance with another courtier
+character_event = {
+	id = 312
+	desc = "EVTDESC450"
+	picture = "GFX_evt_lovers"
+	is_triggered_only = yes
+	
+	capable_only = yes
+	
+	trigger = {
+		is_ruler = no
+		age = 16
+		NOT = { age = 40 }
+		liege = {
+			demesne_size = 1
+			any_courtier = {
+				is_ruler = no
+				NOT = { is_close_relative = ROOT }
+				OR = {
+					AND = {
+						NOT = { trait = homosexual }
+						ROOT = { NOT = { trait = homosexual } }
+						is_female = no
+						ROOT = { is_female = yes }
+					}
+					AND = {
+						NOT = { trait = homosexual }
+						ROOT = { NOT = { trait = homosexual } }
+						is_female = yes
+						ROOT = { is_female = no }
+					}
+					AND = {
+						trait = homosexual
+						ROOT = { trait = homosexual }
+						is_female = yes
+						ROOT = { is_female = yes }
+					}
+					AND = {
+						trait = homosexual
+						ROOT = { trait = homosexual }
+						is_female = no
+						ROOT = { is_female = no }
+					}				
+				}
+				has_lover = no
+				is_pregnant = no
+				prisoner = no
+				age = 16
+				NOT = {
+					has_character_modifier = lustful_affair_timer
+				}
+				NOT = { trait = infirm }
+				NOT = { trait = incapable }
+				NOT = { trait = celibate }
+				NOT = { trait = chaste }
+				NOT = { spouse = { character = ROOT } }
+				opinion = { who = ROOT value = 0 }
+				reverse_opinion = { who = ROOT value = 0 }
+				NOT = {
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_former_lover
+					}
+				}				
+			}
+		}	
+		NOT = { has_minor_title = title_concubine }
+		has_lover = no
+		is_pregnant = no
+		prisoner = no
+		NOT = { trait = chaste }		
+		NOT = { trait = infirm }
+		NOT = { trait = incapable }
+		NOT = { trait = celibate }
+	}
+	
+	
+	mean_time_to_happen = {
+		days = 1
+
+		modifier = {
+			factor = 1.5
+			spouse = { is_ruler = yes }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { age = 30 }
+			spouse = { age = 40 }
+		}		
+		modifier = {
+			factor = 3.0
+			trait = homosexual #to balance for fewer potential lovers
+		}	
+		modifier = {
+			factor = 1.5
+			NOT = { age = 20 }
+		}
+		modifier = {
+			factor = 0.5
+			age = 30
+		}
+		modifier = {
+			factor = 2.0
+			trait = hedonist
+		}	
+		modifier = {
+			factor = 2.0
+			trait = lustful
+		}
+	}
+
+	option = {
+		name = "EVTOPTA450"
+		liege = { 
+			random_courtier = {
+				limit = {
+					is_ruler = no
+					NOT = { is_close_relative = ROOT }
+					OR = {
+						AND = {
+							NOT = { trait = homosexual }
+							ROOT = { NOT = { trait = homosexual } }
+							is_female = no
+							ROOT = { is_female = yes }
+						}
+						AND = {
+							NOT = { trait = homosexual }
+							ROOT = { NOT = { trait = homosexual } }
+							is_female = yes
+							ROOT = { is_female = no }
+						}
+						AND = {
+							trait = homosexual
+							ROOT = { trait = homosexual }
+							is_female = yes
+							ROOT = { is_female = yes }
+						}
+						AND = {
+							trait = homosexual
+							ROOT = { trait = homosexual }
+							is_female = no
+							ROOT = { is_female = no }
+						}				
+					}
+					has_lover = no
+					is_pregnant = no
+					prisoner = no
+					age = 16
+					NOT = {
+						has_character_modifier = lustful_affair_timer
+					}
+					NOT = { trait = infirm }
+					NOT = { trait = incapable }
+					NOT = { trait = celibate }
+					NOT = { trait = chaste }
+					NOT = { spouse = { character = ROOT } }
+					opinion = { who = ROOT value = 0 }
+					reverse_opinion = { who = ROOT value = 0 }
+					NOT = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = opinion_former_lover
+						}
+					}
+				}
+				add_character_modifier = {
+					name = lustful_affair_timer
+					duration = 365
+					hidden = yes
+				}		
+				character_event = { id = 451 days = 7 tooltip = EVTTOOLTIP451 } 				
+			}		
 		}
 	}
 }

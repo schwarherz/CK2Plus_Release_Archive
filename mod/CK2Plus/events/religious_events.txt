@@ -32,7 +32,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 17500	
+		months = 20000	
 		modifier = {
 			factor = 1.25
 			religion_authority = 0.6
@@ -76,7 +76,6 @@ province_event = {
 	}
 	
 	immediate = {
-		religion_authority = -0.001
 		become_heretic = yes
 		set_province_flag = heresy_in_province
 		add_province_modifier = {
@@ -714,7 +713,6 @@ province_event = {
 	}
 	
 	immediate = {
-		religion_authority = -0.001
 		random_neighbor_province = {
 			limit = {
 				is_heresy_of = ROOT

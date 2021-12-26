@@ -2847,12 +2847,23 @@ character_event = {
 		}
 		random_list = {
 			25 = {
-				add_trait = fair
-				hidden_tooltip = {
-					character_event = {
-						id = 38301 #Notify Fair
+				if = {
+					limit = {
+						NOT = { trait = fair }
+					}
+					add_trait = fair
+					hidden_tooltip = {
+						character_event = {
+							id = 38301 #Notify Fair
+						}
 					}
 				}
+				if = {
+					limit = {
+						trait = fair
+					}
+					change_diplomacy = 1
+				}				
 			}
 			25 = {
 				change_martial = 1
@@ -2877,6 +2888,11 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTB69047"
+		trigger = {
+			NOT = {
+				trait = paranoid
+			}
+		}		
 		clr_character_flag = suspected_occultist
 		clr_character_flag = occultist_flagged
 		piety = 10

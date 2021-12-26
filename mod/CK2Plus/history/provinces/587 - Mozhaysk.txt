@@ -16,12 +16,9 @@ b_shakhunya = temple
 #b_uren = castle
 
 # Misc
-culture = komi
-religion = finnish_pagan
+culture = russian
+religion = orthodox
 
-# History
-
-1100.1.1= { culture = russian }
-1100.1.1= { religion = orthodox } 
+# History 
 
 

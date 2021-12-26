@@ -93,9 +93,8 @@ holder=34414
 1295.5.1={
 	holder=465501
 }
-1299.1.1=
-{
-liege="k_ottoman"
+1310.1.1={
+liege="e_ottoman"
 holder=34226
 }
 1330.1.1=

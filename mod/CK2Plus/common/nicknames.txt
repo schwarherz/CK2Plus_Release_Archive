@@ -1104,7 +1104,7 @@ nick_the_lewd = {
 			AND = {
 				has_lover = yes
 				lover = {
-					is_close_relative = ROOT
+					is_close_relative = PREV
 				}
 			}
 			trait = hedonist
@@ -1116,7 +1116,7 @@ nick_the_lewd = {
 			factor = 10
 			has_lover = yes
 			lover = {
-				is_close_relative = ROOT
+				is_close_relative = PREV
 			}		
 		}
 	}
@@ -1978,29 +1978,107 @@ nick_the_recluse = {
 nick_the_tyrant = {
 	allow = {
 		age = 20
-		ruled_years = 10
-		trait = arbitrary
 		OR = {
-			trait = ambitious
-			trait = envious
-			trait = greedy
-		}
-		OR = {
-			trait = wroth
-			trait = cruel
-			trait = paranoid
-		}
-		NOT = {
-			trait = kind
-			trait = charitable
-			trait = content
-		}
-		any_vassal = {
-			has_opinion_modifier = { who = ROOT modifier = opinion_tyrant }
+			trait = tyrant1
+			trait = tyrant2
+			trait = tyrant3
+			trait = tyrant4
+			trait = tyrant5
+			trait = tyrant6
+			trait = tyrant7
+			trait = tyrant8
+			trait = tyrant9
+			trait = tyrant10
+			trait = tyrant11
+			trait = tyrant12
+			trait = tyrant13
+			trait = tyrant14
+			trait = tyrant15
+			trait = tyrant16
+			trait = tyrant17
+			trait = tyrant18
+			trait = tyrant19
+			trait = tyrant20			
 		}
 	}
 	chance = {
-		factor = 2
+		factor = 1
+		modifier = {
+			factor = 2
+			trait = tyrant2
+		}
+		modifier = {
+			factor = 3
+			trait = tyrant3
+		}
+		modifier = {
+			factor = 4
+			trait = tyrant4
+		}
+		modifier = {
+			factor = 5
+			trait = tyrant5
+		}
+		modifier = {
+			factor = 6
+			trait = tyrant6
+		}
+		modifier = {
+			factor = 7
+			trait = tyrant7
+		}
+		modifier = {
+			factor = 8
+			trait = tyrant8
+		}
+		modifier = {
+			factor = 9
+			trait = tyrant9
+		}
+		modifier = {
+			factor = 10
+			trait = tyrant10
+		}
+		modifier = {
+			factor = 11
+			trait = tyrant11
+		}	
+		modifier = {
+			factor = 12
+			trait = tyrant12
+		}
+		modifier = {
+			factor = 13
+			trait = tyrant13
+		}	
+		modifier = {
+			factor = 14
+			trait = tyrant14
+		}
+		modifier = {
+			factor = 15
+			trait = tyrant15
+		}
+		modifier = {
+			factor = 16
+			trait = tyrant16
+		}
+		modifier = {
+			factor = 17
+			trait = tyrant17
+		}
+		modifier = {
+			factor = 18
+			trait = tyrant18
+		}		
+		modifier = {
+			factor = 19
+			trait = tyrant19
+		}		
+		modifier = {
+			factor = 20
+			trait = tyrant20
+		}
 	}
 }
 
@@ -2172,5 +2250,62 @@ nick_the_glorious = {
 	}
 	chance = {
 		factor = 2
+	}
+}
+
+nick_the_bloody = {
+	allow = {
+		age = 20
+		OR = {
+			trait = dishonorable1
+			trait = dishonorable2
+			trait = dishonorable3
+			trait = dishonorable4
+			trait = dishonorable5
+			trait = dishonorable6
+			trait = dishonorable7
+			trait = dishonorable8
+			trait = dishonorable9
+			trait = dishonorable10			
+		}
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 2
+			trait = dishonorable2
+		}
+		modifier = {
+			factor = 3
+			trait = dishonorable3
+		}
+		modifier = {
+			factor = 4
+			trait = dishonorable4
+		}
+		modifier = {
+			factor = 5
+			trait = dishonorable5
+		}
+		modifier = {
+			factor = 6
+			trait = dishonorable6
+		}
+		modifier = {
+			factor = 7
+			trait = dishonorable7
+		}
+		modifier = {
+			factor = 8
+			trait = dishonorable8
+		}
+		modifier = {
+			factor = 9
+			trait = dishonorable9
+		}
+		modifier = {
+			factor = 10
+			trait = dishonorable10
+		}
 	}
 }

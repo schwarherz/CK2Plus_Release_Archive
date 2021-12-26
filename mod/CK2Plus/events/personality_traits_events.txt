@@ -60,153 +60,25 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA1000"
-		if = {
-			limit = {
-				trait = honest
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = gluttonous
+			}	
 		}
-		if = {
-			limit = {
-				trait = slothful
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = honest
-				}
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = honest
-				trait = slothful
-			}
-			random = {
-				chance = 45
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
+		add_trait = lustful
 	}
 	option = {
 		name = "EVTOPTB1000"
-		if = {
-			limit = {
-				trait = arbitrary
-				NOT = {
-					trait = proud
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = proud
-				NOT = {
-					trait = arbitrary
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = proud
-				}
-				NOT = {
-					trait = arbitrary
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = proud
-				trait = arbitrary
-			}
-			random = {
-				chance = 45
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = temperate
+			}	
+		}		
+		add_trait = chaste
 	}
 }
 
@@ -229,6 +101,9 @@ character_event = {
 		NOT = {
 			trait = temperate
 		}
+		NOT = {
+			trait = hedonist
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -250,153 +125,31 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1001"
-		if = {
-			limit = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
 				trait = lustful
-				NOT = {
-					trait = chaste
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = gluttonous
-				hidden_tooltip = {
-					character_event = {
-						id = 38277 #Notify Gluttonous
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = chaste
-				NOT = {
-					trait = lustful
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = gluttonous
-				hidden_tooltip = {
-					character_event = {
-						id = 38277 #Notify Gluttonous
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = chaste
-				}
-				NOT = {
-					trait = lustful
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = gluttonous
-				hidden_tooltip = {
-					character_event = {
-						id = 38277 #Notify Gluttonous
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = chaste
-				trait = lustful
-			}
-			random = {
-				chance = 45
-				
-				add_trait = gluttonous
-				hidden_tooltip = {
-					character_event = {
-						id = 38277 #Notify Gluttonous
-					}
-				}
-			}
-		}
+			}	
+		}		
+		add_trait = gluttonous
 	}
 	option = {
 		name = "EVTOPTB1001"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = chaste
+			}	
+		}		
+		add_trait = temperate
 		if = {
 			limit = {
-				trait = zealous
-				NOT = {
-					trait = greedy
-				}
+				trait = lustful
 			}
-			random = {
-				chance = 70
-				
-				add_trait = temperate
-				hidden_tooltip = {
-					character_event = {
-						id = 38276 #Notify Temperate
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = greedy
-				NOT = {
-					trait = zealous
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = temperate
-				hidden_tooltip = {
-					character_event = {
-						id = 38276 #Notify Temperate
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = greedy
-				}
-				NOT = {
-					trait = zealous
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = temperate
-				hidden_tooltip = {
-					character_event = {
-						id = 38276 #Notify Temperate
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = greedy
-				trait = zealous
-			}
-			random = {
-				chance = 45
-				
-				add_trait = temperate
-				hidden_tooltip = {
-					character_event = {
-						id = 38276 #Notify Temperate
-					}
-				}
-			}
-		}
+			remove_trait = lustful
+		}		
 	}
 }
 
@@ -432,153 +185,25 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1003"
-		if = {
-			limit = {
-				trait = honest
-				NOT = {
-					trait = envious
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = charitable
-				hidden_tooltip = {
-					character_event = {
-						id = 38273 #Notify Charitable
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = envious
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = charitable
-				hidden_tooltip = {
-					character_event = {
-						id = 38273 #Notify Charitable
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = envious
-				}
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = charitable
-				hidden_tooltip = {
-					character_event = {
-						id = 38273 #Notify Charitable
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = envious
-				trait = honest
-			}
-			random = {
-				chance = 45
-				
-				add_trait = charitable
-				hidden_tooltip = {
-					character_event = {
-						id = 38273 #Notify Charitable
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = kind
+			}	
+		}		
+		add_trait = charitable
 	}
 	option = {
 		name = "EVTOPTB1003"
-		if = {
-			limit = {
-				trait = proud
-				NOT = {
-					trait = content
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = greedy
-				hidden_tooltip = {
-					character_event = {
-						id = 38252 #Notify Greedy
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = content
-				NOT = {
-					trait = proud
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = greedy
-				hidden_tooltip = {
-					character_event = {
-						id = 38252 #Notify Greedy
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = content
-				}
-				NOT = {
-					trait = proud
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = greedy
-				hidden_tooltip = {
-					character_event = {
-						id = 38252 #Notify Greedy
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = content
-				trait = proud
-			}
-			random = {
-				chance = 45
-				
-				add_trait = greedy
-				hidden_tooltip = {
-					character_event = {
-						id = 38252 #Notify Greedy
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = envious
+			}	
+		}		
+		add_trait = greedy
 	}
 }
 
@@ -623,153 +248,41 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1004"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = content
+			}	
+		}		
+		add_trait = slothful
 		if = {
-			limit = {
-				trait = cruel
-				NOT = {
-					trait = ambitious
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = slothful
-				hidden_tooltip = {
-					character_event = {
-						id = 38251 #Notify Slothful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = ambitious
-				NOT = {
-					trait = cruel
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = slothful
-				hidden_tooltip = {
-					character_event = {
-						id = 38251 #Notify Slothful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = ambitious
-				}
-				NOT = {
-					trait = cruel
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = slothful
-				hidden_tooltip = {
-					character_event = {
-						id = 38251 #Notify Slothful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = ambitious
-				trait = cruel
-			}
-			random = {
-				chance = 45
-				
-				add_trait = slothful
-				hidden_tooltip = {
-					character_event = {
-						id = 38251 #Notify Slothful
-					}
-				}
-			}
+			limit = { trait = stressed }
+			remove_trait = stressed
 		}
 	}
 	option = {
 		name = "EVTOPTB1004"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = ambitious
+			}	
+		}		
+		add_trait = diligent
 		if = {
-			limit = {
-				trait = patient
-				NOT = {
-					trait = cynical
-				}
-			}
+			limit = { NOT = { trait = stressed } }
 			random = {
-				chance = 70
-				
-				add_trait = diligent
+				chance = 25
+				add_trait = stressed
 				hidden_tooltip = {
 					character_event = {
-						id = 38256 #Notify Diligent
+						id = 38282 #Notify Stressed
 					}
-				}
+				}			
 			}
-		}
-		if = {
-			limit = {
-				trait = cynical
-				NOT = {
-					trait = patient
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = diligent
-				hidden_tooltip = {
-					character_event = {
-						id = 38256 #Notify Diligent
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = cynical
-				}
-				NOT = {
-					trait = patient
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = diligent
-				hidden_tooltip = {
-					character_event = {
-						id = 38256 #Notify Diligent
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = cynical
-				trait = patient
-			}
-			random = {
-				chance = 45
-				
-				add_trait = diligent
-				hidden_tooltip = {
-					character_event = {
-						id = 38256 #Notify Diligent
-					}
-				}
-			}
-		}
+		}		
 	}
 }
 
@@ -822,153 +335,25 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1005"
-		if = {
-			limit = {
-				trait = gregarious
-				NOT = {
-					trait = wroth
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = envious
-				hidden_tooltip = {
-					character_event = {
-						id = 38271 #Notify Envious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = wroth
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = envious
-				hidden_tooltip = {
-					character_event = {
-						id = 38271 #Notify Envious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = wroth
-				}
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = envious
-				hidden_tooltip = {
-					character_event = {
-						id = 38271 #Notify Envious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = wroth
-				trait = gregarious
-			}
-			random = {
-				chance = 45
-				
-				add_trait = envious
-				hidden_tooltip = {
-					character_event = {
-						id = 38271 #Notify Envious
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = greedy
+			}	
+		}		
+		add_trait = envious
 	}
 	option = {
 		name = "EVTOPTB1005"
-		if = {
-			limit = {
-				trait = gregarious
-				NOT = {
-					trait = wroth
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = wroth
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = wroth
-				}
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = wroth
-				trait = gregarious
-			}
-			random = {
-				chance = 45
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = charitable
+			}	
+		}		
+		add_trait = kind
 	}
 }
 
@@ -1018,153 +403,25 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1006"
-		if = {
-			limit = {
-				trait = gregarious
-				NOT = {
-					trait = wroth
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = wroth
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = wroth
-				}
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = wroth
-				trait = gregarious
-			}
-			random = {
-				chance = 45
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = charitable
+			}	
+		}		
+		add_trait = kind
 	}
 	option = {
 		name = "EVTOPTB1006"
-		if = {
-			limit = {
-				trait = lustful
-				NOT = {
-					trait = trusting
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = envious
-				hidden_tooltip = {
-					character_event = {
-						id = 38271 #Notify Envious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = trusting
-				NOT = {
-					trait = lustful
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = envious
-				hidden_tooltip = {
-					character_event = {
-						id = 38271 #Notify Envious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = trusting
-				}
-				NOT = {
-					trait = lustful
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = envious
-				hidden_tooltip = {
-					character_event = {
-						id = 38271 #Notify Envious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = trusting
-				trait = lustful
-			}
-			random = {
-				chance = 45
-				
-				add_trait = envious
-				hidden_tooltip = {
-					character_event = {
-						id = 38271 #Notify Envious
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = greedy
+			}	
+		}		
+		add_trait = envious
 	}
 }
 
@@ -1217,153 +474,25 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1007"
-		if = {
-			limit = {
-				trait = paranoid
-				NOT = {
-					trait = trusting
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = wroth
-				hidden_tooltip = {
-					character_event = {
-						id = 38254 #Notify Wroth
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = trusting
-				NOT = {
-					trait = paranoid
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = wroth
-				hidden_tooltip = {
-					character_event = {
-						id = 38254 #Notify Wroth
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = trusting
-				}
-				NOT = {
-					trait = paranoid
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = wroth
-				hidden_tooltip = {
-					character_event = {
-						id = 38254 #Notify Wroth
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = trusting
-				trait = paranoid
-			}
-			random = {
-				chance = 45
-				
-				add_trait = wroth
-				hidden_tooltip = {
-					character_event = {
-						id = 38254 #Notify Wroth
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = cruel
+			}	
+		}		
+		add_trait = wroth
 	}
 	option = {
 		name = "EVTOPTB1007"
-		if = {
-			limit = {
-				trait = temperate
-				NOT = {
-					trait = craven
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = patient
-				hidden_tooltip = {
-					character_event = {
-						id = 38264 #Notify Patient
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = craven
-				NOT = {
-					trait = temperate
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = patient
-				hidden_tooltip = {
-					character_event = {
-						id = 38264 #Notify Patient
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = temperate
-				}
-				NOT = {
-					trait = craven
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = patient
-				hidden_tooltip = {
-					character_event = {
-						id = 38264 #Notify Patient
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = temperate
-				trait = craven
-			}
-			random = {
-				chance = 45
-				
-				add_trait = patient
-				hidden_tooltip = {
-					character_event = {
-						id = 38264 #Notify Patient
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = kind
+			}	
+		}		
+		add_trait = patient
 	}
 }
 
@@ -1404,153 +533,25 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1008"
-		if = {
-			limit = {
-				trait = fair
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = proud
-				hidden_tooltip = {
-					character_event = {
-						id = 38261 #Notify Proud
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = fair
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = proud
-				hidden_tooltip = {
-					character_event = {
-						id = 38261 #Notify Proud
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = fair
-				}
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = proud
-				hidden_tooltip = {
-					character_event = {
-						id = 38261 #Notify Proud
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = fair
-				trait = honest
-			}
-			random = {
-				chance = 45
-				
-				add_trait = proud
-				hidden_tooltip = {
-					character_event = {
-						id = 38261 #Notify Proud
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = ambitious
+			}	
+		}		
+		add_trait = proud
 	}
 	option = {
 		name = "EVTOPTB1008"
-		if = {
-			limit = {
-				trait = ugly
-				NOT = {
-					trait = ambitious
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = humble
-				hidden_tooltip = {
-					character_event = {
-						id = 38260 #Notify Humble
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = ugly
-				NOT = {
-					trait = ambitious
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = humble
-				hidden_tooltip = {
-					character_event = {
-						id = 38260 #Notify Humble
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = ugly
-				}
-				NOT = {
-					trait = ambitious
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = humble
-				hidden_tooltip = {
-					character_event = {
-						id = 38260 #Notify Humble
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = ugly
-				trait = ambitious
-			}
-			random = {
-				chance = 45
-				
-				add_trait = humble
-				hidden_tooltip = {
-					character_event = {
-						id = 38260 #Notify Humble
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = content
+			}	
+		}		
+		add_trait = humble
 	}
 }
 
@@ -1603,153 +604,25 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1009"
-		if = {
-			limit = {
-				trait = kind
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = deceitful
-				hidden_tooltip = {
-					character_event = {
-						id = 38255 #Notify Deceitful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = kind
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = deceitful
-				hidden_tooltip = {
-					character_event = {
-						id = 38255 #Notify Deceitful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = kind
-				}
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = deceitful
-				hidden_tooltip = {
-					character_event = {
-						id = 38255 #Notify Deceitful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = kind
-				trait = gregarious
-			}
-			random = {
-				chance = 45
-				
-				add_trait = deceitful
-				hidden_tooltip = {
-					character_event = {
-						id = 38255 #Notify Deceitful
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = paranoid
+			}	
+		}		
+		add_trait = deceitful
 	}
 	option = {
 		name = "EVTOPTB1009"
-		if = {
-			limit = {
-				trait = zealous
-				NOT = {
-					trait = cynical
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = honest
-				hidden_tooltip = {
-					character_event = {
-						id = 38262 #Notify honest
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = cynical
-				NOT = {
-					trait = zealous
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = honest
-				hidden_tooltip = {
-					character_event = {
-						id = 38262 #Notify honest
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = zealous
-				}
-				NOT = {
-					trait = cynical
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = honest
-				hidden_tooltip = {
-					character_event = {
-						id = 38262 #Notify honest
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = zealous
-				trait = cynical
-			}
-			random = {
-				chance = 45
-				
-				add_trait = honest
-				hidden_tooltip = {
-					character_event = {
-						id = 38262 #Notify honest
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = trusting
+			}	
+		}		
+		add_trait = honest
 	}
 }
 
@@ -1781,153 +654,25 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1010"
-		if = {
-			limit = {
-				trait = paranoid
-				NOT = {
-					trait = cruel
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = craven
-				hidden_tooltip = {
-					character_event = {
-						id = 38257 #Notify Craven
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = cruel
-				NOT = {
-					trait = paranoid
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = craven
-				hidden_tooltip = {
-					character_event = {
-						id = 38257 #Notify Craven
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = paranoid
-				}
-				NOT = {
-					trait = cruel
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = craven
-				hidden_tooltip = {
-					character_event = {
-						id = 38257 #Notify Craven
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = paranoid
-				trait = cruel
-			}
-			random = {
-				chance = 45
-				
-				add_trait = craven
-				hidden_tooltip = {
-					character_event = {
-						id = 38257 #Notify Craven
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = patient
+			}	
+		}		
+		add_trait = craven
 	}
 	option = {
 		name = "EVTOPTB1010"
-		if = {
-			limit = {
-				trait = ambitious
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = brave
-				hidden_tooltip = {
-					character_event = {
-						id = 38270 #Notify brave
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = slothful
-				NOT = {
-					trait = ambitious
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = brave
-				hidden_tooltip = {
-					character_event = {
-						id = 38270 #Notify brave
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = ambitious
-				}
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = brave
-				hidden_tooltip = {
-					character_event = {
-						id = 38270 #Notify brave
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = ambitious
-				trait = slothful
-			}
-			random = {
-				chance = 45
-				
-				add_trait = brave
-				hidden_tooltip = {
-					character_event = {
-						id = 38270 #Notify brave
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = wroth
+			}	
+		}		
+		add_trait = brave
 	}
 }
 
@@ -1976,153 +721,25 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1011"
-		if = {
-			limit = {
-				trait = craven
-				NOT = {
-					trait = cynical
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = shy
-				hidden_tooltip = {
-					character_event = {
-						id = 38263 #Notify shy
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = cynical
-				NOT = {
-					trait = craven
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = shy
-				hidden_tooltip = {
-					character_event = {
-						id = 38263 #Notify shy
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = craven
-				}
-				NOT = {
-					trait = cynical
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = shy
-				hidden_tooltip = {
-					character_event = {
-						id = 38263 #Notify shy
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = craven
-				trait = cynical
-			}
-			random = {
-				chance = 45
-				
-				add_trait = shy
-				hidden_tooltip = {
-					character_event = {
-						id = 38263 #Notify shy
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = paranoid
+			}	
+		}		
+		add_trait = shy
 	}
 	option = {
 		name = "EVTOPTB1011"
-		if = {
-			limit = {
-				trait = brave
-				NOT = {
-					trait = paranoid
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = gregarious
-				hidden_tooltip = {
-					character_event = {
-						id = 38265 #Notify Gregarious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = paranoid
-				NOT = {
-					trait = brave
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = gregarious
-				hidden_tooltip = {
-					character_event = {
-						id = 38265 #Notify Gregarious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = brave
-				}
-				NOT = {
-					trait = paranoid
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = gregarious
-				hidden_tooltip = {
-					character_event = {
-						id = 38265 #Notify Gregarious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = brave
-				trait = paranoid
-			}
-			random = {
-				chance = 45
-				
-				add_trait = gregarious
-				hidden_tooltip = {
-					character_event = {
-						id = 38265 #Notify Gregarious
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = trusting
+			}	
+		}		
+		add_trait = gregarious
 	}
 }
 
@@ -2163,153 +780,37 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1012"
-		if = {
-			limit = {
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
 				trait = proud
-				NOT = {
-					trait = shy
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = ambitious
-				hidden_tooltip = {
-					character_event = {
-						id = 38278 #Notify Ambitious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = shy
-				NOT = {
-					trait = proud
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = ambitious
-				hidden_tooltip = {
-					character_event = {
-						id = 38278 #Notify Ambitious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = proud
-				}
-				NOT = {
-					trait = shy
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = ambitious
-				hidden_tooltip = {
-					character_event = {
-						id = 38278 #Notify Ambitious
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = proud
-				trait = shy
-			}
-			random = {
-				chance = 45
-				
-				add_trait = ambitious
-				hidden_tooltip = {
-					character_event = {
-						id = 38278 #Notify Ambitious
-					}
-				}
-			}
-		}
+			}	
+		}		
+		add_trait = ambitious
 	}
 	option = {
 		name = "EVTOPTB1012"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = humble
+			}	
+		}		
+		add_trait = content
 		if = {
 			limit = {
-				trait = patient
-				NOT = {
-					trait = lustful
-				}
+				trait = stressed
 			}
-			random = {
-				chance = 70
-				
-				add_trait = content
-				hidden_tooltip = {
-					character_event = {
-						id = 38279 #Notify Content
-					}
-				}
-			}
+			remove_trait = stressed
 		}
 		if = {
 			limit = {
-				trait = lustful
-				NOT = {
-					trait = patient
-				}
+				trait = depressed
 			}
-			random = {
-				chance = 20
-				
-				add_trait = content
-				hidden_tooltip = {
-					character_event = {
-						id = 38279 #Notify Content
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = patient
-				}
-				NOT = {
-					trait = lustful
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = content
-				hidden_tooltip = {
-					character_event = {
-						id = 38279 #Notify Content
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = patient
-				trait = lustful
-			}
-			random = {
-				chance = 45
-				
-				add_trait = content
-				hidden_tooltip = {
-					character_event = {
-						id = 38279 #Notify Content
-					}
-				}
-			}
-		}
+			remove_trait = depressed
+		}		
 	}
 }
 
@@ -2354,153 +855,25 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1013"
-		if = {
-			limit = {
-				trait = diligent
-				NOT = {
-					trait = shy
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = arbitrary
-				hidden_tooltip = {
-					character_event = {
-						id = 38266 #Notify Arbitrary
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = shy
-				NOT = {
-					trait = diligent
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = arbitrary
-				hidden_tooltip = {
-					character_event = {
-						id = 38266 #Notify Arbitrary
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = diligent
-				}
-				NOT = {
-					trait = shy
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = arbitrary
-				hidden_tooltip = {
-					character_event = {
-						id = 38266 #Notify Arbitrary
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = diligent
-				trait = shy
-			}
-			random = {
-				chance = 45
-				
-				add_trait = arbitrary
-				hidden_tooltip = {
-					character_event = {
-						id = 38266 #Notify Arbitrary
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = wroth
+			}	
+		}		
+		add_trait = arbitrary
 	}
 	option = {
 		name = "EVTOPTB1013"
-		if = {
-			limit = {
-				trait = honest
-				NOT = {
-					trait = content
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = just
-				hidden_tooltip = {
-					character_event = {
-						id = 38267 #Notify Just
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = content
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = just
-				hidden_tooltip = {
-					character_event = {
-						id = 38267 #Notify Just
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = honest
-				}
-				NOT = {
-					trait = content
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = just
-				hidden_tooltip = {
-					character_event = {
-						id = 38267 #Notify Just
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = honest
-				trait = content
-			}
-			random = {
-				chance = 45
-				
-				add_trait = just
-				hidden_tooltip = {
-					character_event = {
-						id = 38267 #Notify Just
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = patient
+			}	
+		}		
+		add_trait = just
 	}
 }
 
@@ -2561,153 +934,25 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA1014"
-		if = {
-			limit = {
-				trait = patient
-				NOT = {
-					trait = paranoid
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = zealous
-				hidden_tooltip = {
-					character_event = {
-						id = 38269 #Notify Zealous
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = paranoid
-				NOT = {
-					trait = patient
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = zealous
-				hidden_tooltip = {
-					character_event = {
-						id = 38269 #Notify Zealous
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = patient
-				}
-				NOT = {
-					trait = paranoid
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = zealous
-				hidden_tooltip = {
-					character_event = {
-						id = 38269 #Notify Zealous
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = patient
-				trait = paranoid
-			}
-			random = {
-				chance = 45
-				
-				add_trait = zealous
-				hidden_tooltip = {
-					character_event = {
-						id = 38269 #Notify Zealous
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = honest
+			}	
+		}		
+		add_trait = zealous
 	}
 	option = {
 		name = "EVTOPTB1014"
-		if = {
-			limit = {
-				trait = wroth
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = cynical
-				hidden_tooltip = {
-					character_event = {
-						id = 38258 #Notify Cynical
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = slothful
-				NOT = {
-					trait = wroth
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = cynical
-				hidden_tooltip = {
-					character_event = {
-						id = 38258 #Notify Cynical
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = wroth
-				}
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = cynical
-				hidden_tooltip = {
-					character_event = {
-						id = 38258 #Notify Cynical
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = wroth
-				trait = slothful
-			}
-			random = {
-				chance = 45
-				
-				add_trait = cynical
-				hidden_tooltip = {
-					character_event = {
-						id = 38258 #Notify Cynical
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = deceitful
+			}	
+		}		
+		add_trait = cynical
 	}
 }
 
@@ -2763,153 +1008,25 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA1015"
-		if = {
-			limit = {
-				trait = honest
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = slothful
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = honest
-				}
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = honest
-				trait = slothful
-			}
-			random = {
-				chance = 45
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = gluttonous
+			}	
+		}		
+		add_trait = lustful
 	}
 	option = {
 		name = "EVTOPTB1015"
-		if = {
-			limit = {
-				trait = arbitrary
-				NOT = {
-					trait = proud
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = proud
-				NOT = {
-					trait = arbitrary
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = proud
-				}
-				NOT = {
-					trait = arbitrary
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = proud
-				trait = arbitrary
-			}
-			random = {
-				chance = 45
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = temperate
+			}	
+		}		
+		add_trait = chaste
 	}
 }
 
@@ -2958,153 +1075,25 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA1016"
-		if = {
-			limit = {
-				trait = cynical
-				NOT = {
-					trait = charitable
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = paranoid
-				hidden_tooltip = {
-					character_event = {
-						id = 38275 #Notify Paranoid
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = charitable
-				NOT = {
-					trait = cynical
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = paranoid
-				hidden_tooltip = {
-					character_event = {
-						id = 38275 #Notify Paranoid
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = cynical
-				}
-				NOT = {
-					trait = charitable
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = paranoid
-				hidden_tooltip = {
-					character_event = {
-						id = 38275 #Notify Paranoid
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = cynical
-				trait = charitable
-			}
-			random = {
-				chance = 45
-				
-				add_trait = paranoid
-				hidden_tooltip = {
-					character_event = {
-						id = 38275 #Notify Paranoid
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = gluttonous
+			}	
+		}		
+		add_trait = paranoid
 	}
 	option = {
 		name = "EVTOPTB1016"
-		if = {
-			limit = {
-				trait = gregarious
-				NOT = {
-					trait = deceitful
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = trusting
-				hidden_tooltip = {
-					character_event = {
-						id = 38250 #Notify Trusting
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = deceitful
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = trusting
-				hidden_tooltip = {
-					character_event = {
-						id = 38250 #Notify Trusting
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = gregarious
-				}
-				NOT = {
-					trait = deceitful
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = trusting
-				hidden_tooltip = {
-					character_event = {
-						id = 38250 #Notify Trusting
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = gregarious
-				trait = deceitful
-			}
-			random = {
-				chance = 45
-				
-				add_trait = trusting
-				hidden_tooltip = {
-					character_event = {
-						id = 38250 #Notify Trusting
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = temperate
+			}	
+		}		
+		add_trait = trusting
 	}
 }
 
@@ -3153,153 +1142,25 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA1017"
-		if = {
-			limit = {
-				trait = arbitrary
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = cruel
-				hidden_tooltip = {
-					character_event = {
-						id = 38259 #Notify
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = honest
-				NOT = {
-					trait = arbitrary
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = cruel
-				hidden_tooltip = {
-					character_event = {
-						id = 38259 #Notify
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = arbitrary
-				}
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = cruel
-				hidden_tooltip = {
-					character_event = {
-						id = 38259 #Notify
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = arbitrary
-				trait = honest
-			}
-			random = {
-				chance = 45
-				
-				add_trait = cruel
-				hidden_tooltip = {
-					character_event = {
-						id = 38259 #Notify
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = wroth
+			}	
+		}		
+		add_trait = cruel
 	}
 	option = {
 		name = "EVTOPTB1017"
-		if = {
-			limit = {
-				trait = gregarious
-				NOT = {
-					trait = wroth
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = wroth
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = wroth
-				}
-				NOT = {
-					trait = gregarious
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = wroth
-				trait = gregarious
-			}
-			random = {
-				chance = 45
-				
-				add_trait = kind
-				hidden_tooltip = {
-					character_event = {
-						id = 38268 #Notify Kind
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = patient
+			}	
+		}		
+		add_trait = kind
 	}
 }
 
@@ -3358,153 +1219,25 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA1018"
-		if = {
-			limit = {
-				trait = honest
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = slothful
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = honest
-				}
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = honest
-				trait = slothful
-			}
-			random = {
-				chance = 45
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = gluttonous
+			}	
+		}		
+		add_trait = lustful
 	}
 	option = {
 		name = "EVTOPTB1018"
-		if = {
-			limit = {
-				trait = arbitrary
-				NOT = {
-					trait = proud
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = proud
-				NOT = {
-					trait = arbitrary
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = proud
-				}
-				NOT = {
-					trait = arbitrary
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = proud
-				trait = arbitrary
-			}
-			random = {
-				chance = 45
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = temperate
+			}	
+		}		
+		add_trait = chaste
 	}
 }
 
@@ -3563,153 +1296,25 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA1019"
-		if = {
-			limit = {
-				trait = honest
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = slothful
-				NOT = {
-					trait = honest
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = honest
-				}
-				NOT = {
-					trait = slothful
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = honest
-				trait = slothful
-			}
-			random = {
-				chance = 45
-				
-				add_trait = lustful
-				hidden_tooltip = {
-					character_event = {
-						id = 38272 #Notify Lustful
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = gluttonous
+			}	
+		}		
+		add_trait = lustful
 	}
 	option = {
 		name = "EVTOPTB1019"
-		if = {
-			limit = {
-				trait = arbitrary
-				NOT = {
-					trait = proud
-				}
-			}
-			random = {
-				chance = 70
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = proud
-				NOT = {
-					trait = arbitrary
-				}
-			}
-			random = {
-				chance = 20
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					trait = proud
-				}
-				NOT = {
-					trait = arbitrary
-				}
-			}
-			random = {
-				chance = 45
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				trait = proud
-				trait = arbitrary
-			}
-			random = {
-				chance = 45
-				
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
-					}
-				}
-			}
-		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2.0
+				trait = temperate
+			}	
+		}		
+		add_trait = chaste
 	}
 }
 
@@ -3736,7 +1341,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -3766,7 +1371,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 
@@ -3796,7 +1401,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -3826,7 +1431,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -3856,7 +1461,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -3886,7 +1491,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -3916,7 +1521,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -3946,7 +1551,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -3976,7 +1581,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4006,7 +1611,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4036,7 +1641,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4066,7 +1671,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4096,7 +1701,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4126,7 +1731,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4157,7 +1762,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4187,7 +1792,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4217,7 +1822,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4247,7 +1852,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4277,7 +1882,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4307,7 +1912,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4337,7 +1942,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4367,7 +1972,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4397,7 +2002,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4427,7 +2032,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4457,7 +2062,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4487,7 +2092,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4517,7 +2122,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4547,7 +2152,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	
@@ -4577,7 +2182,7 @@ character_event = {
 		
 		modifier = {
 			factor = 2
-			personality_traits = 6
+			personality_traits = 8
 		}
 	}
 	

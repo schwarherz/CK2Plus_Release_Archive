@@ -12,7 +12,7 @@
 job_chancellor = {
 	is_chancellor = yes
 	attribute = diplomacy
-	dignity = 0.33
+	dignity = 0.25
 	opinion_effect = 15
 	
 	monthly_salary = 0.1
@@ -51,7 +51,7 @@ job_chancellor = {
 job_marshal = {
 	is_marshal = yes
 	attribute = martial
-	dignity = 0.33
+	dignity = 0.25
 	opinion_effect = 15
 	
 	monthly_salary = 0.1
@@ -90,7 +90,7 @@ job_marshal = {
 job_treasurer = {
 	is_treasurer = yes
 	attribute = stewardship
-	dignity = 0.2
+	dignity = 0.25
 	opinion_effect = 15
 	
 	monthly_salary = 0.1
@@ -138,7 +138,7 @@ job_treasurer = {
 job_spymaster = {
 	is_spymaster = yes
 	attribute = intrigue
-	dignity = 0.1
+	dignity = 0.25
 	opinion_effect = 15
 	
 	monthly_salary = 0.1
@@ -186,7 +186,7 @@ job_spymaster = {
 job_spiritual = {
 	is_spiritual = yes
 	attribute = learning
-	dignity = 0.15
+	dignity = 0.25
 	opinion_effect = 15
 	
 	monthly_salary = 0.1

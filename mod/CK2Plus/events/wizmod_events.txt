@@ -879,10 +879,11 @@ character_event = {
 		random = {
 			chance = 50
 			add_trait = arbitrary
-		}
-		random = {
-			chance = 50
-			add_trait = wroth
+			hidden_tooltip = {
+				character_event = {
+					id = 38266 #Notify Arbitrary
+				}
+			}			
 		}	
 		clr_character_flag = filthy_murderer
 	}
@@ -1027,34 +1028,6 @@ character_event = {
 	option = {
 		name = "EVTOPTA190033"
 		remove_trait = crowned_by_pope
-	}
-}
-
-character_event = {
-	id = 190034
-	picture = "GFX_evt_into_the_dungeon"
-	
-	is_triggered_only = yes
-	
-	desc = "EVTDESC190034"
-
-	option = {
-		name = "EVTOPTA190034"
-		any_vassal = {
-			opinion = {
-				modifier = opinion_tyrant
-				who = ROOT
-				years = 10
-			}
-		}
-		any_courtier = {
-			opinion = {
-				modifier = opinion_tyrant
-				who = ROOT
-				years = 10
-			}
-		}	
-		piety = -10
 	}
 }
 
@@ -1629,6 +1602,12 @@ character_event = {
 		days = 1
 		modifier = {
 			factor = 2.0
+			capital_scope = {
+				culture_group = ROOT
+			}
+		}
+		modifier = {
+			factor = 2.0
 			NOT = { age = 20 }
 		}
 		modifier = {
@@ -1869,7 +1848,6 @@ character_event = {
 
 character_event = {
 	id = 190043
-	picture = GFX_evt_lovers
 	is_triggered_only = yes
 	
 	trigger = {
@@ -2093,12 +2071,29 @@ character_event = {
 		is_married = yes
 		has_lover = no
 		OR = {
+			is_female = no
 			is_ruler = yes
+		}	
+		OR = {
 			spouse = { is_ruler = no }
-		}		
+			is_ruler = yes
+		}
+		OR = {
+			ai = no
+			spouse = { ai = yes }
+		}
 		spouse = {
 			has_lover = no
-			NOT = { has_character_flag = recent_lover }
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = opinion_former_lover
+				}
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = opinion_spurned
+				}				
+			}
 			NOT = { trait = homosexual }
 			NOT = { trait = infirm }
 			NOT = { trait = incapable }
@@ -2109,8 +2104,7 @@ character_event = {
 				is_married = no
 				NOT = { trait = chaste }
 			}
-		}
-		NOT = { has_character_flag = marital_bliss }		
+		}	
 		NOT = { trait = homosexual }
 		NOT = { trait = infirm }
 		NOT = { trait = incapable }
@@ -2158,6 +2152,22 @@ character_event = {
 			spouse = { trait = lustful }
 		}
 		modifier = {
+			factor = 2.0
+			trait = fair
+		}
+		modifier = {
+			factor = 2.0
+			spouse = { trait = fair }
+		}	
+		modifier = {
+			factor = 0.5
+			trait = ugly
+		}
+		modifier = {
+			factor = 0.5
+			spouse = { trait = ugly }
+		}		
+		modifier = {
 			factor = 0.5
 			spouse = { NOT = { opinion = { who = ROOT value = 0 } } }
 		}	
@@ -2174,27 +2184,19 @@ character_event = {
 			spouse = { NOT = { reverse_opinion = { who = ROOT value = 25 } } }
 		}			
 		modifier = {
-			factor = 1.1
-			spouse = { opinion = { who = ROOT value = 25 } }
-		}
-		modifier = {
-			factor = 1.1
-			spouse = { reverse_opinion = { who = ROOT value = 25 } }
-		}
-		modifier = {
-			factor = 1.1
+			factor = 1.25
 			spouse = { opinion = { who = ROOT value = 50 } }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			spouse = { reverse_opinion = { who = ROOT value = 50 } }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			spouse = { opinion = { who = ROOT value = 75 } }
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			spouse = { reverse_opinion = { who = ROOT value = 75 } }
 		}
 		modifier = {
@@ -2230,8 +2232,6 @@ character_event = {
 				}
 			}				
 		}		
-		set_character_flag = marital_bliss
-		spouse = { set_character_flag = marital_bliss }
 	}
 	
 	option = {
@@ -2264,8 +2264,13 @@ character_event = {
 				}				
 			}
 		}
-		set_character_flag = marital_bliss
-		spouse = { set_character_flag = marital_bliss }
+		spouse = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_spurned
+				years = 10
+			}		
+		}
 	}
 	
 	option = {
@@ -2298,8 +2303,13 @@ character_event = {
 				}				
 			}
 		}
-		set_character_flag = marital_bliss
-		spouse = { set_character_flag = marital_bliss }
+		spouse = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_spurned
+				years = 10
+			}		
+		}
 	}	
 }
 
@@ -2782,6 +2792,46 @@ character_event = {
 }
 
 character_event = {
+	id = 190058
+	picture = "GFX_evt_council"
+	
+	trigger = {
+		ai = yes
+		liege = {
+			ai = no
+			OR = {
+				trait = regency
+				trait = regency_ai
+			}
+			OR = {
+				is_ruler = no
+				NOT = { regent = { is_alive = yes } }
+			}
+			OR = {
+				NOT = { age = 16 }
+				age = 17
+				has_character_flag = education_trait_notified
+			}
+		}
+	}
+		
+	desc = "AI_EVENT"
+	
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = "OK"
+		liege = {
+			remove_trait = regency
+			remove_trait = regency_ai
+		}
+	}
+}
+
+
+character_event = {
 	id = 190059
 	desc = "EVTDESC190058"	
 	picture = GFX_evt_pope
@@ -2808,6 +2858,7 @@ character_event = {
 	picture = "GFX_evt_council"
 	
 	trigger = {
+		ai = yes
 		OR = {
 			trait = regency
 			trait = regency_ai
@@ -2823,22 +2874,16 @@ character_event = {
 		}		
 	}
 		
-	desc = "EVTDESC190060"
+	desc = "AI_EVENT"
 	
 	mean_time_to_happen = {
 		days = 1		
 	}
 
 	option = {
-		name = "EVTOPTA190060"
-		if = {
-			limit = { trait = regency }
-			remove_trait = regency
-		}
-		if = {
-			limit = { trait = regency_ai }
-			remove_trait = regency_ai
-		}				
+		name = "OK"
+		remove_trait = regency
+		remove_trait = regency_ai			
 	}
 }
 
@@ -2890,6 +2935,7 @@ character_event = {
 				character_event = { id = 190061 tooltip = CUSTOMTOOLTIP3 }
 			}
 			hidden_tooltip = {
+				set_character_flag = centralize_without_penalties
 				if = {
 					limit = {
 						religion = catholic
@@ -2923,19 +2969,19 @@ character_event = {
 							revoke_law = revoke_law_1
 							revoke_law = investiture_law_0
 							revoke_law = investiture_law_1
-							add_law_w_cooldown = feudal_tax_0
-							add_law_w_cooldown = feudal_contract_0
-							add_law_w_cooldown = city_tax_0
-							add_law_w_cooldown = city_contract_0
-							add_law_w_cooldown = temple_tax_0
-							add_law_w_cooldown = temple_contract_0
-							add_law_w_cooldown = centralization_1
+							add_law = feudal_tax_0
+							add_law = feudal_contract_0
+							add_law = city_tax_0
+							add_law = city_contract_0
+							add_law = temple_tax_0
+							add_law = temple_contract_0
+							add_law = centralization_1
 							gain_title = PREVPREVPREV
 							if = {
 								limit = {
 									ROOT = { religion = catholic }
 								}
-								add_law_w_cooldown = investiture_law_0
+								add_law = investiture_law_0
 							}
 							if = {
 								limit = {
@@ -2944,7 +2990,7 @@ character_event = {
 										title = e_byzantium
 									}
 								}
-								add_law_w_cooldown = revoke_law_1
+								add_law = revoke_law_1
 							}							
 						}
 					}
@@ -2962,7 +3008,8 @@ character_event = {
 				treasury = 200
 				prestige = 400
 				piety = 200
-				add_character_modifier = { name = "holy_truce_timer" duration = 3650 }					
+				add_character_modifier = { name = "holy_truce_timer" duration = 3650 }			
+				clr_character_flag = centralize_without_penalties
 				character_event = { id = 190042 }
 			}			
 		}
@@ -3010,6 +3057,7 @@ character_event = {
 				character_event = { id = 190061 tooltip = CUSTOMTOOLTIP3 }
 			}
 			hidden_tooltip = {
+				set_character_flag = centralize_without_penalties
 				if = {
 					limit = {
 						religion = catholic
@@ -3043,19 +3091,19 @@ character_event = {
 							revoke_law = revoke_law_1
 							revoke_law = investiture_law_0
 							revoke_law = investiture_law_1
-							add_law_w_cooldown = feudal_tax_0
-							add_law_w_cooldown = feudal_contract_0
-							add_law_w_cooldown = city_tax_0
-							add_law_w_cooldown = city_contract_0
-							add_law_w_cooldown = temple_tax_0
-							add_law_w_cooldown = temple_contract_0
-							add_law_w_cooldown = centralization_1
+							add_law = feudal_tax_0
+							add_law = feudal_contract_0
+							add_law = city_tax_0
+							add_law = city_contract_0
+							add_law = temple_tax_0
+							add_law = temple_contract_0
+							add_law = centralization_1
 							gain_title = PREVPREVPREV
 							if = {
 								limit = {
 									ROOT = { religion = catholic }
 								}
-								add_law_w_cooldown = investiture_law_0
+								add_law = investiture_law_0
 							}
 							if = {
 								limit = {
@@ -3064,7 +3112,7 @@ character_event = {
 										title = e_byzantium
 									}
 								}
-								add_law_w_cooldown = revoke_law_1
+								add_law = revoke_law_1
 							}							
 						}
 					}
@@ -3082,7 +3130,8 @@ character_event = {
 				treasury = 200
 				prestige = 400
 				piety = 200
-				add_character_modifier = { name = "holy_truce_timer" duration = 3650 }					
+				add_character_modifier = { name = "holy_truce_timer" duration = 3650 }
+				clr_character_flag = centralize_without_penalties
 				character_event = { id = 190042 }
 			}			
 		}
@@ -3113,6 +3162,7 @@ character_event = {
 				}
 			}		
 			new_character = {
+				set_character_flag = centralize_without_penalties
 				fertility = 0.5
 				if = {
 					limit = {
@@ -3147,19 +3197,19 @@ character_event = {
 							revoke_law = revoke_law_1
 							revoke_law = investiture_law_0
 							revoke_law = investiture_law_1
-							add_law_w_cooldown = feudal_tax_0
-							add_law_w_cooldown = feudal_contract_0
-							add_law_w_cooldown = city_tax_0
-							add_law_w_cooldown = city_contract_0
-							add_law_w_cooldown = temple_tax_0
-							add_law_w_cooldown = temple_contract_0
-							add_law_w_cooldown = centralization_1
+							add_law = feudal_tax_0
+							add_law = feudal_contract_0
+							add_law = city_tax_0
+							add_law = city_contract_0
+							add_law = temple_tax_0
+							add_law = temple_contract_0
+							add_law = centralization_1
 							gain_title = PREVPREVPREV
 							if = {
 								limit = {
 									ROOT = { religion = catholic }
 								}
-								add_law_w_cooldown = investiture_law_0
+								add_law = investiture_law_0
 							}
 							if = {
 								limit = {
@@ -3168,7 +3218,7 @@ character_event = {
 										title = e_byzantium
 									}
 								}
-								add_law_w_cooldown = revoke_law_1
+								add_law = revoke_law_1
 							}							
 						}
 					}				
@@ -3187,6 +3237,7 @@ character_event = {
 				prestige = 400
 				piety = 200
 				add_character_modifier = { name = "holy_truce_timer" duration = 3650 }	
+				clr_character_flag = centralize_without_penalties
 				character_event = { id = 190042 }
 			}
 		}
@@ -3295,8 +3346,24 @@ character_event = {
 			culture_group = west_african
 		}		
 		modifier = {
-			factor = 2.5
+			factor = 0.5
 			ai = yes
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			ai = yes
+			NOT = { difficulty = 2 }
+		}
+		modifier = {
+			factor = 2
+			ai = yes
+			difficulty = 3
+		}
+		modifier = {
+			factor = 2
+			ai = yes
+			difficulty = 4
 		}		
 		modifier = {
 			factor = 1.1
@@ -3419,8 +3486,24 @@ character_event = {
 	mean_time_to_happen = {
 		days = 1	
 		modifier = {
-			factor = 1.5
+			factor = 0.5
 			ai = yes
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			ai = yes
+			NOT = { difficulty = 2 }
+		}
+		modifier = {
+			factor = 2
+			ai = yes
+			difficulty = 3
+		}
+		modifier = {
+			factor = 2
+			ai = yes
+			difficulty = 4
 		}		
 		modifier = {
 			factor = 1.1
@@ -3512,198 +3595,50 @@ character_event = {
 }
 
 character_event = {
-	id = 190065
-	desc = "EVTDESC190034"	
-	picture = GFX_evt_death
-	is_triggered_only = yes
-	
+	id = 190066
+	picture = "GFX_evt_council"
 	trigger = {
 		ai = yes
-		prisoner = yes
-		NOT = { has_character_modifier = house_arrest }
-		OR = {
-			trait = ill
-			trait = pneumonic
-			trait = wounded
-		}
-		host = {
+		liege = { 
 			ai = no
-			religion = ROOT
+			regent = { is_alive = yes }
+			NOT = { trait = regency }
+			NOT = { trait = regency_ai }
 		}
 	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	option = {
-		name = "EVTOPTA190034"	
-		host = {
-			character_event = { id = 190034 }
-		}
-	}
-}
-
-character_event = {
-	id = 190066
-	desc = "EVTDESC190066"	
-	picture = "GFX_evt_family"
-	is_triggered_only = yes
-	
-	trigger = {
-		age = 12
-		NOT = { has_character_flag = attribute_adjustment }
-		OR = {
-			NOT = { martial = 1 }
-			NOT = { diplomacy = 1 }
-			NOT = { intrigue = 1 }
-			NOT = { stewardship = 1 }
-			NOT = { learning = 1 }
-		}
-	}
+		
+	desc = "AI_EVENT"
 	
 	mean_time_to_happen = {
 		days = 1		
 	}
-	
-	immediate = {
-		set_character_flag = attribute_adjustment
-		hidden_tooltip = {		
-			if = {
-				limit = {
-					NOT = { martial = 1 }
-				}
-				change_martial = 1
-			}
-			if = {
-				limit = {
-					NOT = { martial = 1 }
-				}
-				change_martial = 1
-			}
-			if = {
-				limit = {
-					NOT = { martial = 1 }
-				}
-				change_martial = 1
-			}				
-			if = {
-				limit = {
-					NOT = { intrigue = 1 }
-				}
-				change_intrigue = 1
-			}
-			if = {
-				limit = {
-					NOT = { intrigue = 1 }
-				}
-				change_intrigue = 1
-			}
-			if = {
-				limit = {
-					NOT = { intrigue = 1 }
-				}
-				change_intrigue = 1
-			}					
-			if = {
-				limit = {
-					NOT = { stewardship = 1 }
-				}
-				change_stewardship = 1
-			}
-			if = {
-				limit = {
-					NOT = { stewardship = 1 }
-				}
-				change_stewardship = 1
-			}
-			if = {
-				limit = {
-					NOT = { stewardship = 1 }
-				}
-				change_stewardship = 1
-			}					
-			if = {
-				limit = {
-					NOT = { diplomacy = 1 }
-				}
-				change_diplomacy = 1
-			}
-			if = {
-				limit = {
-					NOT = { diplomacy = 1 }
-				}
-				change_diplomacy = 1
-			}
-			if = {
-				limit = {
-					NOT = { diplomacy = 1 }
-				}
-				change_diplomacy = 1
-			}					
-			if = {
-				limit = {
-					NOT = { learning = 1 }
-				}
-				change_learning = 1
-			}
-			if = {
-				limit = {
-					NOT = { learning = 1 }
-				}
-				change_learning = 1
-			}
-			if = {
-				limit = {
-					NOT = { learning = 1 }
-				}
-				change_learning = 1
-			}		
-		}	
-	}
-	
+
 	option = {
-		name = "EVTOPTA190066"
-		if = {
-			limit = { ai = no }
-			prestige = 5
-		}		
+		name = "OK"
+		liege = { add_trait = regency }
 	}
-	option = {
-		name = "EVTOPTB190066"
-		if = {
-			limit = { ai = no }
-			piety = 5
-		}		
-	}	
 }
 
 character_event = {
 	id = 190067
 	picture = "GFX_evt_council"
 	trigger = {
+		ai = yes
 		is_ruler = yes
 		regent = { is_alive = yes }
 		NOT = { trait = regency }
 		NOT = { trait = regency_ai }
 	}
 		
-	desc = "EVTDESC190067"
+	desc = "AI_EVENT"
 	
 	mean_time_to_happen = {
 		days = 1		
 	}
 
 	option = {
-		name = "EVTOPTA190067"
-		if = {
-			limit = { ai = no }
-			add_trait = regency
-		}
-		if = {
-			limit = { ai = yes }
-			add_trait = regency_ai
-		}
+		name = "OK"
+		add_trait = regency_ai
 	}
 }
 
@@ -3718,6 +3653,7 @@ character_event = {
 		is_feudal = yes
 		num_of_vassals = 1
 		primary_title = { higher_tier_than = COUNT }
+		NOT = { has_landed_title = e_byzantium }
 		any_vassal = {
 			has_objective = obj_gain_honorary_title
 		}
@@ -4053,4 +3989,2711 @@ character_event = {
 		}
 		set_character_flag = employed_debutante
 	}
+}
+
+#Executed courtier without cause
+character_event = {
+	id = 190074
+	is_triggered_only = yes
+		
+	desc = "EVTDESC190074"
+
+	option = {
+		name = "OK"		
+		if = {
+			limit = {
+				trait = just
+			}
+			remove_trait = just
+		}
+		if = {
+			limit = {
+				trait = kind
+			}
+			remove_trait = kind
+		}		
+		custom_tooltip = TYRANTTOOLTIP5
+		hidden_tooltip = {
+			if = {
+				limit = {
+					trait = tyrant19
+				}
+				remove_trait = tyrant19
+				add_trait = tyrant20
+			}
+			if = {
+				limit = {
+					trait = tyrant18
+				}
+				remove_trait = tyrant18
+				add_trait = tyrant19
+			}
+			if = {
+				limit = {
+					trait = tyrant17
+				}
+				remove_trait = tyrant17
+				add_trait = tyrant18
+			}
+			if = {
+				limit = {
+					trait = tyrant16
+				}
+				remove_trait = tyrant16
+				add_trait = tyrant17
+			}	
+			if = {
+				limit = {
+					trait = tyrant15
+				}
+				remove_trait = tyrant15
+				add_trait = tyrant16
+			}
+			if = {
+				limit = {
+					trait = tyrant14
+				}
+				remove_trait = tyrant14
+				add_trait = tyrant15
+			}
+			if = {
+				limit = {
+					trait = tyrant13
+				}
+				remove_trait = tyrant13
+				add_trait = tyrant14
+			}
+			if = {
+				limit = {
+					trait = tyrant12
+				}
+				remove_trait = tyrant12
+				add_trait = tyrant13
+			}
+			if = {
+				limit = {
+					trait = tyrant11
+				}
+				remove_trait = tyrant11
+				add_trait = tyrant12
+			}
+			if = {
+				limit = {
+					trait = tyrant10
+				}
+				remove_trait = tyrant10
+				add_trait = tyrant11
+			}
+			if = {
+				limit = {
+					trait = tyrant9
+				}
+				remove_trait = tyrant9
+				add_trait = tyrant10
+			}	
+			if = {
+				limit = {
+					trait = tyrant8
+				}
+				remove_trait = tyrant8
+				add_trait = tyrant9
+			}
+			if = {
+				limit = {
+					trait = tyrant7
+				}
+				remove_trait = tyrant7
+				add_trait = tyrant8
+			}
+			if = {
+				limit = {
+					trait = tyrant6
+				}
+				remove_trait = tyrant6
+				add_trait = tyrant7
+			}
+			if = {
+				limit = {
+					trait = tyrant5
+				}
+				remove_trait = tyrant5
+				add_trait = tyrant6
+			}	
+			if = {
+				limit = {
+					trait = tyrant4
+				}
+				remove_trait = tyrant4
+				add_trait = tyrant5
+			}	
+			if = {
+				limit = {
+					trait = tyrant3
+				}
+				remove_trait = tyrant3
+				add_trait = tyrant4
+			}	
+			if = {
+				limit = {
+					trait = tyrant2
+				}
+				remove_trait = tyrant2
+				add_trait = tyrant3
+			}
+			if = {
+				limit = {
+					trait = tyrant1
+				}
+				remove_trait = tyrant1
+				add_trait = tyrant2
+			}
+			if = {
+				limit = {
+					NOT = {
+						trait = tyrant1
+						trait = tyrant2
+						trait = tyrant3
+						trait = tyrant4
+						trait = tyrant5
+						trait = tyrant6
+						trait = tyrant7
+						trait = tyrant8
+						trait = tyrant9
+						trait = tyrant10
+						trait = tyrant11
+						trait = tyrant12
+						trait = tyrant13
+						trait = tyrant14
+						trait = tyrant15
+						trait = tyrant16
+						trait = tyrant17
+						trait = tyrant18
+						trait = tyrant19
+						trait = tyrant20
+					}
+				}
+				add_trait = tyrant1
+			}		
+		}
+	}
+}	
+
+#Executed vassal without cause
+character_event = {
+	id = 190075
+	is_triggered_only = yes
+		
+	desc = "EVTDESC190075"
+
+	option = {
+		name = "OK"		
+		if = {
+			limit = {
+				trait = just
+			}
+			remove_trait = just
+		}
+		if = {
+			limit = {
+				trait = kind
+			}
+			remove_trait = kind
+		}		
+		if = {
+			limit = {
+				has_character_flag = tyranny_1
+			}
+			clr_character_flag = tyranny_1
+			custom_tooltip = TYRANTTOOLTIP10
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant18
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant17
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant13
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant12
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant11
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant10
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant9
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant8
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant7
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant6
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant5
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant4
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant3
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant2
+				}		
+			}			
+		}
+		if = {
+			limit = {
+				has_character_flag = tyranny_2
+			}
+			clr_character_flag = tyranny_2
+			custom_tooltip = TYRANTTOOLTIP20
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant20
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant18
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant17
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant13
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant12
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant11
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant10
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant9
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant8
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant7
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant6
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant5
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant4
+				}		
+			}			
+		}
+		if = {
+			limit = {
+				has_character_flag = tyranny_3
+			}
+			clr_character_flag = tyranny_3
+			custom_tooltip = TYRANTTOOLTIP30
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant20
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant18
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant17
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant15
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant13
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant12
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant11
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant10
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant9
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant8
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant7
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant6
+				}		
+			}			
+		}
+		if = {
+			limit = {
+				has_character_flag = tyranny_4
+			}
+			clr_character_flag = tyranny_4
+			custom_tooltip = TYRANTTOOLTIP40
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant20
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant18
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant17
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant13
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant12
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant11
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant10
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant9
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant8
+				}		
+			}			
+		}		
+	}
+}	
+
+#Banished courtier without cause
+character_event = {
+	id = 190076
+	is_triggered_only = yes
+		
+	desc = "EVTDESC190076"
+
+	option = {
+		name = "OK"		
+		if = {
+			limit = {
+				trait = just
+			}
+			remove_trait = just
+		}		
+		custom_tooltip = TYRANTTOOLTIP5
+		hidden_tooltip = {
+			if = {
+				limit = {
+					trait = tyrant19
+				}
+				remove_trait = tyrant19
+				add_trait = tyrant20
+			}
+			if = {
+				limit = {
+					trait = tyrant18
+				}
+				remove_trait = tyrant18
+				add_trait = tyrant19
+			}
+			if = {
+				limit = {
+					trait = tyrant17
+				}
+				remove_trait = tyrant17
+				add_trait = tyrant18
+			}
+			if = {
+				limit = {
+					trait = tyrant16
+				}
+				remove_trait = tyrant16
+				add_trait = tyrant17
+			}	
+			if = {
+				limit = {
+					trait = tyrant15
+				}
+				remove_trait = tyrant15
+				add_trait = tyrant16
+			}
+			if = {
+				limit = {
+					trait = tyrant14
+				}
+				remove_trait = tyrant14
+				add_trait = tyrant15
+			}
+			if = {
+				limit = {
+					trait = tyrant13
+				}
+				remove_trait = tyrant13
+				add_trait = tyrant14
+			}
+			if = {
+				limit = {
+					trait = tyrant12
+				}
+				remove_trait = tyrant12
+				add_trait = tyrant13
+			}
+			if = {
+				limit = {
+					trait = tyrant11
+				}
+				remove_trait = tyrant11
+				add_trait = tyrant12
+			}
+			if = {
+				limit = {
+					trait = tyrant10
+				}
+				remove_trait = tyrant10
+				add_trait = tyrant11
+			}
+			if = {
+				limit = {
+					trait = tyrant9
+				}
+				remove_trait = tyrant9
+				add_trait = tyrant10
+			}	
+			if = {
+				limit = {
+					trait = tyrant8
+				}
+				remove_trait = tyrant8
+				add_trait = tyrant9
+			}
+			if = {
+				limit = {
+					trait = tyrant7
+				}
+				remove_trait = tyrant7
+				add_trait = tyrant8
+			}
+			if = {
+				limit = {
+					trait = tyrant6
+				}
+				remove_trait = tyrant6
+				add_trait = tyrant7
+			}
+			if = {
+				limit = {
+					trait = tyrant5
+				}
+				remove_trait = tyrant5
+				add_trait = tyrant6
+			}	
+			if = {
+				limit = {
+					trait = tyrant4
+				}
+				remove_trait = tyrant4
+				add_trait = tyrant5
+			}	
+			if = {
+				limit = {
+					trait = tyrant3
+				}
+				remove_trait = tyrant3
+				add_trait = tyrant4
+			}	
+			if = {
+				limit = {
+					trait = tyrant2
+				}
+				remove_trait = tyrant2
+				add_trait = tyrant3
+			}
+			if = {
+				limit = {
+					trait = tyrant1
+				}
+				remove_trait = tyrant1
+				add_trait = tyrant2
+			}
+			if = {
+				limit = {
+					NOT = {
+						trait = tyrant1
+						trait = tyrant2
+						trait = tyrant3
+						trait = tyrant4
+						trait = tyrant5
+						trait = tyrant6
+						trait = tyrant7
+						trait = tyrant8
+						trait = tyrant9
+						trait = tyrant10
+						trait = tyrant11
+						trait = tyrant12
+						trait = tyrant13
+						trait = tyrant14
+						trait = tyrant15
+						trait = tyrant16
+						trait = tyrant17
+						trait = tyrant18
+						trait = tyrant19
+						trait = tyrant20
+					}
+				}
+				add_trait = tyrant1
+			}		
+		}
+	}
+}	
+
+#Banished vassal without cause
+character_event = {
+	id = 190077
+	is_triggered_only = yes
+		
+	desc = "EVTDESC190077"
+
+	option = {
+		name = "OK"		
+		if = {
+			limit = {
+				trait = just
+			}
+			remove_trait = just
+		}		
+		if = {
+			limit = {
+				has_character_flag = tyranny_1
+			}
+			clr_character_flag = tyranny_1
+			custom_tooltip = TYRANTTOOLTIP10
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant18
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant17
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant13
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant12
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant11
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant10
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant9
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant8
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant7
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant6
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant5
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant4
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant3
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant2
+				}		
+			}			
+		}
+		if = {
+			limit = {
+				has_character_flag = tyranny_2
+			}
+			clr_character_flag = tyranny_2
+			custom_tooltip = TYRANTTOOLTIP20
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant20
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant18
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant17
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant13
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant12
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant11
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant10
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant9
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant8
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant7
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant6
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant5
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant4
+				}		
+			}			
+		}
+		if = {
+			limit = {
+				has_character_flag = tyranny_3
+			}
+			clr_character_flag = tyranny_3
+			custom_tooltip = TYRANTTOOLTIP30
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant20
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant18
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant17
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant15
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant13
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant12
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant11
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant10
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant9
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant8
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant7
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant6
+				}		
+			}			
+		}
+		if = {
+			limit = {
+				has_character_flag = tyranny_4
+			}
+			clr_character_flag = tyranny_4
+			custom_tooltip = TYRANTTOOLTIP40
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant20
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant18
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant17
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant13
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant12
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant11
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant10
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant9
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant8
+				}		
+			}			
+		}		
+	}
+}
+
+#Banished vassal with cause
+character_event = {
+	id = 190080
+	is_triggered_only = yes
+		
+	desc = "EVTDESC190080"
+
+	option = {
+		name = "OK"		
+		if = {
+			limit = {
+				has_character_flag = tyranny_1
+			}
+			clr_character_flag = tyranny_1
+			custom_tooltip = TYRANTTOOLTIP5
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant18
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant17
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant13
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant12
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant11
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant10
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant9
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant8
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant7
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant6
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant5
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant4
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant3
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant2
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant1
+				}		
+			}			
+		}
+		if = {
+			limit = {
+				has_character_flag = tyranny_2
+			}
+			clr_character_flag = tyranny_2
+			custom_tooltip = TYRANTTOOLTIP10
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant18
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant17
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant13
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant12
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant11
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant10
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant9
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant8
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant7
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant6
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant5
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant4
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant3
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant2
+				}		
+			}			
+		}
+		if = {
+			limit = {
+				has_character_flag = tyranny_3
+			}
+			clr_character_flag = tyranny_3
+			custom_tooltip = TYRANTTOOLTIP15
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant19
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant18
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant17
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant13
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant12
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant11
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant10
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant9
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant8
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant7
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant6
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant5
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant4
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant3
+				}		
+			}			
+		}
+		if = {
+			limit = {
+				has_character_flag = tyranny_4
+			}
+			clr_character_flag = tyranny_4
+			custom_tooltip = TYRANTTOOLTIP20
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant20
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant18
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant17
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant13
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant12
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant11
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant10
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant9
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant8
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant7
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant6
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant5
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant4
+				}		
+			}			
+		}		
+	}
+}
+
+character_event = {
+	id = 190081
+	is_triggered_only = yes
+	trigger = {	
+		ai = yes
+		OR = {
+			AND = {
+				is_ruler = no
+				OR = {
+					has_character_flag = tier_1
+					has_character_flag = tier_2
+					has_character_flag = tier_3
+					has_character_flag = tier_4
+				}
+			}
+			AND = {
+				primary_title = { tier = BARON }
+				NOT = { has_character_flag = tier_1 }
+			}
+			AND = {
+				primary_title = { tier = COUNT }
+				NOT = { has_character_flag = tier_2 }
+			}
+			AND = {
+				primary_title = { tier = DUKE }
+				NOT = { has_character_flag = tier_3 }
+			}
+			AND = {
+				primary_title = { tier = KING }
+				NOT = { has_character_flag = tier_4 }
+			}				
+		}
+	}
+		
+	desc = "AI_EVENT"
+	
+	mean_time_to_happen = {
+		days = 1		
+	}
+	
+
+	option = {
+		name = "OK"
+		clr_character_flag = tier_1
+		clr_character_flag = tier_2
+		clr_character_flag = tier_3
+		clr_character_flag = tier_4
+		if = {
+			limit = { primary_title = { tier = BARON } }
+			set_character_flag = tier_1
+		}
+		if = {
+			limit = { primary_title = { tier = COUNT } }
+			set_character_flag = tier_2
+		}		
+		if = {
+			limit = { primary_title = { tier = DUKE } }
+			set_character_flag = tier_3
+		}		
+		if = {
+			limit = { primary_title = { tier = KING } }
+			set_character_flag = tier_4
+		}		
+	}
+}
+
+character_event = {
+	id = 190083
+	picture = GFX_evt_lovers
+	is_triggered_only = yes
+	trigger = {
+		has_lover = no
+		is_ruler = yes
+		is_female = no
+		any_courtier = {
+			has_minor_title = title_concubine
+			has_lover = no
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = opinion_former_lover
+				}
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = opinion_spurned
+				}				
+			}
+			NOT = { trait = homosexual }
+			NOT = { trait = infirm }
+			NOT = { trait = incapable }
+			NOT = { trait = celibate }
+			opinion = { who = ROOT value = -20 }
+			reverse_opinion = { who = ROOT value = -20 }
+		}
+		NOT = { trait = homosexual }
+		NOT = { trait = infirm }
+		NOT = { trait = incapable }
+		NOT = { trait = celibate }	
+	}
+		
+	desc = "EVTDESC190083"
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.5
+			any_courtier = {
+				has_minor_title = title_concubine
+				NOT = { age = 20 }
+			}			
+		}
+		modifier = {
+			factor = 5.0
+			has_objective = obj_find_lover
+		}
+		modifier = {
+			factor = 0.5
+			trait = chaste
+		}	
+		modifier = {
+			factor = 2.0
+			trait = hedonist
+		}		
+		modifier = {
+			factor = 2.0
+			trait = lustful
+		}
+		modifier = {
+			factor = 2.0
+			trait = fair
+		}
+		modifier = {
+			factor = 2.0
+			any_courtier = {
+				has_minor_title = title_concubine
+				trait = fair
+			}	
+		}	
+		modifier = {
+			factor = 0.5
+			trait = ugly
+		}
+		modifier = {
+			factor = 0.5
+			any_courtier = {
+				has_minor_title = title_concubine
+				trait = ugly
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			any_courtier = {
+				has_minor_title = title_concubine
+				trait = lustful
+			}			
+		}
+		modifier = {
+			factor = 0.5
+			any_courtier = {
+				has_minor_title = title_concubine
+				NOT = { opinion = { who = ROOT value = 0 } }
+			}			
+		}
+		modifier = {
+			factor = 0.5
+			any_courtier = {
+				has_minor_title = title_concubine
+				NOT = { reverse_opinion = { who = ROOT value = 0 } }
+			}			
+		}
+		modifier = {
+			factor = 0.75
+			any_courtier = {
+				has_minor_title = title_concubine
+				NOT = { opinion = { who = ROOT value = 25 } }
+			}			
+		}
+		modifier = {
+			factor = 0.75
+			any_courtier = {
+				has_minor_title = title_concubine
+				NOT = { reverse_opinion = { who = ROOT value = 25 } }
+			}			
+		}
+		modifier = {
+			factor = 1.25
+			any_courtier = {
+				has_minor_title = title_concubine
+				opinion = { who = ROOT value = 50 }
+			}			
+		}
+		modifier = {
+			factor = 1.25
+			any_courtier = {
+				has_minor_title = title_concubine
+				reverse_opinion = { who = ROOT value = 50 }
+			}			
+		}			
+		modifier = {
+			factor = 1.25
+			any_courtier = {
+				has_minor_title = title_concubine
+				opinion = { who = ROOT value = 75 }
+			}			
+		}
+		modifier = {
+			factor = 1.25
+			any_courtier = {
+				has_minor_title = title_concubine
+				reverse_opinion = { who = ROOT value = 75 }
+			}			
+		}	
+	}
+
+	option = {
+		name = "EVTOPTA190083"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				trait = lustful
+			}
+			modifier = {
+				factor = 0.1
+				trait = hedonist
+			}			
+		}
+		random_courtier = {
+			limit = { has_minor_title = title_concubine }
+			add_lover = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB190083"
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0.1
+				trait = chaste
+			}
+			modifier = {
+				factor = 0.1
+				trait = celibate
+			}			
+		}		
+		random_courtier = {
+			limit = { has_minor_title = title_concubine }
+			opinion = {
+				who = ROOT
+				modifier = opinion_spurned
+				years = 10
+			}
+		}
+	}	
 }

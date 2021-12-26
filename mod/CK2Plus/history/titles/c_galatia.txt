@@ -97,7 +97,7 @@ holder=1742
 }
 1307.1.1=
 {
-	liege="k_ottoman"
+	liege="e_ottoman"
 	holder=476501
 }
 1321.1.1=

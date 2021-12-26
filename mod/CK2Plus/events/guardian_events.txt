@@ -5790,19 +5790,6 @@ character_event = {
 		if = {
 			limit = {
 				FROM = {
-					OR = {
-						trait = genius
-						trait = quick
-					}
-				}
-			}
-			FROM = {
-				change_martial = 1
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
 					NOT = {
 						trait = brave
 					}

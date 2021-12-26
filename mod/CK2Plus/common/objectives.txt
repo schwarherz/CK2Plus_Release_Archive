@@ -222,6 +222,7 @@ plot_gain_vassal_title = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			NOT = {
 				OR = {
@@ -548,6 +549,7 @@ plot_weaken_fellow_vassal = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			holder_scope = {
 				spouse = { character = FROM }
@@ -750,6 +752,7 @@ plot_institute_hereditary_titles = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			holder_scope = {
 				spouse = { character = FROM }
@@ -948,6 +951,7 @@ plot_kidnap_liege = {
 	}
 	abort = {
 		OR = {	
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			FROM = { 			
 				is_ruler = yes
@@ -1030,6 +1034,11 @@ plot_gain_title = {
 	
 	# Target scope
 	allow = {
+		#not agnatic if female
+		OR = {
+			ROOT = { is_female = no }
+			NOT = { has_law = agnatic_succession }
+		}
 		# No barony titles
 		higher_tier_than = BARON
 		is_primary_type_title = no
@@ -1190,6 +1199,7 @@ plot_gain_title = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			holder_scope = {
 				spouse = { character = FROM }
@@ -1255,24 +1265,6 @@ plot_succ_seniority = {
 		primary_title = { higher_tier_than = BARON }
 		NOT = { trait = incapable }
 		NOT = { religion_group = muslim }
-		OR = {
-			crownlaw_title = {
-				NOT = {
-					OR = {
-						has_law = centralization_1
-						has_law = centralization_2
-						has_law = centralization_3
-						has_law = centralization_4
-					}
-				}
-			}
-			# Does not have a crownlaw title
-			NOT = {
-				crownlaw_title = {
-					always = yes
-				}
-			}
-		}
 		OR = {
 			ai = no
 			NOT = { has_character_flag = plot_cooldown }
@@ -1413,6 +1405,7 @@ plot_succ_seniority = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			holder_scope = {
 				spouse = { character = FROM }
@@ -1481,23 +1474,6 @@ plot_succ_primogeniture = {
 		primary_title = { higher_tier_than = BARON }
 		NOT = { trait = incapable }
 		NOT = { religion_group = muslim }
-		OR = {
-			crownlaw_title = {
-				NOT = {
-					OR = {
-						has_law = centralization_2
-						has_law = centralization_3
-						has_law = centralization_4
-					}
-				}
-			}
-			# Does not have a crownlaw title
-			NOT = {
-				crownlaw_title = {
-					always = yes
-				}
-			}
-		}
 		OR = {
 			ai = no
 			NOT = { has_character_flag = plot_cooldown }
@@ -1638,6 +1614,7 @@ plot_succ_primogeniture = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			holder_scope = {
 				spouse = { character = FROM }
@@ -1706,22 +1683,6 @@ plot_succ_gavelkind = {
 		primary_title = { higher_tier_than = BARON }
 		NOT = { trait = incapable }
 		NOT = { religion_group = muslim }
-		OR = {
-			crownlaw_title = {
-				NOT = {
-					OR = {
-						has_law = centralization_3
-						has_law = centralization_4
-					}
-				}
-			}
-			# Does not have a crownlaw title
-			NOT = {
-				crownlaw_title = {
-					always = yes
-				}
-			}
-		}
 		OR = {
 			ai = no
 			NOT = { has_character_flag = plot_cooldown }
@@ -1876,6 +1837,7 @@ plot_succ_gavelkind = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			holder_scope = {
 				spouse = { character = FROM }
@@ -1951,22 +1913,6 @@ plot_succ_feudal_elective = {
 		primary_title = { higher_tier_than = BARON }
 		NOT = { trait = incapable }
 		NOT = { religion_group = muslim }
-		OR = {
-			crownlaw_title = {
-				NOT = {
-					OR = {
-						has_law = centralization_3
-						has_law = centralization_4
-					}
-				}
-			}
-			# Does not have a crownlaw title
-			NOT = {
-				crownlaw_title = {
-					always = yes
-				}
-			}
-		}
 		OR = {
 			ai = no
 			NOT = { has_character_flag = plot_cooldown }
@@ -2150,6 +2096,7 @@ plot_succ_feudal_elective = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			holder_scope = {
 				spouse = { character = FROM }
@@ -2406,6 +2353,7 @@ plot_lower_crown_authority = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			holder_scope = {
 				spouse = { character = FROM }
@@ -2512,19 +2460,6 @@ plot_kill_character = {
 			}
 		}		
 	}
-	
-	# Target allow trigger for when players target a specific character in the GUI
-	player_allow = {
-		employer = {
-			any_courtier = {
-				NOT = { character = ROOT }
-				employer = {
-					character = PREV
-				}
-				prisoner = no
-			}
-		}
-	}	
 	
 	# Target character scope
 	allow = {
@@ -2756,11 +2691,273 @@ plot_kill_character = {
 				}
 			}
 		}
-	}
+	}	
+	
+	# Target allow trigger for when players target a specific character in the GUI
+	player_allow = {
+		NOT = { is_child_of = FROM } # Not my own children
+		NOT = { father = { is_child_of = FROM } } # Not my own grandchildren
+		NOT = { mother = { is_child_of = FROM } } # Not my own grandchildren	
+		FROM = {
+			NOT = { spouse = { character = ROOT } }
+			OR = {
+				# Get rid of the current heir
+				any_pretender_title = {
+					current_heir = { character = ROOT }
+					FROM = {
+						NOT = { any_child = { character = ROOT } }
+						OR = {
+							AND = {
+								OR = {
+									trait = deceitful
+									trait = ambitious
+									trait = cruel
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 50 } } }
+							}
+							AND = {
+								OR = {
+									trait = arbitrary
+									trait = cynical
+									trait = proud
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 25 } } }
+							}
+							FROM = { NOT = { opinion = { who = ROOT value = 0 } } }
+						}
+					}
+				}
+				
+				# Character gets rid of the current heir to a title their child is pretender to
+				AND = {
+					any_child = {
+						any_pretender_title = {
+							current_heir = { character = ROOT }
+						}
+					}
+					NOT = { ROOT = { is_close_relative = FROM } }
+					FROM = {
+						OR = {
+							AND = {
+								OR = {
+									trait = deceitful
+									trait = ambitious
+									trait = cruel
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 50 } } }
+							}
+							AND = {
+								OR = {
+									trait = arbitrary
+									trait = cynical
+									trait = proud
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 25 } } }
+							}
+							FROM = { NOT = { opinion = { who = ROOT value = 0 } } }
+						}
+					}
+				}
+				
+				# Get rid of the current heir to a title the character's spouse is a pretender to
+				AND = {
+					spouse = {	
+						any_pretender_title = {
+							current_heir = { character = ROOT }
+						}
+					}
+					NOT = { ROOT = { is_close_relative = FROM } }
+					FROM = {
+						OR = {
+							AND = {
+								OR = {
+									trait = deceitful
+									trait = ambitious
+									trait = cruel
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 50 } } }
+							}
+							AND = {
+								OR = {
+									trait = arbitrary
+									trait = cynical
+									trait = proud
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 25 } } }
+							}
+							FROM = { NOT = { opinion = { who = ROOT value = 0 } } }
+						}
+					}
+				}
+				
+				# Get rid of the current holder
+				any_pretender_title = {
+					holder_scope = { character = ROOT }
+					FROM = {
+						NOT = { any_child = { character = ROOT } }
+						OR = {
+							AND = {
+								OR = {
+									trait = deceitful
+									trait = ambitious
+									trait = cruel
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 50 } } }
+							}
+							AND = {
+								OR = {
+									trait = arbitrary
+									trait = cynical
+									trait = proud
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 25 } } }
+							}
+							FROM = { NOT = { opinion = { who = ROOT value = 0 } } }
+						}
+					}
+				}
+				
+				# Character gets rid of the current holder to a title their child is pretender to
+				AND = {
+					any_child = {
+						any_pretender_title = {
+							holder_scope = { character = ROOT }
+						}
+					}
+					NOT = { ROOT = { is_close_relative = FROM } }
+					FROM = {
+						OR = {
+							AND = {
+								OR = {
+									trait = deceitful
+									trait = ambitious
+									trait = cruel
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 50 } } }
+							}
+							AND = {
+								OR = {
+									trait = arbitrary
+									trait = cynical
+									trait = proud
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 25 } } }
+							}
+							FROM = { NOT = { opinion = { who = ROOT value = 0 } } }
+						}
+					}
+				}
+				
+				# Get rid of the current holder to a title the character's spouse is a pretender to
+				AND = {
+					spouse = {	
+						any_pretender_title = {
+							holder_scope = { character = ROOT }
+						}
+					}
+					NOT = { ROOT = { is_close_relative = FROM } }
+					FROM = {
+						OR = {
+							AND = {
+								OR = {
+									trait = deceitful
+									trait = ambitious
+									trait = cruel
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 50 } } }
+							}
+							AND = {
+								OR = {
+									trait = arbitrary
+									trait = cynical
+									trait = proud
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 25 } } }
+							}
+							FROM = { NOT = { opinion = { who = ROOT value = 0 } } }
+						}
+					}
+				}				
+
+				# A lover of spouse...
+				spouse = {
+					has_lover = yes
+					lover = {
+						character = ROOT
+					}
+					FROM = {
+						OR = {
+							AND = {
+								OR = {
+									trait = deceitful
+									trait = ambitious
+									trait = cruel
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 50 } } }
+							}
+							AND = {
+								OR = {
+									trait = arbitrary
+									trait = cynical
+									trait = proud
+								}
+								FROM = { NOT = { opinion = { who = ROOT value = 25 } } }
+							}
+							FROM = { NOT = { opinion = { who = ROOT value = 0 } } }
+						}
+					}
+				}
+				
+				# Go nuts...
+				AND = {
+					same_liege = ROOT
+					OR = {
+						trait = lunatic
+						trait = possessed
+					}
+				}
+				
+				#Rival
+				any_rival = {
+					character = ROOT
+				}
+			}
+		}
+	}	
 	
 	chance = {
 		factor = 25
-		
+
+		modifier = {
+			factor = 0.5
+			trait = dishonorable1
+		}	
+		modifier = {
+			factor = 0.4
+			trait = dishonorable2
+		}	
+		modifier = {
+			factor = 0.3
+			trait = dishonorable3
+		}
+		modifier = {
+			factor = 0.2
+			trait = dishonorable4
+		}
+		modifier = {
+			factor = 0.1
+			trait = dishonorable5
+		}	
+		modifier = {
+			factor = 0
+			OR = {
+				trait = dishonorable6
+				trait = dishonorable7
+				trait = dishonorable8
+				trait = dishonorable9
+				trait = dishonorable10
+			}
+		}			
 		modifier = {
 			factor = 0
 			FROM = {
@@ -2826,6 +3023,7 @@ plot_kill_character = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			is_alive = no
 		}
@@ -2892,19 +3090,6 @@ plot_kill_spouse = {
 		}		
 	}
 	
-	# Target allow trigger for when players target a specific character in the GUI
-	player_allow = {
-		employer = {
-			any_courtier = {
-				NOT = { character = ROOT }
-				employer = {
-					character = PREV
-				}
-				prisoner = no
-			}
-		}
-	}	
-	
 	# Target character scope
 	allow = {
 		OR = {		
@@ -2947,6 +3132,66 @@ plot_kill_spouse = {
 				has_lover = yes
 				lover = {
 					NOT = { character = FROM }
+					NOT = { has_minor_title = title_concubine }
+				}
+			}
+
+			# Insane plotter...
+			FROM = { 
+				OR = {
+					trait = lunatic 
+					trait = possessed
+				}
+			}
+			
+			# Really don't like you
+			FROM = { NOT = { opinion = { who = ROOT value = -25 } } }
+		}
+	}		
+	
+	# Target allow trigger for when players target a specific character in the GUI
+	player_allow = {
+		OR = {		
+			# Male plotter without sons wanting to kill an old/barren wife
+			AND = {
+				age = 40
+				FROM = {
+					is_female = no
+					OR = {
+						is_ruler = yes
+						is_primary_heir = yes
+					}
+					# No sons
+					NOT = {
+						any_child = {
+							is_alive = yes
+							is_female = no
+						}
+					}
+				}
+			}
+			
+			# Female plotter disliking her husband but loving her child - the legal heir
+			FROM = {
+				is_female = yes
+				num_of_children = 1
+				FROM = { NOT = { opinion = { who = ROOT value = -25 } } }
+				any_child = {
+					is_alive = yes
+					any_heir_title = {
+						holder = ROOT
+					}
+					NOT = { trait = incapable }
+					their_opinion = { who = FROM value = 75 }
+				}
+			}
+			
+			# Spouse has a lover...
+			AND = {
+				has_lover = yes
+				lover = {
+					NOT = { character = FROM }
+					NOT = { has_minor_title = title_concubine }
 				}
 			}
 
@@ -2966,6 +3211,36 @@ plot_kill_spouse = {
 	chance = {
 		factor = 25
 		
+		modifier = {
+			factor = 0.5
+			trait = dishonorable1
+		}	
+		modifier = {
+			factor = 0.4
+			trait = dishonorable2
+		}	
+		modifier = {
+			factor = 0.3
+			trait = dishonorable3
+		}
+		modifier = {
+			factor = 0.2
+			trait = dishonorable4
+		}
+		modifier = {
+			factor = 0.1
+			trait = dishonorable5
+		}	
+		modifier = {
+			factor = 0
+			OR = {
+				trait = dishonorable6
+				trait = dishonorable7
+				trait = dishonorable8
+				trait = dishonorable9
+				trait = dishonorable10
+			}
+		}			
 		modifier = {
 			factor = 0
 			FROM = {
@@ -3048,6 +3323,7 @@ plot_kill_spouse = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			FROM = { has_character_flag = abort_plot }
 			is_alive = no
 		}
@@ -3194,6 +3470,7 @@ obj_become_chancellor = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			independent = yes
 			AND = {
@@ -3305,6 +3582,7 @@ obj_become_marshal = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			independent = yes
 			AND = {
@@ -3434,6 +3712,7 @@ obj_become_treasurer = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			independent = yes
 			AND = {
@@ -3570,6 +3849,7 @@ obj_become_spymaster = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			independent = yes
 			AND = {
@@ -3690,6 +3970,7 @@ obj_become_spiritual = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			independent = yes
 			AND = {
@@ -3727,6 +4008,8 @@ obj_amass_wealth_1 = {
 		NOT = { trait = charitable }
 		NOT = { trait = incapable }
 		NOT = { has_character_flag = obj_amass_wealth }	
+		NOT = { has_character_modifier = loan_timer }
+		NOT = { has_character_flag = loan_taken }
 		primary_title = { lower_tier_than = DUKE }
 	}
 	chance = {
@@ -3755,12 +4038,15 @@ obj_amass_wealth_1 = {
 	}
 	success = {
 		wealth = 250
+		NOT = { has_character_modifier = loan_timer }
+		NOT = { has_character_flag = loan_taken }
 	}
 	abort = {
 		OR = {
 			has_character_flag = abort_obj
 			trait = charitable
 			trait = incapable
+			has_character_modifier = loan_timer
 		}
 	}
 	abort_effect = {
@@ -3782,7 +4068,9 @@ obj_amass_wealth_2 = {
 		is_ruler = yes
 		NOT = { trait = charitable }
 		NOT = { trait = incapable }
-		NOT = { has_character_flag = obj_amass_wealth }	
+		NOT = { has_character_flag = obj_amass_wealth }
+		NOT = { has_character_modifier = loan_timer }
+		NOT = { has_character_flag = loan_taken }
 		primary_title = { tier = DUKE }
 	}
 	chance = {
@@ -3811,12 +4099,15 @@ obj_amass_wealth_2 = {
 	}
 	success = {
 		wealth = 500
+		NOT = { has_character_modifier = loan_timer }
+		NOT = { has_character_flag = loan_taken }
 	}
 	abort = {
 		OR = {
 			has_character_flag = abort_obj
 			trait = charitable
 			trait = incapable
+			has_character_modifier = loan_timer
 		}
 	}
 	abort_effect = {
@@ -3839,6 +4130,8 @@ obj_amass_wealth_3 = {
 		NOT = { trait = charitable }
 		NOT = { trait = incapable }
 		NOT = { has_character_flag = obj_amass_wealth }	
+		NOT = { has_character_modifier = loan_timer }
+		NOT = { has_character_flag = loan_taken }
 		primary_title = { tier = KING }
 	}
 	chance = {
@@ -3867,12 +4160,15 @@ obj_amass_wealth_3 = {
 	}
 	success = {
 		wealth = 750
+		NOT = { has_character_modifier = loan_timer }
+		NOT = { has_character_flag = loan_taken }
 	}
 	abort = {
 		OR = {
 			has_character_flag = abort_obj
 			trait = charitable
 			trait = incapable
+			has_character_modifier = loan_timer
 		}
 	}
 	abort_effect = {
@@ -3895,6 +4191,8 @@ obj_amass_wealth_4 = {
 		NOT = { trait = charitable }
 		NOT = { trait = incapable }
 		NOT = { has_character_flag = obj_amass_wealth }	
+		NOT = { has_character_modifier = loan_timer }
+		NOT = { has_character_flag = loan_taken }
 		primary_title = { tier = EMPEROR }
 	}
 	chance = {
@@ -3923,12 +4221,15 @@ obj_amass_wealth_4 = {
 	}
 	success = {
 		wealth = 1000
+		NOT = { has_character_modifier = loan_timer }
+		NOT = { has_character_flag = loan_taken }
 	}
 	abort = {
 		OR = {
 			has_character_flag = abort_obj
 			trait = charitable
 			trait = incapable
+			has_character_modifier = loan_timer
 		}
 	}
 	abort_effect = {
@@ -3948,6 +4249,7 @@ obj_become_paragon_of_virtue = {
 		age = 16
 		NOT = { piety = 1000 }
 		is_ruler = yes
+		NOT = { trait = cynical }
 		NOT = { trait = cruel }
 		NOT = { trait = impaler }
 		NOT = { trait = incapable }
@@ -3988,6 +4290,7 @@ obj_become_paragon_of_virtue = {
 	abort = {
 		OR = {
 			has_character_flag = abort_obj
+			trait = cynical
 			trait = cruel
 			trait = impaler
 			trait = incapable
@@ -4389,6 +4692,7 @@ obj_get_married = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			AND = {
 				has_character_flag = abort_obj
 				is_betrothed = no
@@ -4411,7 +4715,9 @@ obj_get_married = {
 		clr_character_flag = obj_check
 		clr_character_flag = flag_promised_marriage
 		clr_character_flag = flag_denied_marriage
-		remove_character_modifier = promised_a_marriage
+		hidden_tooltip = {
+			remove_character_modifier = promised_a_marriage
+		}
 	}
 	effect = {
 		if = {
@@ -4432,7 +4738,9 @@ obj_get_married = {
 		}
 		clr_character_flag = flag_promised_marriage
 		clr_character_flag = flag_denied_marriage
-		remove_character_modifier = promised_a_marriage
+		hidden_tooltip = {
+			remove_character_modifier = promised_a_marriage
+		}
 		set_character_flag = obj_get_married
 	}
 }
@@ -4496,6 +4804,7 @@ obj_marry_ruler = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			AND = {
 				is_priest = yes
@@ -4578,6 +4887,7 @@ obj_have_a_daughter = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			AND = {
 				age = 45
@@ -4655,6 +4965,7 @@ obj_have_a_son = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			age = 75
 			trait = celibate
@@ -4756,7 +5067,8 @@ obj_wants_landed_title = {
 		is_ruler = yes
 	}
 	abort = {
-		OR = {	
+		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			liege = { 
 				OR = {
@@ -4828,7 +5140,7 @@ obj_become_heir = {
 		factor = 50
 		
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = ambitious
 		}
 		modifier = {
@@ -4855,6 +5167,14 @@ obj_become_heir = {
 	success = {
 		is_primary_heir = yes
 	}
+	abort = {
+		OR = {
+			prisoner = yes
+			has_character_flag = abort_obj
+			NOT = { liege = { any_child = { character = ROOT } } }
+			trait = incapable
+		}
+	}	
 	abort_effect = {
 		clr_character_flag = abort_obj
 		clr_character_flag = obj_check
@@ -4907,6 +5227,7 @@ obj_find_lover = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			is_ruler = no
 			is_priest = yes
@@ -4958,6 +5279,7 @@ obj_become_independent = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			ai = yes
 			trait = incapable
@@ -5035,6 +5357,7 @@ obj_five_children = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			AND = {
 				age = 45
@@ -5104,6 +5427,7 @@ obj_ten_children = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			AND = {
 				age = 45
@@ -5173,6 +5497,7 @@ obj_fifteen_children = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			AND = {
 				age = 45
@@ -5242,6 +5567,7 @@ obj_twenty_children = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			AND = {
 				age = 45
@@ -5271,7 +5597,6 @@ obj_increase_demesne_1 = {
 	type = character
 	
 	allow = {
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -5333,19 +5658,19 @@ obj_increase_demesne_1 = {
 		if = {
 			limit = { NOT = { has_character_flag = obj_demesne } }
 			change_stewardship = 1
+			if = {
+				limit = { independent = no }
+				opinion = {
+					who = liege
+					modifier = opinion_happy
+					months = 120
+				}
+			}			
 		}
 		if = {
 			limit = { has_character_flag = obj_demesne }
 			prestige = 10
-		}	
-		if = {
-			limit = { independent = no }
-			opinion = {
-				who = liege
-				modifier = opinion_happy
-				months = 120
-			}
-		}		
+		}			
 		set_character_flag = obj_demesne
 	}
 }
@@ -5354,7 +5679,6 @@ obj_increase_demesne_2 = {
 	type = character
 	
 	allow = {
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -5417,18 +5741,18 @@ obj_increase_demesne_2 = {
 		if = {
 			limit = { NOT = { has_character_flag = obj_demesne } }
 			change_stewardship = 1
+			if = {
+				limit = { independent = no }
+				opinion = {
+					who = liege
+					modifier = opinion_happy
+					months = 120
+				}
+			}
 		}
 		if = {
 			limit = { has_character_flag = obj_demesne }
 			prestige = 10
-		}
-		if = {
-			limit = { independent = no }
-			opinion = {
-				who = liege
-				modifier = opinion_happy
-				months = 120
-			}
 		}		
 		set_character_flag = obj_demesne
 	}
@@ -5438,7 +5762,6 @@ obj_increase_demesne_3 = {
 	type = character
 	
 	allow = {
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -5501,18 +5824,18 @@ obj_increase_demesne_3 = {
 		if = {
 			limit = { NOT = { has_character_flag = obj_demesne } }
 			change_stewardship = 1
+			if = {
+				limit = { independent = no }
+				opinion = {
+					who = liege
+					modifier = opinion_happy
+					months = 120
+				}
+			}
 		}
 		if = {
 			limit = { has_character_flag = obj_demesne }
 			prestige = 10
-		}
-		if = {
-			limit = { independent = no }
-			opinion = {
-				who = liege
-				modifier = opinion_happy
-				months = 120
-			}
 		}		
 		set_character_flag = obj_demesne
 	}
@@ -5522,7 +5845,6 @@ obj_increase_demesne_4 = {
 	type = character
 	
 	allow = {
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -5585,18 +5907,18 @@ obj_increase_demesne_4 = {
 		if = {
 			limit = { NOT = { has_character_flag = obj_demesne } }
 			change_stewardship = 1
+			if = {
+				limit = { independent = no }
+				opinion = {
+					who = liege
+					modifier = opinion_happy
+					months = 120
+				}
+			}
 		}
 		if = {
 			limit = { has_character_flag = obj_demesne }
 			prestige = 10
-		}
-		if = {
-			limit = { independent = no }
-			opinion = {
-				who = liege
-				modifier = opinion_happy
-				months = 120
-			}
 		}		
 		set_character_flag = obj_demesne
 	}
@@ -5606,7 +5928,6 @@ obj_increase_demesne_5 = {
 	type = character
 	
 	allow = {
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -5669,18 +5990,18 @@ obj_increase_demesne_5 = {
 		if = {
 			limit = { NOT = { has_character_flag = obj_demesne } }
 			change_stewardship = 1
+			if = {
+				limit = { independent = no }
+				opinion = {
+					who = liege
+					modifier = opinion_happy
+					months = 120
+				}
+			}
 		}
 		if = {
 			limit = { has_character_flag = obj_demesne }
 			prestige = 10
-		}
-		if = {
-			limit = { independent = no }
-			opinion = {
-				who = liege
-				modifier = opinion_happy
-				months = 120
-			}
 		}		
 		set_character_flag = obj_demesne
 	}
@@ -5690,7 +6011,6 @@ obj_increase_demesne_6 = {
 	type = character
 	
 	allow = {
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -5753,18 +6073,18 @@ obj_increase_demesne_6 = {
 		if = {
 			limit = { NOT = { has_character_flag = obj_demesne } }
 			change_stewardship = 1
+			if = {
+				limit = { independent = no }
+				opinion = {
+					who = liege
+					modifier = opinion_happy
+					months = 120
+				}
+			}
 		}
 		if = {
 			limit = { has_character_flag = obj_demesne }
 			prestige = 10
-		}
-		if = {
-			limit = { independent = no }
-			opinion = {
-				who = liege
-				modifier = opinion_happy
-				months = 120
-			}
 		}		
 		set_character_flag = obj_demesne
 	}
@@ -5774,7 +6094,6 @@ obj_increase_demesne_7 = {
 	type = character
 	
 	allow = {
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -5837,18 +6156,18 @@ obj_increase_demesne_7 = {
 		if = {
 			limit = { NOT = { has_character_flag = obj_demesne } }
 			change_stewardship = 1
+			if = {
+				limit = { independent = no }
+				opinion = {
+					who = liege
+					modifier = opinion_happy
+					months = 120
+				}
+			}
 		}
 		if = {
 			limit = { has_character_flag = obj_demesne }
 			prestige = 10
-		}
-		if = {
-			limit = { independent = no }
-			opinion = {
-				who = liege
-				modifier = opinion_happy
-				months = 120
-			}
 		}		
 		set_character_flag = obj_demesne
 	}
@@ -5858,7 +6177,6 @@ obj_increase_demesne_8 = {
 	type = character
 	
 	allow = {
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -5921,18 +6239,18 @@ obj_increase_demesne_8 = {
 		if = {
 			limit = { NOT = { has_character_flag = obj_demesne } }
 			change_stewardship = 1
+			if = {
+				limit = { independent = no }
+				opinion = {
+					who = liege
+					modifier = opinion_happy
+					months = 120
+				}
+			}
 		}
 		if = {
 			limit = { has_character_flag = obj_demesne }
 			prestige = 10
-		}
-		if = {
-			limit = { independent = no }
-			opinion = {
-				who = liege
-				modifier = opinion_happy
-				months = 120
-			}
 		}		
 		set_character_flag = obj_demesne
 	}
@@ -5942,7 +6260,6 @@ obj_increase_demesne_9 = {
 	type = character
 	
 	allow = {
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -6005,18 +6322,18 @@ obj_increase_demesne_9 = {
 		if = {
 			limit = { NOT = { has_character_flag = obj_demesne } }
 			change_stewardship = 1
+			if = {
+				limit = { independent = no }
+				opinion = {
+					who = liege
+					modifier = opinion_happy
+					months = 120
+				}
+			}
 		}
 		if = {
 			limit = { has_character_flag = obj_demesne }
 			prestige = 10
-		}
-		if = {
-			limit = { independent = no }
-			opinion = {
-				who = liege
-				modifier = opinion_happy
-				months = 120
-			}
 		}		
 		set_character_flag = obj_demesne
 	}
@@ -6027,7 +6344,6 @@ obj_become_duke = {
 	
 	allow = {
 		ai = no
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -6063,7 +6379,6 @@ obj_become_king = {
 	
 	allow = {
 		ai = no
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -6095,7 +6410,7 @@ obj_become_king = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		prestige = 200	
+		prestige = 250	
 		set_character_flag = obj_increase_title_2
 	}
 }
@@ -6105,7 +6420,6 @@ obj_become_emperor = {
 	
 	allow = {
 		ai = no
-		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_landed = yes
@@ -6136,7 +6450,7 @@ obj_become_emperor = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		prestige = 400	
+		prestige = 500	
 		set_character_flag = obj_increase_title_3
 	}
 }
@@ -6145,6 +6459,7 @@ obj_go_crusade = {
 	type = character
 	
 	allow = {
+		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_female = no
@@ -6206,6 +6521,7 @@ obj_go_crusade = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			is_ruler = no
 			trait = incapable
@@ -6230,6 +6546,7 @@ obj_go_jihad = {
 	type = character
 	
 	allow = {
+		prisoner = no
 		age = 16
 		is_ruler = yes
 		is_female = no
@@ -6291,6 +6608,7 @@ obj_go_jihad = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			is_ruler = no
 			trait = incapable
@@ -6346,6 +6664,7 @@ obj_win_a_war = {
 	type = character
 	
 	allow = {
+		prisoner = no
 		age = 16
 		is_ruler = yes
 		NOT = { trait = craven }
@@ -6410,6 +6729,7 @@ obj_win_a_war = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			trait = incapable
 			trait = craven
@@ -6523,6 +6843,7 @@ obj_adopt_a_lifestyle = {
 	type = character
 	
 	allow = {
+		prisoner = no
 		age = 25
 		NOT = { lifestyle_traits = 1 }
 		NOT = { trait = incapable }
@@ -6558,6 +6879,7 @@ obj_adopt_a_lifestyle = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			trait = incapable
 		}
@@ -6576,8 +6898,10 @@ obj_gain_honorary_title = {
 	type = character
 	
 	allow = {
+		prisoner = no
 		age = 16
 		independent = no
+		is_female = no
 		NOT = { trait = incapable }
 		liege = { is_feudal = yes }
 		OR = {
@@ -6648,6 +6972,7 @@ obj_gain_honorary_title = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			trait = incapable
 			independent = yes
@@ -6703,9 +7028,10 @@ obj_befriend_liege = {
 			NOT = {
 				opinion = {
 					who = ROOT
-					value = 75
+					value = 100
 				}			
-			}
+			}			
+			NOT = { war_with = ROOT }
 		}		
 	}
 	
@@ -6717,7 +7043,7 @@ obj_befriend_liege = {
 		liege = {
 			opinion = {
 				who = ROOT
-				value = 75
+				value = 100
 			}
 		}
 	}
@@ -6726,6 +7052,7 @@ obj_befriend_liege = {
 			has_character_flag = abort_obj
 			trait = incapable
 			independent = yes
+			liege = { war_with = ROOT }
 			liege = { has_opinion_modifier = { who = ROOT modifier = opinion_friend } }
 			liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_friend } }			
 			NOT = {
@@ -6777,20 +7104,18 @@ obj_befriend_liege = {
 	}
 }
 
-obj_befriend_relhead = {
+obj_befriend_top_liege = {
 	type = character
 	
 	allow = {
 		age = 16
 		ai = no
-		religion_head = { is_alive = yes }
+		independent = no
 		NOT = { trait = incapable }
-		religion_head = {
-			NOT = {
-				is_liege_of = ROOT
+		top_liege = {
+			NOT = { 
+				is_liege_of = ROOT 
 			}
-		}
-		religion_head = {
 			opinion = {
 				who = ROOT
 				value = -25
@@ -6808,9 +7133,116 @@ obj_befriend_relhead = {
 			NOT = {
 				opinion = {
 					who = ROOT
-					value = 75
+					value = 100
+				}			
+			}			
+			NOT = { war_with = ROOT }
+		}		
+	}
+	
+	chance = {
+		factor = 0	
+	}
+	
+	success = {
+		top_liege = {
+			opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_character_flag = abort_obj
+			trait = incapable
+			independent = yes
+			top_liege = { war_with = ROOT }
+			top_liege = { has_opinion_modifier = { who = ROOT modifier = opinion_friend } }
+			top_liege = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_friend } }			
+			NOT = {
+				top_liege = {
+					opinion = {
+						who = ROOT
+						value = -50
+					}
+				}
+			}
+			NOT = {
+				top_liege = {
+					reverse_opinion = {
+						who = ROOT
+						value = -50
+					}
+				}
+			}			
+		}
+	}
+	abort_effect = {
+		clr_character_flag = abort_obj
+		clr_character_flag = obj_check
+	}
+	effect = { 
+		set_character_flag = obj_befriend_top_liege
+		top_liege = {	
+			hidden_tooltip = {
+				remove_opinion = {
+					who = ROOT
+					modifier = opinion_friend
+				}
+				reverse_remove_opinion = {
+					who = ROOT
+					modifier = opinion_friend
 				}			
 			}
+			opinion = {
+				who = ROOT
+				modifier = opinion_friend
+				years = 100
+			}
+			reverse_opinion = {
+				who = ROOT
+				modifier = opinion_friend
+				years = 100
+			}	
+		}
+	}
+}
+
+
+obj_befriend_relhead = {
+	type = character
+	
+	allow = {
+		age = 16
+		ai = no
+		religion_head = { is_alive = yes }
+		NOT = { trait = incapable }
+		religion_head = {
+			NOT = {
+				is_liege_of = ROOT
+			}		
+			opinion = {
+				who = ROOT
+				value = -25
+			}
+			reverse_opinion = {
+				who = ROOT
+				value = -25
+			}
+			NOT = {
+				has_opinion_modifier = { who = ROOT modifier = opinion_friend }
+			}
+			NOT = {
+				reverse_has_opinion_modifier = { who = ROOT modifier = opinion_friend }
+			}
+			NOT = {
+				opinion = {
+					who = ROOT
+					value = 100
+				}			
+			}
+			NOT = { war_with = ROOT }
 		}
 	}
 	
@@ -6822,7 +7254,7 @@ obj_befriend_relhead = {
 		religion_head = {
 			opinion = {
 				who = ROOT
-				value = 75
+				value = 100
 			}
 		}
 	}
@@ -6831,6 +7263,7 @@ obj_befriend_relhead = {
 			has_character_flag = abort_obj
 			trait = incapable
 			NOT = { religion_head = { is_alive = yes } }
+			religion_head = { war_with = ROOT }
 			religion_head = { has_opinion_modifier = { who = ROOT modifier = opinion_friend } }
 			religion_head = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_friend } }
 			religion_head = {
@@ -6889,13 +7322,22 @@ obj_status_quo = {
 	type = character
 	
 	allow = {
+		prisoner = no
 		age = 16
 		ai = yes
 		NOT = { trait = incapable }
 	}
 	
 	chance = {
-		factor = 10	
+		factor = 10
+		modifier = {
+			factor = 0.1
+			trait = ambitious
+		}
+		modifier = {
+			factor = 10
+			trait = content
+		}		
 	}
 	
 	success = {
@@ -6903,6 +7345,7 @@ obj_status_quo = {
 	}
 	abort = {
 		OR = {
+			prisoner = yes
 			has_character_flag = abort_obj
 			trait = incapable
 			ai = no

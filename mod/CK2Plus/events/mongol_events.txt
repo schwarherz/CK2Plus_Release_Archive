@@ -105,16 +105,18 @@ narrative_event = {
 			904 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
 			907 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
 			activate_title = { title = e_il-khanate status = yes }
+			set_character_flag = centralize_without_penalties
 			e_il-khanate = {
-				add_law_w_cooldown = feudal_tax_0
-				add_law_w_cooldown = feudal_contract_0
-				add_law_w_cooldown = city_tax_0
-				add_law_w_cooldown = city_contract_0
-				add_law_w_cooldown = temple_tax_0
-				add_law_w_cooldown = temple_contract_0
-				add_law_w_cooldown = centralization_1			
+				add_law = feudal_tax_0
+				add_law = feudal_contract_0
+				add_law = city_tax_0
+				add_law = city_contract_0
+				add_law = temple_tax_0
+				add_law = temple_contract_0
+				add_law = centralization_1			
 				gain_title = PREV
-			}	
+			}
+			clr_character_flag = centralize_without_penalties
 			wealth = 5000		
 			spawn_unit = {
 				province = 904 # Balkh
@@ -455,16 +457,18 @@ narrative_event = {
 			893 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
 			898 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
 			activate_title = { title = e_golden_horde status = yes }
+			set_character_flag = centralize_without_penalties
 			e_golden_horde = {
-				add_law_w_cooldown = feudal_tax_0
-				add_law_w_cooldown = feudal_contract_0
-				add_law_w_cooldown = city_tax_0
-				add_law_w_cooldown = city_contract_0
-				add_law_w_cooldown = temple_tax_0
-				add_law_w_cooldown = temple_contract_0
-				add_law_w_cooldown = centralization_1		
+				add_law = feudal_tax_0
+				add_law = feudal_contract_0
+				add_law = city_tax_0
+				add_law = city_contract_0
+				add_law = temple_tax_0
+				add_law = temple_contract_0
+				add_law = centralization_1		
 				gain_title = PREV
 			}
+			clr_character_flag = centralize_without_penalties
 			wealth = 5000
 			spawn_unit = {
 				province = 893 # Surgut
@@ -799,17 +803,19 @@ narrative_event = {
 			900 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
 			901 = { county = { usurp_title_plus_barony_if_unlanded = PREVPREV } }
 			activate_title = { title = e_timurids status = yes }
+			set_character_flag = centralize_without_penalties
 			e_timurids = {
-				add_law_w_cooldown = feudal_tax_0
-				add_law_w_cooldown = feudal_contract_0
-				add_law_w_cooldown = city_tax_0
-				add_law_w_cooldown = city_contract_0
-				add_law_w_cooldown = temple_tax_0
-				add_law_w_cooldown = temple_contract_0
-				add_law_w_cooldown = centralization_1
-				add_law_w_cooldown = revoke_law_1		
+				add_law = feudal_tax_0
+				add_law = feudal_contract_0
+				add_law = city_tax_0
+				add_law = city_contract_0
+				add_law = temple_tax_0
+				add_law = temple_contract_0
+				add_law = centralization_1
+				add_law = revoke_law_1		
 				gain_title = PREV
-			}			
+			}	
+			clr_character_flag = centralize_without_penalties
 			wealth = 5000
 			spawn_unit = {
 				province = 901 # Khiva
@@ -1440,9 +1446,9 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 480
+		months = 960
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			any_demesne_province = {
 				is_capital = yes
 				religion = catholic
@@ -1529,9 +1535,9 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 480
+		months = 960
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			any_demesne_province = {
 				is_capital = yes
 				religion = orthodox
@@ -1617,7 +1623,7 @@ character_event = {
 	mean_time_to_happen = {
 		months = 480
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			any_demesne_province = {
 				is_capital = yes
 				religion = sunni
@@ -1703,7 +1709,7 @@ character_event = {
 	mean_time_to_happen = {
 		months = 480
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			any_demesne_province = {
 				is_capital = yes
 				religion = shiite
@@ -1787,9 +1793,9 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 480
+		months = 960
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			any_demesne_province = {
 				is_capital = yes
 				religion = catholic
@@ -1876,9 +1882,9 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 480
+		months = 960
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			any_demesne_province = {
 				is_capital = yes
 				religion = orthodox
@@ -1964,7 +1970,7 @@ character_event = {
 	mean_time_to_happen = {
 		months = 480
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			any_demesne_province = {
 				is_capital = yes
 				religion = sunni
@@ -2050,7 +2056,7 @@ character_event = {
 	mean_time_to_happen = {
 		months = 480
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			any_demesne_province = {
 				is_capital = yes
 				religion = shiite

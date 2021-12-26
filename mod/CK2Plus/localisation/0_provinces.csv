@@ -1013,11 +1013,11 @@ PROV1011;Golfo de Cadiz;Golfe de Cadix;Golf von Cadiz;;Golfo de Cádiz;;;;;;;;;x
 PROV1012;Coast of Iceland;Côte d'Islande;Küste von Island;;Costa de Islandia;;;;;;;;;x
 PROV1013;Dead Sea;Mer Morte;Totes Meer;;Mar Muerto;;;;;;;;;x
 PROV1014;North Atlantic;Atlantique Nord;Nordatlantik;;Atlántico Norte;;;;;;;;;x
-PROV1015;North Atlantic;Atlantique Nord;Nordatlantik;;Atlántico Norte;;;;;;;;;x
-PROV1016;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
-PROV1017;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
-PROV1018;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
-PROV1019;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
+PROV1015;North Atlantic;Atlantique Nord;Barentsee;;Atlántico Norte;;;;;;;;;x
+PROV1016;North Sea;Mer du Nord;Norwegische Küste;;Mar del Norte;;;;;;;;;x
+PROV1017;North Sea;Mer du Nord;Lofotensee;;Mar del Norte;;;;;;;;;x
+PROV1018;North Sea;Mer du Nord;Südliche Nordsee;;Mar del Norte;;;;;;;;;x
+PROV1019;North Sea;Mer du Nord;Nördliche Nordsee;;Mar del Norte;;;;;;;;;x
 PROV1020;Sea of Shetland;Mer des Shetland;Shetlandsee;;Mar de Shetland;;;;;;;;;x
 PROV1021;Bantry Bay;Baie de Bantry;Bantry Bay;;Bahía Bantry;;;;;;;;;x
 PROV1022;The Minch;Le Minch;The Minch;;El Minch;;;;;;;;;x
@@ -1026,8 +1026,8 @@ PROV1024;Firth of Forth;Firth of Forth;Firth of Forth;;Firth of Forth;;;;;;;;;x
 PROV1025;Dogger bank;Dogger Bank;Doggerbank;;Dogger bank;;;;;;;;;x
 PROV1026;The Wash;Le Wash;The Wash;;The Wash;;;;;;;;;x
 PROV1027;Onega;Onega;Onega-See;;Onega;;;;;;;;;x
-PROV1028;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
-PROV1029;The Sound;Le Sound;The Sound;;The Sound;;;;;;;;;x
+PROV1028;North Sea;Mer du Nord;Norwegische See;;Mar del Norte;;;;;;;;;x
+PROV1029;The Sound;Le Sound;Der Sund;;The Sound;;;;;;;;;x
 PROV1030;Gulf of Heligoland;Golfe de Heligoland;Helgoländische Bucht;;Golfo de Heligoland;;;;;;;;;x
 PROV1031;Kattegat;Kattegat;Kattegat;;Kattegat;;;;;;;;;x
 PROV1032;Gulf of Danzig;Golfe de Gdansk;Golf von Danzig;;Golfo de Danzig;;;;;;;;;x
@@ -1035,11 +1035,11 @@ PROV1033;Bight of Hanö;Anse de Hanö;Bucht von Hanö;;Bahía de Hanoi;;;;;;;;;x
 PROV1034;Baltic Sea;Mer Baltique;Ostsee;;Mar Báltico;;;;;;;;;x
 PROV1035;Sea of Åland;Mer d'Åland;See von Åland;;Mar de Åland;;;;;;;;;x
 PROV1036;Gulf of Finland;Golfe de Finlande;Finnischer Meerbusen;;Golfo de Finlandia;;;;;;;;;x
-PROV1037;Gulf of Bothnia;Golfe de Bothnie;Bottnischer Meerbusen;;Golfo de Botnia;;;;;;;;;x
-PROV1038;Gulf of Bothnia;Golfe de Bothnie;Bottnischer Meerbusen;;Golfo de Botnia;;;;;;;;;x
+PROV1037;Gulf of Bothnia;Golfe de Bothnie;Bottenwiek;;Golfo de Botnia;;;;;;;;;x
+PROV1038;Gulf of Bothnia;Golfe de Bothnie;Bottensee;;Golfo de Botnia;;;;;;;;;x
 PROV1039;Baie de la Seine;Baie de la Seine;Seine-Mündung;;Bahía del Sena;;;;;;;;;x
 PROV1040;Îles de la Manche;Îles de la Manche;Kanalinseln;;Islas del Canal;;;;;;;;;x
-PROV1041;Mauretanian Coast;Côte de Mauritanie;Mauretanische Küse;;Costa Mauritana;;;;;;;;;x
+PROV1041;Mauretanian Coast;Côte de Mauritanie;Mauretanische Küste;;Costa Mauritana;;;;;;;;;x
 PROV1042;Lake Peipus;Lac Peipus;Peipus-See;;Lago Peipus;;;;;;;;;x
 PROV1043;Lake Yalpug;Lac Yalpug;Yalpug-See;;Lago Yalpug;;;;;;;;;x
 PROV1044;Coast of Asturias;Côte asturienne;Asturische Küste;;Costa de Asturias;;;;;;;;;x

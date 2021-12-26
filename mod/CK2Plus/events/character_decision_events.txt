@@ -87,6 +87,14 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA220003"	
+		remove_opinion = {
+			who = liege
+			modifier = opinion_lover
+		}
+		reverse_remove_opinion = {
+			who = liege
+			modifier = opinion_lover
+		}		
 		remove_title = title_concubine
 	}
 }

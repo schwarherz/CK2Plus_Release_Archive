@@ -502,6 +502,21 @@ plot_decisions = {
 			num_of_plot_backers = 1
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = { trait = deceitful }
+					NOT = { trait = honest }
+				}
+				random = {
+					chance = 33
+					add_trait = deceitful
+					hidden_tooltip = {
+						character_event = {
+							id = 38255 #Notify Deceitful
+						}
+					}				
+				}	
+			}		
 			plot_target_char = {
 				random_list = {
 					25 = {
@@ -531,7 +546,7 @@ plot_decisions = {
 					trait = possessed
 					had_character_flag = {
 						flag = plot_check
-						days = 1095
+						days = 365
 					}											
 				}
 			}
@@ -553,6 +568,21 @@ plot_decisions = {
 			num_of_plot_backers = 1
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = { trait = deceitful }
+					NOT = { trait = honest }
+				}
+				random = {
+					chance = 33
+					add_trait = deceitful
+					hidden_tooltip = {
+						character_event = {
+							id = 38255 #Notify Deceitful
+						}
+					}				
+				}	
+			}
 			plot_target_char = {
 				random_list = {
 					50 = {
@@ -582,7 +612,7 @@ plot_decisions = {
 					trait = possessed
 					had_character_flag = {
 						flag = plot_check
-						days = 365
+						days = 180
 					}											
 				}
 			}			
@@ -603,6 +633,21 @@ plot_decisions = {
 			num_of_plot_backers = 1
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = { trait = deceitful }
+					NOT = { trait = honest }
+				}
+				random = {
+					chance = 33
+					add_trait = deceitful
+					hidden_tooltip = {
+						character_event = {
+							id = 38255 #Notify Deceitful
+						}
+					}				
+				}	
+			}
 			plot_target_char = {
 				random_list = {
 					75 = {
@@ -643,6 +688,21 @@ plot_decisions = {
 			num_of_plot_backers = 1
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = { trait = deceitful }
+					NOT = { trait = honest }
+				}
+				random = {
+					chance = 33
+					add_trait = deceitful
+					hidden_tooltip = {
+						character_event = {
+							id = 38255 #Notify Deceitful
+						}
+					}				
+				}	
+			}
 			plot_target_char = {
 				random_list = {
 					25 = {
@@ -673,7 +733,7 @@ plot_decisions = {
 					trait = possessed
 					had_character_flag = {
 						flag = plot_check
-						days = 1095
+						days = 365
 					}											
 				}
 			}
@@ -695,6 +755,21 @@ plot_decisions = {
 			num_of_plot_backers = 1
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = { trait = deceitful }
+					NOT = { trait = honest }
+				}
+				random = {
+					chance = 33
+					add_trait = deceitful
+					hidden_tooltip = {
+						character_event = {
+							id = 38255 #Notify Deceitful
+						}
+					}				
+				}	
+			}
 			plot_target_char = {
 				random_list = {
 					50 = {
@@ -725,7 +800,7 @@ plot_decisions = {
 					trait = possessed
 					had_character_flag = {
 						flag = plot_check
-						days = 365
+						days = 180
 					}											
 				}
 			}
@@ -746,6 +821,21 @@ plot_decisions = {
 			num_of_plot_backers = 1
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = { trait = deceitful }
+					NOT = { trait = honest }
+				}
+				random = {
+					chance = 33
+					add_trait = deceitful
+					hidden_tooltip = {
+						character_event = {
+							id = 38255 #Notify Deceitful
+						}
+					}				
+				}	
+			}
 			plot_target_char = {
 				random_list = {
 					75 = {
@@ -787,6 +877,21 @@ plot_decisions = {
 			num_of_plot_backers = 1
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = { trait = deceitful }
+					NOT = { trait = honest }
+				}
+				random = {
+					chance = 33
+					add_trait = deceitful
+					hidden_tooltip = {
+						character_event = {
+							id = 38255 #Notify Deceitful
+						}
+					}				
+				}	
+			}
 			plot_target_char = {
 				random_list = {
 					25 = {
@@ -814,7 +919,7 @@ plot_decisions = {
 					trait = possessed
 					had_character_flag = {
 						flag = plot_check
-						days = 1095
+						days = 365
 					}											
 				}
 			}
@@ -836,6 +941,21 @@ plot_decisions = {
 			num_of_plot_backers = 1
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = { trait = deceitful }
+					NOT = { trait = honest }
+				}
+				random = {
+					chance = 33
+					add_trait = deceitful
+					hidden_tooltip = {
+						character_event = {
+							id = 38255 #Notify Deceitful
+						}
+					}				
+				}	
+			}
 			plot_target_char = {
 				random_list = {
 					50 = {
@@ -863,7 +983,7 @@ plot_decisions = {
 					trait = possessed
 					had_character_flag = {
 						flag = plot_check
-						days = 365
+						days = 180
 					}										
 				}
 			}

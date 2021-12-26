@@ -1,6 +1,7 @@
 1066.1.1=
 {
 holder=20663
+law = succ_primogeniture
 }
 1067.9.16={
 holder=89001

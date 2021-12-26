@@ -1,9 +1,5 @@
 spriteTypes = {
-
-	spriteType = {
-		name = "GFX_take_loan"
-		texturefile = "gfx\\CK2Plus\\decision_icon_loan.dds"
-	}	
+	
 	spriteType = {
 		name = "GFX_hold_a_epic_tournament"
 		texturefile = "gfx\\interface\\decision_icon_tournament.dds"
@@ -48,5 +44,65 @@ spriteTypes = {
 		name = "GFX_demand_liege_title"
 		texturefile = "gfx\\interface\\decision_icon_liegetitle.dds"
 	}
-
+	spriteType = {
+		name = "GFX_take_loan"
+		texturefile = "gfx\\CK2Plus\\decision_icon_loan.dds"
+	}	
+	spriteType = {
+		name = "GFX_coronation"
+		texturefile = "gfx\\CK2Plus\\decision_icon_empire.dds"
+	}	
+	spriteType = {
+		name = "GFX_coronation"
+		texturefile = "gfx\\CK2Plus\\decision_icon_empire.dds"
+	}
+	spriteType = {
+		name = "GFX_create_e_shiite"
+		texturefile = "gfx\\CK2Plus\\decision_icon_empire.dds"
+	}
+	spriteType = {
+		name = "GFX_create_e_sunni"
+		texturefile = "gfx\\CK2Plus\\decision_icon_empire.dds"
+	}
+	spriteType = {
+		name = "GFX_buy_indulgence_for_sins"
+		texturefile = "gfx\\CK2Plus\\decision_icon_indulgence.dds"
+	}
+	spriteType = {
+		name = "GFX_issue_declaration_of_repentance"
+		texturefile = "gfx\\CK2Plus\\decision_icon_indulgence.dds"
+	}
+	spriteType = {
+		name = "GFX_request_holy_war_sanction"
+		texturefile = "gfx\\CK2Plus\\decision_icon_approveholywar.dds"
+	}	
+	spriteType = {
+		name = "GFX_employ_priest"
+		texturefile = "gfx\\CK2Plus\\decision_icon_employspiritual.dds"
+	}
+	spriteType = {
+		name = "GFX_employ_steward"
+		texturefile = "gfx\\CK2Plus\\decision_icon_employtreasurer.dds"
+	}
+	spriteType = {
+		name = "GFX_employ_chancellor"
+		texturefile = "gfx\\CK2Plus\\decision_icon_employchancelor.dds"
+	}	
+	spriteType = {
+		name = "GFX_employ_marshal"
+		texturefile = "gfx\\CK2Plus\\decision_icon_employmarshal.dds"
+	}
+	spriteType = {
+		name = "GFX_employ_spymaster"
+		texturefile = "gfx\\CK2Plus\\decision_icon_employspymaster.dds"
+	}
+	spriteType = {
+		name = "GFX_present_debutante"
+		texturefile = "gfx\\CK2Plus\\decision_icon_debutante.dds"
+	}	
+	spriteType = {
+		name = "GFX_employ_concubine"
+		texturefile = "gfx\\CK2Plus\\decision_icon_debutante.dds"
+	}
+	
 }

@@ -6,6 +6,10 @@
 {
 	holder=1746
 }
+1077.1.1=
+{
+	de_jure_liege="k_rum"
+}
 1071.8.26=
 {
 	holder=1740
@@ -63,7 +67,7 @@
 #The Ottomans arrive
 1310.1.1=
 {
-liege="k_ottoman"
+liege="e_ottoman"
 }
 1310.1.1=
 {

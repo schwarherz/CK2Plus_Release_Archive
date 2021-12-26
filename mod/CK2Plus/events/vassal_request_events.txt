@@ -1063,6 +1063,7 @@ character_event = {
 			any_demesne_title = {
 				has_de_jure_pretension = ROOT
 				can_be_given_away = yes
+				lower_tier_than = KING
 				lower_tier_than = PREV
 				NOT = {
 					AND = {
@@ -1167,6 +1168,7 @@ letter_event = {
 			limit = {
 				has_de_jure_pretension = FROM
 				can_be_given_away = yes
+				lower_tier_than = KING			
 				lower_tier_than = ROOT
 				NOT = {
 					AND = {
@@ -1290,6 +1292,7 @@ character_event = {
 	trigger = {
 		host = {
 			is_liege_of = ROOT
+			war = no
 		}
 		liege = {
 			any_vassal = {
@@ -1300,14 +1303,19 @@ character_event = {
 					dynasty = ROOT
 					reverse_opinion = {
 						who = ROOT
-						value = 25
+						value = -25
 					}
 				}
 			}
 		}
+		NOT = { has_character_flag = plea_for_mercy }
 	}
 	mean_time_to_happen = {
-		months = 240
+		months = 60
+		modifier = {
+			factor = 5
+			is_ruler = no
+		}
 		modifier = {
 			factor = 0.75
 			intrigue = 7
@@ -1338,6 +1346,7 @@ character_event = {
 				letter_event = { id = 63051 days = 4 tooltip = "EVTTOOLTIP63051" }
 			}
 		}
+		set_character_flag = plea_for_mercy
 	}
 }
 
@@ -1379,13 +1388,13 @@ letter_event = {
 	option = {
 		name = "EVTOPTA63052" # Very well
 		ai_chance = { 
-			factor = 50
+			factor = 100
 			modifier = {
-				factor = 0.1
+				factor = 0.5
 				NOT = {
 					opinion = {
 						who = FROM
-						value = -20
+						value = -25
 					}
 				}
 			}
@@ -1393,27 +1402,182 @@ letter_event = {
 		FROM = { FROM = { character_event = { id = 63053 days = 1 tooltip = "EVTTOOLTIP63053" } } }
 	}
 	option = {
-		name = "EVTOPTB63052" # Absolutely not!
-		trigger = {
-			NOT = { diplomacy = 14 }
-		}		
+		name = "EVTOPTB63052" # Absolutely not!		
 		ai_chance = { 
-			factor = 50
+			factor = 25
 			modifier = {
 				factor = 0.5
 				opinion = {
 					who = FROM
-					value = 50
+					value = 0
 				}
 			}
 		}
-		
-		FROM = { 
-			opinion = {
-				who = ROOT
-				modifier = opinion_tyrant
-				months = 120
+
+		custom_tooltip = TYRANTTOOLTIP5
+		hidden_tooltip = {
+			if = {
+				limit = {
+					trait = tyrant19
+				}
+				remove_trait = tyrant19
+				add_trait = tyrant20
 			}
+			if = {
+				limit = {
+					trait = tyrant18
+				}
+				remove_trait = tyrant18
+				add_trait = tyrant19
+			}
+			if = {
+				limit = {
+					trait = tyrant17
+				}
+				remove_trait = tyrant17
+				add_trait = tyrant18
+			}
+			if = {
+				limit = {
+					trait = tyrant16
+				}
+				remove_trait = tyrant16
+				add_trait = tyrant17
+			}	
+			if = {
+				limit = {
+					trait = tyrant15
+				}
+				remove_trait = tyrant15
+				add_trait = tyrant16
+			}
+			if = {
+				limit = {
+					trait = tyrant14
+				}
+				remove_trait = tyrant14
+				add_trait = tyrant15
+			}
+			if = {
+				limit = {
+					trait = tyrant13
+				}
+				remove_trait = tyrant13
+				add_trait = tyrant14
+			}
+			if = {
+				limit = {
+					trait = tyrant12
+				}
+				remove_trait = tyrant12
+				add_trait = tyrant13
+			}
+			if = {
+				limit = {
+					trait = tyrant11
+				}
+				remove_trait = tyrant11
+				add_trait = tyrant12
+			}
+			if = {
+				limit = {
+					trait = tyrant10
+				}
+				remove_trait = tyrant10
+				add_trait = tyrant11
+			}
+			if = {
+				limit = {
+					trait = tyrant9
+				}
+				remove_trait = tyrant9
+				add_trait = tyrant10
+			}	
+			if = {
+				limit = {
+					trait = tyrant8
+				}
+				remove_trait = tyrant8
+				add_trait = tyrant9
+			}
+			if = {
+				limit = {
+					trait = tyrant7
+				}
+				remove_trait = tyrant7
+				add_trait = tyrant8
+			}
+			if = {
+				limit = {
+					trait = tyrant6
+				}
+				remove_trait = tyrant6
+				add_trait = tyrant7
+			}
+			if = {
+				limit = {
+					trait = tyrant5
+				}
+				remove_trait = tyrant5
+				add_trait = tyrant6
+			}	
+			if = {
+				limit = {
+					trait = tyrant4
+				}
+				remove_trait = tyrant4
+				add_trait = tyrant5
+			}	
+			if = {
+				limit = {
+					trait = tyrant3
+				}
+				remove_trait = tyrant3
+				add_trait = tyrant4
+			}	
+			if = {
+				limit = {
+					trait = tyrant2
+				}
+				remove_trait = tyrant2
+				add_trait = tyrant3
+			}
+			if = {
+				limit = {
+					trait = tyrant1
+				}
+				remove_trait = tyrant1
+				add_trait = tyrant2
+			}
+			if = {
+				limit = {
+					NOT = {
+						trait = tyrant1
+						trait = tyrant2
+						trait = tyrant3
+						trait = tyrant4
+						trait = tyrant5
+						trait = tyrant6
+						trait = tyrant7
+						trait = tyrant8
+						trait = tyrant9
+						trait = tyrant10
+						trait = tyrant11
+						trait = tyrant12
+						trait = tyrant13
+						trait = tyrant14
+						trait = tyrant15
+						trait = tyrant16
+						trait = tyrant17
+						trait = tyrant18
+						trait = tyrant19
+						trait = tyrant20
+					}
+				}
+				add_trait = tyrant1
+			}		
+		}		
+		FROM = { 
 			hidden_tooltip = {
 				letter_event = { id = 63054 } 
 			}
@@ -1430,16 +1594,184 @@ letter_event = {
 			}
 		}
 		ai_chance = { 
-			factor = 50
+			factor = 10
 			modifier = {
-				factor = 0.1
+				factor = 0
 				opinion = {
 					who = FROM
-					value = 20
+					value = 0
 				}
 			}
 		}
-		
+
+		custom_tooltip = TYRANTTOOLTIP10
+		hidden_tooltip = {		
+			if = {
+				limit = { 
+					ROOT = { is_ruler = yes } 
+				}
+				if = {
+					limit = {
+						trait = tyrant19
+					}
+					remove_trait = tyrant19
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant18
+					}
+					remove_trait = tyrant18
+					add_trait = tyrant20
+				}
+				if = {
+					limit = {
+						trait = tyrant17
+					}
+					remove_trait = tyrant17
+					add_trait = tyrant19
+				}
+				if = {
+					limit = {
+						trait = tyrant16
+					}
+					remove_trait = tyrant16
+					add_trait = tyrant18
+				}	
+				if = {
+					limit = {
+						trait = tyrant15
+					}
+					remove_trait = tyrant15
+					add_trait = tyrant17
+				}
+				if = {
+					limit = {
+						trait = tyrant14
+					}
+					remove_trait = tyrant14
+					add_trait = tyrant16
+				}
+				if = {
+					limit = {
+						trait = tyrant13
+					}
+					remove_trait = tyrant13
+					add_trait = tyrant15
+				}
+				if = {
+					limit = {
+						trait = tyrant12
+					}
+					remove_trait = tyrant12
+					add_trait = tyrant14
+				}
+				if = {
+					limit = {
+						trait = tyrant11
+					}
+					remove_trait = tyrant11
+					add_trait = tyrant13
+				}
+				if = {
+					limit = {
+						trait = tyrant10
+					}
+					remove_trait = tyrant10
+					add_trait = tyrant12
+				}
+				if = {
+					limit = {
+						trait = tyrant9
+					}
+					remove_trait = tyrant9
+					add_trait = tyrant11
+				}	
+				if = {
+					limit = {
+						trait = tyrant8
+					}
+					remove_trait = tyrant8
+					add_trait = tyrant10
+				}
+				if = {
+					limit = {
+						trait = tyrant7
+					}
+					remove_trait = tyrant7
+					add_trait = tyrant9
+				}
+				if = {
+					limit = {
+						trait = tyrant6
+					}
+					remove_trait = tyrant6
+					add_trait = tyrant8
+				}
+				if = {
+					limit = {
+						trait = tyrant5
+					}
+					remove_trait = tyrant5
+					add_trait = tyrant7
+				}	
+				if = {
+					limit = {
+						trait = tyrant4
+					}
+					remove_trait = tyrant4
+					add_trait = tyrant6
+				}	
+				if = {
+					limit = {
+						trait = tyrant3
+					}
+					remove_trait = tyrant3
+					add_trait = tyrant5
+				}	
+				if = {
+					limit = {
+						trait = tyrant2
+					}
+					remove_trait = tyrant2
+					add_trait = tyrant4
+				}
+				if = {
+					limit = {
+						trait = tyrant1
+					}
+					remove_trait = tyrant1
+					add_trait = tyrant3
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = tyrant1
+							trait = tyrant2
+							trait = tyrant3
+							trait = tyrant4
+							trait = tyrant5
+							trait = tyrant6
+							trait = tyrant7
+							trait = tyrant8
+							trait = tyrant9
+							trait = tyrant10
+							trait = tyrant11
+							trait = tyrant12
+							trait = tyrant13
+							trait = tyrant14
+							trait = tyrant15
+							trait = tyrant16
+							trait = tyrant17
+							trait = tyrant18
+							trait = tyrant19
+							trait = tyrant20
+						}
+					}
+					add_trait = tyrant2
+				}					
+			}			
+		}		
 		FROM = { 
 			opinion = {
 				who = ROOT
@@ -1448,16 +1780,6 @@ letter_event = {
 			}
 			character_event = { id = 63055 tooltip = "EVTTOOLTIP63055" } 
 		}
-	}
-	option = {
-		name = "EVTOPTD63052" # Diplomatic NO
-		trigger = {
-			diplomacy = 14
-		}
-		ai_chance = { 
-			factor = 1000
-		}
-		FROM = { letter_event = { id = 63056 tooltip = "EVTTOOLTIP63056" } }
 	}
 }
 
@@ -1480,6 +1802,11 @@ character_event = {
 	option = {
 		name = "EVTOPTA63053" # Free at last!
 		FROM = { 
+			reverse_opinion = {
+				who = ROOT
+				modifier = opinion_merciful
+				months = 120
+			}		
 			FROM = {
 				reverse_opinion = {
 					who = ROOT

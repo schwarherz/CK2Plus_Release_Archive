@@ -18,7 +18,7 @@ letter_event = {
 	option = {
 		name = "EVTOPTA210000"
 		ai_chance = {
-			factor = 25
+			factor = 75
 			modifier = {
 				factor = 0.01
 				FROM = { ai = no }
@@ -33,7 +33,7 @@ letter_event = {
 				}				
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.75
 				NOT = {
 					opinion = {
 						who = FROM
@@ -42,7 +42,7 @@ letter_event = {
 				}
 			}			
 			modifier = {
-				factor = 0.5
+				factor = 0.75
 				NOT = {
 					opinion = {
 						who = FROM
@@ -51,7 +51,7 @@ letter_event = {
 				}
 			}			
 			modifier = {
-				factor = 0.5
+				factor = 0.75
 				NOT = {
 					opinion = {
 						who = FROM
@@ -60,7 +60,7 @@ letter_event = {
 				}
 			}			
 			modifier = {
-				factor = 0.5
+				factor = 0.75
 				NOT = {
 					opinion = {
 						who = FROM
@@ -76,21 +76,28 @@ letter_event = {
 				}
 			}
 			modifier = {
-				factor = 2
+				factor = 1.5
 				opinion = {
 					who = FROM
 					value = 50
 				}
 			}
 			modifier = {
-				factor = 2
+				factor = 1.5
 				opinion = {
 					who = FROM
 					value = 75
 				}
 			}
 			modifier = {
-				factor = 10.0
+				factor = 1.5
+				opinion = {
+					who = FROM
+					value = 100
+				}
+			}			
+			modifier = {
+				factor = 3.0
 				NOT = {
 					opinion = {
 						who = liege
@@ -99,7 +106,7 @@ letter_event = {
 				}
 			}			
 			modifier = {
-				factor = 5.0
+				factor = 3.0
 				NOT = {
 					opinion = {
 						who = liege
@@ -108,7 +115,7 @@ letter_event = {
 				}
 			}			
 			modifier = {
-				factor = 2.0
+				factor = 3.0
 				NOT = {
 					opinion = {
 						who = liege
@@ -117,7 +124,7 @@ letter_event = {
 				}
 			}			
 			modifier = {
-				factor = 2.0
+				factor = 3.0
 				NOT = {
 					opinion = {
 						who = liege
@@ -126,48 +133,69 @@ letter_event = {
 				}
 			}			
 			modifier = {
-				factor = 0.5
+				factor = 0.33
 				opinion = {
 					who = liege
 					value = 25
 				}
 			}
 			modifier = {
-				factor = 0.25
+				factor = 0.33
 				opinion = {
 					who = liege
 					value = 50
 				}
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0.33
 				opinion = {
 					who = liege
 					value = 75
 				}
 			}
 			modifier = {
+				factor = 0.33
+				opinion = {
+					who = liege
+					value = 100
+				}
+			}			
+			modifier = {
 				factor = 0.75
-				FROM = { culture = ROOT }
+				FROM = { culture_group = ROOT }
+				liege = { NOT = { culture_group = ROOT } }
+			}
+			modifier = {
+				factor = 1.25
+				liege = { culture_group = ROOT }
+				FROM = { NOT = { culture_group = ROOT } }
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { culture_group = ROOT }
+				liege = { NOT = { culture = ROOT } }
 			}
 			modifier = {
 				factor = 1.25
 				liege = { culture = ROOT }
+				FROM = { NOT = { culture = ROOT } }
 			}			
 			modifier = {
 				factor = 0.75
 				FROM = { dynasty = ROOT }
-			}
-			modifier = {
-				factor = 1.10
-				liege = { dynasty = ROOT }
+				liege = { NOT = { dynasty = ROOT } }
 			}
 			modifier = {
 				factor = 1.25
+				liege = { dynasty = ROOT }
+				FROM = { NOT = { dynasty = ROOT } }
+			}
+			modifier = {
+				factor = 1.1
 				trait = ambitious
 			}	
 			modifier = {
-				factor = 0.75
+				factor = 0.9
 				trait = content
 			}
 			modifier = {
@@ -203,24 +231,76 @@ letter_event = {
 				trait = slothful
 			}			
 			modifier = {
-				factor = 1.15
+				factor = 1.25
 				liege = { regent = { is_alive = yes } }
 			}
 			modifier = {
 				factor = 1.25
-				liege = { ai = no }
-			}			
-			modifier = {
-				factor = 0.66
 				FROM = { ai = no }
+				NOT = { difficulty = 1 }
 			}
 			modifier = {
-				factor = 0.1
+				factor = 1.25
+				FROM = { ai = no }
+				NOT = { difficulty = 2 }
+			}	
+			modifier = {
+				factor = 0.75
+				FROM = { ai = no }
+				difficulty = 3
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { ai = no }
+				difficulty = 4
+			}
+			modifier = {
+				factor = 0.75
+				liege = { ai = no }
+				NOT = { difficulty = 1 }
+			}
+			modifier = {
+				factor = 0.75
+				liege = { ai = no }
+				NOT = { difficulty = 2 }
+			}	
+			modifier = {
+				factor = 1.25
+				liege = { ai = no }
+				difficulty = 3
+			}
+			modifier = {
+				factor = 1.25
+				liege = { ai = no }
+				difficulty = 4
+			}
+			modifier = {
+				factor = 1.25
+				liege = { ai = yes }
+				NOT = { difficulty = 1 }
+			}
+			modifier = {
+				factor = 1.25
+				liege = { ai = yes }
+				NOT = { difficulty = 2 }
+			}	
+			modifier = {
+				factor = 0.75
+				liege = { ai = yes }
+				difficulty = 3
+			}
+			modifier = {
+				factor = 0.75
+				liege = { ai = yes }
+				difficulty = 4
+			}			
+			modifier = {
+				factor = 0.01
 				liege = { religion = ROOT }
 				FROM = { NOT = { religion = ROOT } }
 			}
 			modifier = {
-				factor = 10.0
+				factor = 100.0
 				FROM = { religion = ROOT }
 				liege = { NOT = { religion = ROOT } }
 			}				
@@ -232,11 +312,10 @@ letter_event = {
 		}
 		reverse_opinion = {
 			who = liege
-			modifier = declared_war
+			modifier = opinion_traitor
 			years = 10
 		}
 		hidden_tooltip = {
-			#liege = { letter_event = { id = 210001 } } #unnecessary
 			FROM = { letter_event = { id = 210002 } }
 		}
 		join_attacker_wars = FROM
@@ -265,23 +344,9 @@ letter_event = {
 			who = liege
 			modifier = opinion_defending_liege
 			years = 5
-		}		
-		piety = 10
-	}	
-}
-
-letter_event = {
-	id = 210001
-	desc = "EVTDESC210001"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA210001"
-		tooltip = {
-			FROM = { join_attacker_wars = FROMFROM }
 		}
-	}
+		liege = { ROOT = { join_defender_wars = PREV } }
+	}	
 }
 
 letter_event = {

@@ -695,3 +695,324 @@ wrong_religion_capital = {
 	
 	global_tax_modifier = -0.1
 }
+
+#Player isn't picking an ambition
+player_no_ambition = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		is_ruler = yes	
+		age = 16
+		ai = no
+		tier = count
+		NOT = {
+			has_objective = plot_gain_vassal_title
+			has_objective = plot_gain_title
+			has_objective = plot_weaken_fellow_vassal
+			has_objective = plot_institute_hereditary_titles
+			has_objective = plot_kidnap_liege
+			has_objective = plot_succ_seniority
+			has_objective = plot_succ_primogeniture
+			has_objective = plot_succ_gavelkind
+			has_objective = plot_succ_feudal_elective
+			has_objective = plot_kill_character
+			has_objective = plot_kill_spouse
+			has_objective = plot_lower_crown_authority		
+			has_objective = obj_status_quo
+			has_objective = obj_befriend_liege
+			has_objective = obj_befriend_top_liege
+			has_objective = obj_befriend_relhead
+			has_objective = obj_become_chancellor
+			has_objective = obj_become_marshal
+			has_objective = obj_become_treasurer
+			has_objective = obj_become_spymaster
+			has_objective = obj_become_spiritual
+			has_objective = obj_amass_wealth_1
+			has_objective = obj_amass_wealth_2
+			has_objective = obj_amass_wealth_3
+			has_objective = obj_amass_wealth_4
+			has_objective = obj_become_paragon_of_virtue
+			has_objective = obj_become_exalted_1
+			has_objective = obj_become_exalted_2
+			has_objective = obj_become_exalted_3
+			has_objective = obj_become_exalted_4
+			has_objective = obj_get_married
+			has_objective = obj_marry_ruler
+			has_objective = obj_have_a_daughter
+			has_objective = obj_have_a_son
+			has_objective = obj_become_heir
+			has_objective = obj_wants_landed_title
+			has_objective = obj_five_children
+			has_objective = obj_ten_children
+			has_objective = obj_fifteen_children
+			has_objective = obj_twenty_children
+			has_objective = obj_increase_demesne_1
+			has_objective = obj_increase_demesne_2
+			has_objective = obj_increase_demesne_3
+			has_objective = obj_increase_demesne_4
+			has_objective = obj_increase_demesne_5
+			has_objective = obj_increase_demesne_6
+			has_objective = obj_increase_demesne_7
+			has_objective = obj_increase_demesne_8				
+			has_objective = obj_increase_demesne_9
+			has_objective = obj_go_crusade
+			has_objective = obj_go_jihad
+			has_objective = obj_find_lover
+			has_objective = obj_become_independent
+			has_objective = obj_become_duke				
+			has_objective = obj_become_king
+			has_objective = obj_become_emperor
+			has_objective = obj_adopt_a_lifestyle
+			has_objective = obj_gain_honorary_title
+			has_objective = obj_convert_a_province
+			has_objective = obj_win_a_war
+			has_objective = obj_break_out_of_prison
+		}
+	}
+	
+	icon = 25
+	
+	monthly_character_prestige = -0.25
+}
+
+player_no_ambition = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		is_ruler = yes	
+		age = 16
+		ai = no
+		tier = duke
+		NOT = {
+			has_objective = plot_gain_vassal_title
+			has_objective = plot_gain_title
+			has_objective = plot_weaken_fellow_vassal
+			has_objective = plot_institute_hereditary_titles
+			has_objective = plot_kidnap_liege
+			has_objective = plot_succ_seniority
+			has_objective = plot_succ_primogeniture
+			has_objective = plot_succ_gavelkind
+			has_objective = plot_succ_feudal_elective
+			has_objective = plot_kill_character
+			has_objective = plot_kill_spouse
+			has_objective = plot_lower_crown_authority		
+			has_objective = obj_status_quo
+			has_objective = obj_befriend_liege
+			has_objective = obj_befriend_top_liege
+			has_objective = obj_befriend_relhead
+			has_objective = obj_become_chancellor
+			has_objective = obj_become_marshal
+			has_objective = obj_become_treasurer
+			has_objective = obj_become_spymaster
+			has_objective = obj_become_spiritual
+			has_objective = obj_amass_wealth_1
+			has_objective = obj_amass_wealth_2
+			has_objective = obj_amass_wealth_3
+			has_objective = obj_amass_wealth_4
+			has_objective = obj_become_paragon_of_virtue
+			has_objective = obj_become_exalted_1
+			has_objective = obj_become_exalted_2
+			has_objective = obj_become_exalted_3
+			has_objective = obj_become_exalted_4
+			has_objective = obj_get_married
+			has_objective = obj_marry_ruler
+			has_objective = obj_have_a_daughter
+			has_objective = obj_have_a_son
+			has_objective = obj_become_heir
+			has_objective = obj_wants_landed_title
+			has_objective = obj_five_children
+			has_objective = obj_ten_children
+			has_objective = obj_fifteen_children
+			has_objective = obj_twenty_children
+			has_objective = obj_increase_demesne_1
+			has_objective = obj_increase_demesne_2
+			has_objective = obj_increase_demesne_3
+			has_objective = obj_increase_demesne_4
+			has_objective = obj_increase_demesne_5
+			has_objective = obj_increase_demesne_6
+			has_objective = obj_increase_demesne_7
+			has_objective = obj_increase_demesne_8				
+			has_objective = obj_increase_demesne_9
+			has_objective = obj_go_crusade
+			has_objective = obj_go_jihad
+			has_objective = obj_find_lover
+			has_objective = obj_become_independent
+			has_objective = obj_become_duke				
+			has_objective = obj_become_king
+			has_objective = obj_become_emperor
+			has_objective = obj_adopt_a_lifestyle
+			has_objective = obj_gain_honorary_title
+			has_objective = obj_convert_a_province
+			has_objective = obj_win_a_war
+			has_objective = obj_break_out_of_prison
+		}
+	}
+	
+	icon = 25
+	
+	monthly_character_prestige = -0.5
+}
+
+player_no_ambition = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		is_ruler = yes	
+		age = 16
+		ai = no
+		tier = king
+		NOT = {
+			has_objective = plot_gain_vassal_title
+			has_objective = plot_gain_title
+			has_objective = plot_weaken_fellow_vassal
+			has_objective = plot_institute_hereditary_titles
+			has_objective = plot_kidnap_liege
+			has_objective = plot_succ_seniority
+			has_objective = plot_succ_primogeniture
+			has_objective = plot_succ_gavelkind
+			has_objective = plot_succ_feudal_elective
+			has_objective = plot_kill_character
+			has_objective = plot_kill_spouse
+			has_objective = plot_lower_crown_authority		
+			has_objective = obj_status_quo
+			has_objective = obj_befriend_liege
+			has_objective = obj_befriend_top_liege
+			has_objective = obj_befriend_relhead
+			has_objective = obj_become_chancellor
+			has_objective = obj_become_marshal
+			has_objective = obj_become_treasurer
+			has_objective = obj_become_spymaster
+			has_objective = obj_become_spiritual
+			has_objective = obj_amass_wealth_1
+			has_objective = obj_amass_wealth_2
+			has_objective = obj_amass_wealth_3
+			has_objective = obj_amass_wealth_4
+			has_objective = obj_become_paragon_of_virtue
+			has_objective = obj_become_exalted_1
+			has_objective = obj_become_exalted_2
+			has_objective = obj_become_exalted_3
+			has_objective = obj_become_exalted_4
+			has_objective = obj_get_married
+			has_objective = obj_marry_ruler
+			has_objective = obj_have_a_daughter
+			has_objective = obj_have_a_son
+			has_objective = obj_become_heir
+			has_objective = obj_wants_landed_title
+			has_objective = obj_five_children
+			has_objective = obj_ten_children
+			has_objective = obj_fifteen_children
+			has_objective = obj_twenty_children
+			has_objective = obj_increase_demesne_1
+			has_objective = obj_increase_demesne_2
+			has_objective = obj_increase_demesne_3
+			has_objective = obj_increase_demesne_4
+			has_objective = obj_increase_demesne_5
+			has_objective = obj_increase_demesne_6
+			has_objective = obj_increase_demesne_7
+			has_objective = obj_increase_demesne_8				
+			has_objective = obj_increase_demesne_9
+			has_objective = obj_go_crusade
+			has_objective = obj_go_jihad
+			has_objective = obj_find_lover
+			has_objective = obj_become_independent
+			has_objective = obj_become_duke				
+			has_objective = obj_become_king
+			has_objective = obj_become_emperor
+			has_objective = obj_adopt_a_lifestyle
+			has_objective = obj_gain_honorary_title
+			has_objective = obj_convert_a_province
+			has_objective = obj_win_a_war
+			has_objective = obj_break_out_of_prison
+		}
+	}
+	
+	icon = 25
+	
+	monthly_character_prestige = -0.75
+}
+
+player_no_ambition = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		is_ruler = yes	
+		age = 16
+		ai = no
+		tier = emperor
+		NOT = {
+			has_objective = plot_gain_vassal_title
+			has_objective = plot_gain_title
+			has_objective = plot_weaken_fellow_vassal
+			has_objective = plot_institute_hereditary_titles
+			has_objective = plot_kidnap_liege
+			has_objective = plot_succ_seniority
+			has_objective = plot_succ_primogeniture
+			has_objective = plot_succ_gavelkind
+			has_objective = plot_succ_feudal_elective
+			has_objective = plot_kill_character
+			has_objective = plot_kill_spouse
+			has_objective = plot_lower_crown_authority		
+			has_objective = obj_status_quo
+			has_objective = obj_befriend_liege
+			has_objective = obj_befriend_top_liege
+			has_objective = obj_befriend_relhead
+			has_objective = obj_become_chancellor
+			has_objective = obj_become_marshal
+			has_objective = obj_become_treasurer
+			has_objective = obj_become_spymaster
+			has_objective = obj_become_spiritual
+			has_objective = obj_amass_wealth_1
+			has_objective = obj_amass_wealth_2
+			has_objective = obj_amass_wealth_3
+			has_objective = obj_amass_wealth_4
+			has_objective = obj_become_paragon_of_virtue
+			has_objective = obj_become_exalted_1
+			has_objective = obj_become_exalted_2
+			has_objective = obj_become_exalted_3
+			has_objective = obj_become_exalted_4
+			has_objective = obj_get_married
+			has_objective = obj_marry_ruler
+			has_objective = obj_have_a_daughter
+			has_objective = obj_have_a_son
+			has_objective = obj_become_heir
+			has_objective = obj_wants_landed_title
+			has_objective = obj_five_children
+			has_objective = obj_ten_children
+			has_objective = obj_fifteen_children
+			has_objective = obj_twenty_children
+			has_objective = obj_increase_demesne_1
+			has_objective = obj_increase_demesne_2
+			has_objective = obj_increase_demesne_3
+			has_objective = obj_increase_demesne_4
+			has_objective = obj_increase_demesne_5
+			has_objective = obj_increase_demesne_6
+			has_objective = obj_increase_demesne_7
+			has_objective = obj_increase_demesne_8				
+			has_objective = obj_increase_demesne_9
+			has_objective = obj_go_crusade
+			has_objective = obj_go_jihad
+			has_objective = obj_find_lover
+			has_objective = obj_become_independent
+			has_objective = obj_become_duke				
+			has_objective = obj_become_king
+			has_objective = obj_become_emperor
+			has_objective = obj_adopt_a_lifestyle
+			has_objective = obj_gain_honorary_title
+			has_objective = obj_convert_a_province
+			has_objective = obj_win_a_war
+			has_objective = obj_break_out_of_prison
+		}
+	}
+	
+	icon = 25
+	
+	monthly_character_prestige = -1
+}

@@ -60,6 +60,26 @@ character_event = {
 		months = 120
 
 		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
@@ -384,6 +404,26 @@ character_event = {
 		months = 120
 
 		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
@@ -649,6 +689,26 @@ character_event = {
 		months = 240
 
 		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
@@ -836,6 +896,26 @@ character_event = {
 		months = 120
 
 		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			difficulty = 4
+		}
+		modifier = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
@@ -996,7 +1076,7 @@ character_event = {
 	
 	option = {
 		name = "EVOPTA20330"
-		ai_chance = { factor = 75 }
+		ai_chance = { factor = 50 }
 		FROM = {
 			opinion = {
 				who = ROOT
@@ -1016,16 +1096,8 @@ character_event = {
 	}
 	option = {
 		name = "EVOPTB20330"
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 0
-				FROM = { has_character_flag = spymaster_found_spying }
-			}
-		}
-		prestige = 15
+		ai_chance = { factor = 50 }
 		FROM = {
-			set_character_flag = spymaster_found_spying
 			letter_event = { id = 20332 days = 7 tooltip = "EVTTOOLTIP20332" }
 		}
 	}
@@ -1106,6 +1178,26 @@ character_event = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}		
 		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
@@ -1781,6 +1873,26 @@ character_event = {
 			factor = 3.0
 			liege = { ai = yes }
 		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 1 }
+		}
+		modifier = {
+			factor = 0.75
+			liege = { ai = no }
+			NOT = { difficulty = 2 }
+		}	
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 3
+		}
+		modifier = {
+			factor = 1.25
+			liege = { ai = no }
+			difficulty = 4
+		}		
 		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }

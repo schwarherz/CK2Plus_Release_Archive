@@ -1,42 +1,50 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 #k_P;P;P;P;;P;;;;;;;;;x
 #k_P_adj;P;P;P;;P;;;;;;;;;x
+k_jkhaz;Khazaria;Khazarie;Chasaria;;Jazaria;;;;;;;;;x
+k_jkhaz_adj;Khazarian;khazar;Chasarischer;;Jázara;;;;;;;;;x
+kingdom_of_judaism;Memlekt;Memlekt;Memlekt;;Memlekt;;;;;;;;;x
+king_judaism;Melech;Melech;Melech;;Melech;;;;;;;;;x
+king_female_judaism;Malcah;Malcah;Malcah;;Malcah;;;;;;;;;x
+title_queen_mother_judaism;Malcah Ama;Malcah Ama;Malcah Ama;;Malcah Ama;;;;;;;;;x
+king_title_ruler_consort_female_judaism;Malcah;Malcah;Malcah;;Malcah;;;;;;;;;x
+king_title_ruler_consort_judaism;Melech;Melech;Melech;;Melech;;;;;;;;;x
 k_prussia;Prussia;Prusse;Preußen;;Prusia;;;;;;;;;x
 k_prussia_adj;prussian;Prussian;prussien;Preußisch;;Prusiana;;;;;;;;;x
 k_avalon;Avalon;Avalon;Avalon;;Avalon;;;;;;;;;x
-k_avalon_adj;Avalonian;Avalonienne;Avalonier;;Avaloniana;;;;;;;;;x
+k_avalon_adj;Avalonian;Avalonienne;Avalonisch;;Avaloniana;;;;;;;;;x
 k_cornwall;Cornwall;Cornouailles;Cornwall;;Cornualles;;;;;;;;;x
-k_cornwall_adj;Cornish;Cornouaillais;Kornischer;;Cornuallesa;;;;;;;;;x
-k_of_mann_and_the_isles;Mann and the Isles;Mann et les Îles;Mann und die Isles;;Mann y Las Islas Occidentales;;;;;;;;;x
-k_of_mann_and_the_isles_adj;Manx;Manx;Manx;;de la reino de Mann;;;;;;;;;x
+k_cornwall_adj;Cornish;Cornouaillais;Kornisch;;Cornuallesa;;;;;;;;;x
+k_of_mann_and_the_isles;Mann and the Isles;Mann et les Îles;Mann and the Isles;;Mann y Las Islas Occidentales;;;;;;;;;x
+k_of_mann_and_the_isles_adj;Manx;Manx;Mansch;;de la reino de Mann;;;;;;;;;x
 k_iceland;Iceland;Islande;Island;;Islandia;;;;;;;;;x
 k_iceland_adj;Icelandic;Islandais;Isländisch;;Islandés;;;;;;;;;x
-k_alania;Alania;Alanie;Alania;;Alania;;;;;;;;;x
-k_alania_adj;Alanian;Alanien;Alanischer;;Alana;;;;;;;;;x
+k_alania;Alania;Alanie;Alanien;;Alania;;;;;;;;;x
+k_alania_adj;Alanian;Alanien;Alanisch;;Alana;;;;;;;;;x
 k_mallorca;Mallorca;Majorque;Mallorca;;Mallorca;;;;;;;;;x
-k_mallorca_adj;Mallorcan;Majorquin;Mallorquiner;;Mallorquina;;;;;;;;;x
+k_mallorca_adj;Mallorcan;Majorquin;Mallorquinisch;;Mallorquina;;;;;;;;;x
 k_genoa;Genoa;Genes;Genua;;Genova;;;;;;;;;x
-k_genoa_adj;Genoese;Genois;Genuanischer;;Genovesa;;;;;;;;;x
+k_genoa_adj;Genoese;Genois;Genuesisch;;Genovesa;;;;;;;;;x
 k_mercia;Mercia;Mercie;Mercia;;Mercia;;;;;;;;;x
-k_mercia_adj;Mercian;Mercien;Mercianischer;;Merciana;;;;;;;;;x
+k_mercia_adj;Mercian;Mercien;Mercianisch;;Merciana;;;;;;;;;x
 k_northumbria;Northumbria;Northumbria;Northumbria;;Northumbria;;;;;;;;;x
-k_northumbria_adj;Northumbrian;Northumbrien;Northumbrianischer;;Northumbriana;;;;;;;;;x
+k_northumbria_adj;Northumbrian;Northumbrien;Northumbrisch;;Northumbriana;;;;;;;;;x
 k_jorvik;Jórvík;Jórvík;Jórvík;;Jórvík;;;;;;;;;x 
-k_jorvik_adj;Jórvíkr;Jórvíkr;Jórvíkr;;Jórvíkr;;;;;;;;;x
+k_jorvik_adj;Jórvíkr;Jórvíkr;Jórvíksch;;Jórvíkr;;;;;;;;;x
 k_wessex;Wessex;Wessex;Wessex;;Wessex;;;;;;;;;x
-k_wessex_adj;Wessexian;Wessexois;Wessexer;;Wexxexianés;;;;;;;;;x
+k_wessex_adj;Wessexian;Wessexois;Wessexisch;;Wexxexianés;;;;;;;;;x
 k_dublin;Dublin;Dublin;Dublin;;Dublin;;;;;;;;;x
-k_dublin_adj;Dubliner;Dublinois;Dubliner;;Dublinés;;;;;;;;;x
+k_dublin_adj;Dubliner;Dublinois;Dublinisch;;Dublinés;;;;;;;;;x
 k_austria;Austria;Autriche;Österreich;;Austria;;;;;;;;;x
-k_austria_adj;Austrian;autrichien;Österreichischer;;Austriaco;;;;;;;;;x
-k_visigoth;the Visigoths;les Wisigoths;der Westgoten;;los Visigodos;;;;;;;;;x
-k_visigoth_adj;Visigothic;Wisigothique;Westgotischen;;Visigoda;;;;;;;;;x
+k_austria_adj;Austrian;autrichien;Österreichisch;;Austriaco;;;;;;;;;x
+k_visigoth;the Visigoths;les Wisigoths;Westgoten;;los Visigodos;;;;;;;;;x
+k_visigoth_adj;Visigothic;Wisigothique;Westgotisch;;Visigoda;;;;;;;;;x
 k_algarve;Algarve;Algarve;Algarve;;Algarve;;;;;;;;;x
-k_algarve_adj;Algarvian;algarvois;Algarvischer;;Al garveña;;;;;;;;;x
+k_algarve_adj;Algarvian;algarvois;Algarvisch;;Al garveña;;;;;;;;;x
 k_oman;Oman;Oman;Oman;;Omán;;;;;;;;;x
-k_oman_adj;Omani;omanais;Omanischer;;Omaní;;;;;;;;;x
+k_oman_adj;Omani;omanais;Omanisch;;Omaní;;;;;;;;;x
 k_iraq;Iraq;Irak;Irak;;Irak;;;;;;;;;x
-k_iraq_adj;Iraqi;Irakien;Irakischer;;Irakí;;;;;;;;;x
+k_iraq_adj;Iraqi;Irakien;Irakisch;;Irakí;;;;;;;;;x
 k_jordan;Jordan;Jordanie;Jordanien;;Jordania;;;;;;;;;x
 k_jordan_adj;Jordanian;Jordanien;Jordanisch;;Jordania;;;;;;;;;x
 k_lahej;Lahej;Lahej;Lahej;;Lahej;;;;;;;;;x
@@ -44,53 +52,53 @@ k_lahej_adj;Laheji;Lahejien;Lahejisch;;Lahejia;;;;;;;;;x
 k_badawi;Badawi Arabia;Arabie Badawite;Badawi-Arabien;;Arabia Badawia;;;;;;;;;x
 k_badawi_adj;Badawi;Badawien;Badawisch;;Badawia;;;;;;;;;x
 k_belgium;Belgium;Belgique;Belgien;;Bélgica;;;;;;;;;x
-k_belgium_adj;Belgian;Belge;Belgischer;;Belga;;;;;;;;;x
+k_belgium_adj;Belgian;Belge;Belgisch;;Belga;;;;;;;;;x
 k_israel;Israel;Israël;Israel;;Israel;;;;;;;;;x
-k_israel_adj;Israelite;Israélite;Israelitischer;;Israelí;;;;;;;;;x
+k_israel_adj;Israelite;Israélite;Israelitisch;;Israelí;;;;;;;;;x
 k_asturias;Asturias;Asturias;Asturien;;Asturias;;;;;;;;;x
-k_asturias_adj;Asturian;Asturies;Asturischer;;Asturiano;;;;;;;;;x
+k_asturias_adj;Asturian;Asturies;Asturisch;;Asturiano;;;;;;;;;x
 k_moravia;Great Moravia;Grande Moravie;Großmähren;;Gran Moravia;;;;;;;;;x
-k_moravia_adj;Moravian;Morave;Großmährischer;;Moravia;;;;;;;;;x
+k_moravia_adj;Moravian;Morave;Mährisch;;Moravia;;;;;;;;;x
 k_sardinia;Sardinia;Sardaigne;Sardinien;;Cerdeña;;;;;;;;;x
-k_sardinia_adj;Sardinian;sarde;Sardinischer;;Sarda;;;;;;;;;x
-k_anglia;East Anglia;East Anglia;Ost Angeln;;East Anglia;;;;;;;;;x
-k_anglia_adj;Anglian;Anglien;Angelnische;;Anglia;;;;;;;;;x
+k_sardinia_adj;Sardinian;sarde;Sardinisch;;Sarda;;;;;;;;;x
+k_anglia;East Anglia;East Anglia;Ost Anglia;;East Anglia;;;;;;;;;x
+k_anglia_adj;Anglian;Anglien;Englisch;;Anglia;;;;;;;;;x
 k_kent;Kent;Kent;Kent;;Carterbury;;;;;;;;;x
-k_kent_adj;Kentish;Kentish;Kentish;;Kenthishano;;;;;;;;;x
+k_kent_adj;Kentish;Kentish;Kentisch;;Kenthishano;;;;;;;;;x
 k_sussex;Sussex;Sussex;Sussex;;Sussex;;;;;;;;;x
-k_sussex_adj;Sussexian;sussexian;Sussexer;;Suxxexianés;;;;;;;;;x
+k_sussex_adj;Sussexian;sussexian;Sussexisch;;Suxxexianés;;;;;;;;;x
 k_essex;Essex;Essex;Essex;;Essex;;;;;;;;;x
-k_essex_adj;Essexian;essexois;Essexer;;Exxexianés;;;;;;;;;x
+k_essex_adj;Essexian;essexois;Essexisch;;Exxexianés;;;;;;;;;x
 k_luxembourg;Luxembourg;Luxembourg;Luxemburg;;Luxemburgo;;;;;;;;;x
-k_luxembourg_adj;Luxembourgian;luxembourgeois;Luxemburgischer;;Luxemburguesa;;;;;;;;;x
+k_luxembourg_adj;Luxembourgian;luxembourgeois;Luxemburgisch;;Luxemburguesa;;;;;;;;;x
 k_marino;San Marino;Saint-Marin;San Marino;;San Marino;;;;;;;;;x
-k_marino_adj;Sammarani;Sammaranien;Sammaranischer;;Sammarania;;;;;;;;;x
+k_marino_adj;Sammarani;Sammaranien;Marinoisch;;Sammarania;;;;;;;;;x
 k_lucca;Lucca;Lucques;Lucca;;Lucca;;;;;;;;;x
-k_lucca_adj;Luccian;lucquois;Luccianischer;;Luchesi;;;;;;;;;x
+k_lucca_adj;Luccian;lucquois;Luccanisch;;Luchesi;;;;;;;;;x
 k_tuscany;Tuscany;Toscane;Toskana;;Toscana;;;;;;;;;x
-k_tuscany_adj;Tuscan;toscan;Toskanischer;;Toscana;;;;;;;;;x
+k_tuscany_adj;Tuscan;toscan;Toskanisch;;Toscana;;;;;;;;;x
 k_strath;Strathclyde;Strathclyde;Strathclyde;;Strathclyde;;;;;;;;;x
-k_strath_adj;Strathclydian;Strathclydien;Strathclydianischer;;Strathclydiana;;;;;;;;;x
+k_strath_adj;Strathclydian;Strathclydien;Strathclydianisch;;Strathclydiana;;;;;;;;;x
 k_epirus;Epirus;Épire;Epirus;;Épiro;;;;;;;;;x
-k_epirus_adj;Epirotian;épirote;Epirotischer;;Epirota;;;;;;;;;x
+k_epirus_adj;Epirotian;épirote;Epiriotisch;;Epirota;;;;;;;;;x
 k_illyria;Illyria;Illyrie;Illyrien;;Illyria;;;;;;;;;x
-k_illyria_adj;Illyrian;Illyrien;Illyrischer;;Ilirio;;;;;;;;;x
+k_illyria_adj;Illyrian;Illyrien;Illyrisch;;Ilirio;;;;;;;;;x
 k_bahrain;Bahrain;Bahraïn;Bahrain;;Bahrain;;;;;;;;;x
-k_bahrain_adj;Bahrainian;Bahraïnien;Bahrainer;;Bahiraní;;;;;;;;;x
-k_franks;the Franks;les Francs;der Franken;;las Salchichas;;;;;;;;;x
-k_franks_adj;Frankish;Franque;Fränkischer;;Franco;;;;;;;;;x
+k_bahrain_adj;Bahrainian;Bahraïnien;Bahrainisch;;Bahiraní;;;;;;;;;x
+k_franks;the Franks;les Francs;Franken;;las Salchichas;;;;;;;;;x
+k_franks_adj;Frankish;Franque;Fränkisch;;Franco;;;;;;;;;x
 c_sharawrah;Sharawrah;Sharawrah;Scharara;;Sharawrah;;;;;;;;;x
-c_sharawrah_adj;Sharawrahi;Sharawrahien;Sharawrahischer;;Sharawrahia;;;;;;;;;x
+c_sharawrah_adj;Sharawrahi;Sharawrahien;Shararahisch;;Sharawrahia;;;;;;;;;x
 b_sharawrah;Ash Sharawrah;Ash Sharawrah;Ash Scharara;;Ash Sharawrah;;;;;;;;;x
-b_sharawrah_adj;Sharawrahi;Sharawrahien;Sharawrahischer;;Sharawrahia;;;;;;;;;x
+b_sharawrah_adj;Sharawrahi;Sharawrahien;Shararahisch;;Sharawrahia;;;;;;;;;x
 ARCHDUKE;Archduke;Archiduc;Erzherzog;;Archiduque;;;;;;;;;x
 ARCHDUKE_female;Archduchess;Archiduchesse;Erzherzogin;;Archiduquesa;;;;;;;;;x
 ARCHDUKE_title_ruler_consort;Archduke;Archiduc;Erzherzog;;Archiduque;;;;;;;;;x
 ARCHDUKE__title_ruler_consort_female;Archduchess;Archiduchesse;Erzherzogin;;Archiduquesa;;;;;;;;;x
-ARCHDUKE_OF;Archduchy of;Archiduché de;Erzherzogtum;;Archduchy de;;;;;;;;;x
+ARCHDUKE_OF;Archduchy of;Archiduché de;Erzherzogtum von;;Archduchy de;;;;;;;;;x
 GRANDDUKE;Grand Duke;Grand-Duc;Großherzog;;Gran Duque;;;;;;;;;x
 GRANDDUKE_title_ruler_consort;Grand Duke;Grand-Duc;Großherzog;;Gran Duque;;;;;;;;;x
 GRANDDUKE_female;Grand Duchess;Grande-Duchesse;Großherzogin;;Gran Duquesa;;;;;;;;;x
 GRANDDUKE_title_ruler_consort_female;Grand Duchess;Grande-Duchesse;Großherzogin;;Gran Duquesa;;;;;;;;;x
-GRANDDUKE_OF;Grand Duchy of;Grand-Duché de;Großherzogtum;;Gran Ducado de;;;;;;;;;x
-GRANDDUKE_FOA_TUSCANY;Your Serene Highness;Votre Altesse Sérénissime;Ihre Durchlaucht;;Su Alteza Serenísima;;;;;;;;;x
+GRANDDUKE_OF;Grand Duchy of;Grand-Duché de;Großherzogtum von;;Gran Ducado de;;;;;;;;;x
+GRANDDUKE_FOA_TUSCANY;Your Serene Highness;Votre Altesse Sérénissime;Eure Durchlaucht;;Su Alteza Serenísima;;;;;;;;;x

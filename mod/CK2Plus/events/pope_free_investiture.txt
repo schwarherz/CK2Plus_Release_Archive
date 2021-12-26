@@ -102,7 +102,6 @@ character_event = {
        				is_titular = no
        				has_law = investiture_law_1 
 	    		}
-			revoke_law = investiture_law_1
 			add_law_w_cooldown = investiture_law_0
 		}
 		piety = 50

@@ -1,2 +1,2 @@
-name = "[3] CK2+ BLC (REQUIRES MONGOL DLC)"
+name = "[2] CK2+ BLC (Requires Mongol DLC)"
 path = "mod/CK2Plus BLC"

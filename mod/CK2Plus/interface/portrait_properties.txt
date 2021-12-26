@@ -388,34 +388,6 @@
 
 	5 = { # Long Curly
 		factor = 1
-		modifier = {
-			factor = 0
-			is_female = no
-			NOT = { tier = king }
-			NOT = { tier = emperor }
-			OR = {
-				NOT = { tier = duke }
-				primary_title = {
-					OR = {
-						mercenary = yes
-						title = d_livonian_order
-						title = d_teutonic_order
-						title = d_order_of_santiago
-						title = d_knights_templar
-						title = d_knights_hospitaler
-						title = d_ghazi_sunni
-						title = d_ghazi_shiite
-						title = d_hashshashin
-						title = d_ulfheonar
-						title = d_devotees_of_the_true_prophet
-						title = d_great_host
-						title = d_guardians_of_the_sacred_flame
-						title = d_disciples_of_the_old_gods
-					}
-				}
-			}
-			has_job_title = job_marshal
-		}
 	}
 
 	6 = {  # Tonsure
@@ -452,34 +424,6 @@
 	
 	8 = { # Short Curly
 		factor = 1
-		modifier = {
-			factor = 0
-			is_female = no
-			NOT = { tier = king }
-			NOT = { tier = emperor }
-			OR = {
-				NOT = { tier = duke }
-				primary_title = {
-					OR = {
-						mercenary = yes
-						title = d_livonian_order
-						title = d_teutonic_order
-						title = d_order_of_santiago
-						title = d_knights_templar
-						title = d_knights_hospitaler
-						title = d_ghazi_sunni
-						title = d_ghazi_shiite
-						title = d_hashshashin
-						title = d_ulfheonar
-						title = d_devotees_of_the_true_prophet
-						title = d_great_host
-						title = d_guardians_of_the_sacred_flame
-						title = d_disciples_of_the_old_gods
-					}
-				}
-			}
-			has_job_title = job_marshal
-		}
 	}
 	
 	9 = {  # Short Uncouth
@@ -492,34 +436,6 @@
 	
 	10 = {  # Long Uncouth
 		factor = 1
-		modifier = {
-			factor = 0
-			is_female = no
-			NOT = { tier = king }
-			NOT = { tier = emperor }
-			OR = {
-				NOT = { tier = duke }
-				primary_title = {
-					OR = {
-						mercenary = yes
-						title = d_livonian_order
-						title = d_teutonic_order
-						title = d_order_of_santiago
-						title = d_knights_templar
-						title = d_knights_hospitaler
-						title = d_ghazi_sunni
-						title = d_ghazi_shiite
-						title = d_hashshashin
-						title = d_ulfheonar
-						title = d_devotees_of_the_true_prophet
-						title = d_great_host
-						title = d_guardians_of_the_sacred_flame
-						title = d_disciples_of_the_old_gods
-					}
-				}
-			}
-			has_job_title = job_marshal
-		}
 		modifier = {
 			factor = 5
 			religion_group = pagan_group
@@ -711,16 +627,8 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			OR = {
-				tier = duke
-				tier = king
-				tier = emperor
-			}
-		}
-		modifier = {
-			factor = 0
 			NOT = { in_command = yes }
-			NOT = { has_job_title  = job_marshal }
+			NOT = { has_job_title = job_marshal }
 			NOT = {
 				primary_title = {
 					OR = {
@@ -742,51 +650,6 @@
 				}
 			}
 		}
-		modifier = {
-			factor = 0
-			NOT = { in_command = yes }
-			OR = {
-				is_female = yes
-				tier = king
-				tier = emperor
-				AND = {
-					tier = duke
-					any_demesne_title = {
-						tier = baron
-					}
-					NOT = {
-						primary_title = {
-							OR = {
-								mercenary = yes
-								title = d_livonian_order
-								title = d_teutonic_order
-								title = d_order_of_santiago
-								title = d_knights_templar
-								title = d_knights_hospitaler
-								title = d_ghazi_sunni
-								title = d_ghazi_shiite
-								title = d_hashshashin
-								title = d_ulfheonar
-								title = d_devotees_of_the_true_prophet
-								title = d_great_host
-								title = d_guardians_of_the_sacred_flame
-								title = d_disciples_of_the_old_gods
-							}
-						}
-					}
-				}
-				AND = {
-					religion_group = christian
-					OR = {
-						AND = {
-							is_ruler = yes
-							is_theocracy = yes
-						}
-						has_job_title = job_spiritual
-					}
-				}
-			}
-		}
 	}
 
 	# Catholic Bishop
@@ -795,6 +658,32 @@
 		modifier = {
 			factor = 0
 			NOT = { religion_group = christian }
+		}
+		
+		modifier = { 
+			factor = 0 
+			OR = {
+				in_command = yes
+				has_job_title = job_marshal
+				primary_title = {
+					OR = {
+						mercenary = yes
+						title = d_livonian_order
+						title = d_teutonic_order
+						title = d_order_of_santiago
+						title = d_knights_templar
+						title = d_knights_hospitaler
+						title = d_ghazi_sunni
+						title = d_ghazi_shiite
+						title = d_hashshashin
+						title = d_ulfheonar
+						title = d_devotees_of_the_true_prophet
+						title = d_great_host
+						title = d_guardians_of_the_sacred_flame
+						title = d_disciples_of_the_old_gods
+					}
+				}
+			}		
 		}
 
 		modifier = {
@@ -821,6 +710,31 @@
 	# Orthodox Bishop
 	12 = {
 		factor = 100
+		modifier = { 
+			factor = 0 
+			OR = {
+				in_command = yes
+				has_job_title = job_marshal
+				primary_title = {
+					OR = {
+						mercenary = yes
+						title = d_livonian_order
+						title = d_teutonic_order
+						title = d_order_of_santiago
+						title = d_knights_templar
+						title = d_knights_hospitaler
+						title = d_ghazi_sunni
+						title = d_ghazi_shiite
+						title = d_hashshashin
+						title = d_ulfheonar
+						title = d_devotees_of_the_true_prophet
+						title = d_great_host
+						title = d_guardians_of_the_sacred_flame
+						title = d_disciples_of_the_old_gods
+					}
+				}
+			}		
+		}		
 		modifier = {
 			factor = 0
 			NOT = { religion = orthodox }
@@ -839,6 +753,31 @@
 	# Pope
 	13 = {
 		factor = 100
+		modifier = { 
+			factor = 0 
+			OR = {
+				in_command = yes
+				has_job_title = job_marshal
+				primary_title = {
+					OR = {
+						mercenary = yes
+						title = d_livonian_order
+						title = d_teutonic_order
+						title = d_order_of_santiago
+						title = d_knights_templar
+						title = d_knights_hospitaler
+						title = d_ghazi_sunni
+						title = d_ghazi_shiite
+						title = d_hashshashin
+						title = d_ulfheonar
+						title = d_devotees_of_the_true_prophet
+						title = d_great_host
+						title = d_guardians_of_the_sacred_flame
+						title = d_disciples_of_the_old_gods
+					}
+				}
+			}		
+		}		
 		modifier = {
 			factor = 0
 			NOT = { has_landed_title = k_papal_state }
@@ -856,7 +795,7 @@
 
         15= {
 	# Imperial war clothes
-		factor = 100
+		factor = 1000
 		modifier = {
 			factor = 0
 			NOT = { tier = emperor }
@@ -868,13 +807,17 @@
 		}
 		modifier = {
 			factor = 0
+			has_job_title = job_marshal
+		}		
+		modifier = {
+			factor = 0
 			NOT = { in_command = yes }
 		}
 	}
 
         16= {
 	# royal war clothes
-		factor = 100
+		factor = 1000
 		modifier = {
 			factor = 0
 			NOT = { tier = king }
@@ -886,13 +829,17 @@
 		}
 		modifier = {
 			factor = 0
+			has_job_title = job_marshal
+		}		
+		modifier = {
+			factor = 0
 			NOT = { in_command = yes }
 		}
 	}
 
         17= {
 	# ducal war clothes
-		factor = 100
+		factor = 1000
 		modifier = {
 			factor = 0
 			NOT = { tier = duke }
@@ -902,6 +849,10 @@
 			factor = 0
 			is_feudal = no
 		}
+		modifier = {
+			factor = 0
+			has_job_title = job_marshal
+		}		
 		modifier = {
 			factor = 0
 			NOT = { in_command = yes }
@@ -1320,8 +1271,28 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			has_job_title  = job_marshal
-                        has_job_title = job_spiritual
+			OR = {
+				in_command = yes
+				has_job_title = job_marshal
+				primary_title = {
+					OR = {
+						mercenary = yes
+						title = d_livonian_order
+						title = d_teutonic_order
+						title = d_order_of_santiago
+						title = d_knights_templar
+						title = d_knights_hospitaler
+						title = d_ghazi_sunni
+						title = d_ghazi_shiite
+						title = d_hashshashin
+						title = d_ulfheonar
+						title = d_devotees_of_the_true_prophet
+						title = d_great_host
+						title = d_guardians_of_the_sacred_flame
+						title = d_disciples_of_the_old_gods
+					}
+				}
+			}
 		}
 		modifier = {
 			factor = 0
@@ -1349,16 +1320,8 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			OR = {
-				tier = duke
-				tier = king
-				tier = emperor
-			}
-		}
-		modifier = {
-			factor = 0
 			NOT = { in_command = yes }
-			NOT = { has_job_title  = job_marshal }
+			NOT = { has_job_title = job_marshal }
 			NOT = {
 				primary_title = {
 					OR = {
@@ -1382,49 +1345,12 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { in_command = yes }
 			OR = {
-				is_female = yes
-				tier = king
-				tier = emperor
-				AND = {
-					tier = duke
-					any_demesne_title = {
-						tier = baron
-					}
-					NOT = {
-						primary_title = {
-							OR = {
-								mercenary = yes
-								title = d_livonian_order
-								title = d_teutonic_order
-								title = d_order_of_santiago
-								title = d_knights_templar
-								title = d_knights_hospitaler
-								title = d_ghazi_sunni
-								title = d_ghazi_shiite
-								title = d_hashshashin
-								title = d_ulfheonar
-								title = d_devotees_of_the_true_prophet
-								title = d_great_host
-								title = d_guardians_of_the_sacred_flame
-								title = d_disciples_of_the_old_gods
-							}
-						}
-					}
-				}
-				AND = {
-					religion_group = christian
-					OR = {
-						AND = {
-							is_ruler = yes
-							is_theocracy = yes
-						}
-						has_job_title = job_spiritual
-					}
-				}
+				is_theocracy = yes
+				has_job_title = job_spiritual
+				has_landed_title = k_papal_state
 			}
-		}
+		}		
 	}
 
 	# Blank
@@ -1495,7 +1421,7 @@
 
         15= {
 	# Imperial war helm
-		factor = 100
+		factor = 1000
 		modifier = {
 			factor = 0
 			NOT = { tier = emperor }
@@ -1507,13 +1433,17 @@
 		}
 		modifier = {
 			factor = 0
+			has_job_title = job_marshal
+		}		
+		modifier = {
+			factor = 0
 			NOT = { in_command = yes }
-			}
+		}
 	}
 
         16= {
 	# royal war helm
-		factor = 100
+		factor = 1000
 		modifier = {
 			factor = 0
 			NOT = { tier = king }
@@ -1525,13 +1455,17 @@
 		}
 		modifier = {
 			factor = 0
+			has_job_title = job_marshal
+		}		
+		modifier = {
+			factor = 0
 			NOT = { in_command = yes }
 		}
 	}
 
         17= {
 	# ducal war helm
-		factor = 100
+		factor = 1000
 		modifier = {
 			factor = 0
 			NOT = { tier = duke }
@@ -1541,6 +1475,10 @@
 			factor = 0
 			is_feudal = no
 		}
+		modifier = {
+			factor = 0
+			has_job_title = job_marshal
+		}		
 		modifier = {
 			factor = 0
 			NOT = { in_command = yes }

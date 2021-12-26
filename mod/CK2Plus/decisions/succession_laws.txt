@@ -19,20 +19,135 @@ succession_laws = {
 			holder_scope = { NOT = { religion_group = muslim } }
 			is_landless_type_title = no
 			NOT = { tier = baron }
-		}
-		allow = {
 			OR = {
 				NOT = { has_law = succ_feudal_elective }
-				has_crown_law_title = no
+				lower_tier_than = KING
 				crownlaw_title = {
 					OR = {
+						has_law = centralization_2						
 						has_law = centralization_3
 						has_law = centralization_4
 					}
 				}
 			}
+			OR = {
+				holder_scope = { ai = no }
+				NOT = {
+					has_law = succ_gavelkind
+					has_law = succ_primogeniture
+					has_law = succ_seniority
+					has_law = succ_feudal_elective
+					has_law = succ_turkish_succession
+				}
+				NOT = { has_global_flag = startup }				
+			}			
+			OR = {
+				NOT = {
+					has_law = succ_gavelkind
+					has_law = succ_primogeniture
+					has_law = succ_seniority
+					has_law = succ_feudal_elective
+					has_law = succ_turkish_succession
+				}
+				has_global_flag = startup
+			}
+		}
+		allow = {
+			OR = {
+				NOT = { has_global_flag = startup }
+				AND = {
+					tier = BARON
+					holder_scope = { prestige = 125 }
+				}			
+				AND = {
+					tier = COUNT
+					holder_scope = { prestige = 250 }
+				}
+				AND = {
+					tier = DUKE
+					holder_scope = { prestige = 500 }
+				}
+				AND = {
+					tier = KING
+					holder_scope = { prestige = 750 }
+				}
+				AND = {
+					tier = EMPEROR
+					holder_scope = { prestige = 1000 }
+				}				
+			}		
 		}		
 		effect = {
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = BARON
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -125 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = COUNT
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -250 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = DUKE
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -500 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = KING
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -750 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = EMPEROR
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -1000 }
+			}
 			succession = gavelkind
 		}
 		revoke_allowed = {
@@ -61,24 +176,12 @@ succession_laws = {
 			}
 			is_landless_type_title = no
 			NOT = { tier = baron }
-		}
-		allow = {
-			OR = {
-				has_crown_law_title = no
-				crownlaw_title = {
-					OR = {
-						has_law = centralization_1
-						has_law = centralization_2
-						has_law = centralization_3
-						has_law = centralization_4
-					}
-				}
-			}
 			OR = {
 				NOT = { has_law = succ_feudal_elective }
-				has_crown_law_title = no
+				lower_tier_than = KING
 				crownlaw_title = {
 					OR = {
+						has_law = centralization_2						
 						has_law = centralization_3
 						has_law = centralization_4
 					}
@@ -91,16 +194,121 @@ succession_laws = {
 					NOT = { current_heir = { father = { character = PREVPREV } } }
 					NOT = { current_heir = { mother = { character = PREVPREV } } }
 					NOT = { current_heir = { any_sibling = { character = PREVPREV } } }
-					age = 45
+					age = 30
 					OR = {
 						trait = humble
 						trait = trusting
 					}					
 				}				
+			}
+			OR = {
+				NOT = {
+					has_law = succ_gavelkind
+					has_law = succ_primogeniture
+					has_law = succ_seniority
+					has_law = succ_feudal_elective
+					has_law = succ_turkish_succession
+				}
+				has_global_flag = startup
+			}			
+		}
+		allow = {
+			OR = {
+				NOT = { has_global_flag = startup }
+				AND = {
+					tier = BARON
+					holder_scope = { prestige = 125 }
+				}			
+				AND = {
+					tier = COUNT
+					holder_scope = { prestige = 250 }
+				}
+				AND = {
+					tier = DUKE
+					holder_scope = { prestige = 500 }
+				}
+				AND = {
+					tier = KING
+					holder_scope = { prestige = 750 }
+				}
+				AND = {
+					tier = EMPEROR
+					holder_scope = { prestige = 1000 }
+				}				
 			}			
 		}
 		
 		effect = {
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = BARON
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -125 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = COUNT
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -250 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = DUKE
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -500 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = KING
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -750 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = EMPEROR
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -1000 }
+			}
 			succession = seniority
 		}
 		revoke_allowed = {
@@ -126,23 +334,12 @@ succession_laws = {
 				}
 				holder_scope = { is_feudal = yes }
 			}
-		}
-		allow = {
-			OR = {
-				has_crown_law_title = no
-				crownlaw_title = {
-					OR = {
-						has_law = centralization_2
-						has_law = centralization_3
-						has_law = centralization_4
-					}
-				}
-			}
 			OR = {
 				NOT = { has_law = succ_feudal_elective }
-				has_crown_law_title = no
+				lower_tier_than = KING
 				crownlaw_title = {
 					OR = {
+						has_law = centralization_2						
 						has_law = centralization_3
 						has_law = centralization_4
 					}
@@ -153,18 +350,125 @@ succession_laws = {
 				holder_scope = {
 					any_child = {
 						is_female = no
-						age = 16
+						age = 6
 					}				
-					age = 45
+					age = 30
 					OR = {
+						trait = greedy
+						trait = arbitrary
 						trait = proud
 						trait = ambitious
 					}					
 				}				
 			}
+			OR = {
+				NOT = {
+					has_law = succ_gavelkind
+					has_law = succ_primogeniture
+					has_law = succ_seniority
+					has_law = succ_feudal_elective
+					has_law = succ_turkish_succession
+				}
+				has_global_flag = startup
+			}			
+		}
+		allow = {
+			OR = {
+				NOT = { has_global_flag = startup }
+				AND = {
+					tier = BARON
+					holder_scope = { prestige = 125 }
+				}			
+				AND = {
+					tier = COUNT
+					holder_scope = { prestige = 250 }
+				}
+				AND = {
+					tier = DUKE
+					holder_scope = { prestige = 500 }
+				}
+				AND = {
+					tier = KING
+					holder_scope = { prestige = 750 }
+				}
+				AND = {
+					tier = EMPEROR
+					holder_scope = { prestige = 1000 }
+				}				
+			}
 		}		
 		
 		effect = {
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = BARON
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -125 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = COUNT
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -250 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = DUKE
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -500 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = KING
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -750 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = EMPEROR
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -1000 }
+			}
 			succession = primogeniture
 		}
 		revoke_allowed = {
@@ -187,8 +491,6 @@ succession_laws = {
 			is_landless_type_title = no
 			NOT = { tier = baron }
 			holder_scope = { is_feudal = yes }
-		}
-		allow = {
 			OR = {
 				holder_scope = { ai = no }
 				holder_scope = {
@@ -196,15 +498,120 @@ succession_laws = {
 					NOT = { current_heir = { father = { character = PREVPREV } } }
 					NOT = { current_heir = { mother = { character = PREVPREV } } }
 					NOT = { current_heir = { any_sibling = { character = PREVPREV } } }
-					age = 45
+					age = 30
 					OR = {
 						trait = charitable
 						trait = just
 					}					
 				}				
+			}
+			OR = {
+				NOT = {
+					has_law = succ_gavelkind
+					has_law = succ_primogeniture
+					has_law = succ_seniority
+					has_law = succ_feudal_elective
+					has_law = succ_turkish_succession
+				}
+				has_global_flag = startup
+			}			
+		}
+		allow = {
+			OR = {
+				NOT = { has_global_flag = startup }
+				AND = {
+					tier = BARON
+					holder_scope = { prestige = 125 }
+				}			
+				AND = {
+					tier = COUNT
+					holder_scope = { prestige = 250 }
+				}
+				AND = {
+					tier = DUKE
+					holder_scope = { prestige = 500 }
+				}
+				AND = {
+					tier = KING
+					holder_scope = { prestige = 750 }
+				}
+				AND = {
+					tier = EMPEROR
+					holder_scope = { prestige = 1000 }
+				}
 			}		
 		}
 		effect = {
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = BARON
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -125 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = COUNT
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -250 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = DUKE
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -500 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = KING
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -750 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = EMPEROR
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -1000 }
+			}			
 			succession = feudal_elective
 		}
 		revoke_allowed = {
@@ -228,21 +635,136 @@ succession_laws = {
 			}
 			holder_scope = { religion_group = muslim }			
 			is_landless_type_title = no
-			NOT = { tier = baron }			
-		}
-		allow = {
+			NOT = { tier = baron }
 			OR = {
 				NOT = { has_law = succ_feudal_elective }
-				has_crown_law_title = no
+				lower_tier_than = KING
 				crownlaw_title = {
 					OR = {
+						has_law = centralization_2						
 						has_law = centralization_3
 						has_law = centralization_4
 					}
 				}
+			}
+			OR = {
+				holder_scope = { ai = no }
+				NOT = {
+					has_law = succ_gavelkind
+					has_law = succ_primogeniture
+					has_law = succ_seniority
+					has_law = succ_feudal_elective
+					has_law = succ_turkish_succession
+				}
+				NOT = { has_global_flag = startup }				
+			}			
+			OR = {
+				NOT = {
+					has_law = succ_gavelkind
+					has_law = succ_primogeniture
+					has_law = succ_seniority
+					has_law = succ_feudal_elective
+					has_law = succ_turkish_succession
+				}
+				has_global_flag = startup
+			}			
+		}
+		allow = {
+			OR = {
+				NOT = { has_global_flag = startup }
+				AND = {
+					tier = BARON
+					holder_scope = { prestige = 125 }
+				}			
+				AND = {
+					tier = COUNT
+					holder_scope = { prestige = 250 }
+				}
+				AND = {
+					tier = DUKE
+					holder_scope = { prestige = 500 }
+				}
+				AND = {
+					tier = KING
+					holder_scope = { prestige = 750 }
+				}
+				AND = {
+					tier = EMPEROR
+					holder_scope = { prestige = 1000 }
+				}				
 			}	
 		}
 		effect = {
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = BARON
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -125 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = COUNT
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -250 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = DUKE
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -500 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = KING
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -750 }
+			}
+			if = {
+				limit = {
+					has_global_flag = startup 
+					tier = EMPEROR
+					OR = {
+						has_law = succ_gavelkind
+						has_law = succ_primogeniture
+						has_law = succ_seniority
+						has_law = succ_feudal_elective
+						has_law = succ_turkish_succession
+					}
+				}
+				holder_scope = { prestige = -1000 }
+			}
 			succession = turkish_succession
 		}
 		revoke_allowed = {
@@ -325,16 +847,25 @@ gender_laws = {
 			
 			is_landless_type_title = no
 			NOT = { holder_scope = { religion_group = muslim }  }
-		}
-		allow = {
-			OR = {
+			OR = {			
 				holder_scope = { ai = no }
+				holder_scope = { is_female = yes }
 				holder_scope = {
 					age = 45
+					OR = {
+						any_child = { is_female = yes }
+						any_sibling = { is_female = yes }
+					}
 					NOT = { any_child = { is_female = no } }
 					NOT = { any_sibling = { is_female = no } }
 				}
-			}
+				NOT = {
+					has_law = agnatic_succession
+					has_law = cognatic_succession
+					has_law = true_cognatic_succession
+				}
+				NOT = { has_global_flag = startup }				
+			}			
 		}
 		effect = {
 			gender_succ = cognatic
@@ -354,18 +885,27 @@ gender_laws = {
 		male_dynasty_opinion = 10
 	
 		potential = {
-			always = yes
-		}
-		allow = {
-			has_law = cognatic_succession
-			OR = {
+			OR = {			
 				holder_scope = { ai = no }
 				holder_scope = {
 					age = 45
+					OR = {
+						any_child = { is_female = no }
+						any_sibling = { is_female = no }
+					}
 					NOT = { any_child = { is_female = yes } }
 					NOT = { any_sibling = { is_female = yes } }
 				}
-			}
+				NOT = {
+					has_law = agnatic_succession
+					has_law = cognatic_succession
+					has_law = true_cognatic_succession
+				}
+				NOT = { has_global_flag = startup }
+			}			
+		}
+		allow = {
+			has_law = cognatic_succession
 		}
 		effect = {
 			gender_succ = agnatic
@@ -395,6 +935,29 @@ gender_laws = {
 			
 			is_landless_type_title = no
 			NOT = { holder_scope = { religion_group = muslim }  }
+			OR = {			
+				holder_scope = { ai = no }
+				holder_scope = {
+					is_female = yes
+					OR = {
+						trait = proud
+						trait = ambitious
+					}					
+					age = 45
+					OR = {
+						any_child = { is_female = yes }
+						any_sibling = { is_female = yes }
+					}					
+					NOT = { any_child = { is_female = no } }
+					NOT = { any_sibling = { is_female = no } }
+				}
+				NOT = {
+					has_law = agnatic_succession
+					has_law = cognatic_succession
+					has_law = true_cognatic_succession
+				}
+				NOT = { has_global_flag = startup }				
+			}
 		}
 		allow = {
 			has_law = cognatic_succession
@@ -406,7 +969,7 @@ gender_laws = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 		ai_will_revoke = {
 			factor = 0

@@ -794,6 +794,14 @@ character_event = {
 	mean_time_to_happen = {
 		months = 1
 		modifier = {
+			factor = 0.33
+			location = {
+				owner = {
+					same_realm = ROOT
+				}
+			}
+		}		
+		modifier = {
 			factor = 0.5
 			trait = kind
 		}

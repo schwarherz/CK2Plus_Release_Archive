@@ -1,6 +1,5 @@
 1000.1.1={
 	law="centralization_2"
-	law="succ_primogeniture"
 	law="revoke_law_0"
 }
 1037.1.1={
