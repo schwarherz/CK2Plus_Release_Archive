@@ -12,7 +12,7 @@
 }
 905.1.1={
 	holder=70122
-	law = cognatic_succession
+	law = true_cognatic_succession
 	law = succ_gavelkind
 }
 925.12.11={

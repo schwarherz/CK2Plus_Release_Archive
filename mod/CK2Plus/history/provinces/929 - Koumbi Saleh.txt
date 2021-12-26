@@ -1,0 +1,18 @@
+# 1 - Vestisland
+
+# County Title
+title = c_koumbi_saleh
+
+# Settlements
+max_settlements = 2
+b_koumbi_saleh = castle
+
+# Misc
+culture = sosso
+religion = pagan
+
+
+# History
+1076.1.1 = {
+	religion = sunni
+}

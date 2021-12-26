@@ -1,0 +1,19 @@
+# 1 - Vestisland
+
+# County Title
+title = c_sama
+
+# Settlements
+max_settlements = 4
+b_bamako = castle
+b_koro_koulikoro = city
+
+# Misc
+culture = mande
+religion = pagan
+
+
+# History
+1084.1.1 = {
+    religion = sunni
+}

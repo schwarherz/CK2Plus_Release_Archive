@@ -1402,6 +1402,19 @@ character_event = {
 	trigger = {
 		has_lover = yes
 		OR = {
+			AND = {
+				trait = homosexual
+				OR = {
+					AND = {
+						is_female = yes
+						lover = { is_female = no }
+					}
+					AND = {
+						is_female = no
+						lover = { is_female = yes }
+					}					
+				}
+			}
 			lover = {
 				NOT = {
 					opinion = { who = ROOT value = 25 }
@@ -1440,6 +1453,20 @@ character_event = {
 		modifier = {
 			factor = 0.05
 			has_character_flag = lost_loving_feeling
+		}
+		modifier = {
+			factor = 0.05
+			trait = homosexual
+			OR = {
+				AND = {
+					is_female = yes
+					lover = { is_female = no }
+				}
+				AND = {
+					is_female = no
+					lover = { is_female = yes }
+				}					
+			}
 		}
 		modifier = {
 			factor = 0.05

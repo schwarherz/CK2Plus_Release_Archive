@@ -10,7 +10,7 @@ b_akordat = castle
 
 b_cheren = city
 b_teseney = temple
-b_dahano = castle
+#b_dahano = castle
 #b_barentu = castle
 #b_shambuko = castle
 #b_dghe = castle

@@ -1,0 +1,177 @@
+144671  = {
+	name="Milzas"
+	dynasty=100370
+	religion="baltic_pagan"
+	culture="prussian"
+	father = 28015
+	1100.1.1={
+	birth="1100.1.1"
+	}
+	1170.1.1={
+	death="1170.1.1"
+	}
+}
+
+144672 = {
+	name="Glande"
+	dynasty=100427
+	religion="baltic_pagan"
+	culture="prussian"
+	father = 28019
+	1100.1.1={
+	birth="1100.1.1"
+	}
+	1170.1.1={
+	death="1170.1.1"
+	}
+}
+
+228015 = {
+	name="Milzas"
+	dynasty=100370
+	martial=7
+	diplomacy=8
+	intrigue=4
+	stewardship=5
+	religion="baltic_pagan"
+	culture="prussian"
+	add_trait="diligent"
+	add_trait="brave"
+	add_trait="amateurish_plotter"
+	1150.1.1={
+	birth="1150.1.1"
+	}
+	1200.1.1={
+	death="1200.1.1"
+	}
+}
+
+228016 = {
+	name="Budo"
+	dynasty=100371
+	martial=5
+	diplomacy=8
+	intrigue=8
+	stewardship=6
+	religion="baltic_pagan"
+	culture="prussian"
+	add_trait="honest"
+	add_trait="brave"
+	add_trait="skilled_tactician"
+	father=144671
+	1150.1.1={
+	birth="1150.1.1"
+	}
+	1225.1.1={
+	death="1200.1.1"
+	}
+}
+
+228018 = {
+	name="Gauronas"
+	dynasty=100422
+	martial=6
+	diplomacy=6
+	intrigue=5
+	stewardship=6
+	religion="baltic_pagan"
+	culture="prussian"
+	add_trait="lustful"
+	add_trait="envious"
+	add_trait="proud"
+	add_trait="gluttonous"
+	add_trait="flamboyant_schemer"
+	1150.1.1={
+	birth="1150.1.1"
+	}
+	1200.1.1={
+	death="1200.1.1"
+	}
+}
+
+228019 = {
+	name="Glande"
+	dynasty=100427
+	dna="cqtuhpvkboe"
+	properties="cj0cek0000"
+	martial=6
+	diplomacy=8
+	intrigue=4
+	stewardship=8
+	religion="baltic_pagan"
+	culture="prussian"
+	add_trait="ill"
+	add_trait="flamboyant_schemer"
+	father = 144672
+	1150.1.1={
+	birth="1150.1.1"
+	}
+	1225.1.1={
+	death="1225.1.1"
+	}
+}
+
+28015 = {
+	name="Milzas"
+	dynasty=100370
+	dna="iamplgypury"
+	properties="cjxdad0000"
+	martial=7
+	diplomacy=8
+	intrigue=4
+	stewardship=5
+	religion="baltic_pagan"
+	culture="prussian"
+	add_trait="diligent"
+	add_trait="brave"
+	add_trait="amateurish_plotter"
+	1050.1.1={
+	birth="1050.1.1"
+	}
+	1120.1.1={
+	death="1120.1.1"
+	}
+}
+
+28016 = {
+	name="Budo"
+	dynasty=100371
+	dna="ehojbbdpfwp"
+	properties="ti0jbj0000"
+	martial=5
+	diplomacy=8
+	intrigue=8
+	stewardship=6
+	religion="baltic_pagan"
+	culture="prussian"
+	add_trait="honest"
+	add_trait="brave"
+	add_trait="skilled_tactician"
+	1039.1.1={
+	birth="1039.1.1"
+	}
+	1089.1.1={
+	death="1089.1.1"
+	}
+}
+
+28019 = {
+	name="Glande"
+	dynasty=100427
+	dna="cqtuhpvkbce"
+	properties="cj0cdk0000"
+	martial=6
+	diplomacy=8
+	intrigue=4
+	stewardship=8
+	religion="baltic_pagan"
+	culture="prussian"
+	add_trait="ill"
+	add_trait="flamboyant_schemer"
+	1050.1.1={
+	birth="1050.1.1"
+	}
+	1120.1.1={
+	death="1120.1.1"
+	}
+}

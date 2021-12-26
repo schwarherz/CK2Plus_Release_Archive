@@ -21,14 +21,21 @@
 # 13 - Military 			- 31
 # 14 - Plots 				- 32
 # 15 - Messages 			- 33
-# 16 - Diplomatic actions 	- 34
+# 16 - Diplomatic actions 		- 34
 # 17 - Church 				- 35
 # 18 - Characters 			- 36
 # 37 - Prison 				- 38
+# 39 - Love				- 40
+# 41 - Transparent
+# 42 - Rich
+# 43 - Prosperous
+# 44 - Poor
+# 45 - Struggling
+# 46 - Revolt
 
 # Timers
 
-holy_truce_timer = { icon = 8 }
+holy_truce_timer = { icon = 16 }
 
 loan_timer = { icon = 24 }
 
@@ -51,7 +58,7 @@ brm_revolt = {
 	castle_levy_size = -0.5
 	temple_levy_size = -0.5
 	local_revolt_risk = 0.1
-	icon = 31
+	icon = 46
 }
 
 brm_reduced_tax = {

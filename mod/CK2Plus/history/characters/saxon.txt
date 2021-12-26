@@ -446,15 +446,16 @@
 		add_spouse=123 #Ealdgyth of Mercia
 	}
 	1066.9.14 = {
+		wealth = 250
 		raise_levies = {
-			location = 62 # Leicester
+			location = 56
 			force_mult = 2
 		}
 	}
 	1066.10.14={
 		raise_levies = {
 			dismiss = yes
-			location = 62 # Leicester
+			location = 56
 			force_mult = 2
 		}
 		death = {
@@ -633,6 +634,8 @@
 130 = {
 	name="Leofwine"
 	dynasty=756
+	dna="qfyxgwaqbpc"
+	properties="fb0ddk"
 	martial=6
 	diplomacy=5
 	intrigue=7
@@ -674,6 +677,8 @@
 132 = {
 	name="Gyrth"
 	dynasty=756
+	dna="cgalcnadbch"
+	properties="0d0ded0000"
 	martial=6
 	diplomacy=6
 	intrigue=8
@@ -797,6 +802,8 @@
 191 = {
 	name="Osulf"
 	dynasty=744
+	dna="amiefwadbcf"
+	properties="0e0dak0000"
 	martial=7
 	diplomacy=7
 	intrigue=8
@@ -881,6 +888,8 @@
 198 = {
 	name="Waltheof"
 	dynasty=745
+	dna="debcgqgadcx"
+	properties="0j0dak0000"
 	martial=4
 	diplomacy=7
 	intrigue=4
@@ -948,6 +957,8 @@
 963 = {
 	name="Dolfin"
 	dynasty=370
+	dna="kdqzucfgfdt"
+	properties="0grcek0000"
 	martial=8
 	diplomacy=8
 	intrigue=5
@@ -1150,6 +1161,8 @@
 5644 = {
 	name="Eadwin"
 	dynasty=560
+	dna="cmhmbkdadcw"
+	properties="0d0ddd0000"
 	martial=7
 	diplomacy=5
 	intrigue=7
@@ -1192,6 +1205,8 @@
 5660 = {
 	name="Morcar"
 	dynasty=560
+	dna="djbfdkdagcv"
+	properties="0j0ddd0000"
 	martial=8
 	diplomacy=8
 	intrigue=5
@@ -1313,6 +1328,8 @@
 	name="Eadulf"
 	# AKA: Eadulf 'Rus'
 	dynasty=744
+	dna="odfjqmzvbmq"
+	properties="ch0dek0000"
 	martial=7
 	diplomacy=4
 	intrigue=5
@@ -1425,6 +1442,8 @@
 	name="Eadric Wilde"
 	# AKA: Eadric Wilde
 	dynasty=20022
+	dna="dkgadyagbcx"
+	properties="0j0ddk0000"
 	martial=4
 	diplomacy=6
 	intrigue=7

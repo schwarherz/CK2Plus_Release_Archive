@@ -123,7 +123,7 @@ character_event = {
 		NOT = { trait = incapable }
 		NOT = { trait = imbecile }	
 		NOT = { trait = content }
-		LIEGE = { war = no }
+		liege = { war = no }
 		num_of_claims = 1
 		OR = {
 			NOT = { has_character_flag = packing_bags }
@@ -138,7 +138,7 @@ character_event = {
 				NOT = {
 					reverse_opinion = {
 						who = ROOT
-						value = 0
+						value = 25
 					}	
 				}
 				OR = {
@@ -167,7 +167,7 @@ character_event = {
 		years = 20
 		modifier = {
 			factor = 1.5
-			LIEGE = {
+			liege = {
 				reverse_opinion = {
 					who = ROOT
 					value = 0
@@ -270,7 +270,7 @@ character_event = {
 			factor = 90	
 		}	
 		FROM = {
-			LIEGE = { 
+			liege = { 
 				opinion = {
 					modifier = opinion_angry
 					who = ROOT
@@ -328,7 +328,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA190007"
-		LIEGE = {
+		liege = {
 			character_event = { id = 190008 days = 3 }
 		}
 		hidden_tooltip = {
@@ -384,7 +384,7 @@ character_event = {
 			}	
 		}
 		religion = catholic
-		rightful_religious_head_scope = { has_landed_title = k_papal_state NOT = { opinion = { who = ROOT value = 50 } } }
+		rightful_religious_head_scope = { has_landed_title = e_papal_state NOT = { opinion = { who = ROOT value = 50 } } }
 		NOT = { trait = excommunicated }
 		NOT = { has_global_flag = excommunicated_rome }
 	}
@@ -1165,7 +1165,7 @@ character_event = {
 				NOT = { trait = incapable }
 				NOT = { has_job_title = job_spymaster }
 			}
-			death = { death_reason = death_murderer_unknown }
+			death = { death_reason = death_murder_unknown }
 		}
 		add_trait = lunatic
 		clr_character_flag = filthy_murderer
@@ -1698,7 +1698,7 @@ character_event = {
 	
 	trigger = {
 		OR = {
-			has_landed_title = k_papal_state
+			has_landed_title = e_papal_state
 			has_landed_title = d_teutonic_order
 			has_landed_title = d_livonian_order
 			has_landed_title = d_order_of_santiago
@@ -1752,9 +1752,7 @@ character_event = {
 		OR = {
 			has_landed_title = e_shiite
 			has_landed_title = d_ghazi_shiite
-			has_landed_title = d_hashshashin		
-			has_landed_title = d_ghazi_shiite2
-			has_landed_title = d_hashshashin2			
+			has_landed_title = d_hashshashin			
 		}
 		NOT = { religion = shiite }
 	}
@@ -1782,9 +1780,7 @@ character_event = {
 		OR = {
 			has_landed_title = e_sunni
 			has_landed_title = d_ghazi_sunni
-			has_landed_title = d_devotees_of_the_true_prophet		
-			has_landed_title = d_ghazi_sunni2
-			has_landed_title = d_devotees_of_the_true_prophet2			
+			has_landed_title = d_devotees_of_the_true_prophet			
 		}
 		NOT = { religion = sunni }
 	}
@@ -1817,14 +1813,24 @@ character_event = {
 			NOT = { culture = ROOT }
 			any_neighbor_province = { culture = ROOT }
 			NOT = {
-				culture = saxon
-				ROOT = { culture = norman }
-			}			
-			NOT = {
-				kingdom = {
-					title = k_sicily
+				AND = {
+					culture = saxon
+					ROOT = { culture = norman }
 				}
-				ROOT = { culture = norman }
+			}			
+			NOT = {	
+				AND = {
+					kingdom = {
+						title = k_sicily
+					}
+					ROOT = {
+						OR = {
+							culture = greek
+							culture = maghreb_arabic
+							culture = norman
+						}	
+					}
+				}
 			}			
 		}
 		NOT = { trait = incapable }
@@ -2085,7 +2091,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA190043"		
-		LIEGE = {
+		liege = {
 			#go for younger women first since presumably you're trying to fill up the court with kids
 			random_courtier = {
 				limit = {
@@ -2163,7 +2169,7 @@ character_event = {
 					age = 16
 				}
 				new_character = {
-					character_event = { id = 100001 }
+					character_event = { id = 300001 }
 					add_spouse = PREVPREV
 				}							
 			}
@@ -2436,7 +2442,7 @@ character_event = {
 				NOT = { health = 3 } #near death anyway...
 			}				
 		}	
-		death = { death_reason = death_murderer_unknown }
+		death = { death_reason = death_murder_unknown }
 	}	
 }
 
@@ -2566,7 +2572,7 @@ letter_event = {
 		}
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 190049 }
+				letter_event = { id = 190049 }
 				any_plot_backer = {
 					letter_event = { id = 190050 }
 				}
@@ -2647,9 +2653,9 @@ letter_event = {
 		name = "EVTOPTA8026"
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 8067 }
+				letter_event = { id = 190049 }
 				any_plot_backer = {
-					letter_event = { id = 8095 }
+					letter_event = { id = 190050 }
 				}
 			}
 		}
@@ -2743,7 +2749,6 @@ character_event = {
 			has_claim = d_rostov
 			has_claim = d_ryazan
 			has_claim = d_smolensk
-			has_claim = d_pereyaslavl
 			has_claim = d_novgorod-seversk
 			has_claim = d_pereyaslavl
 			has_claim = d_chernigov
@@ -2899,7 +2904,7 @@ character_event = {
 	picture = GFX_evt_pope
 	
 	trigger = {
-		has_landed_title = k_papal_state
+		has_landed_title = e_papal_state
 		has_landed_title = c_roma
 		has_landed_title = b_roma
 		has_global_flag = excommunicated_rome
@@ -2970,6 +2975,7 @@ character_event = {
 				is_ruler = no
 				is_female = no
 				is_primary_heir = no
+				religion = ROOT
 			}	
 		}
 		
@@ -2990,6 +2996,24 @@ character_event = {
 				character_event = { id = 190061 tooltip = CUSTOMTOOLTIP3 }
 			}
 			hidden_tooltip = {
+				if = {
+					limit = {
+						religion = catholic
+					}
+					add_trait = crusader
+				}
+				if = {
+					limit = {
+						religion = shiite
+					}
+					add_trait = mujahid
+				}
+				if = {
+					limit = {
+						religion = sunni
+					}
+					add_trait = mujahid
+				}			
 				ROOT = {
 					random_demesne_title = {
 						limit = {
@@ -3001,6 +3025,10 @@ character_event = {
 						}
 						kingdom = { 
 							destroy_landed_title = yes
+							revoke_law = revoke_law_0
+							revoke_law = revoke_law_1
+							revoke_law = investiture_law_0
+							revoke_law = investiture_law_1
 							add_law_w_cooldown = feudal_tax_0
 							add_law_w_cooldown = feudal_contract_0
 							add_law_w_cooldown = city_tax_0
@@ -3008,9 +3036,19 @@ character_event = {
 							add_law_w_cooldown = temple_tax_0
 							add_law_w_cooldown = temple_contract_0
 							add_law_w_cooldown = centralization_1
-							add_law_w_cooldown = revoke_law_0
-							add_law_w_cooldown = investiture_law_0
 							gain_title = PREVPREVPREV
+							if = {
+								limit = {
+									ROOT = { religion = catholic }
+								}
+								add_law_w_cooldown = investiture_law_0
+							}
+							if = {
+								limit = {
+									ROOT = { religion_group = muslim }
+								}
+								add_law_w_cooldown = revoke_law_1
+							}							
 						}
 					}
 					any_demesne_title = {
@@ -3054,7 +3092,7 @@ character_event = {
 				is_ruler = no
 				is_female = no
 				is_primary_heir = no
-			}	
+			}
 		}
 		
 		random_sibling = {
@@ -3068,12 +3106,31 @@ character_event = {
 				piety = 0
 				is_ruler = no
 				is_female = no
-				is_primary_heir = no				
+				is_primary_heir = no	
+				religion = ROOT
 			}		
 			tooltip = {
 				character_event = { id = 190061 tooltip = CUSTOMTOOLTIP3 }
 			}
 			hidden_tooltip = {
+				if = {
+					limit = {
+						religion = catholic
+					}
+					add_trait = crusader
+				}
+				if = {
+					limit = {
+						religion = shiite
+					}
+					add_trait = mujahid
+				}
+				if = {
+					limit = {
+						religion = sunni
+					}
+					add_trait = mujahid
+				}			
 				ROOT = {
 					random_demesne_title = {
 						limit = {
@@ -3085,6 +3142,10 @@ character_event = {
 						}
 						kingdom = { 
 							destroy_landed_title = yes
+							revoke_law = revoke_law_0
+							revoke_law = revoke_law_1
+							revoke_law = investiture_law_0
+							revoke_law = investiture_law_1
 							add_law_w_cooldown = feudal_tax_0
 							add_law_w_cooldown = feudal_contract_0
 							add_law_w_cooldown = city_tax_0
@@ -3092,9 +3153,19 @@ character_event = {
 							add_law_w_cooldown = temple_tax_0
 							add_law_w_cooldown = temple_contract_0
 							add_law_w_cooldown = centralization_1
-							add_law_w_cooldown = revoke_law_0
-							add_law_w_cooldown = investiture_law_0
 							gain_title = PREVPREVPREV
+							if = {
+								limit = {
+									ROOT = { religion = catholic }
+								}
+								add_law_w_cooldown = investiture_law_0
+							}
+							if = {
+								limit = {
+									ROOT = { religion_group = muslim }
+								}
+								add_law_w_cooldown = revoke_law_1
+							}							
 						}
 					}
 					any_demesne_title = {
@@ -3118,89 +3189,7 @@ character_event = {
 		any_demesne_title = {
 			location = { clr_province_flag = previous_holding }
 		}		
-	}	
-	# A soldierly relative
-	option = {
-		name = "EVTOPTB190061"
-		ai_chance = {
-			factor = 1
-		}		
-		prestige = 200
-		custom_tooltip = CUSTOMTOOLTIP4
-		hidden_tooltip = {
-			create_random_soldier = {
-				random_traits = yes
-				dynasty = ROOT
-				female = no
-			}
-			new_character = {
-				character_event = { id = 100001 }
-				if = {
-					limit = {
-						religion = catholic
-					}
-					add_trait = crusader
-				}
-				if = {
-					limit = {
-						religion = shiite
-					}
-					add_trait = mujahid
-				}
-				if = {
-					limit = {
-						religion = sunni
-					}
-					add_trait = mujahid
-				}				
-				change_martial = 10
-				change_stewardship = 5
-				change_diplomacy = 5
-				ROOT = {
-					random_demesne_title = {
-						limit = {
-							OR = {
-								tier = COUNT
-								tier = BARON
-							}
-							location = { NOT = { has_province_flag = previous_holding } }
-						}
-						kingdom = { 
-							destroy_landed_title = yes
-							add_law_w_cooldown = feudal_tax_0
-							add_law_w_cooldown = feudal_contract_0
-							add_law_w_cooldown = city_tax_0
-							add_law_w_cooldown = city_contract_0
-							add_law_w_cooldown = temple_tax_0
-							add_law_w_cooldown = temple_contract_0
-							add_law_w_cooldown = centralization_1
-							add_law_w_cooldown = revoke_law_0
-							add_law_w_cooldown = investiture_law_0							
-							gain_title = PREVPREVPREV
-						}
-					}				
-					any_demesne_title = {
-						limit = {
-							OR = {
-								tier = COUNT
-								tier = BARON
-							}
-							location = { NOT = { has_province_flag = previous_holding } }
-						}
-						gain_title = PREVPREV
-					}
-				}
-				treasury = 200
-				prestige = 400
-				piety = 200
-				add_character_modifier = { name = "holy_truce_timer" duration = 3650 }		
-				character_event = { id = 190042 }
-			}				
-		}
-		any_demesne_title = {
-			location = { clr_province_flag = previous_holding }
-		}		
-	}	
+	}		
 	# A pious relative
 	option = {
 		name = "EVTOPTC190061"
@@ -3216,7 +3205,7 @@ character_event = {
 				female = no
 			}
 			new_character = {
-				character_event = { id = 100001 }
+				character_event = { id = 300001 }
 				if = {
 					limit = {
 						religion = catholic
@@ -3249,6 +3238,10 @@ character_event = {
 						}
 						kingdom = { 
 							destroy_landed_title = yes
+							revoke_law = revoke_law_0
+							revoke_law = revoke_law_1
+							revoke_law = investiture_law_0
+							revoke_law = investiture_law_1
 							add_law_w_cooldown = feudal_tax_0
 							add_law_w_cooldown = feudal_contract_0
 							add_law_w_cooldown = city_tax_0
@@ -3256,9 +3249,19 @@ character_event = {
 							add_law_w_cooldown = temple_tax_0
 							add_law_w_cooldown = temple_contract_0
 							add_law_w_cooldown = centralization_1
-							add_law_w_cooldown = revoke_law_0
-							add_law_w_cooldown = investiture_law_0							
 							gain_title = PREVPREVPREV
+							if = {
+								limit = {
+									ROOT = { religion = catholic }
+								}
+								add_law_w_cooldown = investiture_law_0
+							}
+							if = {
+								limit = {
+									ROOT = { religion_group = muslim }
+								}
+								add_law_w_cooldown = revoke_law_1
+							}							
 						}
 					}				
 					any_demesne_title = {
@@ -3294,141 +3297,141 @@ character_event = {
 					OR = {
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_france }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_france }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_hre }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_hre }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_italy }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_italy }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_danubia }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_danubia }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_byzantium }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_byzantium }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_poland_lithuania }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_poland_lithuania }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_russia }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_russia }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_persia }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_persia }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_spain }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_spain }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_arabia }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_arabia }
 							}							
 						}						
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_scandinavia }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_scandinavia }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_ethiopia }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_ethiopia }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_britannia }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_britannia }
 							}							
 						}
 						AND = {
 							any_demesne_title = {
-								has_province_flag = previous_holding
+								location = { has_province_flag = previous_holding }
 								empire = { title = e_maghreb }
 							}
 							any_demesne_title = {
-								NOT = { has_province_flag = previous_holding }
+								NOT = { location = { has_province_flag = previous_holding } }
 								empire = { title = e_maghreb }
 							}							
 						}						
@@ -3508,11 +3511,7 @@ character_event = {
 	desc = "EVTDESC190062"
 	
 	mean_time_to_happen = {
-		years = 200
-		modifier = {
-			factor = 0.5
-			ai = yes
-		}		
+		years = 200		
 		modifier = {
 			factor = 0.9
 			realm_diplomacy = 20
@@ -3530,16 +3529,12 @@ character_event = {
 			realm_diplomacy = 50
 		}
 		modifier = {
-			factor = 0.9
-			primary_title = { tier = DUKE }
+			factor = 0.75
+			primary_title = { higher_tier_than = COUNT }
 		}
 		modifier = {
-			factor = 0.8
-			primary_title = { tier = KING }
-		}
-		modifier = {
-			factor = 0.7
-			primary_title = { tier = EMPEROR }
+			factor = 0.75
+			primary_title = { higher_tier_than = DUKE }
 		}		
 	}
 	
@@ -3643,11 +3638,7 @@ character_event = {
 	desc = "EVTDESC190062"
 	
 	mean_time_to_happen = {
-		years = 200
-		modifier = {
-			factor = 0.5
-			ai = yes
-		}		
+		years = 200		
 		modifier = {
 			factor = 0.9
 			realm_diplomacy = 20
@@ -3665,16 +3656,12 @@ character_event = {
 			realm_diplomacy = 50
 		}
 		modifier = {
-			factor = 0.9
-			primary_title = { tier = DUKE }
+			factor = 0.75
+			primary_title = { higher_tier_than = COUNT }
 		}
 		modifier = {
-			factor = 0.8
-			primary_title = { tier = KING }
-		}
-		modifier = {
-			factor = 0.7
-			primary_title = { tier = EMPEROR }
+			factor = 0.75
+			primary_title = { higher_tier_than = DUKE }
 		}		
 	}
 	
@@ -3717,5 +3704,66 @@ character_event = {
 			}
 		}
 		clr_character_flag = duchy_claim
+	}
+}
+
+# End depose type wars inconclusively
+character_event = {
+	id = 190064
+	is_triggered_only = yes
+	
+	immediate = {
+		any_war = {
+			limit = {
+				OR = {
+					using_cb = overthrow_ruler
+					using_cb = overthrow_ruler_no_calls
+					using_cb = depose_liege
+				}				
+				defender = {
+					character = ROOT
+				}	
+			}
+			end_war = invalid
+		}	
+	}
+	
+	desc = "EVTDESC190064"
+
+	option = {
+		name = "EVTOPTA190064"
+		abdicate = yes
+	}
+}
+
+character_event = {
+	id = 190065
+	desc = "EVTDESC190034"	
+	picture = GFX_evt_death
+	is_triggered_only = yes
+	
+	trigger = {
+		ai = yes
+		prisoner = yes
+		OR = {
+			trait = ill
+			trait = pneumonic
+			trait = wounded
+		}
+		host = {
+			ai = no
+			religion = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA190034"	
+		host = {
+			character_event = { id = 190034 }
+		}
 	}
 }

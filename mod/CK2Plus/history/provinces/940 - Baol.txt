@@ -1,0 +1,16 @@
+# 1 - Vestisland
+
+# County Title
+title = c_baol
+
+# Settlements
+max_settlements = 3
+b_jurbel = castle
+b_mbour = temple
+
+# Misc
+culture = jolof
+religion = pagan
+
+
+# History

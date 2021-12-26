@@ -1010,7 +1010,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_trait = cruel }
+				NOT = { trait = cruel }
 			}
 			add_trait = cruel	
 		}

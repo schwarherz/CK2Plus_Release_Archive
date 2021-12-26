@@ -1,0 +1,19 @@
+# 1 - Vestisland
+
+# County Title
+title = c_aoudagast
+
+# Settlements
+max_settlements = 2
+b_rkiz = castle
+b_aoudaghost = city
+
+# Misc
+culture = sosso
+religion = pagan
+
+
+# History
+1076.1.1 = {
+	religion = sunni
+}

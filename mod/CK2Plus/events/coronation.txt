@@ -227,9 +227,9 @@ letter_event = {
 					#	is_theocracy = yes
 					#}
 					or = {
-						TIER = count
-						TIER = duke
-						TIER = king
+						tier = count
+						tier = duke
+						tier = king
 					}
 					not = { trait = excommunicated }
 					religion_group = christian

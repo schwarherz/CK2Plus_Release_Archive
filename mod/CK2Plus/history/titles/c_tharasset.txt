@@ -1,6 +1,6 @@
 1051.1.1=
 {
-liege="d_marrakech"
+liege="k_mauretania"
 }
 1051.1.1=
 {
@@ -91,7 +91,7 @@ holder=32990
 }
 1269.1.1=
 {
-liege="d_marrakech"
+liege="k_mauretania"
 }
 1269.1.1=
 {

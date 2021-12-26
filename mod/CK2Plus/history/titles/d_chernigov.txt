@@ -1,7 +1,7 @@
 1024.1.2={
 holder = 618
 law = agnatic_succession
-law = succ_seniority
+law = succ_gavelkind
 }
 1036.1.2=
 {

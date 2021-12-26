@@ -2,7 +2,7 @@
 {
 liege="e_golden_horde"
 law = agnatic_succession
-law = succ_seniority
+law = succ_gavelkind
 }
 1246.9.30=
 {

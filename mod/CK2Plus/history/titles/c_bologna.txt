@@ -43,7 +43,7 @@ liege=0
 1272.1.1=
 {
 holder=73519
-liege=k_papal_state
+liege=e_papal_state
 }
 1307.1.1=
 {

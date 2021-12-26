@@ -1,0 +1,19 @@
+# 1 - Vestisland
+
+# County Title
+title = c_gao
+
+# Settlements
+max_settlements = 5
+b_gao = castle
+b_kawkaw = city
+b_gao-saney = temple
+b_kukiya = castle
+
+
+# Misc
+culture = mande
+religion = sunni
+
+
+# History

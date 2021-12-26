@@ -467,7 +467,7 @@ character_event = {
 				is_primary_heir = yes
 			}
 			character_event = {
-				id = 65013
+				id = 65012
 				tooltip = "EVTTOOLTIPB65012"
 			}
 		}
@@ -485,7 +485,7 @@ character_event = {
 				is_councillor = yes
 			}
 			character_event = {
-				id = 65014
+				id = 65012
 				tooltip = "EVTTOOLTIPC65012"
 			}
 		}
@@ -502,7 +502,7 @@ character_event = {
 				is_councillor = no
 			}
 			character_event = {
-				id = 65014
+				id = 65012
 				tooltip = "EVTTOOLTIPD65012"
 			}
 		}
@@ -1605,10 +1605,6 @@ character_event = {
 		add_trait = drunkard
 		opinion = {
 			modifier = forced_drunkard
-			who = from
-		}	
-		remove_opinion = {
-			modifier = lover
 			who = from
 		}
 	}
@@ -3203,7 +3199,7 @@ character_event = {
 			}
 		}
 		new_character = {
-			character_event = { id = 100001 }		
+			character_event = { id = 300001 }		
 			set_character_flag = hope_everlasting
 			opinion = {
 				modifier = opinion_my_saviour
@@ -3252,7 +3248,7 @@ character_event = {
 				}
 			}
 			new_character = {
-				character_event = { id = 100001 }
+				character_event = { id = 300001 }
 				opinion = {
 					who = ROOT
 					modifier = opinion_arrest_attempt
@@ -4066,3 +4062,581 @@ character_event = {
 		}
 	}
 }
+
+### IMBECILE EVENTS ###
+
+#Imbecile: Mocked by other children
+character_event = {
+	id = 65115
+	desc = "EVTDESC65115"
+	picture = GFX_evt_child_bully
+	
+	min_age = 6
+	max_age = 16
+	prisoner = no
+	capable_only = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = imbecile
+		war = no
+		in_command = no
+		any_courtier = {
+			age = 6
+			NOT = {
+				age = 16
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA65115" #Not stupid.
+		random_list = {
+			80 = {
+			}
+			20 = {
+				add_trait = proud
+				hidden_tooltip = {
+					character_event = {
+						id = 38261 #Notify Proud
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB65115" #Turn the other cheek.
+		random_list = {
+			40 = {
+			}
+			40 = {
+				add_trait = humble
+				hidden_tooltip = {
+					character_event = {
+						id = 38260 #Notify Humble
+					}
+				}
+			}
+			20 = {
+				add_trait = shy
+				hidden_tooltip = {
+					character_event = {
+						id = 38263 #Notify Shy
+					}
+				}
+			}
+		}
+	}
+}
+	
+#Imbecile: Hurt by sword
+character_event = {
+	id = 65120
+	desc = "EVTDESC65120"
+	picture = GFX_evt_bloody_man
+	
+	min_age = 16
+	max_age = 60
+	prisoner = no
+	capable_only = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = imbecile
+		war = no
+		in_command = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA65120" #Ouch!
+		add_trait = wounded
+		hidden_tooltip = {
+			character_event = {
+				id = 38280 #Notify Wounded
+			}
+		}
+	}
+}
+
+#Imbecile: Riding backwards
+character_event = {
+	id = 65125
+	desc = "EVTDESC65125"
+	picture = GFX_evt_courier
+	
+	min_age = 16
+	max_age = 60
+	prisoner = no
+	capable_only = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = imbecile
+		war = no
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA65125" #Oops.
+		random_list = {
+			75 = {
+			}
+			25 = {
+				add_trait = honest
+				hidden_tooltip = {
+					character_event = {
+						id = 38262 #Notify Honest
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB65125" #My way is better.
+		random_list = {
+			75 = {
+			}
+			25 = {
+				add_trait = proud
+				hidden_tooltip = {
+					character_event = {
+						id = 38261 #Notify Proud
+					}
+				}
+			}
+		}
+	}
+}
+
+#Imbecile: Forgot pants
+character_event = {
+	id = 65126
+	desc = "EVTDESC65126"
+	picture = GFX_evt_scandal
+	
+	min_age = 16
+	prisoner = no
+	capable_only = yes
+	only_rulers = yes
+	only_men = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = imbecile
+		war = no
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA65126"
+		random_courtier = {
+			opinion = {
+				modifier = opinion_shocked
+				who = ROOT
+				years = 2
+			}
+		}
+	}
+}
+
+### UGLY EVENTS ###
+
+#Ugly: Find insulting picture
+character_event = {
+	id = 65130
+	desc = "EVTDESC65130"
+	picture = GFX_evt_scandal
+	
+	min_age = 16
+	max_age = 80
+	prisoner = no
+	capable_only = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = ugly
+		war = no
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA65130" #Is that what I look like?
+		random_list = {
+			75 = {
+			}
+			25 = {
+				add_trait = depressed
+				hidden_tooltip = {
+					character_event = {
+						id = 38288 #Notify Depressed
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB65130" #It's not so bad
+		random_list = {
+			60 = {
+			}
+			20 = {
+				add_trait = proud
+				hidden_tooltip = {
+					character_event = {
+						id = 38261 #Notify Proud
+					}
+				}
+			}
+			20 = {
+				add_trait = deceitful
+				hidden_tooltip = {
+					character_event = {
+						id = 38255 #Notify Deceitful
+					}
+				}
+			}
+		}
+	}
+}
+
+#Ugly: Mothers warn daughters
+character_event = {
+	id = 65135
+	desc = "EVTDESC65135"
+	picture = GFX_evt_whispers
+	
+	min_age = 16
+	prisoner = no
+	capable_only = yes
+	only_men = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = ugly
+		war = no
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA65135" #Spend more time indoors.
+		random_list = {
+			70 = {
+			}
+			30 = {
+				add_trait = shy
+				hidden_tooltip = {
+					character_event = {
+						id = 38263 #Notify Shy
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB65135" #They could do worse.
+		random_list = {
+			70 = {
+			}
+			30 = {
+				add_trait = proud
+				hidden_tooltip = {
+					character_event = {
+						id = 38261 #Notify Proud
+					}
+				}
+			}
+		}
+	}
+}
+
+#Ugly: Accused of being a witch
+character_event = {
+	id = 65140
+	desc = "EVTDESC65140"
+	picture = GFX_evt_peasants
+	
+	min_age = 16
+	prisoner = no
+	capable_only = yes
+	only_women = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = ugly
+		war = no
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+		
+	option = {
+		name = "EVTOPTA65140" #They'll bother someone else.
+		random_list = {
+			70 = {
+			}
+			30 = {
+				add_trait = patient
+				hidden_tooltip = {
+					character_event = {
+						id = 38264 #Notify Patient
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB65140" #A pox on them.
+		random_list = {
+			70 = {
+			}
+			30 = {
+				add_trait = cruel
+				hidden_tooltip = {
+					character_event = {
+						id = 38259 #Notify Cruel
+					}
+				}
+			}
+		}
+	}
+}
+
+#Ugly: Ugly Duckling
+character_event = {
+	id = 65145
+	desc = "EVTDESC65145"
+	picture = GFX_evt_child_talking
+	
+	min_age = 12
+	max_age = 20
+	prison = no
+	capable_only = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = ugly
+		war = no
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA65145" #No longer ugly.
+		random_list = {
+			80 = {
+				remove_trait = ugly
+			}
+			20 = {
+				add_trait = fair
+				remove_trait = ugly
+				hidden_tooltip = {
+					character_event = {
+						id = 38301 #Notify Fair
+					}
+				}
+			}
+		}
+	}
+}
+
+### GLUTTONOUS EVENTS ###
+
+#Gluttony Removal Notification
+character_event = {
+	id = 65151
+	desc = "EVTDESC65151"
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+	}
+}
+
+
+#Gluttonous: Crushes horse.
+character_event = {
+	id = 65150
+	desc = "EVTDESC65150"
+	picture = GFX_evt_courier
+	
+	min_age = 16
+	prison = no
+	capable_only = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = gluttonous
+		war = no
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA65150" #Admission of fatness
+		random_list = {
+			50 = {
+			}
+			25 = {
+				add_trait = shy
+				hidden_tooltip = {
+					character_event = {
+						id = 38263 #Notify Shy
+					}
+				}
+			}
+			25 = {
+				remove_trait = gluttonous
+				hidden_tooltip = {
+					character_event = {
+						id = 65151 #Notify Remove Gluttonous
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB65150" #Get me another horse.
+		random_list = {
+			80 = {
+			}
+			20 = {
+				add_trait = wounded
+				hidden_tooltip = {
+					character_event = {
+						id = 38280 #Notify Wounded
+					}
+				}
+			}
+		}
+	}
+}
+
+#Gluttonous: Jammed in doorway.
+character_event = {
+	id = 65155
+	desc = "EVTDESC65155"
+	picture = GFX_evt_castle_construction
+	
+	min_age = 16
+	prison = no
+	capable_only = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = gluttonous
+		war = no
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA65155" #No more food.
+		random_list = {
+			55 = {
+			}
+			25 = {
+				add_trait = depressed
+				hidden_tooltip = {
+					character_event = {
+						id = 38288 #Notify Depressed
+					}
+				}
+			}
+			20 = {
+				remove_trait = gluttonous
+				#hidden_tooltip = {
+				#	character_event = {
+				#		id = 35151 #Notify Remove Gluttonous
+				#	}
+				#}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB65155" #Expand doorways.
+		ROOT = {
+			scaled_wealth = -0.05
+		}
+	}
+}
+
+### SLOW EVENTS ###
+
+#Slow: Coin Purse Inspector
+character_event = {
+	id = 65160
+	desc = "EVTDESC65160"
+	picture = GFX_evt_market
+	
+	min_age = 16
+	prison = no
+	capable_only = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = slow
+		trait = trusting
+		war = no
+		in_command = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTA65160" #Not the inspector?
+		ROOT = {
+			scaled_wealth = -0.10
+		}
+	}
+}
+

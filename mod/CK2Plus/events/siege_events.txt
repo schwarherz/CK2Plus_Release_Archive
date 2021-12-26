@@ -663,7 +663,7 @@ character_event = {
 		}
 		religion_group = christian
 		enemy = {
-			religion_group = pagan
+			religion_group = pagan_group
 		}
 	}
 

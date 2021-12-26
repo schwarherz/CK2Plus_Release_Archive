@@ -125,9 +125,7 @@ letter_event = {
 # Castle has been erected
 province_event = {
 	id = 8502
-	desc = "EVTDESC8502"
-	picture = GFX_evt_council
-	
+	desc = "EVTDESC8502"	
 	picture = "GFX_evt_castle_construction"
 		
 	is_triggered_only = yes
@@ -139,6 +137,11 @@ province_event = {
 		   type = castle
 		   holder = FROMFROM
 		}
+		hidden_tooltip = { 
+			b_krakdeschevaliers = {
+				add_building = ca_order_house
+			}
+		}		
 		hidden_tooltip = {
 			owner = {
 				set_character_flag = event_8502
@@ -317,6 +320,11 @@ province_event = {
 		   title = b_margat
 		   type = castle
 		   holder = FROMFROM
+		}
+		hidden_tooltip = { 
+			b_margat = {
+				add_building = ca_order_house
+			}
 		}
 		hidden_tooltip = {
 			owner = {
@@ -497,6 +505,11 @@ province_event = {
 		   type = castle
 		   holder = FROMFROM
 		}
+		hidden_tooltip = { 
+			b_belvoir = {
+				add_building = ca_order_house
+			}
+		}		
 		hidden_tooltip = {
 			owner = {
 				set_character_flag = event_8512
@@ -677,6 +690,11 @@ province_event = {
 		   type = castle
 		   holder = FROMFROM
 		}
+		hidden_tooltip = { 
+			b_bethgibelin = {
+				add_building = ca_order_house
+			}
+		}		
 		hidden_tooltip = {
 			owner = {
 				set_character_flag = event_8517

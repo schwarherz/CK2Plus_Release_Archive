@@ -26,21 +26,28 @@ character_event = {
 			title = d_livonian_order
 		}
 		independent = yes
-		NOT = { demesne_size = 1 }
+		NOT = { 
+			any_demesne_title = {
+				OR = {
+					tier = BARON
+					tier = COUNT
+				}
+			}
+		}
 
 		NOT = { has_global_flag = livonian_order_invited_to_kingdom }
 		NOT = { has_global_flag = land_wanted_by_livonian_order }
 		OR = {
 			NOT = { has_character_flag = land_given_to_livonian_order }
 			had_character_flag = { flag = land_given_to_livonian_order days = 365 }
-			had_character_flag = { flag = no_land_to_livonian_order_at_the_moment = 720 }
+			had_character_flag = { flag = no_land_to_livonian_order_at_the_moment days = 720 }
 		}
 
 		# There is a valid province
 		any_independent_ruler = {
 			religion = catholic
 			primary_title = {
-				tier = KING
+				higher_tier_than = DUKE
 			}
 			NOT = { has_character_flag = no_land_to_religious_orders }
 			any_demesne_province = {
@@ -84,7 +91,7 @@ character_event = {
 			limit = {
 				religion = catholic
 				primary_title = {
-					tier = KING
+					higher_tier_than = DUKE
 				}
 				any_demesne_province = {
 					kingdom = { title = k_lithuania }
@@ -132,7 +139,7 @@ character_event = {
 						}
 					}
 				}
-				set_province_flag = land_wanted_by_livonian_order
+				set_province_flag = province_wanted_by_livonian_order
 				owner = {
 					letter_event = { id = 18701 days = 7 }
 				}
@@ -154,15 +161,17 @@ letter_event = {
 		prestige = 50
 		piety = 50
 		random_demesne_province = {
-			limit = { has_province_flag = land_wanted_by_livonian_order }
+			limit = { has_province_flag = province_wanted_by_livonian_order }
 			county = {
 				grant_title = FROM
 				FROM = {
+					add_character_modifier = { name = "holy_truce_timer" duration = 3650 }
 					gain_settlements_under_title = {
 						title = PREV
 						enemy = ROOT
 					}
 				}
+				hidden_tooltip = { add_building = ca_order_house }
 			}
 		}
 		FROM = {
@@ -182,7 +191,7 @@ letter_event = {
 		hidden_tooltip = {
 			FROM = {
 				random_demesne_province = {
-					limit = { has_province_flag = land_wanted_by_livonian_order }
+					limit = { has_province_flag = province_wanted_by_livonian_order }
 					province_event = { id = 18702 days = 1 }
 				}
 			}
@@ -216,7 +225,14 @@ letter_event = {
 			FROM = { letter_event = { id = 18800 days = 1 } }
 		}
 		set_character_flag = no_land_to_religious_orders
-		clr_province_flag = land_wanted_by_livonian_order
+		hidden_tooltip = {
+			FROM = {
+				random_demesne_province = {
+					limit = { has_province_flag = province_wanted_by_livonian_order }
+					clr_province_flag = province_wanted_by_livonian_order
+				}
+			}
+		}		
 		clr_global_flag = land_wanted_by_livonian_order
 	}
 }
@@ -232,7 +248,7 @@ province_event = {
 	option = {
 		name = "EXCELLENT"
 		hidden_tooltip = {
-			clr_province_flag = land_wanted_by_livonian_order
+			clr_province_flag = province_wanted_by_livonian_order
 			clr_global_flag = land_wanted_by_livonian_order
 			owner = { narrative_event = { id = 18703 days = 7 } }
 		}
@@ -281,208 +297,6 @@ narrative_event = {
 		}
 	}
 }
-
-
-### HRE vassal wants to give land to the Teutonic Order ###
-
-# HRE vassal wants to donate land to the Teutonic Order
-province_event = {
-	id = 18720
-	desc = "EVTDESC18720"
-	picture = GFX_evt_council
-	
-	only_rulers = yes
-	
-	trigger = {
-		owner = {
-			NOT = { has_character_flag = no_land_to_livonian_order }
-			NOT = { has_character_flag = wants_to_give_land_to_livonian_order }
-			
-			war = no
-			
-			# The Emperor is Top liege
-			top_liege = {
-				primary_title = {
-					title = e_hre
-				}
-			}
-
-			# Teutonic Order is active
-			is_title_active = d_livonian_order
-			any_independent_ruler = {
-				primary_title = {
-					title = d_livonian_order
-				}
-				NOT = { demesne_size = 1 }
-			}
-		}
-		# There is a valid province
-		kingdom = {
-			OR = {
-				title = k_lithuania
-				title = k_finland
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 120
-		
-		modifier = {
-			factor = 0.75
-			religion_group = pagan_group
-		}
-		modifier = {
-			factor = 0.75
-			any_neighbor_province = {
-				owner = {
-					religion_group = pagan_group
-				}
-			}
-		}
-	}
-	
-	immediate = {
-		hidden_tooltip = {
-			owner = { set_character_flag = wants_to_give_land_to_livonian_order }
-			set_province_flag = province_to_the_livonian_order
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA18720"
-		tooltip = {
-			owner = {
-				any_independent_ruler = {
-					limit = {
-						primary_title = {
-							title = d_livonian_order
-						}
-					}
-					ROOT = {
-						county = {
-							grant_title = PREVPREV
-						}
-					}
-				}
-			}
-		}
-		hidden_tooltip = {
-			owner = {
-				liege = { letter_event = { id = 18721 days = 3 } }
-			}
-		}
-	}
-	option = {
-		name = "EVTOPTB8720"
-		owner = { set_character_flag = no_land_to_livonian_order }
-	}
-}
-
-# Liege decides
-letter_event = {
-	id = 18721
-	desc = "EVTDESC18721"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA18721"	# Ask top liege
-		trigger = { independent = no }
-		liege = { letter_event = { id = 18722 days = 3 } }
-	}
-	option = {
-		name = "EVTOPTB8721"	# Yes
-		ai_chance = { factor = 100 }
-		trigger = { independent = yes }
-		FROM = { owner = { letter_event = { id = 18723 days = 3 } } }
-	}
-	option = {
-		name = "EVTOPTC8721"	# No
-		ai_chance = { factor = 0 }
-		trigger = { independent = yes }
-		FROM = { owner = { letter_event = { id = 18724 days = 3 } } }
-	}
-}
-
-# Top liege decides
-letter_event = {
-	id = 18722
-	desc = "EVTDESC18722"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA18722"	# Yes
-		ai_chance = { factor = 100 }
-		FROM = { owner = { letter_event = { id = 18723 days = 3 } } }
-	}
-	option = {
-		name = "EVTOPTB8722"	# No
-		ai_chance = { factor = 0 }
-		FROM = { owner = { letter_event = { id = 18724 days = 3 } } }
-	}
-}
-
-# Gift was allowed
-letter_event = {
-	id = 18723
-	desc = "EVTDESC18723"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA18723"
-		any_independent_ruler = {
-			limit = {
-				primary_title = {
-					title = d_livonian_order
-				}
-			}
-			letter_event = { id = 18725 days = 3 }
-		}
-	}
-}
-
-# Gift was not allowed
-letter_event = {
-	id = 18724
-	desc = "EVTDESC18724"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EVTOPTA18724"
-	}
-}
-
-# The Teutonic Order is informed
-letter_event = {
-	id = 18725
-	desc = "EVTDESC18725"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "EXCELLENT"
-		FROM = {
-			random_demesne_province = {
-				limit = { has_province_flag = province_to_the_livonian_order }
-				clr_province_flag = province_to_the_livonian_order
-				county = {
-					grant_title = ROOT
-					ROOT = {
-						gain_settlements_under_title = {
-							title = PREV
-							enemy = FROM
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 
 ########################################
 # General Holy Order Events

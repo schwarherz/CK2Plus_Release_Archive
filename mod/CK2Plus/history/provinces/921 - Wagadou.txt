@@ -1,0 +1,16 @@
+# 1 - Vestisland
+
+# County Title
+title = c_wagadou
+
+# Settlements
+max_settlements = 4
+b_tenkodogo = castle
+b_koudougou = city
+
+# Misc
+culture = mande
+religion = pagan
+
+
+# History

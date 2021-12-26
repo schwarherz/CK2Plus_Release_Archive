@@ -1,0 +1,295 @@
+1000033000  = {
+	name="Sundiata"
+	dynasty=1000011000
+	religion="sunni"
+	culture="mande"
+	father = 10000332100
+	mother = 10000332101
+	1217.1.1={
+	birth="1217.1.1"
+	}
+	1255.1.1={
+	death="1255.1.1"
+	}
+}
+
+1000033001  = {
+	name="Wali"
+	dynasty=1000011000
+	religion="sunni"
+	culture="mande"
+	father = 1000033000
+	1255.1.1={
+	birth="1255.1.1"
+	}
+	1270.1.1={
+	death="1270.1.1"
+	}
+}
+
+1000033002  = {
+	name="Wati"
+	dynasty=1000011000
+	religion="sunni"
+	culture="mande"
+	father = 1000033000
+	1255.1.2={
+	birth="1255.1.2"
+	}
+	1274.1.1={
+	death="1274.1.1"
+	}
+}
+
+1000033003  = {
+	name="Khalifa"
+	dynasty=1000011000
+	religion="sunni"
+	culture="mande"
+	father = 1000033000
+	1255.1.3={
+	birth="1255.1.3"
+	}
+	1275.1.1={
+	death="1275.1.1"
+	}
+}
+
+1000033004 = {
+	name="Abubakari"
+	dynasty=1000011005
+	religion="sunni"
+	culture="mande"
+	1212.1.3={
+	birth="1212.1.3"
+	}
+	1285.1.1={
+	death="1285.1.1"
+	}
+}
+
+1000033005 = {
+	name="Sakura"
+	dynasty=1000011000
+	religion="sunni"
+	culture="mande"
+	1225.1.1={
+	birth="1225.1.1"
+	}
+	1300.1.1={
+	death="1300.1.1"
+	}
+}
+
+1000033006 = {
+	name="Gao"
+	dynasty=1000011000
+	religion="sunni"
+	culture="mande"
+	mother = 1000033102
+	1225.1.1={
+	birth="1225.1.1"
+	}
+	1300.1.1={
+	death="1305.1.1"
+	}
+}
+
+1000033100 = {
+	name="Nare"
+	dynasty=1000011000
+	religion="sunni"
+	culture="mande"
+	1185.1.1={
+	birth="1185.1.1"
+	}
+	1232.1.1={
+	death="1232.1.1"
+	}
+}
+
+1000033101 = {
+	name="Sogolon"
+	female = yes
+	dynasty=1000011000
+	religion="sunni"
+	culture="mande"
+	1185.1.1={
+	birth="1185.1.1"
+	}
+	1242.1.1={
+	death="1242.1.1"
+	}
+}
+
+1000033102 = {
+	name="Kolonkan"
+	female = yes
+	dynasty=1000011000
+	religion="sunni"
+	culture="mande"
+	father = 10000332100
+	mother = 10000332101
+	1223.1.1={ #Made up with no basis in anything
+	birth="1223.1.1"
+	}
+	1291.1.1={ #See above
+	death="1300.1.1"
+	}
+}
+
+1000033200 = { #Gao - historical, but shifted in time a fair bit
+	name="Kusoy"
+	dynasty=1000011002
+	religion="sunni"
+	culture="mande"
+	1009.1.1={
+	birth="1009.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033201 = { #Sikasso - entirely fictitious
+	name="Alboury"
+	dynasty=1000011000
+	religion="pagan"
+	culture="mande"
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033202 = { #Tabacounda - entirely fictitious
+	name="Modibo"
+	dynasty=1000011006
+	religion="pagan"
+	culture="mande"
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033203 = { #Koudougu - entirely fictitious
+	name="Toumani"
+	dynasty=1000011001
+	religion="pagan"
+	culture="mande"
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033204 = { #Tenkodogo - entirely fictitious
+	name="Qasa"
+	dynasty=1000011001
+	religion="pagan"
+	culture="mande"
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033205 = { #Wagadou - entirely fictitious
+	name="Majan"
+	dynasty=1000011007
+	religion="pagan"
+	culture="mande"
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033206 = { #Djenne - entirely fictitious
+	name="Zafir"
+	dynasty=1000011004
+	religion="pagan"
+	culture="mande"
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033207 = { #Sama - entirely fictitious
+	name="Uli"
+	dynasty=1000011004
+	religion="pagan"
+	culture="mande"
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033208 = { #Ghiryu - entirely fictitious
+	name="Toumani"
+	dynasty=1000011005
+	religion="pagan"
+	culture="mande"
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033209 = { #Yaresna - entirely fictitious
+	name="Wali"
+	dynasty=1000011005
+	religion="pagan"
+	culture="mande"
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033210 = { #Niani - entirely fictitious
+	name="Musa"
+	dynasty=1000011000
+	religion="pagan"
+	culture="mande"
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}
+
+1000033211 = { #Timbuktu - entirely fictitious
+	name="Kolo"
+	religion="pagan"
+	culture="mande"
+	dynasty=1000011003
+	1049.1.1={
+	birth="1049.1.1"
+	}
+	1067.1.1={
+	death="1067.1.1"
+	}
+}

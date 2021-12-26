@@ -170,8 +170,19 @@ title_grant_independence = {
 		war = no
 		FROM = { war = no }
 		OR = {
-			trait = not_dejure_liege
+			ai = no
 			primary_title = { is_titular = yes }
+			NOT = {
+				liege = {
+					any_demesne_title = {
+						ROOT = {
+							primary_title = {
+								de_jure_liege_or_above = PREVPREV
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -337,7 +348,7 @@ title_castellian = {
 }
 
 title_concubine = {
-	grant_limit = 3
+	grant_limit = 1
 	dignity = 0.05
 	opinion_effect = 10
 	realm_in_name = yes

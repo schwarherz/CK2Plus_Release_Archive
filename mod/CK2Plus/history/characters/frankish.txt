@@ -604,6 +604,8 @@
 	name="Pierre"
 	# AKA: Pietro
 	dynasty=240
+	dna="kchepiocfej"
+	properties="cjaddd0000"
 	martial=7
 	diplomacy=5
 	intrigue=4
@@ -1445,6 +1447,8 @@
 	name="Garsende"
 	female=yes
 	dynasty=660
+	dna="fdpzbqgxwlt"
+	properties="cb0ecd0000"
 	martial=8
 	diplomacy=5
 	intrigue=8
@@ -2419,6 +2423,8 @@
 20112 = {
 	name="Richard"
 	dynasty=22001
+	dna="galokzlwgyc"
+	properties="ei0j0j0000"
 	martial=8
 	diplomacy=5
 	intrigue=6
@@ -2489,6 +2495,8 @@
 	name="Eustache"
 	# AKA: Eustatius 'Gernobadatus'
 	dynasty=308
+	dna="xhopxycefai"
+	properties="0g0cgk0000"
 	martial=7
 	diplomacy=2
 	intrigue=4
@@ -7604,6 +7612,8 @@
 214 = {
 	name="Philippe" #Philippe Ier de France
 	dynasty=743 #Capet
+	dna="aegfboajcch"
+	properties="cd0eak0000"
 	religion="catholic"
 	culture="frankish"
 	father=208 #Henri Ier de France
@@ -11705,6 +11715,8 @@
 	name="Folques"
 	# AKA: Foulques 'le Rechin'
 	dynasty=723
+	dna="jdwpezrdguu"
+	properties="cd0c0d0000"
 	martial=8
 	diplomacy=5
 	intrigue=6
@@ -12244,7 +12256,9 @@
 
 40106 = {
 	name="Foulques" #Taillefer d'angouleme
-	dynasty=541 
+	dynasty=541
+	dna="bauqgznravl"
+	properties="0h0c0k0000" 
 	religion="catholic"
 	culture="frankish"
 	father=40096 #Geoffroy I d'angouleme
@@ -13655,6 +13669,8 @@
 40406 = {
 	name="Raoul"
 	dynasty=380
+	dna="swdbpplgicv"
+	properties="cl0chk0000"
 	martial=5
 	diplomacy=6
 	intrigue=7
@@ -14716,6 +14732,8 @@
 418 = {
 	name="Herbert"
 	dynasty=25061
+	dna="cgkfardbbcq"
+	properties="cg0ehk0000"
 	martial=5
 	diplomacy=4
 	intrigue=4
@@ -33205,6 +33223,8 @@
 40900 = {
 	name="Baudouin"
 	dynasty=102
+	dna="rzhnojwkpxo"
+	properties="0g0dpk0000"
 	martial=7
 	diplomacy=4
 	intrigue=7
@@ -35900,6 +35920,8 @@
 138068 = {
 	name="Guy" #Guy II de Limoges
 	dynasty=729
+	dna="yawukgunkog"
+	properties="ch0dkk0000"
 	religion="catholic"
 	culture="frankish"
 	father=40298 #Adhémar I de Limoges
@@ -40108,6 +40130,8 @@
 93502 = {
 	name="Robert" 
 	dynasty=102030
+	dna="raypkvekqrw"
+	properties="cd0c0k0000"
 	religion="catholic"
 	culture="frankish"
 	1033.1.1={

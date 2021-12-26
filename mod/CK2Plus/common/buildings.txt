@@ -17,7 +17,7 @@ castle = {
 					has_landed_title = d_knights_hospitaler
 					has_landed_title = d_ghazi_sunni
 					has_landed_title = d_ghazi_shiite
-					has_landed_title = d_hashashin
+					has_landed_title = d_hashshashin
 					has_landed_title = d_ulfheonar
 					has_landed_title = d_devotees_of_the_true_prophet
 					has_landed_title = d_great_host
@@ -32,12 +32,12 @@ castle = {
 		light_infantry = 75
 		heavy_infantry = 50
 		archers = 75
-		ai_creation_factor = 10000
+		ai_creation_factor = 101
 
 		start = {
 			year = 1066
 		}
-	}		
+	}
 
 	# Wall quality, gives fortlevel
 	ca_wall_q_1 = {
@@ -68,7 +68,11 @@ castle = {
 				AND = {
 					FROM = { top_liege = { primary_title = { OR = { title = d_apulia title = k_sicily } } } }
 					year = 1066
-				}				
+				}
+				AND = {
+					FROM = { OR = { culture = jolof culture = mande } independent = yes }
+					year = 1066
+				}			
 				AND = {
 					FROM = {
 						top_liege = {
@@ -197,7 +201,7 @@ castle = {
 		fort_level = 0.5
 		levy_size = 0.025
 		tax_income = 0.2
-		ai_creation_factor = 190
+		ai_creation_factor = 90
 		
 		start = {
 			OR = {
@@ -244,7 +248,7 @@ castle = {
 		fort_level = 0.5
 		levy_size = 0.025
 		tax_income = 0.2
-		ai_creation_factor = 189
+		ai_creation_factor = 89
 		
 		start = {
 			OR = {
@@ -270,7 +274,7 @@ castle = {
 		fort_level = 1.0
 		levy_size = 0.05
 		tax_income = 0.2
-		ai_creation_factor = 188
+		ai_creation_factor = 88
 
 		start = {
 			OR = {
@@ -297,7 +301,7 @@ castle = {
 		fort_level = 1.0
 		levy_size = 0.05
 		tax_income = 0.2
-		ai_creation_factor = 187
+		ai_creation_factor = 87
 
 		start = {
 			OR = {
@@ -323,8 +327,8 @@ castle = {
 		build_time = 1460 #4y
 		fort_level = 1.5
 		levy_size = 0.1
-		tax_income = 0.5
-		ai_creation_factor = 186
+		tax_income = 0.2
+		ai_creation_factor = 86
 
 		start = {
 			OR = {
@@ -348,8 +352,8 @@ castle = {
 	ca_keep_1 = {
 		build_cost = 100
 		build_time = 547 #1.5y
-		levy_size = 0.1
-		garrison_size = 0.1
+		levy_size = 0.05
+		garrison_size = 0.05
 		ai_creation_factor = 102
 		
 		start = {
@@ -395,8 +399,8 @@ castle = {
 		upgrades_from = ca_keep_1
 		build_cost = 200
 		build_time = 730 #2y
-		levy_size = 0.15
-		garrison_size = 0.15
+		levy_size = 0.1
+		garrison_size = 0.1
 		ai_creation_factor = 101
 
 		start = {
@@ -421,8 +425,8 @@ castle = {
 		upgrades_from = ca_keep_2
 		build_cost = 300
 		build_time = 1095 #3y
-		levy_size = 0.2
-		garrison_size = 0.2
+		levy_size = 0.15
+		garrison_size = 0.15
 		ai_creation_factor = 100
 		
 		start = {
@@ -447,8 +451,8 @@ castle = {
 		upgrades_from = ca_keep_3
 		build_cost = 400
 		build_time = 1460 #4y
-		levy_size = 0.25
-		garrison_size = 0.25
+		levy_size = 0.2
+		garrison_size = 0.2
 		ai_creation_factor = 99
 
 		start = {
@@ -473,8 +477,8 @@ castle = {
 		upgrades_from = ca_keep_4
 		build_cost = 500
 		build_time = 2190 #6y
-		levy_size = 0.3
-		garrison_size = 0.3
+		levy_size = 0.25
+		garrison_size = 0.25
 		ai_creation_factor = 98
 
 		start = {
@@ -499,8 +503,8 @@ castle = {
 		upgrades_from = ca_keep_5
 		build_cost = 600
 		build_time = 2160 #6y
-		levy_size = 0.35
-		garrison_size = 0.35
+		levy_size = 0.3
+		garrison_size = 0.3
 		ai_creation_factor = 97
 		
 		start = {
@@ -547,6 +551,10 @@ castle = {
 					FROM = { religion_group = pagan_group }
 					year = 1100
 				}
+				AND = {
+					FROM = { OR = { culture = jolof culture = mande } independent = yes }
+					year = 1066
+				}				
 				AND = {
 					FROM = { primary_title = { title = d_bulgar } }
 					year = 1066
@@ -714,6 +722,14 @@ castle = {
 				AND = {
 					FROM = { OR = { culture = pecheneg culture = cuman } }
 					year = 1100
+				}
+				AND = {
+					FROM = { OR = { culture = jolof culture = mande } independent = yes }
+					year = 1066
+				}
+				AND = {
+					FROM = { top_liege = { primary_title = { OR = { title = d_apulia title = k_sicily } } } }
+					year = 1066
 				}				
 				AND = {
 					FROM = { top_liege = { religion_group = pagan_group } religion_group = pagan_group NOT = { culture = pecheneg culture = cuman } }
@@ -882,7 +898,11 @@ castle = {
 				AND = {
 					FROM = { top_liege = { primary_title = { OR = { title = d_apulia title = k_sicily } } } }
 					year = 1066
-				}				
+				}
+				AND = {
+					FROM = { OR = { culture = jolof culture = mande } independent = yes }
+					year = 1066
+				}			
 				AND = {
 					FROM = {
 						top_liege = {
@@ -1132,7 +1152,6 @@ castle = {
 			}
 		}
 	}
-
 	#Saxon and English Longbow archery range
 	ca_culture_saxon_english_1 = {
 		potential = {
@@ -1155,11 +1174,8 @@ castle = {
 		ai_creation_factor = 101
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1120
-				has_building = ca_militia_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1120
 		}
 	}
 	ca_culture_saxon_english_2 = {
@@ -1186,11 +1202,8 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1160
-				has_building = ca_militia_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1160
 		}
 	}
 	ca_culture_saxon_english_3 = {
@@ -1217,11 +1230,8 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1200
-				has_building = ca_militia_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1200
 		}
 	}
 	ca_culture_saxon_english_4 = {
@@ -1248,11 +1258,8 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1260
-				has_building = ca_militia_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1260
 		}
 	}
 
@@ -1262,9 +1269,7 @@ castle = {
 			FROM = {
 				culture = scottish
 			}
-			OR = {
-				culture = scottish
-			}
+			culture = scottish
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -1274,11 +1279,8 @@ castle = {
 		ai_creation_factor = 101
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1085
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1085
 		}
 	}
 	ca_culture_scottish_2 = {
@@ -1286,9 +1288,7 @@ castle = {
 			FROM = {
 				culture = scottish
 			}
-			OR = {
-				culture = scottish
-			}
+			culture = scottish
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
@@ -1301,11 +1301,8 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1165
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1165
 		}
 	}
 	ca_culture_scottish_3 = {
@@ -1313,9 +1310,7 @@ castle = {
 			FROM = {
 				culture = scottish
 			}
-			OR = {
-				culture = scottish
-			}
+			culture = scottish
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 4
@@ -1328,11 +1323,8 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1210
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1210
 		}
 	}
 	ca_culture_scottish_4 = {
@@ -1340,9 +1332,7 @@ castle = {
 			FROM = {
 				culture = scottish
 			}
-			OR = {
-				culture = scottish
-			}
+			culture = scottish
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 5
@@ -1355,11 +1345,8 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1260
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1260
 		}
 	}
 	
@@ -1367,12 +1354,13 @@ castle = {
 	ca_culture_group_baltic_0 = {
 		potential = {
 			FROM = {
+				religion_group = pagan
 				OR = {
 					culture_group = baltic
 					culture = pommeranian
-					culture_group = finno_ugric
 				}
-			}		
+			}
+			religion_group = pagan
 			OR = {
 				culture_group = baltic
 				culture = pommeranian
@@ -1414,10 +1402,8 @@ castle = {
 		ai_creation_factor = 101
 
 		start = {
-			AND = {
-				FROM = { top_liege = { religion_group = pagan_group } religion_group = pagan_group }
-				year = 1170
-			}
+			FROM = { top_liege = { religion_group = pagan_group } religion_group = pagan_group }
+			year = 1170
 		}
 	}
 	ca_culture_group_baltic_2 = {
@@ -1446,10 +1432,8 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				FROM = { religion_group = pagan_group }
-				year = 1230
-			}
+			FROM = { religion_group = pagan_group }
+			year = 1230
 		}
 	}
 	ca_culture_group_baltic_3 = {
@@ -1478,10 +1462,8 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				FROM = { religion_group = pagan_group }
-				year = 1260
-			}
+			FROM = { religion_group = pagan_group }
+			year = 1260
 		}
 	}
 	ca_culture_group_baltic_4 = {
@@ -1510,10 +1492,8 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				FROM = { religion_group = pagan_group }
-				year = 1300
-			}
+			FROM = { religion_group = pagan_group }
+			year = 1300
 		}
 	}
 	
@@ -1533,10 +1513,7 @@ castle = {
 		ai_creation_factor = 101
 		
 		start = {
-			AND = {
-				year = 1066
-				has_building = ca_wall_1
-			}
+			year = 1066
 		}
 	}
 	ca_culture_group_altaic_2 = {
@@ -1557,10 +1534,7 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				year = 1150
-				has_building = ca_wall_1
-			}
+			year = 1150
 		}
 	}
 	ca_culture_group_altaic_3 = {
@@ -1581,10 +1555,7 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				year = 1230
-				has_building = ca_wall_1
-			}
+			year = 1230
 		}
 	}
 	ca_culture_group_altaic_4 = {
@@ -1605,10 +1576,7 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				year = 1290
-				has_building = ca_wall_1
-			}
+			year = 1290
 		}
 	}
 	
@@ -1642,11 +1610,8 @@ castle = {
 		ai_creation_factor = 101
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1125
-				has_building = ca_stable_1
-			}
+			FROM = { religion_group = christian }
+			year = 1125
 		}
 	}
 	ca_culture_frank_norman_german_2 = {
@@ -1681,11 +1646,8 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1140
-				has_building = ca_stable_1
-			}
+			FROM = { religion_group = christian }
+			year = 1140
 		}
 	}
 	ca_culture_frank_norman_german_3 = {
@@ -1720,11 +1682,8 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1180
-				has_building = ca_stable_1
-			}
+			FROM = { religion_group = christian }
+			year = 1180
 		}
 	}
 	ca_culture_frank_norman_german_4 = {
@@ -1759,11 +1718,99 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1250
-				has_building = ca_stable_1
+			FROM = { religion_group = christian }
+			year = 1250
+		}
+	}
+	
+	#Arabian horse breeders
+	ca_culture_group_arabic_1 = {
+		potential = {
+			FROM = {
+				culture_group = arabic
 			}
+			culture_group = arabic
+		}
+		prerequisites = { ca_wall_1 }
+		build_cost = 200
+		build_time = 730
+		light_cavalry = 30
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		ai_creation_factor = 101
+		
+		start = {
+			FROM = { religion_group = muslim }
+			year = 1125
+		}
+	}
+	ca_culture_group_arabic_2 = {
+		potential = {
+			FROM = {
+				culture_group = arabic
+			}
+			culture_group = arabic
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+		}
+		upgrades_from = ca_culture_group_arabic_1
+		build_cost = 300
+		build_time = 1095
+		light_cavalry = 40
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		ai_creation_factor = 100
+		
+		start = {
+			FROM = { religion_group = muslim }
+			year = 1140
+		}
+	}
+	ca_culture_group_arabic_3 = {
+		potential = {
+			FROM = {
+				culture_group = arabic
+			}
+			culture_group = arabic
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+		}
+		upgrades_from = ca_culture_group_arabic_2
+		build_cost = 400
+		build_time = 2190
+		light_cavalry = 50
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		ai_creation_factor = 99
+		
+		start = {
+			FROM = { religion_group = muslim }
+			year = 1180
+		}
+	}
+	ca_culture_group_arabic_4 = {
+		potential = {
+			FROM = {
+				culture_group = arabic
+			}
+			culture_group = arabic
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 5
+		}
+		upgrades_from = ca_culture_group_arabic_3
+		build_cost = 500
+		build_time = 2190
+		light_cavalry = 60
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		ai_creation_factor = 98
+		
+		start = {
+			FROM = { religion_group = muslim }
+			year = 1250
 		}
 	}	
 	
@@ -1783,11 +1830,8 @@ castle = {
 		ai_creation_factor = 101
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1125
-				has_building = ca_stable_1
-			}
+			FROM = { religion_group = christian }
+			year = 1125
 		}
 	}
 	ca_culture_group_iberian_2 = {
@@ -1808,11 +1852,8 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1140
-				has_building = ca_stable_1
-			}
+			FROM = { religion_group = christian }
+			year = 1140
 		}
 	}
 	ca_culture_group_iberian_3 = {
@@ -1833,11 +1874,8 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1180
-				has_building = ca_stable_1
-			}
+			FROM = { religion_group = christian }
+			year = 1180
 		}
 	}
 	ca_culture_group_iberian_4 = {
@@ -1858,11 +1896,8 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1250
-				has_building = ca_stable_1
-			}
+			FROM = { religion_group = christian }
+			year = 1250
 		}
 	}
 	
@@ -1870,9 +1905,15 @@ castle = {
 	ca_culture_italian_1 = {
 		potential = {
 			FROM = {
-				culture = italian
+				OR = {
+					culture = italian
+					culture = sicilian
+				}
 			}
-			culture = italian
+			OR = {
+				culture = italian
+				culture = sicilian
+			}
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -1882,19 +1923,22 @@ castle = {
 		ai_creation_factor = 101
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1085
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1085
 		}
 	}
 	ca_culture_italian_2 = {
 		potential = {
 			FROM = {
-				culture = italian
+				OR = {
+					culture = italian
+					culture = sicilian
+				}
 			}
-			culture = italian
+			OR = {
+				culture = italian
+				culture = sicilian
+			}
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
@@ -1907,19 +1951,22 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1145
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1145
 		}
 	}
 	ca_culture_italian_3 = {
 		potential = {
 			FROM = {
-				culture = italian
+				OR = {
+					culture = italian
+					culture = sicilian
+				}
 			}
-			culture = italian
+			OR = {
+				culture = italian
+				culture = sicilian
+			}
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 4
@@ -1932,19 +1979,22 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1190
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1190
 		}
 	}
 	ca_culture_italian_4 = {
 		potential = {
 			FROM = {
-				culture = italian
+				OR = {
+					culture = italian
+					culture = sicilian
+				}
 			}
-			culture = italian
+			OR = {
+				culture = italian
+				culture = sicilian
+			}
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 5
@@ -1957,11 +2007,8 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1240
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1240
 		}
 	}
 	
@@ -1981,11 +2028,8 @@ castle = {
 		ai_creation_factor = 101
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1085
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1085
 		}
 	}
 	ca_culture_russian_2 = {
@@ -2006,11 +2050,8 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1140
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1140
 		}
 	}
 	ca_culture_russian_3 = {
@@ -2031,11 +2072,8 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1195
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1195
 		}
 	}
 	ca_culture_russian_4 = {
@@ -2056,11 +2094,8 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1240
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1240
 		}
 	}
 	#Irish Kern
@@ -2079,11 +2114,8 @@ castle = {
 		ai_creation_factor = 101
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1085
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1085
 		}
 	}
 	irish_building_2 = {
@@ -2104,11 +2136,8 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1145
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1145
 		}
 	}
 	irish_building_3 = {
@@ -2126,11 +2155,8 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1190
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1190
 		}
 	}
 	irish_building_4 = {
@@ -2151,11 +2177,8 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1240
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1240
 		}
 	}
 
@@ -2174,11 +2197,8 @@ castle = {
 		ai_creation_factor = 101
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1085
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1085
 		}
 	}
 	greek_building_2 = {
@@ -2198,11 +2218,8 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1145
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1145
 		}
 	}
 	greek_building_3 = {
@@ -2222,11 +2239,8 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1190
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1190
 		}
 	}
 	greek_building_4 = {
@@ -2246,11 +2260,8 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1240
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1240
 		}
 	}
 	
@@ -2271,11 +2282,8 @@ castle = {
 		ai_creation_factor = 101
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1085
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1085
 		}
 	}
 	north_german_building_2 = {
@@ -2297,11 +2305,8 @@ castle = {
 		ai_creation_factor = 100
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1145
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1145
 		}
 	}
 	north_german_building_3 = {
@@ -2323,11 +2328,8 @@ castle = {
 		ai_creation_factor = 99
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1190
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1190
 		}
 	}
 	north_german_building_4 = {
@@ -2349,11 +2351,8 @@ castle = {
 		ai_creation_factor = 98
 		
 		start = {
-			AND = {
-				FROM = { religion_group = christian }
-				year = 1240
-				has_building = ca_barracks_1
-			}
+			FROM = { religion_group = christian }
+			year = 1240
 		}
 	}
 	
@@ -2494,7 +2493,7 @@ city = {
 		fort_level = 0.4
 		levy_size = 0.025
 		tax_income = 0.2
-		ai_creation_factor = 199
+		ai_creation_factor = 99
 		
 		start = {
 			OR = {
@@ -2509,7 +2508,7 @@ city = {
 				AND = {
 					FROM = { religion_group = pagan_group }
 					year = 1100
-				}
+				}					
 			}
 		}
 	}
@@ -2520,7 +2519,7 @@ city = {
 		fort_level = 0.4
 		levy_size = 0.025
 		tax_income = 0.2
-		ai_creation_factor = 198
+		ai_creation_factor = 98
 
 		start = {
 			OR = {
@@ -2546,7 +2545,7 @@ city = {
 		fort_level = 0.4
 		levy_size = 0.05
 		tax_income = 0.2
-		ai_creation_factor = 197
+		ai_creation_factor = 97
 
 		start = {
 			OR = {
@@ -2573,7 +2572,7 @@ city = {
 		fort_level = 0.5
 		levy_size = 0.05
 		tax_income = 0.2
-		ai_creation_factor = 196
+		ai_creation_factor = 96
 
 		start = {
 			OR = {
@@ -2599,8 +2598,8 @@ city = {
 		build_time = 1460
 		fort_level = 1.0
 		levy_size = 0.075
-		tax_income = 0.5
-		ai_creation_factor = 195
+		tax_income = 0.2
+		ai_creation_factor = 95
 
 		start = {
 			OR = {
@@ -2621,7 +2620,7 @@ city = {
 	}
 	
 	ct_training_grounds_1 = {
-		build_cost = 150
+		build_cost = 100
 		build_time = 547
 		levy_size = 0.05
 		garrison_size = 0.05
@@ -2638,6 +2637,10 @@ city = {
 					year = 1095
 				}
 				AND = {
+					FROM = { OR = { culture = jolof culture = mande } independent = yes }
+					year = 1066
+				}				
+				AND = {
 					FROM = { religion_group = pagan_group }
 					year = 1066
 				}
@@ -2649,7 +2652,7 @@ city = {
 		upgrades_from = ct_training_grounds_1
 		build_cost = 200
 		build_time = 730
-		levy_size = 0.075
+		levy_size = 0.1
 		garrison_size = 0.1
 		ai_creation_factor = 97
 
@@ -2674,7 +2677,7 @@ city = {
 		upgrades_from = ct_training_grounds_2
 		build_cost = 300
 		build_time = 1095
-		levy_size = 0.1
+		levy_size = 0.15
 		garrison_size = 0.15
 		ai_creation_factor = 96
 
@@ -2700,7 +2703,7 @@ city = {
 		upgrades_from = ct_training_grounds_3
 		build_cost = 400
 		build_time = 1460
-		levy_size = 0.125
+		levy_size = 0.2
 		garrison_size = 0.2
 		ai_creation_factor = 95
 
@@ -2726,7 +2729,7 @@ city = {
 		upgrades_from = ct_training_grounds_4
 		build_cost = 500
 		build_time = 2190
-		levy_size = 0.15
+		levy_size = 0.25
 		garrison_size = 0.25
 		ai_creation_factor = 94
 
@@ -2752,8 +2755,8 @@ city = {
 		upgrades_from = ct_training_grounds_5
 		build_cost = 500
 		build_time = 2190
-		levy_size = 0.15
-		garrison_size = 0.25
+		levy_size = 0.3
+		garrison_size = 0.3
 		ai_creation_factor = 93
 
 		start = {
@@ -3056,7 +3059,7 @@ city = {
 	ct_marketplace_1 = {
 		build_cost = 100
 		build_time = 365
-		tax_income = 2.5
+		tax_income = 2
 		ai_creation_factor = 500
 		
 		start = {
@@ -3081,7 +3084,7 @@ city = {
 		upgrades_from = ct_marketplace_1
 		build_cost = 120
 		build_time = 547
-		tax_income = 3
+		tax_income = 2.5
 		ai_creation_factor = 500
 
 		start = {
@@ -3208,7 +3211,7 @@ city = {
 		}
 		build_cost = 100
 		build_time = 365
-		tax_income = 2.5
+		tax_income = 1
 		galleys = 2
 		ai_creation_factor = 110
 		
@@ -3237,7 +3240,7 @@ city = {
 		upgrades_from = ct_port_1
 		build_cost = 120
 		build_time = 547
-		tax_income = 3
+		tax_income = 1.2
 		galleys = 3
 		ai_creation_factor = 109
 
@@ -3266,7 +3269,7 @@ city = {
 		upgrades_from = ct_port_2
 		build_cost = 200
 		build_time = 730
-		tax_income = 3.5
+		tax_income = 2
 		galleys = 4
 		ai_creation_factor = 108
 
@@ -3295,7 +3298,7 @@ city = {
 		upgrades_from = ct_port_3
 		build_cost = 300
 		build_time = 1095
-		tax_income = 4
+		tax_income = 3
 		galleys = 5
 		ai_creation_factor = 107
 
@@ -3324,7 +3327,7 @@ city = {
 		upgrades_from = ct_port_4
 		build_cost = 400
 		build_time = 2190
-		tax_income = 4.5
+		tax_income = 4
 		galleys = 6
 		ai_creation_factor = 106
 
@@ -3556,7 +3559,7 @@ temple = {
 		fort_level = 0.5
 		levy_size = 0.025
 		tax_income = 0.2
-		ai_creation_factor = 197
+		ai_creation_factor = 97
 
 		start = {
 			OR = {
@@ -3582,7 +3585,7 @@ temple = {
 		fort_level = 0.5
 		levy_size = 0.025
 		tax_income = 0.2
-		ai_creation_factor = 196
+		ai_creation_factor = 96
 
 		start = {
 			OR = {
@@ -3608,7 +3611,7 @@ temple = {
 		fort_level = 1.0
 		levy_size = 0.05
 		tax_income = 0.2
-		ai_creation_factor = 195
+		ai_creation_factor = 95
 
 		start = {
 			OR = {
@@ -3635,7 +3638,7 @@ temple = {
 		fort_level = 1.0
 		levy_size = 0.05
 		tax_income = 0.2
-		ai_creation_factor = 194
+		ai_creation_factor = 94
 
 		start = {
 			OR = {
@@ -3661,8 +3664,8 @@ temple = {
 		build_time = 1460
 		fort_level = 1.5
 		levy_size = 0.075
-		tax_income = 0.5
-		ai_creation_factor = 193
+		tax_income = 0.2
+		ai_creation_factor = 93
 
 		start = {
 			OR = {
@@ -3685,8 +3688,8 @@ temple = {
 	tp_monastery_1 = {
 		build_cost = 100
 		build_time = 547
-		levy_size = 0.1
-		garrison_size = 0.1
+		levy_size = 0.05
+		garrison_size = 0.05
 		ai_creation_factor = 96
 
 		start = {
@@ -3711,8 +3714,8 @@ temple = {
 		upgrades_from = tp_monastery_1
 		build_cost = 200
 		build_time = 730
-		levy_size = 0.15
-		garrison_size = 0.15
+		levy_size = 0.1
+		garrison_size = 0.1
 		ai_creation_factor = 95
 
 		start = {
@@ -3736,8 +3739,8 @@ temple = {
 		upgrades_from = tp_monastery_2
 		build_cost = 300
 		build_time = 1095
-		levy_size = 0.2
-		garrison_size = 0.2
+		levy_size = 0.15
+		garrison_size = 0.15
 		ai_creation_factor = 94
 
 		start = {
@@ -3788,8 +3791,8 @@ temple = {
 		upgrades_from = tp_monastery_4
 		build_cost = 500
 		build_time = 2190
-		levy_size = 0.3
-		garrison_size = 0.3
+		levy_size = 0.25
+		garrison_size = 0.25
 		ai_creation_factor = 92
 
 		start = {
@@ -3814,8 +3817,8 @@ temple = {
 		upgrades_from = tp_monastery_5
 		build_cost = 600
 		build_time = 2190
-		levy_size = 0.35
-		garrison_size = 0.35
+		levy_size = 0.3
+		garrison_size = 0.3
 		ai_creation_factor = 91
 
 		start = {

@@ -1,4 +1,4 @@
 1201.1.1=
 {
-	liege=k_papal_state
+	liege=e_papal_state
 }

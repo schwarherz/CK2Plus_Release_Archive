@@ -909,153 +909,153 @@ province;red;green;blue;x;x
 908;84;132;211;Sharawrah;x
 909;0;126;210;Sahara Desert;x
 910;42;129;83;Siberia;x
-911;85;39;131;Socotra;x
-912;126;90;204;Teate;x
-913;85;109;131;Ibiza;x
-914;168;186;57;Mediterranean Sea;x
-915;0;189;185;Golfo de Valencia;x
-916;42;192;58;Islas Baleares;x
-917;84;195;186;Ponant;x
-918;126;198;59;Mediterranean Sea;x
-919;168;201;187;Gulfe du Lion;x
-920;0;204;60;Lake Leman;x
-921;42;207;188;Cote d Azur;x
-922;84;210;61;Ligurian Sea;x
-923;126;0;189;Tyrrhenian Sea;x
-924;168;3;62;Coast of Sardegna;x
-925;0;6;190;Golfo di Napoli;x
-926;42;9;63;Strait di Messina;x
-927;84;12;191;Golfe de Hammamet;x
-928;126;15;64;Malta Channel;x
-929;168;18;192;Gulf of Sidra;x
-930;0;21;65;Golfo di Taranto;x
-931;42;24;193;Ionian Sea;x
-932;84;27;66;Strait of Otranto;x
-933;126;30;194;Adriatic Sea;x
-934;168;33;67;Gulf of Venice;x
-935;0;36;195;Eastern Aegean Sea;x
-936;42;39;68;Eastern Cyclades;x
-937;84;42;196;Sea of Crete;x
-938;126;45;69;Coast of Egypt;x
-939;168;48;197;Nile Delta;x
-940;0;51;70;Levant;x
-941;42;54;198;East of Mediterranean;x
-942;0;54;35;Western Aegean Sea;x
-943;42;18;3;Näsijärvi;x
-944;168;63;72;Aral Sea;x
-945;0;66;200;Iskenderun Kör;x
-946;42;69;73;Gulf of Antalya;x
-947;84;72;201;Sea of Marmara;x
-948;126;75;74;Gulf of Varna;x
-949;168;78;202;Coast of Taurida;x
-950;0;81;75;Black Sea;x
-951;42;84;203;Coast of Kolkhida;x
-952;0;96;205;Caspian Sea;x
-953;84;180;56;Coast of Morocco;x
-954;126;183;184;Strait of Gibraltar;x
-955;126;33;159;Saimaa;x
-956;84;15;156;Kallavesi;x
-957;168;204;152;Oulujärvi;x
-958;42;132;48;Ladoga Lake;x
-959;84;135;176;Mälaren;x
-960;168;171;182;Faroya;x
-961;168;141;177;Hjälmaren;x
-962;0;144;50;Vättern;x
-963;42;147;178;Vänern;x
-964;84;150;51;White Sea;x
-965;126;153;179;Strait of Dover;x
-966;168;156;52;La Manche;x
-967;0;159;180;Channel Islands;x
-968;42;162;53;St. George's Channel;x
-969;84;87;76;Sea of Azov;x
-970;168;21;157;Cabo de Finisterre;x
-971;126;90;149;Bodensee;x
-972;168;108;207;Kara-Bogaz Gol;x
-973;126;78;39;Waddenzee;x
-974;42;27;158;Bay of Biscay;x
-975;126;168;54;Donegal Bay;x
-976;42;210;153;Sea of Canarias;x
-977;168;36;32;Bretagne Coast;x
-978;0;39;160;Atlantic;x
-979;0;111;80;Tiveriade Lake;x
-980;42;12;28;Portugal Coast;x
-981;0;9;155;Golfo de Cadiz;x
-982;168;51;162;Coast of Iceland;x
-983;42;114;208;Dead Sea;x
-984;42;57;163;North Atlantic;x
-985;84;60;36;North Atlantic;x
-986;126;63;164;North Sea;x
-987;168;66;37;North Sea;x
-988;0;69;165;North Sea;x
-989;42;72;38;North Sea;x
-990;84;75;166;Sea of Shetland;x
-991;42;6;98;Galway Bay;x
-992;168;81;167;The Minch;x
-993;0;84;40;Moray Firth;x
-994;42;87;168;Firth of Forth;x
-995;84;90;41;The Wash;x
-996;126;93;169;Dogger-bank;x
-997;126;12;99;Onega;x
-998;0;99;170;North Sea;x
-999;42;102;43;The Sound;x
-1000;84;105;171;Gulf of Helholland;x
-1001;126;108;44;Kattegat;x
-1002;168;111;172;Gulf of Danzig;x
-1003;0;114;45;Hanö-bukten;x
-1004;42;117;173;Baltic Sea;x
-1005;84;120;46;Ålands Hav;x
-1006;126;123;174;Gulf of Finland;x
-1007;168;126;47;Gulf of Bothnia;x
-1008;0;129;175;Gulf of Bothnia;x
-1009;168;6;27;Iles d'la Manche;x
-1010;126;18;29;Hibernicum Occeanum;x
-1011;42;42;33;Mediterranean Sea;x
-1012;84;57;71;Lake Peipus;x
-1013;126;60;199;Lake Yalpug;x
-1014;0;24;30;Coast of Asturias;x
-1015;42;177;183;Northern Bay of Biscay;x
-1016;0;174;55;Celtic Sea;x
-1017;0;207;25;Gulf of Suez;x
-1018;84;0;26;Red Sea;x
-1019;126;48;34;Bab el Mandeb;x
-1020;84;45;161;Horn of Africa;x
-1021;126;105;79;Sea of Oman;x
-1022;42;99;78;Straits of Hormuz;x
-1023;168;93;77;Gulf of Persia;x
-1024;84;30;31;Western Cyclades;x
-1025;85;54;6;Päijänne;x 
-1026;84;165;181;Irish Sea;x
-1027;85;99;141;;x
-1028;127;102;14;;x
-1029;169;105;142;;x
-1030;1;108;15;;x
-1031;43;111;143;;x
-1032;85;114;16;;x
-1033;127;117;144;;x
-1034;169;120;17;;x
-1035;1;123;145;;x
-1036;43;126;18;;x
-1037;85;129;146;;x
-1038;127;132;19;;x
-1039;169;135;147;;x
-1040;1;138;20;;x
-1041;43;141;148;;x
-1042;85;144;21;;x
-1043;127;147;149;;x
-1044;169;150;22;;x
-1045;1;153;150;;x
-1046;43;156;23;;x
-1047;85;159;151;;x
-1048;127;162;24;;x
-1049;169;165;152;;x
-1050;1;168;25;;x
-1051;43;171;153;;x
-1052;85;174;26;;x
-1053;127;177;154;;x
-1054;169;180;27;;x
-1055;1;183;155;;x
-1056;43;186;28;;x
-1057;85;189;156;;x
+911;61;94;47;El Aaiun;x
+912;183;174;88;Boujdour;x ;
+913;183;57;139;Dakhla;x
+914;72;88;106;Bir Gandlus;x
+915;139;207;204;Yaresna;x
+916;139;207;90;Ghiryu;x
+917;182;48;170;Niani;x
+918;106;109;193;Sikasso;x
+919;72;214;84;Gao;x
+920;66;109;175;Timbuktu;x
+921;224;193;188;Wagadou;x
+922;188;134;138;Tankodogo;x
+923;99;189;106;Koudougu;x
+924;88;189;99;Taghaza;x
+925;133;99;63;Kirina;x
+926;151;119;243;Araouane;x
+927;72;94;173;Auoudagast;x
+928;180;99;99;Oualata;x
+929;213;216;169;Koumbi Saleh;x
+930;213;121;99;Djenne;x
+931;72;193;99;Sama;x
+932;205;175;117;Morfil;x
+933;139;75;117;Matam;x
+934;224;109;128;Zinguincha;x
+935;180;206;68;Tabacounda;x
+936;106;37;147;Waalo;x
+937;205;84;219;Cayor;x
+938;106;116;151;Linguere;x
+939;224;120;44;Saloum;x
+940;48;162;116;Baol;x
+941;85;39;131;Socotra;x
+942;126;90;204;Teate;x
+943;85;109;131;Ibiza;x
+944;168;186;57;Mediterranean Sea;x
+945;0;189;185;Golfo de Valencia;x
+946;42;192;58;Islas Baleares;x
+947;84;195;186;Ponant;x
+948;126;198;59;Mediterranean Sea;x
+949;168;201;187;Gulfe du Lion;x
+950;0;204;60;Lake Leman;x
+951;42;207;188;Cote d Azur;x
+952;84;210;61;Ligurian Sea;x
+953;126;0;189;Tyrrhenian Sea;x
+954;168;3;62;Coast of Sardegna;x
+955;0;6;190;Golfo di Napoli;x
+956;42;9;63;Strait di Messina;x
+957;84;12;191;Golfe de Hammamet;x
+958;126;15;64;Malta Channel;x
+959;168;18;192;Gulf of Sidra;x
+960;0;21;65;Golfo di Taranto;x
+961;42;24;193;Ionian Sea;x
+962;84;27;66;Strait of Otranto;x
+963;126;30;194;Adriatic Sea;x
+964;168;33;67;Gulf of Venice;x
+965;0;36;195;Eastern Aegean Sea;x
+966;42;39;68;Eastern Cyclades;x
+967;84;42;196;Sea of Crete;x
+968;126;45;69;Coast of Egypt;x
+969;168;48;197;Nile Delta;x
+970;0;51;70;Levant;x
+971;42;54;198;East of Mediterranean;x
+972;0;54;35;Western Aegean Sea;x
+973;42;18;3;Näsijärvi;x
+974;168;63;72;Aral Sea;x
+975;0;66;200;Iskenderun Kör;x
+976;42;69;73;Gulf of Antalya;x
+977;84;72;201;Sea of Marmara;x
+978;126;75;74;Gulf of Varna;x
+979;168;78;202;Coast of Taurida;x
+980;0;81;75;Black Sea;x
+981;42;84;203;Coast of Kolkhida;x
+982;0;96;205;Caspian Sea;x
+983;84;180;56;Coast of Morocco;x
+984;126;183;184;Strait of Gibraltar;x
+985;126;33;159;Saimaa;x
+986;84;15;156;Kallavesi;x
+987;168;204;152;Oulujärvi;x
+988;42;132;48;Ladoga Lake;x
+989;84;135;176;Mälaren;x
+990;168;171;182;Faroya;x
+991;168;141;177;Hjälmaren;x
+992;0;144;50;Vättern;x
+993;42;147;178;Vänern;x
+994;84;150;51;White Sea;x
+995;126;153;179;Strait of Dover;x
+996;168;156;52;La Manche;x
+997;0;159;180;Channel Islands;x
+998;42;162;53;St. George's Channel;x
+999;84;87;76;Sea of Azov;x
+1000;168;21;157;Cabo de Finisterre;x
+1001;126;90;149;Bodensee;x
+1002;168;108;207;Kara-Bogaz Gol;x
+1003;126;78;39;Waddenzee;x
+1004;42;27;158;Bay of Biscay;x
+1005;126;168;54;Donegal Bay;x
+1006;42;210;153;Sea of Canarias;x
+1007;168;36;32;Bretagne Coast;x
+1008;0;39;160;Atlantic;x
+1009;0;111;80;Tiveriade Lake;x
+1010;42;12;28;Portugal Coast;x
+1011;0;9;155;Golfo de Cadiz;x
+1012;168;51;162;Coast of Iceland;x
+1013;42;114;208;Dead Sea;x
+1014;42;57;163;North Atlantic;x
+1015;84;60;36;North Atlantic;x
+1016;126;63;164;North Sea;x
+1017;168;66;37;North Sea;x
+1018;0;69;165;North Sea;x
+1019;42;72;38;North Sea;x
+1020;84;75;166;Sea of Shetland;x
+1021;42;6;98;Galway Bay;;x
+1022;168;81;167;The Minch;x
+1023;0;84;40;Moray Firth;x
+1024;42;87;168;Firth of Forth;x
+1025;84;90;41;The Wash;x
+1026;126;93;169;Dogger-bank;x
+1027;126;12;99;Onega;x
+1028;0;99;170;North Sea;x
+1029;42;102;43;The Sound;x
+1030;84;105;171;Gulf of Helholland;x
+1031;126;108;44;Kattegat;x
+1032;168;111;172;Gulf of Danzig;x
+1033;0;114;45;Hanö-bukten;x
+1034;42;117;173;Baltic Sea;x
+1035;84;120;46;Ålands Hav;x
+1036;126;123;174;Gulf of Finland;x
+1037;168;126;47;Gulf of Bothnia;x
+1038;0;129;175;Gulf of Bothnia;x
+1039;168;6;27;Iles d'la Manche;x
+1040;126;18;29;Hibernicum Occeanum;x
+1041;42;42;33;Mediterranean Sea;x
+1042;84;57;71;Lake Peipus;x
+1043;126;60;199;Lake Yalpug;x
+1044;0;24;30;Coast of Asturias;x
+1045;42;177;183;Northern Bay of Biscay;x
+1046;0;174;55;Celtic Sea;x
+1047;0;207;25;Gulf of Suez;x
+1048;84;0;26;Red Sea;x
+1049;126;48;34;Bab el Mandeb;x
+1050;84;45;161;Horn of Africa;x
+1051;126;105;79;Sea of Oman;x
+1052;42;99;78;Straits of Hormuz;x
+1053;168;93;77;Gulf of Persia;x
+1054;84;30;31;Western Cyclades;x
+1055;85;54;6;Päijänne;x
+1056;84;165;181;Irish Sea;x
+1057;122;122;129;;x
 1058;127;192;29;;x
 1059;169;195;157;;x
 1060;1;198;30;;x

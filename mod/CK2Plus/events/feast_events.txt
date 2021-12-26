@@ -957,6 +957,8 @@ character_event = {
 		any_vassal = {
 			limit = {
 				prisoner = no
+				NOT = { trait = incapable }
+				NOT = { has_character_modifier = holding_large_feast }
 				war = no
 				age = 16
 			}

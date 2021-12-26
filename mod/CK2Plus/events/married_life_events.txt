@@ -404,13 +404,13 @@ character_event = {
 										}
 									}
 								}
-							}
-							45 = {
-								character_event = { #Courtier accuses spouse of heir's death
-									id = 30008
-									days = 7
-									tooltip = "EVTTOOLTIP30008"
-								}
+								45 = {
+									character_event = { #Courtier accuses spouse of heir's death
+										id = 30008
+										days = 7
+										tooltip = "EVTTOOLTIP30008"
+									}
+								}								
 							}
 						}
 					}
@@ -1343,7 +1343,7 @@ character_event = {
 		name = "EVTOPTB30032"
 		FROM = {
 			host = {
-				letter_event = {
+				character_event = {
 					id = 30037
 					days = 2
 					tooltip = "EVTTOOLTIPA30037"
@@ -3714,7 +3714,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2
-			fertility = 75
+			fertility = 0.75
 		}
 		modifier = {
 			factor = 3
@@ -4609,7 +4609,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Too bad!"
+		name = "EVTOPTA30093"
 		ai_chance = {
 			factor = 10
 			
@@ -4638,7 +4638,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = "Let's try again!"
+		name = "EVTOPTB30093"
 		ai_chance = { factor = 90 }
 		FROM = {
 			character_event = {
@@ -4657,7 +4657,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Friend forever!"
+		name = "EVTOPTA30094"
 		ai_chance = {
 			factor = 10
 			
@@ -4680,12 +4680,12 @@ character_event = {
 		}
 		FROM = {
 			character_event = {
-				id = 30095
+				id = 30096
 			}
 		}
 	}
 	option = {
-		name = "Let's try again!"
+		name = "EVTOPTB30094"
 		ai_chance = { factor = 90 }
 		FROM = {
 			character_event = {
@@ -4779,7 +4779,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		fertility = 65
+		fertility = 0.5
 		spouse = {
 			age = 40
 			war = no

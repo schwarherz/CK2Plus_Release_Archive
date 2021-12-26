@@ -235,7 +235,7 @@ character_event = {
 			modifier = opinion_impressed
 			months = 24
 		}
-		FROM = { character_event = { id = 63005 tooltip = "EVTTOOLTIP63005" } }
+		FROM = { letter_event = { id = 63005 tooltip = "EVTTOOLTIP63005" } }
 	}
 }
 
@@ -402,7 +402,7 @@ character_event = {
 		name = "EVTOPTA63010" # Inform my liege
 		ai_chance = { factor = 100 }
 		set_character_flag = requested_rival_removal
-		liege = { character_event = { id = 63011 days = 14 tooltip = "EVTTOOLTIP63011" } }
+		liege = { letter_event = { id = 63011 days = 14 tooltip = "EVTTOOLTIP63011" } }
 		
 		random = {
 			chance = 10
@@ -485,7 +485,7 @@ letter_event = {
 				}
 			}
 			hidden_tooltip = {
-				letter_event = { id = 63012 }
+				character_event = { id = 63012 }
 			}
 			opinion = {
 				who = ROOT
@@ -515,7 +515,7 @@ letter_event = {
 			months = 24
 		}
 		
-		FROM = { character_event = { id = 63014 tooltip = "EVTTOOLTIP63014" } }
+		FROM = { letter_event = { id = 63014 tooltip = "EVTTOOLTIP63014" } }
 		
 		hidden_tooltip = {
 			random_vassal = {
@@ -638,14 +638,12 @@ character_event = {
 		name = "EVTOPTA63012" # Curse his/her name!
 		clr_character_flag = pleaded_innocence
 		FROM = { 
-			FROM = {
-				reverse_opinion = {
-					who = ROOT
-					modifier = scheming_bastard
-					years = 20
-				}
-				hidden_tooltip = { letter_event = { id = 63013 } } 
+			reverse_opinion = {
+				who = ROOT
+				modifier = scheming_bastard
+				years = 20
 			}
+			#hidden_tooltip = { letter_event = { id = 63013 } } 
 		}
 	}
 }
@@ -680,7 +678,7 @@ letter_event = {
 	
 	option = {
 		name = "EVTOPTA63015" # What a dick
-		FROM = { FROM = { character_event = { id = 63016 tooltip = "EVTTOOLTIP63016" } } }
+		FROM = { letter_event = { id = 63016 tooltip = "EVTTOOLTIP63016" } }
 	}
 }
 
@@ -740,7 +738,7 @@ character_event = {
 	option = {
 		name = "EVTOPTA63018" # Plead my innocence to my liege
 		set_character_flag = pleaded_innocence
-		liege = { character_event = { id = 63019 days = 1 tooltip = "EVTTOOLTIP63019" } }
+		liege = { letter_event = { id = 63019 days = 1 tooltip = "EVTTOOLTIP63019" } }
 	}
 }
 
@@ -850,7 +848,7 @@ character_event = {
 		name = "EVTOPTA63030" # Ask my liege for money
 		ai_chance = { factor = 100 }
 		set_character_flag = requested_money_for_levies
-		liege = { character_event = { id = 63031 days = 4 tooltip = "EVTTOOLTIP63031" } }
+		liege = { letter_event = { id = 63031 days = 4 tooltip = "EVTTOOLTIP63031" } }
 	}
 	
 	option = {
@@ -895,7 +893,7 @@ letter_event = {
 					who = ROOT
 					days = 0
 				}
-				character_event = { id = 63032 days = 2 } 
+				letter_event = { id = 63032 days = 2 } 
 			}
 		}
 	}
@@ -919,7 +917,7 @@ letter_event = {
 					who = ROOT
 					days = 0
 				}
-				character_event = { id = 63033 days = 2 } 
+				letter_event = { id = 63033 days = 2 } 
 			}
 		}
 	}
@@ -950,7 +948,7 @@ letter_event = {
 				months = 60
 			}
 			hidden_tooltip = {
-				character_event = { id = 63034 days = 2 } 
+				letter_event = { id = 63034 days = 2 } 
 			}
 		}
 	}
@@ -967,7 +965,7 @@ letter_event = {
 					who = ROOT
 					days = 0
 				}
-				character_event = { id = 63035 days = 2 } 
+				letter_event = { id = 63035 days = 2 } 
 			}
 		}
 	}
@@ -1102,7 +1100,7 @@ character_event = {
 		name = "EVTOPTA63040" # Ask for the Title
 		ai_chance = { factor = 100 }
 		set_character_flag = requested_de_jure_title
-		liege = { character_event = { id = 63041 days = 4 tooltip = "EVTTOOLTIP63041" } }
+		liege = { letter_event = { id = 63041 days = 4 tooltip = "EVTTOOLTIP63041" } }
 	}
 	
 	option = {
@@ -1182,7 +1180,7 @@ letter_event = {
 			gain_title = FROM
 		}
 		hidden_tooltip = {
-			FROM = { character_event = { id = 63042 days = 1 } }
+			FROM = { letter_event = { id = 63042 days = 1 } }
 		}
 		reverse_opinion = {
 			who = FROM
@@ -1209,7 +1207,7 @@ letter_event = {
 				modifier = opinion_denied_title
 				months = 120
 			}
-			character_event = { id = 63043 tooltip = "EVTTOOLTIP63043" } 
+			letter_event = { id = 63043 tooltip = "EVTTOOLTIP63043" } 
 		}
 	}
 	
@@ -1223,7 +1221,7 @@ letter_event = {
 			factor = 1000
 		}
 		
-		FROM = { character_event = { id = 63044 tooltip = "EVTTOOLTIP63044" } }
+		FROM = { letter_event = { id = 63044 tooltip = "EVTTOOLTIP63044" } }
 	}
 	
 }
@@ -1337,7 +1335,7 @@ character_event = {
 						}
 					}
 				}
-				character_event = { id = 63051 days = 4 tooltip = "EVTTOOLTIP63051" }
+				letter_event = { id = 63051 days = 4 tooltip = "EVTTOOLTIP63051" }
 			}
 		}
 	}
@@ -1357,7 +1355,7 @@ letter_event = {
 	option = {
 		name = "EVTOPTA63051" # Intercede on behalf of the prisoner
 		ai_chance = { factor = 100 }
-		liege = { character_event = { id = 63052 days = 4 tooltip = "EVTTOOLTIP63052" } }
+		liege = { letter_event = { id = 63052 days = 4 tooltip = "EVTTOOLTIP63052" } }
 	}
 	
 	option = {
@@ -1417,7 +1415,7 @@ letter_event = {
 				months = 120
 			}
 			hidden_tooltip = {
-				character_event = { id = 63054 } 
+				letter_event = { id = 63054 } 
 			}
 		}
 	}
@@ -1459,7 +1457,7 @@ letter_event = {
 		ai_chance = { 
 			factor = 1000
 		}
-		FROM = { character_event = { id = 63056 tooltip = "EVTTOOLTIP63056" } }
+		FROM = { letter_event = { id = 63056 tooltip = "EVTTOOLTIP63056" } }
 	}
 }
 
@@ -1488,7 +1486,7 @@ character_event = {
 					modifier = opinion_sprung_from_jail
 					months = 240
 				}
-				character_event = { id = 63057 tooltip = "EVTTOOLTIP63057" }
+				letter_event = { id = 63057 tooltip = "EVTTOOLTIP63057" }
 			} 
 		}
 	}
@@ -1616,7 +1614,7 @@ character_event = {
 		name = "EVTOPTA63060" # Request a vote for the law change
 		ai_chance = { factor = 100 }
 		liege = {
-			character_event = { id = 63061 days = 4 tooltip = "EVTTOOLTIP63061" }
+			letter_event = { id = 63061 days = 4 tooltip = "EVTTOOLTIP63061" }
 		}
 	}
 	option = {
@@ -1647,7 +1645,7 @@ letter_event = {
 		}	
 		name = "EVTOPTA63061" # Absurd!	
 		FROM = {
-			character_event = { id = 63062 days = 1 tooltip = "EVTTOOLTIP63062" }
+			letter_event = { id = 63062 days = 1 tooltip = "EVTTOOLTIP63062" }
 		}
 		any_vassal = {
 			limit = {
@@ -1670,7 +1668,7 @@ letter_event = {
 		}	
 		name = "EVTOPTB63061" # Very well
 		FROM = {
-			character_event = { id = 63063 days = 1 tooltip = "EVTTOOLTIP63063" }
+			letter_event = { id = 63063 days = 1 tooltip = "EVTTOOLTIP63063" }
 			opinion = {
 				who = ROOT
 				modifier = opinion_accepted_city_tax_law
@@ -1713,7 +1711,7 @@ letter_event = {
 		name = "EVTOPTC63061" # Bribe him!
 		trigger = { stewardship = 14 }
 		FROM = {
-			character_event = { id = 63064 days = 1 tooltip = "EVTTOOLTIP63064" }
+			letter_event = { id = 63064 days = 1 tooltip = "EVTTOOLTIP63064" }
 		}
 		treasury = -30
 	}
@@ -1724,7 +1722,7 @@ letter_event = {
 		name = "EVTOPTD63061" # Impress him
 		trigger = { diplomacy = 14 }
 		FROM = {
-			character_event = { id = 63065 days = 1 tooltip = "EVTTOOLTIP63065" }
+			letter_event = { id = 63065 days = 1 tooltip = "EVTTOOLTIP63065" }
 		}
 	}
 }

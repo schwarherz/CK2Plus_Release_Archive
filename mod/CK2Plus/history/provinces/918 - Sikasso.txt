@@ -1,0 +1,16 @@
+# 1 - Vestisland
+
+# County Title
+title = c_sikasso
+
+# Settlements
+max_settlements = 4
+b_tunuma = castle
+b_bindogoso = city 
+
+# Misc
+culture = mande
+religion = pagan
+
+
+# History

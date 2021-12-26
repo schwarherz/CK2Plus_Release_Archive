@@ -1,0 +1,260 @@
+144628 = {
+	name="Litto"
+	dynasty=100375
+	religion="baltic_pagan"
+	culture="lettigallish"
+	father = 28020
+	1100.1.1={
+		birth="1100.1.1"
+	}
+	1170.1.1={
+		death="1170.1.1"
+	}
+}
+
+144629 = {
+	name="Darbeslave"
+	dynasty=100374
+	religion="baltic_pagan"
+	culture="lettigallish"
+	father = 20603
+	1100.1.1={
+		birth="1100.1.1"
+	}
+	1170.1.1={
+		death="1170.1.1"
+	}
+}
+
+20603 = {
+	name="Kurlemuše"
+	# AKA: Kurlemuse
+	dynasty=100374
+	dna="kwgswmxdsbr"
+	properties="gbdccd0000"
+	martial=6
+	diplomacy=8
+	intrigue=6
+	stewardship=7
+	religion="baltic_pagan"
+	culture="lettigallish"
+	add_trait="skilled_tactician"
+	1050.1.1={
+		birth="1050.1.1"
+	}
+	1120.1.1={
+		death="1120.1.1"
+	}
+}
+
+220603 = {
+	name="Kurlemuse"
+	dynasty=100374
+	martial=6
+	diplomacy=8
+	intrigue=6
+	stewardship=7
+	religion="baltic_pagan"
+	culture="lettigallish"
+	add_trait="skilled_tactician"
+	father = 144629
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1199.1.1={
+		death="1199.1.1"
+	}
+}
+
+228020 = {
+	name="Erasts"
+	dynasty=100375
+	dna="nrgwzqwubch"
+	properties="cetccd0000"
+	martial=5
+	diplomacy=5
+	intrigue=4
+	stewardship=5
+	religion="baltic_pagan"
+	culture="lettigallish"
+	add_trait="slothful"
+	add_trait="honest"
+	add_trait="clubfooted"
+	add_trait="flamboyant_schemer"
+	father = 144628
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1202.1.1={
+		death="1202.1.1"
+	}
+}
+
+228022 = {
+	name="Dovyat"
+	dynasty=100372
+	religion="baltic_pagan"
+	culture="lettigallish"
+	father = 143147
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1210.1.1={
+		death="1210.1.1"
+	}
+}
+
+228023 = {
+	name="Mendune"
+	dynasty=100377
+	martial=7
+	diplomacy=6
+	intrigue=5
+	stewardship=4
+	religion="baltic_pagan"
+	culture="lettigallish"
+	add_trait="diligent"
+	add_trait="tough_soldier"
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1202.1.1={
+		death="1202.1.1"
+	}
+}
+
+228024 = {
+	name="Shutr"
+	dynasty=100378
+	martial=7
+	diplomacy=8
+	intrigue=5
+	stewardship=5
+	religion="baltic_pagan"
+	culture="lettigallish"
+	add_trait="skilled_tactician"
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1200.1.1={
+		death="1200.1.1"
+	}
+}
+
+228025 = {
+	name="Caupo"
+	dynasty=100379
+	martial=4
+	diplomacy=8
+	intrigue=4
+	stewardship=6
+	religion="baltic_pagan"
+	culture="lettigallish"
+	add_trait="clubfooted"
+	add_trait="flamboyant_schemer"
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1225.1.1={
+		death="1225.1.1"
+	}
+}
+
+228075 = {
+	name="Sabe"
+	dynasty=100373
+	religion="baltic_pagan"
+	culture="lettigallish"
+	father = 143133
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1202.1.1={
+		death="1202.1.1"
+	}
+}
+
+28020 = {
+	name="Erasts"
+	dynasty=100375
+	dna="nrgwzqwubch"
+	properties="cb0ccd0000"
+	martial=5
+	diplomacy=5
+	intrigue=4
+	stewardship=5
+	religion="baltic_pagan"
+	culture="lettigallish"
+	add_trait="slothful"
+	add_trait="honest"
+	add_trait="clubfooted"
+	add_trait="flamboyant_schemer"
+	1050.1.1={
+		birth="1050.1.1"
+	}
+	1120.1.1={
+		death="1120.1.1"
+	}
+}
+
+28075 = {
+	name="Sabe"
+	dynasty=100373
+	dna="zenttiyzzci"
+	properties="tifccd0000"
+	martial=7
+	diplomacy=7
+	intrigue=6
+	stewardship=7
+	religion="baltic_pagan"
+	culture="lettigallish"
+	add_trait="ill"
+	add_trait="tough_soldier"
+	1039.1.1={
+		birth="1039.1.1"
+	}
+	1089.1.1={
+		death="1089.1.1"
+	}
+}
+
+143132 = {
+	name="Sabe"
+	dynasty=100373
+	religion="baltic_pagan"
+	culture="lettigallish"
+	father = 28075
+	1069.1.1={
+		birth="1069.1.1"
+	}
+	1139.1.1={
+		death="1139.1.1"
+	}
+}
+143133 = {
+	name="Sabe"
+	dynasty=100373
+	religion="baltic_pagan"
+	culture="lettigallish"
+	father = 143132
+	1119.1.1={
+		birth="1119.1.1"
+	}
+	1187.1.1={
+		death="1187.1.1"
+	}
+}
+
+143149 = {
+	name="Dovyat"
+	dynasty=100372
+	religion="baltic_pagan"
+	culture="lettigallish"
+	father = 228022
+	1190.1.1={
+		birth="1190.1.1"
+	}
+	1253.6.30={
+		death="1253.6.30"
+	}
+}

@@ -1,0 +1,99 @@
+1000034000  = { #Sosso successor state
+	name="Soumaoro"
+	dynasty=1000011100
+	religion="sunni"
+	culture="sosso"
+	1205.1.1={
+	birth="1205.1.1"
+	}
+	1235.1.1={
+	death="1235.1.1"
+	}
+}
+
+1000034001 = {  #Entirely fictitious
+	name = "Sandaki" #Imperial vassal Ghana
+	dynasty = 1000011102
+	religion = "sunni"
+	culture="sosso"
+	1215.1.1={
+		birth="1215.1.1"
+	}
+	1550.1.1={
+		death="1255.1.1"
+	}
+}
+
+1000034002 = {
+	name = "Ghana" #Imperial Ghana
+	dynasty = 1000011101
+	religion = "pagan"
+	culture="sosso"
+	1040.1.1={
+		birth="1040.1.1"
+	}
+	1076.1.1={
+		death="1076.1.1"
+	}
+}
+
+1000034003 = { #fictitious post-sack
+	name = "Samory"
+	dynasty = 1000011103
+	religion = sunni
+	culture="sosso"
+	1058.1.1 = {
+		birth="1048.1.1"
+	}
+	1118.1.1 = {
+		death="1118.1.1"
+	}
+}
+
+1000034104 = { #entirely fictitious
+	name = "Buwaydh" #oulata
+	dynasty = 1000011104
+	religion = pagan
+	culture="sosso"
+	1058.1.1 = {
+		birth="1048.1.1"
+	}
+	1076.1.1 = {
+	    religion = sunni
+	}
+	1118.1.1 = {
+		death="1118.1.1"
+	}
+}
+
+1000034105 = { #entirely fictitious
+	name = "Qu" #oulata
+	dynasty = 1000011104
+	religion = pagan
+	culture="sosso"
+	1058.1.1 = {
+		birth="1046.1.1"
+	}
+	1076.1.1 = {
+	    religion = sunni
+	}
+	1118.1.1 = {
+		death="1118.1.1"
+	}
+}
+
+1000034106 = { #entirely fictitious
+	name = "Mohamed" #koumbi
+	dynasty = 1000011104
+	religion = sunni
+	culture="sosso"
+	1058.1.1 = {
+		birth="1047.1.1"
+	}
+	1076.1.1 = {
+	    religion = sunni
+	}
+	1118.1.1 = {
+		death="1118.1.1"
+	}
+}

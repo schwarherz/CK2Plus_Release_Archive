@@ -1,11 +1,11 @@
 character_event = {
-	id = 100001
-	desc = "EVTDESC100001"
+	id = 300001
+	desc = "EVTDESC300001"
 	hide_from = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA100001"
+		name = "EVTOPTA300001"
 		remove_trait = crusader
 		remove_trait = mujahid
 		remove_trait = hunter
@@ -53,8 +53,8 @@ character_event = {
 }
 
 character_event = {
-	id = 100002
-	desc = "EVTDESC100002"
+	id = 300002
+	desc = "EVTDESC300002"
 	hide_from = yes
 
 	trigger = {
@@ -68,7 +68,7 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTA100002"
+		name = "EVTOPTA300002"
 		set_character_flag = genetics_check
 		
 		hidden_tooltip = {
@@ -76,13 +76,35 @@ character_event = {
 			character_event = { id = 190000 }
 		
 			#clean up genetics traits
-			character_event = { id = 100001 }
+			character_event = { id = 300001 }
 		
 			#check for culture change
 			if = {
 				limit = {
-					NOT = { age = 6 }
-					location = { NOT = { culture = ROOT } }
+					location = { 
+						religion = ROOT
+						NOT = { culture = ROOT }
+						NOT = {
+							AND = {
+								culture = saxon
+								ROOT = { culture = norman }
+							}
+						}			
+						NOT = {
+							AND = {
+								kingdom = {
+									title = k_sicily
+								}
+								ROOT = {
+									OR = {
+										culture = greek
+										culture = maghreb_arabic
+										culture = norman
+									}
+								}
+							}
+						}
+					}
 				}
 				random = {
 					chance = 5
@@ -98,9 +120,9 @@ character_event = {
 			if = {
 				limit = {
 					father_even_if_dead = { trait = clubfooted }
+					NOT = { trait = clubfooted }
 				}
 				random = {
-					NOT = { trait = clubfooted }
 					chance = 15
 					add_trait = clubfooted
 				}					
@@ -108,9 +130,10 @@ character_event = {
 			if = {
 				limit = {
 					mother = { trait = clubfooted }
+					NOT = { trait = clubfooted }
+					
 				}
 				random = {
-					NOT = { trait = clubfooted }
 					chance = 15
 					add_trait = clubfooted
 				}					
@@ -118,9 +141,9 @@ character_event = {
 			if = {
 				limit = {
 					father_even_if_dead = { trait = harelip }
+					NOT = { trait = harelip }					
 				}
 				random = {
-					NOT = { trait = harelip }
 					chance = 15
 					add_trait = harelip
 				}					
@@ -128,9 +151,9 @@ character_event = {
 			if = {
 				limit = {
 					mother = { trait = harelip }
+					NOT = { trait = harelip }
 				}
 				random = {
-					NOT = { trait = harelip }
 					chance = 15
 					add_trait = harelip
 				}					
@@ -138,17 +161,17 @@ character_event = {
 			if = {
 				limit = {
 					father_even_if_dead = { trait = hunchback }
+					NOT = { trait = hunchback }
 				}
 				random = {
-					NOT = { trait = hunchback }
 					chance = 15
 					add_trait = hunchback
 				}					
 			}
 			if = {
 				limit = {
-					NOT = { trait = hunchback }
 					mother = { trait = hunchback }
+					NOT = { trait = hunchback }
 				}
 				random = {
 					chance = 15
@@ -158,9 +181,9 @@ character_event = {
 			if = {
 				limit = {
 					father_even_if_dead = { trait = lisp }
+					NOT = { trait = lisp }					
 				}
 				random = {
-					NOT = { trait = lisp }
 					chance = 15
 					add_trait = lisp
 				}					

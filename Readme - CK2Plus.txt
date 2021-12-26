@@ -1,7 +1,7 @@
 CK2Plus for Crusader Kings 2
 Author: Martin "Wiz" Anward
 Contact: m(dot)anward(at)live(dot)se
-Credits: EOOQE (German Localisation), Keanon (Patrum Scuta), Zaldax (An Offer You Can't Refuse), Velho e Bom Joe (Culturally Different Cities), Icecream Jones (flags, new countries), Strudel Man (many tweaks and additions), NoNotTheMindProbe (russian kingdoms), pothkan (CK2 heraldy mod), Keanon (Patrum Scuta), The_Chancellor (Council Reshuffling mod), avee (Better Rebels mod, Death Causes mod), Sniper4625 (misc graphics), Van Diemen (HRE Revised Mod), riso (Treaty of Nymphaeum scenario), Six Gun South (PMM)
+Credits: Spartan_One (Mod File Hosting), Peuri (Little Portait Mod), Trovador and trashing mad (Enhanced Portraits Mod), EmperorTojo (Icelandic Culture Mod), Ijtzoi (All the Way to Timbuktu), Syren (Syren's Nicknames Mod), mate0815 (Better Looking Characters integration), Shaytana (Better Looking Characters), Werther (French Localisation), EOOQE (German Localisation), Keanon (Patrum Scuta), Zaldax (An Offer You Can't Refuse), Velho e Bom Joe (Culturally Different Cities), Icecream Jones (flags, new countries), Strudel Man (many tweaks and additions), NoNotTheMindProbe (russian kingdoms), pothkan (CK2 heraldy mod), Keanon (Patrum Scuta), The_Chancellor (Council Reshuffling mod), avee (Better Rebels mod, Death Causes mod), Sniper4625 (misc graphics), Van Diemen (HRE Revised Mod), riso (Treaty of Nymphaeum scenario), Six Gun South (PMM)
 
 ****************
 * Installation *
@@ -22,10 +22,10 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 * Features *
 ************
 - More provinces and sea zones.
+- Crusades can result in independent Crusader states with a special truce that makes them able to survive their first few years. A Crusade for Jerusalem will now much more closely mirror the historical First Crusade with an independent Jerusalem being created.
 - Civil wars are more dangerous: A revolting vassal that is trying to depose you will ask all other vassals to join him, which can result in a major revolt among vassals that like him better than they like you.
 - Better title distribution AI: The AI will no longer give all its Duke titles to a single ruler or put Duchies in oddly misplaced locations when a better option exists.
 - Holy Wars cost piety to fight, so that the general rate of expansion in Iberia and the Middle East is slowed. Overseas Holy Wars cost a large amount of piety, and the AI will largely avoid fighting them. Crusades/Jihads are not affected.
-- Balanced Anti-Popes that are not simply endless money machines.
 - More lethal diseases and battles, making medieval life the violent and uncertain existance it should be.
 - Many more Empires and Kingdoms to create.
 - Rebalanced combat where the martial score of the generals is an important factor.
@@ -53,6 +53,7 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 ********************
 * Optional Modules *
 ********************
+- 'Mongol Faces' adds additional character portraits from Better Looking Characters that require the Mongol Faces DLC to work correctly.
 - 'No Time Limit' allows for play up to the year 100000.
 - 'No New Empires' disables creation of all of the new Empire-level titles. Note that they will still show up on empire mapmode but cannot possibly be held by a character with this mode on.
 
@@ -64,6 +65,55 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 *************
 * Changelog *
 *************
+1.08:
+- Players can now do De Jure wars against other religion groups, until I rework the way joining Holy Wars works.
+- Tumbling your courtiers is no longer a male-only or straight-only activity.
+- Crusader states should now always become Feudal, even if the most participating attacker in the Crusade is not.
+- Halved the effects of legalism on demesne size.
+- Vassals will no longer join a claim on liege war that is not targeting one of the liege's primary-level titles. This should prevent situations where you are fighting your liege for a claim on a vassal and that vassal joins the war on your side.
+- Tweaked West Africa to be slightly more historical and considerably more balanced.
+- Increased frequency of bad events (buildings destroyed, characters killed, armies rising up) from revolts.
+- Restored economic buildings to former levels, with the exception of ports as they made coastal cities rather overpowered at their previous income levels.
+- If you press a claim of lower rank than their primary title on behalf of a vassal, they will now stay in your realm (so you can press Count claims on behalf of Dukes, etc).
+- Fixed some issues with weird straits caused by province realigning.
+- You can no longer declare third-party de jure wars on characters of a different religion group.
+
+1.07:
+- Now compatible with version 1.05e.
+- Ran the mod through the validator and fixed numerous minor errors.
+- De Jure vassals are now more inclined to choose depose CBs over independence war CBs.
+- Reduced the number of short reign years but increased the opinion penalties for Regency, to make succession issues rarer but more serious.
+- Reduced the opinion boost for being entrusted with a ward.
+- Increased the cost of gifts, to make the cost better scaled to how powerful they have become (I would reduce their opinion effects if I could).
+- Reduced the dynastic opinion bonus to 15 on account of the tendency of dynasty members to stay loyal during revolts by non-dynasty members and the reduced opinion maluses from title claimaints.
+- The cost of fabricating claims now scales with your primary title level. Fabricating a claim on a County/Duchy costs 100/200, 150/300 and 200/400 for Counts, Dukes and Kings/Emperors respectively.
+- A character that wins their invasion war (for example, William the Conqueror if he wins the Norman Invasion) now gains a ten-year truce modifier that prevents all external wars, in the same way newly formed crusader states do.
+- Holy Orders will now get the ten-year truce modifier when they are granted a piece of land via event.
+- The negative effects of bankruptcy now scale, with increasing penalties for every 250 gold you owe up to a maximum of 1000.
+- It is no longer possible to create the Mongol/Timurid titles.
+- Fixed numerous bugs with depose type CBs where wars would not end properly or revolters would become independent as a result of an abdication. As a part of these fixes, it will now take 1 day between the end of a successful depose war and the actual abdication of the loser.
+- Oman now starts independent. I realize this is ahistorical, but equally ahistorical is the fact that it becomes the final holdout of the Seljuk Turks in most games, and I feel having it independent improves gameplay in the area.
+- Cumans are now an Empire and Cherson is now in the Kingdom of Crimea. This was done to try and prevent Cumans from always ending up as a de jure title.
+- Increased prestige gain for marrying into prestigious dynasties.
+- Icelandic is now a separate culture.
+- You can no longer fight De Jure wars against characters of a different religion group, to prevent them being used to get around the Holy War defensive chains.
+- Reduced Holy Order cost back to 50 piety.
+- Muslims can now only appoint a single concubine, as court sizes quickly get ridiculous with three of them.
+- Added barony names, starting baronies and a reasonable number of barony slots to West Africa, so the area is now actually worth playing in. Many of the barony names have no historical grounds (named after modern settlements) so any input on name replacements from people knowledgeable of medieval West Africa would be welcome.
+- Split Mauretania into the Kingdoms of Mauretania and Morocco.
+- Integrated the All the Way to Timbuktu mod that adds 30 new provinces in West Africa, along with three new Kingdoms and a new Empire.
+- Integrated Syren's Nicknames Mod with over 90 new ruler nicknames.
+- Integrated Better Looking Characters mod. The parts that require the Mongol Faces DLC were placed in the optional module 'Mongol Faces'.
+- The Papal State is now an Empire, both to prevent the Pope from being vassalized and to prevent the Papal State from assimiliating Spoleto.
+- Removed the building cost reduction on oversee construction, but made it so the 'Meets Master Builder' event lowers the cost of all construction in the province by 20% for 10 years.
+- Reduced the tax bonus from having your Steward collect taxes.
+- Reduced the power of economic buildings. On average, a tax income building will pay itself back in 100 years.
+- Pressing claims on behalf of claimaints now works as in vanilla, where a character will only become your landed vassal if they are your de jure vassal or of your dynasty.
+- There are now three Muslim Titlar Kingdoms in Iberia: Al-Mawsat (Capital: Granada), Al-Xarq (Capital: Porto) and Al-Garb (Capital: Zaragoza). A ruler that holds all three can form the Titular Empire of Al-Andalus.
+- Fixed a bug that was preventing Crusade/Jihad notifications from working properly.
+- The AI must now spend some piety to call a Crusade or Jihad (preventing repeated failed Crusades by the same character).
+- A ruler defending against a Crusade or Jihad can now call on a very large portion of their levies (players cannot do so if they are also fighting an offensive war).
+
 1.06:
 - Now compatible with 1.05d.
 - Tweaked the Duchies in Syria and Mesopotamia.

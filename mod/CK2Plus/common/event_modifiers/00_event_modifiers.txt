@@ -26,6 +26,12 @@
 # 18 - Characters 			- 36
 # 37 - Prison 				- 38
 # 39 - Love				- 40
+# 41 - Transparent
+# 42 - Rich
+# 43 - Prosperous
+# 44 - Poor
+# 45 - Struggling
+# 46 - Revolt
 
 # HARD CODED - DO NOT REMOVE
 the_dungeon = {
@@ -172,7 +178,7 @@ true_christian_knight = {
 }
 
 diligent_on_cost = {
-	build_cost_modifier = -0.33
+	build_cost_modifier = -0.1
 	icon = 12
 }
 diligent_on_time = {
@@ -425,7 +431,7 @@ no_shackles = {
 	icon = 18
 }
 master_builder = {
-	local_build_time_modifier = -0.05
+	local_build_cost_modifier = -0.2
 	icon = 12
 }
 sabotaged_building = {
@@ -561,7 +567,6 @@ brazen_bull = {
 tortured_prisoner = {
 	health = -3
 	icon = 36
-	icon = 23
 }
 master_impaler = {
 	intrigue = 2
@@ -754,6 +759,32 @@ used_poetry_timer = { icon = 1 }
 lustful_affair_timer = { icon = 1 }
 
 blissful_timer = { icon = 1 }
+
+friend_at_war_timer = { icon = 1 }
+
+heretic_friend_timer = { icon = 1 }
+
+friend_diplomacy_timer = { icon = 1 }
+
+friend_martial_timer = { icon = 1 }
+
+friend_stewardship_timer = { icon = 1 }
+
+friend_intrigue_timer = { icon = 1 }
+
+friend_learning_timer = { icon = 1 }
+
+greedy_steward_timer = { icon = 1 }
+
+recalculate_rivalry_modifier = { icon = 1 }
+
+religious_rival_timer = { icon = 1 }
+
+hunting_rival_timer = { icon = 1 }
+
+revenge_seeker_timer = { icon = 1 }
+
+killed_father_timer = { icon = 1 }
 
 # Possessed
 
@@ -1101,5 +1132,54 @@ sacrifice_gateshell = {
 	church_opinion = -2
 	general_opinion = -2
 	monthly_character_prestige = -0.2
+	icon = 5
+}
+
+friendly_innovations = {
+	local_build_time_modifier = -0.2
+	build_cost_modifier = -0.2
+	icon = 12
+}
+
+pious_priests = {
+	monthly_character_piety = 0.2
+	church_opinion = 2
+	global_tax_modifier = -0.1
+	icon = 8
+}
+
+the_failed_poisoner = {
+	intrigue = -1
+	icon = 23
+}
+
+master_poisoner = {
+	intrigue = 3
+	monthly_character_prestige = 0.25
+	icon = 5
+}
+
+mod_forgives_poisoner = {
+	intrigue = -2
+	diplomacy = 2
+	icon = 3
+}
+entertaining_entertainment = {
+	general_opinion = 2
+	diplomacy = 2
+	icon = 3
+}
+fabulous_feast = {
+	general_opinion = 5
+	diplomacy = 5
+	icon = 3
+}
+poor_revenge_seeker = {
+	monthly_character_prestige = -0.1
+	intrigue = -3
+	icon = 23
+}
+hot_revenge = {
+	intrigue = 5
 	icon = 5
 }

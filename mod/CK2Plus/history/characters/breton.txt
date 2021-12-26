@@ -1,0 +1,2864 @@
+10041 = {
+	name="Agnès"
+	# AKA: Agnez
+	female = yes
+	dynasty=311
+	martial=5
+	diplomacy=6
+	intrigue=8
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="gluttonous"
+	add_trait="lustful"
+	add_trait="flamboyant_schemer"
+	father=10042
+	mother=10043
+	1010.1.2={
+		birth="1010.1.2"
+	}
+	1055.1.2={
+		death="1055.1.2"
+	}
+}
+
+10042 = {
+	name="Alain" 
+	# AKA: Alan 'Caignart'
+	dynasty=311
+	martial=6
+	diplomacy=6
+	intrigue=8
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="misguided_warrior"
+	992.1.2={
+		birth="992.1.2"
+	}
+	1026.1.2={
+		add_spouse=10043
+	}
+	1058.1.2={
+		death="1058.1.2"
+	}
+}
+
+10043 = {
+	name="Judith"
+	# AKA: Judhael
+	female = yes
+	dynasty=20016
+	martial=4
+	diplomacy=6
+	intrigue=7
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="charismatic_negotiator"
+	father=10056
+	mother=1357
+	990.1.2={
+		birth="990.1.2"
+	}
+	1063.1.2={
+		death="1063.1.2"
+	}
+}
+
+10044 = {
+	name="Alain"
+	# AKA: Alan
+	dynasty=22006
+	martial=8
+	diplomacy=4
+	intrigue=5
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	add_trait="thrifty_clerk"
+	father=348
+	1057.1.2={
+		birth="1057.1.2"
+	}
+	1107.1.2={
+		death="1107.1.2"
+	}
+}
+
+10045 = {
+	name="Geoffroy"
+	# AKA: Goffroi 'Grenonat'
+	dynasty=22006
+	martial=6
+	diplomacy=4
+	intrigue=5
+	stewardship=8
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	add_trait="flamboyant_schemer"
+	father=344
+	1025.1.2={
+		birth="1025.1.2"
+	}
+	1084.10.25={
+		death="1084.10.25"
+	}
+}
+
+10047 = {
+	name="Alain" #Alain Niger
+	# AKA: Alan the Black
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	add_trait="envious"
+	add_trait="tough_soldier"
+	add_trait="wroth"
+	father=346 #Éon I de Penthièvre
+	#a mistress or mother=10041
+	1044.1.1={
+		birth="1044.1.1"
+	}
+	1056.1.1={
+		give_nickname=nick_the_black
+	}
+	1093.1.1={
+		death="1093.1.1"
+	}
+}
+
+10048 = {
+	name="Derien" #Derien, lord of the Roche-Derrien
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	add_trait="temperate"
+	add_trait="tough_soldier"
+	add_trait="bastard"
+	father=346 #Éon I de Penthièvre
+	#a mistress or mother=10041
+	1039.1.1={
+		birth="1039.1.1"
+	}
+	1089.1.1={
+		death="1089.1.1"
+	}
+}
+
+10051 = {
+	name="Adelindis"
+	# AKA: Adelendis
+	female = yes
+	dynasty=311
+	martial=6
+	diplomacy=4
+	intrigue=7
+	stewardship=4
+	religion="catholic"
+	culture="breton"
+	add_trait="patient"
+	add_trait="charitable"
+	add_trait="indulgent_wastrel"
+	father=10042
+	mother=10043
+	1035.1.2={
+		birth="1035.1.2"
+	}
+	1085.1.2={
+		death="1085.1.2"
+	}
+}
+
+10053 = {
+	name="Guérech"
+	# AKA: Guerech
+	dynasty=311
+	martial=8
+	diplomacy=4
+	intrigue=7
+	stewardship=4
+	religion="catholic"
+	culture="breton"
+	add_trait="temperate"
+	add_trait="arbitrary"
+	add_trait="martial_cleric"
+	father=10042
+	mother=10043
+	1031.1.2={
+		birth="1031.1.2"
+	}
+	1079.1.2={
+		death="1079.1.2"
+	}
+}
+
+10054 = {
+	name="Benoît"
+	# AKA: Benead
+	dynasty=311
+	martial=6
+	diplomacy=4
+	intrigue=7
+	stewardship=4
+	religion="catholic"
+	culture="breton"
+	add_trait="lisp"
+	add_trait="just"
+	add_trait="martial_cleric"
+	father=10042
+	mother=10043
+	1040.1.2={
+		birth="1040.1.2"
+	}
+	1115.1.2={
+		death="1115.1.2"
+	}
+}
+
+10055 = {
+	name="Hodierne"
+	female = yes
+	dynasty=311
+	martial=6
+	diplomacy=8
+	intrigue=4
+	stewardship=4
+	religion="catholic"
+	culture="breton"
+	add_trait="humble"
+	add_trait="martial_cleric"
+	father=10042
+	mother=10043
+	1025.1.2={
+		birth="1025.1.2"
+	}
+	1075.1.2={
+		death="1075.1.2"
+	}
+}
+
+10056 = {
+	name="Judicaël"
+	# AKA: Judikael
+	dynasty=20016
+	martial=4
+	diplomacy=6
+	intrigue=5
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="tough_soldier"
+	father=50004
+	960.1.2={
+		birth="960.1.2"
+	}
+	1004.1.2={
+		death="1004.1.2"
+	}
+}
+
+10057 = {
+	name="Budic"
+	dynasty=20016
+	martial=4
+	diplomacy=6
+	intrigue=5
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="humble"
+	add_trait="tough_soldier"
+	father=10056
+	mother=1357
+	970.1.2={
+		birth="970.1.2"
+	}
+	1040.1.2={
+		death="1040.1.2"
+	}
+}
+
+10058 = {
+	name="Guyomarc'h"
+	# AKA: Guiomarc'h
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=91213 #common father with Morvan
+	990.1.1={
+		birth="990.1.1"
+	}
+	1031.1.1={
+		death="1031.1.1"
+	}
+}
+
+10059 = {
+	name="Morvan"
+	# AKA: Alan or Alain
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=91213 #common father with Morvan
+	1030.1.1={
+		birth="1030.1.1"
+	}
+	1085.1.1={
+		death="1085.1.1"
+	}
+}
+
+10060 = {
+	name="Guyomarc'h"
+	# AKA: Guiomarc'h
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=91244 
+	1056.1.1={
+		birth="1056.1.1"
+	}
+	1103.1.1={
+		death="1103.1.1"
+	}
+}
+
+178 = {
+	name="Hoël"
+	# AKA: Hoel
+	dynasty=311
+	martial=8
+	diplomacy=8
+	intrigue=8
+	stewardship=7
+	religion="catholic"
+	culture="breton"
+	add_trait="charismatic_negotiator"
+	father=10042
+	mother=10043
+	1030.1.2={
+		birth="1030.1.2"
+	}
+	1058.1.2={
+		add_spouse=347
+	}
+	1084.4.13={
+		death="1084.4.13"
+	}
+}
+
+180 = {
+	name="Alain"
+	# AKA: Alan 'Fergant'
+	dynasty=311
+	martial=4
+	diplomacy=7
+	intrigue=7
+	stewardship=4
+	religion="catholic"
+	culture="breton"
+	father=178
+	mother=347
+	1060.1.2={
+		birth="1060.1.2"
+	}
+	1112.1.8={
+		death="1112.1.8"
+	}
+}
+
+144155 = {
+	name="Geoffroy"
+	dynasty=312
+	religion="catholic"
+	culture="breton"
+	father=40909
+	1067.1.1 = {
+		birth="1067.1.1"
+	}
+	1142.1.1 = {
+		death="1142.1.1"
+	}
+}
+
+144156 = {
+	name="Alan"
+	dynasty=312
+	religion="catholic"
+	culture="breton"
+	father=40909
+	1085.1.1 = {
+		birth="1085.1.1"
+	}
+	1128.1.1 = {
+		death="1128.1.1"
+	}
+}
+
+
+205800 = {
+	name="Magalie"
+	female = yes
+	dynasty=312
+	martial=4
+	diplomacy=5
+	intrigue=7
+	stewardship=7
+	religion="catholic"
+	culture="breton"
+	add_trait="flamboyant_schemer"
+	father=205802
+	mother=205750
+	1165.1.10={
+		birth="1165.1.10"
+	}
+	1215.1.10={
+		death="1215.1.10"
+	}
+}
+
+205801 = {
+	name="Marguerite"
+	female = yes
+	dynasty=312
+	martial=5
+	diplomacy=7
+	intrigue=6
+	stewardship=7
+	religion="catholic"
+	culture="breton"
+	add_trait="martial_cleric"
+	father=205802
+	mother=205750
+	1165.1.10={
+		birth="1165.1.10"
+	}
+	1215.1.10={
+		death="1215.1.10"
+	}
+}
+
+205802 = {
+	name="Alan"
+	dynasty=312
+	martial=6
+	diplomacy=4
+	intrigue=4
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="chaste"
+	add_trait="wroth"
+	add_trait="tough_soldier"
+	father=205803
+	mother=205804
+	1135.1.2={
+		birth="1135.1.2"
+	}
+	1164.1.2={
+	add_spouse=205750
+	}
+	1185.1.2={
+		death="1185.1.2"
+	}
+}
+
+205803 = {
+	name="Alan"
+	dynasty=312
+	martial=7
+	diplomacy=5
+	intrigue=4
+	stewardship=4
+	religion="catholic"
+	culture="breton"
+	add_trait="patient"
+	add_trait="proud"
+	add_trait="skilled_tactician"
+	father = 144156
+	1110.1.2={
+		birth="1110.1.2"
+	}
+	1168.1.25={
+		death="1168.1.25"
+	}
+}
+
+205804 = {
+	name="Villana"
+	female = yes
+	dynasty=313
+	martial=4
+	diplomacy=7
+	intrigue=5
+	stewardship=7
+	religion="catholic"
+	culture="breton"
+	add_trait="scholarly_theologian"
+	1105.1.2={
+		birth="1105.1.2"
+	}
+	1169.1.2={
+		death="1169.1.2"
+	}
+}
+
+343 = {
+	name="Judith"
+	female = yes
+	dynasty=22006
+	martial=4
+	diplomacy=7
+	intrigue=8
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="amateurish_plotter"
+	father=340
+	mother=379
+	982.1.2={
+		birth="982.1.2"
+	}
+	1017.1.2={
+		death="1017.1.2"
+	}
+}
+
+344 = {
+	name="Alain"
+	# AKA: Alan
+	dynasty=22006
+	martial=5
+	diplomacy=4
+	intrigue=8
+	stewardship=8
+	religion="catholic"
+	culture="breton"
+	add_trait="hunchback"
+	add_trait="martial_cleric"
+	father=342
+	mother=257
+	997.1.1={
+		birth="997.1.1"
+	}
+	1032.1.1={
+		add_spouse = 393
+	}
+	1040.1.15={
+		death="1040.1.15"
+	}
+}
+
+345 = {
+	name="Adèle"
+	# AKA: Adela
+	female = yes
+	dynasty=22006
+	martial=7
+	diplomacy=4
+	intrigue=8
+	stewardship=4
+	religion="catholic"
+	culture="breton"
+	add_trait="amateurish_plotter"
+	father=342
+	mother=257
+	998.1.2={
+		birth="998.1.2"
+	}
+	1048.1.2={
+		death="1048.1.2"
+	}
+}
+
+346 = {
+	name="Eon"
+	# AKA: Edouarzh
+	dynasty=317
+	religion="catholic"
+	culture="breton"
+	father=342
+	mother=257
+	999.1.2={
+		birth="999.1.2"
+	}
+	1020.1.2={
+		add_spouse=10041
+	}
+	1079.1.7={
+		death="1079.1.7"
+	}
+}
+
+347 = {
+	name="Havoise"
+	female = yes
+	dynasty=22006
+	martial=5
+	diplomacy=6
+	intrigue=8
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="wroth"
+	add_trait="flamboyant_schemer"
+	father=344
+	mother=393
+	1033.1.2={
+		birth="1033.1.2"
+	}
+	1072.1.2={
+		death="1072.1.2"
+	}
+}
+
+350 = {
+	name="Geoffroy" #Geoffroy I Boterel
+	# AKA: Jafrez 'Boterel'
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=346 #Éon I de Penthièvre
+	mother=10041 #Agnès de Cornouaille
+	1025.1.1={
+		birth="1025.1.1"
+	}
+	1093.4.24={
+		death="1093.4.24"
+	}
+}
+
+354 = {
+	name="Brian"
+	# AKA: Brient
+	dynasty=317 #House of Penthièvre
+	dna="paobxvogmka"
+	properties="0m0dhk0000"
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=346
+	#a mistress
+	1024.1.2={
+		birth="1024.1.2"
+	}
+	1084.1.2={
+		death="1084.1.2"
+	}
+}
+
+356 = {
+	name="Alain"
+	# AKA: Alan 'Rufus'
+	dynasty=317
+	religion="catholic"
+	culture="breton"
+	father=346
+	mother=10041
+	1039.1.2={
+		birth="1039.1.2"
+	}
+	1089.1.1={
+		death="1089.1.1"
+	}
+}
+
+50001 = {
+	name="Mathias"
+	dynasty=311
+	martial=4
+	diplomacy=7
+	intrigue=5
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	father=178
+	mother=347
+	1064.1.2={
+		birth="1064.1.2"
+	}
+	1103.1.2={
+		death="1103.1.2"
+	}
+}
+
+50002 = {
+	name="Alain"
+	# AKA: Alain 'Barbetorte'
+	dynasty=20016
+	martial=8
+	diplomacy=6
+	intrigue=7
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="tough_soldier"
+	900.1.2={
+		birth="900.1.2"
+	}
+	952.1.2={
+		death="952.1.2"
+	}
+}
+
+50003 = {
+	name="Drogon"
+	dynasty=20016
+	martial=4
+	diplomacy=6
+	intrigue=2
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	father=50002
+	950.1.2={
+		birth="950.1.2"
+	}
+	958.1.2={
+		death="958.1.2"
+	}
+}
+
+50004 = {
+	name="Hoël"
+	# AKA: Hoel
+	dynasty=20016
+	martial=8
+	diplomacy=6
+	intrigue=4
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	add_trait="tough_soldier"
+	father=50002
+	930.1.2={
+		birth="930.1.2"
+	}
+	981.1.2={
+		death="981.1.2"
+	}
+}
+
+50005 = {
+	name="Guérech"
+	# AKA: Guerech
+	dynasty=20016
+	martial=6
+	diplomacy=6
+	intrigue=6
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	add_trait="martial_cleric"
+	father=50002
+	940.1.2={
+		birth="940.1.2"
+	}
+	988.1.2={
+		death="988.1.2"
+	}
+}
+
+50006 = {
+	name="Alain"
+	dynasty=20016
+	martial=4
+	diplomacy=6
+	intrigue=2
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	father=50005
+	981.1.2={
+		birth="981.1.2"
+	}
+	990.1.2={
+		death="990.1.2"
+	}
+}
+
+91159 = {
+	name="Conan" #Conan III le Gros, duke of Britanny
+	dynasty=311 #House of Cornouaille
+	religion="catholic"
+	culture="breton"
+	add_trait="gluttonous"
+	father=180 #Alain IV de Bretagne
+	mother=127016 #Ermengarde d'Anjou
+	1095.1.1={
+		birth="1095.1.1"
+	}
+	1110.1.1 = { #before 1113
+		add_spouse= 31399 #Maud Fitzroy, bastard of Henri I Beauclerc
+	}
+	1112.1.1={
+		give_nickname=nick_the_fat
+	}
+	1148.9.17={
+		death="1148.9.17"
+	}
+}
+
+91161 = {
+	name="Geoffroy" #Geoffroy II de Penthièvre
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205744 #Étienne I de Penthièvre
+	mother=205745 #Havoise de Guingamp
+	1090.1.1={
+		birth="1090.1.1"
+	}
+	#Hawise, d. of Jean de Dol
+	1148.1.1={
+		death="1148.1.1"
+	}
+}
+
+91162 = {
+	name="Rivallon" #Rivallon de Penthièvre
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91161 #Geoffroy II de Penthièvre
+	#Hawise, d. of Jean de Dol
+	1130.1.1={
+		birth="1130.1.1"
+	}
+	#Hawise, d. of Jean de Dol
+	1155.1.1={
+		death="1155.1.1" #after 1152
+	}
+}
+
+91163 = {
+	name="Étienne" #Étienne II de Penthièvre
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91161 #Geoffroy II de Penthièvre
+	#Hawise, d. of Jean de Dol
+	1120.1.1={
+		birth="1120.1.1"
+	}
+	1164.1.1={
+		death="1164.1.1"
+	}
+}
+
+91164 = {
+	name="Geoffroy" #Geoffroy III de Penthièvre
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91162 #Rivallon de Penthièvre
+	#Hawise, d. of Jean de Dol
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1209.1.1={
+		death="1209.1.1"
+	}
+}
+
+91165 = {
+	name="Henri" #Henri II d'Avaugour
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205742 #Alain I de Penthièvre
+	#Pétronille de Beaumont-au-Maine
+	1204.1.5={
+		birth="1204.1.5"
+	}
+	1281.10.6={
+		death="1281.10.6"
+	}
+}
+
+91167 = {
+	name="Mathias" #Mathias de Nantes
+	dynasty=20016 #House of Rennes
+	religion="catholic"
+	culture="breton"
+	father=10057 #Budic
+	1008.1.1={
+		birth="1008.1.1"
+	}
+	1050.1.1={
+		death="1050.1.1"
+	}
+}
+
+91168 = {
+	name="Hoël" #Hoël III de Bretagne
+	dynasty=311 #House of Cornouaille
+	religion="catholic"
+	culture="breton"
+	father=91159 #Conan III le Gros, duke of Britanny
+	mother=31399 #Maud Fitzroy, bastard of Henri I Beauclerc
+	1115.1.1={
+		birth="1115.1.1"
+	}
+	1148.1.1={
+		add_trait="bastard"
+		dynasty=0
+		add_claim = d_brittany
+	} #disinherited by his father
+	1154.1.1={
+		remove_claim = d_brittany
+	}
+	1156.1.1={
+		death="1156.1.1"
+	}
+}
+
+91169 = {
+	name="Alain" #Alain II d'Avaugour
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91165 #Henri II d'Avaugour
+	#Marguerite de Mayenne
+	1224.1.1={
+		birth="1224.1.1"
+	}
+	#Clémence de Beaufort 1246
+	1270.1.1={
+		death="1270.1.1" #after 1268
+	}
+}
+
+205740 = {
+	name="Constance" #Constance, duchess of Brittany
+	female = yes
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	add_trait="gluttonous"
+	add_trait="scholarly_theologian"
+	father=205741 #Conan IV le Petit
+	mother=203510 #Marguerite de Huntinton
+	1161.1.13={
+		birth="1161.1.13"
+	}
+	1201.11.1={
+		death="1201.11.1"
+	}
+}
+
+205741 = {
+	name="Conan" #Conan IV le Petit
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	add_trait="dwarf"
+	father=205751 #Alain de Penthièvre
+	mother=205825 #Berthe de Bretagne
+	1138.1.1={
+		birth="1138.1.1"
+	}
+	1160.1.1={
+		add_spouse = 203510 #Marguerite de Huntinton
+	}
+	1171.2.21={
+		remove_spouse = 203510 #Marguerite de Huntinton
+		death="1171.2.21"
+	}
+}
+
+205744 = {
+	name="Étienne"
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=346 #Eudes de Penthièvre
+	mother=10041 #Agnès de Cornouaille
+	1050.1.1={
+		birth="1050.1.1"
+	}
+	1080.1.1={
+		add_spouse=205745 #Havoise de Guingamp
+	}
+	1136.4.13={
+		death="1136.4.13"
+	}
+}
+
+205750 = {
+	name="Constance" #Constance de Bretagne
+	female = yes
+	dynasty=317 #House of Penthièvre
+	father=205751 #Alain le Noir
+	mother=205825 #Berthe de Bretagne
+	religion="catholic"
+	culture="breton"
+	1140.1.1={
+		birth="1140.1.1"
+	}
+	#spouse of Alain III de Rohan
+	1184.1.19={
+		death="1184.1.19"
+	}
+}
+
+205751 = {
+	name="Alain" #de Bretagne
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205744 #Étienne I de Penthièvre
+	mother=205745 #Havoise de Guingamp
+	1095.1.1={
+		birth="1095.1.1"
+	}
+	1138.1.1={
+		add_spouse=205825 #Bertha de Bretagne
+	}
+	1146.1.1={
+		death="1146.1.1"
+	}
+}
+
+
+40907 = {
+	name="Guethenoc"
+	dynasty=312
+	martial=7
+	diplomacy=5
+	intrigue=7
+	stewardship=4
+	religion="catholic"
+	culture="breton"
+	add_trait="brilliant_strategist"
+	970.1.2={
+		birth="970.1.2"
+	}
+	1022.1.2={
+		death="1022.1.2"
+	}
+}
+
+40908 = {
+	name="Josselin"
+	dynasty=312
+	martial=5
+	diplomacy=7
+	intrigue=6
+	stewardship=5
+	religion="catholic"
+	culture="breton"
+	add_trait="envious"
+	add_trait="just"
+	add_trait="charismatic_negotiator"
+	father=40907
+	1010.1.2={
+		birth="1010.1.2"
+	}
+	1074.1.2={
+		death="1074.1.2"
+	}
+}
+
+40909 = {
+	name="Eudon"
+	dynasty=312
+	martial=6
+	diplomacy=8
+	intrigue=7
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="gluttonous"
+	add_trait="proud"
+	add_trait="flamboyant_schemer"
+	father=40908
+	1045.1.2={
+		birth="1045.1.2"
+	}
+	1095.1.2={
+		death="1095.1.2"
+	}
+}
+
+40910 = {
+	name="Mainguy"
+	dynasty=312
+	martial=5
+	diplomacy=5
+	intrigue=6
+	stewardship=5
+	religion="catholic"
+	culture="breton"
+	add_trait="gluttonous"
+	add_trait="slothful"
+	add_trait="detached_priest"
+	father=40908
+	1047.1.2 = {
+		birth="1047.1.2"
+	}
+	1097.1.2 = {
+		death="1097.1.2"
+	}
+}
+
+455580 = {
+	name="Jeanne" #Jeanne d'Avaugour
+	female = yes
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91258 #Henri IV d'Avaugour
+	#Jeanne d'Harcourt
+	1290.1.1={
+		birth="1290.1.1"
+	}
+	#Guy de Bretagne, compte de Penthièvre (1318)
+	1327.8.30={
+		death="1327.8.30"
+	}
+}
+
+455581 = {
+	name="Henri" #I assume he is Henri III d'Avaugour
+	dynasty=317 #House of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91169 #Alain II d'Avaugour
+	#Clémence de Beaufort, lady of Dinan
+	1247.1.1={
+		birth="1247.1.1"
+	}
+	#Marie de Brienne in 1270
+	1301.1.1={
+		death="1301.1.1"
+	}
+}
+
+455751 = {
+	name="Arthur" #Arthur II de Bretagne
+	dynasty=86 #Capetian house of Dreux
+	religion="catholic"
+	culture="frankish"
+	father=455789 #Jean II de Bretagne
+	mother=455791 #Béatrix d'Angleterre
+	1262.7.25 = {
+		birth="1262.7.25"
+	}
+	1277.1.1 = {
+		add_spouse=455590 #Marie de Limoges
+	}
+	1292.5.1={
+		add_spouse=91240 #Yolande de Dreux
+	}
+	1312.8.27 = {
+		death="1312.8.27"
+	}
+}
+
+455750 = {
+	name="Jean" #Jean III le Bon de Bretagne
+	dynasty=86
+	religion="catholic"
+	culture="breton"
+	add_trait="just"
+	father=455751  #Arthur II de Bretagne
+	mother=455590  #Marie de Comborn
+	1286.3.8 = {
+		birth="1286.3.8"
+	}
+	1298.1.2 = {
+		add_spouse=455510
+	}
+	1341.4.30 = {
+		death="1341.4.30"
+	}
+}
+
+455754 = {
+	name="Gui" #Guy VII de Limoges
+	dynasty=86
+	religion="catholic"
+	culture="breton"
+	father=455751  #Arthur II de Bretagne
+	mother=455590  #Marie de Comborn
+	1287.1.2 = {
+		birth="1287.1.2"
+	}
+	1316.1.2 = {
+		add_spouse=455770
+	}
+	1331.3.27 = {
+		death="1331.3.27"
+	}
+}
+
+455755 = {
+	name="Jean" #Jean IV de Bretagne
+	dynasty=86 #Capetian house of Dreux
+	religion="catholic"
+	culture="frankish"
+	father=455751 #Arthur II de Bretagne
+	mother=91240 #Yolande de Dreux
+	1293.1.1 = {
+		birth="1293.1.1"
+	}
+	1329.1.2 = {
+		add_spouse=455714
+	}
+	1345.9.26 = {
+		death="1345.9.26"
+	}
+}
+
+455756 = {
+	name="Alix" #Alix de Bretagne
+	female=yes
+	dynasty=86 #Capetian house of Dreux
+	religion="catholic"
+	culture="frankish"
+	father=455751 #Arthur II de Bretagne
+	mother=91240 #Yolande de Dreux
+	1298.1.1 = {
+		birth="1298.1.1"
+	}
+	1377.5.1 = {
+		death="1377.5.1"
+	}
+}
+
+455757 = {
+	name="Marie" #Marie de Bretagne
+	female=yes
+	dynasty=86 #Capetian house of Dreux
+	religion="catholic"
+	culture="frankish"
+	father=455751 #Arthur II de Bretagne
+	mother=91240 #Yolande de Dreux
+	1302.1.1 = {
+		birth="1302.1.1"
+	}
+	1371.5.24 = {
+		death="1371.5.24"
+	}
+}
+
+205825 = {
+	name="Berthe" #Bertha, duchess of Britanny
+	female=yes
+	dynasty=311 #House of Cornouaille
+	martial=5
+	diplomacy=8
+	intrigue=7
+	stewardship=8
+	learning=5
+	religion="catholic"
+	culture="breton"
+	add_trait="patient"
+	add_trait="brave"
+	add_trait="thrifty_clerk"
+	father=91159 #Conan III le Gros, duke of Britanny
+	mother=31399 #Maude d'Angleterre
+	1114.1.1={
+		birth="1114.1.1"
+	}
+	#Alain de Penthièvre (1138.1.1)
+	1157.1.17={
+		death="1157.1.17"
+	}
+}
+
+5650 = {
+	name="Radulf"
+	# AKA: Radulf 'Stalre'
+	dynasty=559
+	martial=4
+	diplomacy=8
+	intrigue=8
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="craven"
+	add_trait="tough_soldier"
+	1011.1.1 = {
+		birth="1011.1.1"
+	}
+	1068.1.1 = {
+		death="1068.1.1"
+	}
+}
+
+5652 = {
+	name="Radulf"
+	# AKA Radulf 'de Guader'
+	dynasty=559
+	martial=5
+	diplomacy=7
+	intrigue=5
+	stewardship=6
+	religion="catholic"
+	culture="breton"
+	add_trait="deceitful"
+	add_trait="just"
+	add_trait="skilled_tactician"
+	father=5650
+	1040.1.2 = {
+		birth="1040.1.2"
+	}
+	1066.1.1 = {
+		employer=140
+	}
+	1096.1.2 = {
+		death="1096.1.2"
+	}
+}
+
+91213 = {
+	name="Bran" #unknown common ancestor of Guyomar I and Morvan
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	950.1.1={
+		birth="950.1.1"
+	}
+	1041.1.1={
+		death="1041.1.1"
+	}
+}
+
+91214 = {
+	name="Ehuarn" #Ehuarn
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=10059 #Morvan, viscount of Léon
+	1060.1.1={
+		birth="1060.1.1"
+	}
+	1070.1.1={
+		death="1070.1.1" #after 1066
+	}
+}
+
+91215 = {
+	name="Hervé" #Hervé II
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=10060 #Guyomar II
+	1080.1.1={
+		birth="1080.1.1"
+	}
+	1168.1.1={
+		death="1168.1.1"
+	}
+}
+
+91216 = {
+	name="Hamon" #Hamon
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=91215 #Hervé II
+	1131.1.1={
+		birth="1131.1.1"
+	}
+	1171.1.25={
+		death="1171.1.25"
+	}
+}
+
+91217 = {
+	name="Hervé" #Hervé
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=10060 #Guyomar II
+	1085.1.1={
+		birth="1085.1.1"
+	}
+	1130.1.1={
+		death="1130.1.1" #after 1128.3.3
+	}
+}
+
+91218 = {
+	name="Guyomar" #Guyomar de Léon
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205787 #Hervé
+	1200.1.1={
+		birth="1200.1.1"
+	}
+	1235.1.1={
+		death="1235.1.1" #after 1231.5.1
+	}
+}
+
+91219 = {
+	name="Hervé" #Hervé III de Léon
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=91218 #Guyomar de Léon
+	1220.1.1={
+		birth="1220.1.1"
+	}
+	#Marguerite
+	1265.1.1={
+		death="1265.1.1"
+	}
+}
+91220 = {
+	name="Hervé" #Hervé IV de Léon
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=91219 #Hervé III de Léon
+	#Marguerite
+	1240.1.1={
+		birth="1240.1.1"
+	}
+	1300.1.1={
+		death="1300.1.1" #after 1254.6.7
+	}
+}
+91221 = {
+	name="Ame" #Ame de Léon
+	dynasty=20017 #La Marck
+	female=yes
+	religion="catholic"
+	culture="breton"
+	father=91220 #Hervé IV de Léon
+	1260.1.1={
+		birth="1260.1.1"
+	}
+	#Prigent de Coëtmen, viscount of Tonquedec
+	1300.1.1={
+		death="1300.1.1" #after 1254.6.7
+	}
+}
+91222 = {
+	name="Ame" #Ame de Léon
+	dynasty=20017 #La Marck
+	female=yes
+	religion="catholic"
+	culture="breton"
+	father=91219 #Hervé III de Léon
+	#Marguerite
+	1260.1.1={
+		birth="1260.1.1"
+	}
+	#Roland de Dinan
+	1280.1.1={
+		death="1280.1.1" #after 1276.10.1
+	}
+}
+
+91223 = {
+	name="Hervé" #Hervé de Léon
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=91220 #Hervé IV de Léon
+	1265.1.1={
+		birth="1265.1.1"
+	}
+	1325.1.1={
+		death="1325.1.1" #after 1224.1.1
+	}
+}
+91224 = {
+	name="Hervé" #Hervé de Léon
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=91223 #Hervé IV de Léon
+	1285.1.1={
+		birth="1285.1.1"
+	}
+	#Marguerite, d. of Gerard Chabot, lord of Rays & of Machecoul
+	1365.1.1={
+		death="1365.1.1"
+	}
+}
+
+91244 = {
+	name="Alan"
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=10058 #Guyomar I
+	1010.1.1={
+		birth="1010.1.1"
+	}
+	1100.1.1={
+		death="1100.1.1"
+	}
+}
+
+91245 = {
+	name="Alfred"
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=10058 #Guyomar I
+	1015.1.1={
+		birth="1015.1.1"
+	}
+	1095.1.1={
+		death="1095.1.1"
+	}
+}
+
+91246 = {
+	name="Judicaël" #father of Beranger of Rennes, unknow name
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	860.1.1={
+		birth="860.1.1"
+	}
+	900.1.1={
+		death="900.1.1"
+	}
+}
+
+91247 = {
+	name="Berenger" #Berenger, count of Bayeux and of Rennes
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	father=91246 #his father, called ingame Judicaël
+	889.1.1={
+		birth="889.1.1"
+	}
+	#spouse the daughter of Gurvand of Britanny
+	930.1.1={
+		death="930.1.1" #before 931
+	}
+}
+
+91248 = {
+	name="Judicaël" #Judicaël/Juhael
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	father=91247 #Berenger
+	#d. of Gurvand of Britanny
+	910.1.1={
+		birth="910.1.1"
+	}
+	970.1.1={
+		death="970.1.1"
+	}
+}
+	
+91249 ={
+	name="Meen"
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	father=91248 #Judicaël
+	925.1.1={
+		birth="925.1.1"
+	}
+	1020.1.1={
+		death="1020.1.1"
+	}
+}
+
+91250 ={
+	name="Enoguen"
+	female=yes
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	father=91248 #Judicaël
+	929.1.1={
+		birth="929.1.1"
+	}
+	#Triscan de Vitré
+	1000.1.1={
+		death="1000.1.1"
+	}
+}
+
+91251 = {
+	name="Judicaël"
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	father=340 #Conan le Tort
+	mother=379 #Ermengarde d'Anjou
+	985.1.1={
+		birth="985.1.1"
+	}
+	1037.1.1={
+		death="1037.1.1"
+	}
+}
+
+91252 ={
+	name="Catuallon"
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	father=340 #Conan le Tort
+	mother=379 #Ermengarde d'Anjou
+	986.1.1={
+		birth="986.1.1"
+	}
+	1050.1.15={
+		death="1050.1.15" #this day or after
+	}
+}
+
+91253 ={
+	name="Hurnod" #Hurnod/Urvod de Bretagne
+	dynasty=22006 #Rennes	
+	religion="catholic"
+	culture="breton"	
+	father=340 #Conan le Tort
+	mother=379 #Ermengarde d'Anjou	
+	987.1.1={
+		birth="987.1.1"
+	}
+	1030.1.1={
+		death="1030.1.1" #after 1026
+	}
+}
+
+91254 ={
+	name="Alain"
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=340 #Conan le Tort
+	990.1.1={
+		birth="990.1.1"
+	}
+	1050.1.1={
+		death="1050.1.1"
+	}
+}
+
+91255 = {
+	name="Judicaël" #aka Glanderius
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=340 #Conan le Tort
+	991.1.1={
+		birth="991.1.1"
+	}
+	1060.1.1={
+		death="1060.1.1"
+	}
+}
+
+91256 = {
+	name="Alain" 
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=340 #Conan le Tort
+	991.1.1={
+		birth="991.1.1"
+	}
+	1065.1.1={
+		death="1065.1.1"
+	}
+}
+
+91257 = {
+	name="Conan"
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=340 #Conan le Tort
+	992.1.1={
+		birth="992.1.1"
+	}
+	1060.1.1={
+		death="1060.1.1"
+	}
+}
+
+91260 = {
+	name="Evenus" #Evenus/Linzoël de Bretagne
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	father=342 #Geoffroy I de Bretagne
+	mother=257 #Havise de Normandie
+	997.1.1={
+		birth="997.1.1"
+	}
+	1040.1.1={
+		death="1040.1.1" #after 1037
+	}
+}
+
+91261 = {
+	name="Guillaume" #Guillaume de Bretagne
+	dynasty=317#Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=346 #Eudes de Bretagne
+	mother=10041 #Agnès de Cornouaille
+	1040.1.1={
+		birth="1040.1.1"
+	}
+	1100.1.1={
+		death="1100.1.1"
+	}
+}
+
+91262 = {
+	name="Robert" #Robert de Bretagne
+	dynasty=317#Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=346 #Eudes de Bretagne
+	mother=10041 #Agnès de Cornouaille
+	1041.1.1={
+		birth="1041.1.1"
+	}
+	1085.1.1={
+		death="1085.1.1" #after 1083
+	}
+}
+
+91263 = {
+	name="Richard" #Richard de Bretagne
+	dynasty=317#Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=346 #Eudes de Bretagne
+	mother=10041 #Agnès de Cornouaille
+	1042.1.1={
+		birth="1042.1.1"
+	}
+	1105.1.1={
+		death="1105.1.1"
+	}
+}
+
+91264 = {
+	name="Bodin"
+	dynasty=317#Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=346 #Eudes de Bretagne
+	1040.1.1={
+		birth="1040.1.1"
+	}
+	1100.1.1={
+		death="1100.1.1"
+	}
+}
+
+91265 = {
+	name="Ribald"
+	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=346 #Eudes de Bretagne
+	1041.1.1={
+		birth="1041.1.1"
+	}
+	1101.1.1={
+		death="1101.1.1"
+	}
+}
+
+91266 = {
+	name="Bardulf"
+	dynasty=317 #Rennes house of Penthièvre-Ravensworth
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=346 #Eudes de Bretagne
+	1042.1.1={
+		birth="1042.1.1"
+	}
+	1102.1.1={
+		death="1102.1.1"
+	}
+}
+
+91267 = {
+	name="Arnald"
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=346 #Eudes de Bretagne
+	1043.1.1={
+		birth="1043.1.1"
+	}
+	1103.1.1={
+		death="1103.1.1"
+	}
+}
+
+91268 = {
+	name = "Elina" #bastard daughter
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=346 #Eudes de Bretagne
+	1044.1.1={
+		birth="1044.1.1"
+	}
+	1104.1.1={
+		death="1104.1.1"
+	}
+}
+
+91269 = {
+	name="Conan"
+	dynasty=317#Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=350 #Geoffroy Boretel
+	#unknow mother
+	1045.1.1={
+		birth="1045.1.1"
+	}
+	1098.2.9 = {
+		death="1098.2.9"
+	}
+}
+
+91270 = {
+	name="Acarias"
+	dynasty=317 #Rennes house of Penthièvre-Ravensworth
+	religion="catholic"
+	culture="breton"
+	father=91266 #Bardulf
+	1065.1.1={
+		birth="1065.1.1"
+	}
+	1140.1.1={
+		death="1140.1.1" #after 1130
+	}
+}
+
+91271 = {
+	name="Scolland"
+	dynasty=317 #Rennes house of Penthièvre-Ravensworth
+	religion="catholic"
+	culture="breton"
+	father=91266 #Bardulf
+	1070.1.1={
+		birth="1070.1.1"
+	}
+	1145.1.1={
+		death="1145.1.1" #after 1130
+	}
+}
+
+91272 = { 
+	name="Hervey"
+	dynasty=317 #Rennes house of Penthièvre-Ravensworth
+	religion="catholic"
+	culture="breton"
+	father=91270 #Acarias
+	1090.1.1={
+		birth="1090.1.1"
+	}
+	1150.1.1={
+		death="1150.1.1"
+	}
+}
+
+91273 = {
+	name="Walter"
+	dynasty=317 #Rennes house of Penthièvre-Ravensworth
+	religion="catholic"
+	culture="breton"
+	father=91270 #Acarias
+	1092.1.1={
+		birth="1092.1.1"
+	}
+	1152.1.1={
+		death="1152.1.1"
+	}
+}
+
+91274 = {
+	name="Harscoit"
+	dynasty=317 #Rennes house of Penthièvre-Ravensworth
+	religion="catholic"
+	culture="breton"
+	father=91270 #Acarias
+	1095.1.1={
+		birth="1095.1.1"
+	}
+	1155.1.1={
+		death="1155.1.1"
+	}
+}
+
+91275 = {
+	name="Henry"
+	dynasty=317 #Rennes house of Penthièvre-Ravensworth
+	religion="catholic"
+	culture="breton"
+	father=91270 #Acarias
+	1096.1.1={
+		birth="1096.1.1"
+	}
+	1156.1.1={
+		death="1156.1.1"
+	}
+}
+
+91276 ={
+	name="Mathilde" #Mathilde de Penthièvre
+	female=yes
+	dynasty=317#Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205744 #Étienne de Bretagne
+	mother=205745 #Havise de Gingamp
+	1111.1.1={
+		birth="1111.1.1"
+	}
+	1170.1.1={
+		death="1170.1.1"
+	}
+}
+
+91277 = {
+	name="Tiphaine" #Tiphaine de Penthièvre
+	female=yes
+	dynasty=317#Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205744 #Étienne de Bretagne
+	mother=205745 #Havise de Gingamp
+	1112.1.1={
+		birth="1112.1.1"
+	}
+	1175.1.1={
+		death="1175.1.1"
+	}
+}
+
+91278 = {
+	name="Gonnor" #Gonnor de Penthièvre
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205744 #Étienne de Bretagne
+	mother=205745 #Havise de Gingamp
+	1113.1.1={
+		birth="1113.1.1"
+	}
+	1175.1.1={
+		death="1175.1.1"
+	}
+}
+91279 = {
+	name="Olive"
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205744 #Étienne de Bretagne
+	mother=205745 #Havise de Gingamp
+	1113.1.1={
+		birth="1113.1.1"
+	}
+	1175.1.1={
+		death="1175.1.1"
+	}
+}
+
+91280 = {
+	name="Étienne" #Étienne de Penthièvre
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91162 #Rivallon de Penthièvre
+	#? de Dol
+	1145.1.1={
+		birth="1145.1.1"
+	}
+	1164.1.1={
+		death="1164.1.1"
+	}
+}
+91281 = {
+	name="Elina" #Elina de Penthièvre
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91162 #Rivallon de Penthièvre
+	#? de Dol
+	1155.1.1={
+		birth="1155.1.1"
+	}
+	1215.1.1={
+		death="1215.1.1"
+	}
+}
+
+91282 = {
+	name="Enoguen" #Enoguen de Penthièvre
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205751 #Alain le Noir
+	mother=205825 #Berthe de Bretagne
+	1145.1.1={
+		birth="1145.1.1"
+	}
+	1187.1.1={
+		death="1187.1.1"
+	}
+}
+
+91283 = {
+	name="Robert" #Robert Brito
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	add_trait="bastard"
+	father=205751 #Alain le Noir
+	1145.1.1={
+		birth="1145.1.1"
+	}
+	1187.1.1={
+		death="1187.1.1"
+	}
+}
+
+91284 = {
+	name="Henri" #Henri de Penthièvre
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205743 #Henri de Bretagne
+	mother=205760 #Mathilde de Vendôme
+	1152.1.1 = {
+		birth="1152.1.1"
+	}
+	1152.12.1={
+		death="1152.12.1"
+	}
+}
+
+91285 = {
+	name="Étienne" #Étienne de Penthièvre
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205743 #Henri de Bretagne
+	mother=205760 #Mathilde de Vendôme
+	1155.1.1 = {
+		birth="1155.1.1"
+	}
+	1205.1.1={
+		death="1205.1.1" #after 1202
+	}
+}
+
+91286 = {
+	name="Juhaël"
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91165 #Henri
+	#Marguerite de Mayenne
+	1235.1.1 = {
+		birth="1235.1.1"
+	}
+	1295.1.1={
+		death="1295.1.1"
+	}
+}
+
+91287 = {
+	name="Henri" #lord of Goello
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91165 #Henri
+	#Marguerite de Mayenne
+	1240.1.1 = {
+		birth="1240.1.1"
+	}
+	#Phelipe de Rohan, d. of Alain V, vicompte de Rohan
+	1300.1.1={
+		death="1300.1.1"
+	}
+}
+
+91288 = {
+	name="Marie" #Marie de Penthièvre
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91165 #Henri
+	#Marguerite de Mayenne
+	1245.1.1 = {
+		birth="1245.1.1"
+	}
+	1305.1.1={
+		death="1305.1.1"
+	}
+}
+
+91289 = {
+	name="Jeanne" #Jeanne d'Avalgor
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91165 #Henri
+	#Marguerite de Mayenne
+	1250.1.1 = {
+		birth="1250.1.1"
+	}
+	1310.1.1={
+		death="1310.1.1"
+	}
+}
+
+91290 = {
+	name="Geoffroy" #Geoffroy Borotel
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205742 #Alain, comte de Penthièvre
+	#Adélaïde
+	1210.1.1 = {
+		birth="1210.1.1"
+	}
+	#Eustachie de Vitré, d. of André III de Vitré & Catherine de Thouars
+	1281.1.1={
+		death="1281.1.1"
+	}
+}
+
+91291 = {
+	name="Haoys" #Haoys d'Avaugour
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91169 #Alain d'Avaugour
+	#Clémence de Dinan
+	1250.1.1 = {
+		birth="1250.1.1"
+	}
+	#Olivier de Tinteniac
+	1310.1.1={
+		death="1310.1.1"
+	}
+}
+
+91292 = {
+	name="Constance"
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91169 #Alain d'Avaugour
+	#Clémence de Dinan
+	1255.1.1 = {
+		birth="1255.1.1"
+	}
+	1315.10.29={
+		death="1315.10.29"
+	}
+}
+
+91293 = {
+	name="Jean" #Jean, bishop of Saint-Brieue
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	add_trait="detached_priest"
+	father=455581 #Henri III d'Avaugour
+	#Marie de Beaumont-Brienne, d. of Louis of Brienne & Agnès of Beaumont.
+	1275.1.1 = {
+		birth="1275.1.1"
+	}
+	1329.1.1={
+		death="1329.1.1"
+	}
+}
+
+91294 = { 
+	name="Guillaume"
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=455581 #Henri III d'Avaugour
+	#Marie de Beaumont-Brienne, d. of Louis of Brienne & Agnès of Beaumont.
+	1276.1.1 = {
+		birth="1276.1.1"
+	}
+	1290.1.1={
+		death="1290.1.1"
+	}
+}
+91295 = {
+	name="Blanche" #Blanche d'Avaugour
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=455581 #Henri III d'Avaugour
+	#Marie de Beaumont-Brienne, d. of Louis of Brienne & Agnès of Beaumont.
+	1277.1.1 = {
+		birth="1277.1.1"
+	}
+	#Guillaume d'Harcourt, lord of Saussaye
+	1340.12.10={
+		death="1340.12.10" #a 10th of december, after 1337
+	}
+}
+
+91296 = {
+	name="Marguerite" #Marguerite d'Avaugour
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=455581 #Henri III d'Avaugour
+	#Marie de Beaumont-Brienne, d. of Louis of Brienne & Agnès of Beaumont.
+	1278.1.1 = {
+		birth="1278.1.1"
+	}
+	#Guillaume de Paynel, lord of Hambie (1296)
+	1340.1.1={
+		death="1340.1.1"
+	}
+}
+
+91258 = {
+	name="Henri" #Henri IV d'Avaugour
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=455581 #Henri III d'Avaugour
+	#Marie de Beaumont-Brienne, d. of louis de Brienne & Agnès de Beaumont.
+	1274.1.1={
+		birth="1274.1.1"
+	}
+	#Jeanne d'Harcourt, d. of Jean II d'Harcourt & Jeanne of Châtellerault
+	1331.1.1={
+		death="1331.1.1"
+	}
+}
+
+91297 = {
+	name="Isabelle"
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91258 #Henri IV d'Avaugour
+	#Marie de Beaumont-Brienne, d. of louis de Brienne & Agnès de Beaumont.
+	1294.1.1={
+		birth="1294.1.1"
+	}
+	#Louis, viscount of Thouars (455930)
+	1330.5.3={
+		death="1330.5.3"
+	}
+}
+
+91298 = {
+	name="Marguerite"
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91258 #Henri IV d'Avaugour
+	1295.1.1={
+		birth="1295.1.1"
+	}
+	#Hervé VII de Léon
+	#Geoffroy de Vaulx
+	1340.1.1 = {
+		death="1340.1.1"
+	}
+}
+
+91299 = {
+	name="Marie"
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91258 #Henri IV d'Avaugour
+	1296.1.1={
+		birth="1296.1.1"
+	}
+	1345.4.11 = {
+		death="1345.4.11"
+	}
+}
+
+91300 = {
+	name="Alain" #Alain, vicomte de Tonquedec
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205747 #Geslin de Penthièvre
+	1175.1.1={
+		birth="1175.1.1"
+	}
+	1255.1.1={
+		death="1255.1.1" #after 1253
+	}
+}
+
+91301 = {
+	name="Henri"
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205747 #Geslin de Penthièvre
+	1180.1.1={
+		birth="1180.1.1"
+	}
+	1233.1.1={
+		death="1233.1.1"
+	}
+}
+
+91302 = {
+	name="Hugues"
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=205747 #Geslin de Penthièvre
+	1185.1.1={
+		birth="1185.1.1"
+	}
+	1240.1.1={
+		death="1240.1.1" #after 1239
+	}
+}
+
+91303 = {
+	name="Roland" #Roland de Tonquedec
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91300 #Alain, viscount of Tonquedec
+	#Constance de Vitré
+	1195.1.1={
+		birth="1195.1.1"
+	}
+	1295.1.1={
+		death="1295.1.1" #before 1300
+	}
+}
+
+91304 = {
+	name="Prigent" #Prigent de Coëtmen
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91303 #Roland de Tonquedec
+	1220.1.1={
+		birth="1220.1.1"
+	}
+	1310.1.1={
+		death="1310.1.1" #after 1300
+	}
+}
+
+
+91306 = { 
+	name="Guy"
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91304 #Prigent de Coëtmen
+	1240.1.1={
+		birth="1240.1.1"
+	}
+	1330.1.1={
+		death="1330.1.1"
+	}
+}
+
+91307 = {
+	name="Jeanne"
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre
+	religion="catholic"
+	culture="breton"
+	father=91306 #Guy
+	1260.1.1={
+		birth="1260.1.1"
+	}
+	1320.1.1={
+		death="1320.1.1"
+	}
+}
+
+91309 = {
+	name="Ralph"
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91265 #Ribald
+	1060.1.1={
+		birth="1060.1.1"
+	}
+	1120.1.1={
+		death="1120.1.1"
+	}
+}
+
+91310 = {
+	name="Hervé" #Hervé Taillebois
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91265 #Ribald
+	1062.1.1={
+		birth="1062.1.1"
+	}
+	1122.1.1={
+		death="1122.1.1"
+	}
+}
+
+91311 = {
+	name="Raynaud" #Raynaud Taillebois
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91265 #Ribald
+	1065.1.1={
+		birth="1065.1.1"
+	}
+	1125.1.1={
+		death="1125.1.1"
+	}
+}
+
+91312 = {
+	name="William" #William Taillebois
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91265 #Ribald
+	1066.1.1={
+		birth="1066.1.1"
+	}
+	1126.1.1={
+		death="1126.1.1"
+	}
+}
+
+91313 = {
+	name="Robert"
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91309 #Ralph
+	1080.1.1={
+		birth="1080.1.1"
+	}
+	1170.1.1={
+		death="1170.1.1"
+	}
+}
+
+91314 = {
+	name="Walran"
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91313 #Robert
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1240.1.1={
+		death="1240.1.1"
+	}
+}
+
+91315 = {
+	name="Ralph"
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91313 #Robert
+	1155.1.1={
+		birth="1155.1.1"
+	}
+	1250.1.1={
+		death="1250.1.1"
+	}
+}
+
+91316 = {
+	name="Randulf"
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91313 #Robert
+	1160.1.1={
+		birth="1160.1.1"
+	}
+	1251.1.1={
+		death="1251.1.1"
+	}
+}
+
+91317 = {
+	name="Ralph"
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91316 #Randulf
+	1200.1.1={
+		birth="1200.1.1"
+	}
+	1258.3.31={
+		death="1258.3.31"
+	}
+}
+
+91318 = {
+	name="Bertha"
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91316 #Randulf
+	1205.1.1={
+		birth="1205.1.1"
+	}
+	1265.1.1={
+		death="1265.1.1"
+	}
+}
+
+91319 = {
+	name="Randulf"
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91316 #Randulf
+	1210.1.1={
+		birth="1210.1.1"
+	}
+	1270.1.1={
+		death="1270.1.1"
+	}
+}
+
+91320 = {
+	name="Mary"
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91317 #Ralph
+	1240.1.1={
+		birth="1240.1.1"
+	}
+	1320.1.1={
+		death="1320.1.1"
+	}
+}
+
+91321 = {
+	name="Joan"
+	female=yes
+	dynasty=317 #Rennes house of Penthièvre-Middleham
+	religion="catholic"
+	culture="breton"
+	father=91317 #Ralph
+	1245.1.1={
+		birth="1245.1.1"
+	}
+	1310.1.1={
+		death="1310.1.1" #before the 1st of april, 1310
+	}
+}
+
+205780 = {
+	name="Guyomarc'h" #Guyomar III
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=91215 #Hervé II
+	1130.1.1={
+		birth="1130.1.1"
+	}
+	1167.1.1={
+		add_spouse = 205746
+	}
+	1179.1.9={
+		death="1179.1.9"
+	}
+}
+
+
+205781 = {
+	name="Guyomarc'h" #Guyomar IV
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205780 #Guyomar III
+	#mother=205746 #Nobilis
+	1167.1.1={
+		birth="1167.1.1"
+	}
+	1183.1.10={
+		add_spouse = 205800 #Marguilia
+	}
+	1218.3.14={
+		death="1218.3.14"
+	}
+}
+
+205782 = {
+	name="Hervé"
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205780 #Guyomar III
+	#mother=205746 #Nobilis
+	1168.1.1={
+		birth="1168.1.1"
+	}
+	1180.1.1={
+		add_spouse=205801
+	}
+	1218.1.1={
+		death="1218.1.1"
+	}
+}
+
+205783 = {
+	name="Jeanne"
+	#AKA Eléonore or Léonore (?)
+	female = yes
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205780 #Guyomar III
+	#mother=205746 #Nobilis
+	1145.1.1={
+		birth="1145.1.1"
+	}
+	1216.1.1={
+	death="1216.1.1"
+	}
+}
+
+205784 = { #who is he?
+	name="Adam"
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205780
+	mother=205746
+	1170.1.1={
+		birth="1170.1.1"
+	}
+	1217.1.1={
+		death="1217.1.1"
+	}
+}
+
+205785 = { #who is she?
+	name="Ennougen"
+	female = yes
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205780
+	#mother=205746
+	1168.1.1={
+		birth="1168.1.1"
+	}
+	1218.1.1={
+		death="1218.1.1"
+	}
+}
+
+#205786 = { #who is she?
+#	name="Berthe"
+#	female = yes
+#	dynasty=20017 #La Marck
+#	religion="catholic"
+#	culture="breton"
+#	father=205780
+#	mother=205746
+#	1187.1.1={
+#		birth="1187.1.1"
+#	}
+#	1229.1.1={
+#		death="1229.1.1"
+#	}
+#}
+
+205787 = {
+	name="Hervé"
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205781
+	mother=205800
+	1184.1.1={
+		birth="1184.1.1"
+	}
+	1218.1.1={
+		death="1218.1.1"
+	}
+}
+
+205788 = {
+	name="Eleonore"
+	female = yes
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205782
+	mother=205801
+	1185.1.1={
+		birth="1185.1.1"
+	}
+	1230.1.1={
+		death="1230.1.1"
+	}
+}
+
+205789 = {
+	name="Herve"
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205782
+	mother=205801
+	1183.1.1={
+		birth="1183.1.1"
+	}
+	1233.1.1={
+		death="1233.1.1"
+	}
+}
+
+205790 = {
+	name="Constance"
+	female = yes
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205782
+	mother=205801
+	1185.1.1={
+		birth="1185.1.1"
+	}
+	1235.1.1={
+		death="1235.1.1"
+	}
+}
+
+205791 = {
+	name="Emma"
+	female = yes
+	dynasty=20017 #La Marck
+	religion="catholic"
+	culture="breton"
+	father=205830
+	mother=205785
+	1184.1.1={
+		birth="1184.1.1"
+	}
+	1234.1.1={
+		death="1234.1.1"
+	}
+}
+
+340 = {
+	name="Conan" #Conan I le Tort
+	# AKA: Konan
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	father=91248 #Judicaël
+	#Gerberge, d. of.
+	948.1.1 = {
+		birth="948.1.1"
+	}
+	992.6.27 = {
+		death="992.6.27"
+	}
+}
+
+342 = {
+	name="Geoffroy"
+	# AKA: Goffroy
+	dynasty=22006 #Rennes
+	religion="catholic"
+	culture="breton"
+	father=340
+	mother=379
+	977.1.2 = {
+		birth="977.1.2"
+	}
+	996.1.2 = {
+		add_spouse=257
+	}
+	1020.1.2 = {
+		death="1020.1.2"
+	}
+}
+
+348 = {
+	name="Conan"
+	# AKA: Konan
+	dynasty=22006 #Rennes
+	dna="yabumkqbtwz"
+	properties="ch0ehd0000"
+	religion="catholic"
+	culture="breton"
+	father=344
+	mother=393
+	1033.1.2 = {
+		birth="1033.1.2"
+	}
+	1066.12.11 = {
+		death="1066.12.11"
+	}
+}

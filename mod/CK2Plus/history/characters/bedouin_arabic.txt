@@ -140,6 +140,7 @@
 144145 = {
 	name="Muhammed"
 	dynasty=100690
+	father=89003
 	religion="shiite"
 	culture="bedouin_arabic"
 	1090.1.1={

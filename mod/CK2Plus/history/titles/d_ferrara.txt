@@ -36,7 +36,7 @@ holder=70689
 }
 1310.1.1=
 {
-liege="k_papal_states"
+liege="e_papal_state"
 law = succ_catholic_bishopric
 }
 1317.1.1=

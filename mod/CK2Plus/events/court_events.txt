@@ -529,7 +529,6 @@ character_event = {
 	min_age = 16
 	only_playable = yes
 	prisoner = no
-	male_only = yes
 	
 	trigger = {
 		any_child = {
@@ -740,7 +739,7 @@ character_event = {
 			female = no
 		}
 		new_character = {
-			character_event = { id = 100001 }
+			character_event = { id = 300001 }
 		}		
 		scaled_wealth = -0.1
 	}
@@ -871,7 +870,7 @@ character_event = {
 			female = no
 		}		
 		new_character = {
-			character_event = { id = 100001 }		
+			character_event = { id = 300001 }		
 			ROOT = {
 				random_current_enemy = {
 					limit = {

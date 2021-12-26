@@ -1,5 +1,5 @@
-max_provinces = 1027
-sea_starts = 914
+max_provinces = 1057
+sea_starts = 944
 definitions = "definition.csv"
 provinces = "provinces.bmp"
 positions = "positions.txt"

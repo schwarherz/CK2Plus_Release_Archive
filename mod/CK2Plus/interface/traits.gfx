@@ -818,7 +818,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_trait_dyn_dishonorable1"
-		texturefile = "gfx/CK2Plus/dishonorable.tga"
+		texturefile = "gfx/CK2Plus/dynasticstain.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -826,7 +826,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_trait_dyn_dishonorable2"
-		texturefile = "gfx/CK2Plus/dishonorable.tga"
+		texturefile = "gfx/CK2Plus/dynasticstain.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -834,7 +834,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_trait_dyn_dishonorable3"
-		texturefile = "gfx/CK2Plus/dishonorable.tga"
+		texturefile = "gfx/CK2Plus/dynasticstain.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -842,7 +842,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_trait_dyn_dishonorable4"
-		texturefile = "gfx/CK2Plus/dishonorable.tga"
+		texturefile = "gfx/CK2Plus/dynasticstain.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -850,7 +850,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_trait_dyn_dishonorable5"
-		texturefile = "gfx/CK2Plus/dishonorable.tga"
+		texturefile = "gfx/CK2Plus/dynasticstain.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -858,7 +858,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_trait_dyn_dishonorable6"
-		texturefile = "gfx/CK2Plus/dishonorable.tga"
+		texturefile = "gfx/CK2Plus/dynasticstain.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -866,7 +866,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_trait_dyn_dishonorable7"
-		texturefile = "gfx/CK2Plus/dishonorable.tga"
+		texturefile = "gfx/CK2Plus/dynasticstain.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -874,7 +874,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_trait_dyn_dishonorable8"
-		texturefile = "gfx/CK2Plus/dishonorable.tga"
+		texturefile = "gfx/CK2Plus/dynasticstain.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -882,7 +882,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_trait_dyn_dishonorable9"
-		texturefile = "gfx/CK2Plus/dishonorable.tga"
+		texturefile = "gfx/CK2Plus/dynasticstain.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -890,7 +890,7 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_trait_dyn_dishonorable10"
-		texturefile = "gfx/CK2Plus/dishonorable.tga"
+		texturefile = "gfx/CK2Plus/dynasticstain.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"

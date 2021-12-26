@@ -8,7 +8,7 @@
 
 # Written by Henrik Fåhraeus, Johan Andersson & Niklas Strid
 
-########################################
+#######################################
 # HERESIES
 ########################################
 
@@ -128,8 +128,8 @@ province_event = {
 					any_vassal = {
 						limit = {
 							OR = {
-								is_parent_religion = FROM
-								religion = FROM
+								is_parent_religion = ROOT
+								religion = ROOT
 							}
 						}
 						character_event = { id = 39400 days = 7 }
@@ -145,8 +145,8 @@ province_event = {
 						any_vassal = {
 							limit = {
 								OR = {
-									is_parent_religion = FROM
-									religion = FROM
+									is_parent_religion = ROOT
+									religion = ROOT
 								}
 							}
 							character_event = { id = 39400 days = 7 }
@@ -195,8 +195,8 @@ province_event = {
 					any_vassal = {
 						limit = {
 							OR = {
-								is_parent_religion = FROM
-								religion = FROM
+								is_parent_religion = ROOT
+								religion = ROOT
 							}
 						}
 						character_event = { id = 39400 days = 7 }
@@ -212,8 +212,8 @@ province_event = {
 						any_vassal = {
 							limit = {
 								OR = {
-									is_parent_religion = FROM
-									religion = FROM
+									is_parent_religion = ROOT
+									religion = ROOT
 								}
 							}
 							character_event = { id = 39400 days = 7 }
@@ -371,7 +371,7 @@ character_event = {
 			limit = {
 				religion = catholic
 				any_demesne_province = {
-					religion_group = christian
+			religion_group = christian
 					is_heretic = yes
 					is_heresy_of = catholic
 				}
@@ -465,7 +465,7 @@ character_event = {
 					}
 				}
 			}
-			letter_event = { id = 39411 days = 7 }
+			letter_event = { id = 39441 days = 7 }
 		}
 	}
 }
@@ -582,7 +582,7 @@ character_event = {
 					has_job_title = job_spiritual
 				}
 				is_heretic = yes
-				religion_group = christian
+				is_heresy_of = ROOT
 				prisoner = no
 			}
 			religion = ROOT
@@ -1083,7 +1083,6 @@ narrative_event = {
 			controls_religion = yes
 		}
 		activate_title = { title = d_knights_hospitaler status = yes }
-		religion_authority = 0.05
 	}
 	option = {
 		name = "EVTOPTA39100"
@@ -1137,7 +1136,6 @@ narrative_event = {
 			controls_religion = yes
 		}
 		activate_title = { title = d_knights_templar status = yes }
-		religion_authority = 0.05
 	}
 	option = {
 		name = "EVTOPTA39101"
@@ -1190,7 +1188,6 @@ narrative_event = {
 			controls_religion = yes
 		}
 		activate_title = { title = d_teutonic_order status = yes }
-		religion_authority = 0.05
 	}
 	option = {
 		name = "EVTOPTA39102"
@@ -1227,6 +1224,7 @@ narrative_event = {
 	is_ruler = yes
 	
 	trigger = {
+		always = no
 		year = 1175		# Papal recognition
 		NOT = { is_title_active = d_order_of_santiago }
 		religion = catholic
@@ -1244,7 +1242,6 @@ narrative_event = {
 			controls_religion = yes
 		}
 		activate_title = { title = d_order_of_santiago status = yes }
-		religion_authority = 0.05
 	}
 	option = {
 		name = "EVTOPTA39103"
@@ -1280,6 +1277,7 @@ narrative_event = {
 	is_ruler = yes
 	
 	trigger = {
+		always = no
 		year = 1204		# Papal recognition
 		NOT = { is_title_active = d_livonian_order }
 		religion = catholic
@@ -1297,7 +1295,6 @@ narrative_event = {
 			controls_religion = yes
 		}
 		activate_title = { title = d_livonian_order status = yes }
-		religion_authority = 0.05
 	}
 	option = {
 		name = "EVTOPTA39104"
@@ -1365,7 +1362,6 @@ character_event = {
 						any_war = {
 							OR = {
 								using_cb = religious
-								using_cb = religious2
 								using_cb = crusade
 							}
 							OR = {
@@ -1386,7 +1382,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 60
+		months = 120
 		modifier = {
 			factor = 0.5
 			wealth = 1000
@@ -1420,7 +1416,7 @@ character_event = {
 				}
 			}
 			
-			character_event = { id = 39201 tooltip = EVTTOOLTIP39201 }
+			letter_event = { id = 39201 tooltip = EVTTOOLTIP39201 }
 		}
 	}
 	
@@ -3127,11 +3123,11 @@ character_event = {
 	border = "GFX_event_normal_frame_religion"
 	
 	min_age = 16
-	male_only = yes
 
 	trigger = {
 		religion_group = christian
 		is_heretic = no
+		is_female = no
 		NOT = {	has_character_modifier = true_christian_knight	}
 		NOT = { trait = cynical }
 		NOT = { trait = lustful }
@@ -3183,10 +3179,10 @@ character_event = {
 	border = "GFX_event_normal_frame_religion"
 	
 	min_age = 16
-	male_only = yes
 
 	trigger = {
 		has_character_modifier = true_christian_knight
+		is_female = no
 		OR = {
 			NOT = { religion_group = christian }
 			is_heretic = yes 

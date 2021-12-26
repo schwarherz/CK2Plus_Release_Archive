@@ -1588,7 +1588,7 @@ character_event = {
 			female = no			
 		}
 		new_character = {
-			character_event = { id = 100001 }
+			character_event = { id = 300001 }
 		}		
 	}
 }
@@ -1733,7 +1733,7 @@ character_event = {
 
 #On-action battle_lost: Imprisoned by the enemy
 character_event = {
-	id = 100250
+	id = 1000250
 	is_triggered_only = yes
 	
 	picture = "GFX_evt_into_the_dungeon"
@@ -1872,7 +1872,7 @@ character_event = {
 
 #On-action battle_lost: Imprisoned by the enemy
 character_event = {
-	id = 100251
+	id = 1000251
 	is_triggered_only = yes
 	
 	picture = "GFX_evt_into_the_dungeon"
@@ -2011,7 +2011,7 @@ character_event = {
 
 #On-action battle_lost: Imprisoned by the enemy
 character_event = {
-	id = 100252
+	id = 1000252
 	is_triggered_only = yes
 	
 	picture = "GFX_evt_into_the_dungeon"

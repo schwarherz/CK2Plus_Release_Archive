@@ -1,0 +1,16 @@
+# 1 - Vestisland
+
+# County Title
+title = c_waalo
+
+# Settlements
+max_settlements = 3
+b_ndiangue = castle
+b_diourbel = city
+
+# Misc
+culture = jolof
+religion = pagan
+
+
+# History

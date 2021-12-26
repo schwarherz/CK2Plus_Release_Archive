@@ -1,0 +1,19 @@
+# 1 - Vestisland
+
+# County Title
+title = c_timbuktu
+
+# Settlements
+max_settlements = 6
+b_timbuktu = castle
+b_kabara = city
+
+# Misc
+culture = mande
+religion = pagan
+
+
+# History
+1078.1.1 = {
+    religion = sunni
+}

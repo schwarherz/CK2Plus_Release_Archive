@@ -67,7 +67,7 @@ action_squeeze_peasants = {
 		}
 	}
 	
-	local_tax_modifier = 0.025
+	local_tax_modifier = 0.015
 	
 	events = { 920 921 }
 }
@@ -82,7 +82,6 @@ action_oversee_construction = {
 	}
 	
 	local_build_time_modifier = -0.02
-	local_build_cost_modifier = -0.005
 	
 	events = { 923 924 }
 }
@@ -113,7 +112,7 @@ action_uncover_plots = {
 	
 	plot_discovery_chance = 0.005
 	
-	events = { 929 930 931 }
+	events = { 929 931 }
 }
 
 action_study_technology = {

@@ -19,7 +19,7 @@ christian = {
 		investiture = yes
 		can_excommunicate = yes
 		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
+		can_grant_invasion_cb = yes
 		can_grant_claim = yes
 		can_call_crusade = yes
 	}

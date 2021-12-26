@@ -21,7 +21,7 @@ letter_event = {
 			modifier = {
 				factor = 0.01
 				FROM = { ai = no }
-				LIEGE = {
+				liege = {
 					FROM = {
 						any_war = {
 							defender = {
@@ -75,51 +75,51 @@ letter_event = {
 				}
 			}
 			modifier = {
-				factor = 1.5
+				factor = 2
 				opinion = {
 					who = FROM
 					value = 50
 				}
 			}
 			modifier = {
-				factor = 1.5
+				factor = 2
 				opinion = {
 					who = FROM
 					value = 75
 				}
 			}
 			modifier = {
-				factor = 1.5
+				factor = 10.0
 				NOT = {
 					opinion = {
-						who = LIEGE
+						who = liege
 						value = -75
 					}
 				}
 			}			
 			modifier = {
-				factor = 1.5
+				factor = 5.0
 				NOT = {
 					opinion = {
-						who = LIEGE
+						who = liege
 						value = -50
 					}
 				}
 			}			
 			modifier = {
-				factor = 1.5
+				factor = 2.0
 				NOT = {
 					opinion = {
-						who = LIEGE
+						who = liege
 						value = -25
 					}
 				}
 			}			
 			modifier = {
-				factor = 1.5
+				factor = 2.0
 				NOT = {
 					opinion = {
-						who = LIEGE
+						who = liege
 						value = 0
 					}
 				}
@@ -127,21 +127,21 @@ letter_event = {
 			modifier = {
 				factor = 0.5
 				opinion = {
-					who = LIEGE
+					who = liege
 					value = 25
 				}
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.25
 				opinion = {
-					who = LIEGE
+					who = liege
 					value = 50
 				}
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.1
 				opinion = {
-					who = LIEGE
+					who = liege
 					value = 75
 				}
 			}	
@@ -150,8 +150,8 @@ letter_event = {
 				FROM = { dynasty = ROOT }
 			}
 			modifier = {
-				factor = 1.25
-				LIEGE = { dynasty = ROOT }
+				factor = 1.10
+				liege = { dynasty = ROOT }
 			}
 			modifier = {
 				factor = 1.25
@@ -195,21 +195,21 @@ letter_event = {
 			}			
 			modifier = {
 				factor = 1.15
-				LIEGE = { regent = { is_alive = yes } }
+				liege = { regent = { is_alive = yes } }
 			}
 			modifier = {
-				factor = 0.75
+				factor = 0.66
 				FROM = { ai = no }
 			}
 			modifier = {
 				factor = 0.1
-				LIEGE = { religion = ROOT }
+				liege = { religion = ROOT }
 				FROM = { NOT = { religion = ROOT } }
 			}
 			modifier = {
 				factor = 10.0
 				FROM = { religion = ROOT }
-				LIEGE = { NOT = { religion = ROOT } }
+				liege = { NOT = { religion = ROOT } }
 			}				
 		}
 		reverse_opinion = {
@@ -218,7 +218,7 @@ letter_event = {
 			years = 10
 		}
 		reverse_opinion = {
-			who = LIEGE
+			who = liege
 			modifier = declared_war
 			years = 10
 		}
@@ -233,21 +233,23 @@ letter_event = {
 		ai_chance = { factor = 75 }
 		hidden_tooltip = {
 			remove_opinion = {
-				who = LIEGE
+				who = liege
 				modifier = opinion_defending_liege
 			}
-			remove_reverse_opinion = {
-				who = LIEGE
-				modifier = opinion_defending_liege
-			}		
+			liege = {
+				remove_opinion = {
+					who = root
+					modifier = opinion_defending_liege
+				}	
+			}
 		}
 		opinion = {
-			who = LIEGE
+			who = liege
 			modifier = opinion_defending_liege
 			years = 5
 		}
 		reverse_opinion = {
-			who = LIEGE
+			who = liege
 			modifier = opinion_defending_liege
 			years = 5
 		}		

@@ -38,6 +38,7 @@ plot_gain_vassal_title = {
 			# Count title outside a Duke's duchy
 			AND = {
 				tier = COUNT
+				FROM = { demesne_efficiency = 1.01 }
 				holder_scope = {
 					tier = DUKE
 					ROOT = {
@@ -49,25 +50,23 @@ plot_gain_vassal_title = {
 			AND = {
 				tier = DUKE
 				holder_scope = {
-					AND = {
-						NOT = {
+					NOT = {
+						any_demesne_title = {
+							tier = COUNT
+							location = {
+								duchy = {
+									title = ROOT
+								}
+							}
+						}
+					}
+					NOT = {
+						any_vassal = {
 							any_demesne_title = {
 								tier = COUNT
 								location = {
 									duchy = {
 										title = ROOT
-									}
-								}
-							}
-						}
-						NOT = {
-							any_vassal = {
-								any_demesne_title = {
-									tier = COUNT
-									location = {
-										duchy = {
-											title = ROOT
-										}
 									}
 								}
 							}
@@ -78,6 +77,7 @@ plot_gain_vassal_title = {
 			# Count titles in ruler's primary duchy
 			AND = {
 				tier = COUNT
+				FROM = { demesne_efficiency = 1.01 }
 				location = {
 					duchy = {
 						holder_scope = {
@@ -96,6 +96,7 @@ plot_gain_vassal_title = {
 			# Count's secondary county
 			AND = {
 				tier = COUNT
+				FROM = { demesne_efficiency = 1.01 }
 				location = {
 					is_capital = no
 				}
@@ -214,6 +215,7 @@ plot_gain_vassal_title = {
 					# Count title outside a Duke's duchy
 					AND = {
 						tier = COUNT
+						FROM = { demesne_efficiency = 1.01 }
 						holder_scope = {
 							tier = DUKE
 							ROOT = {
@@ -225,25 +227,23 @@ plot_gain_vassal_title = {
 					AND = {
 						tier = DUKE
 						holder_scope = {
-							AND = {
-								NOT = {
+							NOT = {
+								any_demesne_title = {
+									tier = COUNT
+									location = {
+										duchy = {
+											title = ROOT
+										}
+									}
+								}
+							}
+							NOT = {
+								any_vassal = {
 									any_demesne_title = {
 										tier = COUNT
 										location = {
 											duchy = {
 												title = ROOT
-											}
-										}
-									}
-								}
-								NOT = {
-									any_vassal = {
-										any_demesne_title = {
-											tier = COUNT
-											location = {
-												duchy = {
-													title = ROOT
-												}
 											}
 										}
 									}
@@ -254,6 +254,7 @@ plot_gain_vassal_title = {
 					# Count titles in ruler's primary duchy
 					AND = {
 						tier = COUNT
+						FROM = { demesne_efficiency = 1.01 }
 						location = {
 							duchy = {
 								holder_scope = {
@@ -272,6 +273,7 @@ plot_gain_vassal_title = {
 					# Count's secondary county
 					AND = {
 						tier = COUNT
+						FROM = { demesne_efficiency = 1.01 }
 						location = {
 							is_capital = no
 						}
@@ -307,7 +309,6 @@ plot_gain_vassal_title = {
 	}
 	effect = {
 		FROM = {
-			change_intrigue = 1
 			any_plot_backer = {
 				reverse_opinion = {
 					modifier = opinion_grateful
@@ -379,6 +380,7 @@ plot_weaken_fellow_vassal = {
 			NOT = { character = FROM }
 		}
 		holder_scope = {
+			NOT = { has_character_flag = weaken_vassal } #once per ruler only
 			NOT = { reverse_has_truce = FROM }
 			primary_title = { higher_tier_than = COUNT }
 			independent = no
@@ -555,7 +557,6 @@ plot_weaken_fellow_vassal = {
 	}
 	effect = {
 		FROM = {
-			change_intrigue = 1
 			any_plot_backer = {
 				reverse_opinion = {
 					modifier = opinion_grateful
@@ -680,23 +681,23 @@ plot_institute_hereditary_titles = {
 		}
 		modifier = {
 			factor = 0
-			FROM = { opinion = { who = LIEGE value = 25 } }
+			FROM = { opinion = { who = liege value = 25 } }
 		}		
 		modifier = {
 			factor = 0.25
-			FROM = { opinion = { who = LIEGE value = 0 } }
+			FROM = { opinion = { who = liege value = 0 } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -25 } } }
+			NOT = { FROM = { opinion = { who = liege value = -25 } } }
 		}		
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -50 } } }
+			NOT = { FROM = { opinion = { who = liege value = -50 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -75 } } }
+			NOT = { FROM = { opinion = { who = liege value = -75 } } }
 		}
 		modifier = {
 			factor = 0.25
@@ -763,13 +764,6 @@ plot_institute_hereditary_titles = {
 	}
 	effect = {
 		FROM = {
-			change_intrigue = 1
-			hidden_tooltip = {
-				if = {
-					limit = { NOT = { has_character_flag = plot_institute_hereditary_titles_flag } }
-					change_intrigue = -1
-				}
-			}
 			any_plot_backer = {
 				reverse_opinion = {
 					modifier = opinion_grateful
@@ -802,8 +796,8 @@ plot_kidnap_liege = {
 		is_ruler = no
 		age = 16
 		OR = {
-			has_opinion_modifier = { who = LIEGE modifier = opinion_denied_title }
-			has_opinion_modifier = { who = LIEGE modifier = opinion_broken_title_promise }
+			has_opinion_modifier = { who = liege modifier = opinion_denied_title }
+			has_opinion_modifier = { who = liege modifier = opinion_broken_title_promise }
 		}	
 		NOT = { trait = incapable }
 		OR = {
@@ -848,7 +842,7 @@ plot_kidnap_liege = {
 		}
 		modifier = {
 			factor = 2
-			FROM = { has_opinion_modifier = { who = LIEGE modifier = opinion_broken_title_promise } }
+			FROM = { has_opinion_modifier = { who = liege modifier = opinion_broken_title_promise } }
 		}
 		modifier = {
 			factor = 0
@@ -864,23 +858,34 @@ plot_kidnap_liege = {
 		}
 		modifier = {
 			factor = 0
-			FROM = { opinion = { who = LIEGE value = 25 } }
-		}				
+			FROM = { opinion = { who = liege value = 50 } }
+		}
 		modifier = {
-			factor = 0.1
-			FROM = { opinion = { who = LIEGE value = 0 } }
+			factor = 0
+			FROM = { opinion = { who = liege value = 25 } }
+			NOT = {
+				OR = {
+					FROM = { trait = envious }
+					FROM = { trait = deceitful }
+					FROM = { trait = ambitious }
+				}
+			}			
+		}		
+		modifier = {
+			factor = 0.5
+			FROM = { opinion = { who = liege value = 0 } }
 		}	
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -25 } } }
+			NOT = { FROM = { opinion = { who = liege value = -25 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -50 } } }
+			NOT = { FROM = { opinion = { who = liege value = -50 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -75 } } }
+			NOT = { FROM = { opinion = { who = liege value = -75 } } }
 		}
 		modifier = {
 			factor = 0.25
@@ -950,7 +955,6 @@ plot_kidnap_liege = {
 	}
 	effect = {
 		FROM = {
-			change_intrigue = 1
 			any_plot_backer = {
 				reverse_opinion = {
 					modifier = opinion_grateful
@@ -1044,7 +1048,14 @@ plot_gain_title = {
 				}
 			}			
 			claimed_by = FROM
-			FROM = { is_pretender = yes }
+			AND = {
+				FROM = {
+					any_pretender_title = {
+						title = PREVPREV
+					}
+				}
+				NOT = { has_law = succ_feudal_elective }
+			}
 			has_de_jure_pretension = FROM
 		}
 	}
@@ -1061,7 +1072,7 @@ plot_gain_title = {
 		}
 		modifier = {
 			factor = 1.5
-			FROM = { LIEGE = { dynasty = FROM } }
+			FROM = { liege = { dynasty = FROM } }
 		}		
 		modifier = {
 			factor = 0
@@ -1077,11 +1088,11 @@ plot_gain_title = {
 		}
 		modifier = {
 			factor = 0
-			FROM = { opinion = { who = LIEGE value = 25 } }
+			FROM = { opinion = { who = liege value = 25 } }
 		}				
 		modifier = {
 			factor = 0.25
-			FROM = { opinion = { who = LIEGE value = 0 } }
+			FROM = { opinion = { who = liege value = 0 } }
 		}
 		modifier = {
 			factor = 0.5
@@ -1113,15 +1124,15 @@ plot_gain_title = {
 		}		
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -25 } } }
+			NOT = { FROM = { opinion = { who = liege value = -25 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -50 } } }
+			NOT = { FROM = { opinion = { who = liege value = -50 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -75 } } }
+			NOT = { FROM = { opinion = { who = liege value = -75 } } }
 		}
 		modifier = {
 			factor = 0.25
@@ -1181,7 +1192,6 @@ plot_gain_title = {
 	}
 	effect = {
 		FROM = {
-			change_intrigue = 1
 			any_plot_backer = {
 				reverse_opinion = {
 					modifier = opinion_grateful
@@ -1301,11 +1311,11 @@ plot_succ_seniority = {
 		}
 		modifier = {
 			factor = 0
-			FROM = { opinion = { who = LIEGE value = 25 } }
+			FROM = { opinion = { who = liege value = 25 } }
 		}			
 		modifier = {
 			factor = 0.25
-			FROM = { opinion = { who = LIEGE value = 0 } }
+			FROM = { opinion = { who = liege value = 0 } }
 		}
 		modifier = {
 			factor = 0.5
@@ -1337,15 +1347,15 @@ plot_succ_seniority = {
 		}		
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -25 } } }
+			NOT = { FROM = { opinion = { who = liege value = -25 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -50 } } }
+			NOT = { FROM = { opinion = { who = liege value = -50 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -75 } } }
+			NOT = { FROM = { opinion = { who = liege value = -75 } } }
 		}
 		modifier = {
 			factor = 0.25
@@ -1407,13 +1417,6 @@ plot_succ_seniority = {
 	}
 	effect = {
 		FROM = {
-			change_intrigue = 1
-			hidden_tooltip = {
-				if = {
-					limit = { NOT = { has_character_flag = plot_succ_seniority_flag } }
-					change_intrigue = -1
-				}
-			}
 			any_plot_backer = {
 				reverse_opinion = {
 					modifier = opinion_grateful
@@ -1533,11 +1536,11 @@ plot_succ_primogeniture = {
 		}
 		modifier = {
 			factor = 0
-			FROM = { opinion = { who = LIEGE value = 25 } }
+			FROM = { opinion = { who = liege value = 25 } }
 		}				
 		modifier = {
 			factor = 0.25
-			FROM = { opinion = { who = LIEGE value = 0 } }
+			FROM = { opinion = { who = liege value = 0 } }
 		}
 		modifier = {
 			factor = 0.5
@@ -1569,15 +1572,15 @@ plot_succ_primogeniture = {
 		}		
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -25 } } }
+			NOT = { FROM = { opinion = { who = liege value = -25 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -50 } } }
+			NOT = { FROM = { opinion = { who = liege value = -50 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -75 } } }
+			NOT = { FROM = { opinion = { who = liege value = -75 } } }
 		}
 		modifier = {
 			factor = 0.25
@@ -1639,13 +1642,6 @@ plot_succ_primogeniture = {
 	}
 	effect = {
 		FROM = {
-			change_intrigue = 1
-			hidden_tooltip = {
-				if = {
-					limit = { NOT = { has_character_flag = plot_succ_primogeniture_flag } }
-					change_intrigue = -1
-				}
-			}
 			any_plot_backer = {
 				reverse_opinion = {
 					modifier = opinion_grateful
@@ -1778,11 +1774,11 @@ plot_succ_gavelkind = {
 		}
 		modifier = {
 			factor = 0
-			FROM = { opinion = { who = LIEGE value = 25 } }
+			FROM = { opinion = { who = liege value = 25 } }
 		}			
 		modifier = {
 			factor = 0.25
-			FROM = { opinion = { who = LIEGE value = 0 } }
+			FROM = { opinion = { who = liege value = 0 } }
 		}
 		modifier = {
 			factor = 0.5
@@ -1814,15 +1810,15 @@ plot_succ_gavelkind = {
 		}		
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -25 } } }
+			NOT = { FROM = { opinion = { who = liege value = -25 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -50 } } }
+			NOT = { FROM = { opinion = { who = liege value = -50 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -75 } } }
+			NOT = { FROM = { opinion = { who = liege value = -75 } } }
 		}
 		modifier = {
 			factor = 0.25
@@ -1892,13 +1888,6 @@ plot_succ_gavelkind = {
 	}
 	effect = {
 		FROM = {
-			change_intrigue = 1
-			hidden_tooltip = {
-				if = {
-					limit = { NOT = { has_character_flag = plot_succ_gavelkind_flag } }
-					change_intrigue = -1
-				}
-			}
 			any_plot_backer = {
 				reverse_opinion = {
 					modifier = opinion_grateful
@@ -2059,11 +2048,11 @@ plot_succ_feudal_elective = {
 		}	
 		modifier = {
 			factor = 0
-			FROM = { opinion = { who = LIEGE value = 25 } }
+			FROM = { opinion = { who = liege value = 25 } }
 		}		
 		modifier = {
 			factor = 0.25
-			FROM = { opinion = { who = LIEGE value = 0 } }
+			FROM = { opinion = { who = liege value = 0 } }
 		}
 		modifier = {
 			factor = 0.5
@@ -2095,15 +2084,15 @@ plot_succ_feudal_elective = {
 		}		
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -25 } } }
+			NOT = { FROM = { opinion = { who = liege value = -25 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -50 } } }
+			NOT = { FROM = { opinion = { who = liege value = -50 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -75 } } }
+			NOT = { FROM = { opinion = { who = liege value = -75 } } }
 		}
 		modifier = {
 			factor = 0.25
@@ -2175,13 +2164,6 @@ plot_succ_feudal_elective = {
 	}
 	effect = {
 		FROM = {
-			change_intrigue = 1
-			hidden_tooltip = {
-				if = {
-					limit = { NOT = { has_character_flag = plot_succ_feudal_elective_flag } }
-					change_intrigue = -1
-				}
-			}
 			any_plot_backer = {
 				reverse_opinion = {
 					modifier = opinion_grateful
@@ -2232,7 +2214,7 @@ plot_lower_crown_authority = {
 	allow = {
 		holder_scope = {
 			independent = yes
-			primary_title = { title = PREV higher_tier_than = DUKE }
+			primary_title = { title = PREVPREV higher_tier_than = DUKE }
 			NOT = { spouse = { character = FROM } }			
 		}
 
@@ -2338,23 +2320,23 @@ plot_lower_crown_authority = {
 		}
 		modifier = {
 			factor = 0
-			FROM = { opinion = { who = LIEGE value = 25 } }
+			FROM = { opinion = { who = liege value = 25 } }
 		}		
 		modifier = {
 			factor = 0.25
-			FROM = { opinion = { who = LIEGE value = 0 } }
+			FROM = { opinion = { who = liege value = 0 } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -25 } } }
+			NOT = { FROM = { opinion = { who = liege value = -25 } } }
 		}		
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -50 } } }
+			NOT = { FROM = { opinion = { who = liege value = -50 } } }
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { FROM = { opinion = { who = LIEGE value = -75 } } }
+			NOT = { FROM = { opinion = { who = liege value = -75 } } }
 		}
 		modifier = {
 			factor = 0.25
@@ -2420,13 +2402,6 @@ plot_lower_crown_authority = {
 	}
 	effect = {
 		FROM = {
-			change_intrigue = 1
-			hidden_tooltip = {
-				if = {
-					limit = { NOT = { has_character_flag = plot_lower_crown_authority_flag } }
-					change_intrigue = -1
-				}
-			}
 			any_plot_backer = {
 				reverse_opinion = {
 					modifier = opinion_grateful
@@ -2470,11 +2445,9 @@ plot_kill_character = {
 			}
 			
 			# Character's child is pretender to a title
-			AND = {
-				any_child = { 
-					any_pretender_title = {
-						always = yes
-					}
+			any_child = { 
+				any_pretender_title = {
+					always = yes
 				}
 			}
 			
@@ -2524,6 +2497,7 @@ plot_kill_character = {
 	# Target character scope
 	allow = {
 		FROM = {
+			NOT = { spouse = { character = ROOT } }
 			OR = {
 				# Get rid of the current heir
 				any_pretender_title = {
@@ -2746,7 +2720,6 @@ plot_kill_character = {
 			}
 		}
 		FROM = {
-			change_intrigue = 1
 			# Clear flags
 			hidden_tooltip = {
 				clr_character_flag = plot_murderer
@@ -2962,7 +2935,6 @@ plot_kill_spouse = {
 			}
 		}
 		FROM = {
-			change_intrigue = 1
 			# Clear flags
 			hidden_tooltip = {
 				clr_character_flag = plot_murderer
@@ -4230,7 +4202,7 @@ obj_get_married = {
 		is_married = no
 		is_betrothed = no
 		can_marry = yes
-		NOT = { has_landed_title = k_papal_state }
+		NOT = { has_landed_title = e_papal_state }
 		NOT = { has_minor_title = title_concubine }
 		NOT = { trait = celibate }
 		NOT = { trait = incapable }
@@ -4525,7 +4497,7 @@ obj_have_a_son = {
 	}
 	effect = {
 		prestige = 50
-		sas_character_flag = obj_have_child_2
+		set_character_flag = obj_have_child_2
 	}
 }
 
@@ -4615,8 +4587,8 @@ obj_wants_landed_title = {
 					NOT = { num_of_extra_landed_titles = 1 }
 				}
 			}
-			has_opinion_modifier = { who = LIEGE modifier = opinion_denied_title }
-			has_opinion_modifier = { who = LIEGE modifier = opinion_broken_title_promise }			
+			has_opinion_modifier = { who = liege modifier = opinion_denied_title }
+			has_opinion_modifier = { who = liege modifier = opinion_broken_title_promise }			
 		}
 	}	
 	abort_effect = {
@@ -4724,9 +4696,8 @@ obj_find_lover = {
 		age = 16
 		is_priest = no
 		is_ruler = yes
-		#is_female = no
 		has_lover = no
-		NOT = { has_landed_title = k_papal_state }
+		NOT = { has_landed_title = e_papal_state }
 		NOT = { trait = celibate }
 		NOT = { trait = incapable }
 		NOT = { has_character_flag = obj_find_lover }
@@ -4801,7 +4772,7 @@ obj_become_independent = {
 			trait = incapable
 			is_ruler = no
 			AND = {
-				opinion = { who = LIEGE value = -25 }
+				opinion = { who = liege value = -25 }
 				ai = yes
 			}
 		}
@@ -6171,7 +6142,7 @@ obj_win_a_war = {
 		modifier = {
 			factor = 0.5
 			NOT = { martial = 3 }
-		}
+		}	
 	}
 	
 	success = {
@@ -6408,7 +6379,7 @@ obj_gain_honorary_title = {
 		prestige = 50
 		opinion = {
 			modifier = opinion_glad
-			who = LIEGE
+			who = liege
 			years = 100
 		}
 		set_character_flag = obj_gain_honorary_title

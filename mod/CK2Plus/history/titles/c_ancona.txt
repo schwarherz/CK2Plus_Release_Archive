@@ -14,7 +14,7 @@
 }
 1137.1.1={
 	holder=73494
-	liege=k_papal_state
+	liege=e_papal_state
 }
 1149.1.1={
 	holder=73495

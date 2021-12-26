@@ -1,0 +1,15 @@
+# 1 - Vestisland
+
+# County Title
+title = c_tabacounda
+
+# Settlements
+max_settlements = 3
+b_tabacounda = castle
+
+# Misc
+culture = jolof
+religion = pagan
+
+
+# History

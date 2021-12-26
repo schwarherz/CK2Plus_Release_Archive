@@ -1,6 +1,6 @@
 1066.1.1=
 {
-	liege="k_cuman"
+	liege="e_cuman"
 	holder=34854
 }
 1091.1.1=

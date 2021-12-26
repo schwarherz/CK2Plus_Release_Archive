@@ -48,25 +48,11 @@ character_event = {
 					is_female = yes
 				}
 			}
-			OR = {
-				AND = {
-					ROOT = {
-						trait = brave
-					}
-					trait = brave
-				}
-				AND = {
-					ROOT = {
-						trait = deceitful
-					}
-					trait = deceitful
-				}
-				AND = {
-					ROOT = {
-						trait = ambitious
-					}
-					trait = ambitious
-				}
+			NOT = {
+				trait = craven
+			}
+			NOT = {
+				trait = honest
 			}
 			NOT = {
 				sibling = ROOT
@@ -97,7 +83,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
 			factor = 0.5
@@ -133,25 +119,11 @@ character_event = {
 				NOT = {
 					reverse_has_opinion_modifier = { who = ROOT modifier = opinion_rival }
 				}
-				OR = {
-					AND = {
-						ROOT = {
-							trait = brave
-						}
-						trait = brave
-					}
-					AND = {
-						ROOT = {
-							trait = deceitful
-						}
-						trait = deceitful
-					}
-					AND = {
-						ROOT = {
-							trait = ambitious
-						}
-						trait = ambitious
-					}
+				NOT = {
+					trait = craven
+				}
+				NOT = {
+					trait = honest
 				}
 				OR = {
 					AND = {
@@ -180,7 +152,7 @@ character_event = {
 			}
 			opinion = {
 				modifier = opinion_rival
-				who = FROM
+				who = ROOT
 				years = 100
 			}
 			character_event = {
@@ -234,25 +206,11 @@ character_event = {
 				NOT = {
 					reverse_has_opinion_modifier = { who = ROOT modifier = opinion_rival }
 				}
-				OR = {
-					AND = {
-						ROOT = {
-							trait = brave
-						}
-						trait = brave
-					}
-					AND = {
-						ROOT = {
-							trait = deceitful
-						}
-						trait = deceitful
-					}
-					AND = {
-						ROOT = {
-							trait = ambitious
-						}
-						trait = ambitious
-					}
+				NOT = {
+					trait = craven
+				}
+				NOT = {
+					trait = honest
 				}
 				NOT = {
 					sibling = ROOT
@@ -369,7 +327,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
 			factor = 0.5
@@ -729,6 +687,19 @@ character_event = {
 		}
 	}
 	
+	mean_time_to_happen = {
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 2
+			trait = wroth
+		}
+	}
+	
 	option = {
 		name = "EVTOPTA100015"
 		random_courtier = {
@@ -949,7 +920,6 @@ character_event = {
 	
 	trigger = {
 		is_married = no
-		is_betrothed = no
 		trait = lustful
 		NOT = {
 			num_of_friends = 5
@@ -964,11 +934,10 @@ character_event = {
 		}
 		any_courtier = {
 			at_location = ROOT
-			same_liege = yes
+			same_liege = ROOT
 			is_female = no
 			prisoner = no
 			is_married = no
-			is_betrothed = no
 			age = 16
 			NOT = {
 				age = 25
@@ -994,13 +963,16 @@ character_event = {
 			NOT = {
 				reverse_has_opinion_modifier = { who = ROOT modifier = opinion_rival }
 			}
-			trait = chaste
+			OR = {
+				trait = chaste
+				religion_group = muslim
+			}
 			trait = shy
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
 			factor = 2
@@ -1026,11 +998,10 @@ character_event = {
 		random_courtier = {
 			limit = {
 				at_location = ROOT
-				same_liege = yes
+				same_liege = ROOT
 				is_female = no
 				prisoner = no
 				is_married = no
-				is_betrothed = no
 				age = 16
 				NOT = {
 					age = 25
@@ -1056,7 +1027,10 @@ character_event = {
 				NOT = {
 					reverse_has_opinion_modifier = { who = ROOT modifier = opinion_rival }
 				}
-				trait = chaste
+				OR = {
+					trait = chaste
+					religion_group = muslim
+				}
 				trait = shy
 			}
 			character_event = {
@@ -1243,14 +1217,16 @@ character_event = {
 		war = no
 		in_command = no
 		is_married = no
-		is_betrothed = no
 		NOT = {
 			num_of_friends = 5
 		}
 		NOT = {
 			num_of_rivals = 5
 		}
-		trait = chaste
+		OR = {
+			trait = chaste
+			religion_group = muslim
+		}
 		OR = {
 			trait = paranoid
 			trait = shy
@@ -1262,7 +1238,6 @@ character_event = {
 			in_command = no
 			prisoner = no
 			is_married = no
-			is_betrothed = no
 			age = 16
 			NOT = {
 				age = 25
@@ -1298,8 +1273,16 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
+		modifier = {
+			factor = 0.5
+			trait = flamboyant_schemer
+		}
+		modifier = {
+			factor = 2
+			trait = indulgent_wastrel
+		}
 	}
 	
 	option = {
@@ -1312,7 +1295,6 @@ character_event = {
 				in_command = no
 				prisoner = no
 				is_married = no
-				is_betrothed = no
 				age = 16
 				NOT = {
 					age = 25
@@ -1363,7 +1345,6 @@ character_event = {
 				in_command = no
 				prisoner = no
 				is_married = no
-				is_betrothed = no
 				age = 16
 				NOT = {
 					age = 25
@@ -1666,17 +1647,16 @@ character_event = {
 	max_age = 11
 	
 	trigger = {
-		trait = gregarious
-		OR = {
-			trait = ambitious
-			trait = diligent
-			trait = just
-		}
 		NOT = {
 			num_of_friends = 2
 		}
 		NOT = {
 			num_of_rivals = 2
+		}
+		OR = {
+			trait = ambitious
+			trait = diligent
+			trait = just
 		}
 		any_courtier = {
 			at_location = ROOT
@@ -1707,7 +1687,6 @@ character_event = {
 			NOT = {
 				reverse_has_opinion_modifier = { who = ROOT modifier = opinion_rival }
 			}
-			trait = gregarious
 			OR = {
 				trait = ambitious
 				trait = diligent
@@ -1717,7 +1696,28 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			trait = cynical
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
 	}
 	
 	option = {
@@ -1752,7 +1752,6 @@ character_event = {
 				NOT = {
 					reverse_has_opinion_modifier = { who = ROOT modifier = opinion_rival }
 				}
-				trait = gregarious
 				OR = {
 					trait = ambitious
 					trait = diligent
@@ -1799,7 +1798,6 @@ character_event = {
 				NOT = {
 					reverse_has_opinion_modifier = { who = ROOT modifier = opinion_rival }
 				}
-				trait = gregarious
 				OR = {
 					trait = ambitious
 					trait = diligent
@@ -1938,22 +1936,16 @@ character_event = {
 	max_age = 16
 	
 	trigger = {
-		OR = {
-			trait = chaste
-			trait = shy
-			trait = paranoid
-		}
-		NOT = {
-			trait = gregarious
-		}
-		NOT = {
-			trait = trusting
-		}
 		NOT = {
 			num_of_friends = 2
 		}
 		NOT = {
 			num_of_rivals = 2
+		}
+		OR = {
+			trait = chaste
+			trait = shy
+			trait = paranoid
 		}
 		any_courtier = {
 			at_location = ROOT
@@ -1961,7 +1953,6 @@ character_event = {
 			NOT = {
 				age = 16
 			}
-			at_location = ROOT
 			is_female = yes
 			prisoner = no
 			NOT = {
@@ -1973,8 +1964,10 @@ character_event = {
 			NOT = {
 				num_of_rivals = 2
 			}
-			trait = lustful
-			trait = gregarious
+			OR = {
+				trait = lustful
+				trait = gregarious
+			}
 			NOT = {
 				has_opinion_modifier = { who = ROOT modifier = opinion_friend }
 			}
@@ -1991,7 +1984,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
 			factor = 0.5
@@ -2025,8 +2018,10 @@ character_event = {
 				NOT = {
 					num_of_rivals = 2
 				}
-				trait = lustful
-				trait = gregarious
+				OR = {
+					trait = lustful
+					trait = gregarious
+				}
 				NOT = {
 					has_opinion_modifier = { who = ROOT modifier = opinion_friend }
 				}
@@ -2070,8 +2065,10 @@ character_event = {
 				NOT = {
 					num_of_rivals = 2
 				}
-				trait = lustful
-				trait = gregarious
+				OR = {
+					trait = lustful
+					trait = gregarious
+				}
 				NOT = {
 					has_opinion_modifier = { who = ROOT modifier = opinion_friend }
 				}
@@ -2259,9 +2256,6 @@ character_event = {
 			trait = paranoid
 			trait = shy
 		}
-		NOT = {
-			trait = gregarious
-		}
 		any_courtier = {
 			prisoner = no
 			is_female = yes
@@ -2302,7 +2296,25 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = wroth
+		}
+		modifier = {
+			factor = 2
+			trait = envious
+		}
 	}
 	
 	option = {
@@ -2408,6 +2420,9 @@ character_event = {
 		if = {
 			limit = {
 				NOT = {
+					religion_group = muslim
+				}
+				NOT = {
 					num_of_traits = 5
 				}
 				NOT = {
@@ -2502,7 +2517,7 @@ character_event = {
 	}
 }
 
-### ROOT gains a friend ###
+#ROOT gains a friend
 character_event = {
 	id = 100052
 	desc = "EVTDESC100052"
@@ -2616,17 +2631,14 @@ character_event = {
 	
 	trigger = {
 		NOT = {
-			martial = 5
-		}
-		NOT = {
-			trait = brave
-		}
-		NOT = {
 			num_of_friends = 2
 		}
 		NOT = {
 			num_of_rivals = 2
-		}		
+		}	
+		NOT = {
+			martial = 5
+		}	
 		any_courtier = {
 			martial = 5
 			is_female = no
@@ -2660,7 +2672,24 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 2
+			trait = craven
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
 	}
 	
 	option = {
@@ -2770,11 +2799,6 @@ character_event = {
 	max_age = 11
 	
 	trigger = {
-		OR = {
-			trait = content
-			trait = diligent
-			trait = ambitious
-		}
 		NOT = {
 			num_of_friends = 2
 		}
@@ -2789,12 +2813,6 @@ character_event = {
 				age = 11
 			}
 			at_location = ROOT
-			NOT = {
-				trait = gregarious
-			}
-			NOT = {
-				trait = trusting
-			}
 			OR = {
 				trait = wroth
 				trait = cruel
@@ -2824,7 +2842,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
 			factor = 0.5
@@ -2858,12 +2876,6 @@ character_event = {
 					age = 11
 				}
 				at_location = ROOT
-				NOT = {
-					trait = gregarious
-				}
-				NOT = {
-					trait = trusting
-				}
 				OR = {
 					trait = wroth
 					trait = cruel
@@ -2914,12 +2926,6 @@ character_event = {
 					age = 11
 				}
 				at_location = ROOT
-				NOT = {
-					trait = gregarious
-				}
-				NOT = {
-					trait = trusting
-				}
 				OR = {
 					trait = wroth
 					trait = cruel
@@ -3183,7 +3189,24 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 2
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = deceitful
+		}
+		modifier = {
+			factor = 0.5
+			intrigue = 5
+		}
+		modifier = {
+			factor = 2
+			NOT = { intrigue = 5 }
+		}
 	}
 	
 	option = {
@@ -3603,7 +3626,32 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			piety = 50
+		}
+		modifier = {
+			factor = 2
+			NOT = { piety = 50 }
+		}
+		modifier = {
+			factor = 0.5
+			trait = diligent
+		}
+		modifier = {
+			factor = 2
+			trait = slothful
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
 	}
 	
 	option = {
@@ -3868,7 +3916,16 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 3
+			trait = envious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
 	}
 	
 	option = {
@@ -4224,9 +4281,6 @@ character_event = {
 				trait = greedy
 			}
 			NOT = {
-				trait = kind
-			}
-			NOT = {
 				opinion = { who = ROOT value = 10 }
 			}
 			NOT = {
@@ -4245,7 +4299,25 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = humble
+		}
+		
+		modifier = {
+			factor = 0.5
+			trait = wroth
+		}
+		modifier = {
+			factor = 0.5
+			trait = envious
+		}
 	}
 	
 	option = {
@@ -4268,6 +4340,13 @@ character_event = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					num_of_traits = 5
+					trait = ambitious
+				}
+				piety = 5
+			}			
 		}
 		hidden_tooltip = {
 			random_courtier = {
@@ -4485,6 +4564,9 @@ character_event = {
 		NOT = {
 			num_of_rivals = 5
 		}
+		NOT = {
+			religion_group = muslim
+		}
 		any_courtier = {
 			is_female = no
 			prisoner = no
@@ -4492,6 +4574,9 @@ character_event = {
 			war = yes
 			at_location = ROOT
 			trait = crusader
+			NOT = {
+				religion_group = muslim
+			}
 			NOT = {
 				sibling = ROOT
 			}
@@ -4518,7 +4603,33 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			trait = cynical
+		}
+		
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = brave
+		}
+		modifier = {
+			factor = 0.5
+			trait = honest
+		}
 	}
 	
 	option = {
@@ -4532,6 +4643,9 @@ character_event = {
 				war = yes
 				at_location = ROOT
 				trait = crusader
+				NOT = {
+					religion_group = muslim
+				}
 				NOT = {
 					sibling = ROOT
 				}
@@ -4575,6 +4689,9 @@ character_event = {
 				war = yes
 				at_location = ROOT
 				trait = crusader
+				NOT = {
+					religion_group = muslim
+				}
 				NOT = {
 					sibling = ROOT
 				}
@@ -4859,13 +4976,6 @@ character_event = {
 		NOT = {
 			num_of_rivals = 5
 		}
-		OR = {
-			trait = ambitious
-			trait = trusting
-			trait = quick
-			trait = genius
-			trait = diligent
-		}
 		any_courtier = {
 			is_female = no
 			is_abroad = no
@@ -4931,7 +5041,49 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		modifier = {
+			factor = 0.5
+			trait = quick
+		}
+		modifier = {
+			factor = 0.5
+			trait = genius
+		}
+		modifier = {
+			factor = 0.5
+			trait = diligent
+		}
+		
+		modifier = {
+			factor = 2
+			trait = slothful
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			trait = slow
+		}
+		modifier = {
+			factor = 5
+			trait = imbecile
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
 	}
 	
 	option = {
@@ -5328,7 +5480,7 @@ character_event = {
 		if = {
 			limit = {
 				FROM = {
-						has_job_title = job_marshal
+					has_job_title = job_marshal
 				}
 				has_objective = obj_become_marshal
 			}
@@ -5337,7 +5489,7 @@ character_event = {
 		if = {
 			limit = {
 				FROM = {
-						has_job_title = job_treasurer
+					has_job_title = job_treasurer
 				}
 				has_objective = obj_become_treasurer
 			}
@@ -5459,7 +5611,41 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
 	}
 	
 	option = {	
@@ -5825,11 +6011,16 @@ character_event = {
 			war = no
 			is_ruler = yes
 			prisoner = no
+			NOT = {
+				liege = {
+					character = ROOT
+				}
+			}
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
 			factor = 5
@@ -5849,6 +6040,11 @@ character_event = {
 				war = no
 				is_ruler = yes
 				prisoner = no
+				NOT = {
+					liege = {
+						character = ROOT
+					}
+				}
 			}
 			letter_event = {
 				id = 100161
@@ -5865,6 +6061,11 @@ character_event = {
 				war = no
 				is_ruler = yes
 				prisoner = no
+				NOT = {
+					liege = {
+						character = ROOT
+					}
+				}
 			}
 			letter_event = {
 				id = 100162
@@ -6026,7 +6227,7 @@ letter_event = {
 	option = {
 		name = "EVTOPTC100162"
 		FROM = {
-			character_event = {
+			letter_event = {
 				id = 100164
 				days = 7
 				random = 7
@@ -6159,6 +6360,40 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 240
+		
+		modifier = {
+			factor = 0.5
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
 	}
 	
 	option = {
@@ -6502,6 +6737,9 @@ character_event = {
 		num_of_friends = 1
 		scaled_wealth = 0.5
 		NOT = {
+			religion_group = muslim
+		}
+		NOT = {
 			has_character_modifier = heretic_friend_timer
 		}
 		any_friend = {
@@ -6518,7 +6756,41 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
+		
+		modifier = {
+			factor = 0.5
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = cynical
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
+		}
 	}
 	
 	immediate = {
@@ -6782,7 +7054,6 @@ character_event = {
 	option = {
 		name = "EVTOPTA100185"
 		remove_opinion = { who = FROM modifier = opinion_friend }
-		
 	}
 }
 
@@ -6859,15 +7130,40 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
-			factor = 2
-			trait = paranoid
+			factor = 0.5
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
 		}
 		modifier = {
 			factor = 0.5
 			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
 		}
 	}
 	
@@ -7189,7 +7485,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
 			factor = 2
@@ -7535,15 +7831,40 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
-			factor = 2
-			trait = paranoid
+			factor = 0.5
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
 		}
 		modifier = {
 			factor = 0.5
 			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
 		}
 	}
 	
@@ -7864,23 +8185,40 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
 			factor = 0.5
-			trait = paranoid
-		}
-		modifier = {
-			factor = 2
-			trait = trusting
+			trait = honest
 		}
 		modifier = {
 			factor = 0.5
-			trait = temperate
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
 		}
 		modifier = {
 			factor = 2
-			trait = gluttonous
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
 		}
 	}
 	
@@ -8229,6 +8567,9 @@ character_event = {
 		num_of_friends = 1
 		learning = 5
 		NOT = {
+			religion_group = muslim
+		}
+		NOT = {
 			learning = 10
 		}
 		NOT = {
@@ -8242,6 +8583,9 @@ character_event = {
 			in_command = no
 			prisoner = no
 			learning = 11
+			NOT = {
+				religion_group = muslim
+			}
 			OR = {
 				piety = 100
 				trait = zealous
@@ -8252,15 +8596,40 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 80
 		
 		modifier = {
-			factor = 2
-			trait = zealous
+			factor = 0.5
+			trait = honest
 		}
 		modifier = {
 			factor = 0.5
-			trait = cynical
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 0.5
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 2
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 2
+			trait = paranoid
 		}
 	}
 	
@@ -8282,6 +8651,9 @@ character_event = {
 				in_command = no
 				prisoner = no
 				learning = 11
+				NOT = {
+					religion_group = muslim
+				}
 			}
 			character_event = {
 				id = 100231
@@ -8564,6 +8936,9 @@ character_event = {
 		in_command = no
 		num_of_friends = 1
 		NOT = {
+			religion_group = muslim
+		}
+		NOT = {
 			lifestyle_traits = 1
 		}
 		NOT = {
@@ -8658,21 +9033,8 @@ character_event = {
 	option = {
 		name = "EVTOPTC100240"
 		prestige = 5
-		if = {
-			limit = {
-				trait = lustful
-			}
-			hidden_tooltip = {
-				character_event = {
-					id = 5061 #Hedonism
-					days = 30
-					random = 30
-				}
-			}
-		}
 	}
 }
-
 
 #Friend is asked by ROOT about Celibacy
 character_event = {
@@ -8757,12 +9119,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA100244"
-		character_event = {
-			id = 5062
-			days = 7
-			random = 7
-			tooltip = "EVTTOOLTIP5062" #Onwards - to celibacy!
-		}
+		add_trait = celibate
 	}
 	option = {
 		name = "EVTOPTB100243"
@@ -8865,21 +9222,8 @@ character_event = {
 	option = {
 		name = "EVTOPTC100250"
 		prestige = 5
-		if = {
-			limit = {
-				trait = chaste
-			}
-			hidden_tooltip = {
-				character_event = {
-					id = 5060 #Celibacy/Hedonism
-					days = 30
-					random = 30
-				}
-			}
-		}
 	}
 }
-
 
 #Friend is asked by ROOT about hedonism
 character_event = {
@@ -8964,12 +9308,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA100254"
-		character_event = {
-			id = 5061 #Hedonism
-			days = 7
-			random = 7
-			tooltip = "EVTTOOLTIP5061" #Onwards - to hedonism!
-		}
+		add_trait = hedonist
 	}
 	option = {
 		name = "EVTOPTB100253"
@@ -9072,18 +9411,6 @@ character_event = {
 	option = {
 		name = "EVTOPTC100260"
 		prestige = 5
-		if = {
-			limit = {
-				learning = 15
-			}
-			hidden_tooltip = {
-				character_event = {
-					id = 5000 #Scholar/Mystic
-					days = 30
-					random = 30
-				}
-			}
-		}
 	}
 }
 
@@ -9171,12 +9498,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA100264"
-		character_event = {
-			id = 5000
-			days = 7
-			random = 7
-			tooltip = "EVTTOOLTIP5000" #Scholar/Mystic!
-		}
+		add_trait = scholar
 	}
 	option = {
 		name = "EVTOPTB100263"
@@ -10423,6 +10745,44 @@ character_event = {
 		}
 	}
 	
+	mean_time_to_happen = {
+		months = 200
+		
+		modifier = {
+			factor = 3
+			trait = honest
+		}
+		modifier = {
+			factor = 0.5
+			trait = gregarious
+		}
+		modifier = {
+			factor = 0.5
+			trait = kind
+		}
+		modifier = {
+			factor = 2
+			trait = trusting
+		}
+		
+		modifier = {
+			factor = 0.5
+			trait = deceitful
+		}
+		modifier = {
+			factor = 2
+			trait = shy
+		}
+		modifier = {
+			factor = 2
+			trait = cruel
+		}
+		modifier = {
+			factor = 0.5
+			trait = paranoid
+		}
+	}
+	
 	option = {
 		name = "EVTOPTA100420"
 		random_rival = {
@@ -10567,11 +10927,6 @@ character_event = {
 				}
 				clr_character_flag = tournament_cheater
 				clr_character_flag = attending_tournament
-				opinion = {
-					who = ROOT
-					modifier = opinion_arrest_attempt
-					months = 240
-				}					
 				imprison = ROOT
 				character_event = {
 					id = 100424
@@ -13598,11 +13953,6 @@ character_event = {
 				has_character_flag = liege_knows_poison
 			}
 			clr_character_flag = liege_knows_poison
-			opinion = {
-				who = ROOT
-				modifier = opinion_arrest_attempt
-				months = 240
-			}				
 			imprison = ROOT
 			hidden_tooltip = {
 				set_character_flag = imprisoned_poisoner
@@ -14081,7 +14431,7 @@ character_event = {
 				}
 				10 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -14167,7 +14517,7 @@ character_event = {
 				}
 				15 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -14231,7 +14581,7 @@ character_event = {
 				}
 				20 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -14283,7 +14633,7 @@ character_event = {
 				}
 				70 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -14401,7 +14751,7 @@ character_event = {
 				}
 				10 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -14487,7 +14837,7 @@ character_event = {
 				}
 				15 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -14551,7 +14901,7 @@ character_event = {
 				}
 				20 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -14603,7 +14953,7 @@ character_event = {
 				}
 				70 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -15198,7 +15548,7 @@ character_event = {
 				}
 				10 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -15284,7 +15634,7 @@ character_event = {
 				}
 				15 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -15348,7 +15698,7 @@ character_event = {
 				}
 				20 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -15400,7 +15750,7 @@ character_event = {
 				}
 				70 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -15518,7 +15868,7 @@ character_event = {
 				}
 				10 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -15604,7 +15954,7 @@ character_event = {
 				}
 				15 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -15668,7 +16018,7 @@ character_event = {
 				}
 				20 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer
@@ -15720,7 +16070,7 @@ character_event = {
 				}
 				70 = {
 					death = {
-						death_reason = death_reason = death_rabble
+						death_reason = death_rabble
 					}
 					FROM = {
 						set_character_flag = revenge_killer

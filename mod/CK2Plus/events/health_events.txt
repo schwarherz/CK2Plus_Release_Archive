@@ -938,10 +938,12 @@ character_event = {
 	option = {
 		name = "EVTOPTA6081"
 		remove_trait = wounded
-		random = {
-			chance = 33
-			set_character_flag = scarred
-		}		
+		hidden_tooltip = {
+			random = {
+				chance = 33
+				set_character_flag = scarred
+			}	
+		}
 	}
 }
 
@@ -955,6 +957,7 @@ character_event = {
 	trigger = {
 		base_health = 4
 		trait = maimed
+		NOT = { has_character_flag = limb_removed }
 	}
 	
 	mean_time_to_happen = {
@@ -2355,7 +2358,7 @@ character_event = {
 		name = "EVTOPTA6226"
 		add_character_modifier = {
 			name = intrigue_advice
-			days = 365
+			duration = 365
 		}
 	}
 }	
@@ -2644,5 +2647,70 @@ character_event = {
 	option = {
 		name = "EVTOPTA6240"
 		add_trait = slothful
+	}
+}
+
+#Wounded becomes Maimed
+character_event = {
+	id = 6600
+	desc = "EVTDESC6600"
+	picture = "GFX_evt_illness"
+	
+	trigger = {
+		trait = wounded
+		NOT = { trait = maimed }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+
+		modifier = {
+			factor = 0.5
+			trait = ill
+		}
+		modifier = {
+			factor = 0.5
+			trait = pneumonic
+		}		
+		modifier = {
+			factor = 0.1
+			has_character_modifier = the_oubliette
+		}
+		modifier = {
+			factor = 0.25
+			has_character_modifier = the_dungeon
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { base_health = 2 }
+		}		
+		modifier = {
+			factor = 0.75
+			NOT = { base_health = 4 }
+		}		
+		modifier = {
+			factor = 1.5
+			base_health = 6
+		}
+		modifier = {
+			factor = 2.0
+			base_health = 7
+		}
+		modifier = {
+			factor = 2.0
+			base_health = 8
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA6600"
+		random_list = {
+			20 = { death = { death_reason = death_accident } }
+			80 = {
+				remove_trait = wounded
+				add_trait = maimed			
+			}
+		}	
+		set_character_flag = limb_removed
 	}
 }

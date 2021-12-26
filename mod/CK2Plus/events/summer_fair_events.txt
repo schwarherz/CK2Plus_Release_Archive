@@ -102,7 +102,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTE74000"
-		treasury = -10
+		treasury = -5
 	}
 }
 
@@ -203,7 +203,7 @@ character_event = {
 	
 	trigger = {
 		has_character_modifier = holding_summer_fair
-		any_vassal = { reverse_opinion = { who = ROOT opinion = 30} }
+		any_vassal = { reverse_opinion = { who = ROOT value = 30} }
 		NOT = {
 			has_character_modifier = the_cynical
 		}
@@ -260,7 +260,7 @@ character_event = {
 		}
 		prestige = 15
 		random_vassal = { 
-			limit = { reverse_opinion = { who = ROOT opinion = 30} }
+			limit = { reverse_opinion = { who = ROOT value = 30} }
 			opinion = {
 				modifier = wroth_neg
 				who = ROOT
@@ -278,7 +278,7 @@ character_event = {
 			}
 		}
 		random_vassal = { 
-			limit = { reverse_opinion = { who = ROOT opinion = 30} }
+			limit = { reverse_opinion = { who = ROOT value = 30} }
 			opinion = {
 				modifier = honest_pos
 				who = ROOT
@@ -343,7 +343,7 @@ character_event = {
 		NOT = {
 			has_character_modifier = the_sullen
 		}
-		any_vassal = { reverse_opinion = { who = ROOT opinion = 10} }
+		any_vassal = { reverse_opinion = { who = ROOT value = 10 } }
 	}
 	
 	mean_time_to_happen = {
@@ -398,7 +398,7 @@ character_event = {
 			trait = arbitrary
 		}
 		random_vassal = { 
-			limit = { reverse_opinion = { who = ROOT opinion = 10} }
+			limit = { reverse_opinion = { who = ROOT value = 10 } }
 			opinion = {
 				modifier = arbitrary_pos
 				who = ROOT
@@ -411,7 +411,7 @@ character_event = {
 		name = "EVTOPTD74015"
 		piety = 5
 		random_vassal = { 
-			limit = { reverse_opinion = { who = ROOT opinion = 10} }
+			limit = { reverse_opinion = { who = ROOT value = 10 } }
 			opinion = {
 				modifier = gregarious_neg
 				who = ROOT
@@ -1101,8 +1101,8 @@ character_event = {
 	option = {
 		name = "EVTOPTA74047"
 		remove_character_modifier = holding_summer_fair
-		prestige = 5
-		change_variable = { which = "lifestyle_gardener" value = 0.99 }
+		prestige = 10
+		change_variable = { which = "lifestyle_gardener" value = 1 }
 	}
 }
 
@@ -1124,7 +1124,7 @@ character_event = {
 			war = no
 			prisoner = no
 			age = 20
-			reverse_opinion = { who = ROOT opinion = 20 } 
+			reverse_opinion = { who = ROOT value = 20 } 
 		}
 	}
 	
@@ -1141,7 +1141,7 @@ character_event = {
 				age = 16
 				reverse_opinion = { 
 					who = ROOT 
-					opinion = 20 
+					value = 20 
 				} 
 			}
 			opinion = {
@@ -1153,17 +1153,10 @@ character_event = {
 	}
 	
 	option = {
-		name = "EVTOPTB4105"
-		add_character_modifier = {
-			name = the_cynical
-			duration = 180
-		}
-	}
-	
-	option = {
 		name = "EVTOPTC4105"
 		trigger = {
 			trait = kind
+			NOT = { trait = gregarious }
 		}
 		random_vassal = { 
 			limit = {
@@ -1172,7 +1165,7 @@ character_event = {
 				age = 16
 				reverse_opinion = { 
 					who = ROOT 
-					opinion = 20 
+					value = 20 
 				} 
 			}
 			opinion = {
@@ -1192,13 +1185,13 @@ character_event = {
 			limit = {
 				reverse_opinion = { 
 					who = ROOT 
-					opinion = 20 
+					value = 20 
 				} 
 			}
 			opinion = {
 				modifier = gregarious_pos
 				who = ROOT
-				years = 2
+				years = 5
 			}
 		}
 	}

@@ -1,0 +1,889 @@
+125300 = {
+	name="Rimgaudas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=228012
+	1175.1.1={
+		birth="1175.1.1"
+	}
+	1213.1.1={
+		death="1213.1.1"
+	}
+}
+
+125301 = {
+	name="Mindaugas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125300
+	1195.1.1={
+		birth="1195.1.1"
+	}
+	1245.1.1={
+		religion="orthodox"
+	}
+	1251.1.1={
+		religion="catholic"
+	}
+	1263.9.12={
+		death="1263.9.12"
+	}
+}
+
+125302 = {
+	name="Treniotas"
+	religion="baltic_pagan"
+	culture="lithuanian"
+	1220.1.1={
+		birth="1220.1.1"
+	}
+	1264.1.2={
+		death="1264.1.2"
+	}
+}
+
+125303 = {
+	name="Vaisvilkas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125301
+	1223.1.1={
+		birth="1223.1.1"
+	}
+	1245.1.2={
+		religion="orthodox"
+	}
+	1267.4.23={
+		death="1267.4.23"
+	}
+}
+
+125304 = {
+	name="Ramune"
+	female=yes
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125301
+	1230.1.1={
+		birth="1223.1.1"
+	}
+	1245.1.2={
+	religion="orthodox"
+	}
+	1280.1.2={
+		death="1280.1.2"
+	}
+}
+
+125305 = {
+	name="Dausprungas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125300
+	1190.1.1={
+		birth="1190.1.1"
+	}
+	1236.1.2={
+		death="1236.1.2"
+	}
+}
+
+125306 = {
+	name="Tautvilas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125305
+	1220.1.1={
+		birth="1220.1.1"
+	}
+	1240.1.1={
+	add_spouse=125011
+	}
+	1250.1.1={
+	religion="catholic"
+	}
+	1264.1.2={
+		death="1264.1.2"
+	}
+}
+
+125307 = {
+	name="Danute"
+	female=yes
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125305
+	1230.1.1={
+		birth="1230.1.1"
+	}
+	1250.1.1={
+	religion="orthodox"
+	}
+	1280.1.2={
+		death="1280.1.2"
+	}
+}
+
+125308 = {
+	name="Dravenis"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=228012
+	1170.1.1={
+		birth="1170.1.1"
+	}
+	1230.1.1={
+		death="1230.1.1"
+	}
+}
+
+125309 = {
+	name="Vitenas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125308
+	1195.1.1={
+		birth="1195.1.1"
+	}
+	1255.1.1={
+		death="1255.1.1"
+	}
+}
+
+125310 = {
+	name="Traidenis"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125309
+	1220.1.1={
+		birth="1220.1.1"
+	}
+	1282.1.1={
+		death="1282.1.1"
+	}
+}
+
+125311 = {
+	name="Daumantas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125309
+	1225.1.1={
+		birth="1225.1.1"
+	}
+	1285.1.1={
+		death="1285.1.1"
+	}
+}
+
+125312 = {
+	name="Daumantas"
+	# AKA: Dovmont
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125301
+	1230.1.1={
+		birth="1230.1.1"
+	}
+	1265.1.1={
+	religion="orthodox"
+	}
+	1284.1.1={
+	add_spouse=125215
+	}
+	1299.1.2={
+		death="1299.1.2"
+	}
+}
+
+125313 = {
+	name="Gaudimante"
+	female=yes
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125310
+	1260.1.1={
+		birth="1260.1.1"
+	}
+	1279.1.1={
+	religion="catholic"
+	}
+	1288.1.1={
+		death="1288.1.1"
+	}
+}
+
+125314 = {
+	name="Butigeidis"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125310
+	1250.1.1={
+		birth="1250.1.1"
+	}
+	1291.1.2={
+		death="1291.1.2"
+	}
+}
+
+125315 = {
+	name="Vytenis"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=472352
+	1271.1.1={
+		birth="1271.1.1"
+	}
+	1316.1.1={
+		death="1316.1.1"
+	}
+}
+
+125316 = {
+	name="Vladimir"
+	dynasty=11
+	religion="orthodox"
+	culture="lithuanian"
+	father=473506
+	mother=473512
+	1330.1.2={
+		birth="1330.1.2"
+	}
+	1386.1.2={
+		death="1386.1.2"
+	}
+}
+
+125317 = {
+	name="Feodor"
+	dynasty=11
+	religion="orthodox"
+	culture="lithuanian"
+	father=473506
+	mother=473512
+	1333.1.2={
+		birth="1333.1.2"
+	}
+	1394.1.2={
+		death="1394.1.2"
+	}
+}
+
+125318 = {
+	name="Agrafena"
+	female=yes
+	dynasty=11
+	religion="orthodox"
+	culture="lithuanian"
+	father=473506
+	mother=473512
+	1334.1.2={
+		birth="1334.1.2"
+	}
+	1393.1.2={
+		death="1393.1.2"
+	}
+}
+
+144673 = {
+	name="Sarunas"
+	dynasty=100426
+	martial=8
+	diplomacy=7
+	intrigue=6
+	stewardship=4
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father = 28017	
+	1100.1.1={
+		birth="1100.1.1"
+	}
+	1170.1.1={
+		death="1170.1.1"
+	}
+}
+
+144674 = {
+	name="Sarunas"
+	dynasty=100426
+	martial=8
+	diplomacy=7
+	intrigue=6
+	stewardship=4
+	religion="baltic_pagan"
+	culture="lithuanian"
+	add_trait="amateurish_plotter"
+	father=228017
+	1200.1.1={
+		birth="1200.1.1"
+	}
+	1253.6.30={
+		death="1253.6.30"
+	}
+}
+
+20460 = {
+	name="Svitrigaila"
+	dynasty=100425
+	martial=7
+	diplomacy=8
+	intrigue=4
+	stewardship=7
+	religion="baltic_pagan"
+	culture="lithuanian"
+	add_trait="skilled_tactician"
+	1039.1.1={
+		birth="1039.1.1"
+	}
+	1089.1.1={
+		death="1089.1.1"
+	}
+}
+
+228012 = {
+	name="Antanas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1200.1.2={
+		death="1200.1.2"
+	}
+}
+
+228013 = {
+	name="Daugvilas"
+	dynasty=100420
+	martial=4
+	diplomacy=7
+	intrigue=5
+	stewardship=8
+	religion="baltic_pagan"
+	culture="lithuanian"
+	add_trait="lisp"
+	add_trait="martial_cleric"
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1200.1.1={
+		death="1200.1.1"
+	}
+}
+
+228017 = {
+	name="Sarunas"
+	dynasty=100426
+	martial=8
+	diplomacy=7
+	intrigue=6
+	stewardship=4
+	religion="baltic_pagan"
+	culture="lithuanian"
+	add_trait="amateurish_plotter"
+	father=144673
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1220.1.1={
+		death="1220.1.1"
+	}
+}
+
+228014 = {
+	name="Dravenis"
+	dynasty=100421
+	martial=4
+	diplomacy=8
+	intrigue=5
+	stewardship=6
+	religion="baltic_pagan"
+	culture="lithuanian"
+	add_trait="brave"
+	add_trait="skilled_tactician"
+	1150.1.1={
+		birth="1150.1.1"
+	}
+	1200.1.1={
+		death="1200.1.1"
+	}
+}
+
+28012 = {
+	name="Antanas"
+	dynasty=100420
+	dna="cguehyulkcf"
+	properties="gdlccd0000"
+	martial=4
+	diplomacy=4
+	intrigue=4
+	stewardship=6
+	religion="baltic_pagan"
+	culture="lithuanian"
+	add_trait="patient"
+	add_trait="martial_cleric"
+	1039.1.1={
+		birth="1039.1.1"
+	}
+	1089.1.1={
+		death="1089.1.1"
+	}
+}
+
+28017 = {
+	name="Sarunas"
+	dynasty=100426
+	dna="twnlzgjugln"
+	properties="gihecd0000"
+	martial=8
+	diplomacy=7
+	intrigue=6
+	stewardship=4
+	religion="baltic_pagan"
+	culture="lithuanian"
+	add_trait="amateurish_plotter"
+	1050.1.1={
+		birth="1050.1.1"
+	}
+	1120.1.1={
+		death="1120.1.1"
+	}
+}
+
+28022 = {
+	name="Daugvilas"
+	dynasty=100372
+	dna="lpwfqseqbct"
+	properties="tc0dck0000"
+	martial=5
+	diplomacy=5
+	intrigue=4
+	stewardship=4
+	religion="baltic_pagan"
+	culture="lithuanian"
+	add_trait="diligent"
+	add_trait="cynical"
+	add_trait="amateurish_plotter"
+	1039.1.1={
+		birth="1039.1.1"
+	}
+	1089.1.1={
+		death="1089.1.1"
+	}
+}
+
+471503 = {
+	name="Aldona"
+	female = yes
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1309.1.2={
+		birth="1309.1.2"
+	}
+	1325.1.2={
+	religion="catholic"
+	}
+	1339.1.2={
+		death="1339.1.2"
+	}
+}
+
+472100 = {
+	name="Feodor"
+	# AKA: Teodoras
+	dynasty=11
+	religion="orthodox"
+	culture="lithuanian"
+	father=472352
+	1292.1.1={
+		birth="1292.1.1"
+	}
+	1325.1.2={
+	capital="c_kiev"
+	}
+	1362.1.1={
+		death="1362.1.1"
+	}
+}
+
+472350 = {
+	name="Lubko"
+	dynasty=11
+	religion="orthodox"
+	culture="lithuanian"
+	father=472351
+	1305.1.1={
+		birth="1305.1.1"
+	}
+	1342.1.1={
+		death="1342.1.1"
+	}
+}
+
+472351 = {
+	name="Vainius"
+	# AKA: Voin
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=472352
+	1276.1.1={
+		birth="1276.1.1"
+	}
+	1334.1.1={
+		death="1334.1.1"
+	}
+}
+
+472352 = {
+	name="Butvydas"
+	# AKA: Lutuveras
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=125310
+	1252.1.1={
+		birth="1252.1.1"
+	}
+	1295.1.1={
+		death="1295.1.1"
+	}
+}
+
+472852 = {
+	name="Anastasia"
+	female = yes
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1317.1.2={
+		birth="1317.1.2"
+	}
+	1333.1.2={
+	religion="orthodox"
+	}
+	1345.1.2={
+		death="1345.1.2"
+	}
+}
+
+472867 = {
+	name="Maria"
+	female = yes
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1305.1.2={
+		birth="1305.1.2"
+	}
+	1320.1.2={
+	religion="orthodox"
+	}
+	1348.1.2={
+		death="1348.1.2"
+	}
+}
+
+472901 = {
+	name="Gaudimante"
+	# AKA: Gaudemunda
+	female = yes
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1316.1.2={
+		birth="1316.1.2"
+	}
+	1331.1.2={
+	religion="catholic"
+	}
+	1342.1.2={
+		death="1342.1.2"
+	}
+}
+
+473500 = {
+	name="Gediminas"
+	dynasty=11
+	martial=7
+	diplomacy=7
+	intrigue=7
+	stewardship=10
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=472352
+	1270.1.2={
+		birth="1275.1.2"
+	}
+	1287.1.2={
+	add_spouse = 473501
+	}
+	1295.1.2={
+	add_spouse = 473502
+	}
+	1341.5.2={
+		death="1341.5.2"
+	}
+}
+
+473501 = {
+	name="Wida"
+	female = yes
+	religion="baltic_pagan"
+	culture="lithuanian"
+	1271.1.2={
+		birth="1271.1.2"
+	}
+	1294.1.2={
+		death="1294.1.2"
+	}
+}
+
+473503 = {
+	name="Mantvydas"
+	# AKA: Manvydas
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1314.1.2={
+		birth="1314.1.2"
+	}
+	1348.1.2={
+		death="1348.1.2"
+	}
+}
+
+473504 = {
+	name="Narimantas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473501
+	1294.1.2={
+		birth="1294.1.2"
+	}
+	1332.1.2={
+	religion="orthodox"
+	}
+	1332.1.2={
+	name="Gleb"
+	# AKA: Narimantas
+	}
+	1332.1.2={
+	add_spouse=473511
+	}
+	1348.1.2={
+		death="1348.1.2"
+	}
+}
+
+473506 = {
+	name="Algirdas"
+	dynasty=11
+	martial=8
+	stewardship=9
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1296.1.2={
+		birth="1296.1.2"
+	}
+	1318.1.2={
+	add_spouse=473512
+	}
+	1318.1.2={
+	religion="orthodox"
+	}
+	1377.1.2={
+		death="1377.1.2"
+	}
+}
+
+473507 = {
+	name="Jaunutis"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1315.1.2={
+		birth="1315.1.2"
+	}
+	1366.1.2={
+		death="1366.1.2"
+	}
+}
+
+473508 = {
+	name="Kestutis"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1297.1.2={
+		birth="1297.1.2"
+	}
+	1382.1.2={
+		death="1382.1.2"
+	}
+}
+
+473509 = {
+	name="Karijotas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1302.1.2={
+		birth="1302.1.2"
+	}
+	1363.1.2={
+		death="1363.1.2"
+	}
+}
+
+473510 = {
+	name="Liubartas"
+	dynasty=11
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1303.1.2={
+		birth="1303.1.2"
+	}
+	1325.1.2={
+	religion="orthodox"
+	}
+	1325.1.2={
+	name="Dmitriy"
+	# AKA: Liubartas
+	}
+	1325.1.2={
+	add_spouse=473517
+	}
+	1383.1.2={
+		death="1383.1.2"
+	}
+}
+
+473513 = {
+	name="Andrei"
+	# AKA: Vygantas
+	dynasty=11
+	religion="orthodox"
+	culture="lithuanian"
+	father=473506
+	mother=473512
+	1320.1.2={
+		birth="1329.1.2"
+	}
+	1399.1.2={
+		death="1399.1.2"
+	}
+}
+
+473514 = {
+	name="Dmitriy"
+	dynasty=11
+	religion="orthodox"
+	culture="lithuanian"
+	father=473506
+	mother=473512
+	1327.1.2={
+		birth="1327.1.2"
+	}
+	1399.1.2={
+		death="1399.1.2"
+	}
+}
+
+473515 = {
+	name="Konstantin"
+	dynasty=11
+	religion="orthodox"
+	culture="lithuanian"
+	father=473506
+	mother=473512
+	1331.1.2={
+		birth="1331.1.2"
+	}
+	1398.1.2={
+		death="1398.1.2"
+	}
+}
+
+125319 = {
+	name="Elzbieta"
+	female=yes
+	dynasty=11
+	religion="catholic"
+	culture="lithuanian"
+	father=473500
+	mother=473502
+	1300.1.2={
+		birth="1300.1.2"
+	}
+	1364.1.2={
+		death="1364.1.2"
+	}
+}
+
+143134 = {
+	name="Antanas"
+	dynasty=100420
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=28012
+	1069.1.1={
+		birth="1069.1.1"
+	}
+	1139.1.1={
+		death="1139.1.1"
+	}
+}
+
+143135 = {
+	name="Antanas"
+	dynasty=100420
+	religion="baltic_pagan"
+	culture="lithuanian"
+	father=143134
+	1119.1.1={
+		birth="1119.1.1"
+	}
+	1187.1.1={
+		death="1187.1.1"
+	}
+}

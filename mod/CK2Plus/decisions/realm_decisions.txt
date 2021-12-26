@@ -179,7 +179,7 @@ decisions = {
 		}
 		effect = {
 			set_character_flag = requested_de_jure_title
-			liege = { character_event = { id = 63041 days = 4 tooltip = "EVTTOOLTIP63041" } } # "vassal_request_events.txt"
+			liege = { letter_event = { id = 63041 days = 4 tooltip = "EVTTOOLTIP63041" } } # "vassal_request_events.txt"
 		}
 		ai_will_do = {
 			factor = 0 # The AI is limited to the similar event 63040

@@ -3,17 +3,26 @@
 frankishgfx
 englishgfx
 germangfx
+iberiangfx
+italiangfx
 celticgfx
 norsegfx
 knightsgfx
+republicsgfx
 saxongfx
 normangfx
+andalusiangfx
+berbergfx
+levantinegfx
 
 # Eastern
 
 easternslavicgfx
 westernslavicgfx
+byzantinegfx
 ugricgfx
+cumangfx
+alangfx
 
 # Muslim
 
@@ -22,21 +31,8 @@ turkishgfx
 mongolgfx
 africangfx
 
-# Mediterranean
-
-iberiangfx
-italiangfx
-republicsgfx
-
-# Persia
-
-# Moorish
-
 # Culture groups
 
 muslimgfx
 easterngfx
 westerngfx
-mediterraneangfx
-persiagfx
-moorishgfx

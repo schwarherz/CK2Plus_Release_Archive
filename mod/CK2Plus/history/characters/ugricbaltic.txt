@@ -1,0 +1,121 @@
+20628 = {
+	name="Malyy"
+	dynasty=100592
+	dna="qqmsemebolx"
+	properties="ej0ead0000"
+	martial=4
+	diplomacy=5
+	intrigue=6
+	stewardship=4
+	religion="baltic_pagan"
+	culture="ugricbaltic"
+	add_trait="lustful"
+	add_trait="arbitrary"
+	add_trait="proud"
+	add_trait="wroth"
+	add_trait="tough_soldier"
+	1050.1.1={
+	birth="1050.1.1"
+	}
+	1120.1.1={
+	death="1120.1.1"
+	}
+}
+
+20629 = {
+	name="Vechkas"
+	dynasty=100579
+	dna="saaujqjqjtk"
+	properties="gi0dfk0000"
+	martial=7
+	diplomacy=7
+	intrigue=8
+	stewardship=4
+	religion="baltic_pagan"
+	culture="ugricbaltic"
+	add_trait="zealous"
+	add_trait="wroth"
+	add_trait="flamboyant_schemer"
+	1039.1.1={
+	birth="1039.1.1"
+	}
+	1089.1.1={
+	death="1089.1.1"
+	}
+}
+
+20631 = {
+	name="Nuyanza"
+	female = yes
+	dynasty=100589
+	martial=8
+	diplomacy=6
+	intrigue=7
+	stewardship=5
+	religion="baltic_pagan"
+	culture="ugricbaltic"
+	add_trait="stutter"
+	add_trait="scholarly_theologian"
+	1039.1.1={
+	birth="1039.1.1"
+	}
+	1089.1.1={
+	death="1089.1.1"
+	}
+}
+
+20632 = {
+	name="Meltsayka"
+	dynasty=100590
+	dna="lqqxxvzlbac"
+	properties="tj0egk0000"
+	martial=5
+	diplomacy=4
+	intrigue=7
+	stewardship=5
+	religion="baltic_pagan"
+	culture="ugricbaltic"
+	add_trait="scholarly_theologian"
+	1039.1.1={
+	birth="1039.1.1"
+	}
+	1089.1.1={
+	death="1089.1.1"
+	}
+}
+
+20633 = {
+	name="Paksyut"
+	dynasty=100591
+	dna="zaykdujigcp"
+	properties="tjmcbk0000"
+	martial=8
+	diplomacy=8
+	intrigue=7
+	stewardship=6
+	religion="baltic_pagan"
+	culture="ugricbaltic"
+	add_trait="wroth"
+	add_trait="arbitrary"
+	add_trait="skilled_tactician"
+	1039.1.1={
+	birth="1039.1.1"
+	}
+	1089.1.1={
+	death="1089.1.1"
+	}
+}
+
+143146 = {
+	name="Malyy"
+	dynasty=100592
+	religion="baltic_pagan"
+	culture="ugricbaltic"
+	father = 20628
+	1100.1.1={
+	birth="1100.1.1"
+	}
+	1187.1.1={
+	death="1187.1.1"
+	}
+}

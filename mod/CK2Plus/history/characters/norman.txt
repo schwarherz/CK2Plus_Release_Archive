@@ -410,12 +410,14 @@
 	name="Robert" #Guiscard
 	# AKA: Robert 'Guiscard'
 	dynasty=678
-	properties="ch00e0"
+	dna="bhlfacmagci"
+	properties="cc0ehd0000"
 	martial=10
 	diplomacy=6
 	intrigue=8
 	stewardship=8
-	piety = 200
+	health=10
+	piety=175
 	religion="catholic"
 	culture="norman"
 	add_trait="deceitful"
@@ -470,6 +472,8 @@
 1132 = {
 	name="Roger"
 	dynasty=678
+	dna="belfacmxgci"
+	properties="cc0jhj0000"
 	martial=8
 	diplomacy=7
 	intrigue=4
@@ -516,6 +520,8 @@
 1134 = {
 	name="Abelard"
 	dynasty=678
+	dna="bceejcoqgct"
+	properties="ci0c0k0000"
 	martial=8
 	diplomacy=6
 	intrigue=5
@@ -796,6 +802,8 @@
 1152 = {
 	name="Richard"
 	dynasty=676
+	dna="dlmajvbiccn"
+	properties="cc0ehk0000"
 	martial=7
 	diplomacy=4
 	intrigue=6
@@ -1052,20 +1060,20 @@
 		add_spouse=367 # Mathilda of Flanders
 	}
 	1066.1.5 = {
-		##add_claim = k_england
+	##	add_claim = k_england
 	}
 	1066.9.14 = {
-		wealth = 1000
+		wealth = 500
 		raise_levies = {
 			location = 97 # Rouen
-			force_mult = 5
+			force_mult = 6.5
 		}
 	}
 	1066.10.14 = {
 		raise_levies = {
 			dismiss = yes
 			location = 97 # Rouen
-			force_mult = 5
+			force_mult = 6.5
 		}
 	}
 	1066.12.26  = {
@@ -1101,15 +1109,13 @@
 	# AKA: Robert 'Curthose'
 	dynasty=752
 	martial=6
-	diplomacy=4
-	intrigue=4
-	stewardship=3
+	diplomacy=6
+	intrigue=6
+	stewardship=4
 	religion="catholic"
 	culture="norman"
-	add_trait="envious"
 	add_trait="wroth"
 	add_trait="lisp"
-	add_trait="slothful"
 	add_trait="martial_cleric"
 	father=140
 	mother=367
@@ -1218,6 +1224,8 @@
 148 = {
 	name="Odo"
 	dynasty=101754
+	dna="vhvraiwwgad"
+	properties="cc0ehk0000"
 	martial=6
 	diplomacy=7
 	intrigue=8
@@ -1261,6 +1269,8 @@
 150 = {
 	name="Robert"
 	dynasty=101754
+	dna="acxongigybg"
+	properties="fg0d0k0000"
 	martial=8
 	diplomacy=8
 	intrigue=4
@@ -1288,6 +1298,8 @@
 152 = {
 	name="Roger" #Roger II de Montgomerie
 	dynasty=751
+	dna="wwgbkbzfbay"
+	properties="eh0chk0000"
 	religion="catholic"
 	culture="norman"
 	add_trait="nick_the_great"
@@ -1611,6 +1623,8 @@
 171155 = {
 	name="Geoffroy"
 	dynasty=200080
+	dna="feobylmbkcj"
+	properties="ccyc0k0000"
 	religion="catholic"
 	culture="norman"
 	father=171154
@@ -1709,6 +1723,8 @@
 172 = {
 	name="William"
 	dynasty=748
+	dna="cavavakogad"
+	properties="0c0chk0000"
 	martial=5
 	diplomacy=5
 	intrigue=8
@@ -4540,6 +4556,8 @@
 41260 = {
 	name="Baldwin" #count of Devon 1066-1090
 	dynasty=101886
+	dna="cpiamhaebhq"
+	properties="egcehk0000"
 	martial=5
 	diplomacy=4
 	intrigue=7
@@ -5133,6 +5151,8 @@
 6806 = {
 	name="William"
 	dynasty=534
+	dna="jwdmmrraqie"
+	properties="ec0jhj0000"
 	martial=5
 	diplomacy=7
 	intrigue=4
@@ -5311,6 +5331,8 @@
 6818 = {
 	name="William"
 	dynasty=752
+	dna="xslpvralbsp"
+	properties="fc0i0k0000"
 	martial=4
 	diplomacy=6
 	intrigue=8
@@ -5981,6 +6003,8 @@
 85003 = {
 	name="Robert"
 	dynasty=678
+	dna="nzlnacmrgfi"
+	properties="0djehk0000"
 	martial=7
 	diplomacy=7
 	intrigue=3
@@ -6728,6 +6752,8 @@
 204596 = {
 	name="Robert" #Robert I de Meulan
 	dynasty=5061
+	dna="fcejfbdvbah"
+	properties="0d0ehk0000"
 	martial=7
 	diplomacy=5
 	intrigue=5
@@ -6967,6 +6993,8 @@
 73270 = {
 	name="Geoffroy"
 	dynasty = 100345
+	dna="mqcvyeznznh"
+	properties="ci0e0k0000"
 	religion="catholic"
 	culture="norman"
 	father=73272

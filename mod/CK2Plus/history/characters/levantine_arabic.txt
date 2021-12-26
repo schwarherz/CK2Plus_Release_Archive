@@ -369,6 +369,8 @@
 20738 = {
 	name="Nasr Abu'l-Qasim Nizam ad-Din"
 	dynasty=101686
+	dna="itonqnkuqgm"
+	properties="na0egd0000"
 	martial=7
 	diplomacy=7
 	intrigue=8
@@ -389,6 +391,8 @@
 	name="Abdul-Fattah"
 	# AKA: Abdul
 	#placeholder
+	dna="hwyocqesaap"
+	properties="me0cgk0000"
 	martial=4
 	diplomacy=6
 	intrigue=6
@@ -408,6 +412,8 @@
 	name="Rashid ud-Dawlah Mahmud"
 	# AKA: Rashid ud
 	dynasty=101685
+	dna="emietuslmam"
+	properties="jb0efd0000"
 	martial=6
 	diplomacy=8
 	intrigue=6
@@ -427,6 +433,8 @@
 	name="Abdul-Haq"
 	# AKA: Abdul
 	#placeholder
+	dna="eengtxsbaal"
+	properties="ne0dck0000"
 	martial=4
 	diplomacy=7
 	intrigue=6
@@ -447,6 +455,8 @@
 20746 = {
 	name="Jalaaladdin"
 	dynasty=101015
+	dna="phguqqhgaaq"
+	properties="oe0cgk0000"
 	martial=6
 	diplomacy=8
 	intrigue=6
@@ -467,6 +477,8 @@
 20747 = {
 	name="Murtaza"
 	#placeholder
+	dna="gpmvkyvzaag"
+	properties="maweak0000"
 	martial=7
 	diplomacy=7
 	intrigue=5
@@ -487,6 +499,8 @@
 20761 = {
 	name="Tayyib"
 	dynasty=101033
+	dna="aheqhihoaaf"
+	properties="oi0dfk0000"
 	martial=8
 	diplomacy=4
 	intrigue=5
@@ -507,6 +521,8 @@
 20762 = {
 	name="Qutaiba"
 	dynasty=101036
+	dna="ggvegxtwaap"
+	properties="ne0cgk0000"
 	martial=7
 	diplomacy=4
 	intrigue=7
@@ -625,6 +641,8 @@
 	name="Hisn ad-Dawlah Haydar"
 	# AKA: Hisn ad
 	dynasty=101059
+	dna="fmywxtutaaj"
+	properties="oh0cfd0000"
 	martial=8
 	diplomacy=6
 	intrigue=5
@@ -644,6 +662,8 @@
 20770 = {
 	name="Ishaq"
 	#placeholder
+	dna="bpslfqjeaaw"
+	properties="oc0egk0000"
 	martial=6
 	diplomacy=4
 	intrigue=4
@@ -663,6 +683,8 @@
 20771 = {
 	name="Yahya"
 	#placeholder
+	dna="nwwigbljaao"
+	properties="nm0dgk0000"
 	martial=8
 	diplomacy=5
 	intrigue=4
@@ -682,6 +704,8 @@
 20772 = {
 	name="Muzaffaraddin"
 	dynasty=101028
+	dna="qwmuwmwqaat"
+	properties="mgjcck0000"
 	martial=7
 	diplomacy=5
 	intrigue=5
@@ -701,6 +725,8 @@
 20773 = {
 	name="Murtaza"
 	dynasty=101025
+	dna="rzfsofrcaaz"
+	properties="mhtdgk0000"
 	martial=7
 	diplomacy=8
 	intrigue=8
@@ -740,6 +766,8 @@
 	name="Abdul-Rahman"
 	# AKA: Abdul
 	dynasty=101021
+	dna="hbrebcytaan"
+	properties="omudck0000"
 	martial=4
 	diplomacy=7
 	intrigue=8
@@ -778,6 +806,8 @@
 	name="Abdul-Haq"
 	# AKA: Abdul
 	#placeholder
+	dna="rmultfagaaz"
+	properties="oh0cfk0000"
 	martial=4
 	diplomacy=7
 	intrigue=4
@@ -854,6 +884,8 @@
 20782 = {
 	name="Giyasaddin"
 	dynasty=101045
+	dna="ezsugmkraav"
+	properties="mc0cfk0000"
 	martial=5
 	diplomacy=8
 	intrigue=4
@@ -874,6 +906,8 @@
 20783 = {
 	name="Badraddin"
 	dynasty=101047
+	dna="caeyjqmtaau"
+	properties="jlbegk0000"
 	martial=5
 	diplomacy=7
 	intrigue=6
@@ -892,6 +926,8 @@
 20784 = {
 	name="Zakariah"
 	dynasty=101049
+	dna="pavofojtaao"
+	properties="nm0cck0000"
 	martial=8
 	diplomacy=7
 	intrigue=4
@@ -911,6 +947,8 @@
 20785 = {
 	name="Ra'uf"
 	dynasty=101050
+	dna="yrifqmfzaah"
+	properties="ej0cck0000"
 	martial=7
 	diplomacy=7
 	intrigue=5
@@ -930,6 +968,8 @@
 20786 = {
 	name="Zakariah"
 	dynasty=101051
+	dna="nylkdzucaaa"
+	properties="nc0ddk0000"
 	martial=8
 	diplomacy=5
 	intrigue=7
@@ -949,6 +989,8 @@
 20788 = {
 	name="Qasim"
 	dynasty=101052
+	dna="igjccsvkaan"
+	properties="nl0cgk0000"
 	martial=7
 	diplomacy=6
 	intrigue=5
@@ -986,6 +1028,8 @@
 20794 = {
 	name="Da'ud"
 	dynasty=101033
+	dna="tapernpdaag"
+	properties="jb0ebk0000"
 	martial=5
 	diplomacy=8
 	intrigue=5
@@ -1005,6 +1049,8 @@
 20795 = {
 	name="Qutaiba"
 	dynasty=101034
+	dna="ynemjllnaaw"
+	properties="nc0efk0000"
 	martial=7
 	diplomacy=8
 	intrigue=6
@@ -1857,6 +1903,8 @@
 	name="Sharaf ad-Dawlah"
 	# AKA: Sharaf ad
 	dynasty=101862
+	dna="azocdhfkqac"
+	properties="mm0egd0000"
 	martial=4
 	diplomacy=4
 	intrigue=4
@@ -2788,6 +2836,8 @@
 	name="Muhammad"
 	#placeholder
 	dynasty=101023
+	dna="pzddiuudaac"
+	properties="ma0cbk0000"
 	religion="sunni"
 	culture="levantine_arabic"
 	1050.1.1={
@@ -2937,6 +2987,8 @@
 	name="Hakam"
 	#placeholder
 	dynasty=100783
+	dna="kxpeyhrduaz"
+	properties="oh0ecd0000"
 	religion="sunni"
 	culture="levantine_arabic"
 	1045.1.1={
@@ -3101,6 +3153,8 @@
 	name="Abdul-Wahab"
 	#placeholder
 	dynasty=100687
+	dna="btsvkqkmaam"
+	properties="nh0cck0000"
 	religion="sunni"
 	culture="levantine_arabic"
 	1046.1.1={
@@ -3582,6 +3636,8 @@
 	name="Abdul-Salaam"
 	# AKA: Abdul
 	dynasty=101058
+	dna="jjsxbvctaau"
+	properties="jmtcbk0000"
 	martial=4
 	diplomacy=8
 	intrigue=4
@@ -3601,6 +3657,8 @@
 	name="Abdul"
 	# AKA: Abdul
 	dynasty=101042
+	dna="msopiyitaan"
+	properties="oi0dck0000"
 	martial=4
 	diplomacy=8
 	intrigue=7
@@ -3621,6 +3679,8 @@
 	name="Abdul-Haleem"
 	# AKA: Abdul
 	dynasty=101038
+	dna="lwnizddlaap"
+	properties="omudgk0000"
 	martial=4
 	diplomacy=5
 	intrigue=6
@@ -3641,6 +3701,8 @@
 20675 = {
 	name="Rashid"
 	dynasty=101036
+	dna="swwooyczaag"
+	properties="ma0dck0000"
 	martial=7
 	diplomacy=5
 	intrigue=5
@@ -5197,6 +5259,8 @@
 93469 = {
 	name="Mas'ud"
 	#placeholder
+	dna="oezqdfquaaf"
+	properties="jj0dck0000"
 	religion="sunni"
 	culture="levantine_arabic"
 	1040.1.1={
@@ -5301,6 +5365,8 @@
 93477 = {
 	name="Ali"
 	#placeholder
+	dna="jatdnxytaat"
+	properties="mh0efk0000"
 	religion="sunni"
 	culture="levantine_arabic"
 	1040.1.1={

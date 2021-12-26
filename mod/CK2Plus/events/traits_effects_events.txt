@@ -377,7 +377,7 @@ character_event = {
 		in_command = no
 		trait = chaste
 		religion = catholic
-		NOT = { has_landed_title = k_papal_state }
+		NOT = { has_landed_title = e_papal_state }
 		NOT = { trait = excommunicated }
 	}
 	
@@ -434,12 +434,10 @@ character_event = {
 		name = "EVTOPTC3020"
 		limit = {
 			any_courtier = {
-				limit = {
-					OR = {
-						trait = lustful
-						trait = hedonist
-					}
-				}		
+				OR = {
+					trait = lustful
+					trait = hedonist
+				}	
 			}
 		}
 		any_courtier = {
@@ -531,7 +529,7 @@ character_event = {
 			trait = celibate
 		}
 		new_character = {
-			character_event = { id = 100001 }
+			character_event = { id = 300001 }
 		}		
 	}
 	option = {
@@ -784,7 +782,6 @@ character_event = {
 			remove_opinion = {
 				modifier = opinion_admire_chaste
 				who = ROOT
-				years = 15
 			}
 		}
 		prestige = -5
@@ -2381,7 +2378,7 @@ character_event = {
 			limit = {
 				OR = {
 					has_job_title  = job_marshal
-					has_job_title  = job_spiritual
+					has_job_title  = job_chancellor
 					has_job_title  = job_spymaster
 					has_job_title  = job_treasurer
 					has_job_title  = job_spiritual
@@ -2418,12 +2415,12 @@ character_event = {
 		trait = slothful
 		OR = {
 			any_courtier = {
-				reverse_opinion = { who = ROOT opinion = 25 }
+				reverse_opinion = { who = ROOT value = 25 }
 			}
 			spouse = {
 				is_alive = yes
 				is_abroad = no
-				reverse_opinion = { who = ROOT opinion = 25 }
+				reverse_opinion = { who = ROOT value = 25 }
 			}
 		}
 	}
@@ -2471,7 +2468,7 @@ character_event = {
 			spouse = {
 				is_alive = yes
 				is_abroad = no
-				reverse_opinion = { who = ROOT opinion = 25 }
+				reverse_opinion = { who = ROOT value = 25 }
 			}			
 		}
 		spouse = {
@@ -2895,7 +2892,7 @@ character_event = {
 				limit = {
 					age = 16
 					NOT = { demesne_size = 1 }
-					NOT = { opinion = { whspeo = prev value = 0 } }
+					NOT = { opinion = { who = prev value = 0 } }
 
 				}
 			}
@@ -4121,7 +4118,7 @@ character_event = {
 		}
 
 		modifier = {
-			factor = 5.0§
+			factor = 5.0
 			trait = temperate
 		}
 		modifier = {
@@ -5959,10 +5956,6 @@ character_event = {
 			factor = 2.5
 			trait = stressed
 		}
-		modifier = {
-			factor = 2.5
-			trait = stressed
-		}
 	}
 	
 	option = {
@@ -7420,14 +7413,12 @@ character_event = {
 		war = no
 		in_command = no
 		is_priest = no
-		OR = {
-			any_courtier = {
-				opinion = { who = ROOT value = 75 }
-				reverse_opinion = { who = ROOT value = 50 }
-				OR = {
-					is_priest = yes
-					has_job_title = job_spiritual
-				}
+		any_courtier = {
+			opinion = { who = ROOT value = 75 }
+			reverse_opinion = { who = ROOT value = 50 }
+			OR = {
+				is_priest = yes
+				has_job_title = job_spiritual
 			}
 		}				
 	}
@@ -10713,15 +10704,7 @@ character_event = {
 				who = ROOT
 				years = 5
 			}
-			hidden_toolip = {
-				random = {
-					chance = 10
-					character_event = {
-						id = 5062
-						days = 2
-					}
-				}
-			}
+			change_variable = { which = "lifestyle_celibate" value = 1 }
 		}
 	}
 }
@@ -17397,7 +17380,7 @@ character_event = {
 			trait = wroth
 		}
 		FROM = {
-			prisoner = yes
+			imprison = yes
 		}
 	}
 	option = {
@@ -17529,7 +17512,7 @@ character_event = {
 		}
 		job_treasurer = {
 			character_event = {
-				id = 365
+				id = 3656
 				tooltip = "EVTTOOLTIP3656"
 			}			
 		}
@@ -17798,7 +17781,7 @@ character_event = {
 			has_nickname = nick_the_troubadour
 		}
 		new_character = {
-			character_event = { id = 100001 }	
+			character_event = { id = 300001 }	
 			set_character_flag = pressured_poet
 			character_event = {
 				id = 3661
@@ -17819,7 +17802,7 @@ character_event = {
 			has_nickname = nick_the_troubadour
 		}
 		new_character = {
-			character_event = { id = 100001 }		
+			character_event = { id = 300001 }		
 			set_character_flag = asked_poet
 			character_event = {
 				id = 3661
@@ -17840,7 +17823,7 @@ character_event = {
 			has_nickname = nick_the_troubadour
 		}
 		new_character = {
-			character_event = { id = 100001 }	
+			character_event = { id = 300001 }	
 			set_character_flag = bribed_poet
 			character_event = {
 				id = 3661
@@ -19914,26 +19897,7 @@ character_event = {
 			who = FROM
 			years = 8
 		}
-		hidden_tooltip = {
-			if = {
-				limit = {
-					in_command = no
-					war = no
-					martial = 8
-					NOT = {
-						lifestyle_traits = 1
-					}
-					NOT = {
-						has_character_flag = LE_ST
-					}
-				}
-				character_event = {
-					id = 5040
-					days = 5
-					random = 1
-				}
-			}
-		}
+		change_variable = { which = "lifestyle_falconer" value = 1 }
 	}
 }
 

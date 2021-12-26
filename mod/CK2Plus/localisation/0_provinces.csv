@@ -909,119 +909,149 @@ PROV907;Sabzevar;Sabzevar;Sabzevar;;Sabzevar;;;;;;;;;x
 PROV908;Sharawrah;Sharawrah;Scharara;;Sharawrah;;;;;;;;;x
 PROV909;Sahara Desert;Désert du Sahara;Sahara;;Desierto del Sahara;;;;;;;;;x
 PROV910;Siberia;Sibérie;Sibirien;;Siberia;;;;;;;;;x
-PROV911;Socotra;Socotra;Socotra;;Socotra;;;;;;;;;x
-PROV912;Teate;Teate;Teate;;Teate;;;;;;;;;x
-PROV913;Ibiza;Ibiza;Ibiza;;Ibiza;;;;;;;;;x
-PROV914;Western Mediterranean;Méditerranée Occidentale;Westliches Mittelmeer;;Mediterráneo del Oeste;;;;;;;;;x
-PROV915;Golfo de Valencia;Golfe de Valence;Golf von Valencia;;Golfo de Valencia;;;;;;;;;x
-PROV916;Islas Baleares;Îles Baléares;Balearen;;Islas Baleares;;;;;;;;;x
-PROV917;Ponant;Ponant;Ponant;;Ponant;;;;;;;;;x
-PROV918;Mediterranean Sea;Mer Méditerranée;Mittelmeer;;Mar Mediterráneo  ;;;;;;;;;x
-PROV919;Golfe du Lion;Golfe du Lion;Golfe du Lion;;Golfo de León;;;;;;;;;x
-PROV920;Lake Léman;Lac Léman;Léman-See;;Lago Lemán;;;;;;;;;x
-PROV921;Cote d Azur;Côte d Azur;Cote d Azur;;Costa Azul;;;;;;;;;x
-PROV922;Ligurian Sea;Mer Ligurienne;Ligurisches Meer;;Mar de Liguria;;;;;;;;;x
-PROV923;Tyrrhenian Sea;Mer Tyrrhénienne;Tyrrhenisches Meer;;Mar Tirreno;;;;;;;;;x
-PROV924;Coast of Sardegna;Côte de Sardaigne;Sardegna-Küste;;Costa de Cerdeña;;;;;;;;;x
-PROV925;Golfo di Napoli;Golfe de Naples;Golf von Neapel;;Golfo de Nápoles;;;;;;;;;x
-PROV926;Strait di Messina;Détroit de Messine;Messina-Straße;;Estrecho de Mesina;;;;;;;;;x
-PROV927;Golfe de Hammamet;Golfe de Hammamet;Golf von Hammamet;;Golfo de Hammamet;;;;;;;;;x
-PROV928;Malta Channel;Canal de Malte;Maltakanal;;Canal de Malta;;;;;;;;;x
-PROV929;Gulf of Sidra;Golfe de Sidra;Golf von Sidra;;Golfo de Sidra;;;;;;;;;x
-PROV930;Golfo di Taranto;Golfe de Taranto;Golf von Tarent;;Golfo de Otranto;;;;;;;;;x
-PROV931;Ionian Sea;Mer Ionienne;Ionisches Meer;;Mar Jónico;;;;;;;;;x
-PROV932;Strait of Otranto;Détroit d'Otranto;Straße von Otranto;;Estrecho de Otranto;;;;;;;;;x
-PROV933;Adriatic Sea;Mer Adriatique;Adria;;Mar Adriático;;;;;;;;;x
-PROV934;Gulf of Venice;Golfe de Venise;Golf von Venedig;;Golfo de Venecia;;;;;;;;;x
-PROV935;Aegean Sea;Mer Egée;Ägäis;;Mar Egeo  ;;;;;;;;;x
-PROV936;Cyclades;Cyclades;Kykladen;;Cícladas;;;;;;;;;x
-PROV937;Sea of Crete;Mer de Crète;See von Kreta;;Mar de Creta;;;;;;;;;x
-PROV938;Coast of Egypt;Côte d'Égypte;Ägyptische Küste;;Costa de Egipto;;;;;;;;;x
-PROV939;Nile Delta;Delta du Nil;Nildelta;;Delta del Nilo;;;;;;;;;x
-PROV940;Sea of Palestine;Mer de Palestine;Palästinische See;;Mar de Palestina;;;;;;;;;x
-PROV941;Eastern Mediterranean;Méditerranée Orientale;Östliches Mittelmeer;;Mediterráneo del Este;;;;;;;;;x
-PROV942;Western Aegean Sea;Mer Egée Occidentale;Westliche Ägäis;;Mar Egeo occidental;;;;;;;;;x
-PROV943;Näsijärvi;Näsijärvi;Näsijärvi;;Näsijärvi;;;;;;;;;x
-PROV944;Aral Sea;Mer d'Aral;Aralsee;;Mar Aral;;;;;;;;;x
-PROV945;Levantine Sea;Mer Levantine;Levantinisches Meer;;Mar levantino;;;;;;;;;x
-PROV946;Cilician Sea;Mer de Sicile;Kilikisches Meer;;Mar de Cilicia;;;;;;;;;x
-PROV947;Sea of Marmara;Mer de Marmara;See von Marmara;;Mar de Mármara;;;;;;;;;x
-PROV948;Gulf of Varna;Golfe de Varna;Golf von Varna;;Golfo de Varna;;;;;;;;;x
-PROV949;Coast of Taurida;Côte de Taurida;Küste von Taurida;;Costa de Taurida;;;;;;;;;x
-PROV950;Black Sea;Mer Noire;Schwarzes Meer;;Mar Negro;;;;;;;;;x
-PROV951;Coast of Kolkhida;Côte de Kolkhida;Küste von Kolkhida;;Costa de Kolkhida;;;;;;;;;x
-PROV952;Caspian Sea;Mer Caspienne;Kaspisches Meer;;Mar Caspio;;;;;;;;;x
-PROV953;Coast of Morocco;Côte du Maroc;Küste von Marokko;;Costa de Marruecos;;;;;;;;;x
-PROV954;Strait of Gibraltar;Détroit de Gibraltar;Straße von Gibraltar;;Estrecho de Gibraltar;;;;;;;;;x
-PROV955;Saimaa;Saimaa;Saimaa;;Saimaa;;;;;;;;;x
-PROV956;Kallavesi;Kallavesi;Kallavesi;;Kallavesi;;;;;;;;;x
-PROV957;Oulujärvi;Oulujärvi;Oulujärvi;;Oulujärvi;;;;;;;;;x
-PROV958;Ladoga Lake;Lac Ladoga;Ladogasee;;Lago Ladoga;;;;;;;;;x
-PROV959;Mälaren;Mälaren;Mälaren;;Mälaren;;;;;;;;;x
-PROV960;Faroya;Faroya;Faroya;;Faroya;;;;;;;;;x
-PROV961;Hjälmaren;Hjälmaren;Hjälmaren;;Hjälmaren;;;;;;;;;x
-PROV962;Vättern;Vättern;Vättern;;Vättern;;;;;;;;;x
-PROV963;Vänern;Vänern;Vänern;;Vänern;;;;;;;;;x
-PROV964;White Sea;Mer Blanche;Weißmeer;;Mar Blanco;;;;;;;;;x
-PROV965;Strait of Dover;Détroit de Douvres;Straße von Dover;;Paso de Calais;;;;;;;;;x
-PROV966;The Solent;Le Solent;Der Solent;;The Solent;;;;;;;;;x
-PROV967;Land's End;Land's End;Land's End;;Finisterre;;;;;;;;;x
-PROV968;St. George's Channel;Canal Saint-Georges;St.-Georgs-Kanal;;Canal de San Jorge;;;;;;;;;x
-PROV969;Sea of Azov;Mer d'Azov;See von Azov;;Mar de Azov;;;;;;;;;x
-PROV970;Cabo de Finisterre;Cap Finisterre;Finisterre;;Cabo de Finisterre;;;;;;;;;x
-PROV971;Bodensee;Lac de Constance;Bodensee;;Bodensee;;;;;;;;;x
-PROV972;Kara-Bogaz Gol;Kara-Bogaz Gol;Kara-Bogaz Gol;;Kara-Bogaz Gol;;;;;;;;;x
-PROV973;Waddenzee;Waddenzee;Waddenzee;;Waddenzee;;;;;;;;;x
-PROV974;Bay of Biscay;Golfe de Gascogne;Biskaya;;Bahía de Vizcaya;;;;;;;;;x
-PROV975;Donegal Bay;Baie de Donegal;Donegal Bay;;Bahía de Donegal;;;;;;;;;x
-PROV976;Sea of Canarias;Mer des Canaries;See von Canarias;;Mar de Canarias;;;;;;;;;x
-PROV977;Bretagne Coast;Côte de Bretagne;Bretagneküste;;Costa de Bretaña;;;;;;;;;x
-PROV978;Atlantic;Atlantique;Atlantik;;Atlántico;;;;;;;;;x
-PROV979;Tiveriade Lake;Lac de Tibériade;Tiveriade-See;;Lago de Tiberíades;;;;;;;;;x
-PROV980;Portugal Coast;Côte du Portugal;Küste von Portugal;;Costa de Portugal;;;;;;;;;x
-PROV981;Golfo de Cadiz;Golfe de Cadix;Golf von Cadiz;;Golfo de Cádiz;;;;;;;;;x
-PROV982;Coast of Iceland;Côte d'Islande;Küste von Island;;Costa de Islandia;;;;;;;;;x
-PROV983;Dead Sea;Mer Morte;Totes Meer;;Mar Muerto;;;;;;;;;x
-PROV984;North Atlantic;Atlantique Nord;Nordatlantik;;Atlántico Norte;;;;;;;;;x
-PROV985;North Atlantic;Atlantique Nord;Nordatlantik;;Atlántico Norte;;;;;;;;;x
-PROV986;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
-PROV987;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
-PROV988;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
-PROV989;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
-PROV990;Sea of Shetland;Mer des Shetland;Shetlandsee;;Mar de Shetland;;;;;;;;;x
-PROV991;Bantry Bay;Baie de Bantry;Bantry Bay;;Bahía Bantry;;;;;;;;;x
-PROV992;The Minch;Le Minch;The Minch;;El Minch;;;;;;;;;x
-PROV993;Moray Firth;Moray Firth;Moray Firth;;Moray Firth;;;;;;;;;x
-PROV994;Firth of Forth;Firth of Forth;Firth of Forth;;Firth of Forth;;;;;;;;;x
-PROV995;Dogger bank;Dogger Bank;Doggerbank;;Dogger bank;;;;;;;;;x
-PROV996;The Wash;Le Wash;The Wash;;The Wash;;;;;;;;;x
-PROV997;Onega;Onega;Onega;;Onega;;;;;;;;;x
-PROV998;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
-PROV999;The Sound;Le Sound;The Sound;;The Sound;;;;;;;;;x
-PROV1000;Gulf of Heligoland;Golfe de Heligoland;Golf von Helgoland;;Golfo de Heligoland;;;;;;;;;x
-PROV1001;Kattegat;Kattegat;Kattegat;;Kattegat;;;;;;;;;x
-PROV1002;Gulf of Danzig;Golfe de Gdansk;Golf von Danzig;;Golfo de Danzig;;;;;;;;;x
-PROV1003;Bight of Hanö;Anse de Hanö;Bucht von Hanö;;Bahía de Hanoi;;;;;;;;;x
-PROV1004;Baltic Sea;Mer Baltique;Ostsee;;Mar Báltico;;;;;;;;;x
-PROV1005;Sea of Åland;Mer d'Åland;See von Åland;;Mar de Åland;;;;;;;;;x
-PROV1006;Gulf of Finland;Golfe de Finlande;Finnischer Meerbusen;;Golfo de Finlandia;;;;;;;;;x
-PROV1007;Gulf of Bothnia;Golfe de Bothnie;Bottnischer Meerbusen;;Golfo de Botnia;;;;;;;;;x
-PROV1008;Gulf of Bothnia;Golfe de Bothnie;Bottnischer Meerbusen;;Golfo de Botnia;;;;;;;;;x
-PROV1009;Baie de la Seine;Baie de la Seine;Baie de la Seine;;Bahía del Sena;;;;;;;;;x
-PROV1010;Îles de la Manche;Îles de la Manche;Kanalinseln;;Islas del Canal;;;;;;;;;x
-PROV1011;Mauretanian Coast;Côte de Mauritanie;Mauretanische Küse;;Costa Mauritana;;;;;;;;;x
-PROV1012;Lake Peipus;Lac Peipus;Peipus-See;;Lago Peipus;;;;;;;;;x
-PROV1013;Lake Yalpug;Lac Yalpug;Yalpug-See;;Lago Yalpug;;;;;;;;;x
-PROV1014;Coast of Asturias;Côte asturienne;Asturische Küste;;Costa de Asturias;;;;;;;;;x
-PROV1015;Northern Bay of Biscay;Nord du golfe de Gascogne;Nördliche Biskaya;;Golfo de Vizcaya;;;;;;;;;x
-PROV1016;Celtic Sea;Mer Celtique;Keltische See;;Mar celta;;;;;;;;;x
-PROV1017;Gulf of Suez;Gulf of Suez;Gulf of Suez;Gulf of Suez;Gulf of Suez;;;;;;;;;x
-PROV1018;Red Sea;Red Sea;Red Sea;Red Sea;Red Sea;;;;;;;;;x
-PROV1019;Bab el Mandeb;Bab el Mandeb;Bab el Mandeb;Bab el Mandeb;Bab el Mandeb;;;;;;;;;x
-PROV1020;Horn of Africa;Horn of Africa;Horn of Africa;Horn of Africa;Horn of Africa;;;;;;;;;x
-PROV1021;Sea of Oman;Sea of Oman;Sea of Oman;Sea of Oman;Sea of Oman;;;;;;;;;x
-PROV1022;Straits of Hormuz;Straits of Hormuz;Straits of Hormuz;Straits of Hormuz;Straits of Hormuz;;;;;;;;;x
-PROV1023;Gulf of Persia;Gulf of Persia;Gulf of Persia;Gulf of Persia;Gulf of Persia;;;;;;;;;x
-PROV1024;Western Cyclades;Cyclades Occidentales;West-Kykladen;;Cícladas del oeste;;;;;;;;;x
-PROV1025;Päijänne;Päijänne;Päijänne;;Päijänne;;;;;;;;;x
-PROV1026;Irish Sea;Mer d'Irlande;Irische See;;Mar de Irlanda;;;;;;;;;x
+PROV911;El Aaiun;El Aaiun;El Aaiun;;El Aaiun;;;;;;;;;x
+PROV912;Boujdour;Boujdour;Boujdour;;Boujdour;;;;;;;;;x
+PROV913;Idjil;Idjil;Idjil;;Idjil;;;;;;;;;x
+PROV914;Nouakchott;Nouakchott;Nouakchott;;Nouakchott;;;;;;;;;x
+PROV915;Yaresna;Yaresna;Yaresna;;Yaresna;;;;;;;;;x
+PROV916;Kirana;Kirana;Kirana;;Kirana;;;;;;;;;x
+PROV917;Niani;Niani;Niani;;Niani;;;;;;;;;x
+PROV918;Bobo;Bobo;Bobo;;Bobo;;;;;;;;;x
+PROV919;Gao;Gao;Gao;;Gao;;;;;;;;;x
+PROV920;Timbuktu;Timbuktu;Timbuktu;;Timbuktu;;;;;;;;;x
+PROV921;Kumbee-Tenga;Kumbee-Tenga;Kumbee-Tenga;;Kumbee-Tenga;;;;;;;;;x
+PROV922;Zarmaganda;Zarmaganda;Zarmaganda;;Zarmaganda;;;;;;;;;x
+PROV923;Bolgatanga;Bolgatanga;Bolgatanga;;Bolgatanga;;;;;;;;;x
+PROV924;Araouane;Araouane;Araouane;;Araouane;;;;;;;;;x
+PROV925;Soumpi;Soumpi;Soumpi;;Soumpi;;;;;;;;;x
+PROV926;Niono;Niono;Niono;;Niono;;;;;;;;;x
+PROV927;Aoudaghost;Aoudaghost;Aoudaghost;;Aoudaghost;;;;;;;;;x
+PROV928;Oualata;Oualata;Oualata;;Oualata;;;;;;;;;x
+PROV929;Doumbi Saleh;Doumbi Saleh;Doumbi Saleh;;Doumbi Saleh;;;;;;;;;x
+PROV930;Djenne;Djenne;Djenne;;Djenne;;;;;;;;;x
+PROV931;Bamako;Bamako;Bamako;;Bamako;;;;;;;;;x
+PROV932;Morfil;Morfil;Morfil;;Morfil;;;;;;;;;x
+PROV933;Matam;Matam;Matam;;Matam;;;;;;;;;x
+PROV934;Ziguincha;Ziguincha;Ziguincha;;Ziguincha;;;;;;;;;x
+PROV935;Tabacounda;Tabacounda;Tabacounda;;Tabacounda;;;;;;;;;x
+PROV936;Waalo;Waalo;Waalo;;Waalo;;;;;;;;;x
+PROV937;Cayor;Cayor;Cayor;;Cayor;;;;;;;;;x
+PROV938;Linguere;Linguere;Linguere;;Linguere;;;;;;;;;x
+PROV939;Saloum;Saloum;Saloum;;Saloum;;;;;;;;;x
+PROV940;Baol;Baol;Baol;;Baol;;;;;;;;;x
+PROV941;Socotra;Socotra;Socotra;;Socotra;;;;;;;;;x
+PROV942;Teate;Teate;Teate;;Teate;;;;;;;;;x
+PROV943;Ibiza;Ibiza;Ibiza;;Ibiza;;;;;;;;;x
+PROV944;Western Mediterranean;Méditerranée Occidentale;Westliches Mittelmeer;;Mediterráneo del Oeste;;;;;;;;;x
+PROV945;Golfo de Valencia;Golfe de Valence;Golf von Valencia;;Golfo de Valencia;;;;;;;;;x
+PROV946;Islas Baleares;Îles Baléares;Balearen;;Islas Baleares;;;;;;;;;x
+PROV947;Ponant;Ponant;Ponant;;Ponant;;;;;;;;;x
+PROV948;Mediterranean Sea;Mer Méditerranée;Mittelmeer;;Mar Mediterráneo  ;;;;;;;;;x
+PROV949;Golfe du Lion;Golfe du Lion;Golfe du Lion;;Golfo de León;;;;;;;;;x
+PROV950;Lake Léman;Lac Léman;Léman-See;;Lago Lemán;;;;;;;;;x
+PROV951;Cote d Azur;Côte d Azur;Cote d Azur;;Costa Azul;;;;;;;;;x
+PROV952;Ligurian Sea;Mer Ligurienne;Ligurisches Meer;;Mar de Liguria;;;;;;;;;x
+PROV953;Tyrrhenian Sea;Mer Tyrrhénienne;Tyrrhenisches Meer;;Mar Tirreno;;;;;;;;;x
+PROV954;Coast of Sardegna;Côte de Sardaigne;Sardegna-Küste;;Costa de Cerdeña;;;;;;;;;x
+PROV955;Golfo di Napoli;Golfe de Naples;Golf von Neapel;;Golfo de Nápoles;;;;;;;;;x
+PROV956;Strait di Messina;Détroit de Messine;Messina-Straße;;Estrecho de Mesina;;;;;;;;;x
+PROV957;Golfe de Hammamet;Golfe de Hammamet;Golf von Hammamet;;Golfo de Hammamet;;;;;;;;;x
+PROV958;Malta Channel;Canal de Malte;Maltakanal;;Canal de Malta;;;;;;;;;x
+PROV959;Gulf of Sidra;Golfe de Sidra;Golf von Sidra;;Golfo de Sidra;;;;;;;;;x
+PROV960;Golfo di Taranto;Golfe de Taranto;Golf von Tarent;;Golfo de Otranto;;;;;;;;;x
+PROV961;Ionian Sea;Mer Ionienne;Ionisches Meer;;Mar Jónico;;;;;;;;;x
+PROV962;Strait of Otranto;Détroit d'Otranto;Straße von Otranto;;Estrecho de Otranto;;;;;;;;;x
+PROV963;Adriatic Sea;Mer Adriatique;Adria;;Mar Adriático;;;;;;;;;x
+PROV964;Gulf of Venice;Golfe de Venise;Golf von Venedig;;Golfo de Venecia;;;;;;;;;x
+PROV965;Aegean Sea;Mer Egée;Ägäis;;Mar Egeo  ;;;;;;;;;x
+PROV966;Cyclades;Cyclades;Kykladen;;Cícladas;;;;;;;;;x
+PROV967;Sea of Crete;Mer de Crète;See von Kreta;;Mar de Creta;;;;;;;;;x
+PROV968;Coast of Egypt;Côte d'Égypte;Ägyptische Küste;;Costa de Egipto;;;;;;;;;x
+PROV969;Nile Delta;Delta du Nil;Nildelta;;Delta del Nilo;;;;;;;;;x
+PROV970;Sea of Palestine;Mer de Palestine;Palästinische See;;Mar de Palestina;;;;;;;;;x
+PROV971;Eastern Mediterranean;Méditerranée Orientale;Östliches Mittelmeer;;Mediterráneo del Este;;;;;;;;;x
+PROV972;Western Aegean Sea;Mer Egée Occidentale;Westliche Ägäis;;Mar Egeo occidental;;;;;;;;;x
+PROV973;Näsijärvi;Näsijärvi;Näsijärvi;;Näsijärvi;;;;;;;;;x
+PROV974;Aral Sea;Mer d'Aral;Aralsee;;Mar Aral;;;;;;;;;x
+PROV975;Levantine Sea;Mer Levantine;Levantinisches Meer;;Mar levantino;;;;;;;;;x
+PROV976;Cilician Sea;Mer de Sicile;Kilikisches Meer;;Mar de Cilicia;;;;;;;;;x
+PROV977;Sea of Marmara;Mer de Marmara;See von Marmara;;Mar de Mármara;;;;;;;;;x
+PROV978;Gulf of Varna;Golfe de Varna;Golf von Varna;;Golfo de Varna;;;;;;;;;x
+PROV979;Coast of Taurida;Côte de Taurida;Küste von Taurida;;Costa de Taurida;;;;;;;;;x
+PROV980;Black Sea;Mer Noire;Schwarzes Meer;;Mar Negro;;;;;;;;;x
+PROV981;Coast of Kolkhida;Côte de Kolkhida;Küste von Kolkhida;;Costa de Kolkhida;;;;;;;;;x
+PROV982;Caspian Sea;Mer Caspienne;Kaspisches Meer;;Mar Caspio;;;;;;;;;x
+PROV983;Coast of Morocco;Côte du Maroc;Küste von Marokko;;Costa de Marruecos;;;;;;;;;x
+PROV984;Strait of Gibraltar;Détroit de Gibraltar;Straße von Gibraltar;;Estrecho de Gibraltar;;;;;;;;;x
+PROV985;Saimaa;Saimaa;Saimaa;;Saimaa;;;;;;;;;x
+PROV986;Kallavesi;Kallavesi;Kallavesi;;Kallavesi;;;;;;;;;x
+PROV987;Oulujärvi;Oulujärvi;Oulujärvi;;Oulujärvi;;;;;;;;;x
+PROV988;Ladoga Lake;Lac Ladoga;Ladogasee;;Lago Ladoga;;;;;;;;;x
+PROV989;Mälaren;Mälaren;Mälaren;;Mälaren;;;;;;;;;x
+PROV990;Faroya;Faroya;Faroya;;Faroya;;;;;;;;;x
+PROV991;Hjälmaren;Hjälmaren;Hjälmaren;;Hjälmaren;;;;;;;;;x
+PROV992;Vättern;Vättern;Vättern;;Vättern;;;;;;;;;x
+PROV993;Vänern;Vänern;Vänern;;Vänern;;;;;;;;;x
+PROV994;White Sea;Mer Blanche;Weißmeer;;Mar Blanco;;;;;;;;;x
+PROV995;Strait of Dover;Détroit de Douvres;Straße von Dover;;Paso de Calais;;;;;;;;;x
+PROV996;The Solent;Le Solent;Der Solent;;The Solent;;;;;;;;;x
+PROV997;Land's End;Land's End;Land's End;;Finisterre;;;;;;;;;x
+PROV998;St. George's Channel;Canal Saint-Georges;St.-Georgs-Kanal;;Canal de San Jorge;;;;;;;;;x
+PROV999;Sea of Azov;Mer d'Azov;See von Azov;;Mar de Azov;;;;;;;;;x
+PROV1000;Cabo de Finisterre;Cap Finisterre;Finisterre;;Cabo de Finisterre;;;;;;;;;x
+PROV1001;Bodensee;Lac de Constance;Bodensee;;Bodensee;;;;;;;;;x
+PROV1002;Kara-Bogaz Gol;Kara-Bogaz Gol;Kara-Bogaz Gol;;Kara-Bogaz Gol;;;;;;;;;x
+PROV1003;Waddenzee;Waddenzee;Waddenzee;;Waddenzee;;;;;;;;;x
+PROV1004;Bay of Biscay;Golfe de Gascogne;Biskaya;;Bahía de Vizcaya;;;;;;;;;x
+PROV1005;Donegal Bay;Baie de Donegal;Donegal Bay;;Bahía de Donegal;;;;;;;;;x
+PROV1006;Sea of Canarias;Mer des Canaries;See von Canarias;;Mar de Canarias;;;;;;;;;x
+PROV1007;Bretagne Coast;Côte de Bretagne;Bretagneküste;;Costa de Bretaña;;;;;;;;;x
+PROV1008;Atlantic;Atlantique;Atlantik;;Atlántico;;;;;;;;;x
+PROV1009;Tiveriade Lake;Lac de Tibériade;Tiveriade-See;;Lago de Tiberíades;;;;;;;;;x
+PROV1010;Portugal Coast;Côte du Portugal;Küste von Portugal;;Costa de Portugal;;;;;;;;;x
+PROV1011;Golfo de Cadiz;Golfe de Cadix;Golf von Cadiz;;Golfo de Cádiz;;;;;;;;;x
+PROV1012;Coast of Iceland;Côte d'Islande;Küste von Island;;Costa de Islandia;;;;;;;;;x
+PROV1013;Dead Sea;Mer Morte;Totes Meer;;Mar Muerto;;;;;;;;;x
+PROV1014;North Atlantic;Atlantique Nord;Nordatlantik;;Atlántico Norte;;;;;;;;;x
+PROV1015;North Atlantic;Atlantique Nord;Nordatlantik;;Atlántico Norte;;;;;;;;;x
+PROV1016;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
+PROV1017;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
+PROV1018;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
+PROV1019;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
+PROV1020;Sea of Shetland;Mer des Shetland;Shetlandsee;;Mar de Shetland;;;;;;;;;x
+PROV1021;Bantry Bay;Baie de Bantry;Bantry Bay;;Bahía Bantry;;;;;;;;;x
+PROV1022;The Minch;Le Minch;The Minch;;El Minch;;;;;;;;;x
+PROV1023;Moray Firth;Moray Firth;Moray Firth;;Moray Firth;;;;;;;;;x
+PROV1024;Firth of Forth;Firth of Forth;Firth of Forth;;Firth of Forth;;;;;;;;;x
+PROV1025;Dogger bank;Dogger Bank;Doggerbank;;Dogger bank;;;;;;;;;x
+PROV1026;The Wash;Le Wash;The Wash;;The Wash;;;;;;;;;x
+PROV1027;Onega;Onega;Onega;;Onega;;;;;;;;;x
+PROV1028;North Sea;Mer du Nord;Nordsee;;Mar del Norte;;;;;;;;;x
+PROV1029;The Sound;Le Sound;The Sound;;The Sound;;;;;;;;;x
+PROV1030;Gulf of Heligoland;Golfe de Heligoland;Golf von Helgoland;;Golfo de Heligoland;;;;;;;;;x
+PROV1031;Kattegat;Kattegat;Kattegat;;Kattegat;;;;;;;;;x
+PROV1032;Gulf of Danzig;Golfe de Gdansk;Golf von Danzig;;Golfo de Danzig;;;;;;;;;x
+PROV1033;Bight of Hanö;Anse de Hanö;Bucht von Hanö;;Bahía de Hanoi;;;;;;;;;x
+PROV1034;Baltic Sea;Mer Baltique;Ostsee;;Mar Báltico;;;;;;;;;x
+PROV1035;Sea of Åland;Mer d'Åland;See von Åland;;Mar de Åland;;;;;;;;;x
+PROV1036;Gulf of Finland;Golfe de Finlande;Finnischer Meerbusen;;Golfo de Finlandia;;;;;;;;;x
+PROV1037;Gulf of Bothnia;Golfe de Bothnie;Bottnischer Meerbusen;;Golfo de Botnia;;;;;;;;;x
+PROV1038;Gulf of Bothnia;Golfe de Bothnie;Bottnischer Meerbusen;;Golfo de Botnia;;;;;;;;;x
+PROV1039;Baie de la Seine;Baie de la Seine;Baie de la Seine;;Bahía del Sena;;;;;;;;;x
+PROV1040;Îles de la Manche;Îles de la Manche;Kanalinseln;;Islas del Canal;;;;;;;;;x
+PROV1041;Mauretanian Coast;Côte de Mauritanie;Mauretanische Küse;;Costa Mauritana;;;;;;;;;x
+PROV1042;Lake Peipus;Lac Peipus;Peipus-See;;Lago Peipus;;;;;;;;;x
+PROV1043;Lake Yalpug;Lac Yalpug;Yalpug-See;;Lago Yalpug;;;;;;;;;x
+PROV1044;Coast of Asturias;Côte asturienne;Asturische Küste;;Costa de Asturias;;;;;;;;;x
+PROV1045;Northern Bay of Biscay;Nord du golfe de Gascogne;Nördliche Biskaya;;Golfo de Vizcaya;;;;;;;;;x
+PROV1046;Celtic Sea;Mer Celtique;Keltische See;;Mar celta;;;;;;;;;x
+PROV1047;Gulf of Suez;Gulf of Suez;Gulf of Suez;Gulf of Suez;Gulf of Suez;;;;;;;;;x
+PROV1048;Red Sea;Red Sea;Red Sea;Red Sea;Red Sea;;;;;;;;;x
+PROV1049;Bab el Mandeb;Bab el Mandeb;Bab el Mandeb;Bab el Mandeb;Bab el Mandeb;;;;;;;;;x
+PROV1050;Horn of Africa;Horn of Africa;Horn of Africa;Horn of Africa;Horn of Africa;;;;;;;;;x
+PROV1051;Sea of Oman;Sea of Oman;Sea of Oman;Sea of Oman;Sea of Oman;;;;;;;;;x
+PROV1052;Straits of Hormuz;Straits of Hormuz;Straits of Hormuz;Straits of Hormuz;Straits of Hormuz;;;;;;;;;x
+PROV1053;Gulf of Persia;Gulf of Persia;Gulf of Persia;Gulf of Persia;Gulf of Persia;;;;;;;;;x
+PROV1054;Western Cyclades;Cyclades Occidentales;West-Kykladen;;Cícladas del oeste;;;;;;;;;x
+PROV1055;Päijänne;Päijänne;Päijänne;;Päijänne;;;;;;;;;x
+PROV1056;Irish Sea;Mer d'Irlande;Irische See;;Mar de Irlanda;;;;;;;;;x

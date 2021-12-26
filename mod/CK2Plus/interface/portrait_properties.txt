@@ -8,6 +8,14 @@
 			factor = 0
 			NOT = { religion_group = christian }
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 
 	1 = { #throne room
@@ -17,6 +25,14 @@
 			NOT = { tier = king }
 			NOT = { tier = emperor }
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 
 	2 = { # dungeon
@@ -31,20 +47,28 @@
 		factor = 1
 		modifier = {
 			factor = 0
-			religion_group = muslim
+			NOT = { capital_scope = { terrain = forest } }
+			NOT = { capital_scope = { terrain = woods } }	
 		}
+		modifier = {
+			factor = 2
+			religion_group = pagan_group
+		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 
 	4 = { # bed
-		factor = 100
+		factor = 10000
 		modifier = {
 			factor = 0
 			NOT = { trait = incapable }
-			NOT = { trait = infirm }
-		}
-		modifier = {
-			factor = 0.01
-			trait = infirm
 		}
 	}
 	
@@ -60,6 +84,14 @@
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 	
 	6 = { # military camp
@@ -67,12 +99,11 @@
 		modifier = {
 			factor = 0
 			in_command = no
-			NOT = { has_job_title  = job_marshal }
 		}
 		modifier = {
-			factor = 0.02
-			has_job_title = job_marshal
-		}
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}		
 	}
 	7 = { # Dolmen
 		factor = 1
@@ -80,6 +111,22 @@
 			factor = 0
 			NOT = { religion_group = pagan_group }
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}
+		modifier = {
+			factor = 0
+			culture_group = west_african
+		}
+		modifier = {
+			factor = 0
+			culture_group = arabic
+		}		
 	}
 	8 = { # Gallows
 		factor = 0
@@ -102,36 +149,68 @@
 				is_theocracy = no
 			}
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 	10 = { # Desert
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { religion_group = muslim }
-			#NOT = { capital_scope = { terrain = desert } }
-			#NOT = { capital_scope = { terrain = coastal_desert } }
+			NOT = { capital_scope = { terrain = desert } }
+			NOT = { capital_scope = { terrain = coastal_desert } }
 		}
+		modifier = {
+			factor = 2
+			religion_group = pagan
+		}
+		modifier = {
+			factor = 2
+			religion_group = muslim
+		}	
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 	11 = { # Steppe
 		factor = 1
 		modifier = {
 			factor = 0
-			#NOT = { capital_scope = { terrain = steppe } }
-			#NOT = { capital_scope = { terrain = plains } }
+			NOT = { capital_scope = { terrain = steppe } }
+		}
+		modifier = {
+			factor = 0
 			NOT = { culture_group = altaic }
 		}
 		modifier = {
-			factor = 10
-			culture_group = altaic
-			NOT = { culture = turkish }
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
 		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 	12 = { # Ocean w ships
-		factor = 0
-		#modifier = {
-			#factor = 0
-			#NOT = { location = { terrain = ocean } }
-		#}
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { location = { OR = { terrain = ocean terrain = inland_ocean } } }
+		}
+		modifier = {
+			factor = 0
+			in_command = no
+		}		
 	}
 	13 = { # Muslim interior
 		factor = 1
@@ -139,6 +218,14 @@
 			factor = 0
 			NOT = { religion_group = muslim }
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 	14 = { # Harem
 		factor = 1
@@ -146,6 +233,14 @@
 			factor = 0
 			NOT = { religion_group = muslim }
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 	15 = { # Muslim interior 2
 		factor = 1
@@ -153,6 +248,14 @@
 			factor = 0
 			NOT = { religion_group = muslim }
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 
 	16 = { # Mongol camp 1
@@ -161,6 +264,14 @@
 			factor = 0
 			NOT = { culture = mongol }
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 
 	17 = { # Mongol camp 2
@@ -169,14 +280,30 @@
 			factor = 0
 			NOT = { culture = mongol }
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 
 	18 = { # Papal palace
 		factor = 100
 		modifier = {
 			factor = 0
-			NOT = { has_landed_title = k_papal_state }
+			NOT = { has_landed_title = e_papal_state }
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 
 	19 = { # Muslim mosque
@@ -198,6 +325,14 @@
 				is_theocracy = no
 			}
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 
 	20 = { # Pagan human sacrifice
@@ -206,6 +341,14 @@
 			factor = 0
 			NOT = { religion_group = pagan_group }
 		}
+		modifier = {
+			factor = 0
+			location = { OR = { terrain = ocean terrain = inland_ocean } }
+		}
+		modifier = {
+			factor = 0
+			in_command = yes
+		}		
 	}
 }
 
@@ -254,9 +397,19 @@
 				primary_title = {
 					OR = {
 						mercenary = yes
-						title = d_knights_hospitaler
-						title = d_knights_templar
+						title = d_livonian_order
 						title = d_teutonic_order
+						title = d_order_of_santiago
+						title = d_knights_templar
+						title = d_knights_hospitaler
+						title = d_ghazi_sunni
+						title = d_ghazi_shiite
+						title = d_hashshashin
+						title = d_ulfheonar
+						title = d_devotees_of_the_true_prophet
+						title = d_great_host
+						title = d_guardians_of_the_sacred_flame
+						title = d_disciples_of_the_old_gods
 					}
 				}
 			}
@@ -311,9 +464,19 @@
 				primary_title = {
 					OR = {
 						mercenary = yes
-						title = d_knights_hospitaler
-						title = d_knights_templar
+						title = d_livonian_order
 						title = d_teutonic_order
+						title = d_order_of_santiago
+						title = d_knights_templar
+						title = d_knights_hospitaler
+						title = d_ghazi_sunni
+						title = d_ghazi_shiite
+						title = d_hashshashin
+						title = d_ulfheonar
+						title = d_devotees_of_the_true_prophet
+						title = d_great_host
+						title = d_guardians_of_the_sacred_flame
+						title = d_disciples_of_the_old_gods
 					}
 				}
 			}
@@ -344,9 +507,19 @@
 				primary_title = {
 					OR = {
 						mercenary = yes
-						title = d_knights_hospitaler
-						title = d_knights_templar
+						title = d_livonian_order
 						title = d_teutonic_order
+						title = d_order_of_santiago
+						title = d_knights_templar
+						title = d_knights_hospitaler
+						title = d_ghazi_sunni
+						title = d_ghazi_shiite
+						title = d_hashshashin
+						title = d_ulfheonar
+						title = d_devotees_of_the_true_prophet
+						title = d_great_host
+						title = d_guardians_of_the_sacred_flame
+						title = d_disciples_of_the_old_gods
 					}
 				}
 			}
@@ -547,6 +720,7 @@
 			OR = {
 				has_job_title = job_marshal
 				in_command = yes
+				martial = 12
 				primary_title = {
 					OR = {
 						mercenary = yes
@@ -557,7 +731,7 @@
 						title = d_knights_hospitaler
 						title = d_ghazi_sunni
 						title = d_ghazi_shiite
-						title = d_hashashin
+						title = d_hashshashin
 						title = d_ulfheonar
 						title = d_devotees_of_the_true_prophet
 						title = d_great_host
@@ -583,7 +757,7 @@
 							title = d_knights_hospitaler
 							title = d_ghazi_sunni
 							title = d_ghazi_shiite
-							title = d_hashashin
+							title = d_hashshashin
 							title = d_ulfheonar
 							title = d_devotees_of_the_true_prophet
 							title = d_great_host
@@ -594,8 +768,26 @@
 				}				
 			}
 		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_female = yes
+				tier = king
+				tier = emperor
+				AND = {
+					religion_group = christian
+					OR = {
+						AND = {
+							is_ruler = yes
+							is_theocracy = yes
+						}
+						has_job_title = job_spiritual
+					}
+				}
+			}
+		}
 	}
-
+	
 	# Catholic Bishop
 	11 = {
 		factor = 100
@@ -663,8 +855,229 @@
 }
 
 # p4 beard
-#4 = {
-#}
+4 = {
+
+0 = {
+ factor = 4 # cleanshaven
+ modifier = {
+	factor = 2 #muslim beard
+	religion_group = muslim
+	}
+
+ modifier = {
+	factor = 4 #catholic priesthood
+	religion = catholic
+	OR = {
+		AND = {
+				is_ruler = yes
+				is_theocracy = yes
+		}
+		has_job_title = job_spiritual
+		
+	}
+	}
+
+ modifier = {
+	factor = 100
+	culture = norman
+	}
+
+ modifier = {
+	factor = 3
+	culture = frankish
+	}
+
+ modifier = {
+	factor = 1.5
+	culture = german
+	}
+
+ modifier = {
+	factor = 0.25
+	culture = italian
+	}
+
+ modifier = {
+	factor = 0.05
+	culture = andalusian_arabic
+	}
+
+ modifier = {
+	factor = 0.05
+	culture = persian
+	}
+
+ modifier = {
+	factor = 0.05
+	culture = maghreb_arabic
+	}
+
+ modifier = {
+	factor = 0.25 #bearded cultures
+	OR = {
+		culture_group = byzantine
+		culture_group = celtic
+		culture_group = east_slavic
+		culture_group = west_slavic
+		culture_group = north_germanic
+		religion_group = pagan_group
+	}
+	}
+
+}
+
+1 = {	#standard beard
+ factor = 1
+ modifier = {
+	factor = 4
+	culture = castillan
+	}
+
+ modifier = {
+	factor = 3
+	culture = basque
+	}
+
+ modifier = {
+	factor = 4
+	culture = portuguese
+	}
+
+ modifier = {
+	factor = 3
+	culture = catalan
+	}
+}
+
+2 = {	#medium beard
+ factor = 1
+ modifier = {
+	factor = 4
+	culture = basque
+	}
+
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = byzantine
+				culture_group = east_slavic
+				culture_group = west_slavic
+				culture_group = north_germanic
+				religion_group = pagan_group
+			}
+		}
+
+}
+
+3 = {	#twopoint beard
+ factor = 1
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = east_slavic
+				culture_group = west_slavic
+				culture_group = north_germanic
+				religion_group = pagan_group
+			}
+		}
+}
+
+4 = {	#moustache and beard
+ factor = 1
+ modifier = {
+	factor = 6
+	culture = hungarian
+	}
+
+ modifier = {
+	factor = 6
+	culture = polish
+	}
+
+ modifier = {
+	factor = 6
+	culture = croatian
+	}
+
+ modifier = {
+	factor = 6
+	culture = alan
+	}
+}
+
+5 = {	#moustache
+ factor = 1
+ modifier = {
+	factor = 15
+	culture = saxon
+	}
+ modifier = {
+	factor = 0.25
+	culture = greek
+	}
+}
+
+6 = {	#big curly beard
+		factor = 100
+		modifier = {
+			factor = 0.01
+			NOT = { religion = orthodox }
+			NOT = { is_heresy_of = orthodox }
+		}
+		modifier = {
+			factor = 0.01
+			OR = {
+				religion = orthodox
+				is_heresy_of = orthodox
+			}
+			OR = {
+				is_ruler = no
+				is_theocracy = no
+			}
+			NOT = { has_job_title = job_spiritual }
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = byzantine
+				culture_group = east_slavi
+				culture_group = west_slavic
+				culture_group = north_germanic
+				religion_group = pagan_group
+			}
+		}
+
+}
+
+7 = {	#thin moustache
+	factor = 1
+ modifier = {
+	factor = 6
+	culture = hungarian
+	}
+
+ modifier = {
+	factor = 6
+	culture = polish
+	}
+
+ modifier = {
+	factor = 6
+	culture = croatian
+	}
+
+ modifier = {
+	factor = 3
+	culture = levantine_arabic
+	}
+
+ modifier = {
+	factor = 0.25
+	culture = greek
+	}
+}
+
+}
 
 # p5 headgear
 5 = {
@@ -816,7 +1229,7 @@
 
 	# Shady headgear
 	9 = {
-		factor = 1
+		factor = 3
 		modifier = {
 			factor = 0
 			OR = {
@@ -849,6 +1262,7 @@
 			factor = 100
 			OR = {
 				has_job_title = job_marshal
+				martial = 12
 				and = {
 					in_command = yes
 					is_ruler = no
@@ -863,7 +1277,7 @@
 						title = d_knights_hospitaler
 						title = d_ghazi_sunni
 						title = d_ghazi_shiite
-						title = d_hashashin
+						title = d_hashshashin
 						title = d_ulfheonar
 						title = d_devotees_of_the_true_prophet
 						title = d_great_host
@@ -892,7 +1306,7 @@
 							title = d_knights_hospitaler
 							title = d_ghazi_sunni
 							title = d_ghazi_shiite
-							title = d_hashashin
+							title = d_hashshashin
 							title = d_ulfheonar
 							title = d_devotees_of_the_true_prophet
 							title = d_great_host
@@ -903,11 +1317,29 @@
 				}				
 			}
 		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_female = yes
+				tier = king
+				tier = emperor
+				AND = {
+					religion_group = christian
+					OR = {
+						AND = {
+							is_ruler = yes
+							is_theocracy = yes
+						}
+						has_job_title = job_spiritual
+					}
+				}
+			}
+		}
 	}
-
+	
 	# Blank
 	11 = {
-		factor = 6
+		factor = 3
 		modifier = {
 			factor = 0
 			OR = {

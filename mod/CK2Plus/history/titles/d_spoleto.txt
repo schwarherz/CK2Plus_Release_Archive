@@ -114,7 +114,7 @@ holder=213100
 1198.1.8=
 {
 holder=71814
-liege=k_papal_state
+liege=e_papal_state
 }
 1205.1.1=
 {

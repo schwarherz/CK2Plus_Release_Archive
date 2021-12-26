@@ -33,7 +33,25 @@ plot_decisions = {
 						days = 365
 					}	
 				}
-			}		
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 2.0 }
+				NOT = { num_of_plot_backers = 2 }
+				NOT = { relative_power_to_liege = 0.25 }
+			}			
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.66 }
+				NOT = { num_of_plot_backers = 3 }
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.33 }
+				NOT = { num_of_plot_backers = 4 }
+				NOT = { relative_power_to_liege = 0.75 }				
+			}			
 		}
 	}
 
@@ -71,7 +89,25 @@ plot_decisions = {
 						days = 365
 					}	
 				}
-			}	
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 2.0 }
+				NOT = { num_of_plot_backers = 2 }
+				NOT = { relative_power_to_liege = 0.25 }
+			}			
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.66 }
+				NOT = { num_of_plot_backers = 3 }
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.33 }
+				NOT = { num_of_plot_backers = 4 }
+				NOT = { relative_power_to_liege = 0.75 }				
+			}			
 		}
 	}
 
@@ -109,7 +145,25 @@ plot_decisions = {
 						days = 365
 					}	
 				}
-			}	
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 2.0 }
+				NOT = { num_of_plot_backers = 2 }
+				NOT = { relative_power_to_liege = 0.25 }
+			}			
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.66 }
+				NOT = { num_of_plot_backers = 3 }
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.33 }
+				NOT = { num_of_plot_backers = 4 }
+				NOT = { relative_power_to_liege = 0.75 }				
+			}			
 		}
 	}
 
@@ -148,6 +202,24 @@ plot_decisions = {
 					}	
 				}
 			}	
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 2.0 }
+				NOT = { num_of_plot_backers = 2 }
+				NOT = { relative_power_to_liege = 0.25 }
+			}			
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.66 }
+				NOT = { num_of_plot_backers = 3 }
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.33 }
+				NOT = { num_of_plot_backers = 4 }
+				NOT = { relative_power_to_liege = 0.75 }				
+			}			
 		}
 	}
 
@@ -185,7 +257,25 @@ plot_decisions = {
 						days = 365
 					}	
 				}
-			}	
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 2.0 }
+				NOT = { num_of_plot_backers = 2 }
+				NOT = { relative_power_to_liege = 0.25 }
+			}			
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.66 }
+				NOT = { num_of_plot_backers = 3 }
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.33 }
+				NOT = { num_of_plot_backers = 4 }
+				NOT = { relative_power_to_liege = 0.75 }				
+			}			
 		}
 	}
 
@@ -271,7 +361,25 @@ plot_decisions = {
 						days = 365
 					}	
 				}
-			}	
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 2.0 }
+				NOT = { num_of_plot_backers = 2 }
+				NOT = { relative_power_to_liege = 0.25 }
+			}			
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.66 }
+				NOT = { num_of_plot_backers = 3 }
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.33 }
+				NOT = { num_of_plot_backers = 4 }
+				NOT = { relative_power_to_liege = 0.75 }				
+			}			
 		}
 	}
 	
@@ -357,7 +465,25 @@ plot_decisions = {
 						days = 365
 					}	
 				}
-			}				
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 2.0 }
+				NOT = { num_of_plot_backers = 2 }
+				NOT = { relative_power_to_liege = 0.25 }
+			}			
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.66 }
+				NOT = { num_of_plot_backers = 3 }
+				NOT = { relative_power_to_liege = 0.5 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { plot_power = 1.33 }
+				NOT = { num_of_plot_backers = 4 }
+				NOT = { relative_power_to_liege = 0.75 }				
+			}			
 		}
 	}	
 	
@@ -597,6 +723,7 @@ plot_decisions = {
 			always = no
 		}
 		ai_will_do = {
+			factor = 1
 			modifier = {
 				factor = 0
 				NOT = {
@@ -815,6 +942,7 @@ plot_decisions = {
 		}
 		effect = {
 			plot_target_char = {
+				set_character_flag = weaken_vassal
 				letter_event = { id = 7505 days = 3 tooltip = "EVTTOOLTIP7505" }
 			}
 			hidden_tooltip = {

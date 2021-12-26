@@ -4349,7 +4349,7 @@
 
 3952 = {
 	name="Helmehytte"
-	culture = Norwegian
+	culture = norwegian
 }
 
 3953 = {
@@ -6478,7 +6478,7 @@
 }
 7389={
 	name = "Guideschi"
-	culture = italain
+	culture = italian
 }
 7500 = {
 	name="banu Mozzain"
@@ -7454,11 +7454,11 @@
 }
 9213 = {
 	name="av Dyflinn"
-	culture = Norwegian
+	culture = norwegian
 }
 9214 = {
 	name="av Vedrafjord"
-	culture = Norwegian
+	culture = norwegian
 }
 9215 = {
 	name="Ua Rubann"
@@ -7566,7 +7566,7 @@
 }
 10012 = {
 	name="Gross"
-	culture = German
+	culture = german
 }
 10013 = {
 	name="de Tàrrega"
@@ -7574,7 +7574,7 @@
 }
 10014 = {
 	name="Gualch"
-	culture = German
+	culture = german
 }
 10015 = {
 	name="Certores"
@@ -15445,7 +15445,7 @@
 }
 101261 = {
 	name="Elesbaam"
-	culture = egypthian_arabic #WRONG CULTURE
+	culture = egyptian_arabic #WRONG CULTURE
 }
 101262 = {
 	name="Enochos"
@@ -17608,12 +17608,12 @@
 	culture = pommeranian
 }
 101891 = {
-	name="af Haukadalur"
-	culture = norwegian
+	name="á Haukadalur"
+	culture = icelandic
 }
 101892 = {
-	name="af Oddi"
-	culture = norwegian
+	name="á Oddi"
+	culture = icelandic
 }
 101893 = {
 	name="Niklotid"
@@ -18973,4 +18973,86 @@
 1000001136 = {
 	name = "mn Rum"
 	culture = "sicilian_arabic"
+}
+
+#WESTAFRICAMOD
+1000011000 = {
+	name="Keita"
+	culture = mande
+}
+1000011001 = {
+	name="Djata"
+	culture = mande
+}
+1000011002 = {
+	name="Za"
+	culture = mande
+}
+1000011003 = {
+	name="Sonni"
+	culture = mande
+}
+1000011004 = {
+	name="Askiya"
+	culture = mande
+}
+1000011005 = {
+	name="Bory"
+	culture = mande
+}
+1000011006 = {
+	name = "Denanke"
+	culture = mande
+}
+1000011007 = {
+	name = "Laye"
+	culture = mande
+}
+1000011100 = {
+	name="Kante"
+	culture = sosso
+}
+1000011101 = {
+	name="Cisse"
+	culture = sosso
+}
+1000011102 = {
+	name="Akba"
+	culture = sosso
+}
+1000011103 = {
+	name="Soumare"
+	culture = sosso
+}
+1000011104 = {
+	name="Soukhounou"
+	culture = sosso
+}
+1000011200 = {
+	name="Joof"
+	culture = jolof
+}
+1000011201 = {
+	name="Gelwar"
+	culture = jolof
+}
+1000011202 = {
+	name="Jaabi"
+	culture = jolof
+}
+1000011203 = {
+	name="Fak"
+	culture = jolof
+}
+1000011204 = {
+	name="N'Diaye"
+	culture = jolof
+}
+1000011205 = {
+	name="Kaabu"
+	culture = jolof
+}
+1000011206 = {
+	name="Fulani"
+	culture = jolof
 }

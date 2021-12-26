@@ -1,0 +1,19 @@
+# 1 - Vestisland
+
+# County Title
+title = c_niani
+
+# Settlements
+max_settlements = 4
+b_bure = castle
+b_dinguiraye = temple
+
+# Misc
+culture = mande
+religion = pagan
+
+
+# History
+1121.1.1 = {
+    religion = sunni
+}

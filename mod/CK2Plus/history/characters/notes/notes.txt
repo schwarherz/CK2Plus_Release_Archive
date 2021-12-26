@@ -1,0 +1,12 @@
+#### dev notes for porting ck2+ character changes ####
+# tall trait: svend of denmark, harald hårdråde, charlemagne, robert guiscard, bohemond
+# increase health of robert guiscard and alp arslan
+# money for alp arslan
+# levies for alp arslan, william the conqueror, harold of godwin, harald hårdråde
+# piety for robert guiscard
+# remove ambitious trait from seljuk vassals
+# duke of mallorca should be serbian
+# somali and nubian cultures
+# nubians should be monophysite
+# wladyslaw infirm -> clubfooted
+# icelandic culture

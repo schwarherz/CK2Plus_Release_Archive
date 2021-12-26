@@ -24,13 +24,10 @@ religion = catholic
 	b_evreux = ca_training_grounds_1
 	b_evreux = ca_stable_1
 	b_evreux = ca_wall_1
-	b_evreux = ca_wall_2
 	b_evreux = ca_militia_barracks_1
 	b_evreux = ca_barracks_1
 	b_evreux = ca_town_1
 	b_alencon = ct_port_1
-	b_alencon = ct_port_2
-	b_alencon = ct_port_3
 }
 
 1100.11.11 = { culture = frankish }

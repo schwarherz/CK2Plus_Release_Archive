@@ -16,7 +16,7 @@ b_hrisey = castle
 #b_kirkjubaer = castle
 
 # Misc
-culture = norwegian
+culture = icelandic
 religion = catholic
 
 # History

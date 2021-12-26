@@ -586,6 +586,8 @@
 102523 = {
 	name="Hakon"
 	dynasty=100273
+	dna="dhafgnmcgcp"
+	properties="0b0dak"
 	martial=6
 	diplomacy=8
 	intrigue=5
@@ -766,6 +768,8 @@
 102531 = {
 	name="Harald" # 'Hårdråde'
 	dynasty=499
+	dna="bdcfegiigcm"
+	properties="aj0ada0000"
 	martial=7
 	diplomacy=7
 	intrigue=7
@@ -795,7 +799,7 @@
 	}
 	
 	1066.9.14 = {
-		wealth = 750
+		wealth = 500
 		raise_levies = {
 			location = 57 # York
 			force_mult = 3.3
@@ -814,6 +818,8 @@
 102532 = {
 	name="Magnus"
 	dynasty=499
+	dna="bdfgcgidgcm"
+	properties="fj00dd0000"
 	martial=4
 	diplomacy=8
 	intrigue=5
@@ -857,8 +863,10 @@
 }
 
 102534 = {
-	name="Olaf" # 'Kyrre'
+	name="Olav" # 'Kyrre'
 	dynasty=499
+	dna="bdfgcvidgck"
+	properties="fb0bad0000"
 	martial=8
 	diplomacy=7
 	intrigue=4
@@ -951,6 +959,8 @@
 102538 = {
 	name="Paul"
 	dynasty=461
+	dna="dgdcijcigcq"
+	properties="cc0ecd0000"
 	martial=8
 	diplomacy=5
 	intrigue=4
@@ -976,6 +986,8 @@
 102539 = {
 	name="Erlend"
 	dynasty=461
+	dna="tjmkfyfngoz"
+	properties="ej0eak0000"
 	martial=6
 	diplomacy=6
 	intrigue=7
@@ -1058,7 +1070,7 @@
 }
 
 102543 = {
-	name="Olaf"
+	name="Olav"
 	dynasty=457
 	martial=5
 	diplomacy=4
@@ -1144,6 +1156,8 @@
 102547 = {
 	name="Orm"
 	dynasty=455
+	dna="ulxuobpvgcw"
+	properties="0d0cck0000"
 	martial=7
 	diplomacy=7
 	intrigue=8
@@ -1235,6 +1249,8 @@
 	name="Thora"
 	female = yes
 	dynasty=453
+	dna="bdfgcfgdgca"
+	properties="aj0ata0000"
 	martial=8
 	diplomacy=7
 	intrigue=5
@@ -1276,6 +1292,8 @@
 102553 = {
 	name="Skofte"
 	dynasty=453
+	dna="bafkdeacgcp"
+	properties="0i0dak"
 	martial=4
 	diplomacy=5
 	intrigue=4
@@ -1499,6 +1517,8 @@
 102563 = {
 	name="Brynjulf"
 	dynasty=447
+	dna="jxzpgxsygdg"
+	properties="cl0dck0000"
 	martial=8
 	diplomacy=6
 	intrigue=5
@@ -1607,6 +1627,8 @@
 102568 = {
 	name="Svein"
 	dynasty=446
+	dna="juajuusqgbz"
+	properties="ej0d0k0000"
 	martial=5
 	diplomacy=6
 	intrigue=5
@@ -1755,6 +1777,8 @@
 
 102575 = {
 	name="Austmod"
+	dna="zjnozkwogow"
+	properties="0etczk0000"
 	dynasty=444
 	martial=7
 	diplomacy=5
@@ -1815,7 +1839,7 @@
 }
 
 1027 = {
-	name="Olaf"
+	name="Olav"
 	dynasty=100011
 	martial=6
 	diplomacy=6
@@ -2012,7 +2036,7 @@
 	name="Teitur"
 	dynasty=101891
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	father = 20579
 	1041.1.1={
 		birth="1041.1.1"
@@ -2026,7 +2050,7 @@
 	name="Hallur"
 	dynasty=101891
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	father = 144632
 	1075.1.1={
 		birth="1075.1.1"
@@ -2040,7 +2064,7 @@
 	name="Gissur"
 	dynasty=101891
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	father=202012
 	1208.1.1={
 		birth="1208.1.1"
@@ -2073,6 +2097,8 @@
 20016 = {
 	name="Lodin"
 	dynasty=100268
+	dna="oqrkazhkgkn"
+	properties="0a0eak0000"
 	martial=6
 	diplomacy=4
 	intrigue=5
@@ -2092,6 +2118,8 @@
 20017 = {
 	name="Jon"
 	dynasty=100270
+	dna="sywzwbhngud"
+	properties="0c0cck0000"
 	martial=6
 	diplomacy=7
 	intrigue=7
@@ -2128,6 +2156,8 @@
 20019 = {
 	name="Finn"
 	dynasty=100284
+	dna="wwzaydohgxa"
+	properties="cl0ed0000"
 	martial=5
 	diplomacy=4
 	intrigue=4
@@ -2348,7 +2378,7 @@
 	intrigue=5
 	stewardship=5
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	add_trait="deceitful"
 	add_trait="underhanded_rogue"
 	father = 144633
@@ -2368,7 +2398,7 @@
 	intrigue=6
 	stewardship=5
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	add_trait="charitable"
 	add_trait="patient"
 	add_trait="martial_cleric"
@@ -2556,7 +2586,7 @@
 	intrigue=7
 	stewardship=8
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	add_trait="amateurish_plotter"
 	father=202024
 	mother=202025
@@ -2577,7 +2607,7 @@
 	intrigue=7
 	stewardship=8
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	add_trait="patient"
 	add_trait="just"
 	add_trait="wroth"
@@ -2624,7 +2654,7 @@
 	intrigue=7
 	stewardship=6
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	add_trait="scholarly_theologian"
 	father = 20581
 	1076.1.1={
@@ -2665,7 +2695,7 @@
 	intrigue=5
 	stewardship=6
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	add_trait="humble"
 	add_trait="honest"
 	add_trait="patient"
@@ -2689,7 +2719,7 @@
 	intrigue=6
 	stewardship=4
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	add_trait="bastard"
 	add_trait="honest"
 	add_trait="chaste"
@@ -3462,12 +3492,14 @@
 20579 = {
 	name="Isleifur"
 	dynasty=101891
+	dna="tgtgcksvgjw"
+	properties="cl0eyd0000"
 	martial=5
 	diplomacy=5
 	intrigue=5
 	stewardship=5
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	add_trait="diligent"
 	add_trait="flamboyant_schemer"
 	1006.1.1={
@@ -3481,12 +3513,14 @@
 20580 = {
 	name="Sigfus"
 	dynasty=101892
+	dna="fzfyqjfxgak"
+	properties="0aadvk0000"
 	martial=8
 	diplomacy=8
 	intrigue=4
 	stewardship=5
 	religion="catholic"
-	culture="norwegian"
+	culture="icelandic"
 	add_trait="greedy"
 	add_trait="arbitrary"
 	add_trait="patient"
@@ -3507,7 +3541,7 @@
 	diplomacy=8
 	intrigue=7
 	stewardship=7
-	religion="catholic"
+	culture="icelandic"
 	culture="norwegian"
 	add_trait="martial_cleric"
 	father=20580
@@ -3625,7 +3659,7 @@
 }
 
 220023 = {
-	name="Olaf"
+	name="Olav"
 	# AKA: Olaf 'Raude' Gudrodsson
 	dynasty=556
 	martial=5
@@ -3812,7 +3846,7 @@
 }
 
 220046 = {
-	name="Olaf"
+	name="Olav"
 	# AKA: Olaf 'Svarte' Gudrodsson
 	dynasty=556
 	martial=6
@@ -3927,7 +3961,7 @@
 }
 
 222598 = {
-	name="Olaf"
+	name="Olav"
 	# AKA: Olaf Magnusson
 	dynasty=499
 	martial=4
@@ -5360,6 +5394,8 @@
 	name="Gudrød"
 	# AKA: Gudrod 'Mearanach'
 	dynasty=556
+	dna="acilcdidbcd"
+	properties="cj0ecd0000"
 	martial=7
 	diplomacy=8
 	intrigue=4

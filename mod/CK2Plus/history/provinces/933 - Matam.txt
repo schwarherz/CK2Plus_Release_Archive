@@ -1,0 +1,16 @@
+# 1 - Vestisland
+
+# County Title
+title = c_matam
+
+# Settlements
+max_settlements = 2
+b_matam = castle
+
+
+# Misc
+culture = jolof
+religion = pagan
+
+
+# History

@@ -114,7 +114,7 @@ character_event = {
 					employer = { NOT = { character = ROOT } }
 					NOT = { opinion = { who = ROOT value = 0 } }
 				}
-				letter_event = { id = 7255 days = 1 }
+				character_event = { id = 7255 days = 1 }
 			}
 		}
 	}
@@ -394,7 +394,7 @@ letter_event = {
 		}
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 8050 }
+				letter_event = { id = 8050 }
 				any_plot_backer = {
 					letter_event = { id = 8070 }
 				}
@@ -503,7 +503,7 @@ letter_event = {
 		}
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 8055 }
+				letter_event = { id = 8055 }
 				any_plot_backer = {
 					letter_event = { id = 8075 }
 				}
@@ -612,7 +612,7 @@ letter_event = {
 		}
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 8060 }
+				letter_event = { id = 8060 }
 				any_plot_backer = {
 					letter_event = { id = 8080 }
 				}
@@ -721,7 +721,7 @@ letter_event = {
 		}
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 8065 }
+				letter_event = { id = 8065 }
 				any_plot_backer = {
 					letter_event = { id = 8085 }
 				}
@@ -830,7 +830,7 @@ letter_event = {
 		}
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 8066 }
+				letter_event = { id = 8066 }
 				any_plot_backer = {
 					letter_event = { id = 8090 }
 				}
@@ -943,7 +943,7 @@ letter_event = {
 		}
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 8067 }
+				letter_event = { id = 8067 }
 				any_plot_backer = {
 					letter_event = { id = 8095 }
 				}
@@ -1050,7 +1050,7 @@ letter_event = {
 		name = "EVTOPTA8026"
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 8067 }
+				letter_event = { id = 8067 }
 				any_plot_backer = {
 					letter_event = { id = 8095 }
 				}
@@ -1128,7 +1128,7 @@ letter_event = {
 		}
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 8068 }
+				letter_event = { id = 8068 }
 				any_plot_backer = {
 					letter_event = { id = 8096 }
 				}
@@ -1677,6 +1677,162 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		clr_character_flag = filthy_murderer
+		set_character_flag = filthy_murderer
+		if = {
+			limit = {
+				trait = dishonorable9
+			}
+			remove_trait = dishonorable9
+			add_trait = dishonorable10
+		}
+		if = {
+			limit = {
+				trait = dishonorable8
+			}
+			remove_trait = dishonorable8
+			add_trait = dishonorable9
+		}
+		if = {
+			limit = {
+				trait = dishonorable7
+			}
+			remove_trait = dishonorable7
+			add_trait = dishonorable8
+		}
+		if = {
+			limit = {
+				trait = dishonorable6
+			}
+			remove_trait = dishonorable6
+			add_trait = dishonorable7
+		}
+		if = {
+			limit = {
+				trait = dishonorable5
+			}
+			remove_trait = dishonorable5
+			add_trait = dishonorable6
+		}
+		if = {
+			limit = {
+				trait = dishonorable4
+			}
+			remove_trait = dishonorable4
+			add_trait = dishonorable5
+		}
+		if = {
+			limit = {
+				trait = dishonorable3
+			}
+			remove_trait = dishonorable3
+			add_trait = dishonorable4
+		}
+		if = {
+			limit = {
+				trait = dishonorable2
+			}
+			remove_trait = dishonorable2
+			add_trait = dishonorable3
+		}	
+		if = {
+			limit = {
+				trait = dishonorable1
+			}
+			remove_trait = dishonorable1
+			add_trait = dishonorable2
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable9
+			}
+			remove_trait = dyn_dishonorable9
+			add_trait = dishonorable10
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable8
+			}
+			remove_trait = dyn_dishonorable8
+			add_trait = dishonorable9
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable7
+			}
+			remove_trait = dyn_dishonorable7
+			add_trait = dishonorable8
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable6
+			}
+			remove_trait = dyn_dishonorable6
+			add_trait = dishonorable7
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable5
+			}
+			remove_trait = dyn_dishonorable5
+			add_trait = dishonorable6
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable4
+			}
+			remove_trait = dyn_dishonorable4
+			add_trait = dishonorable5
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable3
+			}
+			remove_trait = dyn_dishonorable3
+			add_trait = dishonorable4
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable2
+			}
+			remove_trait = dyn_dishonorable2
+			add_trait = dishonorable3
+		}	
+		if = {
+			limit = {
+				trait = dyn_dishonorable1
+			}
+			remove_trait = dyn_dishonorable1
+			add_trait = dishonorable2
+		}		
+		if = {
+			limit = {
+				NOT = { trait = dishonorable1 }
+				NOT = { trait = dishonorable2 }
+				NOT = { trait = dishonorable3 }
+				NOT = { trait = dishonorable4 }
+				NOT = { trait = dishonorable5 }
+				NOT = { trait = dishonorable6 }
+				NOT = { trait = dishonorable7 }
+				NOT = { trait = dishonorable8 }
+				NOT = { trait = dishonorable9 }
+				NOT = { trait = dishonorable10 }
+				NOT = { trait = dyn_dishonorable1 }
+				NOT = { trait = dyn_dishonorable2 }
+				NOT = { trait = dyn_dishonorable3 }
+				NOT = { trait = dyn_dishonorable4 }
+				NOT = { trait = dyn_dishonorable5 }
+				NOT = { trait = dyn_dishonorable6 }
+				NOT = { trait = dyn_dishonorable7 }
+				NOT = { trait = dyn_dishonorable8 }
+				NOT = { trait = dyn_dishonorable9 }
+				NOT = { trait = dyn_dishonorable10 }				
+			}
+			add_trait = dishonorable1
+		}
+	}	
+	
 	option = {
 		name = "EVTOPTA8200"
 		if = {
@@ -1709,11 +1865,6 @@ character_event = {
 				who = ROOT
 				months = 120
 			}
-			opinion = {
-				modifier = opinion_dishonorable
-				who = ROOT
-				months = 120
-			}
 			hidden_tooltip = {
 				character_event = { id = 8205 days = 1 }
 			}
@@ -1732,11 +1883,6 @@ character_event = {
 				liege = {
 					opinion = {
 						modifier = attempted_murder_of_child
-						who = ROOT
-						months = 120
-					}
-					opinion = {
-						modifier = opinion_dishonorable
 						who = ROOT
 						months = 120
 					}
@@ -1760,11 +1906,6 @@ character_event = {
 				liege = {
 					opinion = {
 						modifier = attempted_murder_of_child
-						who = ROOT
-						months = 120
-					}
-					opinion = {
-						modifier = opinion_dishonorable
 						who = ROOT
 						months = 120
 					}
@@ -1792,41 +1933,11 @@ character_event = {
 					opinion = {
 						modifier = attempted_murder_of_vassal
 						who = ROOT
-						months = 60
-					}
-					opinion = {
-						modifier = opinion_dishonorable
-						who = ROOT
-						months = 60
+						months = 120
 					}
 					hidden_tooltip = {
 						character_event = { id = 8207 days = 1 }
 					}
-				}
-			}
-		}
-		# Inform any vassal not a member of the plot
-		if = {
-			limit = {
-				NOT = {
-					any_backed_character = {
-						character = ROOT
-					}
-				}
-			}
-			any_vassal = {
-				opinion = {
-					modifier = attempted_murder_of_spouse_vassal
-					who = ROOT
-					months = 36
-				}
-				opinion = {
-					modifier = opinion_dishonorable
-					who = ROOT
-					months = 36
-				}
-				hidden_tooltip = {
-					character_event = { id = 8208 days = 1 }
 				}
 			}
 		}
@@ -1843,19 +1954,12 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA8205"
-		hidden_tooltip = {
-			remove_opinion = { modifier = attempted_murder_of_spouse who = FROM }
-			remove_opinion = { modifier = opinion_dishonorable who = FROM }
-		}
-		opinion = {
-			modifier = attempted_murder_of_spouse
-			who = FROM
-			months = 120
-		}
-		opinion = {
-			modifier = opinion_dishonorable
-			who = FROM
-			months = 120
+		tooltip = {
+			opinion = {
+				modifier = attempted_murder_of_spouse
+				who = FROM
+				months = 120
+			}
 		}
 	}
 }
@@ -1870,19 +1974,12 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA8206"
-		hidden_tooltip = {
-			remove_opinion = { modifier = attempted_murder_of_child who = FROM }
-			remove_opinion = { modifier = opinion_dishonorable who = FROM }
-		}
-		opinion = {
-			modifier = attempted_murder_of_child
-			who = FROM
-			months = 120
-		}
-		opinion = {
-			modifier = opinion_dishonorable
-			who = FROM
-			months = 120
+		tooltip = {
+			opinion = {
+				modifier = attempted_murder_of_child
+				who = FROM
+				months = 120
+			}
 		}
 	}
 }
@@ -1897,19 +1994,12 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA8207"
-		hidden_tooltip = {
-			remove_opinion = { modifier = attempted_murder_of_vassal who = FROM }
-			remove_opinion = { modifier = opinion_dishonorable who = FROM }
-		}
-		opinion = {
-			modifier = attempted_murder_of_vassal
-			who = FROM
-			months = 60
-		}
-		opinion = {
-			modifier = opinion_dishonorable
-			who = FROM
-			months = 60
+		tooltip = {
+			opinion = {
+				modifier = attempted_murder_of_vassal
+				who = FROM
+				months = 120
+			}
 		}
 	}
 }
@@ -1953,6 +2043,162 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		clr_character_flag = filthy_murderer
+		set_character_flag = filthy_murderer
+		if = {
+			limit = {
+				trait = dishonorable9
+			}
+			remove_trait = dishonorable9
+			add_trait = dishonorable10
+		}
+		if = {
+			limit = {
+				trait = dishonorable8
+			}
+			remove_trait = dishonorable8
+			add_trait = dishonorable9
+		}
+		if = {
+			limit = {
+				trait = dishonorable7
+			}
+			remove_trait = dishonorable7
+			add_trait = dishonorable8
+		}
+		if = {
+			limit = {
+				trait = dishonorable6
+			}
+			remove_trait = dishonorable6
+			add_trait = dishonorable7
+		}
+		if = {
+			limit = {
+				trait = dishonorable5
+			}
+			remove_trait = dishonorable5
+			add_trait = dishonorable6
+		}
+		if = {
+			limit = {
+				trait = dishonorable4
+			}
+			remove_trait = dishonorable4
+			add_trait = dishonorable5
+		}
+		if = {
+			limit = {
+				trait = dishonorable3
+			}
+			remove_trait = dishonorable3
+			add_trait = dishonorable4
+		}
+		if = {
+			limit = {
+				trait = dishonorable2
+			}
+			remove_trait = dishonorable2
+			add_trait = dishonorable3
+		}	
+		if = {
+			limit = {
+				trait = dishonorable1
+			}
+			remove_trait = dishonorable1
+			add_trait = dishonorable2
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable9
+			}
+			remove_trait = dyn_dishonorable9
+			add_trait = dishonorable10
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable8
+			}
+			remove_trait = dyn_dishonorable8
+			add_trait = dishonorable9
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable7
+			}
+			remove_trait = dyn_dishonorable7
+			add_trait = dishonorable8
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable6
+			}
+			remove_trait = dyn_dishonorable6
+			add_trait = dishonorable7
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable5
+			}
+			remove_trait = dyn_dishonorable5
+			add_trait = dishonorable6
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable4
+			}
+			remove_trait = dyn_dishonorable4
+			add_trait = dishonorable5
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable3
+			}
+			remove_trait = dyn_dishonorable3
+			add_trait = dishonorable4
+		}
+		if = {
+			limit = {
+				trait = dyn_dishonorable2
+			}
+			remove_trait = dyn_dishonorable2
+			add_trait = dishonorable3
+		}	
+		if = {
+			limit = {
+				trait = dyn_dishonorable1
+			}
+			remove_trait = dyn_dishonorable1
+			add_trait = dishonorable2
+		}		
+		if = {
+			limit = {
+				NOT = { trait = dishonorable1 }
+				NOT = { trait = dishonorable2 }
+				NOT = { trait = dishonorable3 }
+				NOT = { trait = dishonorable4 }
+				NOT = { trait = dishonorable5 }
+				NOT = { trait = dishonorable6 }
+				NOT = { trait = dishonorable7 }
+				NOT = { trait = dishonorable8 }
+				NOT = { trait = dishonorable9 }
+				NOT = { trait = dishonorable10 }
+				NOT = { trait = dyn_dishonorable1 }
+				NOT = { trait = dyn_dishonorable2 }
+				NOT = { trait = dyn_dishonorable3 }
+				NOT = { trait = dyn_dishonorable4 }
+				NOT = { trait = dyn_dishonorable5 }
+				NOT = { trait = dyn_dishonorable6 }
+				NOT = { trait = dyn_dishonorable7 }
+				NOT = { trait = dyn_dishonorable8 }
+				NOT = { trait = dyn_dishonorable9 }
+				NOT = { trait = dyn_dishonorable10 }				
+			}
+			add_trait = dishonorable1
+		}
+	}	
+	
 	option = {
 		name = "EVTOPTA8220"
 		if = {
@@ -1985,11 +2231,6 @@ character_event = {
 				who = ROOT
 				months = 120
 			}
-			opinion = {
-				modifier = opinion_dishonorable
-				who = ROOT
-				months = 120
-			}
 			hidden_tooltip = {
 				character_event = { id = 8225 days = 1 }
 			}
@@ -2008,11 +2249,6 @@ character_event = {
 				liege = {
 					opinion = {
 						modifier = attempted_murder_of_child
-						who = ROOT
-						months = 120
-					}
-					opinion = {
-						modifier = opinion_dishonorable
 						who = ROOT
 						months = 120
 					}
@@ -2039,11 +2275,6 @@ character_event = {
 						who = ROOT
 						months = 120
 					}
-					opinion = {
-						modifier = opinion_dishonorable
-						who = ROOT
-						months = 120
-					}
 					hidden_tooltip = {
 						character_event = { id = 8226 days = 1 }
 					}
@@ -2067,14 +2298,9 @@ character_event = {
 				liege = {
 					opinion = {
 						modifier = attempted_murder_of_vassal
-						who = ROOT
-						months = 60
-					}
-					opinion = {
-						modifier = opinion_dishonorable
-						who = ROOT
-						months = 60
-					}
+						who = FROM
+						months = 120
+					}				
 					hidden_tooltip = {
 						character_event = { id = 8227 days = 1 }
 					}
@@ -2096,17 +2322,13 @@ character_event = {
 		name = "EVTOPTA8225"
 		hidden_tooltip = {
 			remove_opinion = { modifier = attempted_murder who = FROM }
-			remove_opinion = { modifier = opinion_dishonorable who = FROM }
 		}
-		opinion = {
-			modifier = attempted_murder
-			who = FROM
-			months = 120
-		}
-		opinion = {
-			modifier = opinion_dishonorable
-			who = FROM
-			months = 120
+		tooltip = {
+			opinion = {
+				modifier = attempted_murder
+				who = FROM
+				months = 120
+			}
 		}
 	}
 }
@@ -2123,17 +2345,13 @@ character_event = {
 		name = "EVTOPTA8226"
 		hidden_tooltip = {
 			remove_opinion = { modifier = attempted_murder_of_child who = FROM }
-			remove_opinion = { modifier = opinion_dishonorable who = FROM }
 		}
-		opinion = {
-			modifier = attempted_murder_of_child
-			who = FROM
-			months = 120
-		}
-		opinion = {
-			modifier = opinion_dishonorable
-			who = FROM
-			months = 120
+		tooltip = {
+			opinion = {
+				modifier = attempted_murder_of_child
+				who = FROM
+				months = 120
+			}
 		}
 	}
 }
@@ -2148,19 +2366,12 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA8227"
-		hidden_tooltip = {
-			remove_opinion = { modifier = attempted_murder_of_vassal who = FROM }
-			remove_opinion = { modifier = opinion_dishonorable who = FROM }
-		}
-		opinion = {
-			modifier = attempted_murder_of_vassal
-			who = FROM
-			months = 60
-		}
-		opinion = {
-			modifier = opinion_dishonorable
-			who = FROM
-			months = 60
+		tooltip = {
+			opinion = {
+				modifier = attempted_murder_of_vassal
+				who = FROM
+				months = 120
+			}		
 		}
 	}
 }
@@ -2183,7 +2394,6 @@ character_event = {
 	option = {
 		name = "EVTOPTA8250"
 		hidden_tooltip = {
-			death_reason = death_murder_unknown
 			# Inform the dead's spouse
 			if = {
 				limit = {

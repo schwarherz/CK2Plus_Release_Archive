@@ -466,7 +466,7 @@ narrative_event = {
 		}
 		new_character = {
 			set_character_flag = marion_robin
-			character_event = { id = 100001 }			
+			character_event = { id = 300001 }			
 		}
 		create_character = {
 			name = Marion
@@ -486,7 +486,7 @@ narrative_event = {
 		}
 		new_character = {
 			set_character_flag = robin_marion
-			character_event = { id = 100001 }		
+			character_event = { id = 300001 }		
 		}
 		narrative_event = {
 			id = 10042
@@ -631,7 +631,7 @@ narrative_event = {
 			random = {
 				chance = 10
 			
-				character_event = {
+				narrative_event = {
 					id = 10021
 					days = 10
 					random = 30
@@ -1167,7 +1167,7 @@ narrative_event = {
 		}
 		new_character = {
 			set_character_flag = marion_robin
-			character_event = { id = 100001 }			
+			character_event = { id = 300001 }			
 		}
 		create_character = {
 			name = Marion
@@ -1187,7 +1187,7 @@ narrative_event = {
 		}
 		new_character = {
 			set_character_flag = robin_marion
-			character_event = { id = 100001 }		
+			character_event = { id = 300001 }		
 		}
 		narrative_event = {
 			id = 10042
@@ -1291,7 +1291,7 @@ narrative_event = {
 		}
 		new_character = {
 			set_character_flag = marion_robin
-			character_event = { id = 100001 }			
+			character_event = { id = 300001 }			
 		}
 		create_character = {
 			name = Marion
@@ -1311,7 +1311,7 @@ narrative_event = {
 		}
 		new_character = {
 			set_character_flag = robin_marion
-			character_event = { id = 100001 }			
+			character_event = { id = 300001 }			
 		}
 		narrative_event = {
 			id = 10042

@@ -16,7 +16,7 @@ b_alftanes = city
 #b_borg = castle
 
 # Misc
-culture = norwegian
+culture = icelandic
 religion = catholic
 
 

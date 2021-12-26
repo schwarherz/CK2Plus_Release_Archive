@@ -39,7 +39,7 @@ failed_volley_tactic = {
             NOT = {
 				OR = {
 				location = { terrain = plains }
-				location = { terrain = farmland }
+				location = { terrain = farmlands }
 				location = { terrain = hills }
 				}
 			}
@@ -410,7 +410,7 @@ failed_swarm_tactic = {
             NOT = {
 				OR = {
 				location = { terrain = plains }
-				location = { terrain = farmland }
+				location = { terrain = farmlands }
 				location = { terrain = desert }
 				}
 			}
@@ -488,7 +488,7 @@ disorderly_swarm_tactic = {
             NOT = {
 				OR = {
 				location = { terrain = plains }
-				location = { terrain = farmland }
+				location = { terrain = farmlands }
 				}
 			}
 		}
@@ -1521,7 +1521,7 @@ prepare_tactic = {
 	group = defensive
 		
 	trigger = {
-		phase = skrimish
+		phase = skirmish
 		days = 15
 	}
 	
@@ -1668,7 +1668,7 @@ failed_charge_tactic = {
             NOT = {
 				OR = {
 				location = { terrain = plains }
-				location = { terrain = farmland }
+				location = { terrain = farmlands }
 				location = { terrain = desert }
 				}
 			}
@@ -1746,7 +1746,7 @@ disorderly_charge_tactic = {
             NOT = {
 				OR = {
 				location = { terrain = plains }
-				location = { terrain = farmland }
+				location = { terrain = farmlands }
 				}
 			}
 		}
@@ -2709,7 +2709,7 @@ devestating_advance_tactic = {
 				OR = {
 				location = { terrain = desert }
 				location = { terrain = plains }
-				location = { terrain = farmland }
+				location = { terrain = farmlands }
 				}
 			}
 		}

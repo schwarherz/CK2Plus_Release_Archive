@@ -4,7 +4,7 @@
 title = c_passau
 
 # Settlements
-max_settlements = 4
+max_settlements = 3
 b_passau = castle
 b_ortenburg = city
 b_schaumberg = temple

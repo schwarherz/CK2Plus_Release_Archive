@@ -315,6 +315,8 @@
 101515 = {
 	name="Svend" # Estridsson
 	dynasty=487
+	dna="agfialgcgcz"
+	properties="ad0aaa"
 	martial=2
 	diplomacy=6
 	intrigue=6
@@ -376,6 +378,8 @@
 	name="Harald" 
 	# Hein
 	dynasty=487
+	dna="aglkkxidgcm"
+	properties="0m0dad"
 	martial=6
 	diplomacy=8
 	intrigue=7
@@ -548,6 +552,8 @@
 	name="Gro"
 	female=yes
 	dynasty=487
+	dna="nwajwugwgcl"
+	properties="0d0d0d"
 	martial=4
 	diplomacy=8
 	intrigue=6
@@ -616,6 +622,8 @@
 	name="Sigrid"
 	female=yes
 	dynasty=487
+	dna="nwajwugwgcl"
+	properties="0e0d0d"
 	martial=5
 	diplomacy=5
 	intrigue=5
@@ -916,6 +924,8 @@
 101546 = {
 	name="Ragnar"
 	dynasty=477
+	dna="eactnapggdc"
+	properties="0d0cck0000"
 	martial=4
 	diplomacy=6
 	intrigue=7
@@ -1671,6 +1681,8 @@
 201530 = {
 	name="Skjalm"
 	dynasty=482 #Hvide
+	dna="oulfwbligpb"
+	properties="ck0cbk0000"
 	martial=7
 	diplomacy=5
 	intrigue=7

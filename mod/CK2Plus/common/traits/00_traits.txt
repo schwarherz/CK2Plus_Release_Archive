@@ -5,21 +5,18 @@
 # INTRIGUE OUTCOMES
 amateurish_plotter = { #1
 	education = yes
-	ai_zeal = -50
 	
 	intrigue = 1
 	stewardship = -1
 }
 flamboyant_schemer = { #2 
 	education = yes
-	ai_zeal = -50
 	
 	intrigue = 3
 	stewardship = -1
 }
 intricate_webweaver = { #3
 	education = yes
-	ai_zeal = -50
 	
 	intrigue = 6
 	martial = 1
@@ -28,7 +25,6 @@ intricate_webweaver = { #3
 }
 elusive_shadow = { #4
 	education = yes
-	ai_zeal = -50
 	
 	intrigue = 9
 	martial = 2
@@ -39,21 +35,18 @@ elusive_shadow = { #4
 # DIPLOMACY OUTCOMES
 naive_appeaser = { #5
 	education = yes
-	ai_zeal = -50
 	
 	diplomacy = 1
 	martial = -1
 }
 underhanded_rogue = { #6
 	education = yes
-	ai_zeal = -50
 	
 	diplomacy = 3
 	martial = -1
 }
 charismatic_negotiator = { #7
 	education = yes
-	ai_zeal = -50
 	
 	diplomacy = 6
 	intrigue = 1
@@ -63,7 +56,6 @@ charismatic_negotiator = { #7
 }
 grey_eminence = { #8
 	education = yes
-	ai_zeal = -50
 	
 	diplomacy = 9
 	intrigue = 2
@@ -74,21 +66,18 @@ grey_eminence = { #8
 # STEWARDSHIP OUTCOMES
 indulgent_wastrel = { #9
 	education = yes
-	ai_zeal = -50
 	
 	stewardship = 1
 	diplomacy = -1
 }
 thrifty_clerk = { #10
 	education = yes
-	ai_zeal = -50
 	
 	stewardship = 3
 	diplomacy = -1
 }
 fortune_builder = { #11	
 	education = yes
-	ai_zeal = -50
 	
 	stewardship = 6
 	martial = 1
@@ -97,7 +86,6 @@ fortune_builder = { #11
 }
 midas_touched = { #12
 	education = yes
-	ai_zeal = -50
 	
 	stewardship = 9
 	martial = 2
@@ -108,21 +96,18 @@ midas_touched = { #12
 # MARTIAL OUTCOMES
 misguided_warrior = { #13
 	education = yes
-	ai_zeal = -50
 	
 	martial = 1
 	learning = -1
 }
 tough_soldier = { #14
 	education = yes
-	ai_zeal = -50
 	
 	martial = 3
 	learning = -1
 }
 skilled_tactician = { #15
 	education = yes
-	ai_zeal = -50
 	
 	martial = 6
 	intrigue = 1
@@ -131,7 +116,6 @@ skilled_tactician = { #15
 }
 brilliant_strategist = { #16
 	education = yes
-	ai_zeal = -50
 	
 	martial = 9
 	intrigue = 2
@@ -143,7 +127,6 @@ brilliant_strategist = { #16
 detached_priest = { #17
 	priest = yes
 	education = yes
-	ai_zeal = -50
 	
 	learning = 1
 	intrigue = -1
@@ -151,7 +134,6 @@ detached_priest = { #17
 martial_cleric = { #18
 	priest = yes
 	education = yes
-	ai_zeal = -50
 	
 	learning = 3
 	intrigue = -1
@@ -159,7 +141,6 @@ martial_cleric = { #18
 scholarly_theologian = { #19
 	priest = yes
 	education = yes
-	ai_zeal = -50
 	
 	learning = 6
 	diplomacy = 1
@@ -169,7 +150,6 @@ scholarly_theologian = { #19
 mastermind_theologian = { #20
 	priest = yes
 	education = yes
-	ai_zeal = -50
 	
 	learning = 9
 	diplomacy = 2
@@ -213,9 +193,11 @@ lunatic = { #23
 	stewardship = -8
 	martial = -8
 	intrigue = -8	
+	health = -1
+	fertility = -0.2
 	
-	vassal_opinion = -10
-	sex_appeal_opinion = -10
+	vassal_opinion = -20
+	sex_appeal_opinion = -20
 	
 	ai_rationality = -50
 	customizer = no
@@ -227,9 +209,10 @@ possessed = { #24
 	stewardship = -4
 	martial = -4
 	intrigue = -4	
+	fertility = -0.1
 	
-	vassal_opinion = -20
-	sex_appeal_opinion = -20	
+	vassal_opinion = -30
+	sex_appeal_opinion = -30	
 	
 	# Highly event driven
 	customizer = no
@@ -476,6 +459,7 @@ clubfooted = { #48
 	sex_appeal_opinion = -10
 	
 	martial = -2
+	vassal_opinion = -5
 }
 harelip = { #49
 	congenital = yes
@@ -484,6 +468,7 @@ harelip = { #49
 	sex_appeal_opinion = -10
 	
 	diplomacy = -2
+	vassal_opinion = -5
 }
 hunchback = { #50
 	congenital = yes
@@ -491,7 +476,7 @@ hunchback = { #50
 	
 	sex_appeal_opinion = -20
 	
-	vassal_opinion = -5
+	vassal_opinion = -10
 	
 	martial = -2
 }
@@ -502,12 +487,14 @@ lisp = { #51
 	sex_appeal_opinion = -10
 	
 	diplomacy = -2
+	vassal_opinion = -5
 }
 stutter = { #52
 	congenital = yes
 	birth = yes
 	
 	diplomacy = -2
+	vassal_opinion = -5
 }
 fair = { #53
 	congenital = yes
@@ -547,6 +534,7 @@ dwarf = { #55
 	same_opinion = 20
 	
 	martial = -2
+	vassal_opinion = -10
 }
 genius = { #56
 	congenital = yes
@@ -603,6 +591,8 @@ slow = { #58
 	learning = -3
 	
 	ai_rationality = -15
+	
+	vassal_opinion = -10
 }
 imbecile = { #59
 	congenital = yes
@@ -624,7 +614,7 @@ imbecile = { #59
 	
 	ai_rationality = -30
 	
-	vassal_opinion = -10
+	vassal_opinion = -20
 }
 inbred = { #60
 	inbred = yes
@@ -652,8 +642,8 @@ strong = { #61
 		weak
 	}
 	
-	martial = 1
-	health = 2
+	martial = 2
+	health = 1
 	fertility = 0.1
 	
 	sex_appeal_opinion = 5

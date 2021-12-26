@@ -159,13 +159,12 @@ dyn_dishonorable10 = { #124
 
 mujahid = { #125
 	martial = 2
-	
 	church_opinion = 25
 	same_opinion = 30
 	customizer = no
 }
 
 regency = { #126
-	vassal_opinion = -10
+	vassal_opinion = -25
 	customizer = no
 }

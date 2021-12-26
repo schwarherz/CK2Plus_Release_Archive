@@ -62,35 +62,35 @@ character_event = {
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}
 		modifier = {
 			factor = 1.05
@@ -329,10 +329,6 @@ character_event = {
 			religion_authority = 0.8
 		}
 		modifier = {
-			factor = 0.75
-			is_heresy_of = ROOT
-		}
-		modifier = {
 			factor = 2.0
 			has_province_modifier = heretic_stronghold
 		}		
@@ -447,35 +443,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}
 		modifier = {
 			factor = 1.05
@@ -789,35 +785,35 @@ character_event = {
 
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}	
 		modifier = {
 			factor = 0.95
@@ -916,20 +912,44 @@ character_event = {
 			learning = 25
 		}
 		modifier = {
-			factor = 0.75
+			factor = 1.1
+			religion_authority = 0.6
+		}		
+		modifier = {
+			factor = 1.1
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 1.1
+			religion_authority = 0.8
+		}	
+		modifier = {
+			factor = 1.1
+			religion_authority = 1.1
+		}
+		modifier = {
+			factor = 1.1
+			religion_authority = 1.0
+		}		
+		modifier = {
+			factor = 0.9
+			NOT = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 0.9
 			NOT = { religion_authority = 0.4 }
 		}
 		modifier = {
-			factor =0.75
+			factor = 0.9
+			NOT = { religion_authority = 0.3 }
+		}	
+		modifier = {
+			factor = 0.9
 			NOT = { religion_authority = 0.2 }
-		}
+		}	
 		modifier = {
-			factor = 2.0
-			religion_authority = 0.6
-		}
-		modifier = {
-			factor = 2.0
-			religion_authority = 0.8
+			factor = 0.9
+			NOT = { religion_authority = 0.1 }
 		}
 	}
 	
@@ -1054,15 +1074,15 @@ character_event = {
 					primary_title = { tier = BARON }
 					AND = {
 						primary_title = { tier = COUNT }
-						ROOT = { LIEGE = { primary_title = { higher_tier_than = COUNT } } }
+						ROOT = { liege = { primary_title = { higher_tier_than = COUNT } } }
 					}
 					AND = {
 						primary_title = { tier = DUKE }
-						ROOT = { LIEGE = { primary_title = { higher_tier_than = DUKE } } }
+						ROOT = { liege = { primary_title = { higher_tier_than = DUKE } } }
 					}
 					AND = {
 						primary_title = { tier = KING }
-						ROOT = { LIEGE = { primary_title = { higher_tier_than = KING } } }
+						ROOT = { liege = { primary_title = { higher_tier_than = KING } } }
 					}					
 				}
 			}
@@ -1074,35 +1094,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}	
 		modifier = {
 			factor = 1.05
@@ -1201,20 +1221,44 @@ character_event = {
 			learning = 25
 		}
 		modifier = {
-			factor = 2.0
+			factor = 0.9
+			religion_authority = 0.6
+		}		
+		modifier = {
+			factor = 0.9
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 0.9
+			religion_authority = 0.8
+		}	
+		modifier = {
+			factor = 0.9
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 0.9
+			religion_authority = 1.0
+		}		
+		modifier = {
+			factor = 1.1
+			NOT = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 1.1
 			NOT = { religion_authority = 0.4 }
 		}
 		modifier = {
-			factor = 2.0
+			factor = 1.1
+			NOT = { religion_authority = 0.3 }
+		}	
+		modifier = {
+			factor = 1.1
 			NOT = { religion_authority = 0.2 }
-		}
+		}	
 		modifier = {
-			factor = 0.75
-			religion_authority = 0.6
-		}
-		modifier = {
-			factor = 0.75
-			religion_authority = 0.8
+			factor = 1.1
+			NOT = { religion_authority = 0.1 }
 		}
 	}
 	
@@ -1235,15 +1279,15 @@ character_event = {
 						primary_title = { tier = BARON }
 						AND = {
 							primary_title = { tier = COUNT }
-							ROOT = { LIEGE = { primary_title = { higher_tier_than = COUNT } } }
+							ROOT = { liege = { primary_title = { higher_tier_than = COUNT } } }
 						}
 						AND = {
 							primary_title = { tier = DUKE }
-							ROOT = { LIEGE = { primary_title = { higher_tier_than = DUKE } } }
+							ROOT = { liege = { primary_title = { higher_tier_than = DUKE } } }
 						}
 						AND = {
 							primary_title = { tier = KING }
-							ROOT = { LIEGE = { primary_title = { higher_tier_than = KING } } }
+							ROOT = { liege = { primary_title = { higher_tier_than = KING } } }
 						}					
 					}					
 				}
@@ -1443,35 +1487,35 @@ character_event = {
 
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}	
 		modifier = {
 			factor = 0.95
@@ -1696,35 +1740,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 1.05
@@ -1928,35 +1972,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 1.05
@@ -2144,35 +2188,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 1.05
@@ -2318,35 +2362,35 @@ character_event = {
 
 		modifier = {
 			factor = 0.95
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 0.95
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 0.95
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 0.95
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 1.1
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 1.1
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 1.1
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 1.1
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 1.05
@@ -2456,8 +2500,7 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTB927"
-		ai_chance = { factor = 20 }
-		opinion = {		
+		ai_chance = { factor = 20 }		
 	}
 }
 

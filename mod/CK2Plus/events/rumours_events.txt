@@ -236,11 +236,6 @@ character_event = {
 			who = FROM
 			years = 5
 		}
-		opinion = {
-			modifier = opinion_angry
-			who = FROM
-			years = 5
-		}
 	}
 	option = {
 		name = "EVTOPTB69002"
@@ -660,7 +655,7 @@ character_event = {
 						trait = chaste
 					}
 					reverse_opinion = { who = PREV value = 75 }
-					opinion = { PREV = ROOT value = 75 }
+					opinion = { who = ROOT value = 75 }
 				}
 			}
 			character_event = {
@@ -1668,7 +1663,6 @@ character_event = {
 		NOT = {
 			has_character_flag = rumour_spreader
 		}
-		is_ruler = no
 		any_courtier = {
 			is_female = no
 			age = 16

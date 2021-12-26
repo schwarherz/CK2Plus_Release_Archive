@@ -1,0 +1,16 @@
+# 1 - Vestisland
+
+# County Title
+title = c_morfil
+
+# Settlements
+max_settlements = 4
+b_morfil = castle
+b_podor = city
+
+# Misc
+culture = jolof
+religion = pagan
+
+
+# History

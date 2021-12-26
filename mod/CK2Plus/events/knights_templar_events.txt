@@ -137,6 +137,11 @@ province_event = {
 		   type = castle
 		   holder = FROMFROM
 		}
+		hidden_tooltip = { 
+			b_beitdejan = {
+				add_building = ca_order_house
+			}
+		}		
 		hidden_tooltip = {
 			owner = {
 				set_character_flag = event_8602
@@ -316,6 +321,11 @@ province_event = {
 		   type = castle
 		   holder = FROMFROM
 		}
+		hidden_tooltip = { 
+			b_syrbelfort = {
+				add_building = ca_order_house
+			}
+		}		
 		hidden_tooltip = {
 			owner = {
 				set_character_flag = event_8607
@@ -495,6 +505,11 @@ province_event = {
 		   type = castle
 		   holder = FROMFROM
 		}
+		hidden_tooltip = { 
+			b_athlith = {
+				add_building = ca_order_house
+			}
+		}		
 		hidden_tooltip = {
 			owner = {
 				set_character_flag = event_8612
@@ -674,6 +689,11 @@ province_event = {
 		   type = castle
 		   holder = FROMFROM
 		}
+		hidden_tooltip = { 
+			b_lafeve = {
+				add_building = ca_order_house
+			}
+		}		
 		hidden_tooltip = {
 			owner = {
 				set_character_flag = event_8617

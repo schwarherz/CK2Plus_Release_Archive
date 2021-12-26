@@ -20,7 +20,7 @@ culture = maghreb_arabic
 religion = sunni
 
 # History
-1000.1.1 = { 
+1066.1.1 = { 
 	b_palermo = ct_wall_1
 	b_palermo = ct_wall_2
 	b_palermo = ct_port_1

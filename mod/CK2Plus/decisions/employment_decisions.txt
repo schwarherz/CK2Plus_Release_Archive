@@ -16,7 +16,7 @@ decisions = {
 				female = no
 			}
 			new_character = {
-				character_event = { id = 100001 }
+				character_event = { id = 300001 }
 			}			
 			add_character_modifier = {
 				name = employment_timer
@@ -48,7 +48,7 @@ decisions = {
 				female = no
 			}
 			new_character = {
-				character_event = { id = 100001 }
+				character_event = { id = 300001 }
 			}			
 			add_character_modifier = {
 				name = employment_timer
@@ -80,7 +80,7 @@ decisions = {
 				female = no
 			}
 			new_character = {
-				character_event = { id = 100001 }
+				character_event = { id = 300001 }
 			}			
 			add_character_modifier = {
 				name = employment_timer
@@ -112,7 +112,7 @@ decisions = {
 				female = no
 			}
 			new_character = {
-				character_event = { id = 100001 }
+				character_event = { id = 300001 }
 			}			
 			add_character_modifier = {
 				name = employment_timer
@@ -144,7 +144,7 @@ decisions = {
 				female = no
 			}
 			new_character = {
-				character_event = { id = 100001 }
+				character_event = { id = 300001 }
 			}			
 			add_character_modifier = {
 				name = employment_timer
@@ -178,7 +178,7 @@ decisions = {
 			}
 			new_character = {
 				set_character_flag = debutante
-				character_event = { id = 100001 }
+				character_event = { id = 300001 }
 			}
 			add_character_modifier = {
 				name = employment_timer
@@ -219,7 +219,7 @@ decisions = {
 			}
 			new_character = {
 				give_minor_title = title_concubine
-				character_event = { id = 100001 }
+				character_event = { id = 300001 }
 			}
 		}
 		revoke_allowed = {

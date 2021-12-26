@@ -49,35 +49,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 1.05
@@ -263,35 +263,35 @@ character_event = {
 
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}	
 		modifier = {
 			factor = 0.95
@@ -498,35 +498,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}
 		modifier = {
 			factor = 1.05
@@ -882,7 +882,7 @@ letter_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { treasury = 100 }
+				NOT = { treasury = 0 }
 			}
 			modifier = {
 				factor = 0
@@ -892,8 +892,27 @@ letter_event = {
 				}
 			}
 		}
-		treasury = -200
-		prestige = -200
+		if = {
+			limit = {
+				primary_title = { lower_tier_than = DUKE }
+			}
+			treasury = -100
+			prestige = -100			
+		}
+		if = {
+			limit = {
+				primary_title = { tier = DUKE }
+			}
+			treasury = -150
+			prestige = -150			
+		}
+		if = {
+			limit = {
+				primary_title = { higher_tier_than = DUKE }
+			}
+			treasury = -200
+			prestige = -200			
+		}		
 		FROM = {
 			FROM = {
 				location = {
@@ -961,11 +980,30 @@ letter_event = {
 			factor = 90
 			modifier = {
 				factor = 0
-				NOT = { treasury = 250 }
+				NOT = { treasury = 200 }
 			}
 		}
-		treasury = -500
-		prestige = -500
+		if = {
+			limit = {
+				primary_title = { lower_tier_than = DUKE }
+			}
+			treasury = -200
+			prestige = -200			
+		}
+		if = {
+			limit = {
+				primary_title = { tier = DUKE }
+			}
+			treasury = -300
+			prestige = -300			
+		}
+		if = {
+			limit = {
+				primary_title = { higher_tier_than = DUKE }
+			}
+			treasury = -400
+			prestige = -400			
+		}		
 		FROM = {
 			FROM = {
 				location = {
@@ -1055,35 +1093,35 @@ character_event = {
 
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}
 		modifier = {
 			factor = 0.95
@@ -1188,7 +1226,7 @@ character_event = {
 		location = {
 			county = {
 				holder_scope = {
-					character_event = { id = 201410 days = 7 tooltip = "EVTTOOLTIP20140" }
+					character_event = { id = 20140 days = 7 tooltip = "EVTTOOLTIP20140" }
 				}
 			}
 		}
@@ -1233,7 +1271,7 @@ character_event = {
 		ai_chance = { factor = 30 }
 		treasury = -50
 		FROM = {
-			letter_event = { id = 201414 days = 7 tooltip = "EVTTOOLTIP20144" }
+			letter_event = { id = 20144 days = 7 tooltip = "EVTTOOLTIP20144" }
 		}
 	}
 	option = {
@@ -1261,7 +1299,7 @@ character_event = {
 
 # 20142 - Noble is informed that the assassination attempt succeeded
 character_event = {
-	id = 201412
+	id = 20142
 	desc = "EVTDESC20142"
 	picture = GFX_evt_death
 	
@@ -1299,7 +1337,7 @@ letter_event = {
 		name = "EVTOPTA20144"
 		wealth = 50
 		FROM = {
-			letter_event = { id = 201415 days = 7 tooltip = "EVTTOOLTIP20145" }
+			letter_event = { id = 20145 days = 7 tooltip = "EVTTOOLTIP20145" }
 		}
 		hidden_tooltip = {
 			add_province_modifier = {
@@ -1312,7 +1350,7 @@ letter_event = {
 	option = {
 		name = "EVTOPTB20144"
 		prestige = 5
-		FROM = { letter_event = { id = 201416 days = 7 tooltip = "EVTTOOLTIP20146" } }
+		FROM = { letter_event = { id = 20146 days = 7 tooltip = "EVTTOOLTIP20146" } }
 	}
 }
 
@@ -1388,35 +1426,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}
 		modifier = {
 			factor = 1.05
@@ -1553,7 +1591,7 @@ character_event = {
 			character_event = { id = 20161 days = 7 tooltip = "EVTTOOLTIP20161" }
 		}
 		hidden_tooltip = {
-			character_event = { id = 20162 days = 7 }
+			letter_event = { id = 20162 days = 7 }
 		}
 	}
 }
@@ -1634,35 +1672,35 @@ character_event = {
 
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}
 		modifier = {
 			factor = 0.95

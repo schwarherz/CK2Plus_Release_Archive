@@ -1,6 +1,7 @@
 decisions = {
 	request_holy_war_sanction = {
 		potential = {
+			controls_religion = no
 			rightful_religious_head_scope = {
 				is_alive = yes
 			}

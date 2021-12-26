@@ -24,7 +24,7 @@ e_pirates = {
 
 # SPECIAL TITLES
 
-k_papal_state = {
+e_papal_state = {
 	color={ 255 249 198 }
 	color2={ 220 220 0 }
 	
@@ -87,6 +87,11 @@ e_sunni = {
 	
 	capital = 719 # Mecca
 	
+	allow = {
+		piety = 500
+	}
+	gain_effect = { piety = -500 }
+	
 	title = "CALIPH"
 	foa = "CALIPH_FOA"
 	short_name = yes
@@ -106,6 +111,11 @@ e_shiite = {
 	
 	capital = 719 # Mecca
 	
+	allow = {
+		piety = 500
+	}
+	gain_effect = { piety = -500 }
+	
 	title = "CALIPH"
 	foa = "CALIPH_FOA"
 	short_name = yes
@@ -121,9 +131,7 @@ e_shiite = {
 
 e_golden_horde = {
 	color = { 243 180 17 }
-	
-	capital = 622
-	
+
 	primary = yes
 	
 	tribe = yes
@@ -133,9 +141,7 @@ e_golden_horde = {
 }
 
 e_il-khanate = {
-	color = { 120 180 20 }
-	
-	capital = 622
+	color = { 120 180 20 }	
 	
 	primary = yes
 	
@@ -147,8 +153,6 @@ e_il-khanate = {
 
 e_timurids = {
 	color = { 120 20 20 }
-	
-	capital = 900
 	
 	primary = yes
 	
@@ -2988,7 +2992,7 @@ d_lithuanian_band = {
 		}
 	
 	# Parent Religion 
-	religion = pagan_baltic
+	religion = baltic_pagan
 	
 	mercenary = yes
 
@@ -6419,7 +6423,7 @@ e_hre = {
 			}
 		}
 		d_swabia = {
-			color={ 256 203 203 }
+			color={ 246 203 203 }
 			color2={ 255 255 255 }
 			
 			capital = 249 #Schwaben
@@ -7371,8 +7375,6 @@ k_italy = {
 	color = { 31 138 40 }
 	color2={ 255 255 255 }
 	capital = 235 # Lombardia
-	
-	capital = 234 # Pavia
 	
 	culture = italian
 	
@@ -9657,99 +9659,6 @@ k_georgia = {
 				}
 			}
 		}
-		d_cherson = {
-			color={ 188 91 154 }
-			color2={ 255 255 20 }
-			
-			gain_effect = { character_event = { id = 110017 } }
-			
-			capital = 560 # Cherson
-			
-			c_theodosia = {
-				color={ 190 93 156 }
-				color2={ 255 255 20 }
-				
-				b_theodosia = {
-				}
-				b_soldaia = {
-				}
-				b_kimmerikon = {
-				}
-				b_caffa = {
-				}
-				b_caulita = {
-				}
-				b_olyva = {
-				}
-				b_lusta = {
-				}
-				b_funan = {
-				}
-			}
-			c_korchev = {
-				color={ 192 95 158 }
-				color2={ 255 255 20 }
-				
-				b_bosphoros = {
-				}
-				b_panticapea = {
-				}
-				b_cherco = {
-				}
-				b_nymphaion = {
-				}
-				b_chystopillia = {
-				}
-				b_vosporo = {
-				}
-				b_baherove = {
-				}
-				b_zavitne = {
-				}
-			}
-			c_cherson = {
-				color={ 194 97 160 }
-				color2={ 255 255 20 }
-				
-				b_kherson = {
-				}
-				b_doros = {
-				}
-				b_neapol = {
-				}
-				b_kerkinitis = {
-				}
-				b_cembalo = {
-				}
-				b_charax = {
-				}
-				b_sevastoupolis = {
-				}
-				b_kalamita = {
-				}
-			}
-			c_tmutarakan = {
-				color={ 196 99 162 }
-				color2={ 255 255 20 }
-				
-				b_tmutarakan = {
-				}
-				b_mapa = {
-				}
-				b_taman = {
-				} 
-				b_tumnev = {
-				}
-				b_jevlisia = {
-				}
-				b_sujukqale = {
-				}
-				b_bata = {
-				}
-				b_tsemes = {
-				}
-			}
-		}
 		d_cibyrrhaeot = { 
 			color={ 108 29 80 }
 			color2={ 255 255 20 }
@@ -9979,6 +9888,55 @@ k_georgia = {
 				}
 			}
 		}
+		d_antioch = {
+			color={ 103 188 41 }
+			color2={ 255 255 255 }
+			
+			gain_effect = { character_event = { id = 110017 } }
+		
+			c_antiocheia = {
+				color={ 106 191 44 }
+				color2={ 255 255 255 }
+			
+				b_antiocheia = {
+				}
+				b_latakiah = {
+				}
+				b_stsymeon = {
+				}
+				b_darbsak = {
+				}
+				b_hazart = {
+				}
+				b_saone = {
+				}
+				b_harenc = {
+				}
+				b_baghras = {
+				}
+			}
+			c_alexandretta = {
+				color={ 112 197 50 }
+				color2={ 255 255 255 }
+			
+				b_alexandretta = {
+				}
+				b_rhosus = {
+				}
+				b_portbonnel = {
+				}
+				b_myriandros = {
+				}
+				b_portella = {
+				}
+				b_derbasak = {
+				}
+				b_sarvantikar = {
+				}
+				b_larochederissole = {
+				}
+			}
+		}		
 		d_mesopotamia = {
 			color={ 113 150 32 }
 			color2={ 255 255 255 }
@@ -10361,7 +10319,6 @@ e_poland_lithuania = {
 				is_alive = yes
 			} 
 		}
-		religion_group = christian	
 	}	
 
 k_poland = {
@@ -10376,7 +10333,6 @@ k_poland = {
 	
 	allow = {
 		NOT = { e_poland_lithuania = { holder_scope = { character = ROOT } } }
-		religion_group = christian
 	}	
 	
 	d_mazovia = {
@@ -13358,6 +13314,99 @@ k_crimea = {
 			}
 		}
 	}
+	d_cherson = {
+		color={ 188 91 154 }
+		color2={ 255 255 20 }
+
+		gain_effect = { character_event = { id = 110017 } }
+
+		capital = 560 # Cherson
+
+		c_theodosia = {
+			color={ 190 93 156 }
+			color2={ 255 255 20 }
+
+			b_theodosia = {
+			}
+			b_soldaia = {
+			}
+			b_kimmerikon = {
+			}
+			b_caffa = {
+			}
+			b_caulita = {
+			}
+			b_olyva = {
+			}
+			b_lusta = {
+			}
+			b_funan = {
+			}
+		}
+		c_korchev = {
+			color={ 192 95 158 }
+			color2={ 255 255 20 }
+
+			b_bosphoros = {
+			}
+			b_panticapea = {
+			}
+			b_cherco = {
+			}
+			b_nymphaion = {
+			}
+			b_chystopillia = {
+			}
+			b_vosporo = {
+			}
+			b_baherove = {
+			}
+			b_zavitne = {
+			}
+		}
+		c_cherson = {
+			color={ 194 97 160 }
+			color2={ 255 255 20 }
+
+			b_kherson = {
+			}
+			b_doros = {
+			}
+			b_neapol = {
+			}
+			b_kerkinitis = {
+			}
+			b_cembalo = {
+			}
+			b_charax = {
+			}
+			b_sevastoupolis = {
+			}
+			b_kalamita = {
+			}
+		}
+		c_tmutarakan = {
+			color={ 196 99 162 }
+			color2={ 255 255 20 }
+
+			b_tmutarakan = {
+			}
+			b_mapa = {
+			}
+			b_taman = {
+			} 
+			b_tumnev = {
+			}
+			b_jevlisia = {
+			}
+			b_sujukqale = {
+			}
+			b_bata = {
+			}
+			b_tsemes = {
+			}
+		}
+	}	
 	d_azov = {
 		color={ 218 179 130 }
 		color2={ 255 255 255 }
@@ -13710,7 +13759,7 @@ k_khazaria = {
 		gain_effect = { character_event = { id = 110017 } }
 	
 		c_sarpa = {
-			color={ 257 212 90 }
+			color={ 247 212 90 }
 			color2={ 255 255 255 }
 		
 			b_elst = {
@@ -13731,7 +13780,7 @@ k_khazaria = {
 			}
 		}
 		c_yegorlyk = {
-			color={ 259 214 92 }
+			color={ 249 214 92 }
 			color2={ 255 255 255 }
 		
 			b_piatigorie = {
@@ -13752,7 +13801,7 @@ k_khazaria = {
 			}
 		}
 		c_manych = {
-			color={ 261 216 94 }
+			color={ 251 216 94 }
 			color2={ 255 255 255 }
 		
 			b_mozdok = {
@@ -13773,7 +13822,7 @@ k_khazaria = {
 			}
 		}
 		c_alania = {
-			color={ 263 218 96 }
+			color={ 253 218 96 }
 			color2={ 255 255 255 }
 		
 			b_vovnushki = {
@@ -13794,7 +13843,7 @@ k_khazaria = {
 			}
 		}
 		c_kuma = {
-			color={ 265 220 98 }
+			color={ 255 220 98 }
 			color2={ 255 255 255 }
 		
 			b_kizlyar = {
@@ -16489,7 +16538,7 @@ e_danubia = {
 				}
 			}
 			c_severin = {
-				color={ 247 201 785 }
+				color={ 247 201 185 }
 				color2={ 255 255 255 }
 			
 				b_severin = {
@@ -19066,8 +19115,8 @@ k_algiers = {
 	}
 }
 
-k_mauretania = {
-	color={ 58 41 188 }
+k_morocco = {
+	color = { 224  146  113 } 
 	color2={ 255 255 255 }
 	
 	capital = 843 # Marrakech
@@ -19080,77 +19129,7 @@ k_mauretania = {
 	allow = {
 		NOT = { e_maghreb = { holder_scope = { character = ROOT } } }	
 	}	
-
-	d_ifni = {
-		color={ 79 122 48 }
-		color2={ 255 255 255 }
-		
-		gain_effect = { character_event = { id = 110017 } }	
 	
-		c_ifni = {
-			color={ 49 156 38 }
-			color2={ 255 255 255 }
-		
-			b_ifni = {
-			}
-			b_tiznit = {
-			}
-			b_ouaouteit = {
-			}
-			b_rgab = {
-			}
-			b_guelmim = {
-			}
-			b_belkassem = {
-			}
-			b_mihrleft = {
-			}
-			b_tizgui = {
-			}
-		}
-		c_tharasset = {
-			color={ 47 154 36 }
-			color2={ 255 255 255 }
-		
-			b_tharasset = {
-			}
-			b_tartaya = {
-			}
-			b_tantan = {
-			}
-			b_akhfennir = {
-			}
-			b_chbika = {
-			}
-			b_tidergit = {
-			}
-			b_amot = {
-			}
-			b_tiglit = {
-			}
-		}		
-		c_canarias = {
-			color={ 60 190 43 }
-			color2={ 255 255 255 }
-	
-			b_grancanaria = {
-			}
-			b_tenerife = {
-			}
-			b_lagomera = {
-			}
-			b_lanzarote = {
-			}
-			b_fuerteventura = {
-			}
-			b_lagraciosa = {
-			}
-			b_alegranza = {
-			}
-			b_lapalma = {
-			}
-		}
-	}
 	d_marrakech = {
 		color={ 43 150 32 }
 		color2={ 255 255 255 }
@@ -19360,7 +19339,135 @@ k_mauretania = {
 			b_boudnib = {
 			}
 		}
+	}	
+}
+
+k_mauretania = {
+	color={ 58 41 188 }
+	color2={ 255 255 255 }
+	
+	capital = 846 #Ifni
+	
+	culture = maghreb_arabic
+	
+	catholic = 10 #Crusade target weight
+	sunni = 100 #Crusade target weight	
+	
+	allow = {
+		NOT = { e_maghreb = { holder_scope = { character = ROOT } } }	
+	}	
+
+	d_ifni = {
+		color={ 79 122 48 }
+		color2={ 255 255 255 }
+		
+		gain_effect = { character_event = { id = 110017 } }	
+	
+		c_ifni = {
+			color={ 49 156 38 }
+			color2={ 255 255 255 }
+		
+			b_ifni = {
+			}
+			b_tiznit = {
+			}
+			b_ouaouteit = {
+			}
+			b_rgab = {
+			}
+			b_guelmim = {
+			}
+			b_belkassem = {
+			}
+			b_mihrleft = {
+			}
+			b_tizgui = {
+			}
+		}
+		c_tharasset = {
+			color={ 47 154 36 }
+			color2={ 255 255 255 }
+		
+			b_tharasset = {
+			}
+			b_tartaya = {
+			}
+			b_tantan = {
+			}
+			b_akhfennir = {
+			}
+			b_chbika = {
+			}
+			b_tidergit = {
+			}
+			b_amot = {
+			}
+			b_tiglit = {
+			}
+		}		
+		c_canarias = {
+			color={ 60 190 43 }
+			color2={ 255 255 255 }
+	
+			b_grancanaria = {
+			}
+			b_tenerife = {
+			}
+			b_lagomera = {
+			}
+			b_lanzarote = {
+			}
+			b_fuerteventura = {
+			}
+			b_lagraciosa = {
+			}
+			b_alegranza = {
+			}
+			b_lapalma = {
+			}
+		}
 	}
+	d_laayoune = { #North
+		color={ 106 198 75 }
+		color2={ 255 255 255 }
+		
+		gain_effect = { character_event = { id = 110017 } }
+		
+		c_el_aaiun = { #NorthV
+			color={ 90 218 75 }
+			color2={ 255 255 255 }
+			b_el_aaiun = {
+			}
+			b_boukra = { 
+			}
+			b_semara = { 
+			}			
+		}
+		c_boujdour = { #SouthV
+			color={ 71 168 15 }
+			color2={ 255 255 255 }
+			b_boujdour = {
+			}
+			b_guelta_zemmur = { 
+			}				
+		}
+		c_dakhla = { #NorthV
+			color={ 81 188 35 }
+			color2={ 255 255 255 }
+			b_idjil = {
+			}
+			b_bir_anzarane = { 
+			}			
+		}
+		c_bir_gandlus = { #SouthV
+			color={ 121 218 5 }
+			color2={ 255 255 255 }
+			b_nouakchott = { 
+			}
+			b_tichla = { 
+			}			
+		}
+	}	
 }
 
 k_africa = {
@@ -20271,55 +20378,6 @@ k_egypt = {
 				b_serjilla = {
 				}
 				b_kharsan = {
-				}
-			}
-		}
-		d_antioch = {
-			color={ 103 188 41 }
-			color2={ 255 255 255 }
-			
-			gain_effect = { character_event = { id = 110017 } }
-		
-			c_antiocheia = {
-				color={ 106 191 44 }
-				color2={ 255 255 255 }
-			
-				b_antiocheia = {
-				}
-				b_latakiah = {
-				}
-				b_stsymeon = {
-				}
-				b_darbsak = {
-				}
-				b_hazart = {
-				}
-				b_saone = {
-				}
-				b_harenc = {
-				}
-				b_baghras = {
-				}
-			}
-			c_alexandretta = {
-				color={ 112 197 50 }
-				color2={ 255 255 255 }
-			
-				b_alexandretta = {
-				}
-				b_rhosus = {
-				}
-				b_portbonnel = {
-				}
-				b_myriandros = {
-				}
-				b_portella = {
-				}
-				b_derbasak = {
-				}
-				b_sarvantikar = {
-				}
-				b_larochederissole = {
 				}
 			}
 		}
@@ -25016,6 +25074,55 @@ k_norway = {
 		}		
 	}	
 
+	d_iceland = {
+		color={ 195 190 255 }
+		color2={ 220 220 220 }
+
+		gain_effect = { character_event = { id = 110017 } }
+
+		c_vestisland = {
+			color={ 235 230 250 }
+			color2={ 220 220 220 }
+
+			b_reykjavik = {
+			}
+			b_alftanes = {
+			}
+			b_skalholt = {
+			}
+			b_pingvellir = {
+			}
+			b_kjalarnes = {
+			}
+			b_hlidarendi = {
+			}
+			b_hvamm = {
+			}
+			b_borg = {
+			}
+		}
+		c_austisland = {
+			color={ 225 235 245 }
+			color2={ 220 220 220 }
+
+			b_husavik = {
+			}
+			b_hrisey = {
+			}
+			b_holar = {
+			}
+			b_glaumbaer = {
+			}
+			b_valpjotstadur = {
+			}
+			b_akureyri = {
+			}
+			b_kirkjubaer = {
+			}
+			b_goddalir = {
+			}
+		}
+	}
 	d_vestlandet = {
 		color={ 24 0 255 }
 		color2={ 255 255 255 }
@@ -25391,52 +25498,360 @@ k_norway = {
 }
 }
 
-d_iceland = {
-	color={ 195 190 255 }
-	color2={ 220 220 220 }
+#WEST AFRICAN ADDITIONS
+#Kingdoms
+e_mali = {
+	color={ 251 133 78 }
+	color2={ 185 48 15 }
 	
-	gain_effect = { character_event = { id = 110017 } }
-
-	c_vestisland = {
-		color={ 235 230 250 }
-		color2={ 220 220 220 }
-
-		b_reykjavik = {
+	allow = {
+		e_mali = {
+			holder_scope = {
+				is_alive = yes
+			} 
 		}
-		b_alftanes = {
+		religion_group = muslim		
+	}	
+	
+	k_jolof = { #West (Senegal, Gambia)
+		color={ 251 163 38 }
+		color2={ 185 48 15 }
+		allow = {
+			NOT = { e_mali = { holder_scope = { character = ROOT } } }	
+		}		
+		d_takrur = {#North
+			color={ 251 173 138 }
+			color2={ 155 58 55 }
+			gain_effect = { character_event = { id = 110017 } }
+			c_morfil = { #West
+				color={ 201 103 58 }
+				color2={ 185 98 15 }
+				b_morfil = {
+				}
+				b_podor = {
+				}
+				b_ngoui = {
+				}				
+				b_salde = { 
+				}
+			}
+			c_matam = { #East, dubious name
+				color={ 221 163 8 }
+				color2={ 145 68 35 }
+				b_matam = {
+				}
+				b_kanel = { 
+				}					
+			}
+			c_tabacounda = { #east
+				color={ 219 178 93 }
+				color2={ 148 71 36 }
+				b_tabacounda = {
+				}
+				b_bakel = { 
+				}	
+				b_goudiry = { 
+				}					
+			}
 		}
-		b_skalholt = {
-		}
-		b_pingvellir = {
-		}
-		b_kjalarnes = {
-		}
-		b_hlidarendi = {
-		}
-		b_hvamm = {
-		}
-		b_borg = {
+		d_jolof = { #Mesopotamish - note, divided into states of much later Jolof Empire
+			color={ 230 140 23 }
+			color2={ 130 75 36 }
+			gain_effect = { character_event = { id = 110017 } }
+			c_cayor = { #West
+				color={ 198 94 21 }
+				color2={ 160 150 36 }
+				b_mboul = {
+				}								
+				b_yoff = { 
+				}
+				b_thies = {
+				}
+				b_nguekokh = { 
+				}				
+			}			
+			c_waalo = { #North
+				color={ 190 170 31 }
+				color2={ 110 125 16 }
+				b_ndiangue = {
+				}
+				b_diourbel = { 
+				}	
+				b_nder = { 
+				}				
+			}
+			c_linguere = { #Northeast
+				color={ 216 103 93 }
+				color2={ 70 105 10 }
+				b_linguere = {
+				}
+				b_diourbel = {
+				}					
+				b_touba = {
+				}			
+			}
+			c_saloum = { #Orange
+				color={ 231 193 78 }
+				color2={ 100 65 36 }
+				b_kahone = {
+				}
+				b_mbissel = { 
+				}				
+				b_kaolack = {
+				}									
+			}
+			c_baol = { #South
+				color={ 210 172 98 }
+				color2={ 100 16 3 }
+				b_jurbel = {
+				}
+				b_mbour = { 
+				}	
+				b_bambey = { 
+				}				
+			}
+			c_gambia = { #Southmost
+				color={ 151 53 8 }
+				color2={ 215 98 95 }
+				b_ziguincha = {
+				}
+				b_serekunda = { 
+				}	
+				b_banjul = { 
+				}	
+				b_brikama = { 
+				}				
+			}
 		}
 	}
-	c_austisland = {
-		color={ 225 235 245 }
-		color2={ 220 220 220 }
+	k_ghana = { #central
+		color={ 199 103 13 }
+		color2={ 65 130 36 }
+		
+		allow = {
+			NOT = { e_mali = { holder_scope = { character = ROOT } } }	
+		}
+		d_susu = { #East
+			color={ 213 94 26 }
+			color2={ 68 164 51 }
+			gain_effect = { character_event = { id = 110017 } }
+			c_kirina = { #East
+				color={ 161 90 21 }
+				color2={ 50 75 10 }
+				b_soumpi = {
+				}
+				b_niafunke = { 
+				}	
+				b_dianke = { 
+				}				
+			}			
+			c_araouane = { #South
+				color={ 189 104 12 }
+				color2={ 30 85 10 }
+				b_niono = {
+				}
+				b_kouyakoura = { 
+				}	
+				b_nyemina = { 
+				}				
+			}			
+			c_taghaza = { #West
+				color={ 186 120 54 }
+				color2={ 50 75 10 }
+				b_araouane = {
+				}
+			}			
+		}
+		d_diafanu = { #West
+			color={ 146 106 54 }
+			color2={ 51 66 10 }
+			gain_effect = { character_event = { id = 110017 } }
+			c_aoudagast = { #West
+				color={ 192 155 83 }
+				color2={ 54 75 23 }
+				b_aoudaghost = {
+				}
+				b_rkiz = { 
+				}				
+			}
+			c_oualata = { #East
+				color={ 162 118 74 }
+				color2={ 50 72 32 }
+				b_oualata = {
+				}					
+			}
+			c_koumbi_saleh = { #South
+				color={ 156 90 64 }
+				color2={ 50 75 10 }
+				b_koumbi_saleh = {
+				}
+				b_ain_verba = { 
+				}				
+			}
+		}
+		d_jeno = { #Southeast
+			color={ 198 165 24 }
+			color2={ 61 75 10 }
+			gain_effect = { character_event = { id = 110017 } }
+			c_djenne = {
+				color={ 162 136 54 }
+				color2={ 50 75 10 }
+				b_djenne = { #North
+				}
+				b_djoboro = { 
+				}	
+				b_konboro = { 
+				}
+				b_sekou_amadou = { 
+				}	
+				b_mopti = { 
+				}				
+			}
+			c_sama = {
+				color={ 175 90 54 }
+				color2={ 50 75 10 }
+				b_bamako = { 
+				}
+				b_koro_koulikoro = { 
+				}	
+				b_sema = { 
+				}	
+				b_segou = {
+				}
+			}
+			c_sikasso = { #East
+				color={ 179 80 54 }
+				color2={ 50 75 10 }
+				b_tunuma = {
+				}
+				b_bindogoso = { 
+				}
+				b_dafra = { 
+				}	
+				b_dogona = { 
+				}				
+			}
+		}
+		d_kangaba = {
+			color={ 198 159 54 }
+			color2={ 50 75 10 }
+			gain_effect = { character_event = { id = 110017 } }
+			c_yaresna = { #North
+				color={ 186 176 66 }
+				color2={ 50 75 10 }
+				b_yaresna = {
+				}
+				b_kayes = { 
+				}				
+			}
+			c_ghiryu = { #South
+				color={ 215 186 54 }
+				color2={ 50 75 10 }
+				b_kirana = {
+				}
+				b_bafoulable = { 
+				}
+				b_diabougou = { 
+				}				
+			}
+			c_niani = { #West
+				color={ 216 115 15 }
+				color2={ 50 75 10 }
+				b_bure = {
+				}
+				b_dinguiraye = { 
+				}
+				b_jangaba = { 
+				}	
+				b_babara = { 
+				}					
+			}
+		}
+	}
+	k_songhai = {#Northeast
+		color={ 186 120 74 }
+		color2={ 75 50 10 }
+		
+		allow = {
+			NOT = { e_mali = { holder_scope = { character = ROOT } } }	
+			religion_group = muslim		
+		}
 
-		b_husavik = {
+		d_songhai = {
+			color={ 136 90 74 }
+			color2={ 75 50 10 }
+			gain_effect = { character_event = { id = 110017 } }
+			c_gao = { #East
+				color={ 190 120 110 }
+				color2={ 50 75 10 }
+				b_gao = {
+				}
+				b_kukiya = { 
+				}	
+				b_kawkaw = { 
+				}	
+				b_gao-saney = { 
+				}
+				b_gadei = { 
+				}				
+			}
+			c_timbuktu = { #West
+				color={ 90 60 54 }
+				color2={ 50 75 10 }			
+				b_timbuktu = {
+				}
+				b_kabara = { 
+				}					
+				b_sankore = { 
+				}	
+				b_djinguereber = { 
+				}	
+				b_sidi_yahya = { 
+				}
+				b_korioume = { 
+				}				
+			}
 		}
-		b_hrisey = {
-		}
-		b_holar = {
-		}
-		b_glaumbaer = {
-		}
-		b_valpjotstadur = {
-		}
-		b_akureyri = {
-		}
-		b_kirkjubaer = {
-		}
-		b_goddalir = {
+		d_wagadou = { #Modern-day Burkina Faso (included in Songha to make the kingdom less small)
+			color={ 112 75 13 }
+			color2={ 50 75 10 }
+			gain_effect = { character_event = { id = 110017 } }
+			c_wagadou = { #North
+				color={ 148 92 13 }
+				color2={ 50 75 10 }
+				b_tenkodogo = { 
+				}	
+				b_koudougou = { 
+				}	
+				b_wogodogo = { 
+				}
+				b_loanga = { 
+				}				
+			}
+			c_tenkodogo = { #East
+				color={ 222 151 54 }
+				color2={ 50 75 10 }
+				b_ouallam = { 
+				}	
+				b_tillaberi = { 
+				}
+				b_bardouga = { 
+				}				
+			}
+			c_koudougu = { #West
+				color={ 249 93 14 }
+				color2={ 50 75 10 }
+				b_bolgatanga = {
+				}
+				b_nuarungu = { 
+				}	
+				b_naa_bwewaa = { 
+				}
+				b_tongo = { 
+				}
+				b_dinarha = { 
+				}				
+			}
 		}
 	}
 }
@@ -25591,7 +26006,7 @@ d_iceland = {
 		
 		allow = {
 			culture_group = altaic
-			religion = judaic
+			religion = judaism
 		}
 	}
 	d_kola = {
@@ -25851,17 +26266,6 @@ k_candar = {
 	color = { 238 79 182 }
 	culture = turkish
 }
-k_cuman = {
-	color = { 231 192 88 }
-	
-	culture = cuman
-	tribe = yes
-	
-	allow = {
-		always = no
-	}
-	
-}
 k_eretnid = {
 	color = { 253 182 182 }
 }
@@ -25959,11 +26363,6 @@ k_saruhan = {
 	color = { 144 171 225 }
 	culture = turkish
 }
-k_seljuk_turks = {
-	color={ 99 168 74 }
-	color2={ 200 200 0 }
-	culture = turkish
-}
 k_tekke = {
 	color={ 244 153 189 }
 }
@@ -26024,17 +26423,7 @@ k_al_garb = { #muslim portugal
 		culture_group = arabic
 		religion_group = muslim
 	}
-}	
-k_al_andalus = { #muslim andalusia
-	color={ 12 165 185 }
-	capital = 181 #Cordoba
-	culture = andalusian_arabic
-	
-	allow = {
-		culture_group = arabic
-		religion_group = muslim
-	}	
-}	
+}		
 k_al_xarq = { #muslim aragon
 	color={ 55 150 215 }
 	capital = 202 #Zaragoza
@@ -26044,23 +26433,60 @@ k_al_xarq = { #muslim aragon
 		religion_group = muslim
 	}	
 }		
-k_al_tagr = { #not used
+k_al_mawsat = { #muslim andalusia
 	culture = andalusian_arabic
 	color={ 116 116 55 }
+	capital = 180 #Granada
+	allow = {
+		culture_group = arabic
+		religion_group = muslim
+	}
 }
 	
 # TITULAR EMPIRES
+e_cuman = {
+	color = { 231 192 88 }
+	
+	culture = cuman
+	tribe = yes
+	
+	allow = {
+		e_cuman = {
+			holder_scope = {
+				is_alive = yes
+			} 
+		}
+		religion_group = pagan_group
+	}
+	
+}
 e_easteregg = {
 	color = { 255 105 180 }
+	
+	allow = {
+		always = no
+	}	
+}
+e_al_andalus = { #muslim iberia
+	color = { 211  181  142 }
+	culture = andalusian_arabic
+	capital = 181 #Cordoba
+	allow = {
+		e_al_andalus = {
+			holder_scope = {
+				is_alive = yes
+			} 
+		}
+		religion_group = muslim
+	}	
 }
 e_latin_empire = {
 	color = { 200 190 195 }
 	allow = {
+		culture_group = latin
 		religion = catholic
-		piety = 200
 	}	
-	gain_effect = { piety = -200 }
-	capital = 496 #Byzantion
+	capital = 496 #Byzantion	
 }
 e_seljuk_turks = {
 	color={ 99 168 74 }
@@ -26071,7 +26497,12 @@ e_seljuk_turks = {
 	title = "PADISHAH"
 	
 	allow = {
-		always = no
+		e_seljuk_turks = {
+			holder_scope = {
+				is_alive = yes
+			} 
+		}
+		religion_group = muslim
 	}
 }	
 	

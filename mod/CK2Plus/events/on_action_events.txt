@@ -178,7 +178,7 @@ character_event = {
 						opinion = {
 							who = FROM
 							modifier = opinion_spouse_slayer
-							months = 1200
+							months = 120
 						}
 					}
 				}
@@ -201,6 +201,12 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA155"
+		hidden_tooltip = {
+			random = {
+				chance = 20
+				give_nickname = nick_the_exile
+			}	
+		}
 	}
 }
 
@@ -334,7 +340,7 @@ character_event = {
 		opinion = {
 			who = FROM
 			modifier = opinion_murder_attempt
-			months = 1200
+			months = 120
 		}		
 	}
 
@@ -542,7 +548,7 @@ character_event = {
 		opinion = {
 			who = FROM
 			modifier = opinion_murder_attempt
-			months = 1200
+			months = 120
 		}		
 	}
 
@@ -757,7 +763,7 @@ character_event = {
 		opinion = {
 			who = FROM
 			modifier = opinion_murder_attempt
-			months = 1200
+			months = 120
 		}		
 	}
 
@@ -1000,7 +1006,7 @@ character_event = {
 				opinion = {
 					who = FROM
 					modifier = opinion_spouse_slayer
-					months = 1200
+					months = 120
 				}
 			}
 		}
@@ -1008,28 +1014,28 @@ character_event = {
 			opinion = {
 				who = FROM
 				modifier = opinion_killed_close_kin
-				months = 1200
+				months = 120
 			}
 		}
 		father = {
 			opinion = {
 				who = FROM
 				modifier = opinion_killed_close_kin
-				months = 1200
+				months = 120
 			}
 		}
 		any_child = {
 			opinion = {
 				who = FROM
 				modifier = opinion_killed_close_kin
-				months = 1200
+				months = 120
 			}
 		}
 		any_sibling = {
 			opinion = {
 				who = FROM
 				modifier = opinion_killed_close_kin
-				months = 1200
+				months = 120
 			}
 		}
 	}
@@ -1631,8 +1637,11 @@ character_event = {
 }
 
 
-# on_mission_creation
+# on_crusade_creation
 # CRUSADE!
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
 narrative_event = {
 	id = 200
 	title = "EVTNAME200"
@@ -1641,23 +1650,27 @@ narrative_event = {
 	
 	is_triggered_only = yes
 	major = yes
+	show_root = yes
+	hide_new = yes
 	
 	trigger = {
 		can_call_crusade = yes
-		FROM = {
-			owner = { religion_group = muslim }
+		ROOT = { religion_group = christian }
+		new_character = {
+			religion_group = muslim
 		}
 	}
 	
 	option = {
 		name = "EVTOPTA200"
-		
 		trigger = { religion = ROOT }
 	}
 	option = {
 		name = "EVTOPTB200"
-		trigger = { NOT = { religion = ROOT } }
-		trigger = { religion_group = ROOT }
+		trigger = {
+			religion_group = ROOT
+			NOT = { religion = ROOT }
+		}
 	}
 	option = {
 		name = "EVTOPTC200"
@@ -1666,6 +1679,9 @@ narrative_event = {
 }
 
 # CRUSADE!
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
 narrative_event = {
 	id = 201
 	title = "EVTNAME200"
@@ -1674,14 +1690,14 @@ narrative_event = {
 	
 	is_triggered_only = yes
 	major = yes
+	show_root = yes
+	hide_new = yes
 	
 	trigger = {
 		can_call_crusade = yes
-		FROM = {
-			OR = {
-				owner = { religion_group = pagan_group }
-				owner = { religion_group = zoroastrian_group }
-			}
+		ROOT = { religion_group = christian }
+		new_character = {
+			NOT = { religion_group = muslim }
 		}
 	}
 	
@@ -1690,17 +1706,15 @@ narrative_event = {
 		trigger = { religion = ROOT }
 	}
 	option = {
-		name = "EVTOPTB200"
-		trigger = { NOT = { religion = ROOT } }
-		trigger = { religion_group = ROOT }
-	}
-	option = {
 		name = "EVTOPTC200"
-		trigger = { NOT = { religion_group = ROOT } }
+		trigger = { NOT = { religion = ROOT } }
 	}
 }
 
-# CRUSADE!
+# JIHAD!
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
 narrative_event = {
 	id = 320
 	title = "EVTNAME200"
@@ -1712,9 +1726,7 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		FROM = {
-			owner = { religion_group = christian }
-		}
+		ROOT = { religion_group = muslim }
 	}
 	
 	option = {
@@ -1723,8 +1735,10 @@ narrative_event = {
 	}
 	option = {
 		name = "EVTOPTB200"
-		trigger = { NOT = { religion = ROOT } }
-		trigger = { religion_group = ROOT }
+		trigger = {
+			religion_group = ROOT
+			NOT = { religion = ROOT }
+		}
 	}
 	option = {
 		name = "EVTOPTC200"
@@ -2761,7 +2775,7 @@ province_event = {
 						spawn_unit = {
 							province = prev
 							home = prev
-							scaled_by_tax = yes
+							#scaled_by_tax = yes
 							troops = {
 								archers = { 6 6 }
 								light_cavalry = { 4 4 }
@@ -2784,7 +2798,7 @@ province_event = {
 						spawn_unit = {
 							province = prev
 							home = prev
-							scaled_by_tax = yes
+							#scaled_by_tax = yes
 							troops = {
 								archers = { 6 6 }
 								light_cavalry = { 3 3 }
@@ -2807,7 +2821,7 @@ province_event = {
 						spawn_unit = {
 							province = prev
 							home = prev
-							scaled_by_tax = yes
+							#scaled_by_tax = yes
 							troops = {
 								archers = { 6 6 }
 								light_infantry = { 14 14 }
@@ -2957,5 +2971,76 @@ narrative_event = {
 				}
 			}
 		}
+	}
+}
+
+# ASK_TO_JOIN_WAR_INTERACTION_ACCEPT_EVENT =
+diploresponse_event = {
+	id = 293
+
+	is_triggered_only = yes
+	major = no
+	is_friendly = yes
+
+	trigger = {
+		ai = no
+	}
+
+	desc = "EVTDESC293"
+
+	option = {
+		name = "OK"
+	}
+}
+
+# ASK_TO_JOIN_WAR_INTERACTION_DECLINE_EVENT =
+diploresponse_event = {
+	id = 294
+
+	is_triggered_only = yes
+	major = no
+
+	trigger = {
+		ai = no
+	}
+
+	desc = "EVTDESC294"
+
+	option = {
+		name = "OK"
+	}
+}
+
+# ARRANGE_SUCC_BETROTHAL_INTERACTION_ACCEPT_EVENT =
+diploresponse_event = {
+	id = 330
+	desc = "EVTDESC330"
+
+	is_triggered_only = yes
+	major = no
+	is_friendly = yes
+
+	trigger = {
+		ai = no
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+# ARRANGE_SUCC_BETROTHAL_INTERACTION_DECLINE_EVENT =
+diploresponse_event = {
+	id = 331
+	desc = "EVTDESC331"
+
+	major = no
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+	}
+	option = {
+		name = "OK"
 	}
 }

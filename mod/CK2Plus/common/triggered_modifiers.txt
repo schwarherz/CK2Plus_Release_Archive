@@ -14,16 +14,12 @@ vassal_ruler = {
 		is_ruler = yes
 		primary_title = { higher_tier_than = BARON }
 		OR = {
-			AND = {
-				is_feudal = no
-				independent = yes
-			}
 			primary_title = { NOT = { higher_tier_than = DUKE } }
 			independent = no
 		}
 		NOT = {
 			any_war = {
-				NOT = { using_cb = religious_assistance }		
+				using_cb = crusade
 				defender = {
 					character = ROOT
 				}
@@ -49,17 +45,13 @@ vassal_ruler = {
 	trigger = {
 		is_ruler = yes
 		primary_title = { higher_tier_than = BARON }
-		OR = {
-			AND = {
-				is_feudal = no
-				independent = yes
-			}		
+		OR = {		
 			primary_title = { NOT = { higher_tier_than = DUKE } }
 			independent = no
 		}
 		NOT = {
 			any_war = {
-				NOT = { using_cb = religious_assistance }		
+				using_cb = crusade
 				defender = {
 					character = ROOT
 				}
@@ -85,17 +77,13 @@ vassal_ruler = {
 	trigger = {
 		is_ruler = yes
 		primary_title = { higher_tier_than = BARON }
-		OR = {
-			AND = {
-				is_feudal = no
-				independent = yes
-			}		
+		OR = {		
 			primary_title = { NOT = { higher_tier_than = DUKE } }
 			independent = no
 		}
 		NOT = {
 			any_war = {
-				NOT = { using_cb = religious_assistance }		
+				using_cb = crusade
 				defender = {
 					character = ROOT
 				}
@@ -121,17 +109,13 @@ vassal_ruler = {
 	trigger = {
 		is_ruler = yes
 		primary_title = { higher_tier_than = BARON }
-		OR = {
-			AND = {
-				is_feudal = no
-				independent = yes
-			}		
+		OR = {		
 			primary_title = { NOT = { higher_tier_than = DUKE } }
 			independent = no
 		}
 		NOT = {
 			any_war = {
-				NOT = { using_cb = religious_assistance }		
+				using_cb = crusade
 				defender = {
 					character = ROOT
 				}
@@ -157,17 +141,13 @@ vassal_ruler = {
 	trigger = {
 		is_ruler = yes
 		primary_title = { higher_tier_than = BARON }
-		OR = {
-			AND = {
-				is_feudal = no
-				independent = yes
-			}		
+		OR = {		
 			primary_title = { NOT = { higher_tier_than = DUKE } }
 			independent = no
 		}
 		NOT = {
 			any_war = {
-				NOT = { using_cb = religious_assistance }		
+				using_cb = crusade
 				defender = {
 					character = ROOT
 				}
@@ -193,12 +173,13 @@ defensive_war = {
 	
 	trigger = {
 		is_ruler = yes
-		is_feudal = yes
+		primary_title = { higher_tier_than = DUKE }
+		independent = yes	
 		primary_title = { 
 			has_crown_law_title = no
 		}		
 		any_war = {
-			NOT = { using_cb = religious_assistance }
+			NOT = { using_cb = crusade }
 			defender = {
 				character = ROOT
 			}
@@ -229,12 +210,13 @@ defensive_war = {
 	
 	trigger = {
 		is_ruler = yes
-		is_feudal = yes
+		primary_title = { higher_tier_than = DUKE }
+		independent = yes
 		crownlaw_title = { 
 			has_law = centralization_0 
 		}		
 		any_war = {
-			NOT = { using_cb = religious_assistance }
+			NOT = { using_cb = crusade }
 			defender = {
 				character = ROOT
 			}
@@ -265,12 +247,13 @@ defensive_war = {
 	
 	trigger = {
 		is_ruler = yes
-		is_feudal = yes
+		primary_title = { higher_tier_than = DUKE }
+		independent = yes
 		crownlaw_title = { 
 			has_law = centralization_1
 		}		
 		any_war = {	
-			NOT = { using_cb = religious_assistance }
+			NOT = { using_cb = crusade }
 			defender = {
 				character = ROOT
 			}
@@ -301,12 +284,13 @@ defensive_war = {
 	
 	trigger = {
 		is_ruler = yes
-		is_feudal = yes
+		primary_title = { higher_tier_than = DUKE }
+		independent = yes
 		crownlaw_title = { 
 			has_law = centralization_2
 		}		
 		any_war = {
-			NOT = { using_cb = religious_assistance }
+			NOT = { using_cb = crusade }
 			defender = {
 				character = ROOT
 			}
@@ -337,12 +321,13 @@ defensive_war = {
 	
 	trigger = {
 		is_ruler = yes
-		is_feudal = yes
+		primary_title = { higher_tier_than = DUKE }
+		independent = yes
 		crownlaw_title = { 
 			has_law = centralization_3
 		}		
 		any_war = {
-			NOT = { using_cb = religious_assistance }
+			NOT = { using_cb = crusade }
 			defender = {
 				character = ROOT
 			}
@@ -366,7 +351,41 @@ defensive_war = {
 	temple_vassal_max_levy = 0.05	
 }
 
-#Defense War
+#Defending against Crusade
+crusade_war = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {	
+		primary_title = { 
+			has_crown_law_title = no
+		}		
+		any_war = {
+			using_cb = crusade
+			defender = {
+				character = ROOT
+			}
+		}
+		OR = {
+			ai = yes
+			NOT = {
+				any_war = {
+					attacker = {
+						character = ROOT
+					}
+				}	
+			}
+		}
+	}
+	
+	icon = 13
+	
+	castle_vassal_max_levy = 0.5
+	city_vassal_max_levy = 0.5
+	temple_vassal_max_levy = 0.5	
+}
+
 crusade_war = {
 	potential = {
 		is_ruler = yes
@@ -374,44 +393,32 @@ crusade_war = {
 	
 	trigger = {
 		is_ruler = yes
-		primary_title = { higher_tier_than = DUKE }
-		independent = yes
-		is_feudal = yes
 		crownlaw_title = { 
 			has_law = centralization_0 
 		}		
 		any_war = {
 			using_cb = crusade
-			attacker = {
+			defender = {
 				character = ROOT
 			}
-		}
-		NOT = {
-			any_war = {	
-				NOT = { using_cb = religious_assistance }
-				defender = {
-					character = ROOT
-				}
-			}		
 		}
 		OR = {
 			ai = yes
 			NOT = {
 				any_war = {
-					NOT = { using_cb = crusade }
 					attacker = {
 						character = ROOT
 					}
 				}	
 			}
-		}		
+		}
 	}
 	
 	icon = 13
 	
-	castle_vassal_max_levy = 0.1
-	city_vassal_max_levy = 0.1
-	temple_vassal_max_levy = 0.1	
+	castle_vassal_max_levy = 0.4
+	city_vassal_max_levy = 0.4
+	temple_vassal_max_levy = 0.4	
 }
 
 crusade_war = {
@@ -421,31 +428,19 @@ crusade_war = {
 	
 	trigger = {
 		is_ruler = yes
-		primary_title = { higher_tier_than = DUKE }
-		independent = yes
-		is_feudal = yes
 		crownlaw_title = { 
 			has_law = centralization_1
 		}		
-		any_war = {
+		any_war = {	
 			using_cb = crusade
-			attacker = {
+			defender = {
 				character = ROOT
 			}
-		}
-		NOT = {
-			any_war = {	
-				NOT = { using_cb = religious_assistance }
-				defender = {
-					character = ROOT
-				}
-			}		
-		}
+		}		
 		OR = {
 			ai = yes
 			NOT = {
 				any_war = {
-					NOT = { using_cb = crusade }
 					attacker = {
 						character = ROOT
 					}
@@ -456,9 +451,9 @@ crusade_war = {
 	
 	icon = 13
 	
-	castle_vassal_max_levy = 0.075
-	city_vassal_max_levy = 0.075
-	temple_vassal_max_levy = 0.075	
+	castle_vassal_max_levy = 0.35
+	city_vassal_max_levy = 0.35
+	temple_vassal_max_levy = 0.35	
 }
 
 crusade_war = {
@@ -468,31 +463,19 @@ crusade_war = {
 	
 	trigger = {
 		is_ruler = yes
-		primary_title = { higher_tier_than = DUKE }
-		independent = yes
-		is_feudal = yes
 		crownlaw_title = { 
 			has_law = centralization_2
 		}		
 		any_war = {
 			using_cb = crusade
-			attacker = {
+			defender = {
 				character = ROOT
 			}
-		}
-		NOT = {
-			any_war = {	
-				NOT = { using_cb = religious_assistance }
-				defender = {
-					character = ROOT
-				}
-			}		
-		}
+		}		
 		OR = {
 			ai = yes
 			NOT = {
 				any_war = {
-					NOT = { using_cb = crusade }
 					attacker = {
 						character = ROOT
 					}
@@ -503,9 +486,9 @@ crusade_war = {
 	
 	icon = 13
 	
-	castle_vassal_max_levy = 0.05
-	city_vassal_max_levy = 0.05
-	temple_vassal_max_levy = 0.05	
+	castle_vassal_max_levy = 0.3
+	city_vassal_max_levy = 0.3
+	temple_vassal_max_levy = 0.3	
 }
 
 crusade_war = {
@@ -515,31 +498,19 @@ crusade_war = {
 	
 	trigger = {
 		is_ruler = yes
-		primary_title = { higher_tier_than = DUKE }
-		independent = yes
-		is_feudal = yes
 		crownlaw_title = { 
 			has_law = centralization_3
 		}		
 		any_war = {
 			using_cb = crusade
-			attacker = {
+			defender = {
 				character = ROOT
 			}
-		}
-		NOT = {
-			any_war = {	
-				NOT = { using_cb = religious_assistance }
-				defender = {
-					character = ROOT
-				}
-			}		
-		}
+		}		
 		OR = {
 			ai = yes
 			NOT = {
 				any_war = {
-					NOT = { using_cb = crusade }
 					attacker = {
 						character = ROOT
 					}
@@ -550,11 +521,45 @@ crusade_war = {
 	
 	icon = 13
 	
-	castle_vassal_max_levy = 0.025
-	city_vassal_max_levy = 0.025
-	temple_vassal_max_levy = 0.025	
+	castle_vassal_max_levy = 0.25
+	city_vassal_max_levy = 0.25
+	temple_vassal_max_levy = 0.25	
 }
 
+crusade_war = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		is_ruler = yes
+		crownlaw_title = { 
+			has_law = centralization_4
+		}		
+		any_war = {
+			using_cb = crusade
+			defender = {
+				character = ROOT
+			}
+		}		
+		OR = {
+			ai = yes
+			NOT = {
+				any_war = {
+					attacker = {
+						character = ROOT
+					}
+				}	
+			}
+		}		
+	}
+	
+	icon = 13
+	
+	castle_vassal_max_levy = 0.2
+	city_vassal_max_levy = 0.2
+	temple_vassal_max_levy = 0.2
+}
 
 # Bankruptcy
 negative_money = {
@@ -563,6 +568,7 @@ negative_money = {
 	}
 	
 	trigger = {
+		wealth = -250
 		NOT = { wealth = 0 }
 	}
 	
@@ -572,20 +578,69 @@ negative_money = {
 	general_opinion = -10
 }
 
-# Antipope
-controls_antipope = {
-	trigger = {
-		religion = catholic
-		NOT = { has_landed_title = k_papal_state }
-		rightful_religious_head_scope = {
-			vassal_of = ROOT
-			NOT = { has_landed_title = k_papal_state }
-		}
+negative_money = {
+	potential = {
+		is_ruler = yes
 	}
 	
-	monthly_character_piety = -1
-	icon = 35
+	trigger = {
+		wealth = -500
+		NOT = { wealth = -250 }
+	}
+	
+	icon = 24
+	
+	land_morale = -1.0
+	general_opinion = -20
 }
+
+negative_money = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		wealth = -750
+		NOT = { wealth = -500 }
+	}
+	
+	icon = 24
+	
+	land_morale = -1.5
+	general_opinion = -30
+}
+
+negative_money = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		wealth = -1000
+		NOT = { wealth = -750 }
+	}
+	
+	icon = 24
+	
+	land_morale = -2.0
+	general_opinion = -40
+}
+
+negative_money = {
+	potential = {
+		is_ruler = yes
+	}
+	
+	trigger = {
+		NOT = { wealth = -1000 }
+	}
+	
+	icon = 24
+	
+	land_morale = -2.5
+	general_opinion = -50
+}
+
 
 #Bad religion in capital
 wrong_religion_group_capital = {

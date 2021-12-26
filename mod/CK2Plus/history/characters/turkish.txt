@@ -1450,7 +1450,7 @@
 	diplomacy=4
 	intrigue=5
 	stewardship=4
-	religion="orthodox"
+	religion="judaism"
 	culture="turkish"
 	add_trait="chaste"
 	add_trait="arbitrary"
@@ -3062,6 +3062,7 @@
 	diplomacy=8
 	intrigue=5
 	stewardship=7
+	health=10
 	religion="sunni"
 	culture="turkish"
 	add_trait="just"
@@ -3075,6 +3076,7 @@
 		birth="1029.1.2"
 	}
 	1066.9.10 = {
+		wealth=1000	
 		add_claim = c_suenik
 		add_claim = c_trapezous
 		add_claim = c_vaspurakan
@@ -3087,14 +3089,14 @@
 		add_claim = c_theodosiopolis
 		raise_levies = {
 			location = 659
-			force_mult = 1.66
+			force_mult = 2.25
 		}	
 	}
 	1067.5.22 = {
 		raise_levies = {
 			dismiss = yes
 			location = 659
-			force_mult = 1.66
+			force_mult = 2.25
 		}	
 	}	
 	1072.11.1={

@@ -10,7 +10,7 @@
 	add_trait="paranoid"
 	add_trait="deceitful"
 	employer = 20015
-	health=20.000
+	health=10.000
 	1036.1.1 = {
 		birth="1036.1.1" 
 		add_claim="d_krete"
@@ -117,4 +117,31 @@
 	1067.10.16={
 		death="1067.10.16" 
 	}	
+}
+
+89002 = {
+	name="Muhammed"
+	dynasty=100690
+	religion="shiite"
+	culture="bedouin_arabic"
+	1040.1.1={
+		birth="1040.1.1"
+	}
+	1109.1.1={
+		death="1109.1.1"
+	}
+}
+
+89003 = {
+	name="Fadl"
+	dynasty=100690
+	religion="shiite"
+	culture="bedouin_arabic"
+	father=89002
+	1090.1.1={
+		birth="1080.1.1"
+	}
+	1161.1.1={
+		death="1154.1.1"
+	}
 }

@@ -2,7 +2,7 @@
 {
 holder = 1122 #William I de Hauteville
 law = succ_primogeniture
-law = cognatic_succession
+law = agnatic_succession
 }
 1046.1.1=
 {

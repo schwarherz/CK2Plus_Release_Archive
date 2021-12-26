@@ -1,6 +1,6 @@
 1030.1.1=
 {
-liege="k_cuman"
+liege="e_cuman"
 holder=90142
 }
 1060.1.1=

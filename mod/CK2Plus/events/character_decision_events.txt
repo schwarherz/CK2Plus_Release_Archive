@@ -12,13 +12,6 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA220000"	
-		tooltip = {
-			opinion = {
-				modifier = opinion_independent
-				who = FROM
-				years = 100
-			}		
-		}
 	}
 }
 
@@ -36,13 +29,6 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA220001"
-		tooltip = {
-			opinion = {
-				modifier = opinion_fired_from_office
-				who = FROM
-				years = 10
-			}		
-		}
 	}
 }
 
@@ -191,7 +177,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA220004"	
-		LIEGE = {
+		liege = {
 			impregnate = ROOT
 		}
 	}
@@ -240,19 +226,19 @@ character_event = {
 	immediate = {
 		hidden_tooltip = {
 			remove_opinion = {
-				who = LIEGE
+				who = liege
 				modifier = opinion_granted_barony
 			}
 			remove_opinion = {
-				who = LIEGE
+				who = liege
 				modifier = opinion_granted_county
 			}
 			remove_opinion = {
-				who = LIEGE
+				who = liege
 				modifier = opinion_granted_duchy
 			}
 			remove_opinion = {
-				who = LIEGE
+				who = liege
 				modifier = opinion_granted_kingdom
 			}
 		}
@@ -263,7 +249,7 @@ character_event = {
 		ai_chance = {
 			factor = 100
 		}		
-		LIEGE = {
+		liege = {
 			ROOT = {
 				any_demesne_title = {
 					gain_title = PREVPREV
@@ -277,37 +263,37 @@ character_event = {
 		ai_chance = {
 			factor = 10
 			modifier = {
-				factor = 0,5
+				factor = 0.5
 				opinion = {
-					who = LIEGE
+					who = liege
 					value = 100
 				}
 			}			
 			modifier = {
-				factor = 0,5
+				factor = 0.5
 				opinion = {
-					who = LIEGE
+					who = liege
 					value = 75
 				}
 			}			
 			modifier = {
-				factor = 0,5
+				factor = 0.5
 				opinion = {
-					who = LIEGE
+					who = liege
 					value = 50
 				}
 			}			
 			modifier = {
 				factor = 0.5
 				opinion = {
-					who = LIEGE
+					who = liege
 					value = 25
 				}
 			}				
 			modifier = {
 				factor = 0.5
 				opinion = {
-					who = LIEGE
+					who = liege
 					value = 0
 				}
 			}			
@@ -315,7 +301,7 @@ character_event = {
 				factor = 2
 				NOT = {
 					opinion = {
-						who = LIEGE
+						who = liege
 						value = -25
 					}
 				}
@@ -324,7 +310,7 @@ character_event = {
 				factor = 2
 				NOT = {
 					opinion = {
-						who = LIEGE
+						who = liege
 						value = -50
 					}
 				}
@@ -333,7 +319,7 @@ character_event = {
 				factor = 2
 				NOT = {
 					opinion = {
-						who = LIEGE
+						who = liege
 						value = -75
 					}
 				}
@@ -407,7 +393,7 @@ character_event = {
 				num_of_vassals = 25
 			}			
 		}	
-		LIEGE = {
+		liege = {
 			ROOT = {
 				any_demesne_title = {
 					add_claim = PREVPREV
@@ -435,7 +421,7 @@ character_event = {
 	desc = "EVTDESC220008"
 	
 	immediate = {
-		LIEGE = {
+		liege = {
 			ROOT = {
 				any_demesne_title = {
 					gain_title = PREVPREV
@@ -467,23 +453,23 @@ character_event = {
 		current_heir = {
 			hidden_tooltip = {
 				remove_opinion = {
-					who = LIEGE
+					who = liege
 					modifier = opinion_granted_barony
 				}
 				remove_opinion = {
-					who = LIEGE
+					who = liege
 					modifier = opinion_granted_county
 				}
 				remove_opinion = {
-					who = LIEGE
+					who = liege
 					modifier = opinion_granted_duchy
 				}
 				remove_opinion = {
-					who = LIEGE
+					who = liege
 					modifier = opinion_granted_kingdom
 				}
 			}		
-			LIEGE = {
+			liege = {
 				ROOT = {
 					current_heir = {
 						any_demesne_title = {

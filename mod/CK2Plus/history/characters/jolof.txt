@@ -1,0 +1,103 @@
+1000035000  = { #Entirely fictitious
+	name="Sekou" #Jolof
+	dynasty=1000011200
+	religion="pagan"
+	culture="jolof"
+	1066.1.1={
+		birth="1046.1.1"
+	}
+	1106.1.1={
+		death="1106.1.1"
+	}
+}
+
+1000035001  = { #Entirely fictitious
+	name="Mamadou" #Takrur
+	dynasty=1000011201
+	religion="pagan"
+	culture="jolof"
+	1066.1.1={
+		birth="1048.1.1"
+	}
+	1106.1.1={
+		death="1106.1.1"
+	}
+}
+
+1000035002  = { #Entirely fictitious
+	name="Maye-Koor" #Gambia
+	dynasty=1000011202
+	religion="pagan"
+	culture="jolof"
+	1066.1.1={
+		birth="1047.1.1"
+	}
+	1106.1.1={
+		death="1106.1.1"
+	}
+}
+
+1000035003  = { #Entirely fictitious
+	name="N'Doffene" #Baol
+	dynasty=1000011203
+	religion="pagan"
+	culture="jolof"
+	1066.1.1={
+		birth="1046.1.1"
+	}
+	1106.1.1={
+		death="1106.1.1"
+	}
+}
+
+1000035004  = { #Entirely fictitious
+	name="Lat-Dior" #Cayor
+	dynasty=1000011204
+	religion="pagan"
+	culture="jolof"
+	1066.1.1={
+		birth="1049.1.1"
+	}
+	1106.1.1={
+		death="1106.1.1"
+	}
+}
+
+1000035005  = { #Entirely fictitious
+	name="Njemeh" #Linguere
+	dynasty=1000011205
+	religion="pagan"
+	culture="jolof"
+	1066.1.1={
+		birth="1050.1.1"
+	}
+	1106.1.1={
+		death="1106.1.1"
+	}
+}
+
+1000035006  = { #Entirely fictitious
+	name="Samory" #Waalo
+	dynasty=1000011206
+	religion="pagan"
+	culture="jolof"
+	1066.1.1={
+		birth="1047.1.1"
+	}
+	1106.1.1={
+		death="1106.1.1"
+	}
+}
+
+1000035007  = { #Entirely fictitious
+	name="Majan" #Saloum
+	dynasty=1000011200
+	religion="pagan"
+	culture="jolof"
+	1066.1.1={
+		birth="1046.1.1"
+	}
+	1106.1.1={
+		death="1106.1.1"
+	}
+}

@@ -796,7 +796,7 @@ character_event = {
 		name = "EVTOPTD4047"
 		trigger = {
 			FROM = {
-				reverse_opinion = { who = ROOT opinion = -25 }
+				reverse_opinion = { who = ROOT value = -25 }
 			}
 		}
 		FROM = {
@@ -1707,7 +1707,7 @@ character_event = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_potential_cuckold }
 			has_opinion_modifier = { who = ROOT modifier = unfaithful }
 			has_opinion_modifier = { who = ROOT modifier = cuckolded }
-			NOT = { opinion = { who = spouse opinion = -30 } }
+			NOT = { opinion = { who = spouse value = -30 } }
 		}
 	}
 	
@@ -1948,7 +1948,6 @@ character_event = {
 					trait = craven
 				}
 			}
-			age = 16
 		}
 	}
 	
@@ -2474,7 +2473,7 @@ character_event = {
 		num_of_friends = 1
 		any_courtier = {
 			martial = 15
-			reverse_opinion = { who = ROOT opinion = 25 }
+			reverse_opinion = { who = ROOT value = 25 }
 		}
 		NOT = {
 			has_character_modifier = the_pompous
@@ -2522,7 +2521,7 @@ character_event = {
 		random_courtier = {
 			limit = {
 				martial = 15
-				reverse_opinion = { who = ROOT opinion = 25 }
+				reverse_opinion = { who = ROOT value = 25 }
 			}
 			opinion = {
 				modifier = proud_pos
@@ -3189,7 +3188,7 @@ character_event = {
 			has_nickname = nick_the_clueless
 		}
 		new_character = {
-			character_event = { id = 100001 }
+			character_event = { id = 300001 }
 		}		
 	}
 	

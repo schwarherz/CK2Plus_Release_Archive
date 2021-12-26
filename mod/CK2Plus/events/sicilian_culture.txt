@@ -8,16 +8,14 @@ character_event = {
 		year = 1150
 		culture = norman
 		any_demesne_province = {
-			AND = {
-				kingdom = {
-					title = k_sicily
-				}
-					OR = {
-						culture = greek
-						culture = italian
-						culture = maghreb_arabic
-						culture = norman
-					}
+			kingdom = {
+				title = k_sicily
+			}
+			OR = {
+				culture = greek
+				culture = italian
+				culture = maghreb_arabic
+				culture = norman
 			}
 		}
 	}
@@ -235,16 +233,14 @@ character_event = {
 		year = 1150
 		culture = greek
 		any_demesne_province = {
-			AND = {
-				kingdom = {
-					title = k_sicily
-				}
-					OR = {
-						culture = greek
-						culture = italian
-						culture = maghreb_arabic
-						culture = norman
-					}
+			kingdom = {
+				title = k_sicily
+			}
+			OR = {
+				culture = greek
+				culture = italian
+				culture = maghreb_arabic
+				culture = norman
 			}
 		}
 	}
@@ -387,7 +383,7 @@ character_event = {
 			}
 			culture = sicilian_greek
 			hidden_tooltip = {
-				character_event = { id = 100009004 days = 3 }
+				character_event = { id = 100009009 days = 3 }
 			}
 		}
 	}
@@ -434,7 +430,7 @@ character_event = {
 			}
 			culture = sicilian_greek
 			hidden_tooltip = {
-				character_event = { id = 55006 days = 3 }
+				character_event = { id = 100009009 days = 3 }
 			}
 		}
 	}
@@ -452,6 +448,7 @@ character_event = {
 		culture = sicilian_greek
 	}
 }
+
 # The Sicilian Melting Pot -- Arabic Version
 character_event = {
 	id = 100009010
@@ -462,16 +459,14 @@ character_event = {
 		year = 1150
 		culture = maghreb_arabic
 		any_demesne_province = {
-			AND = {
-				kingdom = {
-					title = k_sicily
-				}
-					OR = {
-						culture = greek
-						culture = italian
-						culture = maghreb_arabic
-						culture = norman
-					}
+			kingdom = {
+				title = k_sicily
+			}
+			OR = {
+				culture = greek
+				culture = italian
+				culture = maghreb_arabic
+				culture = norman
 			}
 		}
 	}
@@ -614,7 +609,7 @@ character_event = {
 			}
 			culture = sicilian_arabic
 			hidden_tooltip = {
-				character_event = { id = 100009012 days = 3 }
+				character_event = { id = 100009014 days = 3 }
 			}
 		}
 	}

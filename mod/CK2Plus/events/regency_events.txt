@@ -759,7 +759,6 @@ character_event = {
 		name = "EVTOPTA61135"
 		ai_chance = { factor = 0 }
 		set_character_flag = pushed_regent
-		ai_chance = { factor = 0 }
 		random_list = {
 			50 = {
 				random_courtier = {
@@ -1762,7 +1761,7 @@ character_event = {
 	}
 }
 
-## REGENCY SERIES, COURTIER WANTS TO REPLACE REGENT ##
+## REGENCY SERIES, COURtier WANTS TO REPLACE REGENT ##
 
 ## Courtier thinks he/she would do a better job than current Regent.
 character_event = {
@@ -1787,10 +1786,11 @@ character_event = {
 			liege = { trait = incapable }
 		}
 		NOT = { has_minor_title = title_regent }
+		host = { character = liege }
 	}
 	
 	mean_time_to_happen = {
-		months = 340
+		months = 240
 		modifier = {
 			factor = 0.25
 			trait = ambitious
@@ -2848,8 +2848,8 @@ character_event = {
 			is_abroad = no
 			is_ruler = yes
 		}
-		OR = {
-			spouse = {
+		spouse = {
+			OR = {
 				NOT = { age = 15 }
 				trait = incapable
 			}
@@ -2901,8 +2901,8 @@ character_event = {
 	trigger = {
 		NOT = { has_minor_title = title_regent }
 		has_minor_title = title_queen_mother
-		OR = {
-			liege = {
+		liege = {
+			OR = {
 				NOT = { age = 15 }
 				trait = incapable
 			}

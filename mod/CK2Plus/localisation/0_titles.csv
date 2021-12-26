@@ -1,4 +1,12 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+k_almohad;Almohads;Almohads;Almohads;;Almohads;;;;;;;;;x
+k_almohad_adj;Almohad;Almohad;Almohad;;Almohad;;;;;;;;;x
+k_morocco;Morocco;Morocco;Morocco;;Morocco;;;;;;;;;x
+k_morocco_adj;Moroccan;Moroccan;Moroccan;;Moroccan;;;;;;;;;x
+e_cuman;Cumans;Coumans;Cumaner;;Cumanos;;;;;;;;;x
+e_cuman_adj;Cuman;Couman;Cuman;;Cumana;;;;;;;;;x
+e_papal_state;The Papacy;La Papauté;Papsttum;;El Papado;;;;;;;;;x
+e_papal_state_adj;Papal;papal;Päpstlich;;Pontifícia;;;;;;;;;x
 d_palmyra;Palmyra;Palmyra;Palmyra;Palmyra;Palmyra;;;;;;;;;x
 d_palmyra_adj;Palmyran;Palmyran;Palmyran;Palmyran;Palmyran;;;;;;;;;x
 b_kherson;Cherson;Cherson;Cherson;Cherson;Cherson;;;;;;;;;x
@@ -33,12 +41,12 @@ d_ifni;Ifni;Ifni;Ifni;Ifni;Ifni;;;;;;;;;x
 d_ifni_adj;Ifni;Ifni;Ifni;Ifni;Ifni;;;;;;;;;x
 k_al_garb;Al-Garb;Al-Garb;Al-Garb;Al-Garb;Al-Garb;;;;;;;;;x
 k_al_garb_adj;Al-Garb;Al-Garb;Al-Garb;Al-Garb;Al-Garb;;;;;;;;;x
-k_al_andalus;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;;;;;;;;;x
-k_al_andalus_adj;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;;;;;;;;;x
+e_al_andalus;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;;;;;;;;;x
+e_al_andalus_adj;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;Al-Andalus;;;;;;;;;x
 k_al_xarq;Al-Xarq;Al-Xarq;Al-Xarq;Al-Xarq;Al-Xarq;;;;;;;;;x
 k_al_xarq_adj;Al-Xarq;Al-Xarq;Al-Xarq;Al-Xarq;Al-Xarq;;;;;;;;;x
-k_al_tagr;Al-Tagr;Al-Tagr;Al-Tagr;Al-Tagr;Al-Tagr;;;;;;;;;x
-k_al_tagr_adj;Al-Tagr;Al-Tagr;Al-Tagr;Al-Tagr;Al-Tagr;;;;;;;;;x
+k_al_mawsat;Al-Mawsat;Al-Mawsat;Al-Mawsat;Al-Mawsat;Al-Mawsat;;;;;;;;;x
+k_mawsat_adj;Al-Mawsat;Al-Mawsat;Al-Mawsat;Al-Mawsat;Al-Mawsat;;;;;;;;;x
 d_atlas;Atlas;Atlas;Atlas;Atlas;Atlas;;;;;;;;;x
 d_atlas_adj;Atlas;Atlas;Atlas;Atlas;Atlas;;;;;;;;;x
 k_qazan;Volga;Volga;Volga;Volga;Volga;;;;;;;;;x
@@ -113,8 +121,8 @@ d_sennar;Sennar;Sennar;Sennar;Sennar;Sennar;;;;;;;;;x
 d_sennar_adj;Sennar;Sennar;Sennar;Sennar;Sennar;;;;;;;;;x
 d_berbera;Berbera;Berbèrie;Berbera;Berbera;Berbera;;;;;;;;;x
 d_berbera_adj;Berberan;Berbères;Berberan;Berberan;Berberan;;;;;;;;;x
-k_adal;Ajuuraan;Ajuuraan;Ajuuraan;Ajuuraan;Ajuuraan;;;;;;;;;x
-k_adal_adj;Ajuuraan;Ajuuréen;Ajuuraan;Ajuuraan;;;;;;;;;;x
+k_adal;Ifat;Ifat;Ifat;Ifat;Ifat;;;;;;;;;x
+k_adal_adj;Ifati;Ifati;Ifati;Ifati;;;;;;;;;;x
 e_danubia;Danubia;Danubie;Danubia;Danubia;Danubia;;;;;;;;;x
 e_danubia_adj;Danubian;Danubien;Danubian;Danubian;Danubian;;;;;;;;;x
 e_poland_lithuania;Poland-Lithuania;Polande-Lituanie;Poland-Lithuania;Poland-Lithuania;Poland-Lithuania;;;;;;;;;x

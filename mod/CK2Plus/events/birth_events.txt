@@ -11,32 +11,55 @@
 # (Attraction grows between the male ruler and a female courtier)
 #############################################
 
-# A female courtier initiates romance with her liege
+# A courtier initiates romance with their liege
 character_event = {
 	id = 450
 	desc = "EVTDESC450"
 	picture = "GFX_evt_lovers"
 	
-	only_women = yes
 	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
-		NOT = { age = 30 }
+		is_ruler = no
+		NOT = { age = 40 }
 		liege = {
 			OR = {
 				trait = lustful
 				ROOT = { trait = lustful }				
 				NOT = { is_close_relative = ROOT }
 			}
-			is_female = no
+			OR = {
+				AND = {
+					NOT = { trait = homosexual }
+					ROOT = { NOT = { trait = homosexual } }
+					is_female = no
+					ROOT = { is_female = yes }
+				}
+				AND = {
+					NOT = { trait = homosexual }
+					ROOT = { NOT = { trait = homosexual } }
+					is_female = yes
+					ROOT = { is_female = no }
+				}
+				AND = {
+					trait = homosexual
+					is_female = yes
+					ROOT = { is_female = yes }
+				}
+				AND = {
+					trait = homosexual
+					is_female = no
+					ROOT = { is_female = no }
+				}				
+			}
 			has_lover = no
+			is_pregnant = no
 			age = 16
 			NOT = {
 				has_character_modifier = lustful_affair_timer
 			}
-			NOT = { trait = homosexual }
 			NOT = { trait = infirm }
 			NOT = { trait = incapable }
 			NOT = { trait = celibate }
@@ -52,7 +75,6 @@ character_event = {
 		NOT = { has_minor_title = title_concubine }
 		has_lover = no
 		is_pregnant = no
-		NOT = { trait = homosexual }
 		NOT = { trait = infirm }
 		NOT = { trait = incapable }
 		NOT = { trait = celibate }
@@ -61,7 +83,28 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 600
-	
+
+		modifier = {
+			factor = 10.0 #make it possible (but unlikely) for a courtier to 'come out of the closet' to make a pass at the liege
+			OR = {
+				AND = {
+					NOT = { trait = homosexual }
+					LIEGE = { trait = homosexual }
+					is_female = yes
+					ROOT = { is_female = yes }
+				}
+				AND = {
+					NOT = { trait = homosexual }
+					LIEGE = { trait = homosexual }
+					is_female = no
+					ROOT = { is_female = no }
+				}				
+			}
+		}
+		modifier = {
+			factor = 0.33
+			trait = homosexual #to balance for fewer potential lovers
+		}	
 		modifier = {
 			factor = 0.33
 			has_character_flag = debutante
@@ -109,35 +152,43 @@ character_event = {
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { opinion = { who = LIEGE value = 25 } }
+			NOT = { opinion = { who = liege value = 0 } }
 		}	
 		modifier = {
 			factor = 1.5
-			NOT = { reverse_opinion = { who = LIEGE value = 25 } }
+			NOT = { reverse_opinion = { who = liege value = 0 } }
+		}			
+		modifier = {
+			factor = 1.5
+			NOT = { opinion = { who = liege value = 25 } }
+		}	
+		modifier = {
+			factor = 1.5
+			NOT = { reverse_opinion = { who = liege value = 25 } }
 		}			
 		modifier = {
 			factor = 0.9
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.9
-			reverse_opinion = { who = LIEGE value = 25 }
+			reverse_opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.9
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.9
-			reverse_opinion = { who = LIEGE value = 50 }
+			reverse_opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.9
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.9
-			reverse_opinion = { who = LIEGE value = 75 }
+			reverse_opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 2.0
@@ -155,17 +206,30 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA450"
-		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						NOT = { trait = homosexual }
+						LIEGE = { trait = homosexual }
+						is_female = yes
+						ROOT = { is_female = yes }
+					}
+					AND = {
+						NOT = { trait = homosexual }
+						LIEGE = { trait = homosexual }
+						is_female = no
+						ROOT = { is_female = no }
+					}				
+				}
+			}
+			add_trait = homosexual
+		}
 		liege = { character_event = { id = 451 days = 7 tooltip = EVTTOOLTIP451 } }
-	}
-	
-	option = {
-		name = "EVTOPTB450"
-		ai_chance = { factor = 10 }
 	}
 }
 
-# The liege responds to her advances
+# The liege responds to his/her advances
 character_event = {
 	id = 451
 	desc = "EVTDESC451"
@@ -231,25 +295,29 @@ character_event = {
 		name = "EVTOPTA452"
 		ai_chance = { factor = 90 }
 		trigger = {
-			fertility = 0.66
-		}
-		change_variable = { which = "lifestyle_hedonist" value = 1 }
-		impregnate = FROM
-		add_lover = FROM
-		FROM = { character_event = { id = 453 tooltip = EVTTOOLTIP453 } }
-	}
-
-	option = {
-		name = "EVTOPTA452"
-		ai_chance = { factor = 90 }
-		trigger = {
 			fertility = 0.33
-			NOT = { fertility = 0.66 }
+			FROM = { fertility = 0.33 }
+		}		
+		if = {
+			limit = {
+				is_female = yes
+				FROM = { is_female = no }
+			}
+			random_list = {
+				50 = { impregnate = FROM }
+				50 = { }
+			}
 		}
-		random_list = {
-			50 = { impregnate = FROM }
-			50 = { health = 0.01 }
-		}
+		if = {
+			limit = {
+				is_female = no
+				FROM = { is_female = yes }
+			}
+			random_list = {
+				50 = { FROM = { impregnate = ROOT } }
+				50 = { }
+			}
+		}		
 		change_variable = { which = "lifestyle_hedonist" value = 1 }
 		add_lover = FROM
 		FROM = { character_event = { id = 453 tooltip = EVTTOOLTIP453 } }
@@ -258,7 +326,10 @@ character_event = {
 		name = "EVTOPTA452"
 		ai_chance = { factor = 90 }
 		trigger = {
-			NOT = { fertility = 0.33 }
+			OR = {
+				NOT = { fertility = 0.33 }
+				NOT = { FROM = { fertility = 0.33 } }
+			}
 		}
 		change_variable = { which = "lifestyle_hedonist" value = 1 }
 		add_lover = FROM
@@ -273,6 +344,11 @@ character_event = {
 				factor = 10
 				trait = chaste
 			}
+			modifier = {
+				factor = 2
+				FROM = { is_female = no }
+				is_female = yes
+			}			
 			modifier = {
 				factor = 2
 				trait = temperate
@@ -295,6 +371,12 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTC452"
+		trigger = {
+			FROM = { is_female = no }
+			is_female = yes
+			NOT = { trait = lustful }
+			NOT = { trait = hedonist }			
+		}	
 		ai_chance = { 
 			factor = 5
 			modifier = {
@@ -314,15 +396,11 @@ character_event = {
 				is_close_relative = FROM
 			}			
 		}
-		trigger = {
-			NOT = { trait = lustful }
-			NOT = { trait = hedonist }
-		}
 		FROM = { character_event = { id = 455 tooltip = EVTTOOLTIP455 } }
 	}
 }
 
-# The ruler becomes her lover
+# The ruler becomes his/her lover
 character_event = {
 	id = 453
 	
@@ -427,7 +505,7 @@ character_event = {
 			limit = {
 				has_minor_title = title_concubine
 			}
-			LIEGE = { character_event = { id = 220005 } }
+			liege = { character_event = { id = 220005 } }
 		}		
 	}
 }

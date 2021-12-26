@@ -1,0 +1,16 @@
+# 1 - Vestisland
+
+# County Title
+title = c_tenkodogo
+
+# Settlements
+max_settlements = 3
+b_ouallam = castle 	
+b_tillaberi = city 
+
+# Misc
+culture = mande
+religion = pagan
+
+
+# History

@@ -56,35 +56,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 1.05
@@ -366,35 +366,35 @@ character_event = {
 
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 0.95
@@ -627,35 +627,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 1.05
@@ -810,35 +810,35 @@ character_event = {
 
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 0.9
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 1.05
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 0.95
@@ -1073,35 +1073,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 1.05
@@ -1633,7 +1633,7 @@ character_event = {
 	option = {
 		name = "EVTOPTA20361"
 		hidden_tooltip = {
-			letter_event = { id = 20362 days = 1 }
+			liege = { letter_event = { id = 20362 days = 1 } }
 		}
 	}
 }
@@ -1648,7 +1648,11 @@ letter_event = {
 	option = {
 		name = "EVTOPTA20362"
 		hidden_tooltip = {
-			character_event = { id = 20363 days = 1 }
+			FROM = {
+				FROM = {
+					character_event = { id = 20363 days = 1 }
+				}
+			}
 		}
 	}
 }
@@ -1740,35 +1744,35 @@ character_event = {
 
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -100 } }
+			NOT = { opinion = { who = liege value = -100 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -75 } }
+			NOT = { opinion = { who = liege value = -75 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -50 } }
+			NOT = { opinion = { who = liege value = -50 } }
 		}
 		modifier = {
 			factor = 1.1
-			NOT = { opinion = { who = LIEGE value = -25 } }
+			NOT = { opinion = { who = liege value = -25 } }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 25 }
+			opinion = { who = liege value = 25 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 50 }
+			opinion = { who = liege value = 50 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 75 }
+			opinion = { who = liege value = 75 }
 		}
 		modifier = {
 			factor = 0.95
-			opinion = { who = LIEGE value = 100 }
+			opinion = { who = liege value = 100 }
 		}		
 		modifier = {
 			factor = 1.05
@@ -1886,7 +1890,7 @@ character_event = {
 					set_character_flag = corrupt_nobel
 				}
 			}
-			liege = { character_event = { id = 20370 days = 1 } }
+			liege = { letter_event = { id = 20370 days = 1 } }
 		}
 	}
 }
@@ -2019,7 +2023,7 @@ character_event = {
 		clr_character_flag = corrupt_nobel
 		hidden_tooltip = {
 			FROM = {
-				character_event = { id = 20379 days = 1 }
+				letter_event = { id = 20379 days = 1 }
 			}
 		}
 	}
