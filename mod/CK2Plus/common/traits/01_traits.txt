@@ -84,8 +84,8 @@ crowned_by_pope = { #113
 }
 
 tall = { #114
-	congenital = yes
-	birth = yes
+	#congenital = yes
+	#birth = yes
 	
 	opposites =  {
 		dwarf

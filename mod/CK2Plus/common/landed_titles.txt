@@ -90,7 +90,7 @@ k_orthodox = {
 }
 
 e_sunni = {
-	color={ 40 190 40 }
+	color={ 0 153 0 }
 	color2={ 220 220 0 }
 	
 	capital = 719 # Mecca
@@ -114,7 +114,7 @@ e_sunni = {
 }
 
 e_shiite = {
-	color={ 60 220 60 }
+	color={ 0 204 0 }
 	color2={ 220 240 0 }
 	
 	capital = 719 # Mecca
@@ -26761,7 +26761,6 @@ k_al_garb = { #muslim portugal
 	culture = andalusian_arabic
 	
 	allow = {
-		culture_group = arabic
 		religion_group = muslim
 	}
 }		
@@ -26770,7 +26769,6 @@ k_al_xarq = { #muslim aragon
 	capital = 202 #Zaragoza
 	culture = andalusian_arabic
 	allow = {
-		culture_group = arabic
 		religion_group = muslim
 	}	
 }		
@@ -26779,7 +26777,6 @@ k_al_mawsat = { #muslim andalusia
 	color={ 116 116 55 }
 	capital = 180 #Granada
 	allow = {
-		culture_group = arabic
 		religion_group = muslim
 	}
 }
@@ -26835,7 +26832,7 @@ k_sardinia = {
 	capital = 326 # Cagliari
 	culture = italian
 	allow = {
-		culture = italian
+		culture_group = latin
 		religion = catholic
 	}
 }	

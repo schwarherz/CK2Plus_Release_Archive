@@ -195,28 +195,35 @@ character_event = {
 		NOT = {
 			trait = depressed
 		}
-		any_vassal = {
-			war = no
-			prisoner = no
-			age = 20
-			OR = {
-				trait = slothful
-				trait = content
-				trait = craven
-			}
-		}
-		any_vassal = {
-			war = no
-			prisoner = no
-			age = 20
-			OR = {
-				trait = diligent
-				trait = ambitious
-				trait = brave
-			}
-		}
 		NOT = {
 			has_character_modifier = mod_bloodlust
+		}
+		OR = {
+			any_vassal = {
+				war = no
+				prisoner = no
+				age = 20
+				OR = {
+					trait = slothful
+					trait = content
+					trait = craven
+				}
+				NOT = {
+					trait = diligent
+					trait = ambitious
+					trait = brave
+				}			
+			}	
+			any_vassal = {
+				war = no
+				prisoner = no
+				age = 20
+				OR = {
+					trait = diligent
+					trait = ambitious
+					trait = brave
+				}
+			}			
 		}
 	}
 	
@@ -243,6 +250,23 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA4085"
+		trigger = {
+			any_vassal = {
+				war = no
+				prisoner = no
+				age = 20
+				OR = {
+					trait = slothful
+					trait = content
+					trait = craven
+				}
+				NOT = {
+					trait = diligent
+					trait = ambitious
+					trait = brave
+				}			
+			}			
+		}
 		random_vassal = {
 			limit = {
 				war = no
@@ -253,6 +277,11 @@ character_event = {
 					trait = content
 					trait = craven
 				}
+				NOT = {
+					trait = diligent
+					trait = ambitious
+					trait = brave
+				}				
 			}
 			opinion = {
 				modifier = opinion_relieved
@@ -264,6 +293,18 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTB4085"
+		trigger = {
+			any_vassal = {
+				war = no
+				prisoner = no
+				age = 20
+				OR = {
+					trait = diligent
+					trait = ambitious
+					trait = brave
+				}
+			}			
+		}		
 		random_vassal = {
 			limit = {
 				OR = {
@@ -283,16 +324,28 @@ character_event = {
 	option = {
 		name = "EVTOPTC4085"
 		trigger = {
-			OR = {
-				trait = diligent
-				trait = ambitious
-				trait = brave
+			NOT = {
+				trait = slothful
+				trait = content
+				trait = craven
 			}
 		}
-		add_character_modifier = {
-			name = mod_bloodlust
-			duration = 730
+		random_list = {
+			60 = { }
+			20 = { change_martial = 1 }
+			14 = {
+				add_trait = wounded
+				hidden_tooltip = { character_event = { id = 38280 } }
+			}
+			4 = {
+				add_trait = maimed
+				hidden_tooltip = { character_event = { id = 38281 } }
+			}
+			1 = {
+				death = { death_reason = death_accident }
+			}
 		}
+		prestige = 10
 		change_variable = { which = "lifestyle_hunter" value = 1 }
 	}
 	
@@ -303,15 +356,13 @@ character_event = {
 		}
 		random_courtier = {
 			limit = {
-				OR = {
-					has_job_title = job_marshal
-					has_job_title = job_spymaster
-				}
+				has_job_title = job_marshal
 			}
 			opinion = {
 				modifier = diligent_pos
+				multiplier = 2
 				who = ROOT
-				years = 2
+				years = 10
 			}
 		}
 		change_variable = { which = "lifestyle_hunter" value = 1 }

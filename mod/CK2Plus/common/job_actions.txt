@@ -12,8 +12,9 @@ action_improve_relations = {
 	
 	trigger = {
 		any_province_lord = {
-			NOT = { character = FROM }
+			primary_title = { higher_tier_than = BARON }
 			is_theocracy = no
+			NOT = { character = FROM }
 		}
 	}
 	
@@ -49,6 +50,7 @@ action_sow_dissent = {
 	
 	trigger = {
 		any_province_lord = {
+			primary_title = { higher_tier_than = BARON }
 			NOT = { character = FROM }
 			NOT = { is_liege_or_above = FROM }
 		}

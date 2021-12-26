@@ -109,7 +109,7 @@ plot_gain_vassal_title = {
 	}
 	
 	chance = {
-		factor = 10
+		factor = 20
 		
 		modifier = {
 			factor = 0.0
@@ -6320,6 +6320,7 @@ obj_gain_honorary_title = {
 		age = 16
 		independent = no
 		NOT = { trait = incapable }
+		liege = { is_feudal = yes }
 		NOT = { has_character_flag = obj_gain_honorary_title }
 		NOT = {
 			has_minor_title = title_keeper_of_swans
@@ -6335,7 +6336,7 @@ obj_gain_honorary_title = {
 			has_minor_title = title_anthypatos	
 			has_minor_title = title_concubine
 			has_minor_title = title_court_jester
-		}		
+		}	
 	}
 	
 	chance = {
@@ -6388,6 +6389,7 @@ obj_gain_honorary_title = {
 			has_character_flag = abort_obj
 			trait = incapable
 			independent = yes
+			liege = { is_feudal = no }
 			has_minor_title = title_court_jester
 		}
 	}

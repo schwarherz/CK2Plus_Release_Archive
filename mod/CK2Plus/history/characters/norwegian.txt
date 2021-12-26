@@ -3542,7 +3542,7 @@
 	intrigue=7
 	stewardship=7
 	culture="icelandic"
-	culture="norwegian"
+	religion="catholic"
 	add_trait="martial_cleric"
 	father=20580
 	1056.1.1={

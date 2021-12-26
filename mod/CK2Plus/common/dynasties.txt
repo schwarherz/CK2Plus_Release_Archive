@@ -18827,6 +18827,10 @@
 	name="Bozun"
 	culture = english
 }
+2005028 = {
+	name="Dyntagell"
+	culture = cornish
+}
 2109000 = {
 	name="Pytheid"
 	culture = greek

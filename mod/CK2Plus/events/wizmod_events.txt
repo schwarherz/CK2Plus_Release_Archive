@@ -982,6 +982,7 @@ character_event = {
 	desc = "EVTDESC190035"
 	
 	trigger = {
+		ai = no
 		OR = {
 			trait = dishonorable1
 			trait = dishonorable2
@@ -994,6 +995,7 @@ character_event = {
 			trait = dishonorable9
 			trait = dishonorable10
 		}	
+		current_heir = { dynasty = ROOT }
 	}
 	
 	immediate = { 
@@ -1865,7 +1867,7 @@ character_event = {
 					is_ruler = no
 					is_primary_heir = no
 					NOT = { has_global_flag = spouse_found }
-					NOT = { is_close_relative = PREVPREV }
+					LIEGE = { NOT = { is_close_relative = PREV } }
 					NOT = { is_close_relative = ROOT }
 				}
 				add_spouse = PREVPREV
@@ -1886,7 +1888,7 @@ character_event = {
 					is_ruler = no
 					is_primary_heir = no
 					NOT = { has_global_flag = spouse_found }
-					NOT = { is_close_relative = PREVPREV }
+					LIEGE = { NOT = { is_close_relative = PREV } }
 					NOT = { is_close_relative = ROOT }								
 				}
 				add_spouse = PREVPREV
@@ -1907,7 +1909,7 @@ character_event = {
 					is_ruler = no
 					is_primary_heir = no
 					NOT = { has_global_flag = spouse_found }
-					NOT = { is_close_relative = PREVPREV }
+					LIEGE = { NOT = { is_close_relative = PREV } }
 					NOT = { is_close_relative = ROOT }								
 				}
 				add_spouse = PREVPREV
@@ -3664,7 +3666,7 @@ character_event = {
 	trigger = {
 		is_ruler = yes
 		regent = { is_alive = yes }
-		trait = regency
+		NOT = { trait = regency }
 	}
 		
 	desc = "EVTDESC190067"
@@ -3676,5 +3678,170 @@ character_event = {
 	option = {
 		name = "EVTOPTA190067"
 		add_trait = regency
+	}
+}
+
+character_event = {
+	id = 190068
+	picture = "GFX_evt_council"
+	is_triggered_only = yes
+	
+	trigger = {
+		ai = yes
+		is_ruler = yes
+		is_feudal = yes
+		num_of_vassals = 1
+		primary_title = { higher_tier_than = COUNT }
+		any_vassal = {
+			has_objective = obj_gain_honorary_title
+		}
+		OR = {
+			AND = {
+				primary_title = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+				}			
+				NOT = {
+					any_vassal = { has_minor_title = title_keeper_of_swans }
+					any_courtier = { has_minor_title = title_keeper_of_swans }
+				}	
+			}
+			AND = {
+				primary_title = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+				}			
+				NOT = {
+					any_vassal = { has_minor_title = title_seneschal }
+					any_courtier = { has_minor_title = title_seneschal }
+				}	
+			}
+			NOT = {
+				any_vassal = { has_minor_title = title_master_of_the_horse }
+				any_courtier = { has_minor_title = title_master_of_the_horse }
+			}		
+			NOT = {
+				any_vassal = { has_minor_title = title_master_of_the_hunt }
+				any_courtier = { has_minor_title = title_master_of_the_hunt }
+			}		
+			NOT = {
+				any_vassal = { has_minor_title = title_high_almoner }
+				any_courtier = { has_minor_title = title_high_almoner }
+			}		
+			NOT = {
+				any_vassal = { has_minor_title = title_cupbearer }
+				any_courtier = { has_minor_title = title_cupbearer }
+			}					
+		}
+	}
+		
+	desc = "EVTDESC190068"
+	
+	mean_time_to_happen = {
+		days = 1		
+	}
+
+	option = {
+		name = "OK"
+		random_vassal = {
+			limit = {
+				has_objective = obj_gain_honorary_title
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = minor_title_given }
+					ROOT = {
+						primary_title = {
+							OR = {
+								tier = king
+								tier = emperor
+							}
+						}					
+						NOT = {
+							any_vassal = { has_minor_title = title_keeper_of_swans }
+							any_courtier = { has_minor_title = title_keeper_of_swans }
+						}
+					}
+				}
+				give_minor_title = title_keeper_of_swans
+				set_global_flag = minor_title_given
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = minor_title_given }
+					ROOT = {
+						primary_title = {
+							OR = {
+								tier = king
+								tier = emperor
+							}
+						}					
+						NOT = {
+							any_vassal = { has_minor_title = title_seneschal }
+							any_courtier = { has_minor_title = title_seneschal }
+						}
+					}
+				}
+				give_minor_title = title_seneschal
+				set_global_flag = minor_title_given
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = minor_title_given }
+					ROOT = {					
+						NOT = {
+							any_vassal = { has_minor_title = title_master_of_the_horse }
+							any_courtier = { has_minor_title = title_master_of_the_horse }
+						}
+					}
+				}
+				give_minor_title = title_master_of_the_horse
+				set_global_flag = minor_title_given
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = minor_title_given }
+					ROOT = {					
+						NOT = {
+							any_vassal = { has_minor_title = title_master_of_the_hunt }
+							any_courtier = { has_minor_title = title_master_of_the_hunt }
+						}
+					}
+				}
+				give_minor_title = title_master_of_the_hunt
+				set_global_flag = minor_title_given
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = minor_title_given }
+					ROOT = {					
+						NOT = {
+							any_vassal = { has_minor_title = title_high_almoner }
+							any_courtier = { has_minor_title = title_high_almoner }
+						}
+					}
+				}
+				give_minor_title = title_high_almoner
+				set_global_flag = minor_title_given
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = minor_title_given }
+					ROOT = {					
+						NOT = {
+							any_vassal = { has_minor_title = title_cupbearer }
+							any_courtier = { has_minor_title = title_cupbearer }
+						}
+					}
+				}
+				give_minor_title = title_cupbearer
+				set_global_flag = minor_title_given
+			}
+		}		
+		clr_global_flag = minor_title_given
 	}
 }

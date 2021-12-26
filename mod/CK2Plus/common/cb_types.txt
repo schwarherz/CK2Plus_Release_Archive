@@ -2154,10 +2154,6 @@ holy_war = {
 				is_heresy_of = FROM
 				is_parent_religion = FROM
 			}
-			OR = {
-				ai = no
-				piety = 150
-			}
 			top_liege = {
 				religion = PREV					
 			}
@@ -2171,7 +2167,8 @@ holy_war = {
 			}
 			#priority 1: same kingdom & neighbour
 			OR = {
-				ai = no
+				ai = no			
+				piety = 150
 				AND = {
 					any_realm_province = {
 						kingdom = {
@@ -2196,8 +2193,8 @@ holy_war = {
 			}
 			#priority 2: same kingdom
 			OR = {
-				piety = 200
 				ai = no
+				piety = 175
 				any_realm_province = {
 					kingdom = {
 						FROM = { 
@@ -2209,9 +2206,9 @@ holy_war = {
 				}					
 			}
 			#priority 2: same empire & neighbour
-			OR = {
-				piety = 250
+			OR = {	
 				ai = no
+				piety = 200
 				AND = {
 					any_realm_province = {
 						empire = {
@@ -2237,7 +2234,7 @@ holy_war = {
 			#priority 3: neighbour
 			OR = {
 				ai = no
-				piety = 300
+				piety = 250
 				any_realm_province = {
 					any_neighbor_province = {
 						owner = {

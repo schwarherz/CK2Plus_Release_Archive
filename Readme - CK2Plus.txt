@@ -1,7 +1,7 @@
 CK2Plus for Crusader Kings 2
 Author: Martin "Wiz" Anward
 Contact: m(dot)anward(at)live(dot)se
-Credits: Cetan (Expanded Character Tooltips), Crackdtoothgrin (Crackdtoothgrin's Graphical Goodies), Spartan_One (Mod File Hosting), Peuri (Little Portait Mod), Trovador and thrashing mad (Enhanced Portraits Mod), EmperorTojo (Icelandic Culture Mod), Ijtzoi (All the Way to Timbuktu), Syren (Syren's Nicknames Mod), mate0815 (Better Looking Characters integration), Shaytana (Better Looking Characters), Werther (French Localisation), EOOQE (German Localisation), Keanon (Patrum Scuta), Zaldax (An Offer You Can't Refuse), Velho e Bom Joe (Culturally Different Cities), Icecream Jones (flags, new countries), Strudel Man (many tweaks and additions), NoNotTheMindProbe (russian kingdoms), pothkan (CK2 heraldy mod), Keanon (Patrum Scuta), The_Chancellor (Council Reshuffling mod), avee (Family Relations Mod, Better Rebels mod, Death Causes mod), Sniper4625 (misc graphics), Van Diemen (HRE Revised Mod), riso (Treaty of Nymphaeum scenario), Six Gun South (PMM)
+Credits: Viscardus (Cornish Characters), Cetan (Expanded Character Tooltips), Crackdtoothgrin (Crackdtoothgrin's Graphical Goodies), Spartan_One (Mod File Hosting), Peuri (Little Portait Mod), Trovador and thrashing mad (Enhanced Portraits Mod), EmperorTojo (Icelandic Culture Mod), Ijtzoi (All the Way to Timbuktu), Syren (Syren's Nicknames Mod), mate0815 (Better Looking Characters integration), Shaytana (Better Looking Characters), Werther (French Localisation), EOOQE (German Localisation), Keanon (Patrum Scuta), Zaldax (An Offer You Can't Refuse), Velho e Bom Joe (Culturally Different Cities), Icecream Jones (flags, new countries), Strudel Man (many tweaks and additions), NoNotTheMindProbe (russian kingdoms), pothkan (CK2 heraldy mod), Keanon (Patrum Scuta), The_Chancellor (Council Reshuffling mod), avee (Family Relations Mod, Better Rebels mod, Death Causes mod), Sniper4625 (misc graphics), Van Diemen (HRE Revised Mod), riso (Treaty of Nymphaeum scenario), Six Gun South (PMM)
 
 ****************
 * Installation *
@@ -67,12 +67,22 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 *************
 * Changelog *
 *************
+1.10:
+- Fixed a bug that was causing characters to get dynastic stain when they should not be.
+- Fixed a bug that was causing regency trait not to be applied properly.
+- Fixed a bug that was causing congenital traits not to be distributed properly.
+- Learning will now influence province prosperity, so a high state learning will make it more likely for your provinces to grow prosperous and less likely for them to become poor.
+- The AI will now favor vassals that have the 'Gain Honorary Title' ambition when handing out honorary titles.
+- Increased opinion bonus for dynasty back to +10.
+- Reduced opinion bonus for sibling from 20 to 15.
+- Reintroduced monthly authority loss for creating an Anti-Pope, but greatly reduced the initial authority loss (This should make Anti-Popes a 'hot potato').
+
 1.09:
 - Fixed a bug that was causing significant slowdown due to bloated AI courts. Game performance should now be much better.
 - Moved most CK2+ events to the yearly or bi-yearly character event pulses to further improve performance.
 - Increased AI tendency to plot.
 - Reduced opinion bonus for same dynasty.
-- Integration avee's family relations mod that increases character's opinions of their close family.
+- Integrated avee's family relations mod that increases character's opinions of their close family.
 - Realms without crown authority can now have up to the second level of taxation/levy laws.
 - Fixed a bug that was breaking the invasion CB.
 - Further improved title distribution AI, to make the AI less willing to hand away its demesne when there are other alternatives.

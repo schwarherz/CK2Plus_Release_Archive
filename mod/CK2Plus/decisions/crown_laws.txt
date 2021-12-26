@@ -45,6 +45,7 @@ de_jure_laws = {
 			holder_scope = { religion = catholic }
 		}
 		allow = {
+			NOT = { title = e_papal_state }
 			OR = {
 				tier = EMPEROR
 				NOT = { empire = { holder_scope = { OR = { character = ROOT is_liege_of = ROOT } } } }

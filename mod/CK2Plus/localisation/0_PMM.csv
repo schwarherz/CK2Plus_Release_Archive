@@ -198,21 +198,21 @@ d_black_sea_merchant_convoy;Black Sea Merchant Convoy;Convoi marchand de la Mer 
 d_black_sea_merchant_convoy_adj;Black Sea Merchant Convoy;Convoi marchand de la Mer Noire;Handelskonvoi des Schwarzen Meeres;;Black Sea Merchant Convoy;;;;;;;;;x
 d_eastern_merchant_convoy;Eastern Merchant Convoy;Convoi marchand oriental;Osthandelskonvoi;;Eastern Merchant Convoy;;;;;;;;;x
 d_eastern_merchant_convoy_adj;Eastern Merchant Convoy;Convoi marchand oriental;Osthandelskonvoi;;Eastern Merchant Convoy;;;;;;;;;x
-d_canarias_raiders;Canarias Raiders;Canarias Raiders;Canarias Raiders;;Canarias Raiders;;;;;;;;;x
-d_canarias_raiders_adj;Canarias Raiders;Canarias Raiders;Canarias Raiders;;Canarias Raiders;;;;;;;;;x
-d_ghanaian_band;Ghanaian Band;Ghanaian Band;Ghanaian Band;;Ghanaian Band;;;;;;;;;x
-d_ghanaian_band_adj;Ghanaian Band;Ghanaian Band;Ghanaian Band;;Ghanaian Band;;;;;;;;;x
-d_ghanaian_company;Ghanaian Company;Ghanaian Company;Ghanaian Company;;Ghanaian Company;;;;;;;;;x
-d_ghanaian_company_adj;Ghanaian Company;Ghanaian Company;Ghanaian Company;;Ghanaian Company;;;;;;;;;x
-d_songhai_company;Songhai Company;Songhai Company;Songhai Company;;Songhai Company;;;;;;;;;x
-d_songhai_company_adj;Songhai Company;Songhai Company;Songhai Company;;Songhai Company;;;;;;;;;x
-d_songhai_spearmen;Songhai Spearmen;Songhai Spearmen;Songhai Spearmen;;Songhai Spearmen;;;;;;;;;x
-d_songhai_spearmen_adj;Songhai Spearmen;Songhai Spearmen;Songhai Spearmen;;Songhai Spearmen;;;;;;;;;x
-d_mali_legion;Mali Legion;Mali Legion;Mali Legion;;Mali Legion;;;;;;;;;x
-d_mali_legion_adj;Mali Legion;Mali Legion;Mali Legion;;Mali Legion;;;;;;;;;x
-d_mali_warriors;Mali Warriors;Mali Warriors;Mali Warriors;;Mali Warriors;;;;;;;;;x
-d_mali_warriors_adj;Mali Warriors;Mali Warriors;Mali Warriors;;Mali Warriors;;;;;;;;;x
-d_jolof_band;Jolof Band;Jolof Band;Jolof Band;;Jolof Band;;;;;;;;;x
-d_jolof_band_adj;Jolof Band;Jolof Band;Jolof Band;;Jolof Band;;;;;;;;;x
-d_jolof_company;Jolof Company;Jolof Company;Jolof Company;;Jolof Company;;;;;;;;;x
-d_jolof_company_adj;Jolof Company;Jolof Company;Jolof Company;;Jolof Company;;;;;;;;;x
+d_canarias_raiders;Canarias Raiders;Pilleurs des Canaries;Canarias Raiders;;Canarias Raiders;;;;;;;;;x
+d_canarias_raiders_adj;Canarias Raiders;Pilleurs des Canaries;Canarias Raiders;;Canarias Raiders;;;;;;;;;x
+d_ghanaian_band;Ghanaian Band;Bande Ghanéenne;Ghanaian Band;;Ghanaian Band;;;;;;;;;x
+d_ghanaian_band_adj;Ghanaian Band;Bande Ghanéenne;Ghanaian Band;;Ghanaian Band;;;;;;;;;x
+d_ghanaian_company;Ghanaian Company;Compagnie Ghanéenne;Ghanaian Company;;Ghanaian Company;;;;;;;;;x
+d_ghanaian_company_adj;Ghanaian Company;Compagnie Ghanéenne;Ghanaian Company;;Ghanaian Company;;;;;;;;;x
+d_songhai_company;Songhai Company;Compagnie Songhai;Songhai Company;;Songhai Company;;;;;;;;;x
+d_songhai_company_adj;Songhai Company;Compagnie Songhai;Songhai Company;;Songhai Company;;;;;;;;;x
+d_songhai_spearmen;Songhai Spearmen;Piquiers Songhais;Songhai Spearmen;;Songhai Spearmen;;;;;;;;;x
+d_songhai_spearmen_adj;Songhai Spearmen;Piquiers Songhais;Songhai Spearmen;;Songhai Spearmen;;;;;;;;;x
+d_mali_legion;Mali Legion;Légion Malienne;Mali Legion;;Mali Legion;;;;;;;;;x
+d_mali_legion_adj;Mali Legion;Légion Malienne;Mali Legion;;Mali Legion;;;;;;;;;x
+d_mali_warriors;Mali Warriors;Guerriers Maliens;Mali Warriors;;Mali Warriors;;;;;;;;;x
+d_mali_warriors_adj;Mali Warriors;Guerriers Maliens;Mali Warriors;;Mali Warriors;;;;;;;;;x
+d_jolof_band;Jolof Band;Bande Djolof;Jolof Band;;Jolof Band;;;;;;;;;x
+d_jolof_band_adj;Jolof Band;Bande Djolof;Jolof Band;;Jolof Band;;;;;;;;;x
+d_jolof_company;Jolof Company;Compagnie Djolof;Jolof Company;;Jolof Company;;;;;;;;;x
+d_jolof_company_adj;Jolof Company;Compagnie Djolof;Jolof Company;;Jolof Company;;;;;;;;;x

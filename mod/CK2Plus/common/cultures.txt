@@ -896,7 +896,7 @@ celtic = {
 		male_names = {
 			Awen Alan Arranz Arthur Arthyen Austell
 			Benesek Bideven Blyth Brengy Bryok Buthek
-			Cadan Cador Colan Conan Carantoc Caswyn
+			Cadan Cadoc Cador Colan Conan Caradoc Carantoc Caswyn
 			Daveth Davy Digory
 			Gawen Gerens Gorthelyk Gourgy Gorlas
 			Howel
@@ -906,7 +906,7 @@ celtic = {
 			Pasco Peder Perran Petroc Ruan Rumon Ryol
 			Sithny Seleven
 			Talan Talek Tomas Tristan
-			Wella Withell Wyllow uther Yestin Ythel Zethar
+			Wella Withell Wyllow Uther Yestin Ythel Zethar
 		}
 		female_names = {
 			Ailla Andras

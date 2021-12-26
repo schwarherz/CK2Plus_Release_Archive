@@ -37,7 +37,7 @@ character_event = {
 		location = {
 			any_province_lord = {
 				primary_title = { higher_tier_than = BARON }
-				is_priest = no
+				is_theocracy = no
 				NOT = { is_liege_of = ROOT }
 				NOT = { character = ROOT }
 			}
@@ -184,7 +184,7 @@ character_event = {
 				random_province_lord = {
 					limit = {
 						primary_title = { higher_tier_than = BARON }
-						is_priest = no
+						is_theocracy = no
 						NOT = { is_liege_of = ROOT }
 						NOT = { character = ROOT }
 					}
@@ -251,7 +251,7 @@ character_event = {
 		location = {
 			any_province_lord = {
 				primary_title = { higher_tier_than = BARON }
-				is_priest = no
+				is_theocracy = no
 				NOT = { is_liege_of = ROOT }
 				NOT = { character = ROOT }
 			}
@@ -259,7 +259,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 
 		modifier = {
 			factor = 0.9
@@ -398,7 +398,7 @@ character_event = {
 				random_province_lord = {
 					limit = {
 						primary_title = { higher_tier_than = BARON }
-						is_priest = no
+						is_theocracy = no
 						NOT = { is_liege_of = ROOT }
 						NOT = { character = ROOT }
 					}

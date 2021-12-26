@@ -226,7 +226,6 @@ character_event = {
 				reverse_remove_opinion = {
 					modifier = opinion_father
 					who = ROOT
-					years = 100
 				}	
 			}
 			reverse_opinion = {
@@ -355,7 +354,6 @@ character_event = {
 				reverse_remove_opinion = {
 					modifier = opinion_mother
 					who = ROOT
-					years = 100
 				}	
 			}
 			reverse_opinion = {

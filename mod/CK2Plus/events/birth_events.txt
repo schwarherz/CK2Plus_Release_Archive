@@ -57,6 +57,7 @@ character_event = {
 			}
 			has_lover = no
 			is_pregnant = no
+			prisoner = no
 			age = 16
 			NOT = {
 				has_character_modifier = lustful_affair_timer
@@ -76,6 +77,7 @@ character_event = {
 		NOT = { has_minor_title = title_concubine }
 		has_lover = no
 		is_pregnant = no
+		prisoner = no
 		NOT = { trait = infirm }
 		NOT = { trait = incapable }
 		NOT = { trait = celibate }

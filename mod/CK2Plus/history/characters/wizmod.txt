@@ -143,3 +143,16 @@
 		death="1154.1.1"
 	}
 }
+
+89004 = {
+	name="Cadoc"
+	dynasty=2005028
+	religion="catholic"
+	culture="cornish"
+	1036.1.1={
+		birth="1036.1.1"
+	}
+	1096.1.1={
+		death="1096.1.1"
+	}
+}

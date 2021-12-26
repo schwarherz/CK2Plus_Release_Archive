@@ -208,6 +208,7 @@ decisions = {
 			}			
 		}
 		allow = {
+			NOT = { has_character_modifier = employment_timer }
 			treasury = 5
 		}
 		effect = {
@@ -222,6 +223,11 @@ decisions = {
 				give_minor_title = title_concubine
 				character_event = { id = 300001 }
 			}
+			add_character_modifier = {
+				name = employment_timer
+				duration = 1825
+				hidden = yes
+			}			
 		}
 		revoke_allowed = {
 			always = no

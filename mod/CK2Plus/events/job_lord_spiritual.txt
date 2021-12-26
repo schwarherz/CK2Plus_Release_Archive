@@ -1780,7 +1780,7 @@ character_event = {
 		has_job_action = action_improve_rel_relations
 		location = { 
 			any_province_lord = {
-				is_priest = yes
+				is_theocracy = yes
 				religion = ROOT
 				NOT = { is_liege_of = ROOT }
 			}
@@ -1788,7 +1788,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = { 
-		months = 180
+		months = 120
 
 		modifier = {
 			factor = 1.1
@@ -1942,7 +1942,7 @@ character_event = {
 			location = {
 				random_province_lord = {
 					limit = {
-						is_priest = yes
+						is_theocracy = yes
 						religion = ROOT
 						NOT = { is_liege_of = ROOT }
 					}
@@ -2008,7 +2008,7 @@ character_event = {
 		has_job_action = action_improve_rel_relations
 		location = { 
 			any_province_lord = {
-				is_priest = yes
+				is_theocracy = yes
 				NOT = { is_liege_of = ROOT }
 				same_realm = ROOT
 				religion = ROOT
@@ -2158,7 +2158,7 @@ character_event = {
 			location = {
 				random_province_lord = {
 					limit = {
-						is_priest = yes
+						is_theocracy = yes
 						NOT = { is_liege_of = ROOT }
 						same_realm = ROOT
 						religion = ROOT

@@ -11,7 +11,7 @@
 ##############
 
 same_dynasty = {
-	opinion = 5
+	opinion = 10
 }
 
 opinion_ally = {
@@ -1732,7 +1732,7 @@ opinion_mother = {
 }
 
 opinion_sibling = {
-	opinion = 20
+	opinion = 15
 }
 
 opinion_grandfather = {

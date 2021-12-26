@@ -144,7 +144,15 @@ letter_event = {
 					who = liege
 					value = 75
 				}
-			}	
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { culture = ROOT }
+			}
+			modifier = {
+				factor = 1.25
+				liege = { culture = ROOT }
+			}			
 			modifier = {
 				factor = 0.75
 				FROM = { dynasty = ROOT }

@@ -9,11 +9,11 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 3000
 		modifier = {
 			factor = 1.25
 			owner = { war = no }
-		}		
+		}
 		modifier = {
 			factor = 0.9
 			owner = { NOT = { realm_stewardship = 10 } }
@@ -29,6 +29,22 @@ province_event = {
 		modifier = {
 			factor = 1.1
 			owner = { realm_stewardship = 40 }
+		}		
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_learning = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_learning = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_learning = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_learning = 40 }
 		}
 		modifier = {
 			factor = 0.8
@@ -102,11 +118,11 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 3000
 		modifier = {
 			factor = 1.25
 			owner = { war = no }
-		}		
+		}
 		modifier = {
 			factor = 0.9
 			owner = { NOT = { realm_stewardship = 10 } }
@@ -122,6 +138,22 @@ province_event = {
 		modifier = {
 			factor = 1.1
 			owner = { realm_stewardship = 40 }
+		}		
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_learning = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_learning = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_learning = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_learning = 40 }
 		}
 		modifier = {
 			factor = 0.8
@@ -195,7 +227,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 3000
 		modifier = {
 			factor = 1.25
 			owner = { war = no }
@@ -215,6 +247,22 @@ province_event = {
 		modifier = {
 			factor = 1.1
 			owner = { realm_stewardship = 40 }
+		}		
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_learning = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_learning = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_learning = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_learning = 40 }
 		}
 		modifier = {
 			factor = 0.8
@@ -290,7 +338,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 3000
 		modifier = {
 			factor = 1.25
 			owner = { war = no }
@@ -310,6 +358,22 @@ province_event = {
 		modifier = {
 			factor = 1.1
 			owner = { realm_stewardship = 40 }
+		}		
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_learning = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { NOT = { realm_learning = 20 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_learning = 30 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { realm_learning = 40 }
 		}
 		modifier = {
 			factor = 0.8
@@ -394,19 +458,19 @@ province_event = {
 		}		
 		modifier = {
 			factor = 0.9
-			owner = { NOT = { realm_stewardship = 10 } }
+			owner = { NOT = { realm_learning = 10 } }
 		}
 		modifier = {
 			factor = 0.9
-			owner = { NOT = { realm_stewardship = 20 } }
+			owner = { NOT = { realm_learning = 20 } }
 		}
 		modifier = {
 			factor = 1.1
-			owner = { realm_stewardship = 30 }
+			owner = { realm_learning = 30 }
 		}
 		modifier = {
 			factor = 1.1
-			owner = { realm_stewardship = 40 }
+			owner = { realm_learning = 40 }
 		}
 		modifier = {
 			factor = 0.8
@@ -480,7 +544,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 3000
 		modifier = {
 			factor = 0.75
 			owner = { war = no }
@@ -500,6 +564,22 @@ province_event = {
 		modifier = {
 			factor = 0.9
 			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_learning = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_learning = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_learning = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_learning = 40 }
 		}
 		modifier = {
 			factor = 0.8
@@ -573,7 +653,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 3000
 		modifier = {
 			factor = 0.75
 			owner = { war = no }
@@ -593,6 +673,22 @@ province_event = {
 		modifier = {
 			factor = 0.9
 			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_learning = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_learning = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_learning = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_learning = 40 }
 		}
 		modifier = {
 			factor = 0.8
@@ -666,7 +762,7 @@ province_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2000
+		months = 3000
 		modifier = {
 			factor = 0.75
 			owner = { war = no }
@@ -686,6 +782,22 @@ province_event = {
 		modifier = {
 			factor = 0.9
 			owner = { realm_stewardship = 40 }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_learning = 10 } }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { NOT = { realm_learning = 20 } }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_learning = 30 }
+		}
+		modifier = {
+			factor = 0.9
+			owner = { realm_learning = 40 }
 		}
 		modifier = {
 			factor = 0.8
