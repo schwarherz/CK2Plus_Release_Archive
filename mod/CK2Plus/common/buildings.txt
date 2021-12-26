@@ -1177,16 +1177,18 @@ castle = {
 #Saxon and English Longbow archery range
 	ca_culture_saxon_english_1 = {
 		potential = {
+			OR = {
+				culture = saxon
+				culture = english
+			}
+		}
+		trigger = {
 			FROM = {
 				OR = {
 					culture = saxon
 					culture = english
 				}
-			}
-			OR = {
-				culture = saxon
-				culture = english
-			}
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -1205,12 +1207,6 @@ castle = {
 	}
 	ca_culture_saxon_english_2 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = saxon
-					culture = english
-				}
-			}
 			OR = {
 				culture = saxon
 				culture = english
@@ -1218,7 +1214,13 @@ castle = {
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
-		}
+			FROM = {
+				OR = {
+					culture = saxon
+					culture = english
+				}
+			}		
+		}		
 		upgrades_from = ca_culture_saxon_english_1
 		build_cost = 300
 		build_time = 1095
@@ -1236,19 +1238,19 @@ castle = {
 	}
 	ca_culture_saxon_english_3 = {
 		potential = {
+			OR = {
+				culture = saxon
+				culture = english
+			}
+		}		
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
 			FROM = {
 				OR = {
 					culture = saxon
 					culture = english
 				}
-			}
-			OR = {
-				culture = saxon
-				culture = english
-			}
-		}
-		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 4
+			}			
 		}
 		upgrades_from = ca_culture_saxon_english_2
 		build_cost = 400
@@ -1267,19 +1269,19 @@ castle = {
 	}
 	ca_culture_saxon_english_4 = {
 		potential = {
+			OR = {
+				culture = saxon
+				culture = english
+			}
+		}		
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 5
 			FROM = {
 				OR = {
 					culture = saxon
 					culture = english
 				}
-			}
-			OR = {
-				culture = saxon
-				culture = english
-			}
-		}
-		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 5
+			}			
 		}
 		upgrades_from = ca_culture_saxon_english_3
 		build_cost = 500
@@ -1300,13 +1302,13 @@ castle = {
 	#Scottish Schiltron
 	ca_culture_scottish_1 = {
 		potential = {
+			culture = scottish
+		}
+		trigger = {
 			FROM = {
 				culture = scottish
-			}
-			OR = {
-				culture = scottish
-			}
-		}
+			}		
+		}		
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
 		build_time = 730
@@ -1324,14 +1326,12 @@ castle = {
 	}
 	ca_culture_scottish_2 = {
 		potential = {
-			FROM = {
-				culture = scottish
-			}
-			OR = {
-				culture = scottish
-			}
+			culture = scottish
 		}
 		trigger = {
+			FROM = {
+				culture = scottish
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = ca_culture_scottish_1
@@ -1351,14 +1351,12 @@ castle = {
 	}
 	ca_culture_scottish_3 = {
 		potential = {
-			FROM = {
-				culture = scottish
-			}
-			OR = {
-				culture = scottish
-			}
+			culture = scottish
 		}
 		trigger = {
+			FROM = {
+				culture = scottish
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = ca_culture_scottish_2
@@ -1378,14 +1376,12 @@ castle = {
 	}
 	ca_culture_scottish_4 = {
 		potential = {
-			FROM = {
-				culture = scottish
-			}
-			OR = {
-				culture = scottish
-			}
+			culture = scottish
 		}
 		trigger = {
+			FROM = {
+				culture = scottish
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = ca_culture_scottish_3
@@ -1408,15 +1404,18 @@ castle = {
 	ca_culture_group_baltic_0 = {
 		potential = {
 			FROM = {
+				religion_group = pagan_group
 				OR = {
 					culture_group = baltic
 					culture = pommeranian
 					culture_group = finno_ugric
 				}
-			}		
+			}
+			religion_group = pagan_group
 			OR = {
 				culture_group = baltic
 				culture = pommeranian
+				culture_group = finno_ugric
 			}			
 		}
 		build_cost = 200
@@ -1434,18 +1433,20 @@ castle = {
 	#Baltic tribes Heavy Infantry camps
 	ca_culture_group_baltic_1 = {
 		potential = {
+			OR = {
+				culture_group = baltic
+				culture = pommeranian
+				culture_group = finno_ugric
+			}
+		}
+		trigger = {
 			FROM = {
 				OR = {
 					culture_group = baltic
 					culture = pommeranian
 					culture_group = finno_ugric
 				}
-			}
-			OR = {
-				culture_group = baltic
-				culture = pommeranian
-				culture_group = finno_ugric
-			}
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -1463,13 +1464,6 @@ castle = {
 	}
 	ca_culture_group_baltic_2 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture_group = baltic
-					culture = pommeranian
-					culture_group = finno_ugric
-				}
-			}
 			OR = {
 				culture_group = baltic
 				culture = pommeranian
@@ -1477,6 +1471,13 @@ castle = {
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture_group = baltic
+					culture = pommeranian
+					culture_group = finno_ugric
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = ca_culture_group_baltic_1
@@ -1495,13 +1496,6 @@ castle = {
 	}
 	ca_culture_group_baltic_3 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture_group = baltic
-					culture = pommeranian
-					culture_group = finno_ugric
-				}
-			}
 			OR = {
 				culture_group = baltic
 				culture = pommeranian
@@ -1509,6 +1503,13 @@ castle = {
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture_group = baltic
+					culture = pommeranian
+					culture_group = finno_ugric
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = ca_culture_group_baltic_2
@@ -1527,13 +1528,6 @@ castle = {
 	}
 	ca_culture_group_baltic_4 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture_group = baltic
-					culture = pommeranian
-					culture_group = finno_ugric
-				}
-			}
 			OR = {
 				culture_group = baltic
 				culture = pommeranian
@@ -1541,6 +1535,13 @@ castle = {
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture_group = baltic
+					culture = pommeranian
+					culture_group = finno_ugric
+				}
+			}
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = ca_culture_group_baltic_3
@@ -1561,10 +1562,12 @@ castle = {
 	#Altaic horse breeders
 	ca_culture_group_altaic_1 = {
 		potential = {
+			culture_group = altaic
+		}
+		trigger = {
 			FROM = {
 				culture_group = altaic
-			}
-			culture_group = altaic
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -1582,12 +1585,12 @@ castle = {
 	}
 	ca_culture_group_altaic_2 = {
 		potential = {
-			FROM = {
-				culture_group = altaic
-			}
 			culture_group = altaic
 		}
 		trigger = {
+			FROM = {
+				culture_group = altaic
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = ca_culture_group_altaic_1
@@ -1606,12 +1609,12 @@ castle = {
 	}
 	ca_culture_group_altaic_3 = {
 		potential = {
-			FROM = {
-				culture_group = altaic
-			}
-			FROM = { culture_group = altaic }
+			culture_group = altaic
 		}
 		trigger = {
+			FROM = {
+				culture_group = altaic
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = ca_culture_group_altaic_2
@@ -1630,12 +1633,12 @@ castle = {
 	}
 	ca_culture_group_altaic_4 = {
 		potential = {
+			culture_group = altaic
+		}
+		trigger = {
 			FROM = {
 				culture_group = altaic
 			}
-			FROM = { culture_group = altaic }
-		}
-		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = ca_culture_group_altaic_3
@@ -1656,6 +1659,16 @@ castle = {
 	#Frankish, Occitan, Norman and German Lists
 	ca_culture_frank_norman_german_1 = {
 		potential = {
+			OR = {
+				culture = frankish
+				culture = occitan
+				culture = norman
+				culture = german
+				culture = breton
+				culture = bohemian
+			}
+		}
+		trigger = {
 			FROM = {
 				OR = {
 					culture = frankish
@@ -1665,15 +1678,7 @@ castle = {
 					culture = breton
 					culture = bohemian
 				}
-			}
-			OR = {
-				culture = frankish
-				culture = occitan
-				culture = norman
-				culture = german
-				culture = breton
-				culture = bohemian
-			}
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -1692,16 +1697,6 @@ castle = {
 	}
 	ca_culture_frank_norman_german_2 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = frankish
-					culture = occitan
-					culture = norman
-					culture = german
-					culture = breton
-					culture = bohemian
-				}
-			}
 			OR = {
 				culture = frankish
 				culture = occitan
@@ -1712,6 +1707,16 @@ castle = {
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = frankish
+					culture = occitan
+					culture = norman
+					culture = german
+					culture = breton
+					culture = bohemian
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = ca_culture_frank_norman_german_1
@@ -1731,16 +1736,6 @@ castle = {
 	}
 	ca_culture_frank_norman_german_3 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = frankish
-					culture = occitan
-					culture = norman
-					culture = german
-					culture = breton
-					culture = bohemian
-				}
-			}
 			OR = {
 				culture = frankish
 				culture = occitan
@@ -1751,6 +1746,16 @@ castle = {
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = frankish
+					culture = occitan
+					culture = norman
+					culture = german
+					culture = breton
+					culture = bohemian
+				}
+			}
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = ca_culture_frank_norman_german_2
@@ -1770,16 +1775,6 @@ castle = {
 	}
 	ca_culture_frank_norman_german_4 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = frankish
-					culture = occitan
-					culture = norman
-					culture = german
-					culture = breton
-					culture = bohemian
-				}
-			}
 			OR = {
 				culture = frankish
 				culture = occitan
@@ -1790,6 +1785,16 @@ castle = {
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = frankish
+					culture = occitan
+					culture = norman
+					culture = german
+					culture = breton
+					culture = bohemian
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = ca_culture_frank_norman_german_3
@@ -1811,10 +1816,12 @@ castle = {
 	#Arabian horse breeders
 	ca_culture_group_arabic_1 = {
 		potential = {
+			culture_group = arabic_group
+		}
+		trigger = {
 			FROM = {
 				culture_group = arabic_group
-			}
-			culture_group = arabic_group
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -1831,12 +1838,12 @@ castle = {
 	}
 	ca_culture_group_arabic_2 = {
 		potential = {
-			FROM = {
-				culture_group = arabic_group
-			}
 			culture_group = arabic_group
 		}
 		trigger = {
+			FROM = {
+				culture_group = arabic_group
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = ca_culture_group_arabic_1
@@ -1854,12 +1861,12 @@ castle = {
 	}
 	ca_culture_group_arabic_3 = {
 		potential = {
-			FROM = {
-				culture_group = arabic_group
-			}
 			culture_group = arabic_group
 		}
 		trigger = {
+			FROM = {
+				culture_group = arabic_group
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = ca_culture_group_arabic_2
@@ -1877,12 +1884,12 @@ castle = {
 	}
 	ca_culture_group_arabic_4 = {
 		potential = {
-			FROM = {
-				culture_group = arabic_group
-			}
 			culture_group = arabic_group
 		}
 		trigger = {
+			FROM = {
+				culture_group = arabic_group
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = ca_culture_group_arabic_3
@@ -1902,11 +1909,13 @@ castle = {
 	#Iberian Fast horse breeders
 	ca_culture_group_iberian_1 = {
 		potential = {
-			FROM = {
-				culture_group = iberian
-			}
 			culture_group = iberian
 		}
+		trigger = {
+			FROM = {
+				culture_group = iberian
+			}		
+		}		
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
 		build_time = 730
@@ -1924,12 +1933,12 @@ castle = {
 	}
 	ca_culture_group_iberian_2 = {
 		potential = {
-			FROM = {
-				culture_group = iberian
-			}
 			culture_group = iberian
 		}
 		trigger = {
+			FROM = {
+				culture_group = iberian
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = ca_culture_group_iberian_1
@@ -1949,12 +1958,12 @@ castle = {
 	}
 	ca_culture_group_iberian_3 = {
 		potential = {
-			FROM = {
-				culture_group = iberian
-			}
 			culture_group = iberian
 		}
 		trigger = {
+			FROM = {
+				culture_group = iberian
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = ca_culture_group_iberian_2
@@ -1974,12 +1983,12 @@ castle = {
 	}
 	ca_culture_group_iberian_4 = {
 		potential = {
-			FROM = {
-				culture_group = iberian
-			}
 			culture_group = iberian
 		}
 		trigger = {
+			FROM = {
+				culture_group = iberian
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = ca_culture_group_iberian_3
@@ -2001,10 +2010,12 @@ castle = {
 	#Italian Pike formations
 	ca_culture_italian_1 = {
 		potential = {
+			culture = italian
+		}
+		trigger = {
 			FROM = {
 				culture = italian
-			}
-			culture = italian
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -2023,12 +2034,12 @@ castle = {
 	}
 	ca_culture_italian_2 = {
 		potential = {
-			FROM = {
-				culture = italian
-			}
 			culture = italian
 		}
 		trigger = {
+			FROM = {
+				culture = italian
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = ca_culture_italian_1
@@ -2048,12 +2059,12 @@ castle = {
 	}
 	ca_culture_italian_3 = {
 		potential = {
-			FROM = {
-				culture = italian
-			}
 			culture = italian
 		}
 		trigger = {
+			FROM = {
+				culture = italian
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = ca_culture_italian_2
@@ -2073,12 +2084,12 @@ castle = {
 	}
 	ca_culture_italian_4 = {
 		potential = {
-			FROM = {
-				culture = italian
-			}
 			culture = italian
 		}
 		trigger = {
+			FROM = {
+				culture = italian
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = ca_culture_italian_3
@@ -2100,11 +2111,13 @@ castle = {
 	#Russian Armories
 	ca_culture_russian_1 = {
 		potential = {
-			FROM = {
-				culture = russian
-			}
 			culture = russian
 		}
+		trigger = {
+			FROM = {
+				culture = russian
+			}		
+		}		
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
 		build_time = 730
@@ -2122,12 +2135,12 @@ castle = {
 	}
 	ca_culture_russian_2 = {
 		potential = {
-			FROM = {
-				culture = russian
-			}
 			culture = russian
 		}
 		trigger = {
+			FROM = {
+				culture = russian
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = ca_culture_russian_1
@@ -2147,12 +2160,12 @@ castle = {
 	}
 	ca_culture_russian_3 = {
 		potential = {
-			FROM = {
-				culture = russian
-			}
 			culture = russian
 		}
 		trigger = {
+			FROM = {
+				culture = russian
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = ca_culture_russian_2
@@ -2172,12 +2185,12 @@ castle = {
 	}
 	ca_culture_russian_4 = {
 		potential = {
-			FROM = {
-				culture = russian
-			}
 			culture = russian
 		}
 		trigger = {
+			FROM = {
+				culture = russian
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = ca_culture_russian_3
@@ -2198,11 +2211,13 @@ castle = {
 	#Irish Gallowglass
 	irish_building_1 = {
 		potential = {
-			FROM = {
-				culture = irish
-			}
 			culture = irish
 		}
+		trigger = {
+			FROM = {
+				culture = irish
+			}		
+		}		
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
 		build_time = 730
@@ -2217,12 +2232,12 @@ castle = {
 	}
 	irish_building_2 = {
 		potential = {
-			FROM = {
-				culture = irish
-			}
 			culture = irish
 		}
 		trigger = {
+			FROM = {
+				culture = irish
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = irish_building_1
@@ -2239,11 +2254,14 @@ castle = {
 	}
 	irish_building_3 = {
 		potential = {
-			FROM = {
-				culture = irish
-			}
 			culture = irish
 		}
+		trigger = {
+			FROM = {
+				culture = irish
+			}	
+			TECH_CASTLE_CONSTRUCTION = 4
+		}		
 		upgrades_from = irish_building_2
 		build_cost = 400
 		build_time = 2190
@@ -2258,12 +2276,12 @@ castle = {
 	}
 	irish_building_4 = {
 		potential = {
-			FROM = {
-				culture = irish
-			}
 			culture = irish
 		}
 		trigger = {
+			FROM = {
+				culture = irish
+			}
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = irish_building_3
@@ -2284,10 +2302,12 @@ castle = {
 	#Greek Castle Libraries
 	greek_building_1 = {
 		potential = {
+			culture = greek
+		}
+		trigger = {
 			FROM = {
 				culture = greek
-			}
-			culture = greek
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 100
@@ -2305,12 +2325,12 @@ castle = {
 	}
 	greek_building_2 = {
 		potential = {
-			FROM = {
-				culture = greek
-			}
 			culture = greek
 		}
 		trigger = {
+			FROM = {
+				culture = greek
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = greek_building_1
@@ -2329,12 +2349,12 @@ castle = {
 	}
 	greek_building_3 = {
 		potential = {
-			FROM = {
-				culture = greek
-			}
 			culture = greek
 		}
 		trigger = {
+			FROM = {
+				culture = greek
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = greek_building_2
@@ -2353,12 +2373,12 @@ castle = {
 	}
 	greek_building_4 = {
 		potential = {
-			FROM = {
-				culture = greek
-			}
 			culture = greek
 		}
 		trigger = {
+			FROM = {
+				culture = greek
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = greek_building_3
@@ -2379,18 +2399,20 @@ castle = {
 	#Gusar Cavalry
 	serbian_building_1 = {
 		potential = {
+			OR = {
+				culture = serbian
+				culture = croatian
+			}
+		}
+		trigger = {
 			FROM = {
 				OR = {
 					culture = serbian
 					culture = croatian
 					
 				}
-			}
-			OR = {
-					culture = serbian
-					culture = croatian
-			}
-		}
+			}		
+		}		
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
 		build_time = 730
@@ -2410,6 +2432,12 @@ castle = {
 
 	serbian_building_2 = {
 		potential = {
+			OR = {
+				culture = serbian
+				culture = croatian
+			}
+		}
+		trigger = {
 			FROM = {
 				OR = {
 					culture = serbian
@@ -2417,12 +2445,6 @@ castle = {
 					
 				}
 			}
-			OR = {
-					culture = serbian
-					culture = croatian
-			}
-		}
-		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = serbian_building_1
@@ -2443,6 +2465,12 @@ castle = {
 	}
 	serbian_building_3 = {
 		potential = {
+			OR = {
+				culture = serbian
+				culture = croatian
+			}
+		}
+		trigger = {
 			FROM = {
 				OR = {
 					culture = serbian
@@ -2450,11 +2478,8 @@ castle = {
 					
 				}
 			}
-			OR = {
-					culture = serbian
-					culture = croatian
-			}
-		}
+			TECH_CASTLE_CONSTRUCTION = 4
+		}		
 		upgrades_from = serbian_building_2
 		build_cost = 400
 		build_time = 2190
@@ -2473,6 +2498,12 @@ castle = {
 	}
 	serbian_building_4 = {
 		potential = {
+			OR = {
+					culture = serbian
+					culture = croatian
+			}
+		}
+		trigger = {
 			FROM = {
 				OR = {
 					culture = serbian
@@ -2480,12 +2511,6 @@ castle = {
 					
 				}
 			}
-			OR = {
-					culture = serbian
-					culture = croatian
-			}
-		}
-		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = serbian_building_3
@@ -2508,11 +2533,13 @@ castle = {
 	#Magyar Horse Archers
 	ca_culture_hungarian_1 = {
 		potential = {
+			culture = hungarian
+		}
+		trigger = {
 			FROM = {
 				culture = hungarian
 			}
-			culture = hungarian
-		}
+		}		
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
 		build_time = 730
@@ -2529,12 +2556,12 @@ castle = {
 	}
 	ca_culture_hungarian_2 = {
 		potential = {
-			FROM = {
-				culture = hungarian
-			}
 			culture = hungarian
 		}
 		trigger = {
+			FROM = {
+				culture = hungarian
+			}
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = ca_culture_hungarian_1
@@ -2553,12 +2580,12 @@ castle = {
 	}
 	ca_culture_hungarian_3 = {
 		potential = {
-			FROM = {
-				culture = hungarian
-			}
 			culture = hungarian
 		}
 		trigger = {
+			FROM = {
+				culture = hungarian
+			}
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = ca_culture_hungarian_2
@@ -2577,12 +2604,12 @@ castle = {
 	}
 	ca_culture_hungarian_4 = {
 		potential = {
-			FROM = {
-				culture = hungarian
-			}
 			culture = hungarian
 		}
 		trigger = {
+			FROM = {
+				culture = hungarian
+			}
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = ca_culture_hungarian_3
@@ -2603,11 +2630,13 @@ castle = {
 	#Flemish Pike formations
 	dutch_building_1 = {
 		potential = {
+			culture = dutch
+		}
+		trigger = {
 			FROM = {
 				culture = dutch
 			}
-			culture = dutch
-		}
+		}		
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
 		build_time = 730
@@ -2625,14 +2654,12 @@ castle = {
 	}
 	dutch_building_2 = {
 		potential = {
+			culture = dutch
+		}
+		trigger = {
 			FROM = {
 				culture = dutch
 			}
-			OR = {
-				culture = dutch
-			}
-		}
-		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = dutch_building_1
@@ -2653,12 +2680,12 @@ castle = {
 	}
 	dutch_building_3 = {
 		potential = {
-			FROM = {
-				culture = dutch
-			}
 			culture = dutch
 		}
 		trigger = {
+			FROM = {
+				culture = dutch
+			}
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = dutch_building_2
@@ -2679,12 +2706,12 @@ castle = {
 	}
 	dutch_building_4 = {
 		potential = {
-			FROM = {
-				culture = dutch
-			}
 			culture = dutch
 		}
 		trigger = {
+			FROM = {
+				culture = dutch
+			}
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = dutch_building_3
@@ -2707,16 +2734,18 @@ castle = {
 	#Bulgar Cavalry + Vlach placeholder
 	bulgarian_building_1 = {
 		potential = {
+			OR = {
+				culture = bulgarian
+				culture = romanian
+			}
+		}
+		trigger = {
 			FROM = {
 				OR = {
 					culture = bulgarian
 					culture = romanian
 				}
-			}
-			OR = {
-				culture = bulgarian
-				culture = romanian
-			}
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -2735,21 +2764,18 @@ castle = {
 	}
 	bulgarian_building_2 = {
 		potential = {
+			OR = {
+				culture = bulgarian
+				culture = romanian
+			}
+		}
+		trigger = {
 			FROM = {
 				OR = {
 					culture = bulgarian
 					culture = romanian
 				}
-			}
-			OR = {
-				culture = bulgarian
-				culture = romanian
-			}
-			OR = {
-				culture = bulgarian
-			}
-		}
-		trigger = {
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = bulgarian_building_1
@@ -2769,18 +2795,18 @@ castle = {
 	}
 	bulgarian_building_3 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = bulgarian
-					culture = romanian
-				}
-			}
 			OR = {
 				culture = bulgarian
 				culture = romanian
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = bulgarian
+					culture = romanian
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = bulgarian_building_2
@@ -2800,18 +2826,18 @@ castle = {
 	}
 	bulgarian_building_4 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = bulgarian
-					culture = romanian
-				}
-			}
 			OR = {
 				culture = bulgarian
 				culture = romanian
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = bulgarian
+					culture = romanian
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = bulgarian_building_3
@@ -2833,14 +2859,12 @@ castle = {
 	#Polish Knights
 	polish_building_1 = {
 		potential = {
+			culture = polish
+		}
+		trigger = {
 			FROM = {
-				OR = {
-					culture = polish
-				}
-			}
-			OR = {
 				culture = polish
-			}
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -2859,16 +2883,12 @@ castle = {
 	}
 	polish_building_2 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = polish
-				}
-			}
-			OR = {
-				culture = polish
-			}
+			culture = polish
 		}
 		trigger = {
+			FROM = {
+				culture = polish
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = polish_building_1
@@ -2888,16 +2908,12 @@ castle = {
 	}
 	polish_building_3 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = polish
-				}
-			}
-			OR = {
-				culture = polish
-			}
+			culture = polish
 		}
 		trigger = {
+			FROM = {
+				culture = polish
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = polish_building_2
@@ -2917,16 +2933,12 @@ castle = {
 	}
 	polish_building_4 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = polish
-				}
-			}
-			OR = {
-				culture = polish
-			}
+			culture = polish
 		}
 		trigger = {
+			FROM = {
+				culture = polish
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = polish_building_3
@@ -2948,19 +2960,20 @@ castle = {
 	#Sicilian Muslim Archers
 	sicilian_building_1 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = sicilian
-					culture = sicilian_arabic
-					culture = sicilian_greek
-					culture = norman
-				}
-			}
 			OR = {
 				culture = sicilian
 				culture = sicilian_arabic
 				culture = sicilian_greek
 			}
+		}
+		trigger = {
+			FROM = {
+				OR = {
+					culture = sicilian
+					culture = sicilian_arabic
+					culture = sicilian_greek
+				}
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -2979,14 +2992,6 @@ castle = {
 	}
 	sicilian_building_2 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = sicilian
-					culture = sicilian_arabic
-					culture = sicilian_greek
-					culture = norman
-				}
-			}
 			OR = {
 				culture = sicilian
 				culture = sicilian_arabic
@@ -2994,6 +2999,13 @@ castle = {
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = sicilian
+					culture = sicilian_arabic
+					culture = sicilian_greek
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = sicilian_building_1
@@ -3013,14 +3025,6 @@ castle = {
 	}
 	sicilian_building_3 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = sicilian
-					culture = sicilian_arabic
-					culture = sicilian_greek
-					culture = norman
-				}
-			}
 			OR = {
 				culture = sicilian
 				culture = sicilian_arabic
@@ -3028,6 +3032,13 @@ castle = {
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = sicilian
+					culture = sicilian_arabic
+					culture = sicilian_greek
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = sicilian_building_2
@@ -3047,14 +3058,6 @@ castle = {
 	}
 	sicilian_building_4 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = sicilian
-					culture = sicilian_arabic
-					culture = sicilian_greek
-					culture = norman
-				}
-			}
 			OR = {
 				culture = sicilian
 				culture = sicilian_arabic
@@ -3062,6 +3065,13 @@ castle = {
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = sicilian
+					culture = sicilian_arabic
+					culture = sicilian_greek
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = sicilian_building_3
@@ -3083,16 +3093,18 @@ castle = {
 	#Caucasian Heavy Infantry
 	caucasus_building_1 = {
 		potential = {
+			OR = {
+				culture = alan
+				culture = georgian
+			}
+		}
+		trigger = {
 			FROM = {
 				OR = {
 					culture = alan
 					culture = georgian
 				}
-			}
-			OR = {
-				culture = alan
-				culture = georgian
-			}
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -3111,18 +3123,18 @@ castle = {
 	}
 	caucasus_building_2 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = alan
-					culture = georgian
-				}
-			}
 			OR = {
 				culture = alan
 				culture = georgian
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = alan
+					culture = georgian
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = caucasus_building_1
@@ -3142,18 +3154,18 @@ castle = {
 	}
 	caucasus_building_3 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = alan
-					culture = georgian
-				}
-			}
 			OR = {
 				culture = alan
 				culture = georgian
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = alan
+					culture = georgian
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = caucasus_building_2
@@ -3173,18 +3185,18 @@ castle = {
 	}
 	caucasus_building_4 = {
 		potential = {
-			FROM = {
-				OR = {
-					culture = alan
-					culture = georgian
-				}
-			}
 			OR = {
 				culture = alan
 				culture = georgian
 			}
 		}
 		trigger = {
+			FROM = {
+				OR = {
+					culture = alan
+					culture = georgian
+				}
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = caucasus_building_3
@@ -3206,10 +3218,12 @@ castle = {
 	#Scandiniavian Housecarls
 	north_german_building_1 = {
 		potential = {
+			culture_group = north_germanic
+		}
+		trigger = {
 			FROM = {
 				culture_group = north_germanic
-			}
-			culture_group = north_germanic
+			}		
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -3229,12 +3243,12 @@ castle = {
 	}
 	north_german_building_2 = {
 		potential = {
-			FROM = {
-				culture_group = north_germanic
-			}
 			culture_group = north_germanic
 		}
 		trigger = {
+			FROM = {
+				culture_group = north_germanic
+			}		
 			TECH_CASTLE_CONSTRUCTION = 2
 		}
 		upgrades_from = north_german_building_1
@@ -3255,12 +3269,12 @@ castle = {
 	}
 	north_german_building_3 = {
 		potential = {
-			FROM = {
-				culture_group = north_germanic
-			}
 			culture_group = north_germanic
 		}
 		trigger = {
+			FROM = {
+				culture_group = north_germanic
+			}		
 			TECH_CASTLE_CONSTRUCTION = 4
 		}
 		upgrades_from = north_german_building_2
@@ -3281,12 +3295,12 @@ castle = {
 	}
 	north_german_building_4 = {
 		potential = {
-			FROM = {
-				culture_group = north_germanic
-			}
 			culture_group = north_germanic
 		}
 		trigger = {
+			FROM = {
+				culture_group = north_germanic
+			}		
 			TECH_CASTLE_CONSTRUCTION = 5
 		}
 		upgrades_from = north_german_building_3

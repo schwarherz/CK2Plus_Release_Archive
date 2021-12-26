@@ -27,11 +27,18 @@ restore_papacy = {
 		ROOT = { NOT = { has_character_modifier = holy_truce_timer } }
 		FROM = { NOT = { has_character_modifier = holy_truce_timer } }
 		NOT = {
+			FROM = {
+				any_war = {
+					using_cb = restore_papacy
+				}
+			}
+		}	
+		NOT = {
 			had_global_flag = {
 				flag = papacy_lost
 				days = 36500
 			}
-			ROOT = { has_character_flag = restore_papacy_attempted }
+			ROOT = { ai = yes has_character_flag = restore_papacy_attempted }
 		}		
 		ROOT = {
 			religion = catholic
@@ -2230,7 +2237,7 @@ crusade = {
 	on_add = {		
 		ROOT = {
 			if = {
-				limit = { ai = yes NOT = { year = 11050 } }
+				limit = { ai = yes NOT = { year = 1150 } }
 				piety = -100
 			}		
 			if = {
@@ -4296,7 +4303,12 @@ other_dejure_county_claim = {
 		}
 		
 		OR = {
-			ROOT = { ai = no }
+			ROOT = {
+				any_liege = {
+					character = FROMFROM
+					ai = no
+				}
+			}
 			FROM = { religion_group = ROOT }
 		}		
 
@@ -4452,7 +4464,12 @@ other_dejure_barony_claim = {
 		}
 		
 		OR = {
-			ROOT = { ai = no }
+			ROOT = {
+				any_liege = {
+					character = FROMFROM
+					ai = no
+				}
+			}
 			FROM = { religion_group = ROOT }
 		}		
 

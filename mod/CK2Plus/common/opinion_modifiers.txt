@@ -176,7 +176,8 @@ opinion_dishonorable = {
 }
 
 opinion_tyrant = {
-	days = 1
+	opinion = -10
+	months = 120
 }
 
 opinion_released_prisoner = {

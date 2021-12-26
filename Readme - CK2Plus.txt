@@ -68,6 +68,11 @@ CK2Plus is a collaborative effort. While most of the work is done by me personal
 *************
 * Changelog *
 *************
+1.17:
+- Simplified the Tyranny system. Instead of a variable amount of Tyranny based on rank and cause, any action that gave the tyrant opinion modifier in vanilla will now give an appropriate amount of tyranny that is now shown in the tooltip when carrying out the action. This was the only way to correct a number of bugs with actions giving tyranny when they shouldn't be. As a result the system is now less flexible but much easier to understand. Tyranny costs are now as follows: 10/20 for unlawfully imprisoning a courtier/vassal, 5/10 for executing a courtier/vassal, 0/20 for banishing a courtier/vassal.
+- Fixed more bugs with succession laws.
+- Culture-specific buildings will no longer be destroyed unless the culture of the province changes, although you will still be unable to build them unless you are of the appropriate culture.
+
 1.16:
 - Added more culture-specific buildings.
 - Slightly increased effects of stewardship on demesne size.

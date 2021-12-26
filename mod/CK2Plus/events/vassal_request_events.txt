@@ -1575,7 +1575,8 @@ letter_event = {
 					}
 				}
 				add_trait = tyrant1
-			}		
+			}
+			character_event = { id = 190074 }
 		}		
 		FROM = { 
 			hidden_tooltip = {
@@ -1770,7 +1771,8 @@ letter_event = {
 					}
 					add_trait = tyrant2
 				}					
-			}			
+			}	
+			character_event = { id = 190074 }
 		}		
 		FROM = { 
 			opinion = {

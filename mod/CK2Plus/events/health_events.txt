@@ -29,6 +29,18 @@ character_event = {
 				trait = syphilitic 
 			}
 		}
+		OR = {
+			NOT = {
+				spouse = {
+					lover = { character = ROOT }
+				}
+			}
+			spouse = { 
+				is_alive = yes
+				is_abroad = no
+				trait = syphilitic 
+			}			
+		}
 		NOT = {
 			trait = celibate
 		}
@@ -43,12 +55,16 @@ character_event = {
 		modifier = {
 			factor = 0.01
 			spouse = { 
+				is_alive = yes
+				is_abroad = no			
 				trait = syphilitic 
 			}
 		}
 		modifier = {
 			factor = 0.01
 			lover = { 
+				is_alive = yes
+				is_abroad = no			
 				trait = syphilitic 
 			}
 		}		
@@ -64,9 +80,24 @@ character_event = {
 			factor = 0.6
 			trait = hedonist
 		}
-		
 		modifier = {
-			factor = 5.0
+			factor = 0.75
+			trait = fair
+		}
+		modifier = {
+			factor = 2.0
+			trait = ugly
+		}		
+		modifier = {
+			factor = 0.8
+			trait = gregarious
+		}
+		modifier = {
+			factor = 1.2
+			trait = shy
+		}		
+		modifier = {
+			factor = 10.0
 			trait = chaste
 		}
 	}
