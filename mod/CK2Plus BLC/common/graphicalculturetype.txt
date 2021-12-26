@@ -1,0 +1,45 @@
+# Western
+
+frankishgfx
+englishgfx
+germangfx
+iberiangfx
+italiangfx
+celticgfx
+norsegfx
+knightsgfx
+republicsgfx
+saxongfx
+normangfx
+occitangfx
+gaelicgfx
+croatiangfx
+catalangfx
+
+# Eastern
+
+easternslavicgfx
+westernslavicgfx
+byzantinegfx
+ugricgfx
+cumangfx
+alangfx
+bohemiangfx
+
+# Muslim
+
+andalusiangfx
+berbergfx
+levantinegfx
+arabicgfx
+turkishgfx
+mongolgfx
+africangfx
+persiangfx
+egyptiangfx
+
+# Culture groups
+
+muslimgfx
+easterngfx
+westerngfx

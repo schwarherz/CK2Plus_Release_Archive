@@ -794,7 +794,7 @@
 		add_spouse=633
 	}
 	1066.1.5={
-		add_claim = k_england
+		#add_claim = k_england
 		give_nickname = nick_haardraade
 	}
 	

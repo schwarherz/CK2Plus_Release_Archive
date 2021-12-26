@@ -2692,10 +2692,40 @@ letter_event = {
 	option = {
 		name = "EVTOPTA290"
 		approve_law = FROM
+		hidden_tooltip = {
+			reverse_remove_opinion = {
+				modifier = opinion_approved_law
+				who = FROM
+			}
+			reverse_remove_opinion = {
+				modifier = opinion_ignored_law
+				who = FROM
+			}			
+		}
+		reverse_opinion = {
+			modifier = opinion_approved_law
+			who = FROM
+			years = 5
+		}		
 	}
 	
 	option = {
 		name = "EVTOPTB290"
+		hidden_tooltip = {
+			reverse_remove_opinion = {
+				modifier = opinion_approved_law
+				who = FROM
+			}
+			reverse_remove_opinion = {
+				modifier = opinion_ignored_law
+				who = FROM
+			}
+		}
+		reverse_opinion = {
+			modifier = opinion_ignored_law
+			who = FROM
+			years = 5
+		}		
 	}
 }
 

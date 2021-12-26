@@ -30,11 +30,7 @@ character_event = {
 		age = 16
 		war = no
 		in_command = no
-		OR = {
-			trait = greedy
-			trait = midas_touched
-			trait = gluttonous
-		}
+		NOT = { trait = just }
 		tier = count
 	}
 	
@@ -59,31 +55,31 @@ character_event = {
 		}
 	}
 	
-	option = { #Ignore
+	option = {
 		name = "EVTOPTA4000"
-		add_trait = just
+		trigger = {
+			NOT = { trait = greedy }
+		}		
+		prestige = 5
 	}
 	
 	option = {
 		name = "EVTOPTB4000"
 		trigger = {
-			trait = just
-			NOT = {
-				trait = wroth
-			}
+			NOT = { trait = arbitrary }
 		}
-		add_character_modifier = {
-			name = the_judger
-			duration = 730
-		}
+		add_trait = just		
 	}
 	
 	option = {
 		name = "EVTOPTC4000"
 		trigger = {
-			trait = greedy
+			OR = {
+				trait = arbitrary
+				trait = greedy
+			}
 		}
-		scaled_wealth = 0.05
+		wealth = 5
 	}
 }
 

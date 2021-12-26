@@ -1450,7 +1450,7 @@
 	diplomacy=4
 	intrigue=5
 	stewardship=4
-	religion="orthodox"
+	religion="judaism"
 	culture="turkish"
 	add_trait="chaste"
 	add_trait="arbitrary"

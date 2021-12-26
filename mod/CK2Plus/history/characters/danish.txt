@@ -332,7 +332,7 @@
 	mother=101509 # Estrid
 	1019.1.1={
 		birth="1019.1.1"
-		add_claim = k_england
+		#add_claim = k_england
 	}
 	1046.1.1={
 		add_spouse=100513 # Gyda Anundsdottor

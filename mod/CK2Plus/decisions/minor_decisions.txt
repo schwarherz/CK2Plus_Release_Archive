@@ -4,11 +4,7 @@ decisions = {
 		potential = {
 			age = 16
 			is_ruler = yes
-			is_feudal = yes
-			NOT = { has_character_modifier = holding_large_feast }
-			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }
-			NOT = { has_character_flag = holding_epic_tournament }				
+			is_feudal = yes				
 			NOT = {
 				has_character_modifier = large_feast_timer
 			}
@@ -63,11 +59,7 @@ decisions = {
 		potential = {
 			age = 16
 			is_ruler = yes
-			is_feudal = yes
-			NOT = { has_character_modifier = holding_large_feast }
-			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }
-			NOT = { has_character_flag = holding_epic_tournament }	
+			is_feudal = yes	
 			NOT = {
 				has_character_modifier = large_feast_timer
 			}
@@ -91,6 +83,9 @@ decisions = {
 			treasury = 10
 			month = 10
 			prestige = 100
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }			
 		}
 		effect = {
 			treasury = -10
@@ -159,10 +154,6 @@ decisions = {
 			age = 16
 			is_ruler = yes
 			is_feudal = yes
-			NOT = { has_character_modifier = holding_large_feast }
-			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }
-			NOT = { has_character_flag = holding_epic_tournament }
 			NOT = {
 				has_character_modifier = large_feast_timer
 			}
@@ -186,6 +177,9 @@ decisions = {
 			treasury = 20
 			month = 10
 			prestige = 100
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }			
 		}
 		effect = {
 			treasury = -20
@@ -256,10 +250,6 @@ decisions = {
 			is_ruler = yes
 			is_feudal = yes
 			religion_group = christian
-			NOT = { has_character_modifier = holding_large_feast }
-			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }
-			NOT = { has_character_flag = holding_epic_tournament }
 			NOT = {
 				has_character_modifier = summer_fair_timer
 			}
@@ -275,6 +265,9 @@ decisions = {
 			NOT = {
 				month = 7
 			}
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }			
 		}
 		effect = {
 			treasury = -5
@@ -304,10 +297,6 @@ decisions = {
 			is_ruler = yes
 			is_feudal = yes
 			religion_group = christian
-			NOT = { has_character_modifier = holding_large_feast }
-			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }
-			NOT = { has_character_flag = holding_epic_tournament }
 			NOT = {
 				has_character_modifier = summer_fair_timer
 			}
@@ -323,6 +312,9 @@ decisions = {
 			NOT = {
 				month = 7
 			}
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }			
 		}
 		effect = {
 			treasury = -10
@@ -364,10 +356,6 @@ decisions = {
 			is_ruler = yes
 			is_feudal = yes
 			religion_group = christian
-			NOT = { has_character_modifier = holding_large_feast }
-			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }
-			NOT = { has_character_flag = holding_epic_tournament }
 			NOT = {
 				has_character_modifier = summer_fair_timer
 			}
@@ -383,6 +371,9 @@ decisions = {
 			NOT = {
 				month = 7
 			}
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }			
 		}
 		effect = {
 			treasury = -20
@@ -424,10 +415,6 @@ decisions = {
 			is_feudal = yes
 			age = 16
 			is_female = no
-			NOT = { has_character_modifier = holding_large_feast }
-			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }
-			NOT = { has_character_flag = holding_epic_tournament }
 			NOT = {
 				has_character_modifier = grand_hunt_timer
 			}
@@ -441,6 +428,9 @@ decisions = {
 			NOT = { month = 10 }
 			NOT = {	health_traits = 1 }
 			prisoner = no
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }			
 		}
 		effect = {
 			treasury = -5
@@ -467,10 +457,6 @@ decisions = {
 			is_feudal = yes
 			age = 16
 			is_female = no
-			NOT = { has_character_modifier = holding_large_feast }
-			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }
-			NOT = { has_character_flag = holding_epic_tournament }
 			NOT = {
 				has_character_modifier = grand_hunt_timer
 			}
@@ -484,6 +470,9 @@ decisions = {
 			NOT = { month = 10 }
 			NOT = {	health_traits = 1 }
 			prisoner = no
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }			
 		}
 		effect = {
 			treasury = -10
@@ -523,10 +512,6 @@ decisions = {
 			is_feudal = yes
 			age = 16
 			is_female = no
-			NOT = { has_character_modifier = holding_large_feast }
-			NOT = { has_character_modifier = holding_summer_fair }
-			NOT = { has_character_modifier = holding_grand_hunt }
-			NOT = { has_character_flag = holding_epic_tournament }
 			NOT = {
 				has_character_modifier = grand_hunt_timer
 			}
@@ -540,6 +525,9 @@ decisions = {
 			NOT = { month = 10 }
 			NOT = {	health_traits = 1 }
 			prisoner = no
+			NOT = { has_character_modifier = holding_large_feast }
+			NOT = { has_character_modifier = holding_summer_fair }
+			NOT = { has_character_modifier = holding_grand_hunt }			
 		}
 		effect = {
 			treasury = -20

@@ -13,11 +13,934 @@ character_event = {
 	}
 	
 	immediate = {
-		set_character_flag = education_trait_given
-		
+		#INTRIGUE EDUCATION
+		#guardian is amateurish_plotter
+		if = {
+			limit = {
+				guardian = { trait = amateurish_plotter }
+			}
+			#high intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					intrigue = 10
+				}
+				random_list = {
+					40 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					25 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					20 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					15 = { set_character_flag = education_trait_given add_trait = elusive_shadow }	
+				}
+			}
+			#mediocre intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					intrigue = 5
+					NOT = { intrigue = 10 }
+				}
+				random_list = {
+					45 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					30 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					15 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					10 = { set_character_flag = education_trait_given add_trait = elusive_shadow }		
+				}
+			}	
+			#bad intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { intrigue = 5 }
+				}
+				random_list = {
+					50 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					35 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					10 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					5 = { set_character_flag = education_trait_given add_trait = elusive_shadow }		
+				}
+			}			
+		}
+		#guardian is flamboyant_schemer
+		if = {
+			limit = {
+				guardian = { trait = flamboyant_schemer }
+			}
+			#high intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					intrigue = 10
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					40 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					25 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					20 = { set_character_flag = education_trait_given add_trait = elusive_shadow }		
+				}
+			}
+			#mediocre intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					intrigue = 5
+					NOT = { intrigue = 10 }
+				}
+				random_list = {
+					20 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					45 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					20 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					15 = { set_character_flag = education_trait_given add_trait = elusive_shadow }		
+				}			
+			}	
+			#bad intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { intrigue = 5 }
+				}
+				random_list = {
+					25 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					40 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					15 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					10 = { set_character_flag = education_trait_given add_trait = elusive_shadow }
+				}
+			}			
+		}		
+		#guardian is intricate_webweaver
+		if = {
+			limit = {
+				guardian = { trait = intricate_webweaver }
+			}
+			#high intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					intrigue = 10
+				}
+				random_list = {
+					10 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					30 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					35 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					25 = { set_character_flag = education_trait_given add_trait = elusive_shadow }	
+				}
+			}
+			#mediocre intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					intrigue = 5
+					NOT = { intrigue = 10 }
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					35 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					30 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					20 = { set_character_flag = education_trait_given add_trait = elusive_shadow }		
+				}
+			}	
+			#bad intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { intrigue = 5 }
+				}
+				random_list = {
+					20 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					40 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					25 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					15 = { set_character_flag = education_trait_given add_trait = elusive_shadow }	
+				}
+			}			
+		}
+		#guardian is elusive_shadow
+		if = {
+			limit = {
+				guardian = { trait = elusive_shadow }
+			}
+			#high intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					intrigue = 10
+				}
+				random_list = {
+					5 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					15 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					45 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					30 = { set_character_flag = education_trait_given add_trait = elusive_shadow }	
+				}
+			}
+			#mediocre intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					intrigue = 5
+					NOT = { intrigue = 10 }
+				}
+				random_list = {
+					10 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					25 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					40 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					25 = { set_character_flag = education_trait_given add_trait = elusive_shadow }
+				}
+			}	
+			#bad intrigue
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { intrigue = 5 }
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = amateurish_plotter }
+					30 = { set_character_flag = education_trait_given add_trait = flamboyant_schemer }
+					35 = { set_character_flag = education_trait_given add_trait = intricate_webweaver }
+					20 = { set_character_flag = education_trait_given add_trait = elusive_shadow }
+				}
+			}			
+		}
+		#DIPLOMACY EDUCATION
+		#guardian is naive_appeaser
+		if = {
+			limit = {
+				guardian = { trait = naive_appeaser }
+			}
+			#high diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					diplomacy = 10
+				}
+				random_list = {
+					40 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					25 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					20 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					15 = { set_character_flag = education_trait_given add_trait = grey_eminence }	
+				}
+			}
+			#mediocre diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					diplomacy = 5
+					NOT = { diplomacy = 10 }
+				}
+				random_list = {
+					45 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					30 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					15 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					10 = { set_character_flag = education_trait_given add_trait = grey_eminence }		
+				}
+			}	
+			#bad diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { diplomacy = 5 }
+				}
+				random_list = {
+					50 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					35 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					10 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					5 = { set_character_flag = education_trait_given add_trait = grey_eminence }		
+				}
+			}			
+		}
+		#guardian is underhanded_rogue
+		if = {
+			limit = {
+				guardian = { trait = underhanded_rogue }
+			}
+			#high diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					diplomacy = 10
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					40 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					25 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					20 = { set_character_flag = education_trait_given add_trait = grey_eminence }		
+				}
+			}
+			#mediocre diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					diplomacy = 5
+					NOT = { diplomacy = 10 }
+				}
+				random_list = {
+					20 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					45 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					20 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					15 = { set_character_flag = education_trait_given add_trait = grey_eminence }		
+				}			
+			}	
+			#bad diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { diplomacy = 5 }
+				}
+				random_list = {
+					25 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					40 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					15 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					10 = { set_character_flag = education_trait_given add_trait = grey_eminence }
+				}
+			}			
+		}		
+		#guardian is charismatic_negotiator
+		if = {
+			limit = {
+				guardian = { trait = charismatic_negotiator }
+			}
+			#high diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					diplomacy = 10
+				}
+				random_list = {
+					10 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					25 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					40 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					25 = { set_character_flag = education_trait_given add_trait = grey_eminence }	
+				}
+			}
+			#mediocre diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					diplomacy = 5
+					NOT = { diplomacy = 10 }
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					30 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					45 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					20 = { set_character_flag = education_trait_given add_trait = grey_eminence }		
+				}
+			}	
+			#bad diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { diplomacy = 5 }
+				}
+				random_list = {
+					20 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					35 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					30 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					15 = { set_character_flag = education_trait_given add_trait = grey_eminence }	
+				}
+			}			
+		}
+		#guardian is grey_eminence
+		if = {
+			limit = {
+				guardian = { trait = grey_eminence }
+			}
+			#high diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					diplomacy = 10
+				}
+				random_list = {
+					5 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					15 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					45 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					30 = { set_character_flag = education_trait_given add_trait = grey_eminence }	
+				}
+			}
+			#mediocre diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					diplomacy = 5
+					NOT = { diplomacy = 10 }
+				}
+				random_list = {
+					10 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					25 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					40 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					25 = { set_character_flag = education_trait_given add_trait = grey_eminence }
+				}
+			}	
+			#bad diplomacy
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { diplomacy = 5 }
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = naive_appeaser }
+					30 = { set_character_flag = education_trait_given add_trait = underhanded_rogue }
+					35 = { set_character_flag = education_trait_given add_trait = charismatic_negotiator }
+					30 = { set_character_flag = education_trait_given add_trait = grey_eminence }
+				}
+			}			
+		}	
+		#STEWARDSHIP EDUCATION
+		#guardian is indulgent_wastrel
+		if = {
+			limit = {
+				guardian = { trait = indulgent_wastrel }
+			}
+			#high stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					stewardship = 10
+				}
+				random_list = {
+					40 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					25 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					20 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					15 = { set_character_flag = education_trait_given add_trait = midas_touched }	
+				}
+			}
+			#mediocre stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					stewardship = 5
+					NOT = { stewardship = 10 }
+				}
+				random_list = {
+					45 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					30 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					15 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					10 = { set_character_flag = education_trait_given add_trait = midas_touched }		
+				}
+			}	
+			#bad stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { stewardship = 5 }
+				}
+				random_list = {
+					50 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					35 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					10 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					5 = { set_character_flag = education_trait_given add_trait = midas_touched }		
+				}
+			}			
+		}
+		#guardian is thrifty_clerk
+		if = {
+			limit = {
+				guardian = { trait = thrifty_clerk }
+			}
+			#high stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					stewardship = 10
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					40 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					25 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					20 = { set_character_flag = education_trait_given add_trait = midas_touched }		
+				}
+			}
+			#mediocre stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					stewardship = 5
+					NOT = { stewardship = 10 }
+				}
+				random_list = {
+					20 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					45 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					20 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					15 = { set_character_flag = education_trait_given add_trait = midas_touched }		
+				}			
+			}	
+			#bad stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { stewardship = 5 }
+				}
+				random_list = {
+					25 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					40 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					15 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					10 = { set_character_flag = education_trait_given add_trait = midas_touched }
+				}
+			}			
+		}		
+		#guardian is fortune_builder
+		if = {
+			limit = {
+				guardian = { trait = fortune_builder }
+			}
+			#high stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					stewardship = 10
+				}
+				random_list = {
+					10 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					25 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					40 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					25 = { set_character_flag = education_trait_given add_trait = midas_touched }	
+				}
+			}
+			#mediocre stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					stewardship = 5
+					NOT = { stewardship = 10 }
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					30 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					35 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					20 = { set_character_flag = education_trait_given add_trait = midas_touched }		
+				}
+			}	
+			#bad stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { stewardship = 5 }
+				}
+				random_list = {
+					20 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					35 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					30 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					15 = { set_character_flag = education_trait_given add_trait = midas_touched }	
+				}
+			}			
+		}
+		#guardian is midas_touched
+		if = {
+			limit = {
+				guardian = { trait = midas_touched }
+			}
+			#high stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					stewardship = 10
+				}
+				random_list = {
+					5 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					15 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					45 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					30 = { set_character_flag = education_trait_given add_trait = midas_touched }	
+				}
+			}
+			#mediocre stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					stewardship = 5
+					NOT = { stewardship = 10 }
+				}
+				random_list = {
+					10 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					25 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					40 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					25 = { set_character_flag = education_trait_given add_trait = midas_touched }
+				}
+			}	
+			#bad stewardship
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { stewardship = 5 }
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = indulgent_wastrel }
+					30 = { set_character_flag = education_trait_given add_trait = thrifty_clerk }
+					35 = { set_character_flag = education_trait_given add_trait = fortune_builder }
+					20 = { set_character_flag = education_trait_given add_trait = midas_touched }
+				}
+			}			
+		}
+		#MARTIAL EDUCATION
+		#guardian is misguided_warrior
+		if = {
+			limit = {
+				guardian = { trait = misguided_warrior }
+			}
+			#high martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					martial = 10
+				}
+				random_list = {
+					40 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					25 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					20 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					15 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }	
+				}
+			}
+			#mediocre martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					martial = 5
+					NOT = { martial = 10 }
+				}
+				random_list = {
+					45 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					30 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					15 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					10 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }		
+				}
+			}	
+			#bad martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { martial = 5 }
+				}
+				random_list = {
+					50 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					35 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					10 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					5 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }		
+				}
+			}			
+		}
+		#guardian is tough_soldier
+		if = {
+			limit = {
+				guardian = { trait = tough_soldier }
+			}
+			#high martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					martial = 10
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					40 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					25 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					20 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }		
+				}
+			}
+			#mediocre martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					martial = 5
+					NOT = { martial = 10 }
+				}
+				random_list = {
+					20 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					45 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					20 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					15 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }		
+				}			
+			}	
+			#bad martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { martial = 5 }
+				}
+				random_list = {
+					25 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					40 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					15 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					10 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }
+				}
+			}			
+		}		
+		#guardian is skilled_tactician
+		if = {
+			limit = {
+				guardian = { trait = skilled_tactician }
+			}
+			#high martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					martial = 10
+				}
+				random_list = {
+					10 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					25 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					40 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					25 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }	
+				}
+			}
+			#mediocre martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					martial = 5
+					NOT = { martial = 10 }
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					30 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					35 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					20 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }		
+				}
+			}	
+			#bad martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { martial = 5 }
+				}
+				random_list = {
+					20 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					35 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					30 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					15 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }	
+				}
+			}			
+		}
+		#guardian is brilliant_strategist
+		if = {
+			limit = {
+				guardian = { trait = brilliant_strategist }
+			}
+			#high martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					martial = 10
+				}
+				random_list = {
+					5 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					15 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					45 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					30 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }	
+				}
+			}
+			#mediocre martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					martial = 5
+					NOT = { martial = 10 }
+				}
+				random_list = {
+					10 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					25 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					40 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					35 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }
+				}
+			}	
+			#bad martial
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { martial = 5 }
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = misguided_warrior }
+					30 = { set_character_flag = education_trait_given add_trait = tough_soldier }
+					35 = { set_character_flag = education_trait_given add_trait = skilled_tactician }
+					30 = { set_character_flag = education_trait_given add_trait = brilliant_strategist }
+				}
+			}			
+		}
+		#LEARNING EDUCATION
+		#guardian is detached_priest
+		if = {
+			limit = {
+				guardian = { trait = detached_priest }
+			}
+			#high learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					learning = 10
+				}
+				random_list = {
+					40 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					25 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					20 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					15 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }	
+				}
+			}
+			#mediocre learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					learning = 5
+					NOT = { learning = 10 }
+				}
+				random_list = {
+					45 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					30 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					15 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					10 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }		
+				}
+			}	
+			#bad learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { learning = 5 }
+				}
+				random_list = {
+					50 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					35 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					10 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					5 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }		
+				}
+			}			
+		}
+		#guardian is martial_cleric
+		if = {
+			limit = {
+				guardian = { trait = martial_cleric }
+			}
+			#high learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					learning = 10
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					40 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					25 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					20 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }		
+				}
+			}
+			#mediocre learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					learning = 5
+					NOT = { learning = 10 }
+				}
+				random_list = {
+					20 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					45 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					20 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					15 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }		
+				}			
+			}	
+			#bad learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { learning = 5 }
+				}
+				random_list = {
+					25 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					40 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					15 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					10 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }
+				}
+			}			
+		}		
+		#guardian is scholarly_theologian
+		if = {
+			limit = {
+				guardian = { trait = scholarly_theologian }
+			}
+			#high learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					learning = 10
+				}
+				random_list = {
+					10 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					25 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					40 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					25 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }	
+				}
+			}
+			#mediocre learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					learning = 5
+					NOT = { learning = 10 }
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					30 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					35 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					20 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }		
+				}
+			}	
+			#bad learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { learning = 5 }
+				}
+				random_list = {
+					20 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					35 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					30 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					15 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }	
+				}
+			}			
+		}
+		#guardian is mastermind_theologian
+		if = {
+			limit = {
+				guardian = { trait = mastermind_theologian }
+			}
+			#high learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					learning = 10
+				}
+				random_list = {
+					5 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					15 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					45 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					30 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }	
+				}
+			}
+			#mediocre learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					learning = 5
+					NOT = { learning = 10 }
+				}
+				random_list = {
+					10 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					25 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					40 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					35 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }
+				}
+			}	
+			#bad learning
+			if = {
+				limit = {
+					NOT = { has_character_flag = education_trait_given }
+					NOT = { learning = 5 }
+				}
+				random_list = {
+					15 = { set_character_flag = education_trait_given add_trait = detached_priest }
+					30 = { set_character_flag = education_trait_given add_trait = martial_cleric }
+					35 = { set_character_flag = education_trait_given add_trait = scholarly_theologian }
+					30 = { set_character_flag = education_trait_given add_trait = mastermind_theologian }
+				}
+			}			
+		}	
 		#no guardian: randomize, favor bad traits
 		if = {
-			limit = { has_guardian = no }
+			limit = { NOT = { has_character_flag = education_trait_given } }
 			random_list = {
 				70 = { add_trait = amateurish_plotter }
 				20 = { add_trait = flamboyant_schemer }
@@ -35,871 +958,7 @@ character_event = {
 				20 = { add_trait = martial_cleric }
 				10 = { add_trait = scholarly_theologian }				
 			}
-		}
-		#INTRIGUE EDUCATION
-		#guardian is amateurish_plotter
-		if = {
-			limit = {
-				guardian = { trait = amateurish_plotter }
-			}
-			#high intrigue
-			if = {
-				limit = {
-					intrigue = 10
-				}
-				random_list = {
-					40 = { add_trait = amateurish_plotter }
-					25 = { add_trait = flamboyant_schemer }
-					20 = { add_trait = intricate_webweaver }
-					15 = { add_trait = elusive_shadow }	
-				}
-			}
-			#mediocre intrigue
-			if = {
-				limit = {
-					intrigue = 5
-					NOT = { intrigue = 10 }
-				}
-				random_list = {
-					45 = { add_trait = amateurish_plotter }
-					30 = { add_trait = flamboyant_schemer }
-					15 = { add_trait = intricate_webweaver }
-					10 = { add_trait = elusive_shadow }		
-				}
-			}	
-			#bad intrigue
-			if = {
-				limit = {
-					NOT = { intrigue = 5 }
-				}
-				random_list = {
-					50 = { add_trait = amateurish_plotter }
-					35 = { add_trait = flamboyant_schemer }
-					10 = { add_trait = intricate_webweaver }
-					5 = { add_trait = elusive_shadow }		
-				}
-			}			
-		}
-		#guardian is flamboyant_schemer
-		if = {
-			limit = {
-				guardian = { trait = flamboyant_schemer }
-			}
-			#high intrigue
-			if = {
-				limit = {
-					intrigue = 10
-				}
-				random_list = {
-					15 = { add_trait = amateurish_plotter }
-					40 = { add_trait = flamboyant_schemer }
-					25 = { add_trait = intricate_webweaver }
-					20 = { add_trait = elusive_shadow }		
-				}
-			}
-			#mediocre intrigue
-			if = {
-				limit = {
-					intrigue = 5
-					NOT = { intrigue = 10 }
-				}
-				random_list = {
-					20 = { add_trait = amateurish_plotter }
-					45 = { add_trait = flamboyant_schemer }
-					20 = { add_trait = intricate_webweaver }
-					15 = { add_trait = elusive_shadow }		
-				}			
-			}	
-			#bad intrigue
-			if = {
-				limit = {
-					NOT = { intrigue = 5 }
-				}
-				random_list = {
-					25 = { add_trait = amateurish_plotter }
-					40 = { add_trait = flamboyant_schemer }
-					15 = { add_trait = intricate_webweaver }
-					10 = { add_trait = elusive_shadow }
-				}
-			}			
-		}		
-		#guardian is intricate_webweaver
-		if = {
-			limit = {
-				guardian = { trait = intricate_webweaver }
-			}
-			#high intrigue
-			if = {
-				limit = {
-					intrigue = 10
-				}
-				random_list = {
-					10 = { add_trait = amateurish_plotter }
-					20 = { add_trait = flamboyant_schemer }
-					45 = { add_trait = intricate_webweaver }
-					25 = { add_trait = elusive_shadow }	
-				}
-			}
-			#mediocre intrigue
-			if = {
-				limit = {
-					intrigue = 5
-					NOT = { intrigue = 10 }
-				}
-				random_list = {
-					15 = { add_trait = amateurish_plotter }
-					25 = { add_trait = flamboyant_schemer }
-					40 = { add_trait = intricate_webweaver }
-					20 = { add_trait = elusive_shadow }		
-				}
-			}	
-			#bad intrigue
-			if = {
-				limit = {
-					NOT = { intrigue = 5 }
-				}
-				random_list = {
-					20 = { add_trait = amateurish_plotter }
-					30 = { add_trait = flamboyant_schemer }
-					35 = { add_trait = intricate_webweaver }
-					15 = { add_trait = elusive_shadow }	
-				}
-			}			
-		}
-		#guardian is elusive_shadow
-		if = {
-			limit = {
-				guardian = { trait = elusive_shadow }
-			}
-			#high intrigue
-			if = {
-				limit = {
-					intrigue = 10
-				}
-				random_list = {
-					5 = { add_trait = amateurish_plotter }
-					10 = { add_trait = flamboyant_schemer }
-					45 = { add_trait = intricate_webweaver }
-					35 = { add_trait = elusive_shadow }	
-				}
-			}
-			#mediocre intrigue
-			if = {
-				limit = {
-					intrigue = 5
-					NOT = { intrigue = 10 }
-				}
-				random_list = {
-					10 = { add_trait = amateurish_plotter }
-					20 = { add_trait = flamboyant_schemer }
-					40 = { add_trait = intricate_webweaver }
-					30 = { add_trait = elusive_shadow }
-				}
-			}	
-			#bad intrigue
-			if = {
-				limit = {
-					NOT = { intrigue = 5 }
-				}
-				random_list = {
-					15 = { add_trait = amateurish_plotter }
-					25 = { add_trait = flamboyant_schemer }
-					35 = { add_trait = intricate_webweaver }
-					25 = { add_trait = elusive_shadow }
-				}
-			}			
-		}
-		#DIPLOMACY EDUCATION
-		#guardian is naive_appeaser
-		if = {
-			limit = {
-				guardian = { trait = naive_appeaser }
-			}
-			#high diplomacy
-			if = {
-				limit = {
-					diplomacy = 10
-				}
-				random_list = {
-					40 = { add_trait = naive_appeaser }
-					25 = { add_trait = underhanded_rogue }
-					20 = { add_trait = charismatic_negotiator }
-					15 = { add_trait = grey_eminence }	
-				}
-			}
-			#mediocre diplomacy
-			if = {
-				limit = {
-					diplomacy = 5
-					NOT = { diplomacy = 10 }
-				}
-				random_list = {
-					45 = { add_trait = naive_appeaser }
-					30 = { add_trait = underhanded_rogue }
-					15 = { add_trait = charismatic_negotiator }
-					10 = { add_trait = grey_eminence }		
-				}
-			}	
-			#bad diplomacy
-			if = {
-				limit = {
-					NOT = { diplomacy = 5 }
-				}
-				random_list = {
-					50 = { add_trait = naive_appeaser }
-					35 = { add_trait = underhanded_rogue }
-					10 = { add_trait = charismatic_negotiator }
-					5 = { add_trait = grey_eminence }		
-				}
-			}			
-		}
-		#guardian is underhanded_rogue
-		if = {
-			limit = {
-				guardian = { trait = underhanded_rogue }
-			}
-			#high diplomacy
-			if = {
-				limit = {
-					diplomacy = 10
-				}
-				random_list = {
-					15 = { add_trait = naive_appeaser }
-					40 = { add_trait = underhanded_rogue }
-					25 = { add_trait = charismatic_negotiator }
-					20 = { add_trait = grey_eminence }		
-				}
-			}
-			#mediocre diplomacy
-			if = {
-				limit = {
-					diplomacy = 5
-					NOT = { diplomacy = 10 }
-				}
-				random_list = {
-					20 = { add_trait = naive_appeaser }
-					45 = { add_trait = underhanded_rogue }
-					20 = { add_trait = charismatic_negotiator }
-					15 = { add_trait = grey_eminence }		
-				}			
-			}	
-			#bad diplomacy
-			if = {
-				limit = {
-					NOT = { diplomacy = 5 }
-				}
-				random_list = {
-					25 = { add_trait = naive_appeaser }
-					40 = { add_trait = underhanded_rogue }
-					15 = { add_trait = charismatic_negotiator }
-					10 = { add_trait = grey_eminence }
-				}
-			}			
-		}		
-		#guardian is charismatic_negotiator
-		if = {
-			limit = {
-				guardian = { trait = charismatic_negotiator }
-			}
-			#high diplomacy
-			if = {
-				limit = {
-					diplomacy = 10
-				}
-				random_list = {
-					10 = { add_trait = naive_appeaser }
-					20 = { add_trait = underhanded_rogue }
-					45 = { add_trait = charismatic_negotiator }
-					25 = { add_trait = grey_eminence }	
-				}
-			}
-			#mediocre diplomacy
-			if = {
-				limit = {
-					diplomacy = 5
-					NOT = { diplomacy = 10 }
-				}
-				random_list = {
-					15 = { add_trait = naive_appeaser }
-					25 = { add_trait = underhanded_rogue }
-					40 = { add_trait = charismatic_negotiator }
-					20 = { add_trait = grey_eminence }		
-				}
-			}	
-			#bad diplomacy
-			if = {
-				limit = {
-					NOT = { diplomacy = 5 }
-				}
-				random_list = {
-					20 = { add_trait = naive_appeaser }
-					30 = { add_trait = underhanded_rogue }
-					35 = { add_trait = charismatic_negotiator }
-					15 = { add_trait = grey_eminence }	
-				}
-			}			
-		}
-		#guardian is grey_eminence
-		if = {
-			limit = {
-				guardian = { trait = grey_eminence }
-			}
-			#high diplomacy
-			if = {
-				limit = {
-					diplomacy = 10
-				}
-				random_list = {
-					5 = { add_trait = naive_appeaser }
-					10 = { add_trait = underhanded_rogue }
-					45 = { add_trait = charismatic_negotiator }
-					35 = { add_trait = grey_eminence }	
-				}
-			}
-			#mediocre diplomacy
-			if = {
-				limit = {
-					diplomacy = 5
-					NOT = { diplomacy = 10 }
-				}
-				random_list = {
-					10 = { add_trait = naive_appeaser }
-					20 = { add_trait = underhanded_rogue }
-					40 = { add_trait = charismatic_negotiator }
-					30 = { add_trait = grey_eminence }
-				}
-			}	
-			#bad diplomacy
-			if = {
-				limit = {
-					NOT = { diplomacy = 5 }
-				}
-				random_list = {
-					15 = { add_trait = naive_appeaser }
-					25 = { add_trait = underhanded_rogue }
-					35 = { add_trait = charismatic_negotiator }
-					25 = { add_trait = grey_eminence }
-				}
-			}			
-		}	
-		#STEWARDSHIP EDUCATION
-		#guardian is indulgent_wastrel
-		if = {
-			limit = {
-				guardian = { trait = indulgent_wastrel }
-			}
-			#high stewardship
-			if = {
-				limit = {
-					stewardship = 10
-				}
-				random_list = {
-					40 = { add_trait = indulgent_wastrel }
-					25 = { add_trait = thrifty_clerk }
-					20 = { add_trait = fortune_builder }
-					15 = { add_trait = midas_touched }	
-				}
-			}
-			#mediocre stewardship
-			if = {
-				limit = {
-					stewardship = 5
-					NOT = { stewardship = 10 }
-				}
-				random_list = {
-					45 = { add_trait = indulgent_wastrel }
-					30 = { add_trait = thrifty_clerk }
-					15 = { add_trait = fortune_builder }
-					10 = { add_trait = midas_touched }		
-				}
-			}	
-			#bad stewardship
-			if = {
-				limit = {
-					NOT = { stewardship = 5 }
-				}
-				random_list = {
-					50 = { add_trait = indulgent_wastrel }
-					35 = { add_trait = thrifty_clerk }
-					10 = { add_trait = fortune_builder }
-					5 = { add_trait = midas_touched }		
-				}
-			}			
-		}
-		#guardian is thrifty_clerk
-		if = {
-			limit = {
-				guardian = { trait = thrifty_clerk }
-			}
-			#high stewardship
-			if = {
-				limit = {
-					stewardship = 10
-				}
-				random_list = {
-					15 = { add_trait = indulgent_wastrel }
-					40 = { add_trait = thrifty_clerk }
-					25 = { add_trait = fortune_builder }
-					20 = { add_trait = midas_touched }		
-				}
-			}
-			#mediocre stewardship
-			if = {
-				limit = {
-					stewardship = 5
-					NOT = { stewardship = 10 }
-				}
-				random_list = {
-					20 = { add_trait = indulgent_wastrel }
-					45 = { add_trait = thrifty_clerk }
-					20 = { add_trait = fortune_builder }
-					15 = { add_trait = midas_touched }		
-				}			
-			}	
-			#bad stewardship
-			if = {
-				limit = {
-					NOT = { stewardship = 5 }
-				}
-				random_list = {
-					25 = { add_trait = indulgent_wastrel }
-					40 = { add_trait = thrifty_clerk }
-					15 = { add_trait = fortune_builder }
-					10 = { add_trait = midas_touched }
-				}
-			}			
-		}		
-		#guardian is fortune_builder
-		if = {
-			limit = {
-				guardian = { trait = fortune_builder }
-			}
-			#high stewardship
-			if = {
-				limit = {
-					stewardship = 10
-				}
-				random_list = {
-					10 = { add_trait = indulgent_wastrel }
-					20 = { add_trait = thrifty_clerk }
-					45 = { add_trait = fortune_builder }
-					25 = { add_trait = midas_touched }	
-				}
-			}
-			#mediocre stewardship
-			if = {
-				limit = {
-					stewardship = 5
-					NOT = { stewardship = 10 }
-				}
-				random_list = {
-					15 = { add_trait = indulgent_wastrel }
-					25 = { add_trait = thrifty_clerk }
-					40 = { add_trait = fortune_builder }
-					20 = { add_trait = midas_touched }		
-				}
-			}	
-			#bad stewardship
-			if = {
-				limit = {
-					NOT = { stewardship = 5 }
-				}
-				random_list = {
-					20 = { add_trait = indulgent_wastrel }
-					30 = { add_trait = thrifty_clerk }
-					35 = { add_trait = fortune_builder }
-					15 = { add_trait = midas_touched }	
-				}
-			}			
-		}
-		#guardian is midas_touched
-		if = {
-			limit = {
-				guardian = { trait = midas_touched }
-			}
-			#high stewardship
-			if = {
-				limit = {
-					stewardship = 10
-				}
-				random_list = {
-					5 = { add_trait = indulgent_wastrel }
-					10 = { add_trait = thrifty_clerk }
-					45 = { add_trait = fortune_builder }
-					35 = { add_trait = midas_touched }	
-				}
-			}
-			#mediocre stewardship
-			if = {
-				limit = {
-					stewardship = 5
-					NOT = { stewardship = 10 }
-				}
-				random_list = {
-					10 = { add_trait = indulgent_wastrel }
-					20 = { add_trait = thrifty_clerk }
-					40 = { add_trait = fortune_builder }
-					30 = { add_trait = midas_touched }
-				}
-			}	
-			#bad stewardship
-			if = {
-				limit = {
-					NOT = { stewardship = 5 }
-				}
-				random_list = {
-					15 = { add_trait = indulgent_wastrel }
-					25 = { add_trait = thrifty_clerk }
-					35 = { add_trait = fortune_builder }
-					25 = { add_trait = midas_touched }
-				}
-			}			
-		}
-		#MARTIAL EDUCATION
-		#guardian is misguided_warrior
-		if = {
-			limit = {
-				guardian = { trait = misguided_warrior }
-			}
-			#high martial
-			if = {
-				limit = {
-					martial = 10
-				}
-				random_list = {
-					40 = { add_trait = misguided_warrior }
-					25 = { add_trait = tough_soldier }
-					20 = { add_trait = skilled_tactician }
-					15 = { add_trait = brilliant_strategist }	
-				}
-			}
-			#mediocre martial
-			if = {
-				limit = {
-					martial = 5
-					NOT = { martial = 10 }
-				}
-				random_list = {
-					45 = { add_trait = misguided_warrior }
-					30 = { add_trait = tough_soldier }
-					15 = { add_trait = skilled_tactician }
-					10 = { add_trait = brilliant_strategist }		
-				}
-			}	
-			#bad martial
-			if = {
-				limit = {
-					NOT = { martial = 5 }
-				}
-				random_list = {
-					50 = { add_trait = misguided_warrior }
-					35 = { add_trait = tough_soldier }
-					10 = { add_trait = skilled_tactician }
-					5 = { add_trait = brilliant_strategist }		
-				}
-			}			
-		}
-		#guardian is tough_soldier
-		if = {
-			limit = {
-				guardian = { trait = tough_soldier }
-			}
-			#high martial
-			if = {
-				limit = {
-					martial = 10
-				}
-				random_list = {
-					15 = { add_trait = misguided_warrior }
-					40 = { add_trait = tough_soldier }
-					25 = { add_trait = skilled_tactician }
-					20 = { add_trait = brilliant_strategist }		
-				}
-			}
-			#mediocre martial
-			if = {
-				limit = {
-					martial = 5
-					NOT = { martial = 10 }
-				}
-				random_list = {
-					20 = { add_trait = misguided_warrior }
-					45 = { add_trait = tough_soldier }
-					20 = { add_trait = skilled_tactician }
-					15 = { add_trait = brilliant_strategist }		
-				}			
-			}	
-			#bad martial
-			if = {
-				limit = {
-					NOT = { martial = 5 }
-				}
-				random_list = {
-					25 = { add_trait = misguided_warrior }
-					40 = { add_trait = tough_soldier }
-					15 = { add_trait = skilled_tactician }
-					10 = { add_trait = brilliant_strategist }
-				}
-			}			
-		}		
-		#guardian is skilled_tactician
-		if = {
-			limit = {
-				guardian = { trait = skilled_tactician }
-			}
-			#high martial
-			if = {
-				limit = {
-					martial = 10
-				}
-				random_list = {
-					10 = { add_trait = misguided_warrior }
-					20 = { add_trait = tough_soldier }
-					45 = { add_trait = skilled_tactician }
-					25 = { add_trait = brilliant_strategist }	
-				}
-			}
-			#mediocre martial
-			if = {
-				limit = {
-					martial = 5
-					NOT = { martial = 10 }
-				}
-				random_list = {
-					15 = { add_trait = misguided_warrior }
-					25 = { add_trait = tough_soldier }
-					40 = { add_trait = skilled_tactician }
-					20 = { add_trait = brilliant_strategist }		
-				}
-			}	
-			#bad martial
-			if = {
-				limit = {
-					NOT = { martial = 5 }
-				}
-				random_list = {
-					20 = { add_trait = misguided_warrior }
-					30 = { add_trait = tough_soldier }
-					35 = { add_trait = skilled_tactician }
-					15 = { add_trait = brilliant_strategist }	
-				}
-			}			
-		}
-		#guardian is brilliant_strategist
-		if = {
-			limit = {
-				guardian = { trait = brilliant_strategist }
-			}
-			#high martial
-			if = {
-				limit = {
-					martial = 10
-				}
-				random_list = {
-					5 = { add_trait = misguided_warrior }
-					10 = { add_trait = tough_soldier }
-					45 = { add_trait = skilled_tactician }
-					35 = { add_trait = brilliant_strategist }	
-				}
-			}
-			#mediocre martial
-			if = {
-				limit = {
-					martial = 5
-					NOT = { martial = 10 }
-				}
-				random_list = {
-					10 = { add_trait = misguided_warrior }
-					20 = { add_trait = tough_soldier }
-					40 = { add_trait = skilled_tactician }
-					30 = { add_trait = brilliant_strategist }
-				}
-			}	
-			#bad martial
-			if = {
-				limit = {
-					NOT = { martial = 5 }
-				}
-				random_list = {
-					15 = { add_trait = misguided_warrior }
-					25 = { add_trait = tough_soldier }
-					35 = { add_trait = skilled_tactician }
-					25 = { add_trait = brilliant_strategist }
-				}
-			}			
-		}
-		#LEARNING EDUCATION
-		#guardian is detached_priest
-		if = {
-			limit = {
-				guardian = { trait = detached_priest }
-			}
-			#high learning
-			if = {
-				limit = {
-					learning = 10
-				}
-				random_list = {
-					40 = { add_trait = detached_priest }
-					25 = { add_trait = martial_cleric }
-					20 = { add_trait = scholarly_theologian }
-					15 = { add_trait = mastermind_theologian }	
-				}
-			}
-			#mediocre learning
-			if = {
-				limit = {
-					learning = 5
-					NOT = { learning = 10 }
-				}
-				random_list = {
-					45 = { add_trait = detached_priest }
-					30 = { add_trait = martial_cleric }
-					15 = { add_trait = scholarly_theologian }
-					10 = { add_trait = mastermind_theologian }		
-				}
-			}	
-			#bad learning
-			if = {
-				limit = {
-					NOT = { learning = 5 }
-				}
-				random_list = {
-					50 = { add_trait = detached_priest }
-					35 = { add_trait = martial_cleric }
-					10 = { add_trait = scholarly_theologian }
-					5 = { add_trait = mastermind_theologian }		
-				}
-			}			
-		}
-		#guardian is martial_cleric
-		if = {
-			limit = {
-				guardian = { trait = martial_cleric }
-			}
-			#high learning
-			if = {
-				limit = {
-					learning = 10
-				}
-				random_list = {
-					15 = { add_trait = detached_priest }
-					40 = { add_trait = martial_cleric }
-					25 = { add_trait = scholarly_theologian }
-					20 = { add_trait = mastermind_theologian }		
-				}
-			}
-			#mediocre learning
-			if = {
-				limit = {
-					learning = 5
-					NOT = { learning = 10 }
-				}
-				random_list = {
-					20 = { add_trait = detached_priest }
-					45 = { add_trait = martial_cleric }
-					20 = { add_trait = scholarly_theologian }
-					15 = { add_trait = mastermind_theologian }		
-				}			
-			}	
-			#bad learning
-			if = {
-				limit = {
-					NOT = { learning = 5 }
-				}
-				random_list = {
-					25 = { add_trait = detached_priest }
-					40 = { add_trait = martial_cleric }
-					15 = { add_trait = scholarly_theologian }
-					10 = { add_trait = mastermind_theologian }
-				}
-			}			
-		}		
-		#guardian is scholarly_theologian
-		if = {
-			limit = {
-				guardian = { trait = scholarly_theologian }
-			}
-			#high learning
-			if = {
-				limit = {
-					learning = 10
-				}
-				random_list = {
-					10 = { add_trait = detached_priest }
-					20 = { add_trait = martial_cleric }
-					45 = { add_trait = scholarly_theologian }
-					25 = { add_trait = mastermind_theologian }	
-				}
-			}
-			#mediocre learning
-			if = {
-				limit = {
-					learning = 5
-					NOT = { learning = 10 }
-				}
-				random_list = {
-					15 = { add_trait = detached_priest }
-					25 = { add_trait = martial_cleric }
-					40 = { add_trait = scholarly_theologian }
-					20 = { add_trait = mastermind_theologian }		
-				}
-			}	
-			#bad learning
-			if = {
-				limit = {
-					NOT = { learning = 5 }
-				}
-				random_list = {
-					20 = { add_trait = detached_priest }
-					30 = { add_trait = martial_cleric }
-					35 = { add_trait = scholarly_theologian }
-					15 = { add_trait = mastermind_theologian }	
-				}
-			}			
-		}
-		#guardian is mastermind_theologian
-		if = {
-			limit = {
-				guardian = { trait = mastermind_theologian }
-			}
-			#high learning
-			if = {
-				limit = {
-					learning = 10
-				}
-				random_list = {
-					5 = { add_trait = detached_priest }
-					10 = { add_trait = martial_cleric }
-					45 = { add_trait = scholarly_theologian }
-					35 = { add_trait = mastermind_theologian }	
-				}
-			}
-			#mediocre learning
-			if = {
-				limit = {
-					learning = 5
-					NOT = { learning = 10 }
-				}
-				random_list = {
-					10 = { add_trait = detached_priest }
-					20 = { add_trait = martial_cleric }
-					40 = { add_trait = scholarly_theologian }
-					30 = { add_trait = mastermind_theologian }
-				}
-			}	
-			#bad learning
-			if = {
-				limit = {
-					NOT = { learning = 5 }
-				}
-				random_list = {
-					15 = { add_trait = detached_priest }
-					25 = { add_trait = martial_cleric }
-					35 = { add_trait = scholarly_theologian }
-					25 = { add_trait = mastermind_theologian }
-				}
-			}			
+			set_character_flag = education_trait_given
 		}		
 	}
 	
@@ -1055,10 +1114,10 @@ character_event = {
 	desc = "EVTDESC900001"
 	
 	min_age = 16
+	max_age = 17
 	trigger = {
-		has_global_flag = startup
-		has_character_flag = genetics_check
-		NOT = { has_character_flag = adult }
+		has_character_flag = education_trait_given
+		NOT = { has_character_flag = education_trait_notified }
 	}
 	
 	mean_time_to_happen = {
@@ -1067,7 +1126,7 @@ character_event = {
 
 	option = {
 		name = "OK"
-		set_character_flag = adult
+		set_character_flag = education_trait_notified
 		if = {
 			limit = { trait = regency NOT = { regent = { is_alive = yes } } }
 			remove_trait = regency

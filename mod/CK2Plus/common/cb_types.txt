@@ -831,6 +831,10 @@ claim_on_liege = {
 
 	can_use_title = {
 		OR = {
+			ROOT = { ai = no }
+			holder_scope = { character = FROM }
+		}
+		OR = {
 			FROM = {
 				has_landed_title = PREV
 			}
@@ -841,6 +845,10 @@ claim_on_liege = {
 	}
 
 	is_valid_title = {
+		OR = {
+			ROOT = { ai = no }
+			holder_scope = { character = FROM }
+		}	
 		OR = {
 			FROM = {
 				has_landed_title = PREV
@@ -904,6 +912,22 @@ claim_on_liege = {
 	}
 	
 	on_success_title = {
+		if = {
+			limit = {
+				FROM = {
+					primary_title = {
+						title = PREVPREV
+					}
+				}
+			}
+			FROM = {
+				capital_scope = {
+					county = {
+						usurp_title_plus_barony_if_unlanded = ROOT
+					}
+				}
+			}			
+		}		
 		usurp_title_plus_barony_if_unlanded = ROOT
 		hidden_tooltip = {
 			holder_scope = { character_event = { id = 110017 } }
@@ -1021,6 +1045,22 @@ claim_on_liege_plot = {
 	}
 	
 	on_success_title = {
+		if = {
+			limit = {
+				FROM = {
+					primary_title = {
+						title = PREVPREV
+					}
+				}
+			}
+			FROM = {
+				capital_scope = {
+					county = {
+						usurp_title_plus_barony_if_unlanded = ROOT
+					}
+				}
+			}			
+		}	
 		usurp_title_plus_barony_if_unlanded = ROOT
 		hidden_tooltip = {
 			holder_scope = { character_event = { id = 110017 } }
@@ -1188,6 +1228,22 @@ other_claim_on_liege = {
 	}
 	
 	on_success_title = {
+		if = {
+			limit = {
+				FROM = {
+					primary_title = {
+						title = PREVPREV
+					}
+				}
+			}
+			FROM = {
+				capital_scope = {
+					county = {
+						usurp_title_plus_barony_if_unlanded = ROOT
+					}
+				}
+			}			
+		}	
 		usurp_title_plus_barony_if_unlanded = ROOT
 		hidden_tooltip = {
 			holder_scope = { character_event = { id = 110017 } }
@@ -2075,7 +2131,7 @@ crusade = {
 		ROOT = {
 			can_call_crusade = yes
 			has_called_crusade = no
-			religion_authority = 0.4
+			religion_authority = 0.2
 		}
 		FROM = {
 			NOT = { religion_group = ROOT }
@@ -3389,8 +3445,20 @@ succession_on_liege = {
 	}
 	
 	on_success = {
-		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }
-		FROM = {		
+		ROOT = { add_character_modifier = { name = victory_timer duration = 3 hidden = yes } }		
+		FROM = {
+			if = {
+				limit = {
+					FROM = {
+						higher_tier_than = COUNT
+					}
+				}
+				capital_scope = {
+					county = {
+						usurp_title_plus_barony_if_unlanded = ROOT
+					}
+				}				
+			}		
 			any_demesne_title = {
 				limit = {
 					tier = FROM
@@ -3403,7 +3471,7 @@ succession_on_liege = {
 		}
 	}
 	
-	on_success_title = {
+	on_success_title = {	
 		if = {
 			limit = {
 				OR = {
@@ -3683,6 +3751,22 @@ other_succession_on_liege = {
 	}
 
 	on_success_title = {
+		if = {
+			limit = {
+				FROM = {
+					primary_title = {
+						title = PREVPREV
+					}
+				}
+			}
+			FROM = {
+				capital_scope = {
+					county = {
+						usurp_title_plus_barony_if_unlanded = ROOT
+					}
+				}
+			}			
+		}	
 		usurp_title_plus_barony_if_unlanded = ROOT
 		hidden_tooltip = {
 			holder_scope = { character_event = { id = 110017 } }

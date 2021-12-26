@@ -1035,7 +1035,7 @@ precious_item = {
 }
 
 stop_commerce = {
-	city_tax_modifier = -0.02
+	city_tax_modifier = -0.05
 	icon = 6
 }
 prima_noctae = {
@@ -1049,8 +1049,8 @@ peasants_forbidden_sale = {
 }
 
 clergy_extra_tithe = {
-	temple_tax_modifier = 0.25
-	local_revolt_risk = 0.04
+	local_revolt_risk = 0.02
+	temple_tax_modifier = 0.15
 	icon = 6
 }
 

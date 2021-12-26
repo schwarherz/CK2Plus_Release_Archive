@@ -558,7 +558,7 @@ character_event = {
 			remove_character_modifier = loan_timer 
 			add_character_modifier = {
 				name = "loan_timer"
-				duration = 1825
+				duration = 730
 			}		
 		}		
 	}	
@@ -644,7 +644,7 @@ character_event = {
 			remove_character_modifier = loan_timer 
 			add_character_modifier = {
 				name = "loan_timer"
-				duration = 1825
+				duration = 730
 			}		
 		}
 		custom_tooltip = EVTTOOLTIP38002B

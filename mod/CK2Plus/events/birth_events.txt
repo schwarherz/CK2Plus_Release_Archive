@@ -26,6 +26,7 @@ character_event = {
 		age = 16
 		NOT = { age = 40 }
 		liege = {
+			demesne_size = 1
 			OR = {
 				trait = lustful
 				ROOT = { trait = lustful }				

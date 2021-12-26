@@ -695,7 +695,7 @@
 	add_trait="brave"
 	add_trait="cynical"
 	add_trait="wroth"
-	add_trait="tough_soldier"
+	add_trait="skilled_tactician"
 	father=1128
 	mother=10003
 	1058.1.1 = {
@@ -1059,7 +1059,7 @@
 		add_spouse=367 # Mathilda of Flanders
 	}
 	1066.1.5 = {
-		add_claim=k_england
+		#add_claim=k_england
 	}
 	1066.9.14 = {
 		wealth=1000
@@ -1077,7 +1077,7 @@
 		}
 	}
 	1066.12.25  = {
-		remove_claim=k_england
+		#remove_claim=k_england
 		give_nickname=nick_the_conqueror
 	}
 	1087.9.9 = {
@@ -1914,7 +1914,7 @@
 		birth="1102.1.2"
 	}
 	1135.12.2 = {
-		add_claim=k_england
+		#add_claim=k_england
 	}
 	1167.9.10 = {
 		death="1167.9.10"

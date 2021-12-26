@@ -20990,7 +20990,10 @@ k_egypt = {
 		
 		allow = {
 			NOT = { e_arabia = { holder_scope = { character = ROOT } } }
-			religion_group = christian
+			OR = {
+				religion_group = christian
+				religion = judaism 
+			}
 		}		
 		
 		d_oultrejourdain = {

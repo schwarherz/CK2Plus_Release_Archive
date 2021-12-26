@@ -152,14 +152,7 @@ decisions = {
 	
 	present_debutante = {
 		potential = {
-			OR = {
-				ai = no
-				NOT = { has_character_flag = employed_debutante }
-			}
-			OR = {
-				ai = no
-				has_objective = obj_find_lover
-			}	
+			ai = no	
 			is_female = no
 			is_ruler = yes
 			age = 16			
@@ -197,10 +190,7 @@ decisions = {
 	
 	employ_concubine = {
 		potential = {
-			OR = {
-				ai = no
-				NOT = { has_character_flag = employed_concubine }
-			}
+			ai = no
 			is_female = no
 			is_ruler = yes
 			age = 16
@@ -226,12 +216,12 @@ decisions = {
 			new_character = {
 				give_minor_title = title_concubine
 			}
-			set_character_flag = employed_concubine	
 			add_character_modifier = {
 				name = employment_timer
 				duration = 180
 				hidden = yes
-			}			
+			}
+			set_character_flag = employed_concubine	
 		}
 		revoke_allowed = {
 			always = no

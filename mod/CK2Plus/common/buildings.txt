@@ -1748,9 +1748,9 @@ castle = {
 	ca_culture_group_arabic_1 = {
 		potential = {
 			FROM = {
-				culture_group = arabic
+				culture_group = arabic_group
 			}
-			culture_group = arabic
+			culture_group = arabic_group
 		}
 		prerequisites = { ca_wall_1 }
 		build_cost = 200
@@ -1768,9 +1768,9 @@ castle = {
 	ca_culture_group_arabic_2 = {
 		potential = {
 			FROM = {
-				culture_group = arabic
+				culture_group = arabic_group
 			}
-			culture_group = arabic
+			culture_group = arabic_group
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
@@ -1791,9 +1791,9 @@ castle = {
 	ca_culture_group_arabic_3 = {
 		potential = {
 			FROM = {
-				culture_group = arabic
+				culture_group = arabic_group
 			}
-			culture_group = arabic
+			culture_group = arabic_group
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 4
@@ -1814,9 +1814,9 @@ castle = {
 	ca_culture_group_arabic_4 = {
 		potential = {
 			FROM = {
-				culture_group = arabic
+				culture_group = arabic_group
 			}
-			culture_group = arabic
+			culture_group = arabic_group
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 5

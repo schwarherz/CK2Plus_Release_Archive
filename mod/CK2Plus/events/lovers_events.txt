@@ -473,7 +473,7 @@ character_event = {
 	picture = GFX_evt_lovers
 	
 	prisoner = no
-	min_age = 12
+	min_age = 16
 	max_age = 18
 	
 	is_triggered_only = yes
@@ -496,7 +496,7 @@ character_event = {
 			prisoner = no
 			is_abroad = no
 			is_pregnant = no
-			age = 12
+			age = 16
 			NOT = {
 				trait = homosexual
 			}
@@ -540,7 +540,7 @@ character_event = {
 		}
 		random_courtier = {
 			limit = {
-				age = 12
+				age = 16
 				is_female = yes
 				is_married = no
 				has_epidemic = no
@@ -586,7 +586,7 @@ character_event = {
 		}
 		random_courtier = {
 			limit = {
-				age = 12
+				age = 16
 				is_female = yes
 				is_married = no
 				has_epidemic = no
@@ -1402,38 +1402,59 @@ character_event = {
 	trigger = {
 		has_lover = yes
 		OR = {
-			AND = {
-				trait = homosexual
-				OR = {
-					AND = {
-						is_female = yes
-						lover = { is_female = no }
-					}
-					AND = {
-						is_female = no
-						lover = { is_female = yes }
-					}					
-				}
-			}
-			lover = {
-				NOT = {
-					opinion = { who = ROOT value = 25 }
-				}
-			}
-			lover = {
-				NOT = {
-					reverse_opinion = { who = ROOT value = 25 }
-				}
-			}
-			has_character_flag = lost_loving_feeling
-			trait = lustful
-			lover = { NOT = { same_realm = ROOT } }
+			is_ruler = yes
+			lover = { is_ruler = no }
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 240
 
+		months = 1000
+
+		modifier = {
+			factor = 1.5
+			lover = {
+				NOT = {
+					age = 20
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			lover = {
+				NOT = {
+					age = 30
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			lover = {
+				age = 45
+			}
+		}
+		modifier = {
+			factor = 0.5
+			lover = {
+				age = 60
+			}
+		}		
+		modifier = {
+			factor = 0.5
+			lover = {
+				NOT = {
+					opinion = { who = ROOT value = 0 }
+				}
+			}
+		}	
+		modifier = {
+			factor = 0.5			
+			lover = {
+				NOT = {
+					reverse_opinion = { who = ROOT value = 0 }
+				}
+			}	
+		}
 		modifier = {
 			factor = 0.5
 			lover = {
@@ -1451,11 +1472,27 @@ character_event = {
 			}	
 		}
 		modifier = {
-			factor = 0.05
+			factor = 0.5
+			lover = {
+				NOT = {
+					opinion = { who = ROOT value = 50 }
+				}
+			}
+		}	
+		modifier = {
+			factor = 0.5			
+			lover = {
+				NOT = {
+					reverse_opinion = { who = ROOT value = 50 }
+				}
+			}	
+		}		
+		modifier = {
+			factor = 0.01
 			has_character_flag = lost_loving_feeling
 		}
 		modifier = {
-			factor = 0.05
+			factor = 0.01
 			trait = homosexual
 			OR = {
 				AND = {
@@ -1469,13 +1506,20 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 0.05
+			factor = 0.01
 			lover = { NOT = { same_realm = ROOT } }
-		}	
+		}
 		modifier = {
-			factor = 0.8
-			trait = lustful
+			factor = 4.0
+			trait = chaste
 		}		
+		modifier = {
+			factor = 0.25
+			OR = {
+				trait = lustful
+				trait = hedonist
+			}
+		}			
 		modifier = {
 			factor = 0.8
 			trait = wroth
@@ -2007,6 +2051,8 @@ character_event = {
 		war = no
 		in_command = no
 		is_married = yes
+		NOT = { trait = lustful }
+		NOT = { trait = cruel }
 		spouse = {
 			is_alive = yes
 			is_abroad = no
@@ -2136,6 +2182,7 @@ character_event = {
 	trigger = {
 		war = no
 		in_command = no
+		is_female = no
 		is_married = yes
 		spouse = {
 			is_alive = yes
@@ -2144,11 +2191,13 @@ character_event = {
 		}
 		fertility = 0.5
 		lover = {
+			age = 16
 			NOT = {
 				spouse = {
 					character = ROOT
 				}
 			}
+			is_female = yes
 			is_pregnant = no
 		}
 	}
@@ -2290,11 +2339,13 @@ character_event = {
 		}
 		fertility = 0.5
 		lover = {
+			age = 16
 			NOT = {
 				spouse = {
 					character = ROOT
 				}
 			}
+			is_female = yes			
 			is_pregnant = no
 		}
 	}
@@ -2724,6 +2775,8 @@ character_event = {
 		trait = stressed
 		fertility = 0.4
 		lover = {
+			age = 16
+			is_female = yes
 			is_pregnant = no
 			NOT = {
 				spouse = {
@@ -3772,6 +3825,7 @@ character_event = {
 		fertility = 0.5
 		NOT = { num_of_children = 5 }
 		lover = {
+			age = 16
 			fertility = 0.5
 			NOT = { 
 				spouse = { character = ROOT } 
@@ -3798,7 +3852,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1000
+		months = 300
 		
 		modifier = {
 			factor = 0.7

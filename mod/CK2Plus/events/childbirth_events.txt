@@ -25,9 +25,9 @@ character_event = {
 			}
 			random_list = {
 				1 = { set_character_flag = mother_died set_character_flag = child_died } #both die
-				1 = { set_character_flag = mother_died } #mother dies
-				1 = { set_character_flag = child_died } #child dies
-				197 = { } #nobody dies
+				2 = { set_character_flag = mother_died } #mother dies
+				2 = { set_character_flag = child_died } #child dies
+				195 = { } #nobody dies
 			}
 		}
 		if = {
@@ -39,9 +39,9 @@ character_event = {
 			}
 			random_list = {
 				1 = { set_character_flag = mother_died set_character_flag = child_died } #both die
-				1 = { set_character_flag = mother_died } #mother dies
-				1 = { set_character_flag = child_died } #child dies
-				97 = { } #nobody dies
+				2 = { set_character_flag = mother_died } #mother dies
+				2 = { set_character_flag = child_died } #child dies
+				95 = { } #nobody dies
 			}
 		}
 		if = {
@@ -52,10 +52,10 @@ character_event = {
 				}
 			}
 			random_list = {
-				3 = { set_character_flag = mother_died set_character_flag = child_died } #both die
-				3 = { set_character_flag = mother_died } #mother dies
-				3 = { set_character_flag = child_died } #child dies
-				91 = { } #nobody dies
+				2 = { set_character_flag = mother_died set_character_flag = child_died } #both die
+				4 = { set_character_flag = mother_died } #mother dies
+				4 = { set_character_flag = child_died } #child dies
+				90 = { } #nobody dies
 			}
 		}
 		if = {
@@ -65,10 +65,10 @@ character_event = {
 				}
 			}
 			random_list = {
-				10 = { set_character_flag = mother_died set_character_flag = child_died } #both die
+				5 = { set_character_flag = mother_died set_character_flag = child_died } #both die
 				10 = { set_character_flag = mother_died } #mother dies
 				10 = { set_character_flag = child_died } #child dies
-				70 = { } #nobody dies
+				75 = { } #nobody dies
 			}
 		}
 		#handle deaths

@@ -1120,7 +1120,7 @@ altaic = {
 	graphical_culture = muslimgfx
 
 	turkish = {
-		graphical_culture = muslimgfx #turkishgfx
+		graphical_culture = muslimgfx
 
 		color = { 0.85 0.55 0.15 }
 
@@ -1171,7 +1171,7 @@ altaic = {
 		modifier = default_culture_modifier
 	}
 	cuman = {
-		graphical_culture = muslimgfx #cumangfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.7 0.45 0.1 }
 
@@ -1189,7 +1189,7 @@ altaic = {
 		modifier = default_culture_modifier
 	}
 	pecheneg = {
-		graphical_culture = muslimgfx #cumangfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.625 0.4 0.1 }
 
@@ -1208,7 +1208,7 @@ altaic = {
 	}
 }
 
-arabic = {
+arabic_group = {
 	graphical_culture = muslimgfx
 	
 	bedouin_arabic = { 
@@ -1236,7 +1236,7 @@ arabic = {
 		modifier = default_culture_modifier
 	}
 	maghreb_arabic = { 
-		graphical_culture = berbergfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.2 0.9 0.2 }
 
@@ -1316,7 +1316,7 @@ arabic = {
 		modifier = default_culture_modifier
 	}
 	andalusian_arabic = {
-		graphical_culture = andalusiangfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.4 0.6 0.1 }
 
@@ -1347,7 +1347,7 @@ arabic = {
 		mother_name_chance = 30
 	}
 	sicilian_arabic = { 
-		graphical_culture = berbergfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.3 0.6 0.3 }
 
@@ -1682,11 +1682,11 @@ magyar = {
 	}
 }
 
-iranian = {
+iranian_group = {
 	graphical_culture = muslimgfx
 
 	persian = {
-		graphical_culture = andalusiangfx #arabicgfx
+		graphical_culture = muslimgfx
 
 		color = { 0.5 0.5 0.05 }
 
@@ -1714,7 +1714,7 @@ east_african = {
 	graphical_culture = muslimgfx
 
 	nubian = {
-		graphical_culture = africangfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.4 0.4 0.3 }
 
@@ -1736,7 +1736,7 @@ east_african = {
 		modifier = default_culture_modifier
 	}
 	somali = {
-		graphical_culture = africangfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.4 0.4 0.3 }
 
@@ -1758,7 +1758,7 @@ east_african = {
 		modifier = default_culture_modifier
 	}
 	ethiopian = {
-		graphical_culture = africangfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.4 0.4 0.3 }
 
@@ -1785,7 +1785,7 @@ west_african = {
 	graphical_culture = muslimgfx
 	
 	mande = {
-		graphical_culture = africangfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.7 0.2 0.1 }
 
@@ -1803,7 +1803,7 @@ west_african = {
 		modifier = default_culture_modifier
 	}
 	sosso = {
-		graphical_culture = africangfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.5 0.3 0.1 }
 
@@ -1821,7 +1821,7 @@ west_african = {
 		modifier = default_culture_modifier
 	}
 	jolof = {
-		graphical_culture = africangfx
+		graphical_culture = muslimgfx
 		
 		color = { 0.9 0.4 0.2 }
 

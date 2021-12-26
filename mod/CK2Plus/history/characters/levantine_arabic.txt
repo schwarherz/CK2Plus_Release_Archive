@@ -3691,7 +3691,6 @@
 	culture="levantine_arabic"
 	add_trait="skilled_tactician"
 	add_trait="clubfooted"
-	add_trait="flamboyant_schemer"
 	1039.1.1={
 		birth="1039.1.1"
 	}

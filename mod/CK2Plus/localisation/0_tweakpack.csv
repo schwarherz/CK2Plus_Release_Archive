@@ -1,16 +1,16 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 EVTDESC300001;Genetics check.  You're not supposed to see this.;Vérification génétique.  Vous n'êtes pas supposé voir cela.;Genetik überprüfen. Du solltest das nicht sehen !;Genetics check.  You're not supposed to see this.;;;;;;;;;;x
-EVTOPTA300001;Sorry;Désolé;Tut mir leid.;Sorry;Sorry;;;;;;;;;x
-irish_building_1;Ceithern Recruitment Center;Centre de Recrutement de Ceithern;Ceithern Anwerbungs Center;Ceithern Recruitment Center;;;;;;;;;;x
+EVTOPTA300001;Sorry;Désolé;Tut mir leid;Sorry;Sorry;;;;;;;;;x
+irish_building_1;Ceithern Recruitment Center;Centre de Recrutement de Ceithern;Ceithern Anwerbungs-Center;Ceithern Recruitment Center;;;;;;;;;;x
 irish_building_2;Gallóglaigh Support;Support Gallóglaigh ;Gallóglaigh Unterstützung;Gallóglaigh Support;Gallóglaigh Support;;;;;;;;;x
-irish_building_3;Heavy Gallóglaigh Training;Entrainement lourd Gallóglaigh ;Schwere Gallóglaigh Übungsbrracke;Heavy Gallóglaigh Training;Heavy Gallóglaigh Training;;;;;;;;;x
-irish_building_4;Royal Gallóglaigh Barracks;Caserne Royale Gallóglaigh ;Königlische Gallóglaigh Baracke;Royal Gallóglaigh Barracks;Royal Gallóglaigh Barracks;;;;;;;;;x
+irish_building_3;Heavy Gallóglaigh Training;Entrainement lourd Gallóglaigh ;Schwere Gallóglaigh Übungsbarracke;Heavy Gallóglaigh Training;Heavy Gallóglaigh Training;;;;;;;;;x
+irish_building_4;Royal Gallóglaigh Barracks;Caserne Royale Gallóglaigh ;Königliche Gallóglaigh Baracke;Royal Gallóglaigh Barracks;Royal Gallóglaigh Barracks;;;;;;;;;x
 greek_building_1;Castle Study;Studium du château;Burg Arbeitszimmer;Castle Study;Castle Study;;;;;;;;;x
-greek_building_2;Castle Library;Bibliothèque du Château;Burg Bücherrei;Castle Library;Castle Library;;;;;;;;;x
+greek_building_2;Castle Library;Bibliothèque du Château;Burg Bücherei;Castle Library;Castle Library;;;;;;;;;x
 greek_building_3;Castle Archives;Archives du château;Burgarchiv;Castle Archives;Castle Archives;;;;;;;;;x
 greek_building_4;Royal Archives;Archives royales;Königliche Archive;Royal Archives;Royal Archives;;;;;;;;;x
 north_german_building_1;Small Húskarlar Training Ground;Petit terrain d'entrainement Húskarlar;Kleine Húskarlar Barracke;Small Húskarlar Training Ground;Small Húskarlar Training Ground;;;;;;;;;x
 north_german_building_2;Medium Húskarlar Training Ground;Terrain d'entrainement Húskarlar intermédiaire;Mittlere Húskarlar Barracke;Medium Húskarlar Training Ground;Medium Húskarlar Training Ground;;;;;;;;;x
 north_german_building_3;Large Húskarlar Training Ground;Grand terrain d'entrainement Húskarlar Training Ground;Große Húskarlar Barracke;Large Húskarlar Training Ground;Large Húskarlar Training Ground;;;;;;;;;x
 north_german_building_4;Royal Húskarlar Training Ground;Terrain d'entrainement Húskarlar royal;Königliche Húskarlar Barracke;Royal Húskarlar Training Ground;Royal Húskarlar Training Ground;;;;;;;;;x
-EVTDESC6083;Perhaps it is a miracle - my old injury is beginning to feel a little better.;Peut-être que c'est un miracle - mon ancienne blessure commence à se sentir un peu mieux.;Vielleicht ist es ein Wunder - meine alte Verletzung beginnt, fühlen sich ein wenig besser.;;Tal vez es un milagro - de mi vieja lesión está empezando a sentir un poco mejor.;;;;;;;;;x
+EVTDESC6083;Perhaps it is a miracle - my old injury is beginning to feel a little better.;Peut-être que c'est un miracle - mon ancienne blessure commence à se sentir un peu mieux.;Vielleicht ist es ein Wunder - meine alte Verletzung beginnt zu heilen und ich fühle mich ein wenig besser.;;Tal vez es un milagro - de mi vieja lesión está empezando a sentir un poco mejor.;;;;;;;;;x

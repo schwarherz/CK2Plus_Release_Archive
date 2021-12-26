@@ -4338,7 +4338,6 @@ obj_get_married = {
 		prisoner = no
 		age = 16
 		is_married = no
-		is_betrothed = no
 		can_marry = yes
 		NOT = { has_landed_title = e_papal_state }
 		NOT = { has_minor_title = title_concubine }
@@ -4348,7 +4347,10 @@ obj_get_married = {
 			is_female = no
 			NOT = { age = 40 }
 		}
-		NOT = { has_character_flag = obj_get_married }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_get_married }
+		}
 	}
 	chance = {
 		factor = 100
@@ -4412,7 +4414,14 @@ obj_get_married = {
 		remove_character_modifier = promised_a_marriage
 	}
 	effect = {
-		piety = 25
+		if = {
+			limit = { NOT = { has_character_flag = obj_get_married } }
+			piety = 25
+		}
+		if = {
+			limit = { has_character_flag = obj_get_married }
+			piety = 5
+		}
 		if = {
 			limit = { is_ruler = no }
 			opinion = {
@@ -4450,7 +4459,10 @@ obj_marry_ruler = {
 				higher_tier_than = COUNT
 			}
 		}
-		NOT = { has_character_flag = obj_get_married }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_get_married }
+		}
 	}
 	chance = {
 		factor = 100
@@ -4503,7 +4515,14 @@ obj_marry_ruler = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		prestige = 25
+		if = {
+			limit = { NOT = { has_character_flag = obj_get_married } }
+			prestige = 50
+		}
+		if = {
+			limit = { has_character_flag = obj_get_married }
+			prestige = 10
+		}
 		set_character_flag = obj_get_married
 	}
 }
@@ -4527,7 +4546,10 @@ obj_have_a_daughter = {
 		}
 		NOT = { trait = celibate }
 		NOT = { trait = incapable }
-		NOT = { has_character_flag = obj_have_child_1 }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_have_child_1 }
+		}
 	}
 	chance = {
 		factor = 50
@@ -4570,7 +4592,14 @@ obj_have_a_daughter = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		piety = 25
+		if = {
+			limit = { NOT = { has_character_flag = obj_have_child_1 } }
+			piety = 25
+		}
+		if = {
+			limit = { has_character_flag = obj_have_child_1 }
+			piety = 5
+		}
 		set_character_flag = obj_have_child_1
 	}
 }
@@ -4594,7 +4623,10 @@ obj_have_a_son = {
 		}
 		NOT = { trait = celibate }
 		NOT = { trait = incapable }
-		NOT = { has_character_flag = obj_have_child_2 }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_have_child_2 }
+		}
 	}
 	chance = {
 		factor = 50
@@ -4634,7 +4666,14 @@ obj_have_a_son = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		prestige = 50
+		if = {
+			limit = { NOT = { has_character_flag = obj_have_child_2 } }
+			prestige = 50
+		}
+		if = {
+			limit = { has_character_flag = obj_have_child_2 }
+			prestige = 10
+		}		
 		set_character_flag = obj_have_child_2
 	}
 }
@@ -4834,11 +4873,15 @@ obj_find_lover = {
 		age = 16
 		is_priest = no
 		is_ruler = yes
+		demesne_size = 1
 		has_lover = no
 		NOT = { has_landed_title = e_papal_state }
 		NOT = { trait = celibate }
 		NOT = { trait = incapable }
-		NOT = { has_character_flag = obj_find_lover }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_find_lover }
+		}
 	}
 	chance = {
 		factor = 100		
@@ -4876,7 +4919,14 @@ obj_find_lover = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_diplomacy = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_find_lover } }
+			change_diplomacy = 1
+		}
+		if = {
+			limit = { has_character_flag = obj_find_lover }
+			prestige = 10
+		}		
 		set_character_flag = obj_find_lover
 	}
 }
@@ -4894,7 +4944,10 @@ obj_become_independent = {
 		liege = { is_feudal = yes independent = yes }
 		primary_title = { higher_tier_than = BARON }
 		NOT = { trait = incapable }
-		NOT = { has_character_flag = obj_independence }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_independence }
+		}
 	}
 	chance = {
 		factor = 0
@@ -4920,7 +4973,14 @@ obj_become_independent = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		prestige = 100
+		if = {
+			limit = { NOT = { has_character_flag = obj_independence } }
+			prestige = 100
+		}
+		if = {
+			limit = { has_character_flag = obj_independence }
+			prestige = 25
+		}				
 		set_character_flag = obj_independence
 	}
 }
@@ -5218,7 +5278,10 @@ obj_increase_demesne_1 = {
 		NOT = { trait = incapable }
 		demesne_efficiency = 1.01
 		NOT = { demesne_size = 2 }		
-		NOT = { has_character_flag = obj_demesne }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_demesne }
+		}
 	}
 	chance = {
 		factor = 50
@@ -5267,7 +5330,14 @@ obj_increase_demesne_1 = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_stewardship = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_demesne } }
+			change_stewardship = 1
+		}
+		if = {
+			limit = { has_character_flag = obj_demesne }
+			prestige = 10
+		}	
 		if = {
 			limit = { independent = no }
 			opinion = {
@@ -5292,7 +5362,10 @@ obj_increase_demesne_2 = {
 		demesne_efficiency = 1.01
 		demesne_size = 2
 		NOT = { demesne_size = 3 }		
-		NOT = { has_character_flag = obj_demesne }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_demesne }
+		}
 	}
 	chance = {
 		factor = 50
@@ -5341,7 +5414,14 @@ obj_increase_demesne_2 = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_stewardship = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_demesne } }
+			change_stewardship = 1
+		}
+		if = {
+			limit = { has_character_flag = obj_demesne }
+			prestige = 10
+		}
 		if = {
 			limit = { independent = no }
 			opinion = {
@@ -5366,7 +5446,10 @@ obj_increase_demesne_3 = {
 		demesne_efficiency = 1.01
 		demesne_size = 3
 		NOT = { demesne_size = 4 }		
-		NOT = { has_character_flag = obj_demesne }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_demesne }
+		}
 	}
 	chance = {
 		factor = 50
@@ -5415,7 +5498,14 @@ obj_increase_demesne_3 = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_stewardship = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_demesne } }
+			change_stewardship = 1
+		}
+		if = {
+			limit = { has_character_flag = obj_demesne }
+			prestige = 10
+		}
 		if = {
 			limit = { independent = no }
 			opinion = {
@@ -5440,7 +5530,10 @@ obj_increase_demesne_4 = {
 		demesne_efficiency = 1.01
 		demesne_size = 4
 		NOT = { demesne_size = 5 }		
-		NOT = { has_character_flag = obj_demesne }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_demesne }
+		}
 	}
 	chance = {
 		factor = 50
@@ -5489,7 +5582,14 @@ obj_increase_demesne_4 = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_stewardship = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_demesne } }
+			change_stewardship = 1
+		}
+		if = {
+			limit = { has_character_flag = obj_demesne }
+			prestige = 10
+		}
 		if = {
 			limit = { independent = no }
 			opinion = {
@@ -5514,7 +5614,10 @@ obj_increase_demesne_5 = {
 		demesne_efficiency = 1.01
 		demesne_size = 5
 		NOT = { demesne_size = 6 }		
-		NOT = { has_character_flag = obj_demesne }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_demesne }
+		}
 	}
 	chance = {
 		factor = 50
@@ -5563,7 +5666,14 @@ obj_increase_demesne_5 = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_stewardship = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_demesne } }
+			change_stewardship = 1
+		}
+		if = {
+			limit = { has_character_flag = obj_demesne }
+			prestige = 10
+		}
 		if = {
 			limit = { independent = no }
 			opinion = {
@@ -5588,7 +5698,10 @@ obj_increase_demesne_6 = {
 		demesne_efficiency = 1.01
 		demesne_size = 6
 		NOT = { demesne_size = 7 }		
-		NOT = { has_character_flag = obj_demesne }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_demesne }
+		}
 	}
 	chance = {
 		factor = 50
@@ -5637,7 +5750,14 @@ obj_increase_demesne_6 = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_stewardship = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_demesne } }
+			change_stewardship = 1
+		}
+		if = {
+			limit = { has_character_flag = obj_demesne }
+			prestige = 10
+		}
 		if = {
 			limit = { independent = no }
 			opinion = {
@@ -5662,7 +5782,10 @@ obj_increase_demesne_7 = {
 		demesne_efficiency = 1.01
 		demesne_size = 7
 		NOT = { demesne_size = 8 }		
-		NOT = { has_character_flag = obj_demesne }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_demesne }
+		}
 	}
 	chance = {
 		factor = 50
@@ -5711,7 +5834,14 @@ obj_increase_demesne_7 = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_stewardship = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_demesne } }
+			change_stewardship = 1
+		}
+		if = {
+			limit = { has_character_flag = obj_demesne }
+			prestige = 10
+		}
 		if = {
 			limit = { independent = no }
 			opinion = {
@@ -5736,7 +5866,10 @@ obj_increase_demesne_8 = {
 		demesne_efficiency = 1.01
 		demesne_size = 8
 		NOT = { demesne_size = 9 }		
-		NOT = { has_character_flag = obj_demesne }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_demesne }
+		}
 	}
 	chance = {
 		factor = 50
@@ -5785,7 +5918,14 @@ obj_increase_demesne_8 = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_stewardship = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_demesne } }
+			change_stewardship = 1
+		}
+		if = {
+			limit = { has_character_flag = obj_demesne }
+			prestige = 10
+		}
 		if = {
 			limit = { independent = no }
 			opinion = {
@@ -5809,8 +5949,11 @@ obj_increase_demesne_9 = {
 		NOT = { trait = incapable }
 		demesne_efficiency = 1.01
 		demesne_size = 9
-		NOT = { demesne_size = 10 }		
-		NOT = { has_character_flag = obj_demesne }
+		NOT = { demesne_size = 10 }	
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_demesne }
+		}
 	}
 	chance = {
 		factor = 50
@@ -5859,7 +6002,14 @@ obj_increase_demesne_9 = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_stewardship = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_demesne } }
+			change_stewardship = 1
+		}
+		if = {
+			limit = { has_character_flag = obj_demesne }
+			prestige = 10
+		}
 		if = {
 			limit = { independent = no }
 			opinion = {
@@ -6167,7 +6317,6 @@ obj_break_out_of_prison = {
 	allow = {
 		prisoner = yes
 		not = { trait = incapable }
-		NOT = { has_character_flag = obj_break_out_of_prison }
 	}
 	
 	chance = {
@@ -6199,10 +6348,12 @@ obj_win_a_war = {
 	allow = {
 		age = 16
 		is_ruler = yes
-		war = no
 		NOT = { trait = craven }
 		NOT = { trait = incapable }
-		NOT = { has_character_flag = obj_win_a_war }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_win_a_war }
+		}		
 	}
 	
 	chance = {
@@ -6212,6 +6363,10 @@ obj_win_a_war = {
 			factor = 0
 			independent = no
 		}
+		modifier = {
+			factor = 10.0
+			war = yes
+		}		
 		modifier = {
 			factor = 0.25
 			is_female = yes
@@ -6265,7 +6420,15 @@ obj_win_a_war = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_martial = 1
+		if = {
+			limit = { NOT = { has_character_flag = obj_win_a_war } }
+			change_martial = 1
+			prestige = 50
+		}
+		if = {
+			limit = { has_character_flag = obj_win_a_war }
+			prestige = 10
+		}	
 		set_character_flag = obj_win_a_war
 	}
 }
@@ -6280,7 +6443,10 @@ obj_convert_a_province = {
 		war = no
 		NOT = { trait = cynical }
 		NOT = { trait = incapable }
-		NOT = { has_character_flag = obj_convert_a_province }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_convert_a_province }
+		}
 		any_realm_province = {
 			NOT = { religion = ROOT }
 		}
@@ -6340,8 +6506,15 @@ obj_convert_a_province = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		change_learning = 1
-		piety = 50
+		if = {
+			limit = { NOT = { has_character_flag = obj_convert_a_province } }
+			change_learning = 1
+			piety = 50
+		}
+		if = {
+			limit = { has_character_flag = obj_convert_a_province }
+			piety = 10
+		}			
 		set_character_flag = obj_convert_a_province
 	}
 }
@@ -6407,7 +6580,10 @@ obj_gain_honorary_title = {
 		independent = no
 		NOT = { trait = incapable }
 		liege = { is_feudal = yes }
-		NOT = { has_character_flag = obj_gain_honorary_title }
+		OR = {
+			ai = no
+			NOT = { has_character_flag = obj_gain_honorary_title }
+		}
 		NOT = {
 			has_minor_title = title_keeper_of_swans
 			has_minor_title = title_master_of_the_horse
@@ -6484,7 +6660,14 @@ obj_gain_honorary_title = {
 		clr_character_flag = obj_check
 	}
 	effect = {
-		prestige = 50
+		if = {
+			limit = { NOT = { has_character_flag = obj_gain_honorary_title } }
+			prestige = 50
+		}
+		if = {
+			limit = { has_character_flag = obj_gain_honorary_title }
+			prestige = 10
+		}	
 		opinion = {
 			modifier = opinion_glad
 			who = liege
@@ -6501,7 +6684,6 @@ obj_befriend_liege = {
 		age = 16
 		ai = no
 		independent = no
-		NOT = { has_character_flag = obj_befriend_liege }
 		NOT = { trait = incapable }
 		liege = {
 			opinion = {
@@ -6602,7 +6784,6 @@ obj_befriend_relhead = {
 		age = 16
 		ai = no
 		religion_head = { is_alive = yes }
-		NOT = { has_character_flag = obj_befriend_relhead }
 		NOT = { trait = incapable }
 		religion_head = {
 			NOT = {

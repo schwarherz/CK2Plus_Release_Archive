@@ -60,6 +60,10 @@ character_event = {
 		months = 120
 
 		modifier = {
+			factor = 3.0
+			liege = { ai = yes }
+		}
+		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
 		}
@@ -380,6 +384,10 @@ character_event = {
 		months = 120
 
 		modifier = {
+			factor = 3.0
+			liege = { ai = yes }
+		}
+		modifier = {
 			factor = 0.9
 			NOT = { opinion = { who = liege value = -100 } }
 		}
@@ -641,6 +649,10 @@ character_event = {
 		months = 240
 
 		modifier = {
+			factor = 3.0
+			liege = { ai = yes }
+		}
+		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
 		}
@@ -823,6 +835,10 @@ character_event = {
 	mean_time_to_happen = {
 		months = 120
 
+		modifier = {
+			factor = 3.0
+			liege = { ai = yes }
+		}
 		modifier = {
 			factor = 0.9
 			NOT = { opinion = { who = liege value = -100 } }
@@ -1086,6 +1102,10 @@ character_event = {
 	mean_time_to_happen = {
 		months = 240
 
+		modifier = {
+			factor = 3.0
+			liege = { ai = yes }
+		}
 		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }
@@ -1757,6 +1777,10 @@ character_event = {
 	mean_time_to_happen = {
 		months = 240
 
+		modifier = {
+			factor = 3.0
+			liege = { ai = yes }
+		}
 		modifier = {
 			factor = 1.1
 			NOT = { opinion = { who = liege value = -100 } }

@@ -3017,7 +3017,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 960
+		months = 480
 		
 		
 		modifier = {

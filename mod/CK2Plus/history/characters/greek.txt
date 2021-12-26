@@ -1447,7 +1447,6 @@
 	mother=4511
 	1056.1.1={
 		birth="1056.1.1"
-		add_claim="e_byzantium"
 	}
 	1071.1.1={
 		add_trait="midas_touched"
@@ -1598,7 +1597,6 @@
 	mother=4511
 	1043.1.1={
 		birth="1043.1.1"
-		add_claim="e_byzantium"
 	}
 	1071.4.17={
 		death="1071.4.17"
@@ -1616,7 +1614,6 @@
 	mother=4511
 	1047.1.1={
 		birth="1047.1.1"
-		add_claim="e_byzantium"
 	}
 	1072.1.1={
 		add_spouse=9958
@@ -1635,7 +1632,6 @@
 	mother=4511
 	1058.1.1={
 		birth="1058.1.1"
-		add_claim="e_byzantium"
 	}
 	1081.11.1={
 		add_spouse=9809
@@ -1654,7 +1650,6 @@
 	mother=4511
 	1060.1.1={
 		birth="1060.1.1"
-		add_claim="e_byzantium"
 	}
 	1143.10.1={
 		death="1143.10.1"
@@ -6682,7 +6677,6 @@
 	mother=4511
 	1045.1.1={
 		birth="1045.1.1"
-		add_claim="e_byzantium"
 	}
 	1109.8.18={
 		death="1109.8.18"
@@ -6699,7 +6693,6 @@
 	mother=4511
 	1050.1.1={
 		birth="1050.1.1"
-		add_claim="e_byzantium"
 	}
 	1100.1.1={
 		death="1100.1.1"
@@ -6716,7 +6709,6 @@
 	mother=4511
 	1053.1.1={
 		birth="1053.1.1"
-		add_claim="e_byzantium"
 	}
 	1095.1.1={
 		death="1095.1.1"
@@ -13591,7 +13583,6 @@
 	mother=4511
 	1057.1.1={
 		birth="1057.1.1"
-		add_claim="e_byzantium"
 	}
 	1147.1.1={
 		death="1147.1.1"

@@ -12822,6 +12822,7 @@ character_event = {
 		in_command = no
 		num_of_rivals = 1
 		religion_group = christian
+		is_heretic = yes
 		NOT = {
 			has_character_modifier = religious_rival_timer
 		}
@@ -12831,6 +12832,7 @@ character_event = {
 			in_command = no
 			prisoner = no
 			religion = ROOT
+			is_heretic = yes
 			
 			NOT = {
 				reverse_has_opinion_modifier = { who = ROOT modifier = opinion_continued_rivalry }
@@ -12877,7 +12879,8 @@ character_event = {
 				age = 16
 				in_command = no
 				prisoner = no
-				religion_group = christian
+				religion = ROOT
+				is_heretic = yes
 			}
 			character_event = {
 				id = 100501

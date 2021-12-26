@@ -6,7 +6,6 @@ decisions = {
 			primary_title = { higher_tier_than = BARON }
 		}
 		allow = { 
-			monthly_income = 1
 			NOT = { has_character_modifier = loan_timer }
 			NOT = { has_character_modifier = offended_moneylenders }
 		}
@@ -101,10 +100,9 @@ decisions = {
 			NOT = { check_variable = { which = "loan_amount" value = 49.99 } }
 		}
 		allow = { 
-			monthly_income = 1
 			OR = {
 				war = yes
-				NOT = { treasury = 0 }
+				NOT = { wealth = 0 }
 			}
 		}
 		effect = {
@@ -169,12 +167,6 @@ decisions = {
 				wealth = 1000
 				set_variable = { which = "loan_amount" value = 1000 }				
 			}
-			hidden_tooltip = {
-				add_character_modifier = {
-					name = "loan_timer"
-					duration = 1825
-				}
-			}
 		}
 		revoke_allowed = {
 			always = no
@@ -231,11 +223,11 @@ decisions = {
 			check_variable = { which = "loan_amount" value = 49.99 }
 		}
 		allow = { 
-			treasury = 100
+			wealth = 100
 			war = no
 		}
 		effect = {
-			treasury = -50
+			wealth = -50
 			change_variable = { which = "loan_amount" value = -50 }
 		}
 		ai_will_do = {

@@ -19,7 +19,7 @@ title_regent = {
 	realm_in_name = yes
 	dignity = 0.9
 	
-	monthly_salary = 0.2
+	monthly_salary = 0.1
 	monthly_prestige = 0.02
 	
 	gain_effect = {
@@ -36,7 +36,7 @@ title_ruler_consort = {
 	realm_in_name = yes
 	spouse_context = yes
 	
-	monthly_salary = 0.2
+	monthly_salary = 0.1
 	monthly_prestige = 0.02
 	
 	gain_effect = {
@@ -53,7 +53,7 @@ title_queen_mother = {
 	show_as_title = yes
 	realm_in_name = yes
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.01
 	
 	gain_effect = {
@@ -69,7 +69,7 @@ title_prince = {
 	show_as_title = yes
 	realm_in_name = yes
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.01
 	
 	gain_effect = {
@@ -271,7 +271,7 @@ title_revoke_court_jester = {
 #######################################
 title_concubine = {
 	grant_limit = 1
-	dignity = 0.05
+	dignity = 0.2
 	opinion_effect = 10
 	realm_in_name = yes
 	
@@ -283,6 +283,8 @@ title_concubine = {
 			religion_group = muslim
 			is_female = no
 			age = 16
+			is_feudal = yes
+			primary_title = { higher_tier_than = BARON }
 		}
 		NOT = { is_close_relative = FROM }
 		is_female = yes
@@ -364,7 +366,7 @@ title_keeper_of_swans = {
 	opinion_effect = 10
 	
 	monthly_salary = 0.025
-	monthly_prestige = 0.002
+	monthly_prestige = 0.005
 	
 	allow = {
 		age = 16
@@ -406,8 +408,8 @@ title_master_of_the_horse = {
 	grant_limit = 1
 	opinion_effect = 10
 	
-	monthly_salary = 0.05
-	monthly_prestige = 0.004
+	monthly_salary = 0.025
+	monthly_prestige = 0.005
 	
 	allow = {
 		age = 16
@@ -445,8 +447,8 @@ title_master_of_the_hunt = {
 	grant_limit = 1
 	opinion_effect = 10
 	
-	monthly_salary = 0.05
-	monthly_prestige = 0.004
+	monthly_salary = 0.025
+	monthly_prestige = 0.005
 	
 	allow = {
 		age = 16
@@ -483,8 +485,8 @@ title_high_almoner = {
 	grant_limit = 1
 	opinion_effect = 10
 	
-	monthly_salary = 0.05
-	monthly_prestige = 0.004
+	monthly_salary = 0.025
+	monthly_prestige = 0.005
 	
 	allow = {
 		age = 16
@@ -520,8 +522,8 @@ title_cupbearer = {
 	grant_limit = 1
 	opinion_effect = 15
 	
-	monthly_salary = 0.1
-	monthly_prestige = 0.006
+	monthly_salary = 0.05
+	monthly_prestige = 0.01
 	
 	allow = {
 		age = 16
@@ -558,8 +560,8 @@ title_seneschal = {
 	grant_limit = 1
 	opinion_effect = 15
 	
-	monthly_salary = 0.1
-	monthly_prestige = 0.006
+	monthly_salary = 0.05
+	monthly_prestige = 0.01
 	
 	allow = {
 		age = 16
@@ -618,7 +620,7 @@ title_despot = {
 	grant_limit = 1
 	opinion_effect = 25
 	
-	monthly_salary = 0.2
+	monthly_salary = 0.1
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -655,7 +657,7 @@ title_sebastokrator = {
 	grant_limit = 1
 	opinion_effect = 20
 	
-	monthly_salary = 0.2
+	monthly_salary = 0.1
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -691,7 +693,7 @@ title_caesar = {
 	grant_limit = 1
 	opinion_effect = 15
 	
-	monthly_salary = 0.2
+	monthly_salary = 0.1
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -726,7 +728,7 @@ title_kouropalates = {
 	grant_limit = 1
 	opinion_effect = 15
 	
-	monthly_salary = 0.15
+	monthly_salary = 0.075
 	monthly_prestige = 0.075
 	
 	allow = {
@@ -763,7 +765,7 @@ title_anthypatos = {
 	grant_limit = 4
 	opinion_effect = 10
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.005
 	
 	allow = {

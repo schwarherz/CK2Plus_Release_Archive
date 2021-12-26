@@ -1783,6 +1783,7 @@ character_event = {
 				is_theocracy = yes
 				religion = ROOT
 				NOT = { is_liege_of = ROOT }
+				NOT = { character = ROOT }
 			}
 		}
 	}
@@ -2012,6 +2013,7 @@ character_event = {
 				NOT = { is_liege_of = ROOT }
 				same_realm = ROOT
 				religion = ROOT
+				NOT = { character = ROOT }
 				religion_head = {
 					NOT = { character = PREV }
 				}

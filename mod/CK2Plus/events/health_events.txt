@@ -434,7 +434,6 @@ character_event = {
 	
 	trigger = {
 		NOT = { trait = depressed }
-		NOT = { trait = zealous }
 		NOT = { trait = incapable }
 		NOT = { trait = content }
 	}
@@ -455,10 +454,6 @@ character_event = {
 		
 		modifier = {
 			factor = 0.5
-			trait = cynical
-		}
-		modifier = {
-			factor = 0.5
 			trait = stressed
 		}
 		modifier = {
@@ -473,6 +468,10 @@ character_event = {
 			factor = 0.7
 			trait = ugly
 		}
+		modifier = {
+			factor = 0.8
+			trait = cynical
+		}		
 		modifier = {
 			factor = 0.8
 			trait = ambitious

@@ -523,9 +523,7 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTB3021"
-		piety = 5
-		religion_authority = 0.01
-		
+		piety = 10	
 	}
 }
 
@@ -1023,7 +1021,6 @@ character_event = {
 			name = defer_to_church_decision
 			duration = 365
 		}
-		religion_authority = 0.01
 	}
 	option = {
 		name = "EVTOPTC3012"

@@ -446,14 +446,14 @@
 	}
 	1066.9.14 = {
 		raise_levies = {
-			location = 62 # Leicester
+			location = 56
 			force_mult = 2
 		}
 	}
 	1066.10.14={
 		raise_levies = {
 			dismiss = yes
-			location = 62 # Leicester
+			location = 56
 			force_mult = 2
 		}
 		death = {

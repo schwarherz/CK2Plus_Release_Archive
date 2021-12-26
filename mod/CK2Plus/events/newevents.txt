@@ -62,11 +62,7 @@ character_event = {
 	option = {
 		name = "EVTOPTA300001"
 		set_character_flag = genetics_check
-		hidden_tooltip = {
-			if = {
-				limit = { age = 16 }
-				set_character_flag = adult
-			}		
+		hidden_tooltip = {		
 			#clean up weird traits
 			remove_trait = placeholder
 			remove_trait = crusader
