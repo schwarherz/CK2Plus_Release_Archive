@@ -144,7 +144,7 @@ martial_cleric = { #18
 	education = yes
 	
 	learning = 3
-	intrigue = -1´
+	intrigue = -1
 }
 scholarly_theologian = { #19
 	priest = yes

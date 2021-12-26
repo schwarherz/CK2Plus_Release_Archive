@@ -1253,6 +1253,7 @@
 	diplomacy=4
 	intrigue=5
 	stewardship=4
+	health=3
 	religion="orthodox"
 	culture="greek"
 	add_trait="arbitrary"

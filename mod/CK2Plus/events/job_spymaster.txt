@@ -60,22 +60,22 @@ character_event = {
 		months = 120
 
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			NOT = { difficulty = 1 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			NOT = { difficulty = 2 }
 		}	
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			difficulty = 3
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			difficulty = 4
 		}
@@ -404,22 +404,22 @@ character_event = {
 		months = 120
 
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			NOT = { difficulty = 1 }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			NOT = { difficulty = 2 }
 		}	
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			difficulty = 3
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			difficulty = 4
 		}
@@ -689,22 +689,22 @@ character_event = {
 		months = 240
 
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			NOT = { difficulty = 1 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			NOT = { difficulty = 2 }
 		}	
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			difficulty = 3
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			difficulty = 4
 		}
@@ -896,22 +896,22 @@ character_event = {
 		months = 120
 
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			NOT = { difficulty = 1 }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			NOT = { difficulty = 2 }
 		}	
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			difficulty = 3
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			difficulty = 4
 		}
@@ -1179,22 +1179,22 @@ character_event = {
 			liege = { ai = yes }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			NOT = { difficulty = 1 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			NOT = { difficulty = 2 }
 		}	
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			difficulty = 3
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			difficulty = 4
 		}		
@@ -1874,22 +1874,22 @@ character_event = {
 			liege = { ai = yes }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			NOT = { difficulty = 1 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.9
 			liege = { ai = no }
 			NOT = { difficulty = 2 }
 		}	
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			difficulty = 3
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.1
 			liege = { ai = no }
 			difficulty = 4
 		}		

@@ -181,9 +181,9 @@ province_event = {
 	
 	option = {
 		name = "EVTOPTA70002"
-		remove_character_modifier = holding_epic_tournament
 		clr_province_flag = tournament_60_days
 		owner = {
+			remove_character_modifier = holding_epic_tournament
 			clr_character_flag = tournament_begins
 			clr_character_flag = winner
 			clr_character_flag = second_place
@@ -1469,6 +1469,7 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
+		NOT = { has_character_flag = tournament_winner }
 		has_character_flag = attending_tournament
 		NOT = {
 			has_character_flag = tournament_has_ended
@@ -1628,6 +1629,8 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
+		NOT = { has_character_flag = tournament_winner }
+		NOT = { has_character_flag = tournament_second_place }
 		has_character_flag = attending_tournament
 		NOT = {
 			has_character_flag = tournament_has_ended

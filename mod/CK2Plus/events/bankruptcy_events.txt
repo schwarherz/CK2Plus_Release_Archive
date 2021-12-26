@@ -670,40 +670,6 @@ character_event = {
 				}
 			}
 		}
-		trigger = {
-			NOT = {
-				OR = {
-					AND = {
-						has_character_flag = loan_50
-						wealth = 12
-					}			
-					AND = {
-						has_character_flag = loan_100
-						wealth = 25
-					}
-					AND = {
-						has_character_flag = loan_200
-						wealth = 50
-					}
-					AND = {
-						has_character_flag = loan_400
-						wealth = 100
-					}
-					AND = {
-						has_character_flag = loan_600
-						wealth = 150
-					}
-					AND = {
-						has_character_flag = loan_800
-						wealth = 200
-					}						
-					AND = {
-						has_character_flag = loan_1000
-						wealth = 250
-					}				
-				}			
-			}
-		}
 		if = {
 			limit = {
 				has_character_flag = loan_50			

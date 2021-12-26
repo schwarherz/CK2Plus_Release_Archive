@@ -20281,7 +20281,7 @@ k_egypt = {
 	
 	culture = egyptian_arabic
 	
-	catholic = 50 #Crusade target weight
+	catholic = 100 #Crusade target weight
 	sunni = 100 #Crusade target weight
 	shiite = 1000 #Crusade target weight	
 	
@@ -21134,7 +21134,7 @@ k_egypt = {
 		
 		capital = 774 # Jerusalem
 		
-		catholic = 200 #Crusade target weight
+		catholic = 1000 #Crusade target weight
 		sunni = 1000 #Crusade target weight
 		shiite = 1000 #Crusade target weight			
 		

@@ -1,10 +1,10 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
-TYRANTTOOLTIP5;Gain §R5§! Tyranny;Gain §R5§! Tyranny;Gain §R5§! Tyranny;;Gain §R5§! Tyranny;;;;;;;;;x
-TYRANTTOOLTIP10;Gain §R10§! Tyranny;Gain §R10§! Tyranny;Gain §R10§! Tyranny;;Gain §R10§! Tyranny;;;;;;;;;x
-TYRANTTOOLTIP15;Gain §R15§! Tyranny;Gain §R15§! Tyranny;Gain §R15§! Tyranny;;Gain §R15§! Tyranny;;;;;;;;;x
-TYRANTTOOLTIP20;Gain §R20§! Tyranny;Gain Gain §R20§! Tyranny;Gain Gain §R20§! Tyranny;;Gain Gain §R20§! Tyranny;;;;;;;;;x
-TYRANTTOOLTIP30;Gain §R30§! Tyranny;Gain §R30§! Tyranny;Gain §R30§! Tyranny;;Gain §R30§! Tyranny;;;;;;;;;x
-TYRANTTOOLTIP40;Gain §R40§! Tyranny;Gain §R40§! Tyranny;Gain §R40§! Tyranny;;Gain §R40§! Tyranny;;;;;;;;;x
+TYRANTTOOLTIP5;Gain §R5§! Tyranny;Gain §R5§! Tyranny;Erhalte §R5§! Tyrannei;;Gain §R5§! Tyranny;;;;;;;;;x
+TYRANTTOOLTIP10;Gain §R10§! Tyranny;Gain §R10§! Tyranny;Erhalte §R10§! Tyrannei;;Gain §R10§! Tyranny;;;;;;;;;x
+TYRANTTOOLTIP15;Gain §R15§! Tyranny;Gain §R15§! Tyranny;Erhalte §R15§! Tyrannei;;Gain §R15§! Tyranny;;;;;;;;;x
+TYRANTTOOLTIP20;Gain §R20§! Tyranny;Gain §R20§! Tyranny;Erhalte §R20§! Tyrannei;;Gain §R20§! Tyranny;;;;;;;;;x
+TYRANTTOOLTIP30;Gain §R30§! Tyranny;Gain §R30§! Tyranny;Erhalte §R30§! Tyrannei;;Gain §R30§! Tyranny;;;;;;;;;x
+TYRANTTOOLTIP40;Gain §R40§! Tyranny;Gain §R40§! Tyranny;Erhalte §R40§! Tyrannei;;Gain §R40§! Tyranny;;;;;;;;;x
 CUSTOMTOOLTIP1;[Root.GetTitledFirstName] §GWILL§W become your landed vassal.\n;[Root.GetTitledFirstName] §Gva§W devenir votre vassal.\n;[Root.GetTitledFirstName] §GWILL§W become your landed vassal.\n;[Root.GetTitledFirstName] §GWILL§W become your landed vassal.\n;[Root.GetTitledFirstName] §GWILL§W become your landed vassal.\n;;;;;;;;x;
 CUSTOMTOOLTIP2;[Root.GetTitledFirstName] will §RNOT§W become your landed vassal.\n;[Root.GetTitledFirstName] §Rne va pas§W devenir votre vassal.\n;[Root.GetTitledFirstName] will §RNOT§W become your landed vassal.\n;[Root.GetTitledFirstName] will §RNOT§W become your landed vassal.\n;[Root.GetTitledFirstName] will §RNOT§W become your landed vassal.\n;;;;;;;;x;
 CUSTOMTOOLTIP3;[This.GetTitledFirstName] will become the independent ruler of all lands taken in the Crusade.\n;[This.GetTitledFirstName] va devenir le souverain indépendant de toutes les terres conquisent lors de la Croisade.\n;[This.GetTitledFirstName] will become the independent ruler of all lands taken in the Crusade.\n;[This.GetTitledFirstName] will become the independent ruler of all lands taken in the Crusade.\n;[This.GetTitledFirstName] will become the independent ruler of all lands taken in the Crusade.\n;;;;;;;;x;

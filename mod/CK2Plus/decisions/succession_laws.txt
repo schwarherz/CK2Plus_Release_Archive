@@ -834,6 +834,7 @@ succession_laws = {
 	}
 }
 
+
 gender_laws = {
 	cognatic_succession = {
 		potential = {		
@@ -847,25 +848,16 @@ gender_laws = {
 			
 			is_landless_type_title = no
 			NOT = { holder_scope = { religion_group = muslim }  }
-			OR = {			
+		}
+		allow = {
+			OR = {
 				holder_scope = { ai = no }
-				holder_scope = { is_female = yes }
 				holder_scope = {
 					age = 45
-					OR = {
-						any_child = { is_female = yes }
-						any_sibling = { is_female = yes }
-					}
 					NOT = { any_child = { is_female = no } }
 					NOT = { any_sibling = { is_female = no } }
 				}
-				NOT = {
-					has_law = agnatic_succession
-					has_law = cognatic_succession
-					has_law = true_cognatic_succession
-				}
-				NOT = { has_global_flag = startup }				
-			}			
+			}
 		}
 		effect = {
 			gender_succ = cognatic
@@ -885,27 +877,18 @@ gender_laws = {
 		male_dynasty_opinion = 10
 	
 		potential = {
-			OR = {			
-				holder_scope = { ai = no }
-				holder_scope = {
-					age = 45
-					OR = {
-						any_child = { is_female = no }
-						any_sibling = { is_female = no }
-					}
-					NOT = { any_child = { is_female = yes } }
-					NOT = { any_sibling = { is_female = yes } }
-				}
-				NOT = {
-					has_law = agnatic_succession
-					has_law = cognatic_succession
-					has_law = true_cognatic_succession
-				}
-				NOT = { has_global_flag = startup }
-			}			
+			always = yes
 		}
 		allow = {
 			has_law = cognatic_succession
+			OR = {
+				holder_scope = { ai = no }
+				holder_scope = {
+					age = 45
+					NOT = { any_child = { is_female = yes } }
+					NOT = { any_sibling = { is_female = yes } }
+				}
+			}
 		}
 		effect = {
 			gender_succ = agnatic
@@ -935,29 +918,6 @@ gender_laws = {
 			
 			is_landless_type_title = no
 			NOT = { holder_scope = { religion_group = muslim }  }
-			OR = {			
-				holder_scope = { ai = no }
-				holder_scope = {
-					is_female = yes
-					OR = {
-						trait = proud
-						trait = ambitious
-					}					
-					age = 45
-					OR = {
-						any_child = { is_female = yes }
-						any_sibling = { is_female = yes }
-					}					
-					NOT = { any_child = { is_female = no } }
-					NOT = { any_sibling = { is_female = no } }
-				}
-				NOT = {
-					has_law = agnatic_succession
-					has_law = cognatic_succession
-					has_law = true_cognatic_succession
-				}
-				NOT = { has_global_flag = startup }				
-			}
 		}
 		allow = {
 			has_law = cognatic_succession
@@ -969,7 +929,7 @@ gender_laws = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		ai_will_revoke = {
 			factor = 0

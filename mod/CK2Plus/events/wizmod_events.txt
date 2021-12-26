@@ -2977,6 +2977,7 @@ character_event = {
 							add_law = temple_contract_0
 							add_law = centralization_1
 							gain_title = PREVPREVPREV
+							character_event = { id = 110025 }
 							if = {
 								limit = {
 									ROOT = { religion = catholic }
@@ -3099,6 +3100,7 @@ character_event = {
 							add_law = temple_contract_0
 							add_law = centralization_1
 							gain_title = PREVPREVPREV
+							character_event = { id = 110025 }
 							if = {
 								limit = {
 									ROOT = { religion = catholic }
@@ -3205,6 +3207,7 @@ character_event = {
 							add_law = temple_contract_0
 							add_law = centralization_1
 							gain_title = PREVPREVPREV
+							character_event = { id = 110025 }
 							if = {
 								limit = {
 									ROOT = { religion = catholic }

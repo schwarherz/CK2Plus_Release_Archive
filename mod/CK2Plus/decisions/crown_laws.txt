@@ -158,6 +158,13 @@ de_jure_laws = {
 					NOT = { holder_scope = { trait = ambitious } }
 				}
 			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_law = centralization_3
+					has_law = centralization_4			
+				}
+			}			
 		}
 		ai_will_revoke = {
 			factor = 0

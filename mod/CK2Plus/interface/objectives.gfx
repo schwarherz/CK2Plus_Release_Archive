@@ -420,6 +420,13 @@ spriteTypes = {
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_obj_befriend_top_liege"
+		texturefile = "gfx/CK2Plus/obj_love_liege.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
 	}	
 	spriteType = {
 		name = "GFX_obj_befriend_relhead"

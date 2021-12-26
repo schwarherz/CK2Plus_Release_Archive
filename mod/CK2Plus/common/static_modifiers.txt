@@ -309,14 +309,13 @@ static_intrigue_mod = {
 }
 
 static_stewardship_mod = {
-	global_tax_modifier = 0.02
+	global_tax_modifier = 0.015
 }
 
 static_martial_mod = {
 	land_organisation = 0.01
 	global_defensive = 0.01
 	land_morale = 0.01
-	naval_morale = 0.01
 	city_vassal_max_levy = 0.002
 	castle_vassal_max_levy = 0.002
 	temple_vassal_max_levy = 0.002	
@@ -1201,7 +1200,7 @@ d_jolof_company_modifier = {
 #Transport Fleets
 d_venetian_transport_fleet_modifier = {
 	levy_size = 1
-	galleys = 100
+	galleys = 50
 }
 
 d_genovese_transport_fleet_modifier = {

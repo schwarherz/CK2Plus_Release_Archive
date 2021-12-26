@@ -19,7 +19,7 @@ character_event = {
 	
 	only_rulers = yes
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -241,7 +241,7 @@ character_event = {
 	
 	age = 6
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -324,7 +324,7 @@ character_event = {
 	picture = GFX_evt_guardian 
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -590,7 +590,7 @@ character_event = {
 	
 	prisoner = no
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -636,7 +636,7 @@ character_event = {
 	desc = "EVTDESC78020"
 	picture = GFX_evt_child_bully
 	
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -808,7 +808,7 @@ character_event = {
 	desc = "EVTDESC78025"
 	picture = GFX_evt_guardian
 	
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -896,7 +896,7 @@ character_event = {
 	min_age = 6
 	max_age = 10
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	

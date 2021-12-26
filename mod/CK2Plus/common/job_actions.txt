@@ -69,7 +69,7 @@ action_squeeze_peasants = {
 		}
 	}
 	
-	local_tax_modifier = 0.015
+	local_tax_modifier = 0.02
 	
 	events = { 920 921 }
 }

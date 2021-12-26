@@ -15,7 +15,7 @@ job_chancellor = {
 	dignity = 0.25
 	opinion_effect = 15
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -54,7 +54,7 @@ job_marshal = {
 	dignity = 0.25
 	opinion_effect = 15
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -93,7 +93,7 @@ job_treasurer = {
 	dignity = 0.25
 	opinion_effect = 15
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -141,7 +141,7 @@ job_spymaster = {
 	dignity = 0.25
 	opinion_effect = 15
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_prestige = 0.01
 	
 	allow = {
@@ -189,7 +189,7 @@ job_spiritual = {
 	dignity = 0.25
 	opinion_effect = 15
 	
-	monthly_salary = 0.1
+	monthly_salary = 0.05
 	monthly_piety = 0.01
 	
 	allow = {

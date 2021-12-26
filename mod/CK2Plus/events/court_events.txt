@@ -1124,7 +1124,7 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	
 	trigger = {
@@ -1271,7 +1271,7 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 
@@ -1365,7 +1365,7 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	
 	trigger = {
@@ -1412,7 +1412,7 @@ letter_event = {
 	picture = GFX_evt_spymaster
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -1482,7 +1482,7 @@ letter_event = {
 	picture = GFX_evt_spymaster
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 
@@ -1514,7 +1514,7 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 
@@ -1607,7 +1607,7 @@ character_event = {
 	picture = GFX_evt_spymaster
 
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	
 	trigger = {
@@ -1751,7 +1751,7 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 
@@ -1844,7 +1844,7 @@ character_event = {
 	picture = GFX_evt_spymaster
 
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	
 	trigger = {	
@@ -1989,7 +1989,7 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 	
@@ -2083,7 +2083,7 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	
 	trigger = {
@@ -2227,7 +2227,7 @@ character_event = {
 	picture = GFX_evt_spymaster
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	is_triggered_only = yes
 

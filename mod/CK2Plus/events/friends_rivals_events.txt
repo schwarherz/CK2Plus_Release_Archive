@@ -5798,7 +5798,7 @@ character_event = {
 	only_rulers = yes
 	min_age = 16
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -6033,7 +6033,7 @@ character_event = {
 	only_rulers = yes
 	prisoner = no
 	min_age = 16
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = yes
@@ -7137,7 +7137,7 @@ character_event = {
 	
 	prisoner = no
 	min_age = 16
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -7482,7 +7482,7 @@ character_event = {
 	only_men = yes
 	prisoner = no
 	min_age = 16
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -7830,7 +7830,7 @@ character_event = {
 	
 	prisoner = no
 	min_age = 16
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -8198,7 +8198,7 @@ character_event = {
 	
 	prisoner = no
 	min_age = 16
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -8594,7 +8594,7 @@ character_event = {
 	
 	prisoner = no
 	min_age = 16
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -9570,7 +9570,7 @@ character_event = {
 	
 	min_age = 16
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -9908,7 +9908,7 @@ character_event = {
 	min_age = 16
 	only_men = yes
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -10220,7 +10220,7 @@ character_event = {
 	only_men = yes
 	min_age = 16
 	max_age = 60
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	
 	trigger = {

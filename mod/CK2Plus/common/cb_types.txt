@@ -2201,13 +2201,7 @@ crusade = {
 		}
 	}
 
-	can_use_title = {
-		empire = {
-			NOT = { 
-				title = e_ethiopia
-				title = e_mali 
-			}
-		}		
+	can_use_title = {	
 		FROM = {
 			any_realm_title = {
 				de_jure_liege_or_above = PREVPREV
@@ -2383,6 +2377,7 @@ crusade = {
 								add_law_w_cooldown = temple_contract_0
 								add_law_w_cooldown = centralization_1
 								gain_title = PREVPREV
+								character_event = { id = 110025 }
 								if = {
 									limit = {
 										ROOT = { religion = catholic }

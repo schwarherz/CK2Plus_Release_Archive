@@ -1622,7 +1622,7 @@ character_event = {
 	
 	min_age = 18
 	max_age = 25
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	
 	trigger = {
@@ -1903,7 +1903,7 @@ character_event = {
 	picture = GFX_evt_lovers
 	
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -1994,7 +1994,7 @@ character_event = {
 	desc = "EVTDESC64065"
 	picture = GFX_evt_lovers
 	
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -2088,7 +2088,7 @@ character_event = {
 	desc = "EVTDESC64070"
 	picture = GFX_evt_lovers
 	
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -2219,7 +2219,7 @@ character_event = {
 	picture = GFX_evt_lovers
 	
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -2372,7 +2372,7 @@ character_event = {
 	picture = GFX_evt_lovers
 	
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		is_married = yes
@@ -2400,13 +2400,20 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA64080" #Perfect occasion to spend time with your lover
-		random = {
-			chance = 25
-			
-			add_trait = lustful
-			hidden_tooltip = {
-				character_event = {
-					id = 38272 #Notify Lustful
+		if = {
+			limit = {
+				NOT = {
+					trait = lustful
+				}
+			}		
+			random = {
+				chance = 25
+
+				add_trait = lustful
+				hidden_tooltip = {
+					character_event = {
+						id = 38272 #Notify Lustful
+					}
 				}
 			}
 		}
@@ -2421,13 +2428,20 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTB64080" #Be discreet about it
-		random = {
-			chance = 25
-			
-			add_trait = deceitful
-			hidden_tooltip = {
-				character_event = {
-					id = 38255 #Notify Deceitful
+		if = {
+			limit = {
+				NOT = {
+					trait = deceitful
+				}
+			}		
+			random = {
+				chance = 25
+
+				add_trait = deceitful
+				hidden_tooltip = {
+					character_event = {
+						id = 38255 #Notify Deceitful
+					}
 				}
 			}
 		}
@@ -2443,15 +2457,24 @@ character_event = {
 	option = {
 		name = "EVTOPTC64080" #Only see your lover on friendship terms
 		random_list = {
-			75 = {
+			50 = {
 			}
-			25 = {
-				add_trait = craven
-					hidden_tooltip = {
-					character_event = {
-						id = 38257 #Notify Craven
+			25 = {	
+				if = {
+					limit = { 
+						NOT = {
+							trait = craven
+						}
 					}
+					add_trait = craven
+						hidden_tooltip = {
+						character_event = {
+							id = 38257 #Notify Craven
+						}
+					}						
 				}
+			}			
+			25 = {			
 				set_character_flag = lost_loving_feeling
 				character_event = {
 					id = 64045
@@ -2480,7 +2503,7 @@ character_event = {
 	desc = "EVTDESC64085"
 	picture = GFX_evt_lovers
 	
-	only_capable = yes
+	capable_only = yes
 	only_rulers = no
 	
 	trigger = {
@@ -2614,7 +2637,7 @@ character_event = {
 	min_age = 25
 	max_age = 40
 	only_rulers = yes
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -2668,6 +2691,7 @@ character_event = {
 		if = {
 			limit = {
 				NOT = { trait = depressed }
+				NOT = { trait = stressed }
 			}
 			add_trait = stressed
 		}
@@ -2698,7 +2722,7 @@ character_event = {
 	picture = GFX_evt_pregnancy
 	
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	only_rulers = yes
 	
 	trigger = {
@@ -2746,18 +2770,28 @@ character_event = {
 		prestige = 10
 		random_list = {
 			66 = {
-				add_trait = wroth
-				hidden_tooltip = {
-					character_event = {
-						id = 38254 #Notify Wroth
+				if = {
+					limit = {
+						NOT = { trait = wroth }
 					}
+					add_trait = wroth
+					hidden_tooltip = {
+						character_event = {
+							id = 38254 #Notify Wroth
+						}
+					}					
 				}
 			}
 			33 = {
-				add_trait = cruel
-				hidden_tooltip = {
-					character_event = {
-						id = 38259 #Notify Cruel
+				if = {
+					limit = {
+						NOT = { trait = cruel }
+					}			
+					add_trait = cruel
+					hidden_tooltip = {
+						character_event = {
+							id = 38259 #Notify Cruel
+						}
 					}
 				}
 			}
@@ -2766,16 +2800,6 @@ character_event = {
 	option = {
 		name = "EVTOPTB64095" #Send her to convent
 		prestige = 10
-		random = {
-			chance = 25
-			
-			add_trait = kind
-			hidden_tooltip = {
-				character_event = {
-					id = 38268 #Notify Kind
-				}
-			}
-		}
 		spouse = {
 			add_trait = celibate
 			hidden_tooltip = {
@@ -2789,13 +2813,18 @@ character_event = {
 	option = {
 		name = "EVTOPTC64095" #Forgive her
 		prestige = -25
-		random = {
-			chance = 25
-			
-			add_trait = kind
-			hidden_tooltip = {
-				character_event = {
-					id = 38268 #Notify Kind
+		if = {
+			limit = {
+				NOT = { trait = kind }
+			}		
+			random = {
+				chance = 25
+
+				add_trait = kind
+				hidden_tooltip = {
+					character_event = {
+						id = 38268 #Notify Kind
+					}
 				}
 			}
 		}
@@ -2808,7 +2837,7 @@ character_event = {
 	desc = "EVTDESC64100"
 	picture = GFX_evt_lovers
 	
-	only_capable = yes
+	capable_only = yes
 	only_rulers = yes
 	only_men = yes
 	
@@ -2895,10 +2924,15 @@ character_event = {
 			50 = {
 			}
 			25 = {
-				add_trait = proud
-				hidden_tooltip = {
-					character_event = {
-						id = 38261 #Notify Proud
+				if = {
+					limit = {
+						NOT = { trait = proud }
+					}			
+					add_trait = proud
+					hidden_tooltip = {
+						character_event = {
+							id = 38261 #Notify Proud
+						}
 					}
 				}
 			}
@@ -2937,7 +2971,12 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA64102"
-		add_trait = wroth
+		if = {
+			limit = {
+				NOT = { trait = wroth }
+			}		
+			add_trait = wroth
+		}
 		opinion = {
 			modifier = opinion_angry
 			who = FROM
@@ -2972,7 +3011,7 @@ character_event = {
 	desc = "EVTDESC64110"
 	picture = GFX_evt_quarrel
 	
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -3011,10 +3050,15 @@ character_event = {
 				}
 			}
 			25 = {
-				add_trait = proud
-				hidden_tooltip = {
-					character_event = {
-						id = 38261 #Notify Proud
+				if = {
+					limit = {
+						NOT = { trait = proud }
+					}			
+					add_trait = proud
+					hidden_tooltip = {
+						character_event = {
+							id = 38261 #Notify Proud
+						}
 					}
 				}
 			}
@@ -3028,10 +3072,15 @@ character_event = {
 			50 = {
 			}
 			25 = {
-				add_trait = deceitful
-				hidden_tooltip = {
-					character_event = {
-						id = 38255 #Notify Deceitful
+				if = {
+					limit = {
+						NOT = { trait = deceitful }
+					}			
+					add_trait = deceitful
+					hidden_tooltip = {
+						character_event = {
+							id = 38255 #Notify Deceitful
+						}
 					}
 				}
 			}
@@ -3046,13 +3095,18 @@ character_event = {
 	option = {
 		name = "EVTOPTC64110" #Make empty promises to her about spending more time
 		random_list = {
-			70 = {
+			50 = {
 			}
-			20 = {
-				add_trait = deceitful
-				hidden_tooltip = {
-					character_event = {
-						id = 38255 #Notify Deceitful
+			40 = {
+				if = {
+					limit = {
+						NOT = { trait = deceitful }
+					}			
+					add_trait = deceitful
+					hidden_tooltip = {
+						character_event = {
+							id = 38255 #Notify Deceitful
+						}
 					}
 				}
 			}
@@ -3070,10 +3124,15 @@ character_event = {
 			50 = {
 			}
 			25 = {
-				add_trait = humble
-				hidden_tooltip = {
-					character_event = {
-						id = 38260 #Notify Humble
+				if = {
+					limit = {
+						NOT = { trait = humble }
+					}			
+					add_trait = humble
+					hidden_tooltip = {
+						character_event = {
+							id = 38260 #Notify Humble
+						}
 					}
 				}
 			}
@@ -3094,13 +3153,14 @@ character_event = {
 	picture = GFX_evt_quarrel
 	
 	prisoner = no
-	only_capable = yes
+	capable_only = yes
 	only_rulers = yes
 	
 	trigger = {
 		war = no
 		in_command = no
 		is_married = yes
+		NOT = { trait = lustful }
 		NOT = {
 			lover = {
 				has_minor_title = title_concubine
@@ -3181,10 +3241,15 @@ character_event = {
 			50 = {
 			}
 			30 = {
-				add_trait = slothful
-				hidden_tooltip = {
-					character_event = {
-						id = 38251 #Notify Slothful
+				if = {
+					limit = {
+						NOT = { trait = slothful }
+					}			
+					add_trait = slothful
+					hidden_tooltip = {
+						character_event = {
+							id = 38251 #Notify Slothful
+						}
 					}
 				}
 			}
@@ -3207,18 +3272,28 @@ character_event = {
 		name = "EVTOPTD64115" #Tell him/her that s/he is absolutely correct
 		random_list = {
 			50 = {
-				add_trait = cruel
-				hidden_tooltip = {
-					character_event = {
-						id = 38259 #Notify Slothful
+				if = {
+					limit = {
+						NOT = { trait = cruel }
+					}			
+					add_trait = cruel
+					hidden_tooltip = {
+						character_event = {
+							id = 38259 #Notify Slothful
+						}
 					}
 				}
 			}
 			50 = {
-				add_trait = honest
-				hidden_tooltip = {
-					character_event = {
-						id = 38262 #Notify Slothful
+				if = {
+					limit = {
+						NOT = { trait = honest }
+					}			
+					add_trait = honest
+					hidden_tooltip = {
+						character_event = {
+							id = 38262 #Notify Slothful
+						}
 					}
 				}
 			}
@@ -3237,7 +3312,7 @@ character_event = {
 	desc = "EVTDESC64120"
 	picture = GFX_evt_scandal
 	
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
@@ -3285,18 +3360,28 @@ character_event = {
 		}
 		random_list = {
 			50 = {
-				add_trait = chaste
-				hidden_tooltip = {
-					character_event = {
-						id = 38274 #Notify Chaste
+				if = {
+					limit = {
+						NOT = { trait = chaste }
+					}			
+					add_trait = chaste
+					hidden_tooltip = {
+						character_event = {
+							id = 38274 #Notify Chaste
+						}
 					}
 				}
 			}
 			50 = {
-				add_trait = humble
-				hidden_tooltip = {
-					character_event = {
-						id = 38260 #Notify Humble
+				if = {
+					limit = {
+						NOT = { trait = humble }
+					}			
+					add_trait = humble
+					hidden_tooltip = {
+						character_event = {
+							id = 38260 #Notify Humble
+						}
 					}
 				}
 			}
@@ -3308,13 +3393,18 @@ character_event = {
 			set_character_flag = adulterous_affair_public
 		}
 		piety = -25
-		random = {
-			chance = 25
-			
-			add_trait = cynical
-			hidden_tooltip = {
-				character_event = {
-					id = 38258 #Notify Humble
+		if = {
+			limit = {
+				NOT = { trait = cynical }
+			}		
+			random = {
+				chance = 25
+
+				add_trait = cynical
+				hidden_tooltip = {
+					character_event = {
+						id = 38258 #Notify Humble
+					}
 				}
 			}
 		}
@@ -3328,7 +3418,7 @@ character_event = {
 	picture = GFX_evt_scandal
 	
 	only_men = yes
-	only_capable = yes
+	capable_only = yes
 	only_rulers = yes
 	
 	trigger = {
@@ -3397,13 +3487,18 @@ character_event = {
 	option = {
 		name = "EVTOPTA64125" #Bear it stoically
 		prestige = -50
-		random = {
-			chance = 10
-			
-			add_trait = craven
-			hidden_tooltip = {
-				character_event = {
-					id = 38257 #Notify Craven
+		if = {
+			limit = {
+				NOT = { trait = craven }
+			}		
+			random = {
+				chance = 10
+
+				add_trait = craven
+				hidden_tooltip = {
+					character_event = {
+						id = 38257 #Notify Craven
+					}
 				}
 			}
 		}
@@ -3548,7 +3643,7 @@ character_event = {
 	desc = "EVTDESC64130"
 	picture = GFX_evt_lovers
 	
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		is_married = yes
@@ -3703,7 +3798,7 @@ character_event = {
 	desc = "EVTDESC64135"
 	picture = GFX_evt_market
 	
-	only_capable = yes
+	capable_only = yes
 	only_rulers = yes
 	
 	trigger = {
@@ -3793,7 +3888,7 @@ character_event = {
 	desc = "EVTDESC64140"
 	picture = GFX_evt_recieve_letter
 	
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = yes
@@ -3883,11 +3978,12 @@ character_event = {
 	desc = "EVTDESC64145"
 	picture = GFX_evt_pregnancy
 	
-	only_capable = yes
+	capable_only = yes
 	
 	trigger = {
 		war = no
 		in_command = no
+		is_pregnant = no
 		fertility = 0.5
 		NOT = { num_of_children = 5 }
 		lover = {

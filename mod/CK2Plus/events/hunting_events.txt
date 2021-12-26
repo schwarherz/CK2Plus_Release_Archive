@@ -993,7 +993,7 @@ character_event = {
 	desc = "EVTDESC36050"
 	picture = "GFX_evt_hunt"
 	
-	only_capable = yes
+	capable_only = yes
 	prisoner = no
 	
 	trigger = {
